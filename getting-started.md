@@ -23,7 +23,7 @@ Learn about the planned {{site.data.keyword.logs_full_notm}} service.
 This information is provided as a preview of a new service planned to be available in late 2Q 2024. The information included is subject to change.
 {: important}
 
-When it comes to workloads and observability, it can be challenging to achieve fast, effective, and cost-efficient performance management. Workloads are generating an expanding amount of  observability data and collection tools to process it. This increases the risk of noisy data that clouds actionable insights, and ruins budgets.
+A dilemma exists today with application workloads and observability for fast, effective, and cost-efficient performance management. As workloads generate an expanding amount of observability data, it puts increased pressure on collection tool abilities to process it all and the resulting data stress becomes expensive to manage and makes it harder to obtain actionable insights from the data itself.
 
 Clients seek to right-size their data while retaining conscientious security and compliance requirements. 
 
