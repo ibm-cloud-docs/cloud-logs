@@ -29,7 +29,7 @@ Clients seek to right-size their data while retaining conscientious security and
 
 To help clients address observability data challenges, {{site.data.keyword.cloud_notm}} is proud to announce its next-generation cloud logging solution {{site.data.keyword.logs_full_notm}}. {{site.data.keyword.logs_full_notm}} is designed to help users to take control of their observability data and expedite insights to reduce application downtime. 
 
-{{site.data.keyword.logs_full_notm}} will initially be available for General Availability (GA) in summer in Frankfurt and Madrid with day-one support for EU-Managed controls. The service will continue its world-wide multizone region roll-out through 3Q 2024. Instances of {{site.data.keyword.logs_full_notm}} will be provisioned through the {{site.data.keyword.cloud_notm}} Catalog. Provisioning can also be implemented through API and Terraform enabling, you to codify your environments. 
+{{site.data.keyword.logs_full_notm}} will initially be available for General Availability (GA) in summer 2024 in Frankfurt and Madrid with day-one support for EU-Managed controls. The service will continue its world-wide multizone region roll-out through 3Q 2024. Instances of {{site.data.keyword.logs_full_notm}} will be provisioned through the {{site.data.keyword.cloud_notm}} Catalog. Provisioning can also be implemented through API and Terraform enabling, you to codify your environments. 
 
 ## Collect and aggregate data within and outside {{site.data.keyword.cloud_notm}}
 {: #cs-collect}
