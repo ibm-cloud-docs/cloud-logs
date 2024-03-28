@@ -6,8 +6,6 @@ toc:
     category: logging_monitoring
     audience: service
     href: /docs/cloud-logs?topic=cloud-logs-getting-started#getting-started
-    console-page: /observe/logging
-    product-page: https://www.ibm.com/cloud/
     path: cloud-logs
     label: Logs
 
@@ -15,6 +13,7 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
+      - topic: getting-started.md
+        navtitle: Coming soon
 
      
