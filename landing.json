@@ -1,0 +1,37 @@
+{
+  "title": "IBM Cloud Logs",
+  "lastupdated": "2024-06-19",
+  "introduction": "IBM Cloud Logs is a scalable logging service that persists logs and provides users with capabilities for querying, tailing, and visualizing logs.",
+  "section_devtools": {
+    "api": "/apidocs/logs-service-api",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
+  },
+  "section_recommended": [
+    {
+      "title": "Understanding IBM Cloud Logs",
+      "description": "Learn about how to view, analyze, and alert on logging and activity tracking events.",
+      "href": "/docs/cloud-logs?topic=cloud-logs-about-cl"
+    },
+    {
+      "title": "Getting started with IBM Cloud Logs",
+      "description": "Provision an instance of IBM Cloud Logs to investigate its functionality.",
+      "href": "/docs/cloud-logs?topic=cloud-logs-getting-started"
+    },
+    {
+      "title": "Migrating from IBM Log Analysis and IBM Cloud Activity Tracker",
+      "description": "IBM Cloud Logs replaces the deprecated IBM Log Analysis and IBM Cloud Activity tracker services. Learn how to migrate from these service to IBM Cloud Logs using the provided migration tooling.",
+      "href": "/docs/cloud-logs?topic=cloud-logs-migration-overview"
+    },
+    {
+      "title": "See what's new",
+      "description": "Read about the latest changes to IBM Cloud Logs. ",
+      "href": "/docs/cloud-logs?topic=cloud-logs-logs-release-notes"
+    }
+    ],
+  "section_learn": {
+    "developer": "https://developer.ibm.com/depmodels/cloud/",
+    "architecture": "https://www.ibm.com/architectures/hybrid",
+    "training": "https://www.ibm.com/training/cloud",
+    "community": "https://community.ibm.com/community/user/cloud/home"
+  }
+}
