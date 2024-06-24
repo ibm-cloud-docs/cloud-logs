@@ -5,15 +5,331 @@ toc:
     version: 2
     category: logging_monitoring
     audience: service
-    href: /docs/cloud-logs?topic=cloud-logs-getting-started#getting-started
+    href: /docs/cloud-logs
+    console-page: /observe/logging
+    product-page: https://www.ibm.com/cloud/
     path: cloud-logs
     label: Logs
 
   entries:
   - navgroup:
       id: learn
-      topics:
-      - topic: getting-started.md
-        navtitle: Coming soon
 
-     
+      topics:
+
+      - getting-started.md
+
+      - topicgroup:
+          label: About
+          topics:
+          - topic: about-cl.md
+            navtitle: About IBM Cloud Logs
+          - topic: features.md
+            navtitle: Features
+          - topic: tco-data-pipelines.md
+            navtitle: TCO Data pipelines
+          - topic: log_parsing_rules.md
+            navtitle: Parsing rules
+          - topic: enrich.md
+            navtitle: Enriching data
+          - topic: alerts.md
+            navtitle: Alerting
+          - topic: extensions.md
+            navtitle: Extensions
+          - topic: data-usage.md
+            navtitle: Data usage
+          - topic: metadata.md
+            navtitle: Metadata fields
+          - topic: control-data.md
+            navtitle: Controlling ingested data for search
+
+      - topicgroup:
+           label: Release notes
+           topics:
+           - topic: releasenotes.md
+             navtitle: Release notes
+           - releasenotes_notifications.md
+
+  - navgroup:
+      id: howto
+      topics:
+      - topic: tco-optimizer.md
+        navtitle: Configuring the TCO Optimizer
+
+      - topicgroup:
+          label: Data and metrics usage
+          topics:
+          - topic: data-usage-metrics.md
+            navtitle: Enabling data usage metrics
+          - topic: data-usage-reports.md
+            navtitle: Generating data usage overview reports
+          - topic: data-usage-detailed-reports.md
+            navtitle: Generating detailed usage reports
+          - topic: metrics-usage.md
+            navtitle: Exploring metrics usage
+
+      - topicgroup:
+          label: Managing access
+          topics:
+          - topic: iam.md
+            navtitle: Getting started with IAM
+          - topic: iam-views.md
+            navtitle: Granting permissions to work with views
+          - topic: iam-assign-access.md
+            navtitle: Granting service access
+          - topic: iam-actions.md
+            navtitle: IAM actions by role
+          - topic: iam-custom-roles.md
+            navtitle: Managing custom roles
+
+          - topicgroup:
+              label: S2S authorizations
+              topics:
+               - topic: iam-service-auth.md
+                 navtitle: Managing authorizations
+               - topic: iam-service-auth-cos.md
+                 navtitle: S2S for Cloud Object Storage
+               - topic: iam-service-auth-logs-routing.md
+                 navtitle: S2S for Logs Routing
+               - topic: iam-service-auth-en.md
+                 navtitle: S2S for Event Notification
+               - topic: iam-service-auth-remove-auth.md
+                 navtitle: Removing authorizations
+
+      - topicgroup:
+          label: Managing alerts
+          topics:
+          - topic: event-notifications-events.md
+            navtitle: Enabling event notifications
+
+      - topicgroup:
+          label: Managing COS buckets
+          topics:
+          - topic: about-bucket.md
+            navtitle: Configuring buckets
+          - topic: configure-data-bucket.md
+            navtitle: Configuring the data bucket
+          - topic: configure-metrics-bucket.md
+            navtitle: Configuring the metrics bucket
+          - topic: cos.md
+
+      - topicgroup:
+          label: Managing instances
+          topics:
+          - topic: instance-provision.md
+            navtitle: Provisioning an instance
+          - topic: buckets.md
+            navtitle: Creating and managing buckets
+          - topic: observe.md
+            navtitle: Managing instances in the Observability UI
+          - topic: instance-remove.md
+            navtitle: Deleting an instance
+          - topic: terraform-setup.md
+            navtitle: Using Terraform
+
+      - topicgroup:
+          label: Querying data
+          topics:
+          - topic: query-data-filters.md
+            navtitle: Filtering data
+          - topic: indexing_mapping.md
+            navtitle: Indexing and field mapping
+          - topic: query-mapping-exceptions.md
+            navtitle: Managing mapping exceptions
+          - topic: benchmarks.md
+            navtitle: Using benchmark tags
+          - topic: query-data.md
+            navtitle: Querying data
+          - topic: query-data-lucene.md
+            navtitle: Querying data by using Lucene
+          - topic: query-data-dataprime.md
+            navtitle: Querying data by using DataPrime
+          - topic: query-archive-data-bucket.md
+            navtitle: Querying data directly from the archive
+          - topic: query-data-time.md
+            navtitle: Specifying a time interval
+          - topic: query-limitations.md
+            navtitle: Limitations when querying data through the Logs page
+
+      - topic: send-logs-api.md
+        navtitle: Sending logs by using the API
+
+      - topicgroup:
+          label: Viewing data
+          topics:
+          - topic: instance-launch.md
+            navtitle: Launching the UI
+          - topic: custom-views.md
+            navtitle: Managing custom views
+          - topic: create_dashboard.md
+            navtitle: Managing custom dashboards
+
+          - topicgroup:
+              label: Creating widgets
+              topics:
+              - topic: widget_datatable.md
+                navtitle: Data table
+              - topic: widget_gauge.md
+                navtitle: Gauge
+              - topic: widget_horizontalbar.md
+                navtitle: Horizontal bar
+              - topic: widget_linechart.md
+                navtitle: Line chart
+              - topic: widget_piechart.md
+                navtitle: Pie chart
+              - topic: widget_verticalbar.md
+                navtitle: Vertical bar
+              - topic: widget_markdown.md
+                navtitle: Markdown
+              - topic: widget_dataprime.md
+                navtitle: DataPrime creator
+
+      - topicgroup:
+          label: Working with metrics
+          topics:
+          - topic: configure-event2metrics.md
+            navtitle: Configuring collection of metrics from logs
+
+      - topicgroup:
+          label: Working with templates
+          topics:
+          - topic: templates.md
+            navtitle: Managing templates
+          - topic: error-detection.md
+            navtitle: Getting a daily report on error and critical log anomalies (WIP)
+          - topic: templates-unclassified-logs.md
+            navtitle: Managing unclassified logs
+
+      - topicgroup:
+          label: Working with parsing rules
+          topics:
+          - topic: rules_groups.md
+            navtitle: Working with rule groups
+          - topic: parse-rules-regex.md
+            navtitle: Building RegEx expressions
+          - topic: parse-rule.md
+            navtitle: Converting unstructured text into JSON
+          - topic: parse-extract-rule.md
+            navtitle: Creating new fields
+          - topic: parse-extract-value-to-metadata-field.md
+            navtitle: Modifying a metadata field
+          - topic: parse-replace-timestamp.md
+            navtitle: Replacing the timestamp of logs
+          - topic: parse-replace-rule.md
+            navtitle: Fixing log data
+          - topic: parse-block-rule.md
+            navtitle: Blocking log data
+          - topic: parse-remove-rule.md
+            navtitle: Removing fields from logs
+          - topic: parse-convert-to-json-string.md
+            navtitle: Reduce the amount of indexed fields
+          - topic: parse-convert-to-json-object.md
+            navtitle: Transform escaped or stringified logs to JSON format
+
+
+
+      - topicgroup:
+          label: Integrations
+          topics:
+          - topic: actions.md
+            navtitle: Using actions
+
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - topic: architecture-workload-isolation.md
+            navtitle: Architecture and workload isolation
+          - topic: core/vpe.md
+            navtitle: Using virtual private endpoints
+          - topic: core/data-security.md
+            navtitle: Data security
+
+      - topicgroup:
+          label: Migrating from Activity Tracker or Log Analysis
+          topics:
+          - topic: migration_overview.md
+            navtitle: Migrating to IBM Cloud Logs
+          - topic: migration-at.md
+            navtitle: Migrating Activity Tracker instances
+          - topic: migration-atracker.md
+            navtitle: Migrating Activity Tracker Event Routing
+          - topic: migration-la.md
+            navtitle: Migrating Log Analysis instances
+          - topic: migration-platform-logs.md
+            navtitle: Migrating platform logs
+          - topic: migration-tool.md
+            navtitle: Migration tool
+          - topic: migration-account.md
+            navtitle: Migrating an account by using Terraform
+          - topic: migration-instance.md
+            navtitle: Migrating 1 instance
+          - topic: migration-iam.md
+            navtitle: Migrating IAM resources
+          - topic: migration_post.md
+            navtitle: Post-migrating steps
+          - topic: migration_troubleshooting.md
+            navtitle: Troubleshooting migration issues
+          - topic: migration_cli.md
+            navtitle: Migration CLI
+          - topic: migration-limitations.md
+            navtitle: Known limitations
+
+      - topicgroup:
+          label: Observability
+          topics:
+          - topic: core/at_events.md
+            navtitle: Auditing events
+
+  - navgroup:
+      id: reference
+      topics:
+      - topic: endpoints_api.md
+      - topic: endpoints_ingress.md
+      - topic: regions.md
+        navtitle: Locations
+      - topic: service_plans.md
+        navtitle: Service plans
+      - topic: limits.md
+        navtitle: Limits
+      - topic: shared-responsibilities.md
+        navtitle: Your responsibilities
+
+      - topicgroup:
+          label: High availability and disaster recovery
+          topics:
+          - topic: core/ha.md
+            navtitle: Understand high availability
+          - topic: core/bc-dr.md
+            navtitle: Understanding business continuity and disaster recovery
+
+      - topicgroup:
+          label: API Reference
+          links:
+            - link:
+                label: Logs API
+                href: https://{DomainName}/apidocs/logs-service-api
+
+      - topicgroup:
+          label: CLI Reference
+          topics:
+          - include: ../cloud-logs-cli-plugin/cloud-logs-cli.md
+
+      - topicgroup:
+          label: DataPrime Reference
+          topics:
+          - dataprime-quickstart.md
+          - dataprime-reference.md
+
+      - cloud_services_msg_prefix.md
+
+  - navgroup:
+        id: help
+        topics:
+        - getting-help.md
+        - faq.md
+
+        - topicgroup:
+            label: Troubleshooting
+            topics:
+             - ts-no-metrics-bucket.md
+
