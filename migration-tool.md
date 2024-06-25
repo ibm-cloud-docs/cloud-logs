@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-06-25"
 
 keywords:
 
@@ -76,19 +76,10 @@ The migration tool is deployed as part of the `logging` CLI plug-in in {{site.da
 
 To install the logging plug-in, run the following commands:
 
-1. Add the repo for plug-ins in stage
-
-    ```sh
-    ibmcloud plugin repo-add stage https://plugins.test.cloud.ibm.com
-    ```
-    {: pre}
-
-2. Install the plug-in
-
-    ```sh
-    ibmcloud plugin install logging -r stage
-    ```
-    {: pre}
+```sh
+ibmcloud plugin install logging
+```
+{: pre}
 
 
 

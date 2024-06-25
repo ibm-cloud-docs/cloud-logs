@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-06-25"
 
 keywords:
 
@@ -20,6 +20,10 @@ subcollection: cloud-logs
 The {{site.data.keyword.logs_full}} migration tool is a command line tool that you can use to migrate your {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance configuration to {{site.data.keyword.logs_full_notm}}.
 {: shortdesc}
 
+## Using the tool
+{: #migration-tool}
+
+- The migration tool fails creating instances automatically due to the service plan when you run `ibmcloud logging migrate create-resources --api`. If you use the Terraform option `ibmcloud logging migrate create-resources --terraform -f`, change the service plan from `beta` to `standard` before you apply the Terraform scripts.
 
 ## Custom roles
 {: #mig-customroles}
