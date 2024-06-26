@@ -73,11 +73,11 @@ ibmcloud logging migrate generate-terraform --scope SCOPE [--instance-crn CRN] [
 `--service`|`--sv`
    :   The type of service to migrate. 
 
-      `logdna`
-      :   The instance to be migrated is an {{site.data.keyword.la_full_notm}} instance.
+       `logdna`
+       :   The instance to be migrated is an {{site.data.keyword.la_full_notm}} instance.
 
-      `logdnaat`
-      :   The instance to be migrated is an {{site.data.keyword.at_full_notm}} instance.
+       `logdnaat`
+       :   The instance to be migrated is an {{site.data.keyword.at_full_notm}} instance.
 
 `--iam-scope`|`--is`
 
