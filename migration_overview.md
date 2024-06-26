@@ -15,7 +15,7 @@ subcollection: cloud-logs
 
 
 # Migrating to {{site.data.keyword.logs_full_notm}}
-{: #migration-overview}
+{: #migration-intro}
 
 Learn about migrating {{site.data.keyword.la_full}} or {{site.data.keyword.at_full_notm}} to {{site.data.keyword.logs_full_notm}}.
 {: shortdesc}
