@@ -20,7 +20,7 @@
     {
       "title": "Migrating from IBM Log Analysis and IBM Cloud Activity Tracker",
       "description": "IBM Cloud Logs replaces the deprecated IBM Log Analysis and IBM Cloud Activity tracker services. Learn how to migrate from these service to IBM Cloud Logs using the provided migration tooling.",
-      "href": "/docs/cloud-logs?topic=cloud-logs-migration-overview"
+      "href": "/docs/cloud-logs?topic=cloud-logs-migration-intro"
     },
     {
       "title": "See what's new",
