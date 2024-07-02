@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-25"
+lastupdated: "2024-07-02"
 
 keywords:
 
@@ -21,7 +21,7 @@ The {{site.data.keyword.logs_full}} migration tool is a command line tool that y
 {: shortdesc}
 
 ## Using the tool
-{: #migration-tool}
+{: #limitations-migration-tool}
 
 - The migration tool fails creating instances automatically due to the service plan when you run `ibmcloud logging migrate create-resources --api`. If you use the Terraform option `ibmcloud logging migrate create-resources --terraform -f`, change the service plan from `beta` to `standard` before you apply the Terraform scripts.
 
