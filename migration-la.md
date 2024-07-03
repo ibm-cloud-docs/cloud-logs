@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-07-03"
 
 keywords:
 
@@ -116,7 +116,7 @@ To migrate {{site.data.keyword.la_full_notm}} instances in the account, complete
 4. After you migrate each of the instances in the account, configure {{site.data.keyword.logs_routing_full_notm}}.
 
     ```text
-    ibmcloud logging migrate create-resources --scope logs-router
+    ibmcloud logging migrate create-resources --scope platform-logs
     ```
     {: pre}
 
