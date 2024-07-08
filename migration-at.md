@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-07-04"
 
 keywords:
 
@@ -14,32 +14,144 @@ subcollection: cloud-logs
 
 
 
-# Migrating {{site.data.keyword.at_full_notm}} instances
+# Migrating your {{site.data.keyword.at_full_notm}} architecture
 {: #migration-at}
 
-Migrating {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} require the configuration of the {{site.data.keyword.atracker_full_notm}} service in the account and provisioning {{site.data.keyword.logs_full_notm}} instances. A migration tool is provided to help you migrate.
+Migrating {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} require the configuration of the {{site.data.keyword.atracker_full_notm}} service in the account and provisioning 1 or more {{site.data.keyword.logs_full_notm}} instances. A migration tool is provided to help you migrate.
 {: shortdesc}
 
 
-## Overview
-{: #at-overview}
+## {{site.data.keyword.at_full_notm}} architectures
+{: #migration-at-ov}
 
-You currently have two options to manage activity tracking events in an account. You can use {{site.data.keyword.atracker_full_notm}} (a platform service) to route auditing events in your account to a destination by configuring targets and routes that define where activity tracking events are sent. For more information, see [About IBM Cloud Activity Tracker Event Routing](/docs/atracker?topic=atracker-about). Alternatively, you can [provision {{site.data.keyword.at_full_notm}} instances](/docs/activity-tracker?topic=activity-tracker-provision) in regions to collect and monitor events in your account. You can also use {{site.data.keyword.atracker_full_notm}} to route events to your {{site.data.keyword.at_full_notm}} instances.
+You have multiple options to manage activity tracking events in an account:
 
-Migrating from {{site.data.keyword.at_full_notm}} instances to {{site.data.keyword.logs_full_notm}} requires that you configure {{site.data.keyword.atracker_full_notm}} and provision {{site.data.keyword.logs_full_notm}} instances to replace the existing {{site.data.keyword.at_full_notm}} instances. Any {{site.data.keyword.atracker_full_notm}} configuration routing to {{site.data.keyword.at_full_notm}} instances must also be migrated. Migration is done for each {{site.data.keyword.at_full_notm}} instance in an account.
+- Option 1: You can [provision {{site.data.keyword.at_full_notm}} instances](/docs/activity-tracker?topic=activity-tracker-provision) in different regions to collect and monitor activity tracking events that are generated in your account in each one of those regions.
 
-The following image shows a high-level view of how {{site.data.keyword.atracker_full_notm}} and {{site.data.keyword.logs_full_notm}} are integrated so you can monitor and alert on activity tracking events.
+    For example, you can operate in eu-de, eu-es, us-east, and us-south, and have {{site.data.keyword.at_full_notm}} instances provisioned in each one of these regions.
 
-![Account overview of handling activity tracking events.](/images/migration-at-1.png "Account overview of handling activity tracking events."){: caption="Figure 1. Overview of handling activity tracking events in an account" caption-side="bottom"}
+    ![Account overview of handling activity tracking events by using {{site.data.keyword.at_full_notm}}.](/images/migration-atracker-at-current-option1.svg "Account overview of handling activity tracking events."){: caption="Figure 1. Account overview of handling activity tracking events by using {{site.data.keyword.at_full_notm}}." caption-side="bottom"}
+
+- Option 2: You can use {{site.data.keyword.atracker_full_notm}} (a platform service) to route auditing events in your account to 1 or more destinations by configuring targets and routes that define where activity tracking events are sent.
+
+    The following image shows a high-level view of the different {{site.data.keyword.atracker_full_notm}} destinations:
+
+    ![Account overview of handling activity tracking events.](/images/migration-at-ov.png "Account overview of handling activity tracking events."){: caption="Figure 1. Overview of handling activity tracking events in an account" caption-side="bottom"}
+
+    For example, you can configure {{site.data.keyword.atracker_full_notm}} to route events to the {{site.data.keyword.at_full_notm}} service. For more information, see [About IBM Cloud Activity Tracker Event Routing](/docs/atracker?topic=atracker-about).
+
+    * Scenario 1: You can route all activity tracking events into 1 {{site.data.keyword.at_full_notm}} instance.
+
+        ![Account overview of handling activity tracking events by using {{site.data.keyword.atracker_full_notm}}.](/images/migration-atracker-at-current-option2.svg "Account overview of handling activity tracking events."){: caption="Figure 1. Account overview of handling activity tracking events by using {{site.data.keyword.atracker_full_notm}}.." caption-side="bottom"}
+
+    * Scenario 2: You can route activity tracking events that are generated in the account to different {{site.data.keyword.at_full_notm}} instances, for example, keeping the locality where the event is generated.
+
+        ![Account overview of handling activity tracking events by using {{site.data.keyword.atracker_full_notm}}.](/images/migration-atracker-at-current-option3.svg "Account overview of handling activity tracking events."){: caption="Figure 1. Account overview of handling activity tracking events by using {{site.data.keyword.atracker_full_notm}}." caption-side="bottom"}
+
+- Option 3: You can have a mix scenario where you manage events that are generated by some {{site.data.keyword.cloud_notm}} services and collected in {{site.data.keyword.at_full_notm}} instances in the region where the service is provisioned and {{site.data.keyword.atracker_full_notm}} configured to route auditing events in your account to 1 or more destinations by configuring targets and routes that define where activity tracking events are sent.
+
+    ![Account overview of a mix services scenario.](/images/migration-atracker-at-current-option4.svg "Account overview of handling activity tracking events."){: caption="Figure 1. Account overview of a mix services scenario" caption-side="bottom"}
+
+
+
+## Options for migration
+{: #migration-at-options}
+
+The {{site.data.keyword.at_full_notm}} service is deprecated.
+
+You must migrate your {{site.data.keyword.at_full_notm}} instances to {{site.data.keyword.logs_full_notm}} instances.
+
+If you already use {{site.data.keyword.atracker_full_notm}}, see [Migrating {{site.data.keyword.atracker_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-atracker).
+
+If you just have {{site.data.keyword.at_full_notm}} instances provisioned in your account, you must decide whether you want to keep the current {{site.data.keyword.at_full_notm}} architecture and maintain data locality or if you prefer to move to a centralize model where all activity tracking events are collected in a single {{site.data.keyword.logs_full_notm}} instance.
+
+Choose based on your requirements from any of the following options:
+
+| Requirement                        | Migration scenario |
+|------------------------------------|--------------------|
+| Centralize auditing events         | Migrate {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance |
+| Data locality required             | Migrate {{site.data.keyword.at_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances, replicating the current {{site.data.keyword.at_full_notm}} architecture |
+{: caption="Table 1. Migration scenarios"}
+
+
+
+## Migrating to a central model
+{: #migration-at-options-1}
+
+You can manually migrate {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance, and configure {{site.data.keyword.atracker_full_notm}} in the account.
+
+The following image shows a high-level view of the account after you migrate {{site.data.keyword.at_full_notm}} instances from multiple regions in the account into 1 instance of {{site.data.keyword.logs_full_notm}}:
+
+![High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}](/images/migration-atracker-central.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+
+## Migrating maintaing data locality
+{: #migration-at-options-2}
+
+You can use the migration tool to migrate {{site.data.keyword.at_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances, replicating the current {{site.data.keyword.at_full_notm}} architecture. Then, after you have migrated all instances, you can use the migration tool to configure {{site.data.keyword.atracker_full_notm}} in the account. For more information, see [Migrating {{site.data.keyword.at_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances for data locality](/docs/cloud-logs?topic=cloud-logs-migration-atracker-n-cl).
+
+The following image shows a high-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}:
+
+![High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}](/images/migration-atracker-many.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+
+## Migrating a mix service model
+{: #migration-at-options-3}
+
+You can have a mix scenario where you manage events that are generated by some {{site.data.keyword.cloud_notm}} services and collected in {{site.data.keyword.at_full_notm}} instances in the region where the service is provisioned, and {{site.data.keyword.atracker_full_notm}} configured to route auditing events in your account to 1 or more destinations by configuring targets and routes that define where activity tracking events are sent.
+
+Consider the following options prior to migration:
+
+Check the list of services that are supported in {{site.data.keyword.atracker_full_notm}} generate activity tracking events. If you use {{site.data.keyword.cloud_notm}} services that generate events that are not in that list, continue to use your {{site.data.keyword.at_full_notm}} instance until you verify you receive them in the {{site.data.keyword.logs_full_notm}} instance. For more information, see [Supported services](/docs/atracker?topic=atracker-cloud_services_atracker).{: important}
+
+- Migrate to an {{site.data.keyword.logs_full_notm}} instance and centralize the events in the instance.
+
+    1. Provision an {{site.data.keyword.logs_full_notm}}. For more information, see [Provisioning an instance](/docs/cloud-logs?topic=cloud-logs-instance-provision).
+    2. Configure {{site.data.keyword.atracker_full_notm}} configuration. For more information, see [Getting started with {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-getting-started).
+
+- Migrate to multiple {{site.data.keyword.logs_full_notm}} instances to maintain data locality.
+
+    1. Migrate each of your {{site.data.keyword.at_full_notm}} instances in the account. For more information, see [Migrating an instance](/docs/cloud-logs?topic=cloud-logs-migration-instance).
+    2. Migrate the {{site.data.keyword.atracker_full_notm}} configuration. For more information, see [Migrating {{site.data.keyword.atracker_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-atracker).
+
+
+
+## Validating the new architecture
+{: #migration-at-options-validate}
+
+While you migrate and validate the new architecture, you must collect events in your {{site.data.keyword.at_full_notm}} instances, same as you currently do now. You must configure {{site.data.keyword.atracker_full_notm}} to send activity tracking events to your {{site.data.keyword.at_full_notm}} instances with rules that map your current {{site.data.keyword.at_full_notm}} architecture in the account. If you fail to configure this route, activity tracking events will stop being routed to your current {{site.data.keyword.at_full_notm}} instances.
+{: important}
+
+
+What {{site.data.keyword.atracker_full_notm}} configuration do you need?
+
+- 1 target per {{site.data.keyword.at_full_notm}} instance
+- 1 target per {{site.data.keyword.logs_full_notm}} instance that is the result of migrating an {{site.data.keyword.at_full_notm}} instance
+- 1 route to send activity tracking events to your {{site.data.keyword.at_full_notm}} instances with rules that map your current {{site.data.keyword.at_full_notm}} architecture in the account.
+- 1 route to send activity tracking events to your {{site.data.keyword.logs_full_notm}} instances in the account.
+
+
+Until you have validated the new architecture and you can remove the {{site.data.keyword.at_full_notm}} instances from the account, you must continue managing the account through the deprecated services.
+{: important}
+
+
+For example, your validation configuration in the account should look like the following if you choose a central architecture:
+
+![High-level view of the account during validation of a centralize architecture."](/images/migration-atracker-central-validation.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of the account during validation of a centralize architecture" caption-side="bottom"}
+
+
+For example, your validation configuration in the account should look like the following if you chose a data locality architecture:
+
+![High-level view of the account during validation of a centralize architecture."](/images/migration-atracker-many-validation.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of the account during validation of a centralize architecture" caption-side="bottom"}
+
 
 ## Checklist to plan for migration
-{: #at-checklist}
+{: #migration-at-checklist}
 
 Consider these items when you are planning your migration of {{site.data.keyword.at_full_notm}} instances in an account:
 
 - [ ] Check whether you use {{site.data.keyword.atracker_full_notm}} to control and route where activity tracking events are sent. If you are using {{site.data.keyword.atracker_full_notm}}, [identify if you are routing events to {{site.data.keyword.at_full_notm}} instances.](/docs/atracker-cli-plugin?topic=atracker-cli-plugin-atracker-v2-cli#target-list-v2-cli-cos) Are those instances located in the same account or in a different account?
 
-- [ ] Identify the regions where you operate and in which of those regions there are provisioned {{site.data.keyword.at_full_notm}} instances.
+- [ ] Identify the regions where you operate and in which of those regions there are {{site.data.keyword.at_full_notm}} instances provisioned. For more information, see
+[{{site.data.keyword.at_full_notm}} supported locations](/docs/activity-tracker?topic=activity-tracker-regions).
 
 - [ ] Check your requirements for long-term storage. Do you have [archiving](/docs/activity-tracker?topic=activity-tracker-manage_events#manage_events_archive) configured for each {{site.data.keyword.at_full_notm}} instance? How long do you need to keep the data?
 
@@ -51,79 +163,10 @@ Consider these items when you are planning your migration of {{site.data.keyword
     The data format of activity tracking events is not changed with the deprecation of the {{site.data.keyword.at_full_notm}} service.
     {: important}
 
-- [ ] Are you [excluding any data at ingestion](/docs/activity-tracker?topic=activity-tracker-exclusion_rules) to reduce costs that would be useful to keep for search or even for compliance? The {{site.data.keyword.logs_full_notm}} service offers a TCO feature to help you optimize costs based on data criticality and operational requirements.
+- [ ] Are you [excluding any data at ingestion](/docs/activity-tracker?topic=activity-tracker-exclusion_rules) to reduce costs that would be useful to keep for search or even for compliance? The {{site.data.keyword.logs_full_notm}} service offers a [TCO feature](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) to help you optimize costs based on data criticality and operational requirements.
 
 - [ ] Are you controlling data usage by configuring {{site.data.keyword.at_full_notm}} [index rate alerts](/docs/activity-tracker?topic=activity-tracker-control_usage_index_rate&interface=ui)?
 
 - [ ] Do you [control access](/docs/activity-tracker?topic=activity-tracker-iam) by using access groups? Do you use trusted profiles or service IDs? [Identify the policies](/docs/activity-tracker?topic=activity-tracker-iam#iam_accesspolicy) in the account that grant permissions to operate the {{site.data.keyword.at_full_notm}} instances in each account.
 
 - [ ] What [notification channels](/docs/activity-tracker?topic=activity-tracker-channels) do you use for alerting? Email, Slack, PagerDuty, webhook, {{site.data.keyword.mon_full_notm}} (Sysdig).
-
-
-## Migration steps
-{: #at-migration-steps}
-
-To migrate {{site.data.keyword.at_full_notm}} instances in the account, complete the following steps:
-
-1. Run the migration tool to collect information about what instances need to be migrated and their resources.
-
-    ```text
-    ibmcloud logging migrate generate-terraform --scope account --service logdnaat
-    ```
-    {: pre}
-
-
-2. Migrate each instance by running the one of these commands:
-
-    * To generate Terraform scripts that you can modify, run:
-
-       ```text
-       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --terraform
-       ```
-       {: pre}
-
-       After you generate the Terraform scripts, modify them as required and apply by using Terraform.
-
-    * To migrate an instance by applying Terraform, run:
-
-       ```text
-       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --terraform -f
-       ```
-       {: pre}
-
-    * To migrate an instance directly without Terraform, run:
-
-       ```text
-       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --api
-       ```
-       {: pre}
-
-3. Manually configure notification channels such as email and PagerDuty.
-
-    If you use the terraform option, variables are provided for you to enter information on the slack URL and the webhook header apikey.
-
-    {{site.data.keyword.logs_full_notm}} alerting is done by using the {{site.data.keyword.en_full_notm}} service.
-    {: note}
-
-4. After you migrate each of the {{site.data.keyword.at_full_notm}} instances in the account, configure {{site.data.keyword.atracker_full_notm}} by running this command.
-
-    ```text
-    ibmcloud logging migrate create-resources --scope atracker
-    ```
-    {: pre}
-
-    If {{site.data.keyword.atracker_full_notm}} is already configured, the migration tool adds an extra target in each rule where an {{site.data.keyword.at_full_notm}} target is identified.
-
-    If {{site.data.keyword.atracker_full_notm}} is not already configured, the tool configures the account to map your current {{site.data.keyword.at_full_notm}} routing to the new {{site.data.keyword.logs_full_notm}} instance. A new route is added to configure {{site.data.keyword.atracker_full_notm}} after migration to send events to an {{site.data.keyword.logs_full_notm}} instance.
-
-5. Validate that the new configuration is working for your requirements.
-
-6. After you validate that your migrated configuration is as required, remove {{site.data.keyword.at_full_notm}} from your current configuration.
-
-   1. Clean up your {{site.data.keyword.atracker_full_notm}} configuration.
-
-      1. Remove any {{site.data.keyword.at_full_notm}} targets from route rules.
-
-      2. Delete any {{site.data.keyword.at_full_notm}} targets.
-
-   2. Delete your {{site.data.keyword.at_full_notm}} instances.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-05-24"
+lastupdated: "2024-07-04"
 
 keywords:
 
@@ -20,89 +20,59 @@ subcollection: cloud-logs
 Learn about migrating {{site.data.keyword.la_full}} or {{site.data.keyword.at_full_notm}} to {{site.data.keyword.logs_full_notm}}.
 {: shortdesc}
 
-## Understanding how {{site.data.keyword.logs_full_notm}} compares to existing services
-{: #service-comparison}
-
-In {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}, you can:
-
-* Configure archiving for long-term storage by configuring an {{site.data.keyword.cos_full_notm}} bucket.
-
-* Define views and alerts to help you monitor your account, applications and infrastructure, and troubleshoot and do problem determination.
-
-* Define dashboards and screens with customizable widgets to visualize your data.
-
-* Define exclusion rules to drop data at ingestion and control log volumes and costs.
-
-* Define parsing rules to extract new fields that you can index and use for querying and faster searching.
-
-* Configure index rate alerts to control the rate of indexing and ingestion.
-
-{{site.data.keyword.logs_full_notm}} is a service that offers you all of the functions of {{site.data.keyword.la_full}} and {{site.data.keyword.at_full_notm}} and more.
-
-* To migrate archiving, you must configure new {{site.data.keyword.cos_full_notm}} buckets: one bucket to store the logs, and a second bucket to store the metrics.
-
-   In {{site.data.keyword.logs_full_notm}}, you can configure a data bucket where the ingested data is stored. You own and manage the bucket and the data. A key differentiator from {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} is that with {{site.data.keyword.logs_full_notm}} you can run unlimited searches on your data from the UI. Searching can include all of your data that is stored in the {{site.data.keyword.cos_full_notm}} bucket. 
-   
-   You can also configure a metrics bucket to store any metrics that are generated from logs to optimize storage without sacrificing important data.
-
-* Views and alerts are decoupled in {{site.data.keyword.logs_full_notm}}. You do not need a view to configure an alert. 
-
-   You can define private views and public views. When you migrate a view where an alert is configured, you can configure a public view and an alert as separate unrelated resources.
-
-* Dashboards and screens are migrated into dashboards in {{site.data.keyword.logs_full_notm}}.
-
-   * Tables are mapped into tables widgets.
-
-   * Gauges and counters are migrated into gauge widgets.
-
-   * Histograms are migrated into line chart widgets.
-
-   * The time-shifted graph is available by default through the **Logs** page, which is where you work with views in {{site.data.keyword.logs_full_notm}}.
-
-   * Pie charts are migrated into pie chart widgets.
-    
-   You can also configure other widgets such as a vertical line chart, a horizontal line char, DataPrime creator widgets or even create widgets by using Markdown coding.
-
-* Exclusion rules are migrated by configuring block parsing rules. You can configure dropped data so it can still be viewed in the **Livetail** feature and archived into your {{site.data.keyword.cos_full_notm}} bucket.
-
-   You cannot define alerts on dropped data.
-   {: note}
-   
-   You can configure dropped data to be stored in {{site.data.keyword.compliance}} where you can query it directly from the archive.
-
-* To migrate parsing rules, you must configure an extract parsing rule in {{site.data.keyword.logs_full_notm}}. You can use RegEx expressions to define how you want to extract the data. 
-
-   {{site.data.keyword.logs_full_notm}} uses a Golang RegEx syntax.
-   {: note}
-
-   Similar to {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}s, you have a limit to the number of indexed fields per day that you can use for fast searching. In {{site.data.keyword.logs_full_notm}}, you can monitor the number of indexed fields and mapping exceptions that are generated as data is ingested. This limit applies to {{site.data.keyword.frequent-search}} searches, that is, fast searches. It does not apply to searches on data that is stored in {{site.data.keyword.cos_full_notm}} where you can run unlimited searches or alerting.
-
-* In {{site.data.keyword.logs_full_notm}}, you can enable the **Data Usage** feature to collect predefined metrics that you can use to monitor the GB that are sent and the daily quota. You can use these metrics in custom dashboards and alerts. In addition, you can get a report that details the amount of data that is ingested into your account. The report also includes the amount of data that was excluded from ingestion based on your custom exclusion rules over the selected period.
-
-
-## Migration tool
-{: #migov-tool}
-
-The {{site.data.keyword.logs_full}} migration tool is a command-line tool that you can use to migrate your {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance configuration to {{site.data.keyword.logs_full_notm}}.
-
-The tool requires minimal user interaction. {{site.data.keyword.iamshort}} authentication and APIs are used to get the details about your current {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance.
-
-The migration tool migrates only configuration information. No data is migrated from {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instances to the new {{site.data.keyword.logs_full_notm}} instances.
+As of 28 March 2024, the {{site.data.keyword.la_full_notm}} and {{site.data.keyword.at_full_notm}} services are deprecated and will no longer be supported as of 30 March 2025. You will need to migrate to {{site.data.keyword.logs_full_notm}}, which replaces these two services, prior to 30 March 2025.
 {: important}
 
-![Overview of migrating to {{site.data.keyword.logs_full_notm}}](/images/migration-tool.png "Overview of migrating to {{site.data.keyword.logs_full_notm}}"){: caption="Figure 1. Overview of migrating to {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+## How does this announcement affect you?
+{: #migration-intro-how}
+
+You might need to:
+
+- Migrate the {{site.data.keyword.at_full_notm}} architecture.
+
+    If you use {{site.data.keyword.at_full_notm}} to collect and manage activity tracking events that are generated by {{site.data.keyword.cloud_notm}} services, you will need to configure {{site.data.keyword.atracker_full_notm}} to send your activity tracking events to another destination such as {{site.data.keyword.logs_full_notm}}.
+
+- Migrate the {{site.data.keyword.la_full}} architecture.
+
+    If you use {{site.data.keyword.la_full}} to collect and manage logs that run in {{site.data.keyword.cloud_notm}} or outide the {{site.data.keyword.cloud_notm}}, you will need to configure your hosts, services, or applications to send data to {{site.data.keyword.logs_full_notm}}. For example, you will have to deploy a new agent to send logs from your Kubernetes clusters.
+
+- Migrate the platform logs architecture.
+
+    If you use {{site.data.keyword.la_full}} to collect and manage platform logs that are generated by {{site.data.keyword.cloud_notm}} services, you will need to configure {{site.data.keyword.logs_routing_full_notm}} to send your platform logs to {{site.data.keyword.logs_full_notm}}.
+
+- Migrate the {{site.data.keyword.atracker_full_notm}} configuration.
+
+    If you use {{site.data.keyword.atracker_full_notm}} to configure the routing of activity tracking events to {{site.data.keyword.at_full_notm}} instances, you will need to configure the service to route the activity tracking events to {{site.data.keyword.logs_full_notm}} ddestinations.
+
+- Reconfigure sources to send data to the new {{site.data.keyword.logs_full_notm}} instances. For example, you must deploy new agents to send logs from Kubernetes clusters.
+- Update IAM permissions in the account.
+- Modify run books.
+- Update your disaster recovery process.
+- Provision the {{site.data.keyword.en_full_notm}} service.
+
+    In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. If you do not currently use the service and have alerts configured in your {{site.data.keyword.at_full_notm}} instances, you must provision an instance of the {{site.data.keyword.en_full_notm}} service. For more information, see [Enabling event notifications for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events).
+
+The data format of activity tracking events and platform logs does not change.
+{: important}
 
 
-## How you can use the migration tool
-{: #migov-use-cases}
+## Migrating your {{site.data.keyword.at_full_notm}} architecture
+{: #migration-intro-at}
 
-You can use the migration tool for:
+To migrate {{site.data.keyword.at_full_notm}} instances, you must provision 1 or more {{site.data.keyword.logs_full_notm}} instances to replace the existing {{site.data.keyword.at_full_notm}} instances, and configure {{site.data.keyword.atracker_full_notm}} to define the routing rules in the account that determine where the events that are generated are routed. For more information, see [Migrating {{site.data.keyword.at_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-at).
 
-- Planning your migration.
 
-    You can collect information about {{site.data.keyword.cloud_notm}} resources that are impacted by the migration in an account. The information that is generated includes information about current resources, and Terraform scripts for the new resources. You can use this information to find out what needs to be migrated and define your migration plan.
 
-- Migrating 1 instance and its subresources.
+## Migrating your {{site.data.keyword.atracker_full_notm}} architecture
+{: #migration-intro-atarcker}
 
-    When you migrate 1 instance, you also get information about current resources, and Terraform scripts for the new resources.
+If you have {{site.data.keyword.atracker_full_notm}} configured in the account, see [Migrating {{site.data.keyword.atracker_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-atracker).
 
+
+## Migrating your {{site.data.keyword.la_full_notm}} architecture
+{: #migration-intro-la}
+
+To migrate {{site.data.keyword.la_full_notm}} instances that collect only operational and application logs, you must provision {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances. You must also configure your data sources to send data to these {{site.data.keyword.logs_full_notm}} instances. Your data sources can be located in {{site.data.keyword.cloud_notm}}, on-prem, or running in another cloud. For example, you can configure an {{site.data.keyword.logs_routing_full_notm}} agent on supported platforms such as Kubernetes clusters, Red Hat OpenShift clusters, and Linux servers, or send data directly to {{site.data.keyword.logs_full_notm}} by using the public or private ingress endpoint. For more information, see [ Migrating {{site.data.keyword.la_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-la-n-cl).
+
+
+To migrate {{site.data.keyword.la_full_notm}} instances that collect platform logs, you must configure {{site.data.keyword.logs_routing_full_notm}} and provision 1 or more {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances that are configured to collect platform logs. For more information, see [Migrating instances that collect platform logs](/docs/cloud-logs?topic=cloud-logs-migration-plat-logs).

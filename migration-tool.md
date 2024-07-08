@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-25"
+lastupdated: "2024-07-04"
 
 keywords:
 
@@ -27,6 +27,8 @@ The migration tool migrates only configuration information. No data is migrated 
 {: important}
 
 
+![Overview of migrating to {{site.data.keyword.logs_full_notm}}](/images/migration-tool.png "Overview of migrating to {{site.data.keyword.logs_full_notm}}"){: caption="Figure 1. Overview of migrating to {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+
 
 ## Migration tool use cases
 {: #migrate-usecases}
@@ -35,7 +37,7 @@ You can use the migration tool for:
 
 - Planning your migration.
 
-    You can collect information about {{site.data.keyword.cloud_notm}} resources that are impacted by the migration in an account. The information that is generated includes information about current resources, and terraform scripts for the new resources. You can use this information to find out what needs to be migrated and define a plan.
+    You can collect information about {{site.data.keyword.cloud_notm}} resources that are impacted by the migration in an account. The information that is generated includes information about current resources, and Terraform scripts for the new resources. You can use this information to find out what needs to be migrated and define a plan.
 
 - Migrating 1 instance and its subresources.
 
@@ -80,109 +82,3 @@ To install the logging plug-in, run the following commands:
 ibmcloud plugin install logging
 ```
 {: pre}
-
-
-
-## Temporary files
-{: #migration-temp-files}
-
-By default the migration tools writes temporary files to the `migration-tool/` directory. You can specify a different directory if required.
-
-Files that are related to the migration of {{site.data.keyword.la_full_notm}} and {{site.data.keyword.at_full_notm}} instances are saved in the `migration-tool/tmp/accountID/instanceID/` directory. The file name is determined by the type of migrated instance:
-
-* {{site.data.keyword.at_full_notm}} instances: `activity-tracker-instances_summary.json`
-* {{site.data.keyword.la_full_notm}} instances: `log-analysis-instances_summary.json`
-* {{site.data.keyword.la_full_notm}} instances where the platform logs flag is enabled: `platform-logs-instances_summary.json`
-
-The `migration-tool/tmp/accountID/instances_map.json` file includes information about all the instances to be migrated in the account. This file includes the following variables:
-
-`account_id`
-:   The account ID.
-
-`instanceType`
-:   Either `logdnaat` or `logdna` where `logdnaat` is an {{site.data.keyword.at_full_notm}} instance and `logdna` is an {{site.data.keyword.la_full_notm}} instance.
-
-`instanceName`
-:   The name of the instance.
-
-`instanceID`
-:   The ID of the instance.
-
-`instance-crn`
-:   The CRN of the instance.
-
-`cl-instance-name`
-:   The name of the {{site.data.keyword.logs_full_notm}} instance that is created by the migration.
-
-`cl-instance-crn`
-:   The CRN of the {{site.data.keyword.logs_full_notm}} instance that is created by the migration.
-
-`cl-instanceID`
-:   The ID of the {{site.data.keyword.logs_full_notm}} instance that is created by the migration.
-
-The `migration-tool/tmp/accountID/iam_summary.json` file includes information about the {{site.data.keyword.iamshort}} resources to be migrated in the account.
-
-Files are written with details on resources to be migrated.
-
-| Resource | File |
-|----------|------|
-| Alerts | `migration-tool/tmp/accountID/instanceID/alert_summary.json` |
-| Views | `migration-tool/tmp/accountID/instanceID/views_summary.json`|
-| Notification channels | `migration-tool/tmp/accountID/instanceID/channels_summary.json` |
-| Groups | TBD |
-| Exclusion rules | `migration-tool/tmp/accountID/instanceID/exclusion_summary.json` |
-| Dashboards | `migration-tool/tmp/accountID/instanceID/dashboards.json` |
-| Screens | `migration-tool/tmp/accountID/instanceID/screens.json`|
-| Parsing rules | `migration-tool/tmp/accountID/instanceID/parsing_rules_summary.json` |
-| Archive configuration | `migration-tool/tmp/accountID/instanceID/archive_summary.json` |
-| Index rate alerts | N/A |
-{: caption="Table 1. Resource temporary files" caption-side="bottom"}
-
-
-## Output files
-{: #migration-out-files}
-
-The migration tool generates output files that you can use to determine future actions to be taken along with Terraform files that can be used to create more instances.
-
-### Excepion reports
-{: #migration-ex-report}
-
-The tool generates exception reports for each migrated instance.
-
-The reports are saved in the `migration-tool/cl/accountID/instanceID/` directory.
-
-| File | Description |
-|-----------|-------------|
-| `migration_exception_instanceID_resourceType.json` | Exception report for migrated {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instances |
-| `migration_exception_instanceID_iam.json` | Exception report for migrated {{site.data.keyword.iamshort}} resources |
-| `migration_exception_instanceID_alerts.json` | Exception report for migrated alerts |
-{: caption="Table 2. Exception report locations" caption-side="bottom"}
-
-
-### Terraform files
-{: #migration-tf-files}
-
-The migration tool generates Terraform files that can be used to create more instances based on the same migrated configurations.
-
-| Directory | Description |
-|-----------|-------------|
-| `migration-tool/cl/accountID/instanceID/at/terraform/` | Directory for migrated {{site.data.keyword.at_full_notm}} instances |
-| `migration-tool/cl/accountID/instanceID/la/terraform/` | Directory for migrated {{site.data.keyword.la_full_notm}} instances |
-| `migration-tool/cl/accountID/instanceID/la-platform/terraform/` | Directory for migrated {{site.data.keyword.la_full_notm}} instances that receive platform logs |
-| `migration-tool/cl/accountID/instanceID/terraform/` | Directory for migrated {{site.data.keyword.iamshort}} resources |
-| `migration-tool/cl/accountID/instanceID/resourcesType/terraform/` | Directory for migrated resources |
-| `migration-tool/cl/accountID/instanceID/alerts/terraform/` | Directory for migrated alerts |
-| `migration-tool/cl/accountID/instanceID/views/terraform/` | Directory for migrated views |
-{: caption="Table 3. Terraform file locations" caption-side="bottom"}
-
-
-
-
-## Next steps
-{: #migration-nextsteps}
-
-- [Migrating 1 account](/docs/cloud-logs?topic=cloud-logs-migration-account)
-- [Migrating 1 instance](/docs/cloud-logs?topic=cloud-logs-migration-instance)
-- [Migrating IAM](/docs/cloud-logs?topic=cloud-logs-migration-iam)
-- [Migrating {{site.data.keyword.at_short}} instances](/docs/cloud-logs?topic=cloud-logs-migration-at)
-- [Migrating {{site.data.keyword.la_short}} instances](/docs/cloud-logs?topic=cloud-logs-migration-la)
