@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-08"
 
 keywords:
 
@@ -161,7 +161,7 @@ All {{site.data.keyword.at_full_notm}} instances associated with {{site.data.key
 The command generates Terraform similar to the [`generate-terraform` command](#logging-migrate-generate-terraform) and applies the generated Terraform by using a single command.
 
 ```text
-bmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--region region] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--force]
+ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--region region] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--force]
 ```
 {: pre}
 
