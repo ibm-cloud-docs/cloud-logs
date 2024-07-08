@@ -14,7 +14,7 @@ subcollection: cloud-logs
 # {{site.data.keyword.tco-optimizer}}
 {: #tco-optimizer}
 
-With {{site.data.keyword.logs_full}} data pipelines and the {{site.data.keyword.tco-optimizer}}, you can define the way logs are distributed across 3 distinct use cases based on severity. You can balance costs in the environment by using these pipelines.
+With {{site.data.keyword.logs_full}} data pipelines and the {{site.data.keyword.tco-optimizer}}, you can define the way logs are distributed across 3 distinct use cases. You can balance costs in the environment by using these pipelines.
 {: shortdesc}
 
 By defining the data pipeline based on the importance of the data to your business, the {{site.data.keyword.tco-optimizer}} can help you improve real-time analysis and alerting and helps you manage costs.

@@ -38,7 +38,7 @@ Before you target a virtual private endpoint for {{site.data.keyword.logs_full_n
 ## Setting up a VPE for {{site.data.keyword.logs_full_notm}}
 {: #endpoint-setup}
 
-<!-- Depending on how your service supports and requires users to set up this capability, document the steps to ensure a user can successfully connect over the virtual private endpoint gateway. The following steps can be used for most services that use the generic path. If you have custom steps beyond the listed ones below, add them as needed. -->
+
 
 When you create a VPE gateway by using the CLI or API, you must specify the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the {{site.data.keyword.logs_full_notm}} instance as the target.
 

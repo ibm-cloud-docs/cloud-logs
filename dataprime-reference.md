@@ -274,7 +274,7 @@ Enrich your logs using additional context from a lookup table.
 
 Upload your lookup table using **Data flow** ![Data Flow icon](/images/flow--data.svg "Data Flow") >  > Data Enrichment > Custom Enrichment.
 
-<!-- For more details, see [Enrich logs from a lookup table.]  (/docs/cloud-logs?topic=cloud-logs-enrich-table)-->
+
 
 ```text
 enrich <value_to_lookup> into <enriched_key> using <lookup_table>
@@ -660,7 +660,7 @@ Where `data_store` can be either:
 
 * logs
 
-<!-- spans (supported only in the API) -->
+
 * The name of the custom enrichment. In this case, the command will display the custom enrichment table.
 
 Examples:

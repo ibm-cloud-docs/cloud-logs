@@ -23,7 +23,7 @@ The log data displayed by {{site.data.keyword.logs_full_notm}} can be filtered b
 Filtering can be used in conjunction with searching using [Lucene](/docs/cloud-logs?topic=cloud-logs-query-data-lucene) or [DataPrime](/docs/cloud-logs?topic=cloud-logs-query-data-dataprime).
 {: tip}
 
-<!-- Acessing the Explore UI -->
+
 {{site.data.content.query-ui}}
 
 ## Specifying filters
@@ -37,8 +37,8 @@ The list of filter values for a filter can be displayed by expanding or collapsi
 
 Select the filter values to be included in the view. You can select individual values, **SELECT ALL**, or **UNSELECT ALL**.
 
-<!-- Query reset -->
+
 {{site.data.content.query-reset}}
 
-<!-- Save view -->
+
 {{site.data.content.save-view}}

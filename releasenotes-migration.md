@@ -21,6 +21,17 @@ Use these release notes to learn about the latest updates to the Migration tool.
 {: shortdesc}
 
 
+
+## 4 July 2024
+{: #migration-july2424-2}
+{: release-note}
+
+The Migration tool plugin v0.1.12 has been released
+: {{site.data.keyword.atracker_full_notm}} configuration consolidating into 1 instance in terraform
+: Dashboards fix
+: Data usage support
+
+
 ## 2 July 2024
 {: #migration-july2424-2}
 {: release-note}

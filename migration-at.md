@@ -78,7 +78,7 @@ Choose based on your requirements from any of the following options:
 ## Migrating to a central model
 {: #migration-at-options-1}
 
-You can manually migrate {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance, and configure {{site.data.keyword.atracker_full_notm}} in the account.
+You can use the migration tool to migrate {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance, and configure {{site.data.keyword.atracker_full_notm}} in the account. For more information, see [Migrating {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance for centralize auditing events](/docs/cloud-logs?topic=cloud-logs-migration-atracker-1-cl).
 
 The following image shows a high-level view of the account after you migrate {{site.data.keyword.at_full_notm}} instances from multiple regions in the account into 1 instance of {{site.data.keyword.logs_full_notm}}:
 

@@ -52,6 +52,6 @@ For a single ingestion request {{site.data.keyword.logs_full_notm}}, these limit
 * `request_timeout`: 30 seconds
 * `request_body_limit_byte`s: 10 MiB
 
-<!-- Query limits -->
+
 {{_include-segments/query-limits.md}}
 

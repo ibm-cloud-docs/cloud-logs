@@ -10,15 +10,11 @@ toc:
     product-page: https://www.ibm.com/cloud/
     path: cloud-logs
     label: Logs
-
   entries:
   - navgroup:
       id: learn
-
       topics:
-
       - getting-started.md
-
       - topicgroup:
           label: About
           topics:
@@ -42,7 +38,6 @@ toc:
             navtitle: Metadata fields
           - topic: control-data.md
             navtitle: Controlling ingested data for search
-
       - topicgroup:
            label: Release notes
            topics:
@@ -51,13 +46,11 @@ toc:
            - topic: releasenotes-migration.md
              navtitle: Release notes for the Migration tool
            - releasenotes_notifications.md
-
   - navgroup:
       id: howto
       topics:
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
-
       - topicgroup:
           label: Data and metrics usage
           topics:
@@ -69,7 +62,6 @@ toc:
             navtitle: Generating detailed usage reports
           - topic: metrics-usage.md
             navtitle: Exploring metrics usage
-
       - topicgroup:
           label: Managing access
           topics:
@@ -83,7 +75,6 @@ toc:
             navtitle: IAM actions by role
           - topic: iam-custom-roles.md
             navtitle: Managing custom roles
-
           - topicgroup:
               label: S2S authorizations
               topics:
@@ -97,13 +88,11 @@ toc:
                  navtitle: S2S for Event Notification
                - topic: iam-service-auth-remove-auth.md
                  navtitle: Removing authorizations
-
       - topicgroup:
           label: Managing alerts
           topics:
           - topic: event-notifications-events.md
             navtitle: Enabling event notifications
-
       - topicgroup:
           label: Managing COS buckets
           topics:
@@ -114,7 +103,10 @@ toc:
           - topic: configure-metrics-bucket.md
             navtitle: Configuring the metrics bucket
           - topic: cos.md
-
+          - topic: archiving-monitor.md
+            navtitle: Monitoring archiving by using IBM Cloud Monitoring (WIP)
+          - topic: archiving-at-monitor.md
+            navtitle: Monitor archiving with IBM Cloud Logs (WIP)
       - topicgroup:
           label: Managing instances
           topics:
@@ -128,7 +120,6 @@ toc:
             navtitle: Deleting an instance
           - topic: terraform-setup.md
             navtitle: Using Terraform
-
       - topicgroup:
           label: Querying data
           topics:
@@ -152,10 +143,8 @@ toc:
             navtitle: Specifying a time interval
           - topic: query-limitations.md
             navtitle: Limitations when querying data through the Logs page
-
       - topic: send-logs-api.md
         navtitle: Sending logs by using the API
-
       - topicgroup:
           label: Viewing data
           topics:
@@ -165,7 +154,6 @@ toc:
             navtitle: Managing custom views
           - topic: create_dashboard.md
             navtitle: Managing custom dashboards
-
           - topicgroup:
               label: Creating widgets
               topics:
@@ -185,26 +173,27 @@ toc:
                 navtitle: Markdown
               - topic: widget_dataprime.md
                 navtitle: DataPrime creator
-
       - topicgroup:
           label: Working with metrics
           topics:
           - topic: configure-event2metrics.md
             navtitle: Configuring collection of metrics from logs
-
       - topicgroup:
           label: Working with templates
           topics:
           - topic: templates.md
             navtitle: Managing templates
+          - topic: error-detection.md
+            navtitle: Getting a daily report on error and critical log anomalies (WIP)
           - topic: templates-unclassified-logs.md
             navtitle: Managing unclassified logs
-
       - topicgroup:
           label: Working with parsing rules
           topics:
           - topic: rules_groups.md
             navtitle: Working with rule groups
+          - topic: parse-severity.md
+            navtitle: Working with severity rules
           - topic: parse-rules-regex.md
             navtitle: Building RegEx expressions
           - topic: parse-rule.md
@@ -225,15 +214,11 @@ toc:
             navtitle: Reduce the amount of indexed fields
           - topic: parse-convert-to-json-object.md
             navtitle: Transform escaped or stringified logs to JSON format
-
-
-
       - topicgroup:
           label: Integrations
           topics:
           - topic: actions.md
             navtitle: Using actions
-
       - topicgroup:
           label: Enhancing security
           topics:
@@ -243,7 +228,6 @@ toc:
             navtitle: Using virtual private endpoints
           - topic: core/data-security.md
             navtitle: Data security
-
       - topicgroup:
           label: Migrating from Activity Tracker or Log Analysis
           topics:
@@ -264,6 +248,8 @@ toc:
               topics:
               - topic: migration-at.md
                 navtitle: Migrating Activity Tracker instances
+              - topic: migration-atracker-1-cl.md
+                navtitle: Migrating to 1 Cloud Logs instance
               - topic: migration-atracker-n-cl.md
                 navtitle: Migrating to N Cloud Logs instances
               - topic: migration-atracker.md
@@ -280,6 +266,8 @@ toc:
               topics:
               - topic: migration-tool.md
                 navtitle: Migration tool
+              - topic: migration-mapping-rule.md
+                navtitle: Mapping rules for views and alerts (IBM Internal)
               - topic: migration-tool-files.md
                 navtitle: Files generated by the Migration tool
               - topic: migration_cli.md
@@ -288,15 +276,22 @@ toc:
                 navtitle: Known limitations
           - topic: migration_post.md
             navtitle: Post-migrating steps
-          - topic: migration_troubleshooting.md
-            navtitle: Troubleshooting migration issues
-
+          - topicgroup:
+              label: Troubleshooting
+              topics:
+              - topic: migration-exclusion-rules.md
+                navtitle: Excluding ingestion data by using exclusion rules
+              - topic: migration_troubleshooting.md
+                navtitle: Troubleshooting migration issues (WIP)
+          - topic: migration-related-services.md
+            navtitle: Location availability for related services (IBM Internal)
       - topicgroup:
           label: Observability
           topics:
           - topic: core/at_events.md
             navtitle: Auditing events
-
+          - topic: core/monitoring.md
+            navtitle: Monitoring metrics (WIP)
   - navgroup:
       id: reference
       topics:
@@ -310,7 +305,6 @@ toc:
         navtitle: Limits
       - topic: shared-responsibilities.md
         navtitle: Your responsibilities
-
       - topicgroup:
           label: High availability and disaster recovery
           topics:
@@ -318,27 +312,22 @@ toc:
             navtitle: Understand high availability
           - topic: core/bc-dr.md
             navtitle: Understanding business continuity and disaster recovery
-
       - topicgroup:
           label: API Reference
           links:
             - link:
                 label: Logs API
                 href: https://{DomainName}/apidocs/logs-service-api
-
       - topicgroup:
           label: CLI Reference
           topics:
           - include: ../cloud-logs-cli-plugin/cloud-logs-cli.md
-
       - topicgroup:
           label: DataPrime Reference
           topics:
           - dataprime-quickstart.md
           - dataprime-reference.md
-
       - cloud_services_msg_prefix.md
-
   - navgroup:
         id: help
         topics:

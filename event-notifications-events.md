@@ -31,7 +31,7 @@ When an event of interest takes place in your {{site.data.keyword.logs_full_notm
 
 The following table lists the {{site.data.keyword.logs_full_notm}} events.
 
-<!-- add a column for subtype, if you have need that level of detail -->
+
 
 | Event type                                  | Description |
 |------------------------------------------|---------|

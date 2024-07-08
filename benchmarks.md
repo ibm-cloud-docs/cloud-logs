@@ -26,7 +26,7 @@ Version benchmark tags are a way for you to understand your version status at a 
 ## Creating a benchmark tag
 {: #create_tag}
 
-<!-- Launch the UI step -->
+
 {{site.data.content.launch-ui}}
 
 2. Click the **Dashboards** icon ![Dashboards icon](/icons/dashboards.svg "Dashboards") > **Version benchmarks**.
@@ -52,15 +52,4 @@ Version benchmark tags can be used to track scenarios similar to the following:
 
 * View the logs appearing on your system for the first time since the tag.
 
-<!--
-Deployment Pipelines
-Integrate with any of the following deployment pipelines.
 
-Bitbucket
-Azure DevOps Server
-GitLab
-Argo CD
-Spinnaker
-Heroku Pipelines
-Version Tags using cURL
--->
