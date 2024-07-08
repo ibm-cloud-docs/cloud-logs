@@ -65,15 +65,15 @@ You can migrate a view into a public view. You can migrate a view with an alert 
 
 In {{site.data.keyword.logs_full_notm}}, views and alerts are decoupled. You do not need a view to configure an alert. You can configure private views and public views. You can configure alerts.
 
-    Alerts are a type of resource. They are not dependent on views.
+- Alerts are a type of resource. They are not dependent on views.
 
-    You can define different types of alerts such as standard alerts, flow alerts, and new value alerts. For information on the alert types that are supported, see [Alerts](/docs/cloud-logs?topic=cloud-logs-alerts&interface=ui#alert-types).
+- You can define different types of alerts such as standard alerts, flow alerts, and new value alerts. For information on the alert types that are supported, see [Alerts](/docs/cloud-logs?topic=cloud-logs-alerts&interface=ui#alert-types).
 
-    You can use the `Incidents` page to manage alerts that are triggered.
+- You can use the `Incidents` page to manage alerts that are triggered.
 
-    Alerts are triggered through the {{site.data.keyword.en_full_notm}} service. You configure the notification channels and conditions that trigger the alert in the {{site.data.keyword.en_full_notm}} service.
+- Alerts are triggered through the {{site.data.keyword.en_full_notm}} service. You configure the notification channels and conditions that trigger the alert in the {{site.data.keyword.en_full_notm}} service.
 
-    For more information on alerts, see [Migrating alerts](/docs/cloud-logs?topic=cloud-logs-migration-alerts).
+- For more information on alerts, see [Migrating alerts](/docs/cloud-logs?topic=cloud-logs-migration-alerts).
 
 You can use the Migration tool to migrate views and alerts configured in {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}. When you migrate an instance, migration of views and alerts is included. For more information, see [Migrating instances](/docs/cloud-logs?topic=cloud-logs-migration-instance).
 - A view is migrated to an {{site.data.keyword.logs_full_notm}} public view.
