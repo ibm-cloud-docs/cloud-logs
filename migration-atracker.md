@@ -2,8 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-03"
-
+lastupdated: "2024-07-09"
 keywords:
 
 subcollection: cloud-logs

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-07-09"
 
 keywords:
 
@@ -73,7 +73,7 @@ Files are written with details on the current resources.
 | Presets | `migration-tool/tmp/accountID/instanceID/alert_index_data` |
 | Views | `migration-tool/tmp/accountID/instanceID/views_summary.json`|
 | Notification channels | `migration-tool/tmp/accountID/instanceID/channels_summary.json` \n `migration-tool/tmp/accountID/instanceID/channel_not_in_use_summary` |
-| Groups |  `migration-tool/tmp/accountID/instanceID/group_data.json `|
+| Groups |  `migration-tool/tmp/accountID/instanceID/group_data.json`|
 | Exclusion rules | `migration-tool/tmp/accountID/instanceID/exclusion_summary.json` |
 | Dashboards | `migration-tool/tmp/accountID/instanceID/dashboards.json` |
 | Screens | `migration-tool/tmp/accountID/instanceID/screens.json`|

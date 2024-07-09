@@ -44,7 +44,7 @@ toc:
            - topic: releasenotes.md
              navtitle: Release notes
            - topic: releasenotes-migration.md
-             navtitle: Release notes for the Migration tool
+             navtitle: Release notes for the migration tool
            - releasenotes_notifications.md
   - navgroup:
       id: howto
