@@ -62,4 +62,4 @@ The migration tool plug-in v0.1.10 has been released
 {: release-note}
 
 The migration tool plug-in is generally available
-:   The migration tool helps you plan and migrate {{site.data.keyword.la_full}} instances or {{site.data.keyword.at_full_notm}} instances to {{site.data.keyword.logs_full_notm}} instances. For more information about the mSWigration tool, see [Migrating to {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-intro).
+:   The migration tool helps you plan and migrate {{site.data.keyword.la_full}} instances or {{site.data.keyword.at_full_notm}} instances to {{site.data.keyword.logs_full_notm}} instances. For more information about the migration tool, see [Migrating to {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-intro).
