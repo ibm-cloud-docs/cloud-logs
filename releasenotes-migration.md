@@ -41,7 +41,7 @@ The migration tool plug-in v0.1.12 has been released
 {: #migration-july0224}
 {: release-note}
 
-The Migration tool plug-in v0.1.11 has been released
+The migration tool plug-in v0.1.11 has been released
 : Updates include:
 
    * {{site.data.keyword.atracker_full_notm}} configuration when is not configured in the account
@@ -54,12 +54,12 @@ The Migration tool plug-in v0.1.11 has been released
 {: #migration-july0124}
 {: release-note}
 
-The Migration tool plug-in v0.1.10 has been released
+The migration tool plug-in v0.1.10 has been released
 : Sets the correct service plan `standard` for production {{site.data.keyword.logs_full_notm}} instances.
 
 ## 24 June 2024
 {: #migration-jun2424}
 {: release-note}
 
-The Migration tool plug-in is generally available
-:   The Migration tool helps you plan and migrate {{site.data.keyword.la_full}} instances or {{site.data.keyword.at_full_notm}} instances to {{site.data.keyword.logs_full_notm}} instances. For more information about the Migration tool, see [Migrating to {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-intro).
+The migration tool plug-in is generally available
+:   The migration tool helps you plan and migrate {{site.data.keyword.la_full}} instances or {{site.data.keyword.at_full_notm}} instances to {{site.data.keyword.logs_full_notm}} instances. For more information about the mSWigration tool, see [Migrating to {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-intro).
