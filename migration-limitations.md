@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-02"
+lastupdated: "2024-07-09"
 
 keywords:
 
@@ -24,6 +24,9 @@ The {{site.data.keyword.logs_full}} migration tool is a command line tool that y
 {: #limitations-migration-tool}
 
 - The migration tool fails creating instances automatically due to the service plan when you run `ibmcloud logging migrate create-resources --api`. If you use the Terraform option `ibmcloud logging migrate create-resources --terraform -f`, change the service plan from `beta` to `standard` before you apply the Terraform scripts.
+
+    This issue is fixed in the migration tool plugin v0.1.10. 
+    {: note}
 
 ## Custom roles
 {: #mig-customroles}
@@ -47,8 +50,7 @@ The exception report indicates when custom roles are identified in the account a
 
 You must manually update custom catalogs.
 
-<!-- ## {{site.data.keyword.logs_full_notm}} instance
-{: #mig-logs}-->
+
 
 ## Instance subresources
 {: #mig-subresources}

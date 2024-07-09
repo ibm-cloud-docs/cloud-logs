@@ -18,5 +18,5 @@ subcollection: cloud-logs
 Limits exist when querying data in {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
-<!-- Query limits -->
+
 {{_include-segments/query-limits.md}}

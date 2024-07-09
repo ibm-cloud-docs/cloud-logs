@@ -23,7 +23,7 @@ subcollection: cloud-logs
 Searching can be used in conjunction with [filtering](/docs/cloud-logs?topic=cloud-logs-query-data-filter) and [limiting by time](/docs/cloud-logs?topic=cloud-logs-query-data-time).
 {: tip}
 
-<!-- Acessing the Explore UI -->
+
 {{site.data.content.query-ui}}
 
 ## Using DataPrime
@@ -37,8 +37,8 @@ Searching can be used in conjunction with [filtering](/docs/cloud-logs?topic=clo
 
 3. Click the arrow at the end of the field run your query.
 
-<!-- Query reset -->
+
 {{site.data.content.query-reset}}
 
-<!-- Save view -->
+
 {{site.data.content.save-view}}

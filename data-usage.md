@@ -44,6 +44,6 @@ The Data Usage Report includes:
 {: #data-usage-1}
 
 Export data usage information:
-<!--- [Data Usage Report]  (/docs/cloud-logs?topic=cloud-logs-data-usage-reports)-->
+
 - [Generating detailed usage reports](/docs/cloud-logs?topic=cloud-logs-data-usage-detailed-reports)
 - [Generating data usage overview reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports)

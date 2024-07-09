@@ -20,6 +20,9 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
+For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
+{: note}
+
 ## 24 June 2024
 {: #logs-jun2424}
 {: release-note}

@@ -23,7 +23,7 @@ The log data displayed by {{site.data.keyword.logs_full_notm}} can be filtered b
 Limiting by time interval can be used in conjunction with [filtering](/docs/cloud-logs?topic=cloud-logs-query-data-filter), searching using [Lucene](/docs/cloud-logs?topic=cloud-logs-query-data-lucene) or [DataPrime](/docs/cloud-logs?topic=cloud-logs-query-data-dataprime).
 {: tip}
 
-<!-- Acessing the Explore UI -->
+
 {{site.data.content.query-ui}}
 
 ## Specifying a time interval
@@ -47,9 +47,9 @@ By default the **last 15 minutes** of data is displayed. You can change the time
    Tags
    :   Lets you filter logs by [tags](/docs/cloud-logs?topic=cloud-logs-benchmarks).
 
-<!-- Query reset -->
+
 {{site.data.content.query-reset}}
 
-<!-- Save view -->
+
 {{site.data.content.save-view}}
 

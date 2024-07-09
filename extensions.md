@@ -34,7 +34,7 @@ Extensions can include:
 
 You can determine the available extensions through the {{site.data.keyword.logs_full_notm}} UI.
 
-<!-- Launch the UI step -->
+
 {{site.data.content.launch-ui}}
 
 2. Click the **Integrations** icon ![Integrations icon](/icons/integrations.svg "Integrations") > **Extensions**.

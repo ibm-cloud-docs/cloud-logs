@@ -80,6 +80,7 @@ Choose based on your requirements from any of the following options:
 
 You can manually migrate {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance, and configure {{site.data.keyword.atracker_full_notm}} in the account.
 
+
 The following image shows a high-level view of the account after you migrate {{site.data.keyword.at_full_notm}} instances from multiple regions in the account into 1 instance of {{site.data.keyword.logs_full_notm}}:
 
 ![High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}](/images/migration-atracker-central.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}

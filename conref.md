@@ -18,7 +18,7 @@ content-type: conref
 # Conrefs
 {: #conrefs}
 
-<!----------------- -->
+
 
 ## Accessing Explore
 {: #query-ui}
@@ -32,14 +32,14 @@ You can query logs from the Explore screen:
 
 3. (Optional) If you want to explore archived data from the [{{site.data.keyword.monitoring}} or {{site.data.keyword.compliance}} pipelines](/docs/cloud-logs?topic=cloud-logs-tco-optimizer), click **Archive**. To switch back to data currently maintained in the [{{site.data.keyword.frequent-search}} pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) click **Priority Logs**.
 
-<!----------------- -->
+
 
 ## Resetting filters and search queries
 {: #query-reset}
 
 You can clear all filters and queries by clicking **Reset**.
 
-<!----------------- -->
+
 
 ## Saving a view
 {: #save-view}
@@ -60,5 +60,5 @@ To save a view:
 
 6. Click **SAVE** to save your view.
 
-<!----------------- -->
+
 

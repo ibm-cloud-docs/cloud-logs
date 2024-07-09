@@ -76,7 +76,7 @@ There are considerations when querying log data from the data bucket:
 
 Limits exist when querying data in {{site.data.keyword.logs_full}}.
 
-<!-- Query limits -->
+
 {{_include-segments/query-limits.md}}
 
 

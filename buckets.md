@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Creating and modifying {{site.data.keyword.cos_full_notm}} buckets
 {: #buckets}
 
-{{site.data.keyword.logs_full_notm}} uses {{site.data.keyword.cos_full_notm}} buckets to store data. You can create and modify these buckets for your {{site.data.keyword.logs_full_notm}} instance.
+{{site.data.keyword.logs_full_notm}} uses {{site.data.keyword.cos_full_notm}} buckets to store data. You can create and maintain these buckets for your {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
 You should create a bucket with _Cross Region_ resiliency to store and access data across multiple geographical regions to ensure high availability, durability, and disaster recovery capabilities. See [Creating and modifying {{site.data.keyword.cos_full_notm}} buckets](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-geo).

@@ -206,7 +206,7 @@ variable "resource_tags" {
 ```
 {: codeblock}
 
-<!--To see the list of valid plan values, see [Plans](/docs/cloud-logs?topic=cloud-logs-service_plan).-->
+
 
 To see the list of valid regions, see [Locations](/docs/cloud-logs?topic=cloud-logs-regions).
 

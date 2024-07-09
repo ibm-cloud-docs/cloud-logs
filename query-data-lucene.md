@@ -23,7 +23,7 @@ subcollection: cloud-logs
 Searching can be used in conjunction with [filtering](/docs/cloud-logs?topic=cloud-logs-query-data-filter) and [limiting by time](/docs/cloud-logs?topic=cloud-logs-query-data-time).
 {: tip}
 
-<!-- Acessing the Explore UI -->
+
 {{site.data.content.query-ui}}
 
 ## Using Lucene
@@ -112,8 +112,8 @@ You can use the operators `AND`, `OR`, and `NOT` to combine multiple filters. Yo
 | `(msg:”failed transaction” AND (cluster:”eu” OR cluster:”us”)) NOT env:”staging”` | Matches logs from the “eu” or “us” clusters that contain the phrase “failed transaction” but not from the “staging environment”. |
 {: caption="Example queries using operators" caption-side="bottom"}
 
-<!-- Query reset -->
+
 {{site.data.content.query-reset}}
 
-<!-- Save view -->
+
 {{site.data.content.save-view}}

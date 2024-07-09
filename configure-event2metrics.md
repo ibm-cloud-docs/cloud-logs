@@ -53,7 +53,7 @@ Before you can define metrics from logs, check the following requirements:
 
 Do the following to configure Events to Metrics in your environment.
 
-<!-- Launch the UI step -->
+
 {{site.data.content.launch-ui}}
 
 2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Events to Metrics**.
