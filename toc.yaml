@@ -41,7 +41,7 @@ toc:
       - topicgroup:
            label: Release notes
            topics:
-           - topic: releasenotes.md
+           - topic: release-notes.md
              navtitle: Release notes
            - topic: releasenotes-migration.md
              navtitle: Release notes for the migration tool
