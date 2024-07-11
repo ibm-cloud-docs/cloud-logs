@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-11"
 
 keywords:
 
@@ -23,33 +23,39 @@ Use these release notes to learn about the latest updates to the migration tool.
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
 {: note}
 
-## 4 July 2024
-{: #migration-july0424}
+## 11 July 2024
+{: #migration-july1124}
 
-The migration tool plug-in v0.1.12 has been released
+The migration tool plug-in v0.1.12 is available.
 :   Updates include:
 
-   * {{site.data.keyword.atracker_full_notm}} configuration consolidating into 1 instance in Terraform.
-
-   * Dashboard fixes.
+   * Consolidating the {{site.data.keyword.atracker_full_notm}} configuration into 1 {{site.data.keyword.logs_full_notm}} instance using either Terraform or the API.
 
    * Data usage support.
 
+   * Fixes related to:
+
+      * Dashboard
+      * {{site.data.keyword.logs_routing_full_notm}}
+      * {{site.data.keyword.cos_full_notm}} bucket errors
+
+
+## 3 July 2024
+{: #migration-july0324}
+
+The migration tool plug-in v0.1.11 is available.
+: Updates include:
+
+   * {{site.data.keyword.atracker_full_notm}} configuration when {{site.data.keyword.atracker_full_notm}} is not configured in the account
+
+   * Fix error setting the severity when alerts are created.
+
+   * Vulnerability fixes.
 
 ## 2 July 2024
 {: #migration-july0224}
 
-The migration tool plug-in v0.1.11 has been released
-: Updates include:
-
-   * {{site.data.keyword.atracker_full_notm}} configuration when is not configured in the account
-
-   * Fix error setting the severity when alerts are created.
-
-## 1 July 2024
-{: #migration-july0124}
-
-The migration tool plug-in v0.1.10 has been released
+The migration tool plug-in v0.1.10 is available.
 : Sets the correct service plan `standard` for production {{site.data.keyword.logs_full_notm}} instances.
 
 ## 24 June 2024
