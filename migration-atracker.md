@@ -41,7 +41,7 @@ Consider the following scenario.
 
 - Learn about the migration tool. For more information, see [Migrating tool](/docs/cloud-logs?topic=cloud-logs-migration-tool).
 
-The migration tool migrates existing rules that route events to {{site.data.keyword.at_full_notm}} instances. If you have {{site.data.keyword.at_full_notm}} instances that are not configured to route events using {{site.data.keyword.atracker_full_notm}}, {{site.data.keyword.atracker_full_notm}} rules, routes and targets are created by the migration tool to route events to the newly created {{site.data.keyword.logs_full_notm}} instances.
+The migration tool migrates existing rules that route events to {{site.data.keyword.at_full_notm}} instances. If you have {{site.data.keyword.at_full_notm}} instances that are not configured to route events using {{site.data.keyword.atracker_full_notm}}, {{site.data.keyword.atracker_full_notm}} rules and routes are created by the migration tool to route events to the newly created {{site.data.keyword.logs_full_notm}} instances.
 
 ## What to expect
 {: #atracker-migration-what}
