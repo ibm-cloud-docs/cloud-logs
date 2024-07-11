@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-11"
 keywords:
 
 subcollection: cloud-logs
@@ -41,7 +41,7 @@ Consider the following scenario.
 
 - Learn about the migration tool. For more information, see [Migrating tool](/docs/cloud-logs?topic=cloud-logs-migration-tool).
 
-The migration tool only migrates existing rules that route events to {{site.data.keyword.at_full_notm}} instances. If you have {{site.data.keyword.at_full_notm}} instances that are not configured to route events using {{site.data.keyword.atracker_full_notm}}, and you want to use {{site.data.keyword.atracker_full_notm}} to route the events, you must manually [configure {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-overview).{: important}
+The migration tool migrates existing rules that route events to {{site.data.keyword.at_full_notm}} instances. If you have {{site.data.keyword.at_full_notm}} instances that are not configured to route events using {{site.data.keyword.atracker_full_notm}}, {{site.data.keyword.atracker_full_notm}} rules, routes and targets are created by the migration tool to route events to the newly created {{site.data.keyword.logs_full_notm}} instances.
 
 ## What to expect
 {: #atracker-migration-what}
@@ -86,7 +86,7 @@ To migrate {{site.data.keyword.atracker_full_notm}} routes and targets in the ac
     * To migrate an instance by applying Terraform, run:
 
        ```text
-       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --terraform -f
+       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --terraform 
        ```
        {: pre}
 
@@ -114,7 +114,7 @@ To migrate {{site.data.keyword.atracker_full_notm}} routes and targets in the ac
     Run the following command to generate and apply Terraform scripts that you can customize:
 
     ```text
-    ibmcloud logging migrate create-resources --scope atracker --terraform -f
+    ibmcloud logging migrate create-resources --scope atracker --terraform 
     ```
     {: pre}
 
