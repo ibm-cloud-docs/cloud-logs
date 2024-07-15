@@ -276,8 +276,7 @@ toc:
       - topic: endpoints_ingress.md
       - topic: regions.md
         navtitle: Locations
-      - topic: service_plans.md
-        navtitle: Service plans
+      - service_plans.md
       - topic: limits.md
         navtitle: Limits
       - topic: shared-responsibilities.md

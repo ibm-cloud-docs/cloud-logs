@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-11"
 
 keywords:
 
@@ -160,10 +160,14 @@ All {{site.data.keyword.at_full_notm}} instances associated with {{site.data.key
 
 The command generates Terraform similar to the [`generate-terraform` command](#logging-migrate-generate-terraform) and applies the generated Terraform by using a single command.
 
+
 ```text
 ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--region region] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--force]
 ```
 {: pre}
+
+
+
 
 ### Command options
 {: #create-resources-tf-options}
@@ -193,6 +197,8 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 
 `--instance-crn`|`--crn`
    :   The [CRN](/docs/account?topic=account-crn) of the {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance to be migrated.
+
+
 
 `--ingress-endpoint-type`
 
