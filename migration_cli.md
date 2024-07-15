@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-11"
+lastupdated: "2024-07-15"
 
 keywords:
 
@@ -165,6 +165,7 @@ The command generates Terraform similar to the [`generate-terraform` command](#l
 ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--region region] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--force]
 ```
 {: pre}
+
 
 
 
