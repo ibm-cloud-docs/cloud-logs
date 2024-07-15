@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-19"
+  years:  2024
+lastupdated: "2024-07-15"
 
 keywords:
 
@@ -131,7 +131,7 @@ To provision an instance of {{site.data.keyword.logs_full_notm}} through the com
 4. Create the instance. Run the [ibmcloud resource service-instance-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
     ```text
-    ibmcloud resource service-instance-create NAME cloud-logs SERVICE_PLAN_NAME LOCATION -p '{"private_endpoints_only": PRIVATE_ENDPOINT}'
+    ibmcloud resource service-instance-create NAME logs SERVICE_PLAN_NAME LOCATION -p '{"private_endpoints_only": PRIVATE_ENDPOINT}'
     ```
     {: codeblock}
 
@@ -139,7 +139,7 @@ To provision an instance of {{site.data.keyword.logs_full_notm}} through the com
 
     `NAME` is the name of the instance
 
-    `SERVICE_PLAN_NAME` is the type of plan. Valid values are *lite*, *7-day*, *14-day*, *30-day*.
+    `SERVICE_PLAN_NAME` is the type of plan. Valid value is *standard*.
 
     `LOCATION` is the region where the logging instance is created. To get the latest list of locations that are available for the {{site.data.keyword.logs_full_notm}} service, see [Locations](/docs/cloud-logs?topic=cloud-logs-regions).
 
@@ -148,23 +148,11 @@ To provision an instance of {{site.data.keyword.logs_full_notm}} through the com
        Unless otherwise specified when provisioning an instance, the default is for the instance to be accessible by both public and private endpoints.
        {: note}
 
-    For example, to provision an instance with the 7 days retention plan that can be accessed only by private endpoints, run the following command:
+    For example, to provision an instance with the standard plan that can be accessed only by private endpoints, run the following command:
 
     ```text
-    ibmcloud resource service-instance-create my-instance cloud-logs 7-day us-south -p '{"private_endpoints_only": true}'
+    ibmcloud resource service-instance-create my-instance logs standard us-south -p '{"private_endpoints_only": true}'
     ```
     {: codeblock}
 
-    To provision an instance with the 14 days retention plan that can be accessed only by both public and private endpoints, run one of the following commands:
-
-    ```text
-    ibmcloud resource service-instance-create my-instance cloud-logs 14-day us-south -p '{"private_endpoints_only": false}'
-    ```
-    {: codeblock}
-
-    or
-
-    ```text
-    ibmcloud resource service-instance-create my-instance cloud-logs 14-day us-south
-    ```
-    {: codeblock}
+ 
