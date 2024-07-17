@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-17"
 
 keywords:
 
@@ -96,7 +96,7 @@ You cannot migrate an {{site.data.keyword.la_full_notm}} or {{site.data.keyword.
 - View folders must have unique names. If you have duplicate category names, views within duplicated categories are not migrated.
 
 ### Parsing rules
-{: #mig-parsing rules}
+{: #mig-parsing-rules}
 
 - The migration tool reports the fields that are extracted from current logs. You must manually create extract parsing rules to create new fields from logs.
 - If a new field relies on the value of an extracted field, if you use the UI to configure the field, you must first add the field providing the extracted value. Check that the field providing the value to the new field is created, then add the new field.

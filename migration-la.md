@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-07-17"
 
 keywords:
 
@@ -23,7 +23,7 @@ Migrating {{site.data.keyword.la_full}} instances to {{site.data.keyword.logs_fu
 
 
 ## {{site.data.keyword.la_full_notm}} architecture
-{: #migration-platform-logs-ov}
+{: #migration-platform-la-ov}
 
 
 You can use {{site.data.keyword.la_full_notm}} instances to monitor application logs, operational logs, and platform logs in the {{site.data.keyword.cloud_notm}} and outside the {{site.data.keyword.cloud_notm}}.

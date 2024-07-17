@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-14"
+  years:  2024
+lastupdated: "2024-07-17"
 
 keywords:
 
@@ -61,7 +61,7 @@ Review the following sections for the specific responsibilities for you and for 
 
 | Task                                       | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |--------------------------------------------|-------------------------------------------------|-----------------------|
-| Meet security and compliance objectives  | Maintain controls that are commensurate to various industry compliance standards.  | * Set up and maintain security and regulation compliance for your apps and data.  \n * When using {{site.data.keyword.cos_full_notm}}, ensure you comply with [Data security](/docs/event-notifications?topic=event-notifications-en-data-security-and-compliance#en-data-encryption) and [Managing security and compliance](/docs/cloud-object-storage?topic=cloud-object-storage-manage-security-compliance).  \n * When using {{site.data.keyword.en_full_notm}}, ensure you comply with [Data security and compliance](/docs/event-notifications?topic=event-notifications-en-data-security-and-compliance#en-data-encryption).  |
+| Meet security and compliance objectives  | Maintain controls that are commensurate to various industry compliance standards.  | * Set up and maintain security and regulation compliance for your apps and data.  \n * When using {{site.data.keyword.cos_full_notm}}, ensure you comply with [Data security](/docs/cloud-object-storage?topic=cloud-object-storage-security) and [Compliance](/docs/cloud-object-storage?topic=cloud-object-storage-compliance).  \n * When using {{site.data.keyword.en_full_notm}}, ensure you comply with [Data security and compliance](/docs/event-notifications?topic=event-notifications-en-data-security-and-compliance).  |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
 
 

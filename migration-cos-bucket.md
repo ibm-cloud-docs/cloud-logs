@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-07-17"
 
 keywords:
 
@@ -70,7 +70,7 @@ The following figure shows the high level view of an {{site.data.keyword.logs_fu
 ![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets](/images/migration-bucket-logs.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets" caption-side="bottom"}
 
 ## Migrating the archiving configuration
-{: #migration-cos-bucket-prereqs}
+{: #migration-archive-config}
 
 The archiving configuration is migrated when you migrate an instance. For more information, see [Migrating instances](/docs/cloud-logs?topic=cloud-logs-migration-instance).
 {: note}

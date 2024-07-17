@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-07-17"
 
 keywords:
 
@@ -65,7 +65,7 @@ The following image shows a high-level view of the account after you migrate {{s
 ## Migrating maintaing data locality
 {: #migration-platform-logs-options-2}
 
-You can use the migration tool to migrate {{site.data.keyword.la_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances, replicating the current {{site.data.keyword.la_full_notm}} architecture. Then, after you have migrated all instances, you can use the migration tool to configure {{site.data.keyword.logs_routing_full_notm}} in the account. For more information, see [Migrating {{site.data.keyword.la_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances for data locality](/docs/cloud-logs?topic=cloud-logs-migration-la-n-cl).
+You can use the migration tool to migrate {{site.data.keyword.la_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances, replicating the current {{site.data.keyword.la_full_notm}} architecture. Then, after you have migrated all instances, you can use the migration tool to configure {{site.data.keyword.logs_routing_full_notm}} in the account. 
 
 The following image shows a high-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}:
 
