@@ -20,7 +20,7 @@ A maximum of 100 MB is scanned for {{site.data.keyword.frequent-search}} data. N
 
 
 ## Rate limiting
-{: #liit_rate_limit}
+{: #limit_rate_limit}
 
 A maximum of 10 queries per minute can be submitted.
 
