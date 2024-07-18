@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-07-18"
 
 keywords:
 
@@ -41,14 +41,14 @@ You can use the Migration tool, a command line tool, to migrate 1 {{site.data.ke
 
 - Option 1: You can automatically migrate an instance by using the Migration tool. Run the following command:
 
-    ```
+    ```text
     ibmcloud logging migrate create-resources --scope instance --instance-crn CRN --api
     ```
     {: codeblock}
 
 - Option 2: You can migrate an instance by using the Migration tool to generate Terraform scripts that you can customize and apply at a later time. Run the following command:
 
-    ```
+    ```text
     ibmcloud logging migrate create-resources --scope instance --instance-crn CRN --terraform
     ```
     {: codeblock}
@@ -57,7 +57,7 @@ You can use the Migration tool, a command line tool, to migrate 1 {{site.data.ke
 
 - Option 3: You can migrate an instance by using the Migration tool to generate and apply Terraform scripts. Run the following command:
 
-    ```
+    ```text
     ibmcloud logging migrate create-resources --scope instance --instance-crn CRN --terraform -f
     ```
     {: codeblock}
