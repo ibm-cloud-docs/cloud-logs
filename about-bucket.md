@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-07-19"
 
 keywords:
 
@@ -19,8 +19,11 @@ subcollection: cloud-logs
 Configure a data bucket and a metrics bucket in {{site.data.keyword.cos_full}} to store your {{site.data.keyword.logs_full_notm}} data for long term storage and search.
 {: shortdesc}
 
-The same bucket cannot be used as both your data bucket and your metrics bucket.
+You can configure the same bucket for data and metrics. However, notice that the {{site.data.keyword.logs_full_notm}} service needs deletion permission on metrics files. Therefore, if you need to configure your bucket with lifecycle policies to manage log data files in the bucket, you must use different buckets to store your log data and your metrics data.
 {: important}
+
+For production environments, consider using different buckets for data and for metrics.
+{: note}
 
 You should create a bucket with _Cross Region_ resiliency to store and access data across multiple geographical regions to ensure high availability, durability, and disaster recovery capabilities. See [Creating and modifying {{site.data.keyword.cos_full_notm}} buckets](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-geo).
 {: important}

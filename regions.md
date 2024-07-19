@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-14"
+  years:  2024
+lastupdated: "2024-07-19"
 
 keywords: 
 
@@ -19,7 +19,12 @@ subcollection: cloud-logs
 {: shortdesc}
 
 
+
+
 ![The image shows the locations where the {{site.data.keyword.logs_full_notm}} service is available.](/images/Cloud-Logs-Locations.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.logs_full_notm}} resources." caption-side="bottom"}
+
+
+
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
 {: note}
