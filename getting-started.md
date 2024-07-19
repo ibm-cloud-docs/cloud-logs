@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-07-19"
 
 keywords:
 
@@ -42,6 +42,8 @@ You need two dedicated {{site.data.keyword.cos_full_notm}} buckets that will be 
 * A [data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket&interface=cli)
 * A [metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket&interface=cli)
 
+For more information on buckets, see [Configuring buckets for long term storage and search](/docs/cloud-logs?topic=cloud-logs-about-bucket).
+
 Follow the steps in [Create some buckets to store your data](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets) to create new {{site.data.keyword.cos_full_notm}} buckets if you do not already have buckets. If you already have {{site.data.keyword.cos_full_notm}} buckets that you will use with {{site.data.keyword.logs_full_notm}} you can skip this step.
 
 ## Step 3. Creating an {{site.data.keyword.logs_full_notm}} service instance
@@ -69,7 +71,7 @@ When initially provisioned, you might not see data flowing to the instance, so a
 ## Step 5. Routing logs to your {{site.data.keyword.logs_full_notm}} instance
 {: #gs-route-logs}
 
-You can configure {{site.data.keyword.logs_routing_full_notm}} in your account to route platform logs to {{site.data.keyword.logs_full_notm}}. 
+You can configure {{site.data.keyword.logs_routing_full_notm}} in your account to route platform logs to {{site.data.keyword.logs_full_notm}}.
 
 You can also configure {{site.data.keyword.logs_routing_full_notm}} to route log data from applications on your [{{site.data.keyword.containerlong_notm}}](/docs/containers) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift) clusters to your {{site.data.keyword.logs_full_notm}} instance.
 
