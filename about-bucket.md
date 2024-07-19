@@ -23,7 +23,7 @@ You can configure the same bucket for data and metrics. However, notice that the
 {: important}
 
 For production environments, consider using different buckets for data and for metrics.
-{: note}
+{: tip}
 
 You should create a bucket with _Cross Region_ resiliency to store and access data across multiple geographical regions to ensure high availability, durability, and disaster recovery capabilities. See [Creating and modifying {{site.data.keyword.cos_full_notm}} buckets](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-geo).
 {: important}
