@@ -266,11 +266,11 @@ toc:
                 navtitle: Applying Terraform
               - topic: migration-limitations.md
                 navtitle: Known limitations
-          - topic: migration_post.md
-            navtitle: Post-migrating steps
           - topicgroup:
-              label: Troubleshooting migration
+              label: Post-migrating
               topics:
+              - topic: migration_post.md
+                navtitle: Post-migrating steps
               - topic: migration-exclusion-rules.md
                 navtitle: Excluding ingestion data by using exclusion rules
       - topicgroup:
