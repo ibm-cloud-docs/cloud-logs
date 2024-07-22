@@ -268,6 +268,11 @@ toc:
                 navtitle: Known limitations
           - topic: migration_post.md
             navtitle: Post-migrating steps
+          - topicgroup:
+              label: Troubleshooting migration
+              topics:
+              - topic: migration-exclusion-rules.md
+                navtitle: Excluding ingestion data by using exclusion rules
       - topicgroup:
           label: Observability
           topics:
