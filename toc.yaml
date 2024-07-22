@@ -267,7 +267,7 @@ toc:
               - topic: migration-limitations.md
                 navtitle: Known limitations
           - topicgroup:
-              label: Post-migrating
+              label: Post-migration
               topics:
               - topic: migration_post.md
                 navtitle: Post-migrating steps
