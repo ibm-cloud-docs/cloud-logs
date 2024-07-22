@@ -272,7 +272,7 @@ toc:
               - topic: migration_post.md
                 navtitle: Post-migrating steps
               - topic: migration-exclusion-rules.md
-                navtitle: Excluding ingestion data by using exclusion rules
+                navtitle: Excluding ingestion data to avoid duplication of logs
       - topicgroup:
           label: Observability
           topics:

@@ -12,7 +12,7 @@ subcollection: activity-tracker
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Excluding ingestion data by using exclusion rules in an {{site.data.keyword.at_full_notm}} instance or {{site.data.keyword.la_full_notm}} instance
+# Excluding ingestion data to avoid duplication of logs by using exclusion rules in an {{site.data.keyword.at_full_notm}} instance or {{site.data.keyword.la_full_notm}} instance
 {: #migration-exclusion-rules}
 
 In an {{site.data.keyword.at_full_notm}} instance or {{site.data.keyword.la_full_notm}} instance, you can configure exclusion rules to stop events from counting against your data usage quota and from being stored for search.
