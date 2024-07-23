@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.logs_full_notm}} CLI
-{: #cloud-logs-cli}
+{: #cloud-logs-cli-temp}
 
 You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to manage your {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
