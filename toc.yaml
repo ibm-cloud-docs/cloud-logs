@@ -306,10 +306,8 @@ toc:
       - topicgroup:
           label: CLI Reference
           topics:
-          - topic: cloud-logs-cli-temp.md
-            navtitle: CLI Reference
           - include: ../cloud-logs-cli-plugin/cloud-logs-cli.md
-            navtitle: CLI Reference (WIP-automated)
+            navtitle: CLI Reference
       - topicgroup:
           label: DataPrime Reference
           topics:
