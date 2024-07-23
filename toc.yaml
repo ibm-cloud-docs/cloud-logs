@@ -307,13 +307,14 @@ toc:
           label: CLI Reference
           topics:
           - include: ../cloud-logs-cli-plugin/cloud-logs-cli.md
+          - topic: cloud-logs-cli-temp.md
+            navtitle: CLI Reference
       - topicgroup:
           label: DataPrime Reference
           topics:
           - dataprime-quickstart.md
           - dataprime-reference.md
       - cloud_services_msg_prefix.md
-
   - navgroup:
         id: help
         topics:
