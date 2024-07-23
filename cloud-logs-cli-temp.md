@@ -19,7 +19,7 @@ You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to 
 {: shortdesc}
 
 ## Prerequisites
-{: #logs-cli-prereq}
+{: #logs-cli-prereq-temp}
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 * Install the {{site.data.keyword.logs_full_notm}} CLI plug-in by running the following command:
