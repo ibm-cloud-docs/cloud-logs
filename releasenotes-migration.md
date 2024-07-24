@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-11"
+lastupdated: "2024-07-24"
 
 keywords:
 
@@ -22,6 +22,20 @@ Use these release notes to learn about the latest updates to the migration tool.
 
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
 {: note}
+
+## 24 July 2024
+{: #migration-july2424}
+
+The migration tool plug-in v0.1.13 is available.
+:   Updates include:
+
+   * Update {{site.data.keyword.en_full_notm}} notification based on an updated response.
+
+   * Automated Terraform to run with a single flag.
+
+   * Help fixes.
+
+   * Fix for {{site.data.keyword.keymanagementservicelong_notm}} and archiving errors.
 
 ## 11 July 2024
 {: #migration-july1124}
