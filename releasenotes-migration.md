@@ -37,6 +37,8 @@ The migration tool plug-in v0.1.13 is available.
 
    * Fix for {{site.data.keyword.keymanagementservicelong_notm}} and archiving errors.
 
+   * Support in Terraform for views with an empty query.
+
 ## 11 July 2024
 {: #migration-july1124}
 
