@@ -320,7 +320,7 @@ toc:
         id: help
         topics:
         - getting-help.md
-        - faq.md
+        - faqs.md
 
         - topicgroup:
             label: Troubleshooting
