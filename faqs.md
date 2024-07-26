@@ -2,17 +2,19 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-05-06"
+lastupdated: "2024-07-26"
 
 keywords:
 
 subcollection: cloud-logs
 
+content-type: faq
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Frequently asked questions (FAQ)
+# FAQs for {{site.data.keyword.logs_full_notm}}
 {: #faq}
 
 Frequently asked questions about {{site.data.keyword.logs_full}}.
@@ -23,3 +25,5 @@ Frequently asked questions about {{site.data.keyword.logs_full}}.
 {: faq}
 
 The API is limited to a message size of 2 MB, which is approximately 3000 medium-sized logs.
+
+
