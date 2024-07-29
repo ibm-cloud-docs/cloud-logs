@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-29"
 
 keywords:
 
@@ -18,8 +18,9 @@ subcollection: cloud-logs
 You can provision an instance of the {{site.data.keyword.logs_full_notm}} service through the {{site.data.keyword.cloud_notm}} catalog, and programmatically by using a terraform script or the Resource Controller API.
 {: shortdesc}
 
-If you are creating an instance with [{{site.data.keyword.cos_full_notm}} buckets](/docs/cloud-logs?topic=cloud-logs-about-bucket#about-bucket-ov), make sure you create a [S2S authorization policy](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos&interface=ui) that grants {{site.data.keyword.logs_full_notm}} access to {{site.data.keyword.cos_full_notm}}, before proceeding. The policy should grant access to the {{site.data.keyword.cos_full_notm}} service as a whole, not just to the bucket. After creating the instance, the policy can be updated to restrict access to just the bucket. The [bucket details](/docs/cloud-logs?topic=cloud-logs-about-bucket&interface=ui) can also be configured any time after the service instance is created.
-{: important}
+IBM Cloud Logs integrates with IBM Cloud Object Storage for long term storage of the data and for collection of metrics, and with IBM Cloud Event Notifications for triggering of alerts. Authorization between services is done by configuring IAM service to service authorizations in the account.
+
+You can run Cloud Logs without a data bucket or a metrics bucket. However, features like TCO Optimizer to manage data thorugh different data pipelines at different costs, long term data querying or metrics related features would not be available.
 
 There are limits for each provisioned instance. For more information, see [Limits per instance](/docs/cloud-logs?topic=cloud-logs-limits&interface=ui#limits-per-instance).
 {: note}
@@ -56,15 +57,13 @@ To provision an instance from the Observability dashboard in the {{site.data.key
 
     By default, the Standard plan is set.
 
-   For more information about service plans, see [Service plans and pricing](/docs/cloud-logs?topic=cloud-logs-service_plans).-->
+   For more information about service plans, see [Service plans and pricing](/docs/cloud-logs?topic=cloud-logs-service_plans).
 
-10. Optionally, add the [bucket details](/docs/cloud-logs?topic=cloud-logs-about-bucket#about-bucket-ov).
+10. Choose a retention plan. Valid values are `7 days`, `14 days`, `30 days`, `60 days` or `90 days`.
 
 11. Click **Create**.
 
 After you provision an instance, the UI opens.
-
-Next, configure a log source by adding a logging agent. This agent is responsible for collecting and forwarding logs to your instance.
 
 
 
@@ -96,17 +95,14 @@ To provision an instance of {{site.data.keyword.logs_full_notm}} through the {{s
 
 8. Select the `Standard` service plan.
 
-    By default, the standard plan is set.
+    By default, the standard plan is set. For more information about service plans, see [Service plans and pricing](/docs/cloud-logs?topic=cloud-logs-service_plans).
 
-    For more information about service plans, see [Service plans and pricing](/docs/cloud-logs?topic=cloud-logs-service_plans).
-
-9. Optionally, add the [bucket details](/docs/cloud-logs?topic=cloud-logs-about-bucket#about-bucket-ov).
+9. Choose a retention plan. Valid values are `7 days`, `14 days`, `30 days`, `60 days` or `90 days`.
 
 10. Click **Create**.
 
 After you provision an instance, the UI opens.
 
-Next, configure a log source by adding a logging agent. This agent is responsible for collecting and forwarding logs to your instance.
 
 
 
@@ -155,4 +151,15 @@ To provision an instance of {{site.data.keyword.logs_full_notm}} through the com
     ```
     {: codeblock}
 
- 
+
+
+## Next steps
+{: #instance-provision-next}
+
+IBM Cloud Logs integrates with{{site.data.keyword.cos_full_notm}} for long term storage of the data and for collection of metrics, and with IBM Cloud Event Notifications for triggering of alerts. Authorization between services is done by configuring IAM service to service authorizations in the account.
+
+After you provision the instance, you can:
+
+- Attach a data bucket and a metrics bucket. For more information, see [Configuring buckets](/docs/cloud-logs?topic=cloud-logs-about-bucket).
+- Configure an outbound integration. For more information, see [Enabling {{site.data.keyword.en_full_notm}} for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events).
+- Configure a log source by adding a logging agent. This agent is responsible for collecting and forwarding logs to your instance.

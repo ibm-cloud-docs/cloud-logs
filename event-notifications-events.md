@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-07-29"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Enabling event notifications for {{site.data.keyword.logs_full_notm}}
+# Enabling {{site.data.keyword.en_full_notm}} for {{site.data.keyword.logs_full_notm}}
 {: #event-notifications-events}
 
 As an administrator of {{site.data.keyword.logs_full_notm}}, you might want to send notifications of events in {{site.data.keyword.logs_full_notm}} to other users, or human destinations, by using email, SMS, or other supported delivery channels. Additionally, you might want to send these notifications of events to other applications to build logic by using event-driven programming using webhooks, for example. This is made possible by the integration between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_full_notm}}.
@@ -83,6 +83,7 @@ Before you can enable notifications for {{site.data.keyword.logs_full_notm}}, be
 4. In the outbound integrations section, find  {{site.data.keyword.en_short}} and click **Add**.
 5. On the Integrations page, click **Add**.
 6. Select {{site.data.keyword.en_short}} service instance that you want to connect.
+
     If an IAM authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_short}} doesn't exist in your account, a dialog is displayed. Follow the prompts to grant access between the services.
 
     1. To grant access between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_short}}, click **Authorize**.
