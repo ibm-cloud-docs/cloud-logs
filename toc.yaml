@@ -316,6 +316,7 @@ toc:
           - dataprime-quickstart.md
           - dataprime-reference.md
       - cloud_services_msg_prefix.md
+
   - navgroup:
         id: help
         topics:
@@ -327,3 +328,4 @@ toc:
             label: Troubleshooting
             topics:
              - ts-no-metrics-bucket.md
+             - ts-en-500.md
