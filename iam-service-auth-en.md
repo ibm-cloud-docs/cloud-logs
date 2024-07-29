@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-07-29"
 
 keywords:
 
@@ -24,7 +24,7 @@ Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {
 {: #iam-service-auth-en-prereqs}
 
 - Read about [Managing authorizations to grant access between services](/docs/cloud-logs?topic=cloud-logs-iam-service-auth).
-- You must have access to the target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
+- You must have access to the {{site.data.keyword.en_full_notm}} target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
 
 The target service is located always in the account where the authorization is created.
 {: important}
@@ -40,6 +40,7 @@ You can select any of the following roles that the source can use to interact wi
 - `Event Source Manager`: You must grant `Event Source Manager` role to handle source integration with the {{site.data.keyword.en_full_notm}} service.
 - `Reader`: You must grant `Reader` role to perform read-only actions within a service such as viewing service-specific resources.
 
+For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 
 ## Creating an authorization through the console
 {: #iam-service-auth-en-create-ui}
