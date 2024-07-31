@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-07-31"
 
 keywords:
 
@@ -61,6 +61,8 @@ When you configure alerts in an {{site.data.keyword.logs_full_notm}} instance, c
 
 ## Integration with the {{site.data.keyword.en_full_notm}} service
 {: #migration-alerts-3}
+
+
 
 To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the following steps:
 1. In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. If you do not currently use the service and have alerts configured in your {{site.data.keyword.at_full_notm}} instances or your {{site.data.keyword.la_full_notm}} instances, you must provision an instance of the {{site.data.keyword.at_full_notm}} service. For more information, see [Enabling event notifications for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events).

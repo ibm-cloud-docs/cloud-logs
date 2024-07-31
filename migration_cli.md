@@ -160,6 +160,7 @@ All {{site.data.keyword.at_full_notm}} instances associated with {{site.data.key
 
 The command generates Terraform similar to the [`generate-terraform` command](#logging-migrate-generate-terraform) and applies the generated Terraform by using a single command.
 
+
 ```text
 ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--single] [--instance-name instance-name] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--instance-resource-group-id instance-resource-group-id] [--region region] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--force] 
 ```
@@ -222,6 +223,13 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
    :   Defines the ingress endpoint type of the configured {{site.data.keyword.logs_full_notm}} instance to be used to receive platform logs. Valid values are `private` and `public`. If not specified the default is `public`.
 
        This option is only used when `--scope platform-logs` is specified.
+
+`--ecrn`
+
+   : The [CRN](/docs/account?topic=account-crn) of an {{site.data.keyword.en_full_notm}} instance. Migrated alerts will be configured to be sent to this instance. 
+
+   If `--ecrn` is not specified, Terraform files are created to migrate alerts, however manual configuration will have to be done after migration to configure {{site.data.keyword.en_full_notm}} to receive the alerts. If the `--api` option is used, and the user does not specify yes when prompted to configure alerting to {{site.data.keyword.en_full_notm}}, the user will have to manally configure sending alerts to {{site.data.keyword.en_full_notm}}.
+   {: important}
 
 `--directory`|`-d`
    :   The directory on your local computer where migration files are written. If not specified, the directory where the command is run is used.
