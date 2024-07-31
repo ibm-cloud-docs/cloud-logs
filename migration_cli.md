@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-31"
 
 keywords:
 
@@ -160,14 +160,10 @@ All {{site.data.keyword.at_full_notm}} instances associated with {{site.data.key
 
 The command generates Terraform similar to the [`generate-terraform` command](#logging-migrate-generate-terraform) and applies the generated Terraform by using a single command.
 
-
 ```text
-ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--region region] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--force]
+ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--single] [--instance-name instance-name] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--instance-resource-group-id instance-resource-group-id] [--region region] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--force] 
 ```
 {: pre}
-
-
-
 
 
 ### Command options
@@ -200,6 +196,26 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
    :   The [CRN](/docs/account?topic=account-crn) of the {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance to be migrated.
 
 
+`--instance-name`|`--cl`
+   :   The name of the {{site.data.keyword.logs_full_notm}} instance to be created when `--scope atracker` is specified.
+
+`--cos-instance-crn`|`--cos`
+   :   The {{site.data.keyword.cos_full_notm}} CRN where buckets are created for the {{site.data.keyword.logs_full_notm}} instance when `--scope atracker` is specified.
+
+`--data-bucket-name`|`--db`
+   :   The name of the {{site.data.keyword.cos_full_notm}} data bucket created for the {{site.data.keyword.logs_full_notm}} instance when `--scope atracker` is specified.
+
+`--metrics-bucket-name`|`--mb`
+   :   The name of the {{site.data.keyword.cos_full_notm}} metrics bucket created for the {{site.data.keyword.logs_full_notm}} instance when `--scope atracker` is specified.
+
+`--region`|`-r`
+   :   The region where {{site.data.keyword.atracker_full_notm}} targets will be configured.
+
+`--single`
+   :   Migrate all existing {{site.data.keyword.at_full_notm}} instances to 1 {{site.data.keyword.logs_full_notm}} instance.
+
+`--instance-resource-group-id`|`--rg`
+   :   The resource group ID used when creating the {{site.data.keyword.logs_full_notm}} instance.
 
 `--ingress-endpoint-type`
 
