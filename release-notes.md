@@ -28,7 +28,7 @@ For release notes about the {{site.data.keyword.logs_full_notm}} migration tool,
 {: release-note}
 
 Toronto (`ca-tor`) region support
-:   Toronto is now an online region for {{site.data.keyword.logs_full_notm}} service in the {{site.data.keyword.cloud_notm}}. Services can now be provisioned Toronto and endpoints in Toronto can be used.
+:   Toronto is now an online region for the {{site.data.keyword.logs_full_notm}} service in the {{site.data.keyword.cloud_notm}}. {{site.data.keyword.logs_full_notm}} instances can now be provisioned in Toronto.
 
 
 ## 24 June 2024
