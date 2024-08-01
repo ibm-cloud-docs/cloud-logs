@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-10"
+lastupdated: "2024-08-01"
 
 keywords:
 
@@ -22,6 +22,14 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
+
+## 30 July 2024
+{: #cloud-logs-july2424}
+{: release-note}
+
+Toronto (`ca-tor`) region support
+:   Toronto is now an online region for {{site.data.keyword.logs_full_notm}} service in the {{site.data.keyword.cloud_notm}}. Services can now be provisioned Toronto and endpoints in Toronto can be used.
+
 
 ## 24 June 2024
 {: #cloud-logs-jun2424}

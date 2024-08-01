@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-13"
+  years:  2024
+lastupdated: "2024-08-01"
 
 keywords:
 
@@ -39,7 +39,7 @@ The following are the application names based on the log source:
 ## Subsystem name
 {: #md-sys-name}
 
-The subsystem name is the service or application that produces and sends logs, metrics, or traces to {{site.data.keyword.logs_full_notm}}.
+The subsystem name is the service or application that produces and sends logs, or metrics to {{site.data.keyword.logs_full_notm}}.
 
 The following are the subsystem names based on the log source:
 
