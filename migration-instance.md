@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-31"
 
 keywords:
 
@@ -91,7 +91,7 @@ When you run the Migration tool to migrate an instance,
 
     - If Activity Tracker, Monitoring, or Associated key management services are configured, the same configuration is applied to the new buckets.
 
-    - Lifecycle policies are not migrated through the Migration tool.
+
 
     - You cannot use as your metrics bucket a bucket with lifecycle policies where data is retained and cannot be deleted.
 

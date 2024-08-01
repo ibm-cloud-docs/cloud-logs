@@ -2,9 +2,9 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-19"
+lastupdated: "2024-08-01"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -39,6 +39,7 @@ The following table lists the locations where the service is available:
 |-----------------------|--------------------------|--------------|-----------|
 | Europe              | Frankfurt (`eu-de`) `(*)`  | YES        | `MZR`     |
 | Europe              | Madrid (`eu-es`) `(*)`     | YES        | `MZR`     |
+| North America       | Toronto (`ca-tor`)       | Not applicable        | `MZR`     |
 {: caption="Table 1. List of locations where the service is available" caption-side="top"}
 
 Where
