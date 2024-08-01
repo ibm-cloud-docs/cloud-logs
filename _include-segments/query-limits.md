@@ -1,7 +1,5 @@
-## Log query limits
+## Log query limits for Direct HTTP API Archive Query
 {: #limit-query}
-
-{{site.data.keyword.logs_full_notm}} limits a service instance to 50 active log query searches.
 
 
 ## Results returned

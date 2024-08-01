@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-14"
+lastupdated: "2024-08-01"
 
 keywords:
 
@@ -39,7 +39,13 @@ subcollection: cloud-logs
 ## Log ingestion limits
 {: #limit-ingestion}
 
-{{site.data.keyword.logs_full_notm}} limits the data ingested by a service instance per day. If a user sends data too fast, ingestion is throttled. If user uses all of the allowed daily ingestion limit, data that is received after that point is blocked and the data is dropped.
+When you send data to an {{site.data.keyword.logs_full_notm}} instance:
+- Logs cannot be older than 24 hours.
+- Logs cannot be more than 4 hours into the future.
+
+{{site.data.keyword.logs_full_notm}} limits the data ingested by a service instance per day.
+- If a user sends data too fast, ingestion is throttled.
+- If user uses all of the allowed daily ingestion limit, data that is received after that point is blocked and the data is dropped.
 
 For example, data is ingested by {{site.data.keyword.logs_full_notm}} as it is received. When the rate of data ingestion reaches 3 MiB per second, data is ingested at a slower rate. Data is dropped when data reaches 0.25 TB per day.
 Warnings are sent to the configured email address when the rate reaches the limit. Users also receive an email when data is dropped.
@@ -54,4 +60,3 @@ For a single ingestion request {{site.data.keyword.logs_full_notm}}, these limit
 
 
 {{_include-segments/query-limits.md}}
-
