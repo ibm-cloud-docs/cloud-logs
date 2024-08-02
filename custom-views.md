@@ -45,7 +45,7 @@ To configure a custom view, you can define a query, filter by selected fields, o
 
 Do the following to create a custom view.
 
-1. Select the fields to be included in the view. By default you can select *Teams*, *Applications*, *Subsystems*, and log *Severities*.
+1. Select the fields to be included in the view. By default you can select *Applications*, *Subsystems*, and log *Severities*.
 
 2. (Optional) Add additional filters click **+ Add Filter** and select and configure additional field and filter values.
 
