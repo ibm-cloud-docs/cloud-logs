@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-02"
 
 keywords:
 
@@ -22,6 +22,15 @@ Use these release notes to learn about the latest updates to the migration tool.
 
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
 {: note}
+
+
+## 01 August 2024
+{: #migration-aug0124}
+
+The migration tool plug-in v0.1.14 is available.
+:   Updates include:
+
+   * Ability to migrate alerts to route to an existing {{site.data.keyword.en_full_notm}} instance by using the migration tool.
 
 
 
