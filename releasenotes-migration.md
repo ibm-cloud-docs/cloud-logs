@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-03"
 
 keywords:
 
@@ -30,7 +30,9 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 The migration tool plug-in v0.1.14 is available.
 :   Updates include:
 
-   * Ability to migrate alerts to route to an existing {{site.data.keyword.en_full_notm}} instance by using the migration tool.
+   * Configure an outbound integration with the IBM Cloud Event Notifications service.
+   * Create one or more topics and subscriptions in the Event Notifications service.
+
 
 
 
