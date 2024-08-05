@@ -24,6 +24,8 @@ toc:
             navtitle: Features
           - topic: tco-data-pipelines.md
             navtitle: TCO Data pipelines
+          - topic: about_dashboards.md
+            navtitle: Dashboards
           - topic: log_parsing_rules.md
             navtitle: Parsing rules
           - topic: enrich.md
@@ -316,7 +318,6 @@ toc:
           - dataprime-quickstart.md
           - dataprime-reference.md
       - cloud_services_msg_prefix.md
-
   - navgroup:
         id: help
         topics:

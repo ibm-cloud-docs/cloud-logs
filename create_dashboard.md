@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-14"
+lastupdated: "2024-08-02"
 
 keywords:
 
@@ -18,8 +18,9 @@ subcollection: cloud-logs
 You can create custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
+
 ## Dashboard widgets
-{: #dashboard_widgets}
+{: #create_dashboards_widgets}
 
 Custom dashboard are comprosed of widgets. You can create the widgets you want to use in the dashboard.
 

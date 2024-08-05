@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-05"
 
 keywords:
 
@@ -22,6 +22,17 @@ Use these release notes to learn about the latest updates to the migration tool.
 
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
 {: note}
+
+
+## 01 August 2024
+{: #migration-aug0124}
+
+The migration tool plug-in v0.1.14 is available.
+:   Updates include:
+
+   * Configure an outbound integration with the {site.data.keyword.en_full_notm}} service.
+   * Create one or more topics and subscriptions in the {site.data.keyword.en_full_notm}} service.
+
 
 
 

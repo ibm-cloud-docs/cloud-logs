@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-08-02"
 
 keywords:
 
@@ -18,6 +18,17 @@ subcollection: cloud-logs
 {{site.data.keyword.logs_full}} custom views feature helps organize specific, relevant log information, as well as create views that help other users work and retrieve important data more efficiently. You can define private and shared views.
 {: shortdesc}
 
+## About views
+{: #custom_views_ov}
+
+- You can configure views to see logs that match a specific filtering criteria.
+- Views can be shared (public) or private.
+- To configure a custom view, you can define a query, filter by selected fields, or both.
+- Views can be grouped into folders.
+- View names must be unique within a folder.
+- You can configure {{site.data.keyword.iamlong}} to manage the permissions that you grant users to work with private and shared views in an {{site.data.keyword.logs_full_notm}} instance. [Granting permissions to work with views](/docs/cloud-logs?topic=cloud-logs-iam-views).
+
+
 ## Accessing views
 {: #access_view}
 
@@ -29,9 +40,12 @@ The last view you had opened will be displayed. If no view was previously open, 
 ## Creating a custom view
 {: #create_view}
 
+To configure a custom view, you can define a query, filter by selected fields, or both.
+{: note}
+
 Do the following to create a custom view.
 
-1. Select the fields to be included in the view. By default you can select *Teams*, *Applications*, *Subsystems*, and log *Severities*.
+1. Select the fields to be included in the view. By default you can select *Applications*, *Subsystems*, and log *Severities*.
 
 2. (Optional) Add additional filters click **+ Add Filter** and select and configure additional field and filter values.
 
