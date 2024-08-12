@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-12"
 
 keywords:
 
@@ -23,8 +23,15 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
 
+## 8 August 2024
+{: #cloud-logs-aug0824}
+{: release-note}
+
+Washington (`us-east`) and Dallas (`us-south`) region support
+:   Washington and Dallas are now online regions for the {{site.data.keyword.logs_full_notm}} service in the {{site.data.keyword.cloud_notm}}. {{site.data.keyword.logs_full_notm}} instances can now be provisioned in Washington and Dallas.
+
 ## 30 July 2024
-{: #cloud-logs-july2424}
+{: #cloud-logs-jul2424}
 {: release-note}
 
 Toronto (`ca-tor`) region support

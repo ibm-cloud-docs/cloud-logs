@@ -36,6 +36,8 @@ Public endpoints can be accessed from the public internet.
 | North America  | Toronto (`ca-tor`) | `dashboard.ca-tor.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.api.us-south.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Dallas (`us-south`) | `dashboard.us-south.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
+| North America  | Washington (`us-east`) | `<service-instance-guid>.api.us-east.logs.cloud.ibm.com` | Query logs and manage the instance |
+| North America  | Washington (`us-east`) | `dashboard.us-east.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 {: caption="Table 1. List of {{site.data.keyword.logs_full_notm}} public endpoints" caption-side="top"}
 
 ## Private Endpoints
@@ -49,6 +51,7 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.api.private.eu-de.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Toronto (`ca-tor`) | `<service-instance-guid>.api.private.ca-tor.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.api.private.us-south.logs.cloud.ibm.com` | Query logs and manage the instance |
+| North America  | Washington (`us-east`) | `<service-instance-guid>.api.private.us-east.logs.cloud.ibm.com` | Query logs and manage the instance |
 {: caption="Table 2. List of {{site.data.keyword.logs_full_notm}} private endpoints" caption-side="top"}
 
 
