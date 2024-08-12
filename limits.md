@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-12"
 
 keywords:
 
@@ -17,6 +17,11 @@ subcollection: cloud-logs
 
 {{site.data.keyword.logs_full}} has limits that need to be considered when using the service.
 {: shortdesc}
+
+## Character support
+{: #unicode}
+
+{{site.data.keyword.logs_full_notm}} does not provide full Unicode support for multibyte characters.
 
 ## Limits per instance
 {: #limits-per-instance}
