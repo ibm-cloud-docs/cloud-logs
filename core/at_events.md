@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-12"
 
 keywords:
 
@@ -34,7 +34,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 
 | Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
 |---------------------|-------------------------|-------------------|----------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #atracker-table-1}
 {: tab-title="Americas"}
