@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-13"
 
 keywords:
 
@@ -24,6 +24,18 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 {: note}
 
 
+## 12 August 2024
+{: #migration-aug1224}
+
+The migration tool plug-in v0.1.15 is available.
+:   Updates include:
+
+    * Support for the migration of lifecycle policies and retention policies for the data bucket only.
+    * A new command has been added to map a Mezmo view query to a Lucene query.
+    * A fix to set the `incident_settings retriggering_period_seconds` for alerts.
+    * A fix to remove empty struct in the platform logs report.
+    * Support for the latest {{site.data.keyword.cloud_notm}} Terraform provider.
+
 ## 01 August 2024
 {: #migration-aug0124}
 
@@ -32,9 +44,6 @@ The migration tool plug-in v0.1.14 is available.
 
    * Configure an outbound integration with the {site.data.keyword.en_full_notm}} service.
    * Create one or more topics and subscriptions in the {site.data.keyword.en_full_notm}} service.
-
-
-
 
 ## 24 July 2024
 {: #migration-july2424}
