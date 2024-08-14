@@ -285,10 +285,12 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - topic: endpoints_api.md
-      - topic: endpoints_ingress.md
       - topic: regions.md
         navtitle: Locations
+      - topic: endpoints_api.md
+      - topic: endpoints_ingress.md
+      - topic: ips4firewalls.md
+        navtitle: IP addresses for firewalls
       - service_plans.md
       - topic: limits.md
         navtitle: Limits

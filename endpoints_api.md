@@ -40,7 +40,7 @@ Public endpoints can be accessed from the public internet.
 | North America  | Washington (`us-east`) | `dashboard.us-east.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 {: caption="Table 1. List of {{site.data.keyword.logs_full_notm}} public endpoints" caption-side="top"}
 
-These endpoints are proxied via {{site.data.keyword.cis_full}}, which uses IP address described in the [documentation](https://cloud.ibm.com/docs/cis?topic=cis-cis-allowlisted-ip-addresses).
+These endpoints are proxied using {{site.data.keyword.cis_full}}, which uses IP address described in [CIS allowlisted IP addresses](/docs/cis?topic=cis-cis-allowlisted-ip-addresses).
 
 ## Private Endpoints
 {: #private-endpoints}
