@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-14"
 
 keywords:
 
@@ -28,8 +28,8 @@ Public endpoints can be accessed from the public internet.
 
 | Geography | Region                           | Endpoint |
 |-----------|----------------------------------|---------------------|
-| Europe  | Madrid (`eu-es`) | `<service-instance-guid>.ingress.eu-es.logs.cloud.ibm.com` |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.ingress.eu-de.logs.cloud.ibm.com` |
+| Europe  | Madrid (`eu-es`) | `<service-instance-guid>.ingress.eu-es.logs.cloud.ibm.com` |
 | North America  | Toronto (`ca-tor`) | `<service-instance-guid>.ingress.ca-tor.logs.cloud.ibm.com` |
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.ingress.us-south.logs.cloud.ibm.com` |
 | North America  | Washington (`us-east`) | `<service-instance-guid>.ingress.us-east.logs.cloud.ibm.com` |
@@ -42,8 +42,8 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 
 | Geography | Region                           | Endpoint | Purpose |
 |-----------|----------------------------------|---------------------|--------------------|
-| Europe  | Madrid (`eu-es`) | `<service-instance-guid>.ingress.private.eu-es.logs.cloud.ibm.com` |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.ingress.private.eu-de.logs.cloud.ibm.com` |
+| Europe  | Madrid (`eu-es`) | `<service-instance-guid>.ingress.private.eu-es.logs.cloud.ibm.com` |
 | North America  | Toronto (`ca-tor`) | `<service-instance-guid>.ingress.private.ca-tor.logs.cloud.ibm.com` |
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.ingress.private.us-south.logs.cloud.ibm.com` |
 | North America  | Washington (`us-east`) | `<service-instance-guid>.ingress.private.us-east.logs.cloud.ibm.com` |
