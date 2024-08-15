@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-15"
 
 keywords:
 
@@ -24,7 +24,7 @@ subcollection: cloud-logs
 - You can configure views to see logs that match a specific filtering criteria.
 - Views can be shared (public) or private.
 - To configure a custom view, you can define a query, filter by selected fields, or both.
-- Views can be grouped into folders.
+- Views can be grouped into folders. The folder order cannot be changed.
 - View names must be unique within a folder.
 - You can configure {{site.data.keyword.iamlong}} to manage the permissions that you grant users to work with private and shared views in an {{site.data.keyword.logs_full_notm}} instance. [Granting permissions to work with views](/docs/cloud-logs?topic=cloud-logs-iam-views).
 
@@ -77,6 +77,9 @@ Do the following to create a folder and add saved views to the folder.
 2. To create a new folder, click the folder icon. Enter a folder name, and click **Create**.
 
 3. Move views to folders by dragging them to the folder.
+
+   The order of the folders cannot be changed.
+   {: note}
 
 
 ## Deleting views
