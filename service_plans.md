@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-08-16"
 
 keywords: 
 
@@ -35,4 +35,10 @@ Data is metered by the service per gigabytes ingested. You can configure [data u
 | {{site.data.keyword.frequent-search}} - 60 days | $2.75 USD |
 | {{site.data.keyword.frequent-search}} - 90 days | $3.25 USD |
 {: caption="Data cost per consumption tier" caption-side="bottom"}
+
+# Changing the retention period
+{: #change_retention_period}
+
+After creating an {{site.data.keyword.logs_full}} instance you cannot change the retention period. If you need to change the retention period, open a [support ticket.](/docs/cloud-logs?cloud-logs-getting-help)
+
 
