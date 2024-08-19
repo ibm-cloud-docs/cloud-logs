@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-08-19"
 
 keywords:
 
@@ -82,3 +82,6 @@ To install the logging plug-in, run the following commands:
 ibmcloud plugin install logging
 ```
 {: pre}
+
+Only the current plug-in version and two previous versions are available at any time.
+{: note}
