@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-19"
+lastupdated: "2024-08-19"
 
 keywords:
 
@@ -111,6 +111,9 @@ If you are using Terraform on {{site.data.keyword.cloud_notm}} modules, you must
 Set the API key that you must configure to create resources for migration.
 
 Run `export IC_API_KEY=xxxxxx` in the command line where you plan to run the Terraform CLI commands.
+
+If running in Windows, use `set IC_API_KEY=xxxxxx` instead.
+{: note}
 
 
 
