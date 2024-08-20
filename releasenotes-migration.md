@@ -23,19 +23,7 @@ Use these release notes to learn about the latest updates to the migration tool.
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
 {: note}
 
-<Staging>
 
-## 21 August 2024
-{: #migration-aug2124}
-
-The migration tool plug-in v0.1.16 is available.
-:   Updates include:
-
-    * A fix to address a bug creating Cloud Object Storage buckets when the bucket configuration includes lifecycle policies and retention policies.
-
-
-
-/staging>
 
 ## 19 August 2024
 {: #migration-aug1924}
@@ -45,11 +33,11 @@ The migration tool plug-in v0.1.16 is available.
 
     * Support for running the migration tool in Windows systems.
     * Enhancements migrating PagerDuty alerts. Terraform scripts are provided.
-    * Enhance migration of views and alerts.
+    * Enhancd migration of views and alerts.
 
-        Migration of apps and subsystems into filters in Cloud Logs views and alerts.
+        Migration of apps and subsystems into filters in {{site.data.keyword.logs_full_notm}} views and alerts.
 
-        The App quick search field values in a Mezmo view are mapped to application filters in Cloud Logs views and alerts.
+        The App quick search field values in a Mezmo view are mapped to application filters in {{site.data.keyword.logs_full_notm}} views and alerts.
 
 
 ## 12 August 2024
