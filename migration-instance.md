@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-19"
 
 keywords:
 
@@ -32,6 +32,9 @@ You can use the Migration tool, a command line tool, to migrate 1 {{site.data.ke
     export IC_API_KEY=xxxxxx
     ```
     {: pre}
+
+    If running the tool in Windows, use `set IC_API_KEY=xxxxxx` instead.
+    {: note}
 
     The API key must have permissions to create instances, create buckets, and manage {{site.data.keyword.logs_full_notm}} instances.{: note}
 

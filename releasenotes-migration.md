@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-20"
 
 keywords:
 
@@ -23,6 +23,25 @@ Use these release notes to learn about the latest updates to the migration tool.
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
 {: note}
 
+Only the current plug-in version and two previous versions are available at any time.
+{: note}
+
+
+
+## 19 August 2024
+{: #migration-aug1924}
+
+The migration tool plug-in v0.1.16 is available.
+:   Updates include:
+
+    * Support for running the migration tool in Windows systems.
+    * Enhancements migrating PagerDuty alerts. Terraform scripts are provided.
+    * Enhancd migration of views and alerts.
+
+        Migration of apps and subsystems into filters in {{site.data.keyword.logs_full_notm}} views and alerts.
+
+        The App quick search field values in a Mezmo view are mapped to application filters in {{site.data.keyword.logs_full_notm}} views and alerts.
+
 
 ## 12 August 2024
 {: #migration-aug1224}
@@ -36,14 +55,16 @@ The migration tool plug-in v0.1.15 is available.
     * A fix to remove empty struct in the platform logs report.
     * Support for the latest {{site.data.keyword.cloud_notm}} Terraform provider.
 
+
 ## 01 August 2024
 {: #migration-aug0124}
 
 The migration tool plug-in v0.1.14 is available.
 :   Updates include:
 
-   * Configure an outbound integration with the {site.data.keyword.en_full_notm}} service.
-   * Create one or more topics and subscriptions in the {site.data.keyword.en_full_notm}} service.
+   * Configure an outbound integration with the {{site.data.keyword.en_full_notm}} service.
+   * Create one or more topics and subscriptions in the {{site.data.keyword.en_full_notm}} service.
+
 
 ## 24 July 2024
 {: #migration-july2424}
