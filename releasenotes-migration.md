@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-08-20"
 
 keywords:
 
@@ -23,8 +23,31 @@ Use these release notes to learn about the latest updates to the migration tool.
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
 {: note}
 
-Only the current plug-in version and two previous versions are available at any time.
-{: note}
+<Staging>
+
+## 21 August 2024
+{: #migration-aug2124}
+
+The migration tool plug-in v0.1.16 is available.
+:   Updates include:
+
+    * A fix to address a bug creating Cloud Object Storage buckets when the bucket configuration includes lifecycle policies and retention policies.
+
+
+
+/staging>
+
+## 19 August 2024
+{: #migration-aug1924}
+
+The migration tool plug-in v0.1.16 is available.
+:   Updates include:
+
+    * Support for running the migration tool in Windows systems.
+    * Enhancements migrating PagerDuty alerts. Terraform scripts are provided.
+    * Enhance migration of views and alerts.
+
+        The App quick search field values in a Mezmo view are mapped to application filters in Cloud Logs views and alerts.
 
 
 ## 12 August 2024
@@ -39,14 +62,20 @@ The migration tool plug-in v0.1.15 is available.
     * A fix to remove empty struct in the platform logs report.
     * Support for the latest {{site.data.keyword.cloud_notm}} Terraform provider.
 
+Only the current plug-in version and two previous versions are available at any time.
+{: note}
+
+
+
 ## 01 August 2024
 {: #migration-aug0124}
 
 The migration tool plug-in v0.1.14 is available.
 :   Updates include:
 
-   * Configure an outbound integration with the {site.data.keyword.en_full_notm}} service.
-   * Create one or more topics and subscriptions in the {site.data.keyword.en_full_notm}} service.
+   * Configure an outbound integration with the {{site.data.keyword.en_full_notm}} service.
+   * Create one or more topics and subscriptions in the {{site.data.keyword.en_full_notm}} service.
+
 
 ## 24 July 2024
 {: #migration-july2424}
