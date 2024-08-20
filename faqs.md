@@ -35,3 +35,29 @@ When searching in {{site.data.keyword.at_full_notm}} and {{site.data.keyword.la_
 When searching in {{site.data.keyword.logs_full_notm}}, the `NOT` operator is required instead.
 
 
+
+## How long is data retained by {{site.data.keyword.logs_full_notm}} if {{site.data.keyword.cos_full_notm}} data and metrics buckets have not been configured?
+{: #faq_nobucket}
+{: faq}
+
+If neither one or separate {{site.data.keyword.cos_full_notm}} data and metrics buckets have been configured, {{site.data.keyword.logs_full_notm}} retains data for the [retention plan](/docs/cloud-logs?topic=cloud-logs-service_plans) selected for the instance.
+
+
+## Is data in the {{site.data.keyword.cos_full_notm}} data and metrics buckets retained based on the bucket retention policy?
+{: #faq_bucketpolicy}
+{: faq}
+
+You own and control the data in your {{site.data.keyword.cos_full_notm}} buckets. {{site.data.keyword.logs_full_notm}} will not delete data stored in the data bucket. {{site.data.keyword.logs_full_notm}} manages and deletes files in the metrics bucket.
+
+{{site.data.keyword.cos_full_notm}} retention and lifecycle policies can only be applied to {{site.data.keyword.logs_full_notm}} data buckets. {{site.data.keyword.cos_full_notm}} must be granted the appropriate permissions to delete objects in the metrics bucket over time.
+
+To use {{site.data.keyword.cos_full_notm}} retention or lifecycle policies on {{site.data.keyword.logs_full_notm}} data buckets, the {{site.data.keyword.logs_full_notm}} data and metrics buckets must be separate {{site.data.keyword.cos_full_notm}} buckets. They can not be combined into one {{site.data.keyword.cos_full_notm}} bucket.
+{: restriction}
+
+## Do I need to archive logs separately if a single {{site.data.keyword.cos_full_notm}} bucket is used for both data and metrics?
+{: #faq_onebucket}
+{: faq}
+
+It is recommended that separate {{site.data.keyword.cos_full_notm}} buckets be used for the {{site.data.keyword.logs_full_notm}} data bucket and the metrics bucket and that you do not combine these two buckets into a single {{site.data.keyword.cos_full_notm}} bucket, even though it is technically feasible to do so.
+
+
