@@ -23,6 +23,9 @@ Use these release notes to learn about the latest updates to the migration tool.
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
 {: note}
 
+Only the current plug-in version and two previous versions are available at any time.
+{: note}
+
 
 
 ## 19 August 2024
@@ -51,10 +54,6 @@ The migration tool plug-in v0.1.15 is available.
     * A fix to set the `incident_settings retriggering_period_seconds` for alerts.
     * A fix to remove empty struct in the platform logs report.
     * Support for the latest {{site.data.keyword.cloud_notm}} Terraform provider.
-
-Only the current plug-in version and two previous versions are available at any time.
-{: note}
-
 
 
 ## 01 August 2024
