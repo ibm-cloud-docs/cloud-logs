@@ -47,6 +47,8 @@ The migration tool plug-in v0.1.16 is available.
     * Enhancements migrating PagerDuty alerts. Terraform scripts are provided.
     * Enhance migration of views and alerts.
 
+        Migration of apps and subsystems into filters in Cloud Logs views and alerts.
+
         The App quick search field values in a Mezmo view are mapped to application filters in Cloud Logs views and alerts.
 
 
