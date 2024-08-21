@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-20"
+lastupdated: "2024-08-21"
 
 keywords:
 
@@ -26,6 +26,16 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
 
+
+## 21 August 2024
+{: #migration-aug2124}
+
+The migration tool plug-in v0.1.17 is available.
+:   Updates include:
+
+    * A fix to address a bug creating {{site.data.keyword.cos_full_notm}} buckets when the bucket configuration includes lifecycle policies and retention policies.
+
+    * A fix to address a panic error when accessing an empty archive configuration.
 
 
 ## 19 August 2024
