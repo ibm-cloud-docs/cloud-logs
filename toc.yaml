@@ -49,10 +49,6 @@ toc:
              navtitle: Release notes for the migration tool
            - releasenotes_notifications.md
   - navgroup:
-      id: tutorial
-      topics:
-      - kube-logs.md
-  - navgroup:
       id: howto
       topics:
       - topic: tco-optimizer.md
