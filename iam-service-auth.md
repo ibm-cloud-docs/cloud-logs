@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-08-22"
 
 keywords:
 
@@ -39,6 +39,7 @@ The following table lists the different S2S authorizations that you might need w
 | Authorize access to read and write data into the metrics bucket | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.cos_full_notm}} |
 | Authorize sending logs to a tenant | {{site.data.keyword.logs_routing_full}} | {{site.data.keyword.logs_full_notm}} |
 | Authorize access to the {{site.data.keyword.en_full_notm}} service | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.en_full_notm}} |
+| Authorize access to the {{site.data.keyword.messagehub_full}} service | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.messagehub_full}} |
 {: caption="Table 1. S2S authorizations."}
 
 For more information, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
@@ -72,6 +73,7 @@ Choose one of the following options to create a S2S authorization:
 - [Authorize access to read and write data into a bucket](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos).
 - [Authorize sending logs to a tenant](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-logs-routing).
 - [Authorize working with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
+- [Authorize working with the {{site.data.keyword.messagehub_full}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-es).
 
 
 
