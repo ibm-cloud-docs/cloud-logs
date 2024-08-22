@@ -69,6 +69,13 @@ For example, to filter auditing events with different severity values from selec
 ```
 {: codeblock}
 
+
+
+
+## Validate a streaming rule
+{: #streaming_at_select_1b}
+{: step}
+
 To verify the streaming rule, in the left-hand navigation, click **Explore logs > Logs**. Select **Dataprime** query, and change the query as follows:
 
 

@@ -68,6 +68,10 @@ For example, to filter platform logs with different severity values from selecte
 ```
 {: codeblock}
 
+## Validate a streaming rule
+{: #streaming_platform_data_select_1b}
+{: step}
+
 To verify the streaming rule, in the left-hand navigation, click **Explore logs > Logs**. Select **Dataprime** query, and change the query as follows:
 
 
@@ -87,7 +91,7 @@ source logs
 ```
 {: codeblock}
 
-## Configure streaming for auditing event
+## Configure streaming for platform logs
 {: #streaming_platform_data_select_2}
 {: step}
 
