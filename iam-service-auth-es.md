@@ -52,7 +52,7 @@ Complete the following steps:
 
     If the source service that needs access to the target service is in this account, select **This account**.
 
-    
+    If the source service that needs access to the target service is in a different account, select **Other account**. Then, enter the account ID of the source account.
 
 4. Select `Cloud Logs` as the source service. Then, set the scope of the access.
 
@@ -72,7 +72,8 @@ Complete the following steps:
 
 7. Click **Authorize**.
 
-
+If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account number. 
+{: note}
 
 ## Creating an authorization by using the CLI
 {: #iam-service-auth-es-create-cli}
