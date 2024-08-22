@@ -291,11 +291,6 @@ toc:
             navtitle: Streaming data
           - topic: streaming_config.md
             navtitle: Configuring streaming
-          - topic: streaming_rules.md
-            navtitle: Configuring streaming data rules
-          - topic: streaming_at_select.md
-            navtitle: Streaming auditing data
-          - topic: streaming_platform_data_select.md
             navtitle: Streaming platform logs
   - navgroup:
       id: reference
