@@ -88,6 +88,8 @@ toc:
                  navtitle: S2S for Logs Routing
                - topic: iam-service-auth-en.md
                  navtitle: S2S for Event Notification
+               - topic: iam-service-auth-es.md
+                 navtitle: S2S for Event Streams
                - topic: iam-service-auth-remove-auth.md
                  navtitle: Removing authorizations
       - topicgroup:
@@ -282,6 +284,14 @@ toc:
           topics:
           - topic: core/at_events.md
             navtitle: Auditing events
+      - topicgroup:
+          label: Streaming data
+          topics:
+          - topic: streaming.md
+            navtitle: Streaming data
+          - topic: streaming_config.md
+            navtitle: Configuring streaming
+            navtitle: Streaming platform logs
   - navgroup:
       id: reference
       topics:
@@ -326,7 +336,6 @@ toc:
         - getting-help.md
         - topic: faqs.md
           navtitle: FAQs
-
         - topicgroup:
             label: Troubleshooting
             topics:
