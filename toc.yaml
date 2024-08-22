@@ -291,7 +291,6 @@ toc:
             navtitle: Streaming data
           - topic: streaming_config.md
             navtitle: Configuring streaming
-            navtitle: Streaming platform logs
   - navgroup:
       id: reference
       topics:
