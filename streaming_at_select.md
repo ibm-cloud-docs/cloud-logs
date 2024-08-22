@@ -50,13 +50,13 @@ The following table shows some rules that you can configure:
 
 | Rule description | Rule |
 |------------------|------|
-| Stream all auditing events | <v1> $l.applicationname =='ibm-audit-event' |
-| Stream auditing events from 1 service | <v1> $l.applicationname =='ibm-audit-event' && $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME' |
-| Stream auditing events from 2 services | <v1> $l.applicationname =='ibm-audit-event' && ( $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_1' || $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_2' ) |
-| Stream auditing events that have a critical severity | <v1> $l.applicationname =='ibm-audit-event' && $d.severity =='REPLACE_WITH_SEVERITY_VALUE' \nValid severity values are: `normal`, `warning`, and `critical`. |
-| Stream auditing events with different severity values from selected services | <v1> ( ( $l.applicationname =='ibm-audit-event' && ( $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_1' ||  $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_2' ) && $d.severity =='REPLACE_WITH_SEVERITY_VALUE') ) || ( $l.applicationname =='ibm-audit-event' && $d.serviceName =='iam-identity' && $d.severity =='REPLACE_WITH_SEVERITY_VALUE') \nValid severity values are: `normal`, `warning`, and `critical`.|
-| Stream auditing events based on data in the requestData or responseData sections | $d.requestData.REPLACE_WITH_FIELD_NAME \nFor example, for a field requestId, you can configure <v1> $d.requestData.requestId |
-
+| Stream all auditing events | `<v1> $l.applicationname =='ibm-audit-event'` |
+| Stream auditing events from 1 service | `<v1> $l.applicationname =='ibm-audit-event' && $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME'` |
+| Stream auditing events from 2 services | `<v1> $l.applicationname =='ibm-audit-event' && ( $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_1' \|\| $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_2' )` |
+| Stream auditing events that have a critical severity | `<v1> $l.applicationname =='ibm-audit-event' && $d.severity =='REPLACE_WITH_SEVERITY_VALUE'`  \n Valid severity values are: `normal`, `warning`, and `critical`. |
+| Stream auditing events with different severity values from selected services | `<v1> ( ( $l.applicationname =='ibm-audit-event' && ( $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_1' \|\|  $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_2' ) && $d.severity =='REPLACE_WITH_SEVERITY_VALUE') ) \|\| ( $l.applicationname =='ibm-audit-event' && $d.serviceName =='iam-identity' && $d.severity =='REPLACE_WITH_SEVERITY_VALUE')`   \n Valid severity values are: `normal`, `warning`, and `critical`.|
+| Stream auditing events based on data in the `requestData` or `responseData` sections | `$d.requestData.REPLACE_WITH_FIELD_NAME`  \n For example, for a field `requestId`, you can configure `<v1> $d.requestData.requestId` |
+{: caption="Example rules" caption-side="bottom"}
 
 For more information, see [Configuring streaming data rules](/docs/cloud-logs?topic=cloud-logs-streaming_rules).
 

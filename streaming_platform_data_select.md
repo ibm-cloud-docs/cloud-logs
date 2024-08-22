@@ -49,12 +49,13 @@ The following table shows some rules that you can configure:
 
 | Rule description | Rule |
 |------------------|------|
-| Stream all platform logs | <v1> $l.applicationname =='ibm-platform-logs' |
-| Stream platform logs from 1 service | <v1> $l.applicationname =='ibm-platform-logs' && $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME' |
-| Stream platform logs from 2 services | <v1> $l.applicationname =='ibm-platform-logs' && ( $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_1' || $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_2' ) |
-| Stream platform logs that have a critical severity | <v1> $l.applicationname =='ibm-platform-logs' && $d.severity =='REPLACE_WITH_SEVERITY_VALUE' \nValid severity values are: `normal`, `warning`, and `critical`. |
-| Stream platform logs with different severity values from selected services | <v1> ( ( $l.applicationname =='ibm-platform-logs' && ( $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_1' ||  $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_2' ) && $d.severity =='REPLACE_WITH_SEVERITY_VALUE') ) || ( $l.applicationname =='ibm-platform-logs' && $d.serviceName =='iam-identity' && $d.severity =='REPLACE_WITH_SEVERITY_VALUE') \nValid severity values are: `normal`, `warning`, and `critical`.|
-| Stream platform logs based on data in the requestData or responseData sections | $d.requestData.REPLACE_WITH_FIELD_NAME \nFor example, for a field requestId, you can configure <v1> $d.requestData.requestId |
+| Stream all platform logs | `<v1> $l.applicationname =='ibm-platform-logs'` |
+| Stream platform logs from 1 service | `<v1> $l.applicationname =='ibm-platform-logs' && $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME'` |
+| Stream platform logs from 2 services | `<v1> $l.applicationname =='ibm-platform-logs' && ( $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_1' \|\| $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_2'` ) |
+| Stream platform logs that have a critical severity | `<v1> $l.applicationname =='ibm-platform-logs' && $d.severity =='REPLACE_WITH_SEVERITY_VALUE'`  \n Valid severity values are: `normal`, `warning`, and `critical`. |
+| Stream platform logs with different severity values from selected services | `<v1> ( ( $l.applicationname =='ibm-platform-logs' && ( $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_1' \|\|  $d.serviceName =='REPLACE_WITH_CRN_SERVICE_NAME_2' ) && $d.severity =='REPLACE_WITH_SEVERITY_VALUE') ) \|\| ( $l.applicationname =='ibm-platform-logs' && $d.serviceName =='iam-identity' && $d.severity =='REPLACE_WITH_SEVERITY_VALUE')`  \n Valid severity values are: `normal`, `warning`, and `critical`.|
+| Stream platform logs based on data in the `requestData` or `responseData` sections | `$d.requestData.REPLACE_WITH_FIELD_NAME`  \n For example, for a field `requestId`, you can configure `<v1> $d.requestData.requestId` |
+{: caption="Example rules" caption-side="bottom"}
 
 
 For more information, see [Configuring streaming data rules](/docs/cloud-logs?topic=cloud-logs-streaming_rules).
