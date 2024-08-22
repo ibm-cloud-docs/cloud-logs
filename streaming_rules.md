@@ -30,6 +30,25 @@ You might need a parsing rule that extracts specific values such as the service 
 
 Do not define a Dataprime rule when you configure streaming.
 
+## Streaming data that contains free text
+{: #streaming_rules_1b}
+
+To stream data that includes free text, you must set up the rule as follows:
+
+```text
+$d.msg.contains('ENTER_FREE_TEXT')
+```
+{: codeblock}
+
+For example, to search for `Error 1234`, you can include the following in your rule:
+
+
+```text
+$d.msg.contains('Error1234')
+```
+{: codeblock}
+
+
 ## Stream data for 1 or more applications
 {: #streaming_rules_2}
 

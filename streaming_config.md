@@ -129,7 +129,7 @@ Validate that you can stream a sample test log line to the topic before starting
 
 Complete the following steps:
 
-1. Use a Kafka tool such as Kcat or the [Kafka Java client](/docs/EventStreams?topic=EventStreams-kafka_java_using) to connect securely to the {{site.data.keyword.messagehub_full}} instance. For example, you can use `kcat`.
+1. Use a Kafka tool to connect securely to the {{site.data.keyword.messagehub_full}} instance. For example, you can use [Use Kafka Connect or ksqlDB](/docs/EventStreams?topic=EventStreams-quick_setup_guide&interface=ui#kafka_connect_ksql).
 
 2. Send a sample log to verify the connection.
 

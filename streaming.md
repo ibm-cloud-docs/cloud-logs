@@ -42,17 +42,9 @@ Consider the following information when configuring the streaming feature betwee
 - You must have the **manager** role for the {{site.data.keyword.logs_full_notm}} to configure streaming in the {{site.data.keyword.logs_full_notm}} instance.
 - To connect the {{site.data.keyword.logs_full_notm}} instance to the {{site.data.keyword.messagehub}} instance, you need to define a service to service authentication. The credential that {{site.data.keyword.logs_full_notm}} uses to publish data in {{site.data.keyword.messagehub}} must have **writer** role. This role includes the **messagehub.topic.write** IAM action role that allows an app or service to write data to 1 or more topics.
 - To create a topic in {{site.data.keyword.messagehub}}, you must have the **manager** role for the {{site.data.keyword.messagehub}} instance. This role includes the **messagehub.topic.manage** IAM action role that allows an app or user to create or delete topics.
-- You can define Dataprime data rules to filter the data that you stream from {{site.data.keyword.logs_full_notm}} to {{site.data.keyword.messagehub}}. For more information, see [Configuring streaming data rules]().
+- You can define Dataprime data rules to filter the data that you stream from {{site.data.keyword.logs_full_notm}} to {{site.data.keyword.messagehub}}. For more information, see [Configuring streaming data rules](/docs/cloud-logs?topic=cloud-logs-streaming_rules).
 
 
-## Monitoring streaming
-{: #streaming-2}
-
-You can use the {{site.data.keyword.mon_full_notm}} service to monitor streaming to an {{site.data.keyword.messagehub}} instance.
-
-{{site.data.keyword.messagehub}} is integrated with the {{site.data.keyword.mon_short}} service. {{site.data.keyword.mon_short}} provides a default template that you can customize to monitor the {{site.data.keyword.messagehub}} instance, how data is streamed out of {{site.data.keyword.logs_full_notm}} and consumed by any application or service that is subscribed to {{site.data.keyword.messagehub}}.
-
-For more information, see [Monitoring streaming by using {{site.data.keyword.mon_full_notm}}](/docs/cloud-logs?topic=cloud-logs-streaming-monitor#streaming-monitor-1).
 
 
 ## {{site.data.keyword.at_short}} events

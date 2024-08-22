@@ -58,7 +58,7 @@ The following table shows some rules that you can configure:
 | Stream auditing events based on data in the requestData or responseData sections | $d.requestData.REPLACE_WITH_FIELD_NAME \nFor example, for a field requestId, you can configure <v1> $d.requestData.requestId |
 
 
-For more information, see [Configuring streaming data rules]().
+For more information, see [Configuring streaming data rules](/docs/cloud-logs?topic=cloud-logs-streaming_rules).
 
 
 For example, to filter auditing events with different severity values from selected services, you can define a query as follows:
