@@ -55,8 +55,6 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 
 
 
-
-
 ### Sydney
 {: #ip_en_es_ausyd}
 
