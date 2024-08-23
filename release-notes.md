@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-23"
 
 keywords:
 
@@ -24,6 +24,12 @@ For release notes about the {{site.data.keyword.logs_full_notm}} migration tool,
 {: note}
 
 
+## 22 August 2024
+{: #cloud-logs-aug2224}
+{: release-note}
+
+London (`eu-gb`), Sydney (`au-syd`), and Tokyo (`jp-tok`) region support
+:   London, Sydney, and Tokyo are now online regions for the {{site.data.keyword.logs_full_notm}} service in the {{site.data.keyword.cloud_notm}}. {{site.data.keyword.logs_full_notm}} instances can now be provisioned in London, Sydney, and Tokyo.
 
 ## 8 August 2024
 {: #cloud-logs-aug0824}
