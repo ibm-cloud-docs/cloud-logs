@@ -55,8 +55,6 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 
 
 
-
-
 ### Sydney
 {: #ip_en_es_ausyd}
 
@@ -141,8 +139,6 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Madrid 2  | 10.22.189.164 |
 | Madrid  3 | 10.22.211.255 |
 {: caption="Madrid public IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
-
-
 
 
 
