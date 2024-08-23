@@ -18,14 +18,18 @@ subcollection: cloud-logs
 {{site.data.keyword.logs_full}} is available in the following locations:
 {: shortdesc}
 
+
+
+
+
+
 ![The image shows the locations where the {{site.data.keyword.logs_full_notm}} service is available.](/images/Cloud-Logs-0816-Locations.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.logs_full_notm}} resources." caption-side="bottom"}
+
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
 {: note}
 
 You can create {{site.data.keyword.logs_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} locations, which represent the geographic area where your {{site.data.keyword.logs_full_notm}} requests are handled and processed.
-
-
 
 The following table lists the locations where the service is available:
 
@@ -39,7 +43,7 @@ The following table lists the locations where the service is available:
 | North America       | Toronto (`ca-tor`)       | Not applicable        | `MZR`     |
 | North America       | Dallas (`us-south`)      | Not applicable        | `MZR`     |
 | North America       | Washington (`us-east`)      | Not applicable        | `MZR`     |
-{: caption="Table 1. List of locations where the service is available" caption-side="top"}
+{: caption="List of locations where the service is available" caption-side="top"}
 
 Where
 * A *geography* is a geographic area or political body that contains one or more regions.

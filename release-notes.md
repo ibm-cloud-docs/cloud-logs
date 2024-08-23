@@ -24,6 +24,7 @@ For release notes about the {{site.data.keyword.logs_full_notm}} migration tool,
 {: note}
 
 
+
 ## 22 August 2024
 {: #cloud-logs-aug2224}
 {: release-note}

@@ -144,8 +144,6 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 
 
 
-
-
 ### Sydney
 {: #ip_cos_ausyd}
 
