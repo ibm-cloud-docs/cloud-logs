@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-23"
 keywords:
 
 subcollection: cloud-logs
@@ -32,6 +32,15 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 | Frankfurt 3 | 149.81.165.38  |
 {: caption="Frankfurt public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
 
+### London
+{: #ip_en_es_eugb}
+
+| Region   | IP address      |
+| -------- | --------------- |
+| London 1 | 161.156.199.245 |
+| London 2 | 141.125.111.204 |
+| London 3 | 158.176.189.154 |
+{: caption="London public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
 
 
 ### Madrid
@@ -48,9 +57,25 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 
 
 
+### Sydney
+{: #ip_en_es_ausyd}
 
+| Region   | IP address     |
+| -------- | -------------- |
+| Sydney 1 | 159.23.94.217  |
+| Sydney 2 | 130.198.9.241  |
+| Sydney 3 | 135.90.138.121 |
+{: caption="Sydney public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
 
+### Tokyo
+{: #ip_en_es_jptok}
 
+| Region  | IP address      |
+| ------- | --------------- |
+| Tokyo 1 | 162.133.137.8   |
+| Tokyo 2 | 128.168.136.18  |
+| Tokyo 3 | 165.192.138.249 |
+{: caption="Tokyo public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
 
 ### Toronto
 {: #ip_en_es_cator}
@@ -97,7 +122,15 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Frankfurt 3 | 10.223.57.126 |
 {: caption="Frankfurt private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
 
+### London
+{: #ip_cos_eugb}
 
+| Region   | IP address     |
+| -------- | -------------- |
+| London 1 | 10.249.102.93  |
+| London 2 | 10.249.105.135 |
+| London 3 | 10.223.22.101  |
+{: caption="London private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
 
 ### Madrid
 {: #ip_cos_eues}
@@ -113,8 +146,25 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 
 
 
+### Sydney
+{: #ip_cos_ausyd}
 
+| Region   | IP address     |
+| -------- | -------------- |
+| Sydney 1 | 10.223.237.71  |
+| Sydney 2 | 10.223.243.160 |
+| Sydney 3 | 10.223.254.90  |
+{: caption="Sydney private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
 
+### Tokyo
+{: #ip_cos_jptok}
+
+| Region  | IP address     |
+| ------- | -------------- |
+| Tokyo 1 | 10.223.197.221 |
+| Tokyo 2 | 10.223.208.108 |
+| Tokyo 3 | 10.223.220.15  |
+{: caption="Tokyo private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
 
 
 ### Toronto

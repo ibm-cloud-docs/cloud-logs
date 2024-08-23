@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-23"
 
 keywords:
 
@@ -28,8 +28,14 @@ Public endpoints can be accessed from the public internet.
 
 | Geography | Region                           | Endpoint | Purpose |
 |-----------|----------------------------------|---------------------|--------------------|
+| Asia Pacific  | Sydney (`au-syd`) | `<service-instance-guid>.api.au-syd.logs.cloud.ibm.com` | Query logs and manage the instance |
+| Asia Pacific  | Sydney (`au-syd`) | `dashboard.au-syd.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
+| Asia Pacific  | Tokyo (`jp-tok`) | `<service-instance-guid>.api.jp-tok.logs.cloud.ibm.com` | Query logs and manage the instance |
+| Asia Pacific  | Tokyo (`jp-tok`) | `dashboard.jp-tok.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.api.eu-de.logs.cloud.ibm.com` | Query logs and manage the instance |
 | Europe  | Frankfurt (`eu-de`) | `dashboard.eu-de.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
+| Europe  | London (`eu-gb`) | `<service-instance-guid>.api.eu-gb.logs.cloud.ibm.com` | Query logs and manage the instance |
+| Europe  | London (`eu-gb`) | `dashboard.eu-gb.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 | Europe  | Madrid (`eu-es`) | `<service-instance-guid>.api.eu-es.logs.cloud.ibm.com` | Query logs and manage the instance |
 | Europe  | Madrid (`eu-es`) | `dashboard.eu-es.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 | North America  | Toronto (`ca-tor`) | `<service-instance-guid>.api.ca-tor.logs.cloud.ibm.com` | Query logs and manage the instance |
@@ -49,7 +55,10 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 
 | Geography | Region                           | Endpoint | Purpose |
 |-----------|----------------------------------|---------------------|--------------------|
+| Asia Pacific  | Sydney (`au-syd`) | `<service-instance-guid>.api.private.au-syd.logs.cloud.ibm.com` | Query logs and manage the instance |
+| Asia Pacific  | Tokyo (`jp-tok`) | `<service-instance-guid>.api.private.jp-tok.logs.cloud.ibm.com` | Query logs and manage the instance |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.api.private.eu-de.logs.cloud.ibm.com` | Query logs and manage the instance |
+| Europe  | London (`eu-gb`) | `<service-instance-guid>.api.private.eu-gb.logs.cloud.ibm.com` | Query logs and manage the instance |
 | Europe  | Madrid (`eu-es`) | `<service-instance-guid>.api.private.eu-es.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Toronto (`ca-tor`) | `<service-instance-guid>.api.private.ca-tor.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.api.private.us-south.logs.cloud.ibm.com` | Query logs and manage the instance |

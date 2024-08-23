@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-23"
 
 keywords:
 
@@ -28,7 +28,10 @@ Public endpoints can be accessed from the public internet.
 
 | Geography | Region                           | Endpoint |
 |-----------|----------------------------------|---------------------|
+| Asia Pacific  | Sydney (`au-syd`) | `<service-instance-guid>.ingress.au-syd.logs.cloud.ibm.com` |
+| Asia Pacific  | Tokyo (`jp-tok`) | `<service-instance-guid>.ingress.jp-tok.logs.cloud.ibm.com` |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.ingress.eu-de.logs.cloud.ibm.com` |
+| Europe  | London (`eu-gb`) | `<service-instance-guid>.ingress.eu-gb.logs.cloud.ibm.com` |
 | Europe  | Madrid (`eu-es`) | `<service-instance-guid>.ingress.eu-es.logs.cloud.ibm.com` |
 | North America  | Toronto (`ca-tor`) | `<service-instance-guid>.ingress.ca-tor.logs.cloud.ibm.com` |
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.ingress.us-south.logs.cloud.ibm.com` |
@@ -42,7 +45,10 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 
 | Geography | Region                           | Endpoint | Purpose |
 |-----------|----------------------------------|---------------------|--------------------|
+| Asia Pacific  | Sydney (`au-syd`) | `<service-instance-guid>.ingress.private.au-syd.logs.cloud.ibm.com` |
+| Asia Pacific  | Tokyo (`jp-tok`) | `<service-instance-guid>.ingress.private.jp-tok.logs.cloud.ibm.com` |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.ingress.private.eu-de.logs.cloud.ibm.com` |
+| Europe  | London (`eu-gb`) | `<service-instance-guid>.ingress.private.eu-gb.logs.cloud.ibm.com` |
 | Europe  | Madrid (`eu-es`) | `<service-instance-guid>.ingress.private.eu-es.logs.cloud.ibm.com` |
 | North America  | Toronto (`ca-tor`) | `<service-instance-guid>.ingress.private.ca-tor.logs.cloud.ibm.com` |
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.ingress.private.us-south.logs.cloud.ibm.com` |
