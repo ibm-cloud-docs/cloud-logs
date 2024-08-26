@@ -57,9 +57,9 @@ DPXL supports different data types.
 | Data type | Example |
 |-----------|---------| 
 | string | `'us-east-1’`  \n `’dev-’` |
-| number | 23  \n -12.32 |
-| bool | true  \n false |
-| timestamp | @(’2023-01-01T00:00Z’)  \n @’now’ |
+| number | `23`  \n `-12.32` |
+| bool | `true`  \n `false` |
+| timestamp | `@(’2023-01-01T00:00Z’)`  \n `@’now’` |
 | regular expression | `/H.*o$/`  \n `/^prod-.*/` |
 | severity | `VERBOSE`  \n `DEBUG`  \n `INFO`  \n `WARNING`  \n `ERROR`  \n `CRITICAL` |
 {: caption="Data types" caption-side="bottom"}
@@ -153,6 +153,7 @@ Any user keypath can be accessed using `$d.<keypath>` including nested keypaths.
 Functions provide additional capabilities within DPXL expressions.
 
 | Function | Description | Example |
+|----------|-------------|---------|
 | `<s>.startsWith(<substr>):bool` |	Checks if a string `<s>` starts with the specified substring `<substr>` | `region.startsWith('us-')` |
 | `<s>.endsWith(<substr>):bool` | Checks if a string `<s>` ends with the specified substring `<substr>` | `firstName.endsWith(’Jo’)` |
 | `<s>.contains(<substr>):bool` | Checks if a string `<s>` contains the specified substring `<substr>` | `stream.contains(’err’)` |
