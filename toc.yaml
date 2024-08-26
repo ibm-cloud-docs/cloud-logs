@@ -9,7 +9,7 @@ toc:
     console-page: /observe/logging
     product-page: https://www.ibm.com/cloud/
     path: cloud-logs
-    label: Logs
+    label: Cloud Logs
   entries:
   - navgroup:
       id: learn
