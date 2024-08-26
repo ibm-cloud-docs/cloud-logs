@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-05-01"
+lastupdated: "2024-08-26"
 
 keywords:
 
@@ -1482,7 +1482,7 @@ Functions for processing timestamps, intervals and other time-related constructs
 ### Time Units
 {: #time-units}
 
-Many date/time functions accept a time unit argument to modify their behavior. Dataprime supports time units from nanoseconds to days. They are represented as literal strings of the time unit name in either long or short notation:
+Many date/time functions accept a time unit argument to modify their behavior. DataPrime supports time units from nanoseconds to days. They are represented as literal strings of the time unit name in either long or short notation:
 
 * long notation: `day`, `hour`, `minute`, `second`, `milli`, `micro`, `nano`
 
@@ -1491,7 +1491,7 @@ Many date/time functions accept a time unit argument to modify their behavior. D
 ### Time Zones
 {: #time-zones}
 
-Dataprime timestamps are always stored in the UTC time zone, but some date/time functions accept a time zone argument to modify their behavior. Time zone arguments are strings that specify a time zone offset, shorthand or identifier:
+DataPrime timestamps are always stored in the UTC time zone, but some date/time functions accept a time zone argument to modify their behavior. Time zone arguments are strings that specify a time zone offset, shorthand or identifier:
 
 * time zone offset in hours (for example, '+01' or '-02')
 * time zone offset in hours and minutes (for example, '+0130' or '-0230')

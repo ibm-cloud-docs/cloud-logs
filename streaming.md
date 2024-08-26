@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-08-26"
 
 keywords:
 
@@ -42,7 +42,7 @@ Consider the following information when configuring the streaming feature betwee
 - You must have the **manager** role for the {{site.data.keyword.logs_full_notm}} to configure streaming in the {{site.data.keyword.logs_full_notm}} instance.
 - To connect the {{site.data.keyword.logs_full_notm}} instance to the {{site.data.keyword.messagehub}} instance, you need to define a service to service authentication. The credential that {{site.data.keyword.logs_full_notm}} uses to publish data in {{site.data.keyword.messagehub}} must have **writer** role. This role includes the **messagehub.topic.write** IAM action role that allows an app or service to write data to 1 or more topics.
 - To create a topic in {{site.data.keyword.messagehub}}, you must have the **manager** role for the {{site.data.keyword.messagehub}} instance. This role includes the **messagehub.topic.manage** IAM action role that allows an app or user to create or delete topics.
-- You can define Dataprime data rules to filter the data that you stream from {{site.data.keyword.logs_full_notm}} to {{site.data.keyword.messagehub}}. For more information, see [Configuring streaming data rules](/docs/cloud-logs?topic=cloud-logs-streaming_rules).
+- You can define DataPrime data rules to filter the data that you stream from {{site.data.keyword.logs_full_notm}} to {{site.data.keyword.messagehub}}. For more information, see [Configuring streaming data rules](/docs/cloud-logs?topic=cloud-logs-streaming_rules).
 
 
 

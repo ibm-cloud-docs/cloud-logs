@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-03"
+lastupdated: "2024-08-26"
 
 keywords:
 
@@ -57,7 +57,7 @@ Dashboards can include one or more of the following visualizations:
 * [Vertical bar chart](#about_verticalbar)
 * [Horizontal bar chart](#about_horizontalbar)
 * [Markdown](#about_markdown)
-* [Dataprime creator](#about_dataprime)
+* [DataPrime creator](#about_dataprime)
 
 
 ## Widgets
@@ -104,7 +104,7 @@ Horizontal bar charts represent values from one or more data sources as horizont
 
 Markdown widgets can be used to add tables, lists, reference guides, links, code snippets, images, and more to customize, contextualize, and optimize your dashboards. For more information, see [Markdown](/docs/cloud-logs?topic=cloud-logs-widget_markdown).
 
-### Dataprime creator
+### DataPrime creator
 {: #about_dataprime}
 
 The DataPrime creator widget lets you harness the capabilities of DataPrime queries. As your query evolves, this feature automatically lets you select optimal visualizations to display your data and suggests modifying your query for additional visualizations. For more information, see [DataPrime creator](/docs/cloud-logs?topic=cloud-logs-widget_dataprime)

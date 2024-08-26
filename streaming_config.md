@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-08-26"
 
 keywords:
 
@@ -112,7 +112,7 @@ Complete the following steps:
 
    * For **Topic name**, enter the name of your {{site.data.keyword.messagehub_full}} topic.
 
-   * To limit the data that will be sent to the topic, enter a query that matches the logs you want sent. For example, `<v1>$m.severity == ERROR`
+   * To limit the data that will be sent to the topic, enter a query that matches the logs you want sent. For example, `$m.severity == ERROR`
 
        For more information on how to define data rules, see [Configuring streaming data rules](/docs/cloud-logs?topic=cloud-logs-streaming_rules).
 
