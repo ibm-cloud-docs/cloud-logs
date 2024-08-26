@@ -162,8 +162,8 @@ Functions provide additional capabilities within DPXL expressions.
 {: caption="Functions" caption-side="bottom"}
 
 
-Data types
-{: #dpxl_data_types}
+## Inferring data types
+{: #dpxl_data_types_infer}
 
 DPXL attempts to infer the expected datatype of keypaths. For example, when processing `age > 50`, it will infer that `age` is expected to be a number. In cases where DPXL cannot infer the data type for a keypath, it will require the necessary information about the type. For example:
 
