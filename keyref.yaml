@@ -6,4 +6,6 @@ keyword:
   compliance:
     Store and search
   tco-optimizer:
-    TCO Optimizer
+    TCO Optimizer  
+  agent:
+    logging agent
