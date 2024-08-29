@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-29"
 keywords:
 
 subcollection: cloud-logs
@@ -53,6 +53,26 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 | Madrid 3 | 13.122.90.134 |
 {: caption="Madrid public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
 
+
+### Osaka
+{: #ip_en_es_jposa}
+
+| Region  | IP address    |
+| ------- | ------------- |
+| Osaka 1 | 163.68.90.193 |
+| Osaka 2 | 163.69.93.0   |
+| Osaka 3 | 163.73.83.233 |
+{: caption="Osaka public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
+
+### Sao Paulo
+{: #ip_en_es_brsao}
+
+| Region      | IP address     |
+| ----------- | -------------- |
+| Sao Paulo 1 | 13.116.82.31   |
+| Sao Paulo 2 | 163.107.85.232 |
+| Sao Paulo 3 | 163.109.87.9   |
+{: caption="Sao Paulo public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
 
 
 ### Sydney
@@ -140,6 +160,26 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Madrid  3 | 10.22.211.255 |
 {: caption="Madrid public IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
 
+
+### Osaka
+{: #ip_cos_jposa}
+
+| Region  | IP address   |
+| ------- | ------------ |
+| Osaka 1 | 10.12.22.161 |
+| Osaka 2 | 10.12.30.38  |
+| Osaka 3 | 10.12.46.24  |
+{: caption="Osaka private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
+
+### Sao Paulo
+{: #ip_cos_brsao}
+
+| Region      | IP address    |
+| ----------- | ------------- |
+| Sao Paulo 1 | 10.12.178.24  |
+| Sao Paulo 2 | 10.12.79.160  |
+| Sao Paulo 3 | 10.51.193.140 |
+{: caption="Sao Paulo private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
 
 
 ### Sydney
