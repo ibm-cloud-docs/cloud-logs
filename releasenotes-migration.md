@@ -26,6 +26,21 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
 
+## 29 August 2024
+{: #migration-aug2924}
+
+The migration tool plug-in v0.1.18 is available.
+:   Updates include:
+
+   * The ability to create an {{site.data.keyword.logs_full_notm}} instance in a custom resourceGroupId.
+
+   * When migrating 1 {{site.data.keyword.at_full_notm}} or 1 {{site.data.keyword.la_full_notm}} instance, any associated {{site.data.keyword.atracker_full_notm}} or {{site.data.keyword.logs_routing_full_notm}} configuration can also be migrated.
+
+   * A fix for a dashboard migration bug.
+
+   * The addition of streaming configuration files collected from {{site.data.keyword.at_full_notm}} and {{site.data.keyword.la_full_notm}} instances.
+
+   * A fix for an error when doing query mapping where there was a difference in the conversion of error text. With this fix, error text will remain as-is.
 
 
 ## 21 August 2024
