@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -18,13 +18,7 @@ subcollection: cloud-logs
 {{site.data.keyword.logs_full}} is available in the following locations:
 {: shortdesc}
 
-
-
-
-
-
-![The image shows the locations where the {{site.data.keyword.logs_full_notm}} service is available.](/images/Cloud-Logs-0816-Locations.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.logs_full_notm}} resources." caption-side="bottom"}
-
+![The image shows the locations where the {{site.data.keyword.logs_full_notm}} service is available.](/images/Cloud-Logs-0823-Locations.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.logs_full_notm}} resources." caption-side="bottom"}
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
 {: note}
@@ -35,6 +29,7 @@ The following table lists the locations where the service is available:
 
 | Geography             | Region                   | EU-Supported | HA Status |
 |-----------------------|--------------------------|--------------|-----------|
+| Asia Pacific        | Osaka (`jp-osa`)         | Not applicable        | `MZR`     |
 | Asia Pacific        | Sydney (`au-syd`)        | Not applicable       | `MZR`     |
 | Asia Pacific        | Tokyo (`jp-tok`)         | Not applicable        | `MZR`     |
 | Europe              | Frankfurt (`eu-de`) `(*)`  | YES        | `MZR`     |
@@ -43,6 +38,7 @@ The following table lists the locations where the service is available:
 | North America       | Toronto (`ca-tor`)       | Not applicable        | `MZR`     |
 | North America       | Dallas (`us-south`)      | Not applicable        | `MZR`     |
 | North America       | Washington (`us-east`)      | Not applicable        | `MZR`     |
+| South America       | Sao Paulo (`br-sao`)     | Not applicable        | `MZR`     |
 {: caption="List of locations where the service is available" caption-side="top"}
 
 Where

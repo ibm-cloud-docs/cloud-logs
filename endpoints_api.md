@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -28,6 +28,8 @@ Public endpoints can be accessed from the public internet.
 
 | Geography | Region                           | Endpoint | Purpose |
 |-----------|----------------------------------|---------------------|--------------------|
+| Asia Pacific  | Osaka (`jp-osa`) | `<service-instance-guid>.api.jp-osa.logs.cloud.ibm.com` | Query logs and manage the instance |
+| Asia Pacific  | Osaka (`jp-osa`) | `dashboard.jp-osa.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 | Asia Pacific  | Sydney (`au-syd`) | `<service-instance-guid>.api.au-syd.logs.cloud.ibm.com` | Query logs and manage the instance |
 | Asia Pacific  | Sydney (`au-syd`) | `dashboard.au-syd.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 | Asia Pacific  | Tokyo (`jp-tok`) | `<service-instance-guid>.api.jp-tok.logs.cloud.ibm.com` | Query logs and manage the instance |
@@ -44,6 +46,8 @@ Public endpoints can be accessed from the public internet.
 | North America  | Dallas (`us-south`) | `dashboard.us-south.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 | North America  | Washington (`us-east`) | `<service-instance-guid>.api.us-east.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Washington (`us-east`) | `dashboard.us-east.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
+| South America  | Sao Paulo (`br-sao`) | `<service-instance-guid>.api.br-sao.logs.cloud.ibm.com` | Query logs and manage the instance |
+| South America  | Sao Paulo (`br-sao`) | `dashboard.br-sao.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 {: caption="Table 1. List of {{site.data.keyword.logs_full_notm}} public endpoints" caption-side="top"}
 
 These endpoints are proxied using {{site.data.keyword.cis_full}}, which uses IP address described in [CIS allowlisted IP addresses](/docs/cis?topic=cis-cis-allowlisted-ip-addresses).
@@ -55,6 +59,7 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 
 | Geography | Region                           | Endpoint | Purpose |
 |-----------|----------------------------------|---------------------|--------------------|
+| Asia Pacific  | Osaka (`jp-osa`) | `<service-instance-guid>.api.private.jp-osa.logs.cloud.ibm.com` | Query logs and manage the instance |
 | Asia Pacific  | Sydney (`au-syd`) | `<service-instance-guid>.api.private.au-syd.logs.cloud.ibm.com` | Query logs and manage the instance |
 | Asia Pacific  | Tokyo (`jp-tok`) | `<service-instance-guid>.api.private.jp-tok.logs.cloud.ibm.com` | Query logs and manage the instance |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.api.private.eu-de.logs.cloud.ibm.com` | Query logs and manage the instance |
@@ -63,6 +68,7 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 | North America  | Toronto (`ca-tor`) | `<service-instance-guid>.api.private.ca-tor.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.api.private.us-south.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Washington (`us-east`) | `<service-instance-guid>.api.private.us-east.logs.cloud.ibm.com` | Query logs and manage the instance |
+| South America  | Sao Paulo (`br-sao`) | `<service-instance-guid>.api.private.br-sao.logs.cloud.ibm.com` | Query logs and manage the instance |
 {: caption="Table 2. List of {{site.data.keyword.logs_full_notm}} private endpoints" caption-side="top"}
 
 
