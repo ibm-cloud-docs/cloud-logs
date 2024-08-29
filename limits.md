@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -31,7 +31,7 @@ subcollection: cloud-logs
 | Item | Limit |
 |------|-------|
 | Alerts | 500 |
-| Rules | 70 |
+| Parsing rules | 70 |
 | Enrichments | 10 |
 | Events to Metrics labels | 8 |
 | Ingestion log size | 32 K |
