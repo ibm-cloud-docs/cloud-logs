@@ -1,0 +1,27 @@
+---
+
+copyright:
+  years:  2024
+lastupdated: "2024-09-02"
+
+keywords:
+
+subcollection: cloud-logs
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+
+
+# Logging agent configuration files for orchestrated environments
+{: #logger-agent-config}
+
+Choose the Logging agent YAML configuration file for your orchestrated environment:
+{: shortdesc}
+
+For {{site.data.keyword.openshiftlong_notm}}
+:   [https://ibm.biz/iclr-agent-yaml](https://ibm.biz/iclr-agent-yaml){: external}
+
+For {{site.data.keyword.containerlong_notm}}
+:   [https://ibm.biz/iclr-agent-iks-yaml](https://ibm.biz/iclr-agent-iks-yaml){: external}
