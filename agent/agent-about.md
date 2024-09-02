@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-# About the Logging agent
+# About the {{site.data.keyword.agent}}
 {: #agent-about}
 
 The {{site.data.keyword.agent}} is based on the Fluent Bit open-source agent which is used to collect and process log data. You can deploy the {{site.data.keyword.agent}} in supported environments and manage data from various sources and formats.
@@ -28,16 +28,16 @@ The following diagram shows the high level view when the destination is an {{sit
 ![Flow of logs from agent](../images/cloud-logs-agent-to-instance.png "Flow of logs from agent"){: caption="Figure 1. Flow of logs from agent" caption-side="bottom"}
 
 
-## Logging agent for orchestrated environments
+## {{site.data.keyword.agent}} for orchestrated environments
 {: #agent-about-orchestrated}
 
-You can deploy the Logging agent on a {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerlong_notm}} cluster.
+You can deploy the {{site.data.keyword.agent}} on a {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerlong_notm}} cluster.
 
 You can deploy the agent on clusters that you run on-prem, in {{site.data.keyword.cloud_notm}}, or in a different cloud.
 
-The Logging agent is a daemon set that is designed to have one pod running on each node of a cluster. Each pod will collect relevant logs for the node its running on. The Logging agent will then forward those logs to the {{site.data.keyword.logs_routing_full_notm}} service.
+The {{site.data.keyword.agent}} is a daemon set that is designed to have one pod running on each node of a cluster. Each pod will collect relevant logs for the node its running on. The {{site.data.keyword.agent}} will then forward those logs to the {{site.data.keyword.logs_full_notm}} service.
 
-By default, the Logging agent monitors and collects log data from files matching the specified path pattern in `/var/log/containers/`, excluding logs from files matching the exclusion pattern. The refresh interval is set to 10 seconds. You can change these values and more in the config map `logger-agent-config`.
+By default, the {{site.data.keyword.agent}} monitors and collects log data from files matching the specified path pattern in `/var/log/containers/`, excluding logs from files matching the exclusion pattern. The refresh interval is set to 10 seconds. You can change these values and more in the config map `logger-agent-config`.
 
 You can deploy the agent in the following platforms:
 - Kubernetes clusters
@@ -48,10 +48,10 @@ The following diagram shows the high level view when the source of logs is a Kub
 ![Flow of logs from cluster](../images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Figure 2. Flow of logs from cluster" caption-side="bottom"}
 
 
-## Logging agent for non-orchestarted environments
+## {{site.data.keyword.agent}} for non-orchestarted environments
 {: #agent-about-std}
 
-You can deploy the Logging agent in Linux environments.
+You can deploy the {{site.data.keyword.agent}} in Linux environments.
 
 The following platforms are supported:
 
@@ -82,7 +82,7 @@ The agent supports the following input formats:
 
 The following table lists the agent versions that are supported and the version of Fluent Bit the agent is based on:
 
-| Logging agent  | Based on Fluent Bit Version |
+| {{site.data.keyword.agent}}  | Based on Fluent Bit Version |
 |-----------------------------------------------------|---------|
 | v1.2.4                                              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} |
 | v1.2.3                                              | [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external} |
@@ -94,7 +94,7 @@ For information on recommended and supported Fluent Bit plug-ins see [Fluent Bit
 ## Agent support policy
 {: #agent-support-policy}
 
-{{site.data.keyword.logs_routing_full_notm}} will release agent updates on a quarterly basis and will continue to provide assistance for two releases prior to the latest release.
+Release agent updates are planned on a quarterly basis. Support will continue to provide assistance for two releases prior to the latest release.
 
 For example, if agent version `1.3.x` is the most currently release, then questions related to agents `1.2.x` and `1.1.x` will be answered.
 
