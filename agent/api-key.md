@@ -15,7 +15,7 @@ subcollection: logs-router
 # Generating an API Key for ingestion
 {: #api-key}
 
-When you are using a user account or a service ID, you must generate an API key to open a secure web socket to the ingestion endpoint to authenticate the Logging agent with the {{site.data.keyword.logs_full_notm}} service.
+When you are using a user account or a service ID, you must generate an API key to open a secure web socket to the ingestion endpoint to authenticate the {{site.data.keyword.agent}} with the {{site.data.keyword.logs_full_notm}} service.
 {: shortdesc}
 
 When you are using a user account or service ID, an API key must be created to authenticate the agent. For authentication with trusted profiles, an API key is not required.
@@ -56,7 +56,7 @@ For example, complete the following steps to generate an API key by using the CL
 ## Generating an API Key for service ID authentication
 {: #api-key-for-service-id}
 
-You can create a service ID to enable access to the {{site.data.keyword.logs_routing_full_notm}} service by the Logging agent. The agent can be hosted both inside and outside of {{site.data.keyword.cloud}}.
+You can create a service ID to enable access to the {{site.data.keyword.logs_routing_full_notm}} service by the {{site.data.keyword.agent}}. The agent can be hosted both inside and outside of {{site.data.keyword.cloud}}.
 
 API keys are used by the agent to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
 
