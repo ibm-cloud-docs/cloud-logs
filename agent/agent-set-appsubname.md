@@ -12,13 +12,15 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
-# Customizing `applicationName` and `subsystemName` metadata fields
+# Configuring the agent to set custom values for applicationName and subsystemName metadata fields
 {: #agent-set-appsubname}
 
-In {{site.data.keyword.logs_routing_full_notm}}, you can send logs to the {{site.data.keyword.logs_full_notm}} service. Logs that you send must include a value for the `applicationName` and `subsystemName` metadata fields . By default, when you configure the Logging agent, the agent sets default values for these fields. You can configure your own custom values to replace the default values.
+You can configure the {{site.data.keyword.agent}} to send logs to the {{site.data.keyword.logs_full_notm}} service.
 {: shortdesc}
+
+Logs that you send must include a value for the `applicationName` and `subsystemName` metadata fields.
+
+By default, when you configure the {{site.data.keyword.agent}}, the agent sets default values for these fields. You can configure your own custom values to replace the default values. For more information on default values, see [Metadata fields](/docs/cloud-logs?topic=cloud-logs-metadata).
 
 
 In {{site.data.keyword.logs_full_notm}}, you can use the `applicationName` and `subsystemName` metadata fields to configure any of the following features:
@@ -36,7 +38,7 @@ For information about {{site.data.keyword.logs_full_notm}}, see the [{{site.data
 ## Configuring the agent to set custom values
 {: #agent-set-appsubname-1}
 
-You can configure the Logging agent with custom values for the `applicationName` and `subsystemName` metadata fields by specifying API options.
+You can configure the {{site.data.keyword.agent}} with custom values for the `applicationName` and `subsystemName` metadata fields by specifying API options.
 
 - Use `-a` to specify the `applicationName` that you want to use.
 
@@ -58,21 +60,10 @@ When setting these metadata fields you have the following options:
 You can set `applicatioName`, `subsystemName`, or both. If a value is not set, the default value is applied. For information about the default values that are set for the `applicationName` and `subsystemName` metadata fields, see [Metadata](/docs/cloud-logs?topic=cloud-logs-metadata){: external}.
 {: note}
 
-
-### Example: Configuring fixed values
-{: #agent-set-appsubname-2}
-
-To configure the Logging agent with custom fixed values for the `applicationName` and `subsystemName` metadata fields, you can deploy the agent as follows in a Kubernetes cluster:
-
-```sh
-curl -sSL https://ibm.biz/logs-router-setup | bash -s --   -v 1.1.1   -m IAMAPIKey    -k xxxx   -t Kubernetes   -r eu-es   -p 3443 -s 'mysubsystem' -a 'myapp'
-```
-{: codeblock}
-
 ### Example: Configuring dynamic values
 {: #agent-set-appsubname-3}
 
-To configure the Logging agent with custom dynamic values for the `applicationName` and `subsystemName` metadata fields, you can deploy the agent as follows in a Kubernetes cluster:
+To configure the {{site.data.keyword.agent}} with custom dynamic values for the `applicationName` and `subsystemName` metadata fields, you can deploy the agent as follows in a Kubernetes cluster:
 
 ```sh
 curl -sSL https://ibm.biz/logs-router-setup | bash -s --   -v 1.1.1   -m IAMAPIKey    -k xxxx   -t Kubernetes   -r eu-es   -p 3443 -s '${POD_NAME}' -a '${POD_NAMESPACE}'
@@ -82,7 +73,7 @@ curl -sSL https://ibm.biz/logs-router-setup | bash -s --   -v 1.1.1   -m IAMAPIK
 ### Example: Configuring a value that combines a fixed value and a dynamic value
 {: #agent-set-appsubname-4}
 
-To configure the Logging agent with custom values for the `applicationName` and `subsystemName` metadata fields, you can deploy the agent as follows in a Kubernetes cluster:
+To configure the {{site.data.keyword.agent}} with custom values for the `applicationName` and `subsystemName` metadata fields, you can deploy the agent as follows in a Kubernetes cluster:
 
 ```sh
 curl -sSL https://ibm.biz/logs-router-setup | bash -s --   -v 1.1.1   -m IAMAPIKey    -k xxxx   -t Kubernetes   -r eu-es   -p 3443 -s '${POD_NAME}' -a 'mycluster-dallas:${POD_NAMESPACE}'
@@ -91,7 +82,15 @@ curl -sSL https://ibm.biz/logs-router-setup | bash -s --   -v 1.1.1   -m IAMAPIK
 
 In this example, the name of the cluster is added as a string.
 
+### Example: Configuring fixed values
+{: #agent-set-appsubname-2}
 
+To configure the {{site.data.keyword.agent}} with custom fixed values for the `applicationName` and `subsystemName` metadata fields, you can deploy the agent as follows in a Kubernetes cluster:
+
+```sh
+curl -sSL https://ibm.biz/logs-router-setup | bash -s --   -v 1.1.1   -m IAMAPIKey    -k xxxx   -t Kubernetes   -r eu-es   -p 3443 -s 'mysubsystem' -a 'myapp'
+```
+{: codeblock}
 
 
 ## Configuring the agent to set custom values based on the log line
