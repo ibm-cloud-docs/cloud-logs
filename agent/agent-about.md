@@ -28,8 +28,6 @@ The following diagram shows the high level view when the destination is an {{sit
 ![Flow of logs from agent](/images/cloud-logs-agent-to-instance.png "Flow of logs from agent"){: caption="Figure 1. Flow of logs from agent" caption-side="bottom"}
 
 
-
-
 ## Logging agent for orchestrated environments
 {: #agent-about-orchestrated}
 

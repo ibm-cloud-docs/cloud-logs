@@ -41,10 +41,10 @@ toc:
           - topic: control-data.md
             navtitle: Controlling ingested data for search
       - topicgroup:
-          label: Logs agent
+          label: About the Logging agent
           topics:
           - topic: agent/agent-about.md
-            navtitle: About the agent
+            navtitle: The Logging agent
           - topic: agent/agent-fluentbit.md
             navtitle: Understanding the agent configuration file
       - topicgroup:
