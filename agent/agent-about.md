@@ -28,6 +28,12 @@ The following diagram shows the high level view when the destination is an {{sit
 ![Flow of logs from agent](../images/cloud-logs-agent-to-instance.png "Flow of logs from agent"){: caption="Figure 1. Flow of logs from agent" caption-side="bottom"}
 
 
+When you can configure the {{site.data.keyword.agent}} to send logs to the {{site.data.keyword.logs_full_notm}} service, logs that you send must include a value for the `applicationName` and `subsystemName` metadata fields. By default, when you configure the {{site.data.keyword.agent}}, the agent sets default values for these fields. You can configure your own custom values to replace the default values.
+- For more information on default values, see [Metadata fields](/docs/cloud-logs?topic=cloud-logs-metadata).
+- For more information on how to configure the agent, see [Configuring the agent to set custom values for applicationName and subsystemName metadata fields](/docs/cloud-logs?topic=cloud-logs-agent-set-appsubname).
+
+
+
 ## {{site.data.keyword.agent}} for orchestrated environments
 {: #agent-about-orchestrated}
 

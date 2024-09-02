@@ -14,13 +14,13 @@ subcollection: cloud-logs
 
 
 
-# Checking the available agent versions
+# Checking the available {{site.data.keyword.agent}} versions
 {: #check-agent-versions}
 
-Before specifying a version, you can check the available Logging agent versions.
+Before specifying a version, you can check the available {{site.data.keyword.agent}} versions.
 {: shortdesc}
 
-Do the following to check the available agent versions.
+Do the following to check the available {{site.data.keyword.agent}} versions.
 
 1. Login to IBM Cloud using the CLI.
 
