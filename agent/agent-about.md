@@ -25,7 +25,7 @@ You can configure the {{site.data.keyword.agent}} to collect and send infrastruc
 
 The following diagram shows the high level view when the destination is an {{site.data.keyword.logs_full_notm}} instance:
 
-![Flow of logs from agent](/images/cloud-logs-agent-to-instance.png "Flow of logs from agent"){: caption="Figure 1. Flow of logs from agent" caption-side="bottom"}
+![Flow of logs from agent](../images/cloud-logs-agent-to-instance.png "Flow of logs from agent"){: caption="Figure 1. Flow of logs from agent" caption-side="bottom"}
 
 
 ## Logging agent for orchestrated environments
@@ -45,7 +45,7 @@ You can deploy the agent in the following platforms:
 
 The following diagram shows the high level view when the source of logs is a Kubernetes or OpenShift cluster:
 
-![Flow of logs from cluster](/images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Figure 3. Flow of logs from cluster" caption-side="bottom"}
+![Flow of logs from cluster](../images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Figure 2. Flow of logs from cluster" caption-side="bottom"}
 
 
 ## Logging agent for non-orchestarted environments
