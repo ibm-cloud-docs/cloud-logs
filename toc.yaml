@@ -130,10 +130,14 @@ toc:
           - topic: send-logs.md
             navtitle: Sending logs overview
           - topic: send-logs-api.md
-            navtitle: Using the ingestion API
+            navtitle: Using the REST API
           - topicgroup:
               label: Using the Logging agent for orchestrated environments
               topics:
+              - topic: agent/agent-openshift.md
+                navtitle: Managing the agent for Openshift clusters
+              - topic: agent/agent-std-cluster.md
+                navtitle: Managing the agent for Kubernetes clusters
               - topic: agent/agent-set-appsubname.md
                 navtitle: Configuring custom metadata fields
               - topic: agent/configure-agent.md
@@ -142,10 +146,6 @@ toc:
                 navtitle: Checking the available agent versions
               - topic: agent/download-agent-yaml.md
                 navtitle: Downloading the agent YAML file
-              - topic: agent/agent-openshift.md
-                navtitle: Managing the agent for Openshift clusters
-              - topic: agent/agent-std-cluster.md
-                navtitle: Managing the agent for Kubernetes clusters
           - topicgroup:
               label: Using the Logging agent for non-orchestrated environments
               topics:
