@@ -39,7 +39,7 @@ toc:
           - topic: metadata.md
             navtitle: Metadata fields
           - topic: control-data.md
-            navtitle: Controlling ingested data for search
+            navtitle: Controlling ingested data for search 
       - topicgroup:
           label: About the Logging agent
           topics:
@@ -127,8 +127,6 @@ toc:
             navtitle: Setting up IAM permissions for ingestion
           - topic: agent/api-key.md
             navtitle: Generating an API Key for ingestion
-          - topic: send-logs.md
-            navtitle: Sending logs overview
           - topic: send-logs-api.md
             navtitle: Using the REST API
           - topicgroup:
