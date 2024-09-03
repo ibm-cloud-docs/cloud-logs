@@ -370,7 +370,7 @@ toc:
             - link:
                 label: Terraform reference
                 href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
-      - topic: agent/limits.md
+      - topic: limits-sending-data.md
         navtitle: Considerations and limitations sending data
       - topicgroup:
           label: Logging agent

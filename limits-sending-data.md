@@ -13,18 +13,18 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 # Considerations and limitations sending data to {{site.data.keyword.logs_full_notm}}
-{: #limits}
+{: #limits-sending-data}
 
 There are processing considerations and limitations you need to be aware of when using the {{site.data.keyword.agent}}.
 {: shortdesc}
 
 ## Log length
-{: #limit-log-length}
+{: #limits-sending-data-log-length}
 
 Logs processed by the {{site.data.keyword.agent}} cannot exceed 16 K in length.
 
 ## Handling of stringify JSON
-{: #stringify-json}
+{: #limits-sending-data-stringify-json}
 
 How stringify JSON is handled depends on how the log information that is sent.
 
