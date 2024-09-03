@@ -379,7 +379,7 @@ toc:
             navtitle: Agent plug-in parameters
           - topic: agent/fluentbit_support.md
             navtitle: Agent plug-in support
-          - topic: agent/logger-agent-config.md
+          - topic: agent/agent-config.md
             navtitle: Agent configuration files
       - topicgroup:
           label: DataPrime Reference

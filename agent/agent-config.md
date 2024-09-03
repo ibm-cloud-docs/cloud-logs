@@ -15,7 +15,7 @@ subcollection: cloud-logs
 
 
 # {{site.data.keyword.agent}} configuration files for orchestrated environments
-{: #logger-agent-config}
+{: #agent-config}
 
 Choose the {{site.data.keyword.agent}} YAML configuration file for your orchestrated environment:
 {: shortdesc}
