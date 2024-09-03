@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-03"
 
 keywords:
 
@@ -27,7 +27,7 @@ For release notes about the {{site.data.keyword.logs_full_notm}} migration tool,
 {: #cloud-logs-aug2924}
 {: release-note}
 
-Osaka (`jp-osab`) and Sao Paulo (`br-sao`) region support
+Osaka (`jp-osa`) and Sao Paulo (`br-sao`) region support
 :   Osaka and Sao Paulo are now online regions for the {{site.data.keyword.logs_full_notm}} service in the {{site.data.keyword.cloud_notm}}. {{site.data.keyword.logs_full_notm}} instances can now be provisioned in Osaka and Sao Paulo.
 
 
