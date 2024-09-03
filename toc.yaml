@@ -375,9 +375,9 @@ toc:
       - topicgroup:
           label: Logging agent
           topics:
-          - topic: agent/logs-plugin-parameters.md
+          - topic: agent/agent-plugin-parameters.md
             navtitle: Agent plug-in parameters
-          - topic: agent/fluentbit_support.md
+          - topic: agent/agent-plugin-support.md
             navtitle: Agent plug-in support
           - topic: agent/agent-config.md
             navtitle: Agent configuration files
