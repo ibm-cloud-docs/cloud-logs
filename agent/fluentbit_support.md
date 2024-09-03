@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-03"
 
 keywords:
 
@@ -16,23 +16,23 @@ subcollection: cloud-logs
 # Agent plug-in support
 {: #agent-plugin-support}
 
-The Logging agent includes and supports Fluent Bit plug-ins. Some plug-ins are not supported.
+The {{site.data.keyword.agent}} includes and supports Fluent Bit plug-ins. Some plug-ins are not supported.
 {: shortdesc}
 
-The Logging agent is built using [Fluent Bit](https://fluentbit.io/){: external}, which is an open source log processor and forwarder.  Although Fluent Bit can be built and configured to use a number of different plug-ins,   {{site.data.keyword.logs_routing_full_notm}} does not include every plug-in available for Fluent Bit.  Each plug-in falls into one of three categories:
+The {{site.data.keyword.agent}} is built using [Fluent Bit](https://fluentbit.io/){: external}, which is an open source log processor and forwarder.  Although Fluent Bit can be built and configured to use a number of different plug-ins,   {{site.data.keyword.logs_routing_full_notm}} does not include every plug-in available for Fluent Bit.  Each plug-in falls into one of three categories:
 
 * [Supported by IBM](#plugins-supported)
 * [Available but not directly supported](#plugins-available)
 * [Unavailable](#plugins-unavailable)
 
 
-See [About the Logging agent](/docs/cloud-logs?topic=cloud-logs-agent-about) for further information about the agent.
+See [About the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about) for further information about the agent.
 {: tip}
 
 ## Supported plug-ins
 {: #plugins-supported}
 
-This section lists the Fluent Bit plug-ins which are fully supported by IBM in the Logging agent. IBM owns and maintains these plugins.
+This section lists the Fluent Bit plug-ins which are fully supported by IBM in the {{site.data.keyword.agent}}. IBM owns and maintains these plugins.
 
 ### Supported output plug-ins
 {: #output-plugins-supported}
@@ -43,15 +43,15 @@ This section lists the Fluent Bit plug-ins which are fully supported by IBM in t
 | logs-router-icl-output-plugin | output | Send log events directly to {{site.data.keyword.logs_full_notm}} | [documentation](/docs/cloud-logs?topic=cloud-logs-logs-plugin-parameters) |
 
 
-## Plug-ins available in {{site.data.keyword.logs_routing_full_notm}} but not directly supported
+## Plug-ins available but not directly supported
 {: #plugins-available}
 
-This section lists the Fluent Bit plug-ins which can be used with the Logging agent, but for which IBM does not provide direct support.  For questions regarding these plug-ins, clients will need to refer to the appropriate section in the [official Fluent Bit documentation](https://docs.fluentbit.io/manual){: external}.
+This section lists the Fluent Bit plug-ins which can be used with the {{site.data.keyword.agent}}, but for which IBM does not provide direct support.  For questions regarding these plug-ins, clients will need to refer to the appropriate section in the [official Fluent Bit documentation](https://docs.fluentbit.io/manual){: external}.
 
 ### Available input plug-ins
 {: #input-plugins-available}
 
-The Logging agent includes the following Fluent Bit [input plug-ins](https://docs.fluentbit.io/manual/pipeline/inputs){: external}.
+The {{site.data.keyword.agent}} includes the following Fluent Bit [input plug-ins](https://docs.fluentbit.io/manual/pipeline/inputs){: external}.
 
 | Plug-in | Type | Description | Documentation |
 | ------- | ---- | ----------- | ------------- |
@@ -79,7 +79,7 @@ The Logging agent includes the following Fluent Bit [input plug-ins](https://doc
 ### Available filter plug-ins
 {: #filter-plugins-available}
 
-The Logging agent includes the following Fluent Bit [filter plug-ins](https://docs.fluentbit.io/manual/pipeline/filters){: external}.
+The {{site.data.keyword.agent}} includes the following Fluent Bit [filter plug-ins](https://docs.fluentbit.io/manual/pipeline/filters){: external}.
 
 | Plug-in | Type | Description | Documentation |
 | ------- | ---- | ----------- | ------------- |
@@ -106,7 +106,7 @@ The Logging agent includes the following Fluent Bit [filter plug-ins](https://do
 ### Available output plug-ins
 {: #output-plugins-available}
 
-The Logging agent includes the following Fluent Bit [output plug-ins](https://docs.fluentbit.io/manual/pipeline/outputs){: external}.
+The {{site.data.keyword.agent}} includes the following Fluent Bit [output plug-ins](https://docs.fluentbit.io/manual/pipeline/outputs){: external}.
 
 | Plug-in | Type | Description | Documentation |
 | ------- | ---- | ----------- | ------------- |
@@ -124,12 +124,12 @@ The Logging agent includes the following Fluent Bit [output plug-ins](https://do
 ## Plug-ins unavailable in {{site.data.keyword.logs_routing_full_notm}}
 {: #plugins-unavailable}
 
-This section lists plug-ins which, while part of the open source Fluent Bit project, are not available for use with the Logging agent.
+This section lists plug-ins which, while part of the open source Fluent Bit project, are not available for use with the {{site.data.keyword.agent}}.
 
 ### Input plug-ins
 {: #input-plugins-unavailable}
 
-The following input plugins are not included with the Logging agent and therefore cannot be used with it.
+The following input plugins are not included with the {{site.data.keyword.agent}} and therefore cannot be used with it.
 
 | Plug-in | Type | Description | Documentation |
 | ------- | ---- | ----------- | ------------- |
@@ -158,7 +158,7 @@ The following input plugins are not included with the Logging agent and therefor
 ### Filter plug-ins
 {: #filter-plugins-unavailable}
 
-The following filter plug-ins are not included in the Logging agent and therefore cannot be used with it.
+The following filter plug-ins are not included in the {{site.data.keyword.agent}} and therefore cannot be used with it.
 
 | Plug-in | Type | Description | Documentation |
 | ------ | ---- | ----------- | ------------- |
@@ -169,7 +169,7 @@ The following filter plug-ins are not included in the Logging agent and therefor
 ### Output plugins
 {: #output-plugins-unavailable}
 
-The followng output plug-ins are not included in the Logging agent and therefore cannot be used with it.
+The followng output plug-ins are not included in the {{site.data.keyword.agent}} and therefore cannot be used with it.
 
 | Plug-in | Type | Description | Documentation |
 | ------- | ---- | ----------- | ------------- |

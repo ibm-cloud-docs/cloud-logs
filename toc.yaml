@@ -372,15 +372,13 @@ toc:
             - link:
                 label: Terraform reference
                 href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
+      - topic: agent/limits.md
+        navtitle: Considerations and limitations sending data
       - topicgroup:
-          label: Logs agent
+          label: Logging agent
           topics:
-          - topic: reference/limits.md
-            navtitle: Considerations and limitations
-          - topic: agent/routing-plugin-parameters.md
-            navtitle: Logs Routing plug-in parameters
           - topic: agent/logs-plugin-parameters.md
-            navtitle: Cloud Logs plug-in parameters
+            navtitle: Agent plug-in parameters
           - topic: agent/fluentbit_support.md
             navtitle: Agent plug-in support
           - topic: agent/logger-agent-config.md

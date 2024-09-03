@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-03"
 
 keywords:
 
@@ -14,10 +14,10 @@ subcollection: cloud-logs
 
 
 
-# Logging agent configuration files for orchestrated environments
+# {{site.data.keyword.agent}} configuration files for orchestrated environments
 {: #logger-agent-config}
 
-Choose the Logging agent YAML configuration file for your orchestrated environment:
+Choose the {{site.data.keyword.agent}} YAML configuration file for your orchestrated environment:
 {: shortdesc}
 
 For {{site.data.keyword.openshiftlong_notm}}
