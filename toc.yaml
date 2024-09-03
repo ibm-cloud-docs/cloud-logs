@@ -378,9 +378,9 @@ toc:
           - topic: agent/agent-plugin-parameters.md
             navtitle: Output plug-in parameters to send data to {{site.data.keyword.logs_full_notm}}
           - topic: agent/agent-plugin-support.md
-            navtitle: Agent plug-in support
+            navtitle: Fluent Bit plug-ins supported
           - topic: agent/agent-config.md
-            navtitle: Agent configuration files
+            navtitle: Configuration files for orchestrated environments
       - topicgroup:
           label: DataPrime Reference
           topics:

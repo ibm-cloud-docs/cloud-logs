@@ -13,10 +13,10 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Agent plug-in support
+# Fluent Bit plug-ins
 {: #agent-plugin-support}
 
-The {{site.data.keyword.agent}} includes and supports Fluent Bit plug-ins. Some plug-ins are not supported.
+The {{site.data.keyword.agent}} includes and supports selected Fluent Bit plug-ins. Some plug-ins are not supported.
 {: shortdesc}
 
 The {{site.data.keyword.agent}} is built using [Fluent Bit](https://fluentbit.io/){: external}, which is an open source log processor and forwarder.  Although Fluent Bit can be built and configured to use a number of different plug-ins, the {{site.data.keyword.agent}} does not include every plug-in available for Fluent Bit.  Each plug-in falls into one of three categories:
