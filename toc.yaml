@@ -376,7 +376,7 @@ toc:
           label: Logging agent
           topics:
           - topic: agent/agent-plugin-parameters.md
-            navtitle: Agent plug-in parameters
+            navtitle: Output plug-in parameters to send data to {{site.data.keyword.logs_full_notm}}
           - topic: agent/agent-plugin-support.md
             navtitle: Agent plug-in support
           - topic: agent/agent-config.md
