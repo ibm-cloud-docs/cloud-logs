@@ -19,7 +19,7 @@ subcollection: cloud-logs
 The {{site.data.keyword.agent}} includes and supports Fluent Bit plug-ins. Some plug-ins are not supported.
 {: shortdesc}
 
-The {{site.data.keyword.agent}} is built using [Fluent Bit](https://fluentbit.io/){: external}, which is an open source log processor and forwarder.  Although Fluent Bit can be built and configured to use a number of different plug-ins,   {{site.data.keyword.logs_routing_full_notm}} does not include every plug-in available for Fluent Bit.  Each plug-in falls into one of three categories:
+The {{site.data.keyword.agent}} is built using [Fluent Bit](https://fluentbit.io/){: external}, which is an open source log processor and forwarder.  Although Fluent Bit can be built and configured to use a number of different plug-ins, the {{site.data.keyword.agent}} does not include every plug-in available for Fluent Bit.  Each plug-in falls into one of three categories:
 
 * [Supported by IBM](#plugins-supported)
 * [Available but not directly supported](#plugins-available)
@@ -38,9 +38,8 @@ This section lists the Fluent Bit plug-ins which are fully supported by IBM in t
 {: #output-plugins-supported}
 
 | Plug-in | Type | Description | Documentation |
-| ------ | ---- | ----------- | ------------- |
-| logs-router-agent-plugin | output | Send log events to {{site.data.keyword.logs_routing_full_notm}} | [documentation](/docs/cloud-logs?topic=cloud-logs-routing-plugin-parameters) |
-| logs-router-icl-output-plugin | output | Send log events directly to {{site.data.keyword.logs_full_notm}} | [documentation](/docs/cloud-logs?topic=cloud-logs-logs-plugin-parameters) |
+| ------ | ---- | ----------- | ------------- | 
+| logs-router-icl-output-plugin | output | Send log events directly to {{site.data.keyword.logs_full_notm}} | [documentation](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters) |
 
 
 ## Plug-ins available but not directly supported
