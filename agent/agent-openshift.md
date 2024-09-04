@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-04"
 
 keywords:
 
@@ -94,50 +94,50 @@ Complete the following steps:
       -k <iam_api_key> \
       -t <cluster_type> \
       -r <region> \
-      -d <directory>
-      -e PrivateProduction
-      -a <application_name>
-      -s <subsystem_name>
+      -d <directory> \
+      -e PrivateProduction \
+      -a <application_name> \
+      -s <subsystem_name> \
       --send-directly-to-icl -h <target_host> -p <target_port>
     ```
     {: codeblock}
 
     Where:
 
-    `-v`
+    `-v <agent_version>`
     :   Agent version. Specify the version of the {{site.data.keyword.agent}}. To find the current supported versions, see [Checking available agent versions](/docs/cloud-logs?topic=cloud-logs-check-agent-versions).
 
-    `-m`
+    `-m <iam_auth_mode>`
     :   IAM authentication mode (`TrustedProfile` | `IAMAPIKey`).
 
-    `-i`
+    `-i <trusted_profile_id>`
     :   Trusted profile ID (required for `TrustedProfile` mode). Provide the Trusted Profile ID. When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli).
 
         For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
         {: tip}
 
-    `-k`
+    `-k <iam_api_key>`
     :   IAM API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-api-key).
 
         For more information about IAM API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
         {: tip}
 
-    `-t`
+    `-t <cluster_type>`
     :   Cluster type (`OpenShift` or `Kubernetes`). Specify if you are deploying the agent to an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) or {{site.data.keyword.containerlong_notm}} (`Kubernetes`) cluster.
 
         Value is case-sensitive. `OpenShift` must be specified in this exact case.
         {: important}
 
-    `-r`
+    `-r <region>`
     :   Specify the region where the {{site.data.keyword.logs_routing_full_notm}} Ingester endpoint is located (for example `us-east`).
 
-    `-d`
+    `-d <directory>`
     : Specify the directory containing the `logger-agent.yaml` file configured in the previous step. For example, if your `logger-agent.yaml` file is located in the `/path/to/directory` directory, you would simply specify the directory like this: `-d /path/to/directory`.
 
-    `-a`
+    `-a <application_name>`
     : Specify the application name that you want to see in your {{site.data.keyword.logs_full_notm}} instance. If in the metadata, the application name defaults to namespace name. You can also use variables from the environment, for example `${NODE_NAME}`.
 
-    `-s`
+    `-s <subsystem_name>`
     : Specify the subsystem name that you want to see in your {{site.data.keyword.logs_full_notm}} instance. If in the metadata, the subsystem name defaults to container name. You can also use variables from the environment, for example `${NODE_NAME}`.
 
     `-e PrivateProduction`

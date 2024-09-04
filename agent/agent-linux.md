@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-04"
 
 keywords:
 
@@ -32,9 +32,9 @@ Choose the type of identity and the authentication method for the agent. Then, c
 
 Complete the following steps:
 
-1. Choose the type of identity: user, service ID, or trusted profile.
+1. Choose the type of identity: user, or service ID.
 
-    You can use a user, a service ID, or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_routing_full}} service.
+    You can use a user, or a service ID as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full_notm}} service.
 
 2. Grant permissions for ingestion to the identity that you have chosen.
 
@@ -44,7 +44,7 @@ Complete the following steps:
 
 3. Generate an API Key for user authentication or for service ID authentication.
 
-    For authentication with trusted profiles, this step is not required.
+    
 
     For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-api-key).
 
@@ -95,40 +95,38 @@ Complete the following steps:
 7. Run the configuration script.
 
    ```sh
-   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> -d <trusted_profile_id> [--send-directly-to-icl] [-s <vsi_secure_access_enabled>]
+   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> [--send-directly-to-icl] [-s <vsi_secure_access_enabled>]
    ```
    {: pre}
 
+   
+
    Where
 
-    `-t`
-    :   Specify `/v1/logs/ws`. Specify `/logs/v1/singles`.
+    `-t <target_path>`
+    :   Specify `/logs/v1/singles` to send data to an {{site.data.keyword.logs_routing_full_notm}} instance. 
 
-    `-a`
+    `-a <auth_mode>`
     :   Specify `IAMAPIKey` or `VSITrustedProfile`.
 
-    `-k`
+    `-k <iam_api_key>`
     :   Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-api-key).
 
         For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
         {: tip}
 
-    `-d`
-    :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers).
-
-        For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
-        {: tip}
+    
 
     `--send-directly-to-icl`
-    :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.
+    :   Set this parameter
 
-    `-h`
+    `-h <target_host>`
     : The host for {{site.data.keyword.logs_full_notm}} ingestion, found in the `Endpoints` section of your {{site.data.keyword.logs_full_notm}} instance `Overview`. Use the ingress endpoint. For more information, see [Ingress endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_ingress)
 
-    `-p`
-    : Use `443`. Specify `3443`.
+    `-p <target_port>`
+    : Use `443` to send logs directly to {{site.data.keyword.logs_full_notm}}. 
 
-    `-s`
+    `-s <vsi_secure_access_enabled>`
     :   (Optional) Set this to `true` if you have secure access enabled in your VSI. It will be set to `false` by default. For example, `-s true`.
 
 
