@@ -2,11 +2,11 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-04"
 
 keywords:
 
-subcollection: logs-router
+subcollection: cloud-logs
 
 ---
 
@@ -44,10 +44,10 @@ For example, complete the following steps to generate an API key by using the CL
 
 2. Create an API key for the logged-in account.
 
-    Make sure to log in as the identity with the `Writer` role.{: note}
+    Make sure to log in as the identity with the `Sender` role.{: note}
 
     ```sh
-    export INGESTION_API_KEY=`ibmcloud iam api-key-create logs-router-ingestion --output json | jq -r '.apikey'`
+    export INGESTION_API_KEY=`ibmcloud iam api-key-create logs-ingestion --output json | jq -r '.apikey'`
     ```
     {: pre}
 
@@ -56,11 +56,11 @@ For example, complete the following steps to generate an API key by using the CL
 ## Generating an API Key for service ID authentication
 {: #api-key-for-service-id}
 
-You can create a service ID to enable access to the {{site.data.keyword.logs_routing_full_notm}} service by the {{site.data.keyword.agent}}. The agent can be hosted both inside and outside of {{site.data.keyword.cloud}}.
+You can create a service ID to enable access to the {{site.data.keyword.logs_full_notm}} service by the {{site.data.keyword.agent}}. The agent can be hosted both inside and outside of {{site.data.keyword.cloud}}.
 
 API keys are used by the agent to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
 
-Make sure to grant the service ID the `Writer` role.
+Make sure to grant the service ID the `Sender` role.
 {: note}
 
 - [Creating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#create_service_key).
@@ -79,14 +79,14 @@ For example, complete the following steps to generate an API key for a service I
     Be sure to give the service ID a description that helps you retrieve the service ID later.
 
     ```sh
-    ibmcloud iam service-id-create logs-router-svc-id --description "Service ID for Logs Router"
+    ibmcloud iam service-id-create logs-svc-id --description "Service ID for Logs Router"
     ```
     {: pre}
 
 3. Add an IAM policy for your service ID that grants access to send logs.
 
     ```sh
-    ibmcloud iam service-policy-create <SERVICE_ID> --service-name logs-router --roles Writer
+    ibmcloud iam service-policy-create <SERVICE_ID> --service-name logs --roles Sender
     ```
     {: pre}
 
@@ -95,6 +95,6 @@ For example, complete the following steps to generate an API key for a service I
     Be sure to give the API key a description that helps you retrieve the key later. Save your API key in a secure location. You can't retrieve the API key again. If you want to export the output to a file on your local machine, include the `--file <path>/<file_name>` option.
 
     ```sh
-    ibmcloud iam service-api-key-create logs-router-ingestion-key <SERVICE_ID> --description "API key for service ID <SERVICE_ID> with permissions to send logs to the IBM Cloud Logs Routing service"
+    ibmcloud iam service-api-key-create logs-ingestion-key <SERVICE_ID> --description "API key for service ID <SERVICE_ID> with permissions to send logs to the IBM Cloud Logs service"
     ```
     {: pre}
