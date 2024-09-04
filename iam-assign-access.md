@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-09-02"
 
 keywords:
 
@@ -54,7 +54,7 @@ There are two common ways to assign access to {{site.data.keyword.logs_full_notm
 {: #iam-assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access ro resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `Viewer` role for {{site.data.keyword.logs_full_notm}}:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `Viewer` role for {{site.data.keyword.logs_full_notm}}:
 
 Use `logs` for the service name. Also, use quotations around role names that are more than one word.
 {: tip}

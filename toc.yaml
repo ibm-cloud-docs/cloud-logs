@@ -39,15 +39,28 @@ toc:
           - topic: metadata.md
             navtitle: Metadata fields
           - topic: control-data.md
-            navtitle: Controlling ingested data for search
+            navtitle: Controlling ingested data for search 
       - topicgroup:
-           label: Release notes
-           topics:
-           - topic: release-notes.md
-             navtitle: Release notes
-           - topic: releasenotes-migration.md
-             navtitle: Release notes for the migration tool
-           - releasenotes_notifications.md
+          label: About the Logging agent
+          topics:
+          - topic: agent/agent-about.md
+            navtitle: The Logging agent
+          - topic: agent/agent-fluentbit.md
+            navtitle: Understanding the agent configuration file
+      - topicgroup:
+          label: Release notes
+          topics:
+          - topic: release-notes.md
+            navtitle: Release notes
+          - topic: agent/releasenotes_agent.md
+            navtitle: Agent release notes
+          - topic: releasenotes-migration.md
+            navtitle: Release notes for the migration tool
+          - releasenotes_notifications.md
+  - navgroup:
+      id: tutorial
+      topics:
+      - kube-logs.md
   - navgroup:
       id: howto
       topics:
@@ -114,8 +127,34 @@ toc:
       - topicgroup:
           label: Sending data to Cloud Logs
           topics:
+          - topic: agent/agent-iam-permissions.md
+            navtitle: Setting up IAM permissions for ingestion
+          - topic: agent/api-key.md
+            navtitle: Generating an API Key for ingestion
           - topic: send-logs-api.md
-            navtitle: Sending logs by using the API
+            navtitle: Using the REST API
+          - topicgroup:
+              label: Using the Logging agent for orchestrated environments
+              topics:
+              - topic: agent/agent-openshift.md
+                navtitle: Managing the agent for Openshift clusters
+              - topic: agent/agent-std-cluster.md
+                navtitle: Managing the agent for Kubernetes clusters
+              - topic: agent/agent-set-appsubname.md
+                navtitle: Configuring custom metadata fields
+              - topic: agent/configure-agent.md
+                navtitle: Filtering logs
+              - topic: agent/agent-version.md
+                navtitle: Checking the available agent versions
+              - topic: agent/download-agent-yaml.md
+                navtitle: Downloading the agent YAML file
+          - topicgroup:
+              label: Using the Logging agent for non-orchestrated environments
+              topics:
+              - topic: agent/agent-linux.md
+                navtitle: Managing the agent Linux environments
+          - topic: agent/agent-rsyslog.md
+            navtitle: Using the Logging agent to collect and route (r)Syslog messages
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
@@ -329,6 +368,23 @@ toc:
           topics:
           - topic: cloud-logs-cli-temp.md
             navtitle: CLI Reference
+      - topicgroup:
+          label: Terraform Reference
+          links:
+            - link:
+                label: Terraform reference
+                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
+      - topic: limits-sending-data.md
+        navtitle: Considerations and limitations sending data
+      - topicgroup:
+          label: Logging agent
+          topics:
+          - topic: agent/agent-plugin-parameters.md
+            navtitle: Output plug-in parameters to send data to Cloud Logs
+          - topic: agent/agent-plugin-support.md
+            navtitle: Fluent Bit plug-ins supported
+          - topic: agent/agent-config.md
+            navtitle: Configuration files for orchestrated environments
       - topicgroup:
           label: DataPrime Reference
           topics:

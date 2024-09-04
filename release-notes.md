@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-04"
 
 keywords:
 
@@ -23,11 +23,18 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
 
+## 4 September 2024
+{: #cloud-logs-sep0424}
+{: release-note}
+
+Documentation updates affecting {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full_notm}}
+:   Significant documentation updates have been made to the {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full_notm}} documentation sets with information related to using agents to send data to {{site.data.keyword.logs_full_notm}} moved from the [{{site.data.keyword.logs_routing_full_notm}} documentation](/docs/logs-router) to the [{{site.data.keyword.logs_full_notm}} documentation](/docs/cloud-logs).
+
 ## 29 August 2024
 {: #cloud-logs-aug2924}
 {: release-note}
 
-Osaka (`jp-osab`) and Sao Paulo (`br-sao`) region support
+Osaka (`jp-osa`) and Sao Paulo (`br-sao`) region support
 :   Osaka and Sao Paulo are now online regions for the {{site.data.keyword.logs_full_notm}} service in the {{site.data.keyword.cloud_notm}}. {{site.data.keyword.logs_full_notm}} instances can now be provisioned in Osaka and Sao Paulo.
 
 

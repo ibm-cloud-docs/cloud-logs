@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-09-03"
 
 keywords:
 
@@ -240,4 +240,4 @@ The `in` function cannot automatically infer the expected type of a keypath. To 
 ```text
 <v1> !$d.country:string.in('us','il','gr')
 ```
-{: codepath}
+{: codeblock}
