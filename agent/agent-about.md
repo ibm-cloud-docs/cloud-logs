@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-04"
 
 keywords:
 
@@ -25,7 +25,7 @@ You can configure the {{site.data.keyword.agent}} to collect and send infrastruc
 
 The following diagram shows the high level view when the destination is an {{site.data.keyword.logs_full_notm}} instance:
 
-![Flow of logs from agent](../images/cloud-logs-agent-to-instance.png "Flow of logs from agent"){: caption="Figure 1. Flow of logs from agent" caption-side="bottom"}
+![Flow of logs from agent](../images/cloud-logs-agent-to-instance.svg "Flow of logs from agent"){: caption="Figure 1. Flow of logs from agent" caption-side="bottom"}
 
 
 When you can configure the {{site.data.keyword.agent}} to send logs to the {{site.data.keyword.logs_full_notm}} service, logs that you send must include a value for the `applicationName` and `subsystemName` metadata fields. By default, when you configure the {{site.data.keyword.agent}}, the agent sets default values for these fields. You can configure your own custom values to replace the default values.
