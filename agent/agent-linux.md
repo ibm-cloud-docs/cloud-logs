@@ -116,9 +116,9 @@ Complete the following steps:
         {: tip}
 
     
-
+    
     `--send-directly-to-icl`
-    :   Set this parameter
+    :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.
 
     `-h <target_host>`
     : The host for {{site.data.keyword.logs_full_notm}} ingestion, found in the `Endpoints` section of your {{site.data.keyword.logs_full_notm}} instance `Overview`. Use the ingress endpoint. For more information, see [Ingress endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_ingress)
