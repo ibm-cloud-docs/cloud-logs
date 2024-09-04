@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-19"
+lastupdated: "2024-09-04"
 
 keywords:
 
@@ -68,14 +68,18 @@ When initially provisioned, you might not see data flowing to the instance, so a
 {: note}
 
 
-## Step 5. Routing logs to your {{site.data.keyword.logs_full_notm}} instance
+## Step 5. Sending logs to your {{site.data.keyword.logs_full_notm}} instance
 {: #gs-route-logs}
 
-You can configure {{site.data.keyword.logs_routing_full_notm}} in your account to route platform logs to {{site.data.keyword.logs_full_notm}}.
+You can send {{site.data.keyword.cloud_notm}} platform data, and application, infrastructure, and operational logs to the {{site.data.keyword.logs_full_notm}} instance.
 
-You can also configure {{site.data.keyword.logs_routing_full_notm}} to route log data from applications on your [{{site.data.keyword.containerlong_notm}}](/docs/containers) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift) clusters to your {{site.data.keyword.logs_full_notm}} instance.
+- Use the {{site.data.keyword.logs_routing_full_notm}} service to route logs from your IBM Cloud account to your chosen target. For more information, see [Getting started with {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-getting-started).
+- Use {{site.data.keyword.atracker_notm}} to configure how to route auditing events, both global and location-based event data, in your IBM Cloud account. For more information, [Getting started with {{site.data.keyword.atracker_notm}}](/docs/atracker?topic=atracker-getting-started).
+- Use the {{site.data.keyword.agent}} to send data to a Red Hat OpenShift cluster. For more information, see [Managing the {{site.data.keyword.agent}} for Red Hat OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-openshift).
+- Use the {{site.data.keyword.agent}} to send data to a Kubernetes cluster. For more information, see [Managing the {{site.data.keyword.agent}} for IBM Cloud Kubernetes Service clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster).
+- Use the {{site.data.keyword.agent}} to send data to a Linux server. For more information, see [Managing the {{site.data.keyword.agent}} for Linux](/docs/cloud-logs?topic=cloud-logs-agent-linux).
 
-For information on {{site.data.keyword.logs_routing_full_notm}}, see [Getting started with {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-getting-started).
+
 
 ## Cleaning up
 {: #gs-cleaning}
