@@ -32,7 +32,7 @@ Only the current plug-in version and two previous versions are available at any 
 The migration tool plug-in v0.1.19 is available.
 :   In addition to bug fixes, updates include:
 
-    * The ability to create two targets using one migration command.
+    * The ability, with a single command, to continue sending logs to your {{site.data.keyword.la_full_notm}} instance while also sending logs to the newly created {{site.data.keyword.logs_full_notm}} instance. This dual destination configuration will help you verify your migration.
 
     * The ability to specify the instance name and resource group ID for the created {{site.data.keyword.logs_full_notm}} instance when running the migration command.
 
