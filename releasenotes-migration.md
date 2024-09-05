@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-05"
 
 keywords:
 
@@ -25,6 +25,21 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
+
+## 4 September 2024
+{: #migration-sep0424}
+
+The migration tool plug-in v0.1.19 is available.
+:   In addition to bug fixes, updates include:
+
+    * The ability to create two targets using one migration command.
+
+    * The ability to specify the instance name and resource group ID for the created {{site.data.keyword.logs_full_notm}} instance when running the migration command.
+
+    * The ability to set the retention plan for the created {{site.data.keyword.logs_full_notm}} instance.
+
+    * Additional validation of the instance CRN.
+
 
 ## 29 August 2024
 {: #migration-aug2924}
