@@ -63,7 +63,12 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 For each instance,
 
-- [ ] Run the migration tool (ibmcloud logging migrate create-resources --scope instance --instance-crn xxx --platform --ingestion-key xxxxx)
+- [ ] Run the migration tool
+
+    ```sh
+    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx
+    ```
+    {: codeblock}
 
     This command will:
 
