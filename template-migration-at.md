@@ -16,6 +16,12 @@ subcollection: cloud-logs
 # Template for migrating Activity Tracker instances in the account
 {: #template-migration-at}
 
+Template to plan migration from {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} instances.
+{: shortdesc}
+
+## List of services that you might need for migration
+{: #template-migration-at-1}
+
 - [ ] List of services that you might need for migration:
 
     - [ ] Cloud Object Storage (to store data and metrics)
@@ -24,25 +30,33 @@ subcollection: cloud-logs
 
     - [ ] IBM Cloud Logs (the new logging service in IBM Cloud Observability)
 
-- [ ] IAM permissions to migrate
+## List of permissions that you might need for migration
+{: #template-migration-at-2}
 
-    - [ ] IAM permissions to view Activity Tracker instances and resources
+The following list outlines the IAM permissions that you need to migrate:
 
-    - [ ] IAM permissions to read the DEK key name that is associated to a bucket if you have archiving configured on a bucket that has Key Protect enabled.
+For more information on permissions, see [Required permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
 
-    - [ ] IAM permissions to manage the Activity Tracker Event Routing service
+- [ ] IAM permissions to view Activity Tracker instances and resources
 
-    - [ ] IAM permissions to create authorizations between services in the account
+- [ ] IAM permissions to read the DEK key name that is associated to a bucket if you have archiving configured on a bucket that has Key Protect enabled.
 
-        - [ ] Activity Tracker Event Routing and Cloud Logs
+- [ ] IAM permissions to manage the Activity Tracker Event Routing service
 
-        - [ ] Cloud Logs and Cloud Object Storage
+- [ ] IAM permissions to create authorizations between services in the account
 
-        - [ ] Cloud Logs and IBM Cloud Event Notifications
+    - [ ] Activity Tracker Event Routing and Cloud Logs
 
-    - [ ] IAM permissions to create buckets
+    - [ ] Cloud Logs and Cloud Object Storage
 
-    - [ ]  IAM permissions to configure alert destinations in IBM Cloud Event Notifications
+    - [ ] Cloud Logs and IBM Cloud Event Notifications
+
+- [ ] IAM permissions to create buckets
+
+- [ ]  IAM permissions to configure alert destinations in IBM Cloud Event Notifications
+
+## Migration planning
+{: #template-migration-at-3}
 
 - [ ] Identify the regions where you have provisioned Activity Tracker instances.
 
