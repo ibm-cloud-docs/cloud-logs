@@ -61,7 +61,7 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 - [ ] Identify the regions where you have provisioned Log Analysis instances to collect platform logs.
 
-For each instance,
+### For each instance
 
 - [ ] Run the migration tool
 
@@ -97,6 +97,8 @@ For each instance,
     - [ ] Deploy agent for Linux servers
 
     - [ ] Deploy agent to collect and route rSyslog data
+
+### Manual tasks
 
 - [ ] Generate the IAM report to identify the access groups, service IDs, users, and trusted profiles that have permissions configured on the instance that you are migrating.
 

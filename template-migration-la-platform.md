@@ -59,7 +59,7 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 - [ ] Identify the regions where you have provisioned Log Analysis instances to collect platform logs.
 
-For each instance,
+### For each instance
 
 - [ ] Run the migration tool
 
@@ -93,6 +93,8 @@ For each instance,
         - [ ]  Target 1 includes the details to route platform logs to the Cloud Logs instance
 
         - [ ]  Target 2 includes the details to route platform logs to the Log Analysis instance
+
+### Manual tasks
 
 - [ ] Generate the IAM report to identify the access groups, service IDs, users, and trusted profiles that have permissions configured on the instance that you are migrating.
 

@@ -60,7 +60,7 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 - [ ] Identify the regions where you have provisioned Activity Tracker instances.
 
-For each instance,
+### For each instance
 
 - [ ] Run the migration tool
 
@@ -98,6 +98,8 @@ For each instance,
         - [ ]  Create a route with a rule to route auditing events of the region being migrated to the Cloud Logs target.
 
         - [ ]  Add some default dashboards, parsing rules, and views to manage auditing events.
+
+### Manual tasks
 
 - [ ] Generate the IAM report to identify the access groups, service IDs, users, and trusted profiles that have permissions configured on the instance that you are migrating.
 
