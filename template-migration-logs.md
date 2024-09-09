@@ -98,6 +98,14 @@ You can run the migration tool as follows:
 
     - [ ] Migrate notification channels by creating the resources (topics, destinations, and subscriptions) to trigger alerts trough this channels in the IBM CLoud Events Notifications service.
 
+
+
+### Manual tasks
+
+- [ ] Generate the IAM report to identify the access groups, service IDs, users, and trusted profiles that have permissions configured on the instance that you are migrating.
+
+- [ ] If you have parsing rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.)
+
 - [ ] Deploy/ Configure the Logging agent to collect and route logs to the Cloud Logs instance.
 
     - [ ] Deploy agent for Kubernetes clusters
@@ -107,11 +115,5 @@ You can run the migration tool as follows:
     - [ ] Deploy agent for Linux servers
 
     - [ ] Deploy agent to collect and route rSyslog data
-
-### Manual tasks
-
-- [ ] Generate the IAM report to identify the access groups, service IDs, users, and trusted profiles that have permissions configured on the instance that you are migrating.
-
-- [ ] If you have parsing rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.)
 
 - [ ] Modify any runbooks for DevOps
