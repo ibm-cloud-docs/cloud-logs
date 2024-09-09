@@ -19,6 +19,7 @@ subcollection: cloud-logs
 Template to plan migration from {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} instances.
 {: shortdesc}
 
+
 ## List of services that you might need for migration
 {: #template-migration-at-1}
 
@@ -67,6 +68,8 @@ For each instance, complete the following steps:
 
 You can run the migration tool as follows:
 
+Run the Migration Tool in a development or staging environment to test and validate the migration. Do not run the Migration Tool directly on your production account.
+{: important}
 
 - [ ] Run the migration tool
 
@@ -112,6 +115,9 @@ You can run the migration tool as follows:
         - [ ]  Create a route with a rule to route auditing events of the region being migrated to the Cloud Logs target.
 
         - [ ]  Add some default dashboards, parsing rules, and views to manage auditing events.
+
+The Migration Tool only migrates configuration of selected resources.
+{: important}
 
 ### Manual tasks
 {: #template-migration-at-3-2}

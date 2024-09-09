@@ -65,6 +65,9 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 You can run the migration tool as follows:
 
+Run the Migration Tool in a development or staging environment to test and validate the migration. Do not run the Migration Tool directly on your production account.
+{: important}
+
 - [ ] Run the migration tool
 
     ```sh
@@ -98,7 +101,8 @@ You can run the migration tool as follows:
 
     - [ ] Migrate notification channels by creating the resources (topics, destinations, and subscriptions) to trigger alerts trough this channels in the IBM CLoud Events Notifications service.
 
-
+The Migration Tool only migrates configuration of selected resources.
+{: important}
 
 ### Manual tasks
 

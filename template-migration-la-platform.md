@@ -63,6 +63,9 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 You can run the migration tool as follows:
 
+Run the Migration Tool in a development or staging environment to test and validate the migration. Do not run the Migration Tool directly on your production account.
+{: important}
+
 - [ ] Run the migration tool
 
     ```sh
@@ -103,6 +106,9 @@ You can run the migration tool as follows:
         - [ ]  Target 1 includes the details to route platform logs to the Cloud Logs instance
 
         - [ ]  Target 2 includes the details to route platform logs to the Log Analysis instance
+
+The Migration Tool only migrates configuration of selected resources.
+{: important}
 
 ### Manual tasks
 
