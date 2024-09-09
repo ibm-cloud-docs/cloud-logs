@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-09-05"
 
 keywords:
 
@@ -162,7 +162,7 @@ The command generates Terraform similar to the [`generate-terraform` command](#l
 
 
 ```text
-ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--single] [--instance-name instance-name] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--instance-resource-group-id instance-resource-group-id] [--region region] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--force] 
+ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--single] [--instance-name instance-name] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--plan-retention plan-retention] [--platform platform] [--instance-resource-group-id instance-resource-group-id] [--region region] [--en-instance-crn en-instance-crn] [--ingestion-key ingestion-key] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--predefined-resources] [--force] 
 ```
 {: pre}
 
@@ -209,6 +209,16 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 `--metrics-bucket-name`|`--mb`
    :   The name of the {{site.data.keyword.cos_full_notm}} metrics bucket created for the {{site.data.keyword.logs_full_notm}} instance when `--scope atracker` is specified.
 
+`--plan-retention`|`--rp`
+   :   Sets the [{{site.data.keyword.frequent_search}} retention period](/docs/cloud-logs?topic=cloud-logs-service_plans) for the created {{site.data.keyword.logs_full_notm}} instance. Supported values are `30-days`, `14-days`, or `7-days`. If not specified, `7-days` will be used.
+
+`--platform`|`-p`
+   :   If specified, the tool will create a configuration that continues sending logs to your {{site.data.keyword.la_full_notm}} instance while also sending logs to the newly created {{site.data.keyword.logs_full_notm}} instance. This dual destination configuration will help you verify your migration.
+
+`--instance-resource-group-id`|`--rg`
+
+   :   The [resource group](/docs/account?topic=account-rgs&interface=ui) ID to be used when creating the {{site.data.keyword.logs_full_notm}} instance.
+
 `--region`|`-r`
    :   The region where {{site.data.keyword.atracker_full_notm}} targets will be configured.
 
@@ -224,12 +234,15 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 
        This option is only used when `--scope platform-logs` is specified.
 
-`--ecrn`
+`--en-instance-crn`|`--ecrn`
 
    : The [CRN](/docs/account?topic=account-crn) of an {{site.data.keyword.en_full_notm}} instance. Migrated alerts will be configured to be sent to this instance. 
 
-   If `--ecrn` is not specified, Terraform files are created to migrate alerts, however manual configuration will have to be done after migration to configure {{site.data.keyword.en_full_notm}} to receive the alerts. If the `--api` option is used, and the user does not specify yes when prompted to configure alerting to {{site.data.keyword.en_full_notm}}, the user will have to manally configure sending alerts to {{site.data.keyword.en_full_notm}}.
+   If `--en-instance-crn` is not specified, Terraform files are created to migrate alerts, however manual configuration will have to be done after migration to configure {{site.data.keyword.en_full_notm}} to receive the alerts. If the `--api` option is used, and the user does not specify yes when prompted to configure alerting to {{site.data.keyword.en_full_notm}}, the user will have to manally configure sending alerts to {{site.data.keyword.en_full_notm}}.
    {: important}
+
+`--ingestion-key`|`-k`
+   :   The [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-ingestion_key&interface=ui) or [{{site.data.keyword.logs_full_notm}}](/docs/log-analysis?topic=log-analysis-ingestion_key&interface=ui) ingestion key. This key is required to migrate {{site.data.keyword.atracker_full_notm}} or {{site.data.keyword.logs_routing_full_notm}} configurations associated with the instance.
 
 `--directory`|`-d`
    :   The directory on your local computer where migration files are written. If not specified, the directory where the command is run is used.
@@ -354,4 +367,3 @@ In this example the {{site.data.keyword.logs_full_notm}} resources of the ORIGIN
 ibmcloud logging migrate config --import --crn-origin ORIGIN_CRN --crn-destination CRN 
 ```
 {: pre}
-
