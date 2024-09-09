@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-06"
+lastupdated: "2024-09-09"
 
 keywords:
 
@@ -65,13 +65,23 @@ For each instance, complete the following steps:
 ### Migration tool command
 {: #template-migration-at-3-1}
 
+You can run the migration tool as follows:
+
 
 - [ ] Run the migration tool
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx --platform --ingestion-key xxxxx
+    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID]
     ```
     {: codeblock}
+
+    Add `--api` to migrate and create resources.
+
+    Add `-t -f` to generate Terraform files and apply creation of resources. You are asked to confirm that you want to apply the scripts.
+
+    You can add a new name for the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
+
+    You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
 
     This command will:
 
