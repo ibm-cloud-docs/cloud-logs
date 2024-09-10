@@ -97,7 +97,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 
         - [ ]  Add an external integration in Cloud Logs to the Event Notifications instance.
 
-    - [ ] Migrate notification channels by creating the resources (topics, destinations, and subscriptions) to trigger alerts trough this channels in the IBM CLoud Events Notifications service.
+    - [ ] Migrate notification channels (Slack, PagerDuty, WebHook) by creating the resources (topics, destinations, and subscriptions) to trigger alerts trough this channels in the IBM CLoud Events Notifications service.
 
     - [ ] Configure Logs Routing (to continue receiving platform logs in the Log Analysis instance and the new Cloud Logs instance.)
 

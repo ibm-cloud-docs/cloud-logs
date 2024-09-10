@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-11"
+lastupdated: "2024-09-10"
 keywords:
 
 subcollection: cloud-logs
@@ -86,7 +86,7 @@ To migrate {{site.data.keyword.atracker_full_notm}} routes and targets in the ac
     * To migrate an instance by applying Terraform, run:
 
        ```text
-       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --terraform 
+       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --terraform -f
        ```
        {: pre}
 
@@ -96,11 +96,6 @@ To migrate {{site.data.keyword.atracker_full_notm}} routes and targets in the ac
        ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --api
        ```
        {: pre}
-
-    Check the locations where {{site.data.keyword.logs_full_notm}} is available. You can only migrate instances in supported locations. For more information, see [Locations](/docs/cloud-logs?topic=cloud-logs-regions).
-
-    When you migrate by using Terraform, you can modify the location where an instance is created before applying the Terraform script. You can check the migrated assets and prepare the migration for when other regions are supported.
-    {: tip}
 
 2. After you migrate each of the {{site.data.keyword.at_full_notm}} instances in the account, configure {{site.data.keyword.atracker_full_notm}}.
 
@@ -114,7 +109,7 @@ To migrate {{site.data.keyword.atracker_full_notm}} routes and targets in the ac
     Run the following command to generate and apply Terraform scripts that you can customize:
 
     ```text
-    ibmcloud logging migrate create-resources --scope atracker --terraform 
+    ibmcloud logging migrate create-resources --scope atracker --terraform -f
     ```
     {: pre}
 
