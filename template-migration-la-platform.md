@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -63,7 +63,7 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 You can run the migration tool as follows:
 
-Run the Migration Tool in a development or staging environment to test and validate the migration. Do not run the Migration Tool directly on your production account.
+Run the Migration Tool in a development or staging environment to test and validate the migration.
 {: important}
 
 - [ ] Run the migration tool
@@ -97,7 +97,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 
         - [ ]  Add an external integration in Cloud Logs to the Event Notifications instance.
 
-    - [ ] Migrate notification channels by creating the resources (topics, destinations, and subscriptions) to trigger alerts trough this channels in the IBM CLoud Events Notifications service.
+    - [ ] Migrate notification channels (Slack, PagerDuty, WebHook) by creating the resources (topics, destinations, and subscriptions) to trigger alerts trough this channels in the IBM CLoud Events Notifications service.
 
     - [ ] Configure Logs Routing (to continue receiving platform logs in the Log Analysis instance and the new Cloud Logs instance.)
 
@@ -113,6 +113,10 @@ The Migration Tool only migrates configuration of selected resources.
 ### Manual tasks
 
 - [ ] Generate the IAM report to identify the access groups, service IDs, users, and trusted profiles that have permissions configured on the instance that you are migrating.
+
+    - [ ] You must manually migrate the IAM permissions.
+
+    - [ ] For API keys (service ID / user ID) you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
 
 - [ ] If you have parsing rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.)
 

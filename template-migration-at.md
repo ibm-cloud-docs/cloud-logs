@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -68,7 +68,7 @@ For each instance, complete the following steps:
 
 You can run the migration tool as follows:
 
-Run the Migration Tool in a development or staging environment to test and validate the migration. Do not run the Migration Tool directly on your production account.
+Run the Migration Tool in a development or staging environment to test and validate the migration.
 {: important}
 
 - [ ] Run the migration tool
@@ -102,7 +102,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 
         - [ ]  Add an external integration in Cloud Logs to the Event Notifications instance.
 
-    - [ ] Migrate notification channels by creating the resources (topics, destinations, and subscriptions) to trigger alerts trough this channels in the IBM CLoud Events Notifications service.
+    - [ ] Migrate notification channels (Slack, PagerDuty, WebHook) by creating the resources (topics, destinations, and subscriptions) to trigger alerts trough this channels in the IBM CLoud Events Notifications service.
 
     - [ ] Configure Activity Tracker Event Routing (to continue receiving auditing events in the Activity Tracker instance and the new Cloud Logs instance.)
 

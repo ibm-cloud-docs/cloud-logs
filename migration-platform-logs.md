@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -21,13 +21,7 @@ Migrating {{site.data.keyword.la_full}} instances that collect platform logs int
 {: shortdesc}
 
 
-## {{site.data.keyword.la_full_notm}} platform logs architecture
-{: #migration-platform-logs-ov}
-
-Before the release of the {{site.data.keyword.logs_routing_full_notm}} service and the {{site.data.keyword.logs_full_notm}} service, you could only collect platform logs through the {{site.data.keyword.la_full_notm}} instance that is configured with the platform flag in the same region where the logs are generated.
-
-Only one {{site.data.keyword.la_full_notm}} instance can be configured in a region to receive platform logs.
-
+Before the release of the {{site.data.keyword.logs_routing_full_notm}} service and the {{site.data.keyword.logs_full_notm}} service, you could only collect platform logs through the {{site.data.keyword.la_full_notm}} instance that is configured with the platform flag in the same region where the logs are generated. Only one {{site.data.keyword.la_full_notm}} instance can be configured in a region to receive platform logs.
 
 
 ## Options for migration
@@ -87,60 +81,39 @@ The Migration tool migrates instances replicating the current account architectu
     {: pre}
 
 
-2. Migrate each instance by running one of these commands:
+2. Migrate each instance by running the following command:
 
-    * To generate terraform scripts that you can modify, run:
+    ```text
+    ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --platform --ingestion-key xxxxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID]
+    ```
+    {: codeblock}
 
-       ```text
-       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --terraform
-       ```
-       {: pre}
+    Add `--api` to migrate and create resources.
 
-    * To migrate an instance by applying Terraform, run:
+    Add `-t -f` to generate Terraform files and apply creation of resources. You are asked to confirm that you want to apply the scripts.
 
-       ```text
-       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --terraform -f
-       ```
-       {: pre}
+    You can add a new name for the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
-    * To migrate an instance directly without Terraform, run:
+    You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
 
-       ```text
-       ibmcloud logging migrate create-resources --scope instance --instance-crn CRNvalue --api
-       ```
-       {: pre}
-
-    You must migrate all your {{site.data.keyword.la_full_notm}} instances that collect platform logs before you use the Migration tool to configure {{site.data.keyword.logs_routing_full_notm}} in the account.{: important}
-
-3. Manually configure notification channels such as email, and PagerDuty.
-
-    If you use the terraform option, variables are provided for you to enter information on the slack URL and the webhook header apikey.
+3. Manually configure notification channels such as email.
 
    {{site.data.keyword.logs_full_notm}} alerting is done by using the {{site.data.keyword.en_full_notm}} service.
    {: note}
 
-4. After you migrate each of the instances in the account, configure {{site.data.keyword.logs_routing_full_notm}}.
+3. Validate that the new configuration is working for your requirements.
 
-    ```text
-    ibmcloud logging migrate create-resources --scope platform-logs -i [private|public]
-    ```
-    {: pre}
+4. Migrate IAM permissions. For more information, see [Migrating IAM permissions](/docs/cloud-logs?topic=cloud-logs-migration-iam).
 
-    The `-i` option indicates whether a `public` or `private` endpoint is used to receive platform logs by the {{site.data.keyword.logs_full_notm}} instance. The default is `public`.
+5. After you validate your configuration is operating as required, delete your {{site.data.keyword.la_full_notm}} instances and your legacy configurations to send data.
 
-    For more information about this command, see [`ibmcloud logging migrate create-resources`](/docs/cloud-logs?topic=cloud-logs-migration_cli#logging-migrate-create-resources)
 
-    The tool configures the account to map your current {{site.data.keyword.la_full_notm}} architecture for managing platform logs through {{site.data.keyword.logs_routing_full_notm}}.
-
-5. Validate that the new configuration is working for your requirements.
-
-6. After you validate your configuration is operating as required, delete your {{site.data.keyword.la_full_notm}} instances and your legacy configurations to send data.
-
+You can also migrate each instance and then run the command `ibmcloud logging migrate create-resources --scope platform-logs -i [private|public]` to configure {{site.data.keyword.logs_routing_full_notm}} in the account. The `-i` option indicates whether a `public` or `private` endpoint is used to receive platform logs by the {{site.data.keyword.logs_full_notm}} instance. The default is `public`. For more information about this command, see [`ibmcloud logging migrate create-resources`](/docs/cloud-logs?topic=cloud-logs-migration_cli#logging-migrate-create-resources). The tool configures the account to map your current {{site.data.keyword.la_full_notm}} architecture for managing platform logs through {{site.data.keyword.logs_routing_full_notm}}. {: tip}
 
 ## Validating the new architecture
 {: #migration-platform-logs-options-validate}
 
-While you migrate and validate the new architecture, you must collect platform logs in your {{site.data.keyword.la_full_notm}} instances, same as you currently do now. You must configure {{site.data.keyword.logs_routing_full_notm}} to send logs to your {{site.data.keyword.la_full_notm}} instances with rules that map your current {{site.data.keyword.la_full_notm}} architecture in the account. If you fail to configure this route, logs will stop being routed to your current {{site.data.keyword.la_full_notm}} instances. For more information on how to configure a double target in a region, see [Configuring two targets of different types](/docs/logs-router?topic=logs-router-config-2-targets&interface=api).
+While you migrate and validate the new architecture, you must collect platform logs in your {{site.data.keyword.la_full_notm}} instances, same as you currently do now. You must configure {{site.data.keyword.logs_routing_full_notm}} to send logs to your {{site.data.keyword.la_full_notm}} instances with rules that map your current {{site.data.keyword.la_full_notm}} architecture in the account. If you fail to configure this route, logs will stop being routed to your current {{site.data.keyword.la_full_notm}} instances. For more information on how to configure a double target in a region, see [Configuring two targets of different types](/docs/logs-router?topic=logs-router-tenant-create-2targets).
 {: important}
 
 
