@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -68,7 +68,7 @@ For each instance, complete the following steps:
 
 You can run the migration tool as follows:
 
-Run the Migration Tool in a development or staging environment to test and validate the migration. Do not run the Migration Tool directly on your production account.
+Run the Migration Tool in a development or staging environment to test and validate the migration.
 {: important}
 
 - [ ] Run the migration tool

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -97,10 +97,10 @@ To migrate {{site.data.keyword.la_full_notm}} instances, complete the following 
 
 4. Configure the {{site.data.keyword.logs_routing_full_notm}} agent to send logs.
 
-    - [Managing the IBM® Cloud Logs Routing agent for Linux](/docs/logs-router?topic=logs-router-agent-linux&interface=api).
-    - [Managing the IBM® Cloud Logs Routing agent for IBM Cloud Kubernetes Service clusters](/docs/logs-router?topic=logs-router-agent-std-cluster&interface=api).
-    - [Managing the IBM® Cloud Logs Routing agent for Red Hat OpenShift on IBM Cloud clusters](/docs/logs-router?topic=logs-router-agent-openshift&interface=api).
-    - [Configuring the IBM® Cloud Logs Routing agent for (r)Syslog logs](/docs/logs-router?topic=logs-router-agent-rsyslog&interface=api).
+    - [Managing the IBM® Cloud Logs Routing agent for Linux](/docs/cloud-logs?topic=cloud-logs-agent-linux).
+    - [Managing the IBM® Cloud Logs Routing agent for IBM Cloud Kubernetes Service clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster).
+    - [Managing the IBM® Cloud Logs Routing agent for Red Hat OpenShift on IBM Cloud clusters](/docs/cloud-logs?topic=cloud-logs-agent-openshift).
+    - [Configuring the IBM® Cloud Logs Routing agent for (r)Syslog logs](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog).
 
 5. Validate that the new configuration is working for your requirements.
 
