@@ -47,26 +47,31 @@ toc:
             navtitle: The Logging agent
           - topic: agent/agent-fluentbit.md
             navtitle: Understanding the agent configuration file
-      - topic: migration_overview.md
-        navtitle: Migrating to IBM Cloud Logs
       - topicgroup:
-          label: Migrating from Activity Tracker
+          label: Migrating from Activity Tracker and Log Analysis
           topics:
+          - topic: migration_overview.md
+            navtitle: Migrating to IBM Cloud Logs
           - topic: migration-at.md
             navtitle: Migrating Activity Tracker instances
-          - topic: template-migration-at.md
-            navtitle: Planning migration (template)
-      - topicgroup:
-          label: Migrating from Log Analysis
-          topics:
           - topic: migration-la.md
             navtitle: Migrating Log Analysis instances
+          - topic: template-migration-at.md
+            navtitle: Planning template for Activity Tracker
+          - topic: template-migration-la-platform.md
+            navtitle: Planning template for instances collecting platform logs
+          - topic: template-migration-logs.md
+            navtitle: Planning template for instances collecting logs
+          - topic: migration-atracker-1-cl.md
+            navtitle: Migrating to 1 Cloud Logs instance
+          - topic: migration-atracker-n-cl.md
+            navtitle: Migrating to N Cloud Logs instances
+          - topic: migration-atracker.md
+            navtitle: Migrating Activity Tracker Event Routing
           - topic: migration-platform-logs.md
             navtitle: Migrating instances that collect platform logs
-          - topic: template-migration-la-platform.md
-            navtitle: Planning migration for instances collecting platform logs (template)
-          - topic: template-migration-logs.md
-            navtitle: Planning migration for instances collecting logs (template)
+          - topic: migration-la-op.md
+            navtitle: Migrating instances that collect application and operational logs
       - topicgroup:
           label: Release notes
           topics:
@@ -310,15 +315,6 @@ toc:
           - topic: migration-iam.md
             navtitle: Migrating IAM resources
           - topicgroup:
-              label: Migrating Activity Tracker
-              topics:
-              - topic: migration-atracker-1-cl.md
-                navtitle: Migrating to 1 Cloud Logs instance
-              - topic: migration-atracker-n-cl.md
-                navtitle: Migrating to N Cloud Logs instances
-              - topic: migration-atracker.md
-                navtitle: Migrating Activity Tracker Event Routing
-          - topicgroup:
               label: Migration tool
               topics:
               - topic: migration-tool.md
@@ -407,6 +403,7 @@ toc:
         - getting-help.md
         - topic: faqs.md
           navtitle: FAQs
+
         - topicgroup:
             label: Troubleshooting
             topics:
