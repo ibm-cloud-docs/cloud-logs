@@ -63,9 +63,9 @@ toc:
           - topic: template-migration-logs.md
             navtitle: Planning template for instances collecting logs
           - topic: migration-atracker-1-cl.md
-            navtitle: Migrating to 1 Cloud Logs instance
+            navtitle: Migrating activity tracking events to 1 Cloud Logs instance
           - topic: migration-atracker-n-cl.md
-            navtitle: Migrating to N Cloud Logs instances
+            navtitle: Migrating activity tracking events to N Cloud Logs instances
           - topic: migration-atracker.md
             navtitle: Migrating Activity Tracker Event Routing
           - topic: migration-platform-logs.md

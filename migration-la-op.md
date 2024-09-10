@@ -28,6 +28,7 @@ To migrate {{site.data.keyword.la_full_notm}} instances that collect operational
 
 The Migration tool migrates instances replicating the current account architecture.
 
+
 To migrate {{site.data.keyword.la_full_notm}} instances, complete the following steps for each instance:
 
 1. Run the migration tool to collect information about what instances need to be migrated and their resources.

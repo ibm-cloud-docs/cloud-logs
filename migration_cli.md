@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -48,7 +48,7 @@ This command does not automatically create the new instances. The Terraform scri
 {: important}
 
 ```text
-ibmcloud logging migrate generate-terraform --scope SCOPE [--instance-crn CRN] [--service SERVICE] [--iam-scope IAM_ENTITY] [--directory DIRECTORY] 
+ibmcloud logging migrate generate-terraform --scope SCOPE [--instance-crn CRN] [--service SERVICE] [--iam-scope IAM_ENTITY] [--directory DIRECTORY]
 ```
 {: pre}
 
@@ -71,7 +71,7 @@ ibmcloud logging migrate generate-terraform --scope SCOPE [--instance-crn CRN] [
    :   The [CRN](/docs/account?topic=account-crn) of the {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance to be migrated. Required when `--scope instance` is specified. `--instance-crn` does not apply to other `--scope` options.
 
 `--service`|`--sv`
-   :   The type of service to migrate. 
+   :   The type of service to migrate.
 
        `logdna`
        :   The instance to be migrated is an {{site.data.keyword.la_full_notm}} instance.
@@ -162,7 +162,7 @@ The command generates Terraform similar to the [`generate-terraform` command](#l
 
 
 ```text
-ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--single] [--instance-name instance-name] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--plan-retention plan-retention] [--platform platform] [--instance-resource-group-id instance-resource-group-id] [--region region] [--en-instance-crn en-instance-crn] [--ingestion-key ingestion-key] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--predefined-resources] [--force] 
+ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--single] [--instance-name instance-name] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--plan-retention plan-retention] [--platform platform] [--instance-resource-group-id instance-resource-group-id] [--region region] [--en-instance-crn en-instance-crn] [--ingestion-key ingestion-key] [--ingress-endpoint-type ingress-endpoint-type] [--api | --terraform] [--directory DIRECTORY] [--predefined-resources] [--force]
 ```
 {: pre}
 
@@ -236,7 +236,7 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 
 `--en-instance-crn`|`--ecrn`
 
-   : The [CRN](/docs/account?topic=account-crn) of an {{site.data.keyword.en_full_notm}} instance. Migrated alerts will be configured to be sent to this instance. 
+   : The [CRN](/docs/account?topic=account-crn) of an {{site.data.keyword.en_full_notm}} instance. Migrated alerts will be configured to be sent to this instance.
 
    If `--en-instance-crn` is not specified, Terraform files are created to migrate alerts, however manual configuration will have to be done after migration to configure {{site.data.keyword.en_full_notm}} to receive the alerts. If the `--api` option is used, and the user does not specify yes when prompted to configure alerting to {{site.data.keyword.en_full_notm}}, the user will have to manally configure sending alerts to {{site.data.keyword.en_full_notm}}.
    {: important}
@@ -270,7 +270,7 @@ ibmcloud logging migrate create-resources --scope atracker --terraform
 In this example, the API is used to configure the {{site.data.keyword.logs_full_notm}} instance in the region to receive platform logs using a private ingress endpoint.
 
 ```text
-ibmcloud logging migrate create-resources -s platform-logs -i private 
+ibmcloud logging migrate create-resources -s platform-logs -i private
 ```
 {: pre}
 
@@ -307,63 +307,6 @@ ibmcloud logging migrate remove-resources-tf --scope SCOPE --instance-crn CRN [-
 In this example, the {{site.data.keyword.logs_full_notm}} instance specified by the `CRN` value is removed using the migration Terraform files in the directory where the command is run. All resources associated with the {{site.data.keyword.logs_full_notm}} instance are removed as well.
 
 ```sh
-ibmcloud logging migrate remove-resources-tf --scope instance --crn CRN 
-```
-{: pre}
-
-
-
-
-
-
-
-## ibmcloud logging migrate config
-{: #logging-migrate-config}
-
-Use this command to export the {{site.data.keyword.logs_full_notm}} resources from an {{site.data.keyword.logs_full_notm}} instance to a file. You can then use this command to import those resources to a different {{site.data.keyword.logs_full_notm}} instance.
-
-Example resources include views, dashboard, and alerts.
-
-Exported files are written to the `logs/<accountID>/<instanceID>` directory. When running an import you must run the `ibmcloud logging migrate config` command from the directory that contains the `logs/<accountID>/<instanceID>` directory which contains the exported files for the {{site.data.keyword.logs_full_notm}} instance that you want to import.
-
-Imported resources will be added to the {{site.data.keyword.logs_full_notm}} instance.
-{: note}
-
-
-```text
-ibmcloud logging migrate config [--crn-destination CRN] --crn-origin CRN [--export | --import] 
-```
-{: pre}
-
-### Command options
-{: #mig-config-options}
-
-`--crn-origin value` | `--crn-org value`
-:   The [CRN](/docs/account?topic=account-crn) of the {{site.data.keyword.logs_full_notm}} instance whose resources are to be exported or whose resources are to be imported.
-
-`--crn-destination value` | `--crn-des value`
-   :   The [CRN](/docs/account?topic=account-crn) of the {{site.data.keyword.logs_full_notm}} instance importing the exported resources specified by `--crn-origin`. Required for `--import`.
-
-`--export` | `--ex`
-   :   Export the {{site.data.keyword.logs_full_notm}} resources of the `--crn-origin` instance. Mutually exclusive with `--import`.
-
-`--import` | `--im`
-   :   Import the {{site.data.keyword.logs_full_notm}} resources of the `--crn-origin` instance. Mutually exclusive with `--export`.
-
-
-### Examples
-{: #mig-config-examples}
-
-In this example the {{site.data.keyword.logs_full_notm}} resources of the CRN instance are exported to a file.
-
-```sh
-ibmcloud logging migrate config --export --crn-origin CRN
-```
-{: pre}
-
-In this example the {{site.data.keyword.logs_full_notm}} resources of the ORIGIN_CRN instance, that were exported in a previous `ibmcloud logging migrate config` command, are imported to the {{site.data.keyword.logs_full_notm}} CRN instance.
-
-```sh
-ibmcloud logging migrate config --import --crn-origin ORIGIN_CRN --crn-destination CRN 
+ibmcloud logging migrate remove-resources-tf --scope instance --crn CRN
 ```
 {: pre}
