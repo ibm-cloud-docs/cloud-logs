@@ -114,6 +114,10 @@ The Migration Tool only migrates configuration of selected resources.
 
 - [ ] Generate the IAM report to identify the access groups, service IDs, users, and trusted profiles that have permissions configured on the instance that you are migrating.
 
+    - [ ] You must manually migrate the IAM permissions.
+
+    - [ ] For API keys (service ID / user ID) you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
+
 - [ ] If you have parsing rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.)
 
 - [ ] Modify any runbooks for DevOps
