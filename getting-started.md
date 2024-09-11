@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-11"
 
 keywords:
 
@@ -74,7 +74,7 @@ When initially provisioned, you might not see data flowing to the instance, so a
 You can send {{site.data.keyword.cloud_notm}} platform data, and application, infrastructure, and operational logs to the {{site.data.keyword.logs_full_notm}} instance.
 
 - Use the {{site.data.keyword.logs_routing_full_notm}} service to route logs from your IBM Cloud account to your chosen target. For more information, see [Getting started with {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-getting-started).
-- Use {{site.data.keyword.atracker_notm}} to configure how to route auditing events, both global and location-based event data, in your IBM Cloud account. For more information, [Getting started with {{site.data.keyword.atracker_notm}}](/docs/atracker?topic=atracker-getting-started).
+- Use {{site.data.keyword.atracker_full_notm}} to configure how to route auditing events, both global and location-based event data, in your IBM Cloud account. For more information, [Getting started with {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-getting-started).
 - Use the {{site.data.keyword.agent}} to send data to a {{site.data.keyword.openshiftlong_notm}} cluster. For more information, see [Managing the {{site.data.keyword.agent}} for {{site.data.keyword.openshiftlong_notm}} clusters](/docs/cloud-logs?topic=cloud-logs-agent-openshift).
 - Use the {{site.data.keyword.agent}} to send data to an {{site.data.keyword.containerlong_notm}} cluster. For more information, see [Managing the {{site.data.keyword.agent}} for {{site.data.keyword.containerlong_notm}} clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster).
 - Use the {{site.data.keyword.agent}} to send data to a Linux server. For more information, see [Managing the {{site.data.keyword.agent}} for Linux](/docs/cloud-logs?topic=cloud-logs-agent-linux).
