@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-09-11"
 
 keywords:
 
@@ -137,6 +137,45 @@ Widgets are always in edit mode when displayed in a dashboard and can be edited 
 
     **Favorite** and **Set As Default** settings are unique for each user. All other settings apply across all team members.
     {: note}
+
+
+## Exporting and importing custom dashboard configurations
+{: #db_export_import}
+
+You can export custom dashboard configurations and import them into an {{site.data.keyword.logs_full_notm}} instance.
+
+### Exporting dashboards
+{: #db_export}
+
+To export a dashboard configuration:
+
+1. Click the **Dashboard** icon ![Dashboards icon](/icons/dashboards.svg "Dashboards") > **Custom dashboards**.
+
+2. Open the dashboard you want to export.
+
+3. Click the **Actions** icon ![Actions icon](/icons/action-menu-icon.svg "Actions") > **Export**.
+
+   The name of the exported JSON file is displayed. The date the file was created is included in the name.
+
+4. Click **Export**.
+
+   The file is written to your local system.
+
+### Importing dashboards
+{: #db_import}
+
+To import an exported dashboard configuration:
+
+1. Click the **Dashboard** icon ![Dashboards icon](/icons/dashboards.svg "Dashboards") > **Custom dashboards**.
+
+2. Click **New** > **Import dashboard**.
+
+3. Select an exported dashboard configuration file from your system.
+
+   You can also paste the JSON directly without uploading a file.
+   {: note}
+
+4. Click **Import**.
 
 
 ## Creating variables
