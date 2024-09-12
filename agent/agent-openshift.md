@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -93,7 +93,6 @@ Complete the following steps:
       -i <trusted_profile_id> \
       -k <iam_api_key> \
       -t <cluster_type> \
-      -r <region> \
       -d <directory> \
       -e PrivateProduction \
       -a <application_name> \
@@ -127,9 +126,6 @@ Complete the following steps:
 
         Value is case-sensitive. `OpenShift` must be specified in this exact case.
         {: important}
-
-    `-r <region>`
-    :   Specify the region where the {{site.data.keyword.logs_routing_full_notm}} Ingester endpoint is located (for example `us-east`).
 
     `-d <directory>`
     : Specify the directory containing the `logger-agent.yaml` file configured in the previous step. For example, if your `logger-agent.yaml` file is located in the `/path/to/directory` directory, you would simply specify the directory like this: `-d /path/to/directory`.

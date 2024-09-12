@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -90,7 +90,6 @@ Complete the following steps:
       -i <trusted_profile_id> \
       -k <iam_api_key> \
       -t <cluster_type> \
-      -r <region> \
       -d <directory> \
       -e PrivateProduction \
       -a <application_name> \
@@ -120,9 +119,6 @@ Complete the following steps:
 
     `-t <cluster_type>`
     :   Cluster type (`OpenShift` or `Kubernetes`). Specify if you are deploying the agent to an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) or {{site.data.keyword.containerlong_notm}} (`Kubernetes`) cluster.
-
-    `-r <region>`
-    :   Specify the region where the {{site.data.keyword.logs_routing_full_notm}} Ingester endpoint is located (for example `us-east`).
 
     `-d <directory>`
     : Specify the directory containing the `logger-agent-iks.yaml` file configured in the previous step. For example, if your `logger-agent-iks.yaml` file is located in the `/path/to/directory` directory, you would simply specify the directory like this: `-d /path/to/directory`.

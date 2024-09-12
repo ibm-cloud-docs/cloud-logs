@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -17,21 +17,12 @@ subcollection: cloud-logs
 # Alerting
 {: #alerts}
 
-{{site.data.keyword.logs_full_notm}} alerts allow for timely detection of anomalies, proactive incident response, improved mean time to resolution (MTTR), reduced manual monitoring effort, customization, and flexibility. Powered by machine learning, alerting proactively notifies teams of potential problems, correlates incidents, and provides root cause analysis.
-{: shortdesc}
 
-* Timely detection of anomalies: Alerting allows organizations to detect anomalies and issues in real-time or near real-time. Alerting helps you identify problems early on, reducing the impact on users and preventing more severe consequences.
+IBM Cloud Logs alerts allow for timely detection of anomalies, proactive incident response, improved mean time to resolution (MTTR), reduced manual monitoring effort, customization, and flexibility. Powered by machine learning, alerting proactively notifies teams of potential problems, correlates incidents, and provides root cause analysis.
 
-* Proactive incident response: By providing immediate notifications, alerting enables teams to take proactive actions to address issues before they become critical incidents. Addressing issues early minimizes downtime and helps with better system reliability.
 
-* Improved mean time to resolution (MTTR): With prompt alerts, you can respond quickly to incidents. Faster response can lead to faster resolution times reducing the mean time to resolution and improve the overall system uptime and performance.
-
-* Reduced manual monitoring effort: Without alerting, teams would need to manually monitor systems constantly, which is impractical and error-prone. Automating alerting saves time and effort by flagging issues automatically.
-
-* Customization and flexibility: You can define specific thresholds and conditions based on your knowledge of your system’s behavior and tailor relevant alerts to the issue and your needs.
 
 ## How alerting works
-{: #alert-works}
 
 Alerts follow a general workflow for how they are generated, triggered, and delivered to users.
 
@@ -41,7 +32,7 @@ Alerts follow a general workflow for how they are generated, triggered, and deli
 
 2. Data collection and analysis
 
-   {{site.data.keyword.logs_full_notm}} continuously collects data from the system, including logs and metrics. It processes and analyzes this data against the defined alert rules.
+   IBM Cloud Logs continuously collects data from the system, including logs and metrics. It processes and analyzes this data against the defined alert rules.
 
 3. Alert triggering
 
@@ -61,12 +52,12 @@ Alerts follow a general workflow for how they are generated, triggered, and deli
 
 7. Monitoring and reporting
 
-   Throughout the alerting process, {{site.data.keyword.logs_full_notm}} continuously monitors the system’s status. It can keep track of acknowledgment status, resolution time, and other metrics to generate reports and help with post-incident analysis and improvement.
+   Throughout the alerting process, IBM Cloud Logs continuously monitors the system’s status. It can keep track of acknowledgment status, resolution time, and other metrics to generate reports and help with post-incident analysis and improvement.
 
 ## Alert types
 {: #alert-types}
 
-{{site.data.keyword.logs_full_notm}} provides 6 types of alerts that you can configure.
+IBM Cloud Logs provides 6 types of alerts that you can configure.
 
 ### Standard alerts
 {: #alert-standard}
@@ -79,11 +70,11 @@ With standard alerts feature, you can:
 
 * Construct the queries for your specific needs. Define a query that captures the logs that you want to inspect, and make the query more specific by filtering by application, subsystem, and severity. Then, select the range of conditions to trigger an alert. For example, you might set to trigger an alert when more than 10 logs are received over a specific time frame.
 
-* Use a machine learning-based approach. Using this setting, {{site.data.keyword.logs_full_notm}} profiles your data and automatically detects abnormal behavior.
+* Use a machine learning-based approach. Using this setting, IBM Cloud Logs profiles your data and automatically detects abnormal behavior.
 
 * Receive personalized notifications. Receive real-time push notifications to your preferred communication channel.
 
-Standard alerts are the simplest alerts that are offered by {{site.data.keyword.logs_full_notm}}. These can be used to cover your most obvious use cases as a foundation for your observability system.
+Standard alerts are the simplest alerts that are offered by IBM Cloud Logs. These can be used to cover your most obvious use cases as a foundation for your observability system.
 
 
 ### Time relative alerts
@@ -137,7 +128,7 @@ This alert can help you automatically detect a possible abnormal behavior within
 
 An example uses for this alert type include:
 
-* Security: An alert can be triggered by a new domain connection. Since {{site.data.keyword.logs_full_notm}} security logs all security information across all network traffic, a new domain connection can result with the field `security.highest_registered_domain` having a new value. A new domain connection can point to a possible security attack.
+* Security: An alert can be triggered by a new domain connection. Since IBM Cloud Logs security logs all security information across all network traffic, a new domain connection can result with the field `security.highest_registered_domain` having a new value. A new domain connection can point to a possible security attack.
 
 * Monitoring: An alert can be triggered by a new application error code. Many applications send an `error_code` field. A new value for this field can indicate a new issue with the application.
 
@@ -162,7 +153,7 @@ The following are some benefits of using flow alerts:
 
 * Optimized resource utilization: By reducing false alerts and enabling root cause identification, you will save time and resources. With optimization your team can focus on more strategic tasks, rather than being occupied with a constant stream of false alerts.
 
-{{site.data.keyword.logs_full_notm}} provides a flow builder tool to visually combine, and then chain together, the user-defined alerts that trigger a flow alert. The basic building blocks of the flow alert are stages and groups.
+IBM Cloud Logs provides a flow builder tool to visually combine, and then chain together, the user-defined alerts that trigger a flow alert. The basic building blocks of the flow alert are stages and groups.
 
 A group represents a logical combination of individual user-defined alerts. The group supports OR, AND, and NOT logical operators to combine multiple individual alerts.
 
