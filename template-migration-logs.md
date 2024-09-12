@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -72,7 +72,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 - [ ] Run the migration tool
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--api]|[-t -f]
     ```
     {: codeblock}
 
@@ -118,12 +118,12 @@ The Migration Tool only migrates configuration of selected resources.
 
 - [ ] Deploy/ Configure the Logging agent to collect and route logs to the Cloud Logs instance.
 
-    - [ ] Deploy agent for Kubernetes clusters
+    - [ ] [Deploy agent for Kubernetes clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster)
 
-    - [ ] Deploy agent for OpenShift clusters
+    - [ ] [Deploy agent for OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-openshift)
 
-    - [ ] Deploy agent for Linux servers
+    - [ ] [Deploy agent for Linux servers](/docs/cloud-logs?topic=cloud-logs-agent-linux)
 
-    - [ ] Deploy agent to collect and route rSyslog data
+    - [ ] [Deploy agent to collect and route rSyslog data](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog)
 
 - [ ] Modify any runbooks for DevOps

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -69,7 +69,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 - [ ] Run the migration tool
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx --platform --ingestion-key xxxxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx --platform --ingestion-key xxxxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--api]|[-t -f]
     ```
     {: codeblock}
 
@@ -80,6 +80,8 @@ Run the Migration Tool in a development or staging environment to test and valid
     You can add a new name for the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
     You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
+
+    For more information, see [Migrating Log Analysis instances with platform logs](/docs/cloud-logs?topic=cloud-logs-migration-platform-logs).
 
     This command will:
 

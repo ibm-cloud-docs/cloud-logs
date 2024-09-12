@@ -54,11 +54,11 @@ Complete the following steps:
 
 1. Choose the type of identity: user, service ID, or trusted profile.
 
-    You can use a user, a service ID, or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_routing_full}} service.
+    You can use a user, a service ID, or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full}} service.
 
 2. Grant permissions for ingestion to the identity that you have chosen.
 
-    The role that is required for sending logs to {{site.data.keyword.logs_routing_full_notm}} is `Writer`.
+    The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
     For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
 
