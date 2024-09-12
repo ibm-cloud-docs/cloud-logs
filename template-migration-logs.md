@@ -27,7 +27,7 @@ Template to plan migration from {{site.data.keyword.la_full}} instances to {{sit
 
     - [ ] Event Notifications (to trigger alerts thorugh Email, PD, Slack, webhook)
 
-    - [ ] IBM Cloud Logs (the new logging service in IBM Cloud Observability)
+    - [ ] {{site.data.keyword.logs_full_notm}} (the new logging service in IBM Cloud Observability)
 
 ## List of permissions that you might need for migration
 {: #template-migration-logs-2}
