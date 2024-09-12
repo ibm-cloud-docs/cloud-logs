@@ -56,14 +56,14 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 - [ ]  IAM permissions to configure alert destinations in IBM Cloud Event Notifications
 
-## Migration planning
+## Migration
 {: #template-migration-at-3}
 
 - [ ] Identify the regions where you have provisioned Activity Tracker instances.
 
 For each instance, complete the following steps:
 
-### Migration tool command
+### Step 1. Run the Migration tool command
 {: #template-migration-at-3-1}
 
 You can run the migration tool as follows:
@@ -121,7 +121,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 The Migration Tool only migrates configuration of selected resources.
 {: important}
 
-### Manual tasks
+### Step 2. Manual tasks
 {: #template-migration-at-3-2}
 
 Complete the following manual tasks:
@@ -132,6 +132,10 @@ Complete the following manual tasks:
 
     - [ ] For API keys (service ID / user ID) you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
 
-- [ ] If you have parsing rules configured in the Activity Tracker instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.)
+- [ ] If you have parsing rules configured in the Activity Tracker instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.) For more information, see [Extracting specific values as JSON keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule).
+
+- [ ] If you have log groups configured, you must manually migrate them to data access rules.
+
+- [ ] If you have streaming configured, you must manually migrate the configuration. For more information, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming).
 
 - [ ] Modify any runbooks for DevOps
