@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-05-13"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -62,7 +62,7 @@ Storage components store data used by {{site.data.keyword.logs_full_notm}}.
 | Service name | Description |
 |------------|-------------------------------------|
 | {{site.data.keyword.atracker_full_notm}} | You can use {{site.data.keyword.logs_full_notm}} as a target for audit events. For more information, see [Managing targets in {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-target_v2). |
-| {{site.data.keyword.logs_routing_full_notm}} | You can use {{site.data.keyword.logs_full_notm}} as a target for platform and application logs. For more information, see [Creating an {{site.data.keyword.logs_full_notm}} tenant in {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-onboard-cloud-logs-tenant).  \n. \n You can use the {{site.data.keyword.logs_routing_full_notm}} agent to collect and forward application logs to {{site.data.keyword.logs_full_notm}}.  |
+| {{site.data.keyword.logs_routing_full_notm}} | You can use {{site.data.keyword.logs_full_notm}} as a target for platform and application logs. For more information, see [Creating an {{site.data.keyword.logs_full_notm}} tenant in {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-tenant-create&interface=ui).  \n. \n You can use the {{site.data.keyword.agent}} to collect and forward application logs to {{site.data.keyword.logs_full_notm}}.  |
 | {{site.data.keyword.cos_full_notm}} | {{site.data.keyword.logs_full_notm}} uses {{site.data.keyword.cos_short}} buckets, owned by you, for long term storage and search of logs and log metrics. You need to attach the {{site.data.keyword.cos_short}} buckets to your {{site.data.keyword.logs_full_notm}} service instance. For more information, see [Configuring buckets for long term storage and search](/docs/cloud-logs?topic=cloud-logs-about-bucket). |
 | {{site.data.keyword.messagehub_full}} | You can send logs from {{site.data.keyword.logs_full_notm}} to an {{site.data.keyword.messagehub_full}} topic.  |
 | {{site.data.keyword.en_full_notm}} | You can use {{site.data.keyword.en_full_notm}} to notify your operators or other systems about {{site.data.keyword.logs_full_notm}} alerts. For more information, see [Enabling event notifications for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events). |

@@ -27,6 +27,12 @@
       "description": "Read about the latest changes to IBM Cloud Logs. ",
       "href": "/docs/cloud-logs?topic=cloud-logs-logs-release-notes"
     }
+    ,
+    {
+       "title": "See what's new in the agent",
+       "description": "Read about the changes to the Logging agent.",
+       "href": "/docs/cloud-logs?topic=cloud-logs-release-notes-agent"
+}
     ],
   "section_learn": {
     "developer": "https://developer.ibm.com/depmodels/cloud/",

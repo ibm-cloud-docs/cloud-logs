@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -69,7 +69,7 @@ To migrate {{site.data.keyword.la_full_notm}} instances, complete the following 
    {{site.data.keyword.logs_full_notm}} alerting is done by using the {{site.data.keyword.en_full_notm}} service.
    {: note}
 
-4. Configure the {{site.data.keyword.logs_routing_full_notm}} agent to send logs.
+4. Configure the {{site.data.keyword.agent}} to send logs.
 
     - [Managing the Logging agent for Linux](/docs/cloud-logs?topic=cloud-logs-agent-linux).
     - [Managing the Logging agent for IBM Cloud Kubernetes Service clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster).

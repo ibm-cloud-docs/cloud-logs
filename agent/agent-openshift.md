@@ -38,7 +38,7 @@ Complete the following steps to deploy an agent on an OpenShift cluster:
 
 - Read about [the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about).
 
-- Check the agent versions that are available. For more information, see [Checking the available agent versions](docs/cloud-logs?topic=cloud-logs-check-agent-versions).
+- Check the agent versions that are available. For more information, see [Checking the available agent versions](/docs/cloud-logs?topic=cloud-logs-check-agent-versions).
 
 - [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results.
 
@@ -137,7 +137,7 @@ Complete the following steps:
     : Specify the subsystem name that you want to see in your {{site.data.keyword.logs_full_notm}} instance. If in the metadata, the subsystem name defaults to container name. You can also use variables from the environment, for example `${NODE_NAME}`.
 
     `-e PrivateProduction`
-    : The agent needs access to {{site.data.keyword.iamlong}} (IAM). By detault the agent uses the public endpoint. To use the private endpoint, set this option. For more information, see [`IAM_Environment` plug-in parameter value](/docs/cloud-logs?topic=cloud-logs-routing-plugin-parameters#authentication_parms). All valid `IAM_Environment` plug-in parameter values can be specified for `-e`.
+    : The agent needs access to {{site.data.keyword.iamlong}} (IAM). By detault the agent uses the public endpoint. To use the private endpoint, set this option. For more information, see [`IAM_Environment` plug-in parameter value](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-plugin-parameters-authentication-parms). All valid `IAM_Environment` plug-in parameter values can be specified for `-e`.
 
     `--send-directly-to-icl`
     :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.

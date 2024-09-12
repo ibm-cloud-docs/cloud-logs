@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -89,7 +89,7 @@ To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the foll
 
         A destination defines a notification channel that you can use to notify when an alert is triggered.
 
-        For more information on destinations, see [Supported destinations](/docs/event-notifications?topic=event-notifications-en-destination).
+        For more information on destinations, see [Supported destinations](/docs/event-notifications?topic=event-notifications-supported-destinations).
 
     - Define 1 or more subscriptions.
 
