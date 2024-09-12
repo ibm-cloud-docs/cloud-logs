@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-06-18"
+  years:  2024
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -143,8 +143,8 @@ To make it easier to recover an {{site.data.keyword.logs_full_notm}} instance, u
 
 After you recover the instance, you must reconfigure your data sources to send logs to the new instance:
 
-1. If the new region has an {{site.data.keyword.logs_routing_full_notm}} tenant configured, you must use the current target associated for that region to view and monitor platform logs. If the new region does not have an {{site.data.keyword.logs_routing_full_notm}} tenant configured, create an {{site.data.keyword.logs_routing_full_notm}} tenant that references your new {{site.data.keyword.logs_full_notm}} instance. See [Creating an IBM Cloud Logs tenant](/docs/logs-router?topic=logs-router-onboard-cloud-logs-tenant) and [Understanding business continuity and disaster recovery for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-bc-dr).
+1. If the new region has an {{site.data.keyword.logs_routing_full_notm}} tenant configured, you must use the current target associated for that region to view and monitor platform logs. If the new region does not have an {{site.data.keyword.logs_routing_full_notm}} tenant configured, create an {{site.data.keyword.logs_routing_full_notm}} tenant that references your new {{site.data.keyword.logs_full_notm}} instance. See [Creating an {{site.data.keyword.logs_routing_full_notm}} tenant](/docs/logs-router?topic=logs-router-tenant-create&interface=ui) and [Understanding business continuity and disaster recovery for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-bc-dr).
 
 2. If the new region has an {{site.data.keyword.atracker_full_notm}} configuration that collects events from the region that is down, you can use the existing configuration to view and manage events. If the new region does not have an {{site.data.keyword.atracker_full_notm}} configuration that collects events from the region that is down, you must add a rule to indicate where and how you want to collect events. For more information, see [Creating a routing configuration resilient to a regional disaster](/docs/atracker?topic=atracker-dr_config).
 
-3. Reconfigure your {{site.data.keyword.logs_routing_full_notm}} agents to point to the [ingestion endpoint](/docs/logs-router?topic=logs-router-endpoints) of the {{site.data.keyword.logs_full_notm}} recovery region.
+3. Reconfigure your {{site.data.keyword.agent}} to point to the [ingestion endpoint](/docs/logs-router?topic=logs-router-endpoints) of the {{site.data.keyword.logs_full_notm}} recovery region.

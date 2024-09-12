@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -117,4 +117,4 @@ You cannot migrate an {{site.data.keyword.la_full_notm}} or {{site.data.keyword.
 ## Agent migration
 {: #mig-agent}
 
-* If you used tags in your {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance, you need to configure new tags in the agents that send data to {{site.data.keyword.logs_full_notm}}. You also need to migrate any queries that filter by tag values. For more information, see [About the IBM Cloud Logs Routing agent](/docs/logs-router?topic=logs-router-agent-about).
+* If you used tags in your {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance, you need to configure new tags in the agents that send data to {{site.data.keyword.logs_full_notm}}. You also need to migrate any queries that filter by tag values. For more information, see [About the {{site.data.keyword.agent}} agent](/docs/cloud-logs?topic=cloud-logs-agent-about).

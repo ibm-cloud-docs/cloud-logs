@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -36,7 +36,7 @@ The authorization that you define for the {{site.data.keyword.logs_routing_full_
 
 You can select any of the following roles that the source can use to interact with the target. You can grant only the level of access that you have as a user of the target that you selected.
 
-- `Sender`: As a sender, you can send logs to your IBM Cloud Logs service instance - but not query or tail logs. This role is meant to be used by agents and routers sending logs.
+- `Sender`: As a sender, you can send logs to your {{site.data.keyword.logs_full_notm}} service instance - but not query or tail logs. This role is meant to be used by agents and routers sending logs.
 
 ## Creating an authorization in the console
 {: #iam-service-auth-logs-routing-create-ui}

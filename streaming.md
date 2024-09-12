@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -35,7 +35,7 @@ If you have any regulatory requirement for data residency and compliance needs, 
 ## Configure streaming
 {: #streaming-1}
 
-For information on how to configure streaming, see [Integrating {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.messagehub}}](/docs/cloud-logs?topic=cloud-logs-event-streams-cloud-logs).
+For information on how to configure streaming, see [Integrating {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.messagehub}}](/docs/cloud-logs?topic=cloud-logs-streaming-config).
 
 Consider the following information when configuring the streaming feature between an {{site.data.keyword.logs_full_notm}} instance and an {{site.data.keyword.messagehub}} instance:
 - The {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.messagehub}} instance must be provisioned in the same account.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -38,7 +38,7 @@ Complete the following steps to deploy the {{site.data.keyword.agent}} on an {{s
 
 - Read about [the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about).
 
-- Check the agent versions that are available. For more information, see [Checking the available agent versions](docs/cloud-logs?topic=cloud-logs-check-agent-versions).
+- Check the agent versions that are available. For more information, see [Checking the available agent versions](/docs/cloud-logs?topic=cloud-logs-check-agent-versions).
 
 - [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results.
 
@@ -54,11 +54,11 @@ Complete the following steps:
 
 1. Choose the type of identity: user, service ID, or trusted profile.
 
-    You can use a user, a service ID, or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_routing_full}} service.
+    You can use a user, a service ID, or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full}} service.
 
 2. Grant permissions for ingestion to the identity that you have chosen.
 
-    The role that is required for sending logs to {{site.data.keyword.logs_routing_full_notm}} is `Writer`.
+    The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
     For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
 
@@ -90,7 +90,6 @@ Complete the following steps:
       -i <trusted_profile_id> \
       -k <iam_api_key> \
       -t <cluster_type> \
-      -r <region> \
       -d <directory> \
       -e PrivateProduction \
       -a <application_name> \
@@ -102,7 +101,7 @@ Complete the following steps:
     Where:
 
     `-v <agent_version>`
-    :   Agent version. Specify the version of the {{site.data.keyword.logs_routing_full_notm}} Agent. To find the current supported versions, refer to [Checking available agent versions](/docs/cloud-logs?topic=cloud-logs-check-agent-versions).
+    :   Agent version. Specify the version of the {{site.data.keyword.agent}}. To find the current supported versions, refer to [Checking available agent versions](/docs/cloud-logs?topic=cloud-logs-check-agent-versions).
 
     `-m <iam_auth_mode>`
     :   IAM authentication mode (`TrustedProfile` | `IAMAPIKey`).
@@ -121,9 +120,6 @@ Complete the following steps:
     `-t <cluster_type>`
     :   Cluster type (`OpenShift` or `Kubernetes`). Specify if you are deploying the agent to an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) or {{site.data.keyword.containerlong_notm}} (`Kubernetes`) cluster.
 
-    `-r <region>`
-    :   Specify the region where the {{site.data.keyword.logs_routing_full_notm}} Ingester endpoint is located (for example `us-east`).
-
     `-d <directory>`
     : Specify the directory containing the `logger-agent-iks.yaml` file configured in the previous step. For example, if your `logger-agent-iks.yaml` file is located in the `/path/to/directory` directory, you would simply specify the directory like this: `-d /path/to/directory`.
 
@@ -134,7 +130,7 @@ Complete the following steps:
     : Specify the subsystem name that you want to see in your {{site.data.keyword.logs_full_notm}} instance. If in the metadata, the subsystem name defaults to container name. You can also use variables from the environment, for example `'${NODE_NAME}'`.
 
     `-e PrivateProduction`
-    : The agent needs access to {{site.data.keyword.iamlong}} (IAM). By detault the agent uses the public endpoint. To use the private endpoint, set this option. For more information, see [`IAM_Environment` plug-in parameter value](/docs/cloud-logs?topic=cloud-logs-routing-plugin-parameters#authentication_parms). All valid `IAM_Environment` plug-in parameter values can be specified for `-e`.
+    : The agent needs access to {{site.data.keyword.iamlong}} (IAM). By detault the agent uses the public endpoint. To use the private endpoint, set this option. For more information, see [`IAM_Environment` plug-in parameter value](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-plugin-parameters-authentication-parms). All valid `IAM_Environment` plug-in parameter values can be specified for `-e`.
 
     `--send-directly-to-icl`
     :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.

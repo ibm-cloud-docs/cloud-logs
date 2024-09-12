@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -29,7 +29,7 @@ Template to plan migration from {{site.data.keyword.at_full}} instances to {{sit
 
     - [ ] Event Notifications (to trigger alerts thorugh Email, PD, Slack, webhook)
 
-    - [ ] IBM Cloud Logs (the new logging service in IBM Cloud Observability)
+    - [ ] {{site.data.keyword.logs_full_notm}} (the new logging service in IBM Cloud Observability)
 
 ## List of permissions that you might need for migration
 {: #template-migration-at-2}
@@ -56,14 +56,14 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 - [ ]  IAM permissions to configure alert destinations in IBM Cloud Event Notifications
 
-## Migration planning
+## Migration
 {: #template-migration-at-3}
 
 - [ ] Identify the regions where you have provisioned Activity Tracker instances.
 
 For each instance, complete the following steps:
 
-### Migration tool command
+### Step 1. Run the Migration tool command
 {: #template-migration-at-3-1}
 
 You can run the migration tool as follows:
@@ -74,7 +74,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 - [ ] Run the migration tool
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--api]|[-t -f]
     ```
     {: codeblock}
 
@@ -85,6 +85,8 @@ Run the Migration Tool in a development or staging environment to test and valid
     You can add a new name for the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
     You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
+
+    For more information, see [Migrating Activity Tracker instances](/docs/cloud-logs?topic=cloud-logs-migration-atracker-n-cl).
 
     This command will:
 
@@ -119,7 +121,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 The Migration Tool only migrates configuration of selected resources.
 {: important}
 
-### Manual tasks
+### Step 2. Manual tasks
 {: #template-migration-at-3-2}
 
 Complete the following manual tasks:
@@ -130,6 +132,10 @@ Complete the following manual tasks:
 
     - [ ] For API keys (service ID / user ID) you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
 
-- [ ] If you have parsing rules configured in the Activity Tracker instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.)
+- [ ] If you have parsing rules configured in the Activity Tracker instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.) For more information, see [Extracting specific values as JSON keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule).
+
+- [ ] If you have log groups configured, you must manually migrate them to data access rules.
+
+- [ ] If you have streaming configured, you must manually migrate the configuration. For more information, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming).
 
 - [ ] Modify any runbooks for DevOps

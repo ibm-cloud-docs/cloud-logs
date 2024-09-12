@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -17,21 +17,12 @@ subcollection: cloud-logs
 # Alerting
 {: #alerts}
 
+
 {{site.data.keyword.logs_full_notm}} alerts allow for timely detection of anomalies, proactive incident response, improved mean time to resolution (MTTR), reduced manual monitoring effort, customization, and flexibility. Powered by machine learning, alerting proactively notifies teams of potential problems, correlates incidents, and provides root cause analysis.
-{: shortdesc}
 
-* Timely detection of anomalies: Alerting allows organizations to detect anomalies and issues in real-time or near real-time. Alerting helps you identify problems early on, reducing the impact on users and preventing more severe consequences.
 
-* Proactive incident response: By providing immediate notifications, alerting enables teams to take proactive actions to address issues before they become critical incidents. Addressing issues early minimizes downtime and helps with better system reliability.
-
-* Improved mean time to resolution (MTTR): With prompt alerts, you can respond quickly to incidents. Faster response can lead to faster resolution times reducing the mean time to resolution and improve the overall system uptime and performance.
-
-* Reduced manual monitoring effort: Without alerting, teams would need to manually monitor systems constantly, which is impractical and error-prone. Automating alerting saves time and effort by flagging issues automatically.
-
-* Customization and flexibility: You can define specific thresholds and conditions based on your knowledge of your system’s behavior and tailor relevant alerts to the issue and your needs.
 
 ## How alerting works
-{: #alert-works}
 
 Alerts follow a general workflow for how they are generated, triggered, and delivered to users.
 

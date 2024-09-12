@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -97,4 +97,4 @@ filter $l.applicationname =='ibm-platform-logs'
 {: #streaming_platform_data_select_2}
 {: step}
 
-To configure streaming, see [Integrating {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.messagehub}}](/docs/cloud-logs?topic=cloud-logs-event-streams-cloud-logs).
+To configure streaming, see [Integrating {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.messagehub}}](/docs/cloud-logs?topic=cloud-logs-streaming-config).

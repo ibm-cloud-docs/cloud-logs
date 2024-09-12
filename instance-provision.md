@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: cloud-logs
 You can provision an instance of the {{site.data.keyword.logs_full_notm}} service through the {{site.data.keyword.cloud_notm}} catalog, and programmatically by using a terraform script or the Resource Controller API.
 {: shortdesc}
 
-IBM Cloud Logs integrates with IBM Cloud Object Storage for long term storage of the data and for collection of metrics, and with IBM Cloud Event Notifications for triggering of alerts. Authorization between services is done by configuring IAM service to service authorizations in the account.
+{{site.data.keyword.logs_full_notm}} integrates with IBM Cloud Object Storage for long term storage of the data and for collection of metrics, and with IBM Cloud Event Notifications for triggering of alerts. Authorization between services is done by configuring IAM service to service authorizations in the account.
 
 You can run Cloud Logs without a data bucket or a metrics bucket. However, features like TCO Optimizer to manage data thorugh different data pipelines at different costs, long term data querying or metrics related features would not be available.
 
@@ -156,7 +156,7 @@ To provision an instance of {{site.data.keyword.logs_full_notm}} through the com
 ## Next steps
 {: #instance-provision-next}
 
-IBM Cloud Logs integrates with{{site.data.keyword.cos_full_notm}} for long term storage of the data and for collection of metrics, and with IBM Cloud Event Notifications for triggering of alerts. Authorization between services is done by configuring IAM service to service authorizations in the account.
+{{site.data.keyword.logs_full_notm}} integrates with{{site.data.keyword.cos_full_notm}} for long term storage of the data and for collection of metrics, and with IBM Cloud Event Notifications for triggering of alerts. Authorization between services is done by configuring IAM service to service authorizations in the account.
 
 After you provision the instance, you can:
 

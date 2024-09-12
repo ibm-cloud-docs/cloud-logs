@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -27,7 +27,7 @@ Template to plan migration from {{site.data.keyword.la_full}} instances to {{sit
 
     - [ ] Event Notifications (to trigger alerts thorugh Email, PD, Slack, webhook)
 
-    - [ ] IBM Cloud Logs (the new logging service in IBM Cloud Observability)
+    - [ ] {{site.data.keyword.logs_full_notm}} (the new logging service in IBM Cloud Observability)
 
 ## List of permissions that you might need for migration
 {: #template-migration-logs-2}
@@ -72,7 +72,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 - [ ] Run the migration tool
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--api]|[-t -f]
     ```
     {: codeblock}
 
@@ -114,16 +114,20 @@ The Migration Tool only migrates configuration of selected resources.
 
     - [ ] For API keys (service ID / user ID) you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
 
-- [ ] If you have parsing rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.)
+- [ ] If you have parsing rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.) For more information, see [Extracting specific values as JSON keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule).
+
+- [ ] If you have log groups configured, you must manually migrate them to data access rules.
+
+- [ ] If you have streaming configured, you must manually migrate the configuration. For more information, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming).
 
 - [ ] Deploy/ Configure the Logging agent to collect and route logs to the Cloud Logs instance.
 
-    - [ ] Deploy agent for Kubernetes clusters
+    - [ ] [Deploy agent for Kubernetes clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster)
 
-    - [ ] Deploy agent for OpenShift clusters
+    - [ ] [Deploy agent for OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-openshift)
 
-    - [ ] Deploy agent for Linux servers
+    - [ ] [Deploy agent for Linux servers](/docs/cloud-logs?topic=cloud-logs-agent-linux)
 
-    - [ ] Deploy agent to collect and route rSyslog data
+    - [ ] [Deploy agent to collect and route rSyslog data](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog)
 
 - [ ] Modify any runbooks for DevOps

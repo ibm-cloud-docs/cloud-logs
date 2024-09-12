@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -210,7 +210,7 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
    :   The name of the {{site.data.keyword.cos_full_notm}} metrics bucket created for the {{site.data.keyword.logs_full_notm}} instance when `--scope atracker` is specified.
 
 `--plan-retention`|`--rp`
-   :   Sets the [{{site.data.keyword.frequent_search}} retention period](/docs/cloud-logs?topic=cloud-logs-service_plans) for the created {{site.data.keyword.logs_full_notm}} instance. Supported values are `30-days`, `14-days`, or `7-days`. If not specified, `7-days` will be used.
+   :   Sets the [{{site.data.keyword.frequent-search}} retention period](/docs/cloud-logs?topic=cloud-logs-service_plans) for the created {{site.data.keyword.logs_full_notm}} instance. Supported values are `30-days`, `14-days`, or `7-days`. If not specified, `7-days` will be used.
 
 `--platform`|`-p`
    :   If specified, the tool will create a configuration that continues sending logs to your {{site.data.keyword.la_full_notm}} instance while also sending logs to the newly created {{site.data.keyword.logs_full_notm}} instance. This dual destination configuration will help you verify your migration.

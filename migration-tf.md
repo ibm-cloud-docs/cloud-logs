@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -141,7 +141,7 @@ The Terraform execution plan summarizes all the actions that need to be run to c
 
 
 ## Step 6. Create the resources
-{: #migration-tf-init-tf-cli}
+{: #migration-tf-create-resources}
 
 Run the folloing command:
 

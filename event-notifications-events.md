@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -23,7 +23,7 @@ To send information to {{site.data.keyword.en_short}}, you must connect your {{s
 ## How events are collected and sent by {{site.data.keyword.logs_full_notm}}
 {: #event-notifications-how}
 
-When an event of interest takes place in your {{site.data.keyword.logs_full_notm}} instance, {{site.data.keyword.logs_full_notm}} communicates with a connected {{site.data.keyword.en_short}} instance to forward a notification to a [supported destination](/docs/event-notifications?topic=event-notifications-en-destination).
+When an event of interest takes place in your {{site.data.keyword.logs_full_notm}} instance, {{site.data.keyword.logs_full_notm}} communicates with a connected {{site.data.keyword.en_short}} instance to forward a notification to a [supported destination](/docs/event-notifications?topic=event-notifications-supported-destinations).
 
 
 ## Events for {{site.data.keyword.logs_full_notm}}
@@ -107,7 +107,7 @@ After you enable notifications for {{site.data.keyword.logs_full_notm}}, test yo
 
 After you enable notifications for {{site.data.keyword.logs_full_notm}}, create topics and subscriptions in {{site.data.keyword.en_short}} so that alerts can be forwarded and delivered to your selected destinations.
 
-For a complete list of supported destinations, see the [{{site.data.keyword.en_short}} documentation](/docs/event-notifications?topic=event-notifications-en-destination).
+For a complete list of supported destinations, see the [{{site.data.keyword.en_short}} documentation](/docs/event-notifications?topic=event-notifications-supported-destinations).
 {: tip}
 
 ### Email notifications

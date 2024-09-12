@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -32,7 +32,7 @@ In this tutorial, you set up {{site.data.keyword.containerlong}} to send logs di
 
 In this tutorial you will:
 
- - Deploy the [{{site.data.keyword.logs_routing_full_notm}} agent](/docs/logs-router?topic=logs-router-agent-about) in an existing {{site.data.keyword.containerlong_notm}} cluster.
+ - Deploy the [{{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about) in an existing {{site.data.keyword.containerlong_notm}} cluster.
 
  - Verify that log data is flowing to your [{{site.data.keyword.logs_full_notm}}](/docs/cloud-logs) instance.
 
@@ -99,7 +99,7 @@ Connect to your {{site.data.keyword.containerlong_notm}} cluster. Connecting to 
 {: #kube2logs_key}
 {: step}
 
-Before you provision the {{site.data.keyword.logs_routing_full_notm}} agent as a daemonset, you need an IAM API key and a logging ingestion endpoint. The {{site.data.keyword.cloud_notm}} CLI is used to obtain this information.
+Before you provision the {{site.data.keyword.agent}} as a daemonset, you need an IAM API key and a logging ingestion endpoint. The {{site.data.keyword.cloud_notm}} CLI is used to obtain this information.
 
 First, obtain your IAM API key.
 
@@ -166,7 +166,7 @@ In this step, download and modify the YAML file that is used to configure the ag
 
 2. Modify the configuration to meet your requirements.
 
-   Information about configuring the `logger-agent-iks.yaml` file can be found in the [{{site.data.keyword.logs_routing_full_notm}} documentation](/docs/logs-router?topic=logs-router-agent-fluentbit). In this tutorial, you configure the system to send all container logs, which is a safe default. The YAML file includes multiple sections. You need to modify the `ConfigMap` section.
+   Information about configuring the `logger-agent-iks.yaml` file can be found in [Understanding the agent configuration file](/docs/cloud-logs?topic=cloud-logs-agent-fluentbit). In this tutorial, you configure the system to send all container logs, which is a safe default. The YAML file includes multiple sections. You need to modify the `ConfigMap` section.
 
    Edit the `logger-agent-iks.yaml` file and search for `input-kubernetes.conf` to locate the relevant section. The section to modify looks like:
 
@@ -205,7 +205,7 @@ In this step, download and modify the YAML file that is used to configure the ag
 
 Using the API key, endpoint URL, and modified YAML file, deploy the agent to your cluster.
 
-1. [Determine the current version of the agent](/docs/logs-router?topic=logs-router-check-agent-versions&interface=cli) in the {{site.data.keyword.registrylong_notm}}.
+1. [Determine the current version of the agent](/docs/cloud-logs?topic=cloud-logs-check-agent-versions) in the {{site.data.keyword.registrylong_notm}}.
 
    1. Install the {{site.data.keyword.registrylong_notm}} CLI plug-in.
 
@@ -285,4 +285,3 @@ To help ensure that your {{site.data.keyword.containerlong}} logs are successful
 2. Click `Start` to watch the logs as they arrive in real-time.
 
 A continuous flow of log data from the `kube-system` application should be seen. These logs are coming from your cluster.
-

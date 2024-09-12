@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -98,7 +98,7 @@ In this example:
     - `/path/to/your/logs/exclude-1.log`
     - `/path/to/your/logs/exclude-2.log`
 
-All files within the directory that match the pattern specified in the `Path` parameter will be collected by the {{site.data.keyword.logs_routing_full_notm}} Agent, except for those matching the patterns specified in `Exclude_Path`.
+All files within the directory that match the pattern specified in the `Path` parameter will be collected by the {{site.data.keyword.agent}}, except for those matching the patterns specified in `Exclude_Path`.
 {: note}
 
 For more detailed information on configuring the Input Tail plugin, see the [Fluent Bit documentation for the Input Tail plugin](https://docs.fluentbit.io/manual/pipeline/inputs/tail){: external}.

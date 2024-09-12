@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -72,7 +72,7 @@ If you have {{site.data.keyword.atracker_full_notm}} configured in the account, 
 ## Migrating your {{site.data.keyword.la_full_notm}} architecture
 {: #migration-intro-la}
 
-To migrate {{site.data.keyword.la_full_notm}} instances that collect only operational and application logs, you must provision {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances. You must also configure your data sources to send data to these {{site.data.keyword.logs_full_notm}} instances. Your data sources can be located in {{site.data.keyword.cloud_notm}}, on-prem, or running in another cloud. For example, you can configure an {{site.data.keyword.logs_routing_full_notm}} agent on supported platforms such as Kubernetes clusters, Red Hat OpenShift clusters, and Linux servers, or send data directly to {{site.data.keyword.logs_full_notm}} by using the public or private ingress endpoint. For more information, see [Migrating {{site.data.keyword.la_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-la).
+To migrate {{site.data.keyword.la_full_notm}} instances that collect only operational and application logs, you must provision {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances. You must also configure your data sources to send data to these {{site.data.keyword.logs_full_notm}} instances. Your data sources can be located in {{site.data.keyword.cloud_notm}}, on-prem, or running in another cloud. For example, you can configure an {{site.data.keyword.agent}} on supported platforms such as Kubernetes clusters, Red Hat OpenShift clusters, and Linux servers, or send data directly to {{site.data.keyword.logs_full_notm}} by using the public or private ingress endpoint. For more information, see [Migrating {{site.data.keyword.la_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-la).
 
 
 To migrate {{site.data.keyword.la_full_notm}} instances that collect platform logs, you must configure {{site.data.keyword.logs_routing_full_notm}} and provision 1 or more {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances that are configured to collect platform logs. For more information, see [Migrating instances that collect platform logs](/docs/cloud-logs?topic=cloud-logs-migration-platform-logs).

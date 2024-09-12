@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -38,7 +38,7 @@ Complete the following steps:
 
 2. Grant permissions for ingestion to the identity that you have chosen.
 
-    The role that is required for sending logs to {{site.data.keyword.logs_routing_full_notm}} is `Writer`.
+    The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
     For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
 
@@ -116,7 +116,7 @@ Complete the following steps:
         {: tip}
 
     
-    
+
     `--send-directly-to-icl`
     :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.
 
