@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-13"
 
 keywords:
 
@@ -67,7 +67,7 @@ For example, a sample SERVICE section can be the following:
       Log_Level               info
       Daemon                  off
       Parsers_File            parsers.conf
-      plug-ins_File            plug-ins.conf
+      plug-ins_File           plug-ins.conf
       HTTP_Server             On
       HTTP_Listen             0.0.0.0
       HTTP_Port               8081
@@ -171,19 +171,19 @@ The following table outlines keys that you can configure for an OUTPUT section:
 {: note}
 
 
-For example, the OUTPUT section of the `logger-agent-plug-in` is similar to the  follows:
+For example, the OUTPUT section of the `logger-icl-output-plugin` is similar to the  follows:
 
 ```yaml
     [OUTPUT]
-        Name logger-agent-plug-in
-        Id logger-agent-plug-in
+        Name logger-icl-output-plugin
+        Id icl-output-plugin
         Match *
         Retry_Limit 8
 
         # Connection
         Target_Host REPLACE_INGESTER_HOST
         Target_Port REPLACE_INGESTER_PORT
-        Target_Path /v1/logs/ws
+        Target_Path /logs/v1/singles
 
         # Authentication
         Authentication_Mode REPLACE_IAM_AUTH_MODE
@@ -200,7 +200,7 @@ For example, the OUTPUT section of the `logger-agent-plug-in` is similar to the 
 {: codeblock}
 
 
-The `logger-agent-plug-in` uses Fluent Bit built in health check. The pod is considered unhealthy when the plug-in throws at least one error or when retry limits are exhausted in a period of 30 seconds.
+The `logger-icl-output-plugin` uses Fluent Bit built in health check. The pod is considered unhealthy when the plug-in throws at least one error or when retry limits are exhausted in a period of 30 seconds.
 
 
 ## Variables
