@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-09-16"
 
 keywords:
 
@@ -61,3 +61,8 @@ List of parameters that you can use to configure the output plugin to send data 
 |  `CR_Token_Mount_Path` |  Path where the CRToken is present |  `/var/run/secrets/tokens/vault-token` | any string  | false - Only used when Authentication_Mode is set to TrustedProfile  |
 |  `Trusted_Profile_ID` |  ID of the Trusted Profile to be used |  n/a |  any string	  | true - Only used when Authentication_Mode is set to TrustedProfile |
 {: caption="Table 4. Authentication parameters" caption-side="bottom"}
+
+When `Authentication_Mode` is set to `IAMAPIKey`, consider the following information:
+
+- The API key must be specified in an environment variable called IAM_API_KEY.
+- If no value is provided in the IAM_API_KEY variable, the plug-in initialization will fail.
