@@ -64,5 +64,5 @@ List of parameters that you can use to configure the output plugin to send data 
 
 When `Authentication_Mode` is set to `IAMAPIKey`, consider the following information:
 
-- The API key must be specified in an environment variable called IAM_API_KEY.
-- If no value is provided in the IAM_API_KEY variable, the plug-in initialization will fail.
+- The API key must be specified in an environment variable called `IAM_API_KEY`.
+- If no value is provided in the `IAM_API_KEY` variable, the plug-in initialization will fail.
