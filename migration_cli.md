@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-17"
 
 keywords:
 
@@ -243,6 +243,8 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 
 `--ingestion-key`|`-k`
    :   The [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-ingestion_key&interface=ui) or [{{site.data.keyword.logs_full_notm}}](/docs/log-analysis?topic=log-analysis-ingestion_key&interface=ui) ingestion key. This key is required to migrate {{site.data.keyword.atracker_full_notm}} or {{site.data.keyword.logs_routing_full_notm}} configurations associated with the instance.
+   
+
 
 `--directory`|`-d`
    :   The directory on your local computer where migration files are written. If not specified, the directory where the command is run is used.

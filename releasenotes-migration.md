@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-09-17"
 
 keywords:
 
@@ -25,6 +25,8 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
+
+
 
 ## 4 September 2024
 {: #migration-sep0424}
