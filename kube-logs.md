@@ -124,7 +124,7 @@ First, create a service ID and obtain an API key.
    ```
    {: pre}
 
-   The API key is returned in the output following `ID`:
+   The API key is returned in the output following `API Key`:
 
    ```text
    ID            ApiKey-xxxxxxxx-b815-46c7-bc9f-516115bc31c6
