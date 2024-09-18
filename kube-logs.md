@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-18"
 
 keywords:
 
@@ -101,39 +101,46 @@ Connect to your {{site.data.keyword.containerlong_notm}} cluster. Connecting to 
 
 Before you provision the {{site.data.keyword.agent}} as a daemonset, you need an IAM API key and a logging ingestion endpoint. The {{site.data.keyword.cloud_notm}} CLI is used to obtain this information.
 
+First, create a service ID and obtain an API key.
 
+1. Create a [service ID](/docs/account?topic=account-serviceids&interface=ui) by running the following command.
 
-First, obtain your IAM API key.
+   ```text
+   ibmcloud iam service-id-create kubernetes-logs-agent --description "Service ID for sending logs from IKS"
+   ```
+   {: pre}
 
-1. Create an IAM API key by running the following command. You can customize the key name (`kubernetes-cloud-logs-key`), description (`--d`), and file name (`--file`) parameters if needed.
+2. Grant the `Sender` role for {{site.data.keyword.logs_full_notm}} to the created service ID by running the following command.
 
- 	  ```text
-	  ibmcloud iam api-key-create kubernetes-cloud-logs-key --d 'API key for sending  Kubernetes cluster log data to Cloud Logs' --file kubernetes-cloud-logs-key
-	  ```
-    {: pre}
+   ```text
+   ibmcloud iam service-policy-create kubernetes-logs-agent --service-name logs --roles Sender
+   ```
+   {: pre}
 
-2. Extract the API key from the file.
+3. Create an IAM API key by running the following command. You can customize the key name (`kubernetes-logs-agent-apikey`) and description (`--d`) if needed.
 
- 	  ```sh
-	  jq .apikey kubernetes-cloud-logs-key
-	  ```
-    {: pre}
+ 	 ```text
+    ibmcloud iam service-api-key-create kubernetes-logs-agent-apikey kubernetes-logs-agent --description "API key for sending logs to the IBM Cloud Logs service"
+   ```
+   {: pre}
 
-	  The output is similar to:
+   The API key is returned in the output following `API Key`:
 
-	  ```text
-	  EaTtox-pcYzKo5Xa859DobiRmoChgEI5Q2wIpXA8cjtZ
-	  ```
-    {: screen}
-
-    Protect the [API key](/docs/account?topic=account-manapikey&interface=ui). Anyone who can access the API key can impersonate your user.
-    {: attention}
+   ```text
+   ID            ApiKey-xxxxxxxx-b815-46c7-bc9f-516115bc31c6
+   Name          kubernetes-logs-agent-apikey
+   Description   API key for sending logs to the IBM Cloud Logs service
+   Created At    2024-09-18T17:17+0000
+   API Key       <apikey is displayed here>
+   Locked        false
+   ```
+   {: screen}
 
 Note:
 
 * Each time that you create an API key, a new IAM secret is generated.
 
-* Make sure that you securely store the API key file, since it contains sensitive information.
+* Make sure that you securely store the API key, since it contains sensitive information.
 
 ## Determining your logging endpoint
 {: #kube2logs_endpoint}

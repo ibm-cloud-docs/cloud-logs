@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-18"
 
 keywords:
 
@@ -79,7 +79,7 @@ For example, complete the following steps to generate an API key for a service I
     Be sure to give the service ID a description that helps you retrieve the service ID later.
 
     ```sh
-    ibmcloud iam service-id-create logs-svc-id --description "Service ID for Logs Router"
+    ibmcloud iam service-id-create logs-svc-id --description "Service ID for IBM Cloud Logs"
     ```
     {: pre}
 
