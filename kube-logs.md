@@ -124,26 +124,23 @@ First, create a service ID and obtain an API key.
    ```
    {: pre}
 
-2. Extract the API key from the file.
+   The API key is returned in the output following `ID`:
 
- 	  ```sh
-	  jq .apikey kubernetes-logs-agent-apikey
-	  ```
-    {: pre}
-
-	  The output is similar to:
-
-	  ```text
-	  EaTtox-pcYzKo5Xa859DobiRmoChgEI5Q2wIpXA8cjtZ
-	  ```
-    {: screen}
-
+   ```text
+   ID            ApiKey-xxxxxxxx-b815-46c7-bc9f-516115bc31c6
+   Name          kubernetes-logs-agent-apikey
+   Description   API key for sending logs to the IBM Cloud Logs service
+   Created At    2024-09-18T17:17+0000
+   API Key       <apikey is displayed here>
+   Locked        false
+   ```
+   {: screen}
 
 Note:
 
 * Each time that you create an API key, a new IAM secret is generated.
 
-* Make sure that you securely store the API key file, since it contains sensitive information.
+* Make sure that you securely store the API key, since it contains sensitive information.
 
 ## Determining your logging endpoint
 {: #kube2logs_endpoint}
