@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-18"
 
 keywords:
 
@@ -60,7 +60,5 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 {: caption="Table 2. List of {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
 
 
-
-
-
-To connect to private endpoints, use a [VPE](/docs/cloud-logs?topic=cloud-logs-vpe-connection&interface=cli).
+When connecting to a private endpoint using a [VPE](/docs/cloud-logs?topic=cloud-logs-vpe-connection&interface=cli), use port 443. When connecting to a private endpoint using a [CSE](/docs/account?topic=account-service-endpoints-overview), use port 3443.
+{: important}

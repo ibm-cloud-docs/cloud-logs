@@ -83,6 +83,7 @@ toc:
             navtitle: Architecture and workload isolation
           - topic: core/vpe.md
             navtitle: Using virtual private endpoints
+          - core/cse_proxy.md
       - topicgroup:
           label: Managing access
           topics:

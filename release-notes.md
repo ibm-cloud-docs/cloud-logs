@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-18"
 
 keywords:
 
@@ -22,6 +22,13 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
+
+## 18 September 2024
+{: #cloud-logs-sep1824}
+{: release-note}
+
+CSE endpoint support
+:   {{site.data.keyword.logs_full_notm}} now supports [CSE endpoints](/docs/cloud-logs?topic=cloud-logs-cse_proxy).
 
 ## 4 September 2024
 {: #cloud-logs-sep0424}
