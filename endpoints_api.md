@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-17"
 
 keywords:
 
@@ -21,7 +21,7 @@ Access {{site.data.keyword.logs_full_notm}} by using the listed endpoints for ea
 The endpoints can be found on the [service instance details page](/docs/cloud-logs?topic=cloud-logs-observe&interface=ui#observe-cloud-ui).
 {: important}
 
-## Public Endpoints
+## Public endpoints
 {: #public-endpoints}
 
 Public endpoints can be accessed from the public internet.
@@ -52,7 +52,7 @@ Public endpoints can be accessed from the public internet.
 
 These endpoints are proxied using {{site.data.keyword.cis_full}}, which uses IP address described in [CIS allowlisted IP addresses](/docs/cis?topic=cis-cis-allowlisted-ip-addresses).
 
-## Private Endpoints
+## Private endpoints
 {: #private-endpoints}
 
 Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} private network. After creation, a service instance can be accessed using private endpoints.
@@ -72,5 +72,6 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 {: caption="Table 2. List of {{site.data.keyword.logs_full_notm}} private endpoints" caption-side="top"}
 
 
+
+
 To connect to private endpoints, use a [VPE](/docs/cloud-logs?topic=cloud-logs-vpe-connection&interface=cli).
-{: important}

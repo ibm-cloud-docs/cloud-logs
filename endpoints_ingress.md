@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-17"
 
 keywords:
 
@@ -60,5 +60,7 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 {: caption="Table 2. List of {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
 
 
+
+
+
 To connect to private endpoints, use a [VPE](/docs/cloud-logs?topic=cloud-logs-vpe-connection&interface=cli).
-{: important}

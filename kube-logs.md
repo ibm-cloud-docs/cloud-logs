@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-17"
 
 keywords:
 
@@ -100,6 +100,8 @@ Connect to your {{site.data.keyword.containerlong_notm}} cluster. Connecting to 
 {: step}
 
 Before you provision the {{site.data.keyword.agent}} as a daemonset, you need an IAM API key and a logging ingestion endpoint. The {{site.data.keyword.cloud_notm}} CLI is used to obtain this information.
+
+
 
 First, obtain your IAM API key.
 
