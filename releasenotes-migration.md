@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-19"
 
 keywords:
 
@@ -26,7 +26,34 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
 
+## 18 September 2024
+{: #migration-sep1824}
 
+The migration tool plug-in v0.1.20 is available.
+:   Updates include:
+
+    
+
+    * Support to configure all supported {{site.data.keyword.logs_full_notm}} retention periods.
+
+    * Collection of IAM access report information.
+
+    * Limit {{site.data.keyword.logs_routing_full_notm}} to public ingress endpoints.
+
+    * Improved validation of the usage of the `-t` and `--api` options.
+
+    * Updates to the CLI help.
+
+    * Added plug-in version to log output.
+
+    * Fix for issue when creating webhooks for alerts via the API. A service to service authorization and integration with {{site.data.keyword.en_full_notm}} are only created when you confirm that you want the integration created.
+
+    * Fix for Terraform description validation for invalid characters. Support was added for commas.
+
+    * Fix for {{site.data.keyword.cos_full_notm}} bucket creation error when the {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} have archiving configured to a {{site.data.keyword.cos_full_notm}} bucket and the endpoint used is a public endpint.
+
+    * Fix for {{site.data.keyword.logs_routing_full_notm}} name error. The migration tool now enforces the 35 character naming limitation.
+    
 
 ## 4 September 2024
 {: #migration-sep0424}
