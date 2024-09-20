@@ -397,6 +397,11 @@ toc:
               topics:
               - topic: migration_post.md
                 navtitle: Post-migrating steps
+          - topicgroup:
+              label: Troubleshooting migration
+              topics:
+              - topic: migration_troubleshooting.md
+                navtitle: Troubleshooting migration issues
   - navgroup:
         id: help
         topics:
