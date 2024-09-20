@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-09-20"
 
 keywords:
 
@@ -108,7 +108,7 @@ Complete the following steps:
 
         In the **Resources** section make a copy of the provided _Bootstrap server_ list.
 
-        [connect-to-service-page](images/es-connect-page.png){: caption="Connect dialog" caption-side="bottom"}
+        ![connect-to-service-page](images/es-connect-page.png){: caption="Connect dialog" caption-side="bottom"}
 
    * For **Topic name**, enter the name of your {{site.data.keyword.messagehub_full}} topic.
 
