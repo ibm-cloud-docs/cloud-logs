@@ -1,5 +1,4 @@
 A mapping exception can happen if new log fields are ingested with field names that were previously ingested by {{site.data.keyword.logs_full_notm}}, but have a different value type.  When {{site.data.keyword.logs_full_notm}} indexes ingested data, it tries to map the fields to one of the following types:
-{: tsCauses}
 
 * `String`
 * `Numeric`
