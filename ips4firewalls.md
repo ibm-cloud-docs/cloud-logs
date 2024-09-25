@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-25"
 keywords:
 
 subcollection: cloud-logs
@@ -232,3 +232,219 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Washington DC 2 | 10.22.53.64  |
 | Washington DC 3 | 10.22.56.46  |
 {: caption="US-East private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
+
+## Private ingress endpoints for {{site.data.keyword.logs_full_notm}}
+{: #ip_ingress}
+
+The following table shows the private ingress endpoints for {{site.data.keyword.logs_full_notm}}.
+
+### Frankfurt
+{: #ip_ingress_eufr}
+
+| Region      | IP address    |
+| ----------- | ------------- |
+| Frankfurt (eu-de) | 166.9.209.206 |
+|  | 166.9.209.232 |
+|  | 166.9.210.12 |
+{: caption="Frankfurt private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### London
+{: #ip_ingress_eugb}
+
+| Region   | IP address     |
+| -------- | -------------- |
+| London (eu-gb)| 166.9.245.168 |
+|  | 166.9.245.200 |
+|  | 166.9.245.232 |
+{: caption="London private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### Madrid
+{: #ip_ingress_eues}
+
+| Region    | IP address    |
+| --------- | ------------- |
+| Madrid (eu-es)  | 166.9.226.22 |
+|  | 166.9.227.21 |
+|  | 166.9.225.20 |
+{: caption="Madrid private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+
+### Osaka
+{: #ip_ingress_jposa}
+
+| Region  | IP address   |
+| ------- | ------------ |
+| Osaka (jp-osa) | 166.9.247.54 |
+|  | 166.9.247.84 |
+|  | 166.9.247.118 |
+{: caption="Osaka private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### Sao Paulo
+{: #ip_ingress_brsao}
+
+| Region      | IP address    |
+| ----------- | ------------- |
+| Sao Paulo (br-sao) | 166.9.246.86 |
+|  | 166.9.246.118 |
+|  | 166.9.246.142 |
+{: caption="Sao Paulo private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+
+### Sydney
+{: #ip_ingress_ausyd}
+
+| Region   | IP address     |
+| -------- | -------------- |
+| Sydney (au-syd) | 166.9.244.118 |
+|  | 166.9.244.150 |
+|  | 166.9.244.182 |
+{: caption="Sydney private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### Tokyo
+{: #ip_ingress_jptok}
+
+| Region  | IP address     |
+| ------- | -------------- |
+| Tokyo (jp-tok)  | 166.9.249.125 |
+|  | 166.9.249.154 |
+|  | 166.9.249.190 |
+{: caption="Tokyo private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+
+### Toronto
+{: #ip_ingress_cator}
+
+| Region    | IP address     |
+| --------- | -------------- |
+| Toronto (ca-tor) | 166.9.209.7 |
+|  | 166.9.247.184 |
+|  | 166.9.247.221 |
+{: caption="Toronto private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### US South (Dallas)
+{: #ip_ingress_ussouth}
+
+| Region   | IP address    |
+| -------- | ------------- |
+| Dallas (us-south) | 166.9.228.72 |
+|  | 166.9.229.63 |
+|  | 166.9.230.56 |
+{: caption="US-South private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### US East (Washington)
+{: #ip_ingress_useast}
+
+| Region          | IP address   |
+| --------------- | ------------ |
+| Washington DC (us-east) | 166.9.231.251 |
+|  | 166.9.251.88 |
+|  | 166.9.233.27 |
+{: caption="US-East private ingress IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+## Private API endpoints for {{site.data.keyword.logs_full_notm}}
+{: #ip_api}
+
+These private API IP addresses are used to archive logs to {{site.data.keyword.logs_full_notm}}.
+
+### Frankfurt
+{: #ip_api_eufr}
+
+| Region               | IP address    |
+| ----------------- | ------------- |
+| Frankfurt (eu-de) | 166.9.209.200 |
+|                   | 166.9.209.233 |
+|                   | 166.9.210.8   |
+{: caption="Frankfurt private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}ip
+
+### London
+{: #ip_api_eugb}
+
+| Region         | IP address    |
+| -------------- | ------------- |
+| London (eu-gb) | 166.9.245.169 |
+|                | 166.9.245.201 |
+|                | 166.9.245.233 |
+{: caption="London private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### Madrid
+{: #ip_api_eues}
+
+| Region         | IP address   |
+| -------------- | ------------ |
+| Madrid (eu-es) | 166.9.226.26 |
+|                | 166.9.227.25 |
+|                | 166.9.225.24 |
+{: caption="Madrid private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+
+### Osaka
+{: #ip_api_jposa}
+
+| Region         | IP address    |
+| -------------- | ------------- |
+| Osaka (jp-osa) | 166.9.247.55  |
+|                | 166.9.247.85  |
+|                | 166.9.247.119 |
+{: caption="Osaka private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### Sao Paulo
+{: #ip_api_brsao}
+
+| Region             | IP address    |
+| ------------------ | ------------- |
+| Sao Paulo (br-sao) | 166.9.246.85  |
+|                    | 166.9.246.117 |
+|                    | 166.9.246.141 |
+{: caption="Sao Paulo private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+
+### Sydney
+{: #ip_api_ausyd}
+
+| Region          | IP address    |
+| --------------- | ------------- |
+| Sydney (au-syd) | 166.9.244.117 |
+|                 | 166.9.244.149 |
+|                 | 166.9.244.181 |
+{: caption="Sydney private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### Tokyo
+{: #ip_api_jptok}
+
+| Region           | IP address    |
+| ---------------- | ------------- |
+| Tokyo (jp-tok)   | 166.9.249.126 |
+|                  | 166.9.249.155 |
+|                  | 166.9.249.164 |
+{: caption="Tokyo private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+
+### Toronto
+{: #ip_api_cator}
+
+| Region           | IP address    |
+| ---------------- | ------------- |
+| Toronto (ca-tor) | 166.9.209.6   |
+|                  | 166.9.209.34  |
+|                  | 166.9.247.202 |
+{: caption="Toronto private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### US South (Dallas)
+{: #ip_api_ussouth}
+
+| Region            | IP address    |
+| ----------------- | ------------- |
+| Dallas (us-south) | 166.9.228.70  |
+|                   | 166.9.229.140 |
+|                   | 166.9.230.27  |
+{: caption="US-South private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+
+### US East (Washington)
+{: #ip_api_useast}
+
+| Region                  | IP address    |
+| ------------------------| ------------- |
+| Washington DC (us-east) | 166.9.231.250 |
+|                         | 166.9.251.87  |
+|                         | 166.9.233.26  |
+{: caption="US-East private API IP addresses for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
