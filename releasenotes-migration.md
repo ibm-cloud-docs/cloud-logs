@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-09-25"
 
 keywords:
 
@@ -25,6 +25,20 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
+
+## 25 September 2024
+{: #migration-sep2524}
+
+The migration tool plug-in v0.1.21 is available.
+:   Updates include:
+
+    * The period when an {{site.data.keyword.en_full_notm}} alert is re-sent is set to 10 minutes.
+
+    * If a service to service policy for {{site.data.keyword.en_full_notm}} and {{site.data.keyword.logs_full_notm}} is not required, one is no longer created.
+    
+    * A fix for an error during migration when you have archiving configured in your {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance, and the collection of metrics for the bucket is not enabled
+    
+    * Parsing rules are now maintained in the correct default order. Rules created during migration within an instance are created after the default parsing rule that is included when you provision an instance of {{site.data.keyword.logs_full_notm}}.
 
 ## 18 September 2024
 {: #migration-sep1824}
