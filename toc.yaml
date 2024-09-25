@@ -90,7 +90,7 @@ toc:
           - topic: iam.md
             navtitle: Getting started with IAM
           - topic: iam-views.md
-            navtitle: Granting permissions to work with views
+            navtitle: Required permissions to work with views
           - topic: iam-assign-access.md
             navtitle: Granting service access
           - topic: iam-actions.md

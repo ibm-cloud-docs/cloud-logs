@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-09-25"
 
 keywords:
 
@@ -169,6 +169,9 @@ After you define the scope of the access policy, you must assign a role.
 IAM policies are enforced hierarchically, from greatest level of access to most restricted. Conflicts are resolved to the more permissive policy. For example, if a user has both the `Writer` and `Reader` service access role on a bucket, the policy granting the `Reader` role is ignored. This is also applicable to service instance and bucket level policies, for example:
 - If a user has a policy granting the `Writer` role on a service instance and the `Reader` role on a single bucket, the bucket-level policy is ignored.
 - If a user has a policy granting the `Reader` role on a service instance and the `Writer` role on a single bucket, both policies are enforced and the more permissive `Writer` role will take precedence for the individual bucket.
+
+If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
+{: important}
 
 To restrict access to a single bucket, ensure that the user or Service ID doesn't have any instance level policies.
 {: tip}
