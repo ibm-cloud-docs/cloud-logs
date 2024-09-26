@@ -30,17 +30,17 @@ There are two ways you can resolve mapping exceptions. One is to search without 
 
       `field_obj`
       :  If {{site.data.keyword.logs_full_notm}} is expecting a string, but found an object:
-          * Regular Expression: `("field"%s*:%s*{)`
+          * Regular Expression: `("field"\s*:\s*{)`
           * Replace with: `"field_obj":{`
 
       `field_arr`
       :  If {{site.data.keyword.logs_full_notm}} is expecting a string, but found an array:
-         * Regular Expression: `("field"%s*:%s*[)`
+         * Regular Expression: `("field"\s*:\s*[)`
          * Replace with: `"field_arr":[`
 
       `field_str`
       :  If {{site.data.keyword.logs_full_notm}} is expecting an object, but found a string:
-         * Regular Expression: `("field"%s*:%s*")`
+         * Regular Expression: `("field"\s*:\s*")`
          * Replace with: `"field_str":"`
 
    2. Create a parsing [replace rule](/docs/cloud-logs?topic=cloud-logs-parse-replace-rule&interface=ui) to fix new logs using the RegEx.
