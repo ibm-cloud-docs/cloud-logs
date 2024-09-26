@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-09-26"
 keywords:
 
 subcollection: cloud-logs
@@ -14,10 +14,15 @@ subcollection: cloud-logs
 # IP addresses that must be opened in firewalls
 {: #ips2open}
 
-{{site.data.keyword.logs_full}} data is sent from specific IP addresses. Use these IP addresses in firewalls and other configurations to ensure that the data received by your code, or another {{site.data.keyword.IBM_notm}} service, originates only from {{site.data.keyword.logs_full}}.
+{{site.data.keyword.logs_full}} data is sent using specific IP addresses.
 {: shortdesc}
 
-## IP addresses used for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}
+## IP addresses used by {{site.data.keyword.logs_full_notm}} to connect to other services
+{: #ip_to_services}
+
+Use these IP addresses in firewalls and other configurations to ensure that the data received by your code, or another {{site.data.keyword.IBM_notm}} service, originates only from {{site.data.keyword.logs_full_notm}}.
+
+### IP addresses used for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}
 {: #ip_en_es}
 
 These public IP addresses are used to send events to {{site.data.keyword.en_full_notm}} and stream logs to {{site.data.keyword.messagehub_full}}.
@@ -37,9 +42,7 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 {: caption="Public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
 
 
-
-
-## IP addresses used for {{site.data.keyword.cos_full_notm}}
+### IP addresses used for {{site.data.keyword.cos_full_notm}}
 {: #ip_cos}
 
 These private IP addresses are used to archive logs to {{site.data.keyword.cos_full_notm}}.
@@ -59,8 +62,12 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Washington, DC (`us-east`) | 10.22.41.104  \n 10.22.53.64  \n 10.22.56.46 |
 {: caption="Private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
 
+## IP addresses used by {{site.data.keyword.logs_full_notm}} private endpoints
+{: #ip_endpoints}
 
-## Private ingress endpoints for {{site.data.keyword.logs_full_notm}}
+The {{site.data.keyword.logs_full_notm}} private endpoints can be used to send logs, query logs or manage the instance. Use these IP addresses in firewalls and other configurations to ensure that the data sent by your code, is sent to {{site.data.keyword.logs_full_notm}}.
+
+### Private ingress endpoints for {{site.data.keyword.logs_full_notm}}
 {: #ip_ingress}
 
 These are private ingress endpoints IP addresses for {{site.data.keyword.logs_full_notm}}.
@@ -80,7 +87,7 @@ These are private ingress endpoints IP addresses for {{site.data.keyword.logs_fu
 {: caption="IP addresses for {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
 
 
-## Private API endpoints for {{site.data.keyword.logs_full_notm}}
+### Private API endpoints for {{site.data.keyword.logs_full_notm}}
 {: #ip_api}
 
 These are the private API IP addresses used for {{site.data.keyword.logs_full_notm}}.
