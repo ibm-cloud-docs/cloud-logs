@@ -149,6 +149,8 @@ toc:
           - topicgroup:
               label: Using the Logging agent for orchestrated environments
               topics:
+              - topic: agent/agent-helm.md
+                navtitle: Managing the agent using a Helm chart
               - topic: agent/agent-openshift.md
                 navtitle: Managing the agent for Openshift clusters
               - topic: agent/agent-std-cluster.md
