@@ -22,26 +22,6 @@ subcollection: cloud-logs
 
 Use these IP addresses in firewalls and other configurations to ensure that the data received by your code, or another {{site.data.keyword.IBM_notm}} service, originates only from {{site.data.keyword.logs_full_notm}}.
 
-### IP addresses used for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}
-{: #ip_en_es}
-
-These public IP addresses are used to send events to {{site.data.keyword.en_full_notm}} and stream logs to {{site.data.keyword.messagehub_full}}.
-
-| Region      | IP addresses     |
-| ----------- | -------------- |
-| Dallas (`us-south`) | 52.116.131.73  \n 150.239.164.167  \n 52.118.79.29 |
-| Frankfurt (`eu-de`) | 149.81.7.29  \n 161.156.82.254  \n 149.81.165.38 |
-| London (`eu-gb`) | 161.156.199.245  \n 141.125.111.204  \n 158.176.189.154 |
-| Madrid (`eu-es`) | 13.120.86.96  \n 13.121.81.233  \n 13.122.90.134 |
-| Osaka (`jp-osa`) | 163.68.90.193  \n 163.69.93.0  \n 163.73.83.233 |
-| Sao Paulo (`br-sao`) | 13.116.82.31  \n 163.107.85.232  \n 163.109.87.9 |
-| Sydney (`au-syd`) | 159.23.94.217  \n 130.198.9.241  \n 135.90.138.121 |
-| Tokyo (`jp-tok`) | 162.133.137.8  \n 128.168.136.18  \n 165.192.138.249 |
-| Toronto (`ca-tor`) | 163.66.94.68  \n 163.74.88.241  \n 163.74.88.241 |
-| Washington, DC (`us-east`) | 150.239.81.194  \n 169.63.190.140  \n 150.239.222.67 |
-{: caption="Public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
-
-
 ### IP addresses used for {{site.data.keyword.cos_full_notm}}
 {: #ip_cos}
 
@@ -61,6 +41,26 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Toronto (`ca-tor`) | 10.223.153.79  \n 10.223.168.204  \n 10.223.176.163 |
 | Washington, DC (`us-east`) | 10.22.41.104  \n 10.22.53.64  \n 10.22.56.46 |
 {: caption="Private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
+
+### IP addresses used for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}
+{: #ip_en_es}
+
+These public IP addresses are used to send events to {{site.data.keyword.en_full_notm}} and stream logs to {{site.data.keyword.messagehub_full}}.
+
+| Region      | IP addresses     |
+| ----------- | -------------- |
+| Dallas (`us-south`) | 52.116.131.73  \n 150.239.164.167  \n 52.118.79.29 |
+| Frankfurt (`eu-de`) | 149.81.7.29  \n 161.156.82.254  \n 149.81.165.38 |
+| London (`eu-gb`) | 161.156.199.245  \n 141.125.111.204  \n 158.176.189.154 |
+| Madrid (`eu-es`) | 13.120.86.96  \n 13.121.81.233  \n 13.122.90.134 |
+| Osaka (`jp-osa`) | 163.68.90.193  \n 163.69.93.0  \n 163.73.83.233 |
+| Sao Paulo (`br-sao`) | 13.116.82.31  \n 163.107.85.232  \n 163.109.87.9 |
+| Sydney (`au-syd`) | 159.23.94.217  \n 130.198.9.241  \n 135.90.138.121 |
+| Tokyo (`jp-tok`) | 162.133.137.8  \n 128.168.136.18  \n 165.192.138.249 |
+| Toronto (`ca-tor`) | 163.66.94.68  \n 163.74.88.241  \n 163.74.88.241 |
+| Washington, DC (`us-east`) | 150.239.81.194  \n 169.63.190.140  \n 150.239.222.67 |
+{: caption="Public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
+
 
 ## IP addresses used by {{site.data.keyword.logs_full_notm}} private endpoints
 {: #ip_endpoints}
