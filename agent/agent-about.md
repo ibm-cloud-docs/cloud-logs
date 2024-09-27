@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-27"
 
 keywords:
 
@@ -90,6 +90,7 @@ The following table lists the agent versions that are supported and the version 
 
 | {{site.data.keyword.agent}}  | Based on Fluent Bit Version |
 |-----------------------------------------------------|---------|
+| v1.3.0                                              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} |
 | v1.2.4                                              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} |
 | v1.2.3                                              | [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external} |
 {: caption="Supported agent versions" caption-side="bottom"}
