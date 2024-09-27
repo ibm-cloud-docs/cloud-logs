@@ -34,8 +34,6 @@ The {{site.data.keyword.logs_full}} migration tool requires that you have certai
 
 `[*]` {{site.data.keyword.cos_full_notm}} buckets with {{site.data.keyword.keymanagementservicelong_notm}} configured keys must have the `writer` role (`cloud-object-storage.bucket.list_crk_id`) to read the key name.
 
-If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
-{: important}
 
 When you configure your Logging agent to send logs to {{site.data.keyword.logs_full_notm}}, you will need credentials that include the `sender` role. For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
 {: tip}
