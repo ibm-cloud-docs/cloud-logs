@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-30"
 
 keywords:
 
@@ -19,6 +19,8 @@ subcollection: cloud-logs
 You can deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) cluster to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
+Instructions on this topic are superseeded by [Deploying the Logging agent on OpenShift using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy).
+{: important}
 
 ## Deploying the agent
 {: #agent-openshift-deploy}
