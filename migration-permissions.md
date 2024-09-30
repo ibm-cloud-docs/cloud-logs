@@ -37,6 +37,9 @@ The {{site.data.keyword.logs_full}} migration tool requires that you have certai
 `[**]` {{site.data.keyword.cos_full_notm}} buckets with Activity tracker or Monitoring enabled must have the `manager` role (`storage.bucket.put_activity_tracking`,
 `cloud-object-storage.bucket.put_metrics_monitoring`) to create the new buckets with the correct configuration.
 
+You must have permissions in the resource groups where you plan to create resources with the Migration tool.
+{: note}
+
 
 When you configure your Logging agent to send logs to {{site.data.keyword.logs_full_notm}}, you will need credentials that include the `sender` role. For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
 {: tip}
