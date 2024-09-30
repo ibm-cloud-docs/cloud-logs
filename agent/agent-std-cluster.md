@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-30"
 
 keywords:
 
@@ -19,6 +19,8 @@ subcollection: cloud-logs
 You can deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from an {{site.data.keyword.containerlong_notm}} cluster to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
+This topic is superseded by [Deploying the Logging agent on Kubernetes using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy). While these instructions can still be used, deploying using the Helm chart is the preferred method.
+{: important}
 
 ## Deploying the {{site.data.keyword.agent}}
 {: #agent-std-cluster-deploy}
