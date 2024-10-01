@@ -119,10 +119,30 @@ Complete the following steps:
 
 1. Log in to the cluster. For more information, see [Access your cluster](/docs/containers?topic=containers-access_cluster).
 
-2. Log in to the Helm registry.
+2. Log in to the Helm registry. Choose one of the following options:
+
+    Option 1: Login to the Helm registry by running the `helm registry login` command:
 
     ```sh
     helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
+    ```
+    {: codeblock}
+
+    For more information, see [Using Helm charts in Container Registry: Pulling charts from another registry or Helm repository](/docs/Registry?topic=Registry-registry_helm_charts#registry_helm_charts_pull)
+
+    Option 2:  Log in to the Helm registry in {{site.data.keyword.registryshort}} by running the `ibmcloud cr login` command.
+
+    You can use the `ibmcloud cr login` command before you perform a Helm dry run or install. For more information, see [Accessing {{site.data.keyword.registryshort}}](/docs/Registry?topic=Registry-registry_access) and [ibmcloud cr login](/docs/Registry?topic=Registry-containerregcli#bx_cr_login).
+
+    Run the following commands:
+
+    ```sh
+    ibmcloud region-set global
+    ```
+    {: codeblock}
+
+    ```sh
+    ibmcloud cr login [--client CLIENT]
     ```
     {: codeblock}
 
