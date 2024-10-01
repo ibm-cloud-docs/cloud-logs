@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-27"
+lastupdated: "2024-10-01"
 
 keywords:
 
@@ -47,7 +47,13 @@ By default, the {{site.data.keyword.agent}} monitors and collects log data from 
 
 You can deploy the agent in the following platforms:
 - Kubernetes clusters
+
+    For more information, see [Deploying the {{site.data.keyword.agent}} on OpenShift using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy).
+
 - OpenShift clusters
+
+    For more information, see [Deploying the {{site.data.keyword.agent}} on a Kubernetes cluster using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy).
+
 
 The following diagram shows the high level view when the source of logs is a Kubernetes or OpenShift cluster:
 
@@ -67,6 +73,8 @@ The following platforms are supported:
 - Ubuntu 22
 - Debian 11
 - Debian 12
+
+For more information, see [Managing the agent Linux environments](/docs/cloud-logs?topic=cloud-logs-agent-linux).
 
 ## Supported formats
 {: #agent-about-formats}
@@ -88,11 +96,11 @@ The agent supports the following input formats:
 
 The following table lists the agent versions that are supported and the version of Fluent Bit the agent is based on:
 
-| {{site.data.keyword.agent}}  | Based on Fluent Bit Version |
-|-----------------------------------------------------|---------|
-| v1.3.0                                              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} |
-| v1.2.4                                              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} |
-| v1.2.3                                              | [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external} |
+| {{site.data.keyword.agent}}                         | Based on Fluent Bit Version | Helm chart version |
+|-----------------------------------------------------|-----------------------------|--------------------|
+| v1.3.0                                              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} | v1.3.0   |
+| v1.2.4                                              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} | Not available |
+| v1.2.3                                              | [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external} | Not available |
 {: caption="Supported agent versions" caption-side="bottom"}
 
 For information on recommended and supported Fluent Bit plug-ins see [Fluent Bit support](/docs/cloud-logs?topic=cloud-logs-agent-plugin-support)
