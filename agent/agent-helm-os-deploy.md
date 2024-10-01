@@ -176,7 +176,7 @@ Complete the following steps:
     ```sh
     helm install logging-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.3.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
     ```
-    {: screen}
+    {: codeblock}
 
 4. Once the resources to be created are verified, then run the Helm install without the `--dry-run` option
 
@@ -218,7 +218,12 @@ When the agent is deployed, check the following resources are created:
     ```
     {: codeblock}
 
-    You can also run `oc get namespace | grep ibm-observe` to search for the `ibm-observe` namespace.
+    You can also run the following command to search for the `ibm-observe` namespace:
+
+    ```sh
+    oc get namespace | grep ibm-observe
+    ```
+    {: codeblock}
 
 - A config map `logs-agent` in the namespace `ibm-observe`.
 
@@ -229,7 +234,12 @@ When the agent is deployed, check the following resources are created:
     ```
     {: codeblock}
 
-    You can also use `oc describe configmaps logs-agent -n ibm-observe`.
+    You can also use the following command:
+
+    ```sh
+    oc describe configmaps logs-agent -n ibm-observe
+    ```
+    {: codeblock}
 
 - A daemonset `logs-agent` in the namespace `ibm-observe`.
 

@@ -196,19 +196,44 @@ Complete the following steps:
 When the agent is deployed, check the following resources are created:
 - The `ibm-observe` namespace.
 
-    Run `kubectl get namespace` to list the namespaces in the cluster. Check that the `logger-agent` shows with status active.
+    Run the following command to list the namespaces in the cluster and check that the `logger-agent` shows with status active.
+
+    ```sh
+    kubectl get namespace
+    ```
+    {: codeblock}
 
 - A config map `logs-agent` in the namespace `ibm-observe`.
 
-    Run `kubectl get configmap logs-agent -n ibm-observe` to view the agent config details. You can also use `kubectl describe configmaps logs-agent -n ibm-observe`.
+    Run the following command to view the agent config details.
+
+    ```sh
+    kubectl get configmap logs-agent -n ibm-observe
+    ```
+    {: codeblock}
+
+    You can also use:
+
+    ```sh
+    kubectl describe configmaps logs-agent -n ibm-observe
+    ```
+    {: codeblock}
 
 - A daemonset `logs-agent` in the namespace `ibm-observe`.
 
-    Run `kubectl get ds -n ibm-observe` to view the daemonset.
+    Run the following command to view the daemonset.
+
+    ```sh
+    kubectl get ds -n ibm-observe
+    ```
+    {: codeblock}
 
 - Verify the agents are started:
 
-    Run `kubectl -n ibm-observe get ds logging-agent`
+    ```sh
+    kubectl -n ibm-observe get ds logging-agent
+    ```
+    {: codeblock}
 
 - Retrieve the list of agent pods by using the following command:
 
