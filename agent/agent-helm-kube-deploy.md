@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-01"
 
 keywords:
 
@@ -215,7 +215,7 @@ When the agent is deployed, check the following resources are created:
     ```sh
     kubectl get pods -n ibm-observe -o wide
     ```
-    {: pre}
+    {: codeblock}
 
     ```text
     NAME                  READY   STATUS    RESTARTS   AGE    IP              NODE           NOMINATED NODE   READINESS GATES
@@ -232,6 +232,7 @@ When the agent is deployed, check the following resources are created:
     ```sh
     oc get nodes
     ```
+    {: codeblock}
 
     ```text
     NAME           STATUS   ROLES           AGE   VERSION

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-01"
 
 keywords:
 
@@ -129,8 +129,15 @@ Complete the following steps:
 
 2. Log in to the Helm registry.
 
-    ```
+    ```sh
     helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
+    ```
+    {: codeblock}
+
+    If you have
+
+    ```sh
+    ibmcloud cr login with the docker context
     ```
     {: codeblock}
 
@@ -166,7 +173,7 @@ Complete the following steps:
 
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
-    ```
+    ```sh
     helm install logging-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.3.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
     ```
     {: screen}
@@ -193,7 +200,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-    where:
+    Where:
 
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-deploy-step1)
 
@@ -204,15 +211,34 @@ Complete the following steps:
 When the agent is deployed, check the following resources are created:
 - The `ibm-observe` namespace.
 
-    Run `oc get namespace` to list the namespaces in the cluster. You can also run `oc get namespace | grep ibm-observe` to search for the `ibm-observe` namespace.
+    To list the namespaces in the cluster, run the following command:
+
+    ```sh
+    oc get namespace
+    ```
+    {: codeblock}
+
+    You can also run `oc get namespace | grep ibm-observe` to search for the `ibm-observe` namespace.
 
 - A config map `logs-agent` in the namespace `ibm-observe`.
 
-    Run `oc get configmap logs-agent -n ibm-observe` to view the agent config details. You can also use `oc describe configmaps logs-agent -n ibm-observe`.
+    Run the following command to view the agent config details.
+
+    ```sh
+    oc get configmap logs-agent -n ibm-observe
+    ```
+    {: codeblock}
+
+    You can also use `oc describe configmaps logs-agent -n ibm-observe`.
 
 - A daemonset `logs-agent` in the namespace `ibm-observe`.
 
-    Run `oc get ds -n ibm-observe` to view the daemonset.
+    Run the following command to view the daemonset:
+
+    ```sh
+    oc get ds -n ibm-observe
+    ```
+    {: codeblock}
 
 - Retrieve the list of agent pods by using the following command:
 
@@ -236,6 +262,7 @@ When the agent is deployed, check the following resources are created:
     ```sh
     oc get nodes
     ```
+    {: codeblock}
 
     ```text
     NAME           STATUS   ROLES           AGE   VERSION
