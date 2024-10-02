@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-10-02"
 
 keywords:
 
@@ -275,6 +275,39 @@ In this example, the API is used to configure the {{site.data.keyword.logs_full_
 ibmcloud logging migrate create-resources -s platform-logs -i private
 ```
 {: pre}
+
+## ibmcloud logging migrate query
+{: #logging-migrate-query}
+
+Use this command to convert {{site.data.keyword.at_full_notm}} and {{site.data.keyword.la_full_notm}} view queries to the equivalent Lucene queries that can be used with {{site.data.keyword.logs_full_notm}}.
+
+```text
+ibmcloud logging migrate query --input-query input-query 
+```
+{: pre}
+
+### Command options
+{: #logging-migrate-query-options}
+
+`-input-query`|`--iq`
+:   The {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} view query to be converted, enclosed in double quotes.
+
+### Example
+{: #logging-migrate-query-example}
+
+For example, running the following command:
+
+```text
+ibmcloud logging migrate query -input-query "(host:ibm-cloud-databases-prod label.database:postgresql )  -metrics -unknown client:111.11.111.111" 
+```
+{: pre}
+
+Returns the query converted to Lucene:
+
+```text
+The mapped query result is: (app:ibm-cloud-databases-prod label.database.keyword:/postgresql.*/ ) NOT metrics NOT unknown client.keyword:/111.11.111.111.*/
+```
+{: screen}
 
 
 ## ibmcloud logging migrate remove-resources-tf
