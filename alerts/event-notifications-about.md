@@ -24,7 +24,7 @@ As an administrator of {{site.data.keyword.logs_full_notm}}, you might want to s
 In {{site.data.keyword.logs_full_notm}}, you configure alerts that define the triggering conditions on filtered data on which you want to be notified. In {{site.data.keyword.en_full_notm}}, you configure the destinations where you want to be notified for an alert and the conditions that define to which destination an event is routed. You can route events to one or more destinations based on conditions that you configure. You can notify to a service destination such as a webhook or PagerDuty, or to a human destination such as email or slack.
 
 The following image shows different destinations where an event can be routed when an alert that you configure in {{site.data.keyword.logs_full_notm}} is triggered:
-![Alerting in {{site.data.keyword.logs_full_notm}}](../images/alerts-ov.svg "Alerting in {{site.data.keyword.logs_full_notm}}"){: caption="Figure 1. Alerting in {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+![Alerting in {{site.data.keyword.logs_full_notm}}](../images/alerts-ov1.svg "Alerting in {{site.data.keyword.logs_full_notm}}"){: caption="Figure 1. Alerting in {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 To send events to {{site.data.keyword.en_short}}, you must connect your {{site.data.keyword.logs_full_notm}} instance to {{site.data.keyword.en_short}} by configuring an outbound integration. For more information, see [Configuring an outbound integration to connect {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.en_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 

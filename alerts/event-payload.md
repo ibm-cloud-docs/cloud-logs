@@ -101,14 +101,14 @@ In an event, the following lengths apply:
 {: caption="Table 2. Data size" caption-side="bottom"}
 
 
-Each field in data has a specific size. If any field exceeds its maximum number of characters, the payload will be truncated.
+Each field in the payload has a specific size. If any field exceeds its maximum number of characters, the payload will be truncated.
 
 Consider the following information:
 - If a string field exceeds its maximum number of characters, it will be truncated, and an ellipsis (...) will be appended to indicate that the content has been cut off.
 - Meta labels will be included up to the limit.
 - Meta label keys and values will count toward the limit.
 - If the log_example field exceeds its maximum number of characters, it will be converted to a string containing part of the log data followed by an ellipsis (...) to indicate truncation.
-- To provide clear feedback on truncation, the following additional fields added to the data:
+- The following additional fields are added to the data to indicate when a sample or labels are truncated:
 
    `log_example_truncated`: This field will be added to the payload to indicate that an example log entry was truncated.
 
