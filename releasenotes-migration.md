@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-02"
 
 keywords:
 
@@ -34,7 +34,7 @@ The migration tool plug-in v0.1.22 is available.
 
     * Fixes for problems when configuring buckets with activity tracking events or metrics enabled:
 
-       * Updates to the permissions that are required to create buckets. {{site.data.keyword.cos_full_notm}} buckets with {{site.data.keyword.at_full_notm}} or {{site.data.keyword.mon_full_notm}} enabled must have the `manager` role (`storage.bucket.put_activity_tracking`, `cloud-object-storage.bucket.put_metrics_monitoring`) to create the new buckets with the correct configuration.
+       * Documentation updates to the permissions that are required to create buckets. {{site.data.keyword.cos_full_notm}} buckets with {{site.data.keyword.at_full_notm}} or {{site.data.keyword.mon_full_notm}} enabled must have the `manager` role (`storage.bucket.put_activity_tracking`, `cloud-object-storage.bucket.put_metrics_monitoring`) to create the new buckets with the correct configuration.
 
        * Configuring the buckets so that the {{site.data.keyword.cos_full_notm}} service identifies where to send events and metrics.
 

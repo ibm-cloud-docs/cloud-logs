@@ -30,7 +30,7 @@ toc:
             navtitle: Parsing rules
           - topic: enrich.md
             navtitle: Enriching data
-          - topic: alerts.md
+          - topic: alerts/alerts.md
             navtitle: Alerting
           - topic: extensions.md
             navtitle: Extensions
@@ -273,8 +273,18 @@ toc:
       - topicgroup:
           label: Managing alerts
           topics:
-          - topic: event-notifications-events.md
-            navtitle: Enabling event notifications
+          - topic: alerts/event-notifications-about.md
+            navtitle: Working with alerts
+          - topic: event-notifications-configure.md
+            navtitle: Configuring the integration with the Event Notifications service
+          - topic: alerts/cl-events-for-en.md
+            navtitle: Event types
+          - topic: alerts/event-severities.md
+            navtitle: Event severities
+          - topic: alerts/event-payload.md
+            navtitle: Event payload
+          - topic: alerts/destinations.md
+            navtitle: Notification channels
       - topicgroup:
           label: Working with metrics
           topics:

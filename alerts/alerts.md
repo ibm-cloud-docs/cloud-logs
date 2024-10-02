@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-02"
 
 keywords:
 
@@ -23,8 +23,11 @@ subcollection: cloud-logs
 
 
 ## How alerting works
+{: #alerts-how}
 
 Alerts follow a general workflow for how they are generated, triggered, and delivered to users.
+
+![Alerting in {{site.data.keyword.logs_full_notm}}](../images/alert-overview.svg "Alerting in {{site.data.keyword.logs_full_notm}}"){: caption="Figure 1. Alerting in {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 1. Set alert rules
 
@@ -58,6 +61,8 @@ Alerts follow a general workflow for how they are generated, triggered, and deli
 {: #alert-types}
 
 {{site.data.keyword.logs_full_notm}} provides 6 types of alerts that you can configure.
+
+For more information on how to configure alerts, see [Configuring alerts](/docs/cloud-logs?topic=cloud-logs-alerts-config).
 
 ### Standard alerts
 {: #alert-standard}
