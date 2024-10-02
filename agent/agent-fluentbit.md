@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-10-02"
 
 keywords:
 
@@ -41,7 +41,7 @@ The following diagram shows the order in which sections are applied:
 ![Fluent Bit processing order of sections](../images/logging-agent-plugin-flow.svg "Fluent Bit processing order of sections"){: caption="Figure 1. Fluent Bit processing order of sections" caption-side="bottom"}
 
 
-### `SERVICE` section
+### SERVICE section
 {: #agent-fluentbit-2}
 
 You can configure the `SERVICE` section to define global properties of the service.
@@ -117,7 +117,7 @@ For example, a sample `INPUT` section could be the following:
 
 
 
-### `FILTER` section
+### FILTER section
 {: #agent-fluentbit-4}
 
 You can configure `FILTER` sections to transform the data that is related to a `FILTER` plug-in before sending it to your destination.
@@ -148,7 +148,7 @@ For example, a sample FILTER section can be the following:
 
 
 
-### `OUTPUT` section
+### OUTPUT section
 {: #agent-fluentbit-5}
 
 You can configure `OUTPUT` sections to define the destinations where Fluent Bit should send the data after a Tag match.
