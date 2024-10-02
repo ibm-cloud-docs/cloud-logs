@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-01"
 
 keywords:
 
@@ -25,6 +25,22 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
+
+## 2 October 2024
+{: #migration-oct0224}
+
+The migration tool plug-in v0.1.22 is available.
+:   Updates include:
+
+    * Fixes for problems when configuring buckets with activity tracking events or metrics enabled:
+
+       * Updates to the permissions that are required to create buckets. {{site.data.keyword.cos_full_notm}} buckets with {{site.data.keyword.at_full_notm}} or {{site.data.keyword.mon_full_notm}} enabled must have the `manager` role (`storage.bucket.put_activity_tracking`, `cloud-object-storage.bucket.put_metrics_monitoring`) to create the new buckets with the correct configuration.
+
+       * Configuring the buckets so that the {{site.data.keyword.cos_full_notm}} service identifies where to send events and metrics.
+
+       * A fix for a bug when {{site.data.keyword.cos_full_notm}} buckets are created using the API.
+
+    * Adding labels to alerts that correlate the alert in {{site.data.keyword.logs_full_notm}} with the {{site.data.keyword.en_full_notm}} topic where data from the alert is processed.
 
 ## 25 September 2024
 {: #migration-sep2524}
