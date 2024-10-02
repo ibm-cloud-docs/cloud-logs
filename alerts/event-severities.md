@@ -16,13 +16,13 @@ subcollection: cloud-logs
 {: #event-severities}
 
 
-The following table lists the severities that {{site.data.keyword.logs_full_notm}} can send to {{site.data.keyword.en_short}}:
+The following table lists the severities that {{site.data.keyword.logs_full_notm}} can send to {{site.data.keyword.en_short}} and are used to set the priority of the event when an alert is triggered:
 
 
 | Event severity       | Description |
 |----------------------|-------------|
-| `INFO`               | Test event. |
-| `WARNING`            | Standard Immediate Alert |
-| `CRITICAL`           | Standard Less Than Alert |
-| `ERROR`              | Standard More Than Alert |
+| `INFO`               | Use for information purposes. |
+| `WARNING`            | Use to issue a warning. |
+| `CRITICAL`           | Use to report critical situations. |
+| `ERROR`              | Use to report errors detected. |
 {: caption="Table 1. Event severities" caption-side="bottom"}
