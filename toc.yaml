@@ -275,7 +275,7 @@ toc:
           topics:
           - topic: alerts/event-notifications-about.md
             navtitle: Working with alerts
-          - topic: event-notifications-configure.md
+          - topic: alerts/event-notifications-configure.md
             navtitle: Configuring the integration with the Event Notifications service
           - topic: alerts/cl-events-for-en.md
             navtitle: Event types
