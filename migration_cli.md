@@ -305,7 +305,7 @@ ibmcloud logging migrate query -input-query "(host:ibm-cloud-databases-prod labe
 Returns the query converted to Lucene:
 
 ```text
-The mapped query result is: (app:ibm-cloud-databases-prod label.database.keyword:/postgresql.*/ ) NOT metrics NOT unknown client.keyword:/111.11.111.111.*/
+(app:ibm-cloud-databases-prod label.database.keyword:/postgresql.*/ ) NOT metrics NOT unknown client.keyword:/111.11.111.111.*/
 ```
 {: screen}
 
