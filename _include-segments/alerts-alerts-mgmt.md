@@ -1,4 +1,4 @@
-## Choose the type of alert
+## Access alerts management
 {: step}
 {: #alerts-config-1}
 
