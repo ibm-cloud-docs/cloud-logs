@@ -78,4 +78,4 @@ To change the status of an incident manually, click on the status `TRIGGERED`. A
 
 If you click on an incident, the detail page opens where you can get information on when the alert was triggered, the alert configuration and the log lines that were evaluated and matched the condition.
 
-You can alaso click **Incident history** to get a full report on when this alert has been triggered in your environment.
+You can also click **Incident history** to get a full report on when this alert has been triggered in your environment.
