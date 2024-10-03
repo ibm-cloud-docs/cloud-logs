@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-03"
 
 keywords:
 
@@ -16,8 +16,12 @@ subcollection: cloud-logs
 {: #cl-events-for-en}
 
 
-The following table lists the event types that {{site.data.keyword.logs_full_notm}} send to {{site.data.keyword.en_short}}:
+The following tables lists the event types and subtypes that {{site.data.keyword.logs_full_notm}} sends to {{site.data.keyword.en_short}}:
 
+## Event types
+{: #cl-events-for-en-types}
+
+The following table lists the event types that {{site.data.keyword.logs_full_notm}} send to {{site.data.keyword.en_short}}:
 
 | Event type                                  | Description |
 |------------------------------------------|---------|
@@ -43,6 +47,9 @@ The following table lists the event types that {{site.data.keyword.logs_full_not
 | `com.ibm.cloud.logs.DailyReport` | Daily Report event|
 | `com.ibm.cloud.logs.DataUsage` | Data Usage event |
 {: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
+
+## Event subtypes
+{: #cl-events-for-en-subtypes}
 
 The following table lists the {{site.data.keyword.logs_full_notm}} subtypes per event type related to alerts:
 
