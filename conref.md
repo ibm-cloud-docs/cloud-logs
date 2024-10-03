@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-03-11"
+  years:  2024
+lastupdated: "2024-10-03"
 
 keywords:
 
@@ -59,6 +59,3 @@ To save a view:
 5. Select if you want the view to be private to you or shared with other users.
 
 6. Click **SAVE** to save your view.
-
-
-
