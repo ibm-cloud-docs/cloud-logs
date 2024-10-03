@@ -47,7 +47,7 @@ When you configure alerts in an {{site.data.keyword.logs_full_notm}} instance, c
 
 The following figure shows the high level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} service that you might configure:
 
-![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance](/images/alerts-cl-en-integration.svg "High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance"){: caption="Figure 1. High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance" caption-side="bottom"}
+![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance](../images/alerts-cl-en-integration.svg "High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance"){: caption="Figure 1. High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance" caption-side="bottom"}
 
 ## Configuring alerts end to end
 {: #event-notifications-about-alerts-configure}
@@ -88,11 +88,6 @@ To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the foll
         A subscription correlates one topic with a notification channel.
 
         You can have multiple subscriptions with the same topic so you can alert through multiple destination channels.
-
-
-The following image shows the relationship of components that are required for alerting:
-![Relationship of components required for alerting](../images/event-notification-resources.svg "Relationship of components required for alerting"){: caption="Figure 1. Relationship of components required for alerting" caption-side="bottom"}
-
 
 
 
