@@ -277,7 +277,7 @@ toc:
             navtitle: Working with alerts
           - topic: alerts/event-notifications-configure.md
             navtitle: Configuring the integration with the Event Notifications service
-          - topic: alerts/alerts-config.md
+          - topic: alerts-config.md
             navtitle: Configuring alerts in Cloud Logs 
           - topic: alerts/cl-events-for-en.md
             navtitle: Event types
