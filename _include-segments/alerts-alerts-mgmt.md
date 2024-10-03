@@ -1,4 +1,4 @@
-## Access alerts management
+## Launch alerts management
 {: step}
 {: #alerts-config-1}
 
