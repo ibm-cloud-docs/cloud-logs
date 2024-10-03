@@ -21,10 +21,10 @@ Create an alert in {{site.data.keyword.logs_full_notm}} for early detection of a
 
 
 
-{{../_include-segments/alerts-prereq.md}}
+{{/_include-segments/alerts-prereq.md}}
 
 
-{{../_include-segments/alerts-alerts-mgmt.md}}
+{{/_include-segments/alerts-alerts-mgmt.md}}
 
 ## Choose the type of alert to configure
 {: #alerts-config-2}
