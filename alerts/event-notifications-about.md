@@ -121,5 +121,5 @@ When you configure an alert in {{site.data.keyword.en_full_notm}}, you define th
 - Subscriptions that define the alerts that are notified through a destination channel.
 
 For more information, see:
-- [Configuring {{site.data.keyword.en_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-alerts).
+- [Configuring {{site.data.keyword.en_full_notm}} resources](/docs/cloud-logs?topic=cloud-logs-event-notifications-alerts).
 - [Event Notifications relationship model](/docs/event-notifications?topic=event-notifications-en-relation).
