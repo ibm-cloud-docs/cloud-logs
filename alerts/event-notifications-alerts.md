@@ -27,7 +27,7 @@ To configure the {{site.data.keyword.en_full_notm}} instance to route event noti
 ## Prereqs
 {: #event-notifications-alerts-prereqs}
 
-- Learn [What is {{site.data.keyword.en_full_notm}}?](/docs/event-notifications?topic=event-notifications-en-about).
+- Read [What is {{site.data.keyword.en_full_notm}}?](/docs/event-notifications?topic=event-notifications-en-about).
 
 - Learn more about [Working with alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-about).
 
@@ -35,7 +35,7 @@ To configure the {{site.data.keyword.en_full_notm}} instance to route event noti
 {: #event-notifications-alerts-topic}
 {: step}
 
-Topics are based on a publish and subscription model. The topic subscribes to event data based on conditions that you configure. The topic publishes events. The {{site.data.keyword.en_short}} service handles the routing and delivering of alerts reliably to the correct destinations based on the subscriptions that you configure.
+Topics are based on a publish and subscription model. The topic subscribes to event data based on conditions that you configure. The {{site.data.keyword.en_short}} service handles the routing and delivering of alerts reliably to the correct destinations based on the subscriptions that you configure.
 - Each topic is created under a registered source.
 - Each topic can have its own set of rules, which routes the incoming payload to the respective topic.
 
