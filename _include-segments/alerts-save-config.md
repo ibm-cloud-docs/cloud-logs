@@ -1,19 +1,13 @@
-## Set a schedule and what log content to include
+## Save the alert configuration
+{: #alerts-config-7}
 {: step}
-{: #alerts-config-6}
-
 
 Complete the following steps:
 
-1. In the *Schedule* section, set a Schedule to control when this alert is enabled. You can choose specific days and times.
+1. Verify the alert.
 
-2. In the *Notification Content* section, define whether you want to include a sample log line or only some fields in the event that is triggered.
+    Click **Verify** to evaluate data to find out how many times the alert matched the criteria in the last 24 hours.
 
-    Choose specific JSON keys to include in the alert notification, or leave this blank to include the full log text in the alert message:
+    Verify evaluates data in the {{site.data.keyword.frequent-search}} pipeline only. If your alert is configured to trigger on data that is available in the {{site.data.keyword.monitoring}} pipeline, notice that this feature is not available.{: important}
 
-    - Option 1: Leave blank to include one log line that matches the filtering conditions of the alert.
-
-    - Option 2: Specify JSON keys to include selected fields in the format of key:value pairs. Notice that to be able to add fields, your log records must be in JSON format.
-
-    - Option 3: Specify a  JSON path as the filter.
-    
+2. Click **CREATE ALERT**.
