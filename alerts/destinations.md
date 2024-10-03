@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-03"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.logs_full_notm}} events
+# Notification channels
 {: #destinations}
 
 A destination in {{site.data.keyword.en_short}} defines the connectivity details for a notification channel.
