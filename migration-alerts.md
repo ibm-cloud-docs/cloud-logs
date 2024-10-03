@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-03"
 
 keywords:
 
@@ -69,7 +69,7 @@ To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the foll
 
 2. In IAM, define a service to service authorization between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance. For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 
-3. Configure an outbound integration in your {{site.data.keyword.logs_full_notm}} instance to connect it with the {{site.data.keyword.en_full_notm}} instance. For more information, see [Connecting to Event Notifications in the console](/docs/cloud-logs?topic=cloud-logs-event-notifications-events&interface=ui#event-notifications-enable-ui).
+3. Configure an outbound integration in your {{site.data.keyword.logs_full_notm}} instance to connect it with the {{site.data.keyword.en_full_notm}} instance. For more information, see [Connecting to Event Notifications in the console](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 
     This task creates a **source** definition in the {{site.data.keyword.en_full_notm}} instance, and an integration configuration in the {{site.data.keyword.logs_full_notm}} instance.
 

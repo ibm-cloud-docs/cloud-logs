@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-03"
 
 keywords:
 
@@ -39,26 +39,62 @@ A service to service authorization is used in the {{site.data.keyword.cloud_notm
 When an event of interest takes place in your {{site.data.keyword.logs_full_notm}} instance, {{site.data.keyword.logs_full_notm}} communicates with a connected {{site.data.keyword.en_short}} instance to forward a notification to a [supported destination](/docs/event-notifications?topic=event-notifications-supported-destinations).
 
 
+When you configure alerts in an {{site.data.keyword.logs_full_notm}} instance, consider the following information:
+- You can define different types of alerts such as standard alerts, flow alerts, and new value alerts. For information on the alert types that are supported, see [Alerts](/docs/cloud-logs?topic=cloud-logs-alerts&interface=ui#alert-types).
+- You can use the `Incidents` page to manage alerts that are triggered. For more information, see [Managing triggered alerts](/docs/cloud-logs?topic=cloud-logs-incidents).
+- Alerts are triggered through the {{site.data.keyword.en_full_notm}} service. You configure the notification channels and conditions that trigger the alert in the {{site.data.keyword.en_full_notm}} service.
+
+
+The following figure shows the high level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} service that you might configure:
+
+![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance](/images/alerts-cl-en-integration.svg "High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance"){: caption="Figure 1. High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance" caption-side="bottom"}
+
 ## Configuring alerts end to end
 {: #event-notifications-about-alerts-configure}
+
+To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the following steps:
+1. In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. If you do not currently use the service and have alerts configured in your {{site.data.keyword.at_full_notm}} instances or your {{site.data.keyword.la_full_notm}} instances, you must provision an instance of the {{site.data.keyword.at_full_notm}} service. For more information, see [Enabling event notifications for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events).
+
+2. In IAM, define a service to service authorization between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance. For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
+
+3. Configure an outbound integration in your {{site.data.keyword.logs_full_notm}} instance to connect it with the {{site.data.keyword.en_full_notm}} instance. For more information, see [Configuring the integration with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
+
+    This task creates a **source** definition in the {{site.data.keyword.en_full_notm}} instance, and an integration configuration in the {{site.data.keyword.logs_full_notm}} instance.
+
+4. Define your alerts in the {{site.data.keyword.logs_full_notm}} instance. Select the outbound integration through which you want to notify when the alert is triggered. For more information, see [Configuring alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-alerts-config).
+
+5. Configure the {{site.data.keyword.en_full_notm}} instance to route event notifications when an alert is triggered in {{site.data.keyword.logs_full_notm}} to your target destinations.
+
+    - Define 1 or more topics.
+
+        A topic defines the alert conditions that you want to group together.
+
+        For example, if you have multiple alert definitions in your {{site.data.keyword.logs_full_notm}} instance that notify through the same slack channel, you can configure these alerts within the same topic.
+
+        Another example, if you have multiple alert definitions in your {{site.data.keyword.logs_full_notm}} instance that notify through different slack channels, you must configure as many topics as slack channels you use, and include in a topic the alerts that notify through the same slack channel.
+
+    - Define 1 or more destinations.
+
+        A destination defines a notification channel that you can use to notify when an alert is triggered.
+
+        For more information on destinations, see [Supported destinations](/docs/event-notifications?topic=event-notifications-supported-destinations).
+
+    - Define 1 or more subscriptions.
+
+        A subscription links 1 topic with 1 destination.
+
+        You must add subscriptions to define the alerts configured in a topic are the ones notified through the destination selected in the subcription configuration.
+
+        A subscription correlates one topic with a notification channel.
+
+        You can have multiple subscriptions with the same topic so you can alert through multiple destination channels.
+
 
 The following image shows the relationship of components that are required for alerting:
 ![Relationship of components required for alerting](../images/event-notification-resources.svg "Relationship of components required for alerting"){: caption="Figure 1. Relationship of components required for alerting" caption-side="bottom"}
 
-To configure alerts, you must create the following resources:
-- One or more alert definitions that are configured in the {{site.data.keyword.logs_full_notm}} instance.
-- A service to service authorization between the {{site.data.keyword.logs_full_notm}} instance to {{site.data.keyword.en_short}} instance.
-- An outbound integration to the {{site.data.keyword.en_short}} instance from the {{site.data.keyword.logs_full_notm}} instance.
-- One or more topics that define the alerts that are monitored from the {{site.data.keyword.en_short}} instance.
-- One or more destinations that define the notification channels where events can be routed.
-- One ore more subscriptions that define the alerts that are notified through a destination channel.
 
-    A subscription correlates one topic with a notification channel.
-    You can have multiple subscriptions with the same topic so you can alert through multiple destination channels.
 
-For more information, see:
-- [Alerting](/docs/cloud-logs?topic=cloud-logs-alerts)
-- [What is {{site.data.keyword.en_full_notm}}?](/docs/event-notifications?topic=event-notifications-en-about).
 
 
 ## Configuring alerts in {{site.data.keyword.logs_full_notm}}
