@@ -16,4 +16,7 @@ Complete the following steps:
     - Option 2: Specify JSON keys to include selected fields in the format of key:value pairs. Notice that to be able to add fields, your log records must be in JSON format.
 
     - Option 3: Specify a  JSON path as the filter.
+
+When an alert is triggered, there are limitations to the amout of data that is included in the event. For more information on these limitations, see [Data size](https://test.cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-event-payload#event-payload-2).
+{: note}
     
