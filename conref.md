@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-03-11"
+  years:  2024
+lastupdated: "2024-10-03"
 
 keywords:
 
@@ -62,3 +62,27 @@ To save a view:
 
 
 
+
+
+
+
+
+## Prereqs
+{: #alerts-config-prereqs}
+
+- Learn about alerts in {{site.data.keyword.logs_full_notm}}. For more information, see [Alerting](/docs/cloud-logs?topic=cloud-logs-alerts).
+- Check that you have an [{{site.data.keyword.en_short}} instance](/catalog/services/event-notifications){: external} that is in the same account as your {{site.data.keyword.logs_full_notm}} instance and permisions to configure resources in the {{site.data.keyword.en_short}} instance.
+- Check that the outbound integration between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_short}} instance is configured. For more information, see [Configuring an outbound integration to connect](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
+
+
+
+## Choose the type of alert
+{: #alerts-config-1}
+{: step}
+
+Complete the following steps:
+
+1. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](/icons/icon_hamburger.svg) **> Resource list**.
+2. Select your instance of {{site.data.keyword.logs_full_notm}}.
+3. In the {{site.data.keyword.logs_full_notm}} navigation, click the **Alerts** icon ![Alerts icon](/icons/alerts.svg "Alerts") > **Alerts Management**.
+4. Click **New alert**.
