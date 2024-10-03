@@ -24,7 +24,7 @@ Create an alert in {{site.data.keyword.logs_full_notm}} for early detection of a
 {{../_include-segments/alerts-prereq.md}}
 
 
-{{../_include-segments/alerts-mgmt.md}}
+{{../_include-segments/alerts-alerts-mgmt.md}}
 
 ## Choose the type of alert to configure
 {: #alerts-config-2}
@@ -162,7 +162,7 @@ Complete the following steps:
 
 
 
-## Step 6. Set a schedule and what log content to include
+## Set a schedule and what log content to include
 {: #alerts-config-6}
 {: step}
 
