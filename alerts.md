@@ -62,7 +62,7 @@ Alerts follow a general workflow for how they are generated, triggered, and deli
 
 {{site.data.keyword.logs_full_notm}} provides 6 types of alerts that you can configure.
 
-For more information on how to configure alerts, see ![Alerts icon](../icons/alerts_icon.svg) [Configuring alerts](/docs/cloud-logs?topic=cloud-logs-alerts-config).
+For more information on how to configure alerts, see ![Alerts icon](icons/alerts_icon.svg) [Configuring alerts](/docs/cloud-logs?topic=cloud-logs-alerts-config).
 
 ### Standard alerts
 {: #alert-standard}

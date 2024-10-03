@@ -30,7 +30,7 @@ toc:
             navtitle: Parsing rules
           - topic: enrich.md
             navtitle: Enriching data
-          - topic: alerts/alerts.md
+          - topic: alerts.md
             navtitle: Alerting
           - topic: extensions.md
             navtitle: Extensions
