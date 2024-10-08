@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-08"
 
 keywords:
 
@@ -52,8 +52,7 @@ When you send data to an {{site.data.keyword.logs_full_notm}} instance:
 - If a user sends data too fast, ingestion is throttled.
 - If user uses all of the allowed daily ingestion limit, data that is received after that point is blocked and the data is dropped.
 
-For example, data is ingested by {{site.data.keyword.logs_full_notm}} as it is received. When the rate of data ingestion reaches 3 MiB per second, data is ingested at a slower rate. Data is dropped when data reaches 0.25 TB per day.
-Warnings are sent to the configured email address when the rate reaches the limit. Users also receive an email when data is dropped.
+
 
 Data in OpenSearch is calculated based on index size after compression.
 {: note}
