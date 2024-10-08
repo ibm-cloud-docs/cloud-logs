@@ -48,9 +48,7 @@ When you send data to an {{site.data.keyword.logs_full_notm}} instance:
 - Logs cannot be older than 24 hours.
 - Logs cannot be more than 4 hours into the future.
 
-{{site.data.keyword.logs_full_notm}} limits the data ingested by a service instance per day.
-- If a user sends data too fast, ingestion is throttled.
-- If user uses all of the allowed daily ingestion limit, data that is received after that point is blocked and the data is dropped.
+{{site.data.keyword.logs_full_notm}} limits the data ingested by a service instance per day. If a user sends data too fast, ingestion is throttled.
 
 
 
