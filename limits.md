@@ -48,12 +48,7 @@ When you send data to an {{site.data.keyword.logs_full_notm}} instance:
 - Logs cannot be older than 24 hours.
 - Logs cannot be more than 4 hours into the future.
 
-{{site.data.keyword.logs_full_notm}} limits the data ingested by a service instance per day. If a user sends data too fast, ingestion is throttled.
 
-
-
-Data in OpenSearch is calculated based on index size after compression.
-{: note}
 
 For a single ingestion request {{site.data.keyword.logs_full_notm}}, these limitations exist:
 
