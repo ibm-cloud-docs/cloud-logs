@@ -284,7 +284,6 @@ toc:
                 navtitle: Configuring alerts in Cloud Logs
               - topic: alerts-config-standard.md
                 navtitle: Standard alerts
-              - topic: alerts-config-time-relative.md
           - topic: alerts/event-notifications-alerts.md
             navtitle: Configuring Event Notifications 
           - topic: alerts/incidents.md
