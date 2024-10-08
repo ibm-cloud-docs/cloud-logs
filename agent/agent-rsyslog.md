@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-10-08"
 
 keywords:
 
@@ -100,9 +100,6 @@ Run the following command to start the agent if you want to receive the Syslog m
 <FLUENT-BIT-INSTALL-DIR>/bin/fluent-bit -c /etc/fluent-bit/fluent-bit.conf
 ```
 {: pre}
-
-Do not run the agent to receive the Syslog messages from localhost in TCP mode. Doing so results in recursive reading of logs.
-{: important}
 
 ## Step 3. Verify that logs are being delivered to your target destination
 {: #syslog-s3}
