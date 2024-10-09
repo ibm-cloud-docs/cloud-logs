@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -35,7 +35,7 @@ However, to view, create, edit, or delete a custom role, you must be assigned sp
 | Create custom roles | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
 | Update custom roles | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
 | Delete custom roles | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
-{: caption="Table 1. Actions for Role management service" caption-side="top"}
+{: caption="Actions for Role management service" caption-side="top"}
 
 ## Creating custom roles in the console
 {: #iam-custom-roles-2}

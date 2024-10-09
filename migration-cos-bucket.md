@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -44,7 +44,7 @@ When you configure archiving on an {{site.data.keyword.at_full_notm}} or {{site.
 
 The following figure shows the high level view of an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets that you might configure:
 
-![High-level view of an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets](/images/migration-bucket-logdna.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets" caption-side="bottom"}
+![High-level view of an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets](/images/migration-bucket-logdna.svg "Account overview of handling activity tracking events."){: caption="High-level view of an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets" caption-side="bottom"}
 
 
 ### Buckets in {{site.data.keyword.logs_full_notm}}
@@ -67,7 +67,7 @@ When you attach buckets to an {{site.data.keyword.logs_full_notm}} instance, con
 
 The following figure shows the high level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets that you might configure:
 
-![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets](/images/migration-bucket-logs.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets" caption-side="bottom"}
+![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets](/images/migration-bucket-logs.svg "Account overview of handling activity tracking events."){: caption="High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} buckets" caption-side="bottom"}
 
 ## Migrating the archiving configuration
 {: #migration-archive-config}

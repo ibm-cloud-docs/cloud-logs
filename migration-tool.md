@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -27,7 +27,7 @@ The migration tool migrates only configuration information. No data is migrated 
 {: important}
 
 
-![Overview of migrating to {{site.data.keyword.logs_full_notm}}](/images/migration-tool.png "Overview of migrating to {{site.data.keyword.logs_full_notm}}"){: caption="Figure 1. Overview of migrating to {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+![Overview of migrating to {{site.data.keyword.logs_full_notm}}](/images/migration-tool.png "Overview of migrating to {{site.data.keyword.logs_full_notm}}"){: caption="Overview of migrating to {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 
 ## Migration tool use cases

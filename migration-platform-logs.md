@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -32,7 +32,7 @@ With the release of the {{site.data.keyword.logs_routing_full_notm}} service and
 
 The following image shows the high-level view of how {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} are integrated so you can monitor and alert on platform logs.
 
-![Account overview of handling platform logs.](/images/migration-la-1.png "Account overview of handling platform logs."){: caption="Figure 1. Overview of handling platform logs." caption-side="bottom"}
+![Account overview of handling platform logs.](/images/migration-la-1.png "Account overview of handling platform logs."){: caption="Overview of handling platform logs." caption-side="bottom"}
 
 
 
@@ -44,7 +44,7 @@ Choose based on your requirements from any of the following options:
 |------------------------------------|--------------------|
 | Centralize platform logs           | Migrate {{site.data.keyword.la_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance |
 | Data locality required             | Migrate {{site.data.keyword.la_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances, replicating the current {{site.data.keyword.la_full_notm}} architecture |
-{: caption="Table 1. Migration scenarios"}
+{: caption="Migration scenarios"}
 
 Check the list of services that are supported in {{site.data.keyword.logs_routing_full_notm}} and generate platform logs. If you use {{site.data.keyword.cloud_notm}} services that generate platform logs that are not in that list, continue to use your {{site.data.keyword.la_full_notm}} instance until you verify you receive them in the {{site.data.keyword.logs_full_notm}} instance. For more information, see [Supported services](/docs/logs-router?topic=logs-router-cloud_services).{: important}
 
@@ -54,7 +54,7 @@ Check the list of services that are supported in {{site.data.keyword.logs_routin
 
 The following image shows a high-level view of the account after you migrate {{site.data.keyword.la_full_notm}} instances from multiple regions in the account into 1 instance of {{site.data.keyword.logs_full_notm}}:
 
-![High-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}](/images/migration-plat-logs-central.svg "Account overview of handling logs."){: caption="Figure 1. High-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+![High-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}](/images/migration-plat-logs-central.svg "Account overview of handling logs."){: caption="High-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 ## Migrating maintaing data locality
 {: #migration-platform-logs-options-2}
@@ -63,7 +63,7 @@ You can use the migration tool to migrate {{site.data.keyword.la_full_notm}} ins
 
 The following image shows a high-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}:
 
-![High-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}](/images/migration-plat-logs-many.svg "Account overview of handling logs."){: caption="Figure 1. High-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+![High-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}](/images/migration-plat-logs-many.svg "Account overview of handling logs."){: caption="High-level view of the account after {{site.data.keyword.la_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 
 ## Migration steps
@@ -130,9 +130,9 @@ Until you have validated the new architecture and you can remove the {{site.data
 
 For example, your validation configuration in the account should look like the following if you choose a central architecture:
 
-![High-level view of the account during validation of a centralize architecture."](/images/migration-platform-central-validation.svg "Account overview of handling logs."){: caption="Figure 1. High-level view of the account during validation of a centralize architecture" caption-side="bottom"}
+![High-level view of the account during validation of a centralize architecture."](/images/migration-platform-central-validation.svg "Account overview of handling logs."){: caption="High-level view of the account during validation of a centralize architecture" caption-side="bottom"}
 
 
 For example, your validation configuration in the account should look like the following if you chose a data locality architecture:
 
-![High-level view of the account during validation of a centralize architecture."](/images/migration-platform-many-validation.svg "Account overview of handling logs."){: caption="Figure 1. High-level view of the account during validation of a centralize architecture" caption-side="bottom"}
+![High-level view of the account during validation of a centralize architecture."](/images/migration-platform-many-validation.svg "Account overview of handling logs."){: caption="High-level view of the account during validation of a centralize architecture" caption-side="bottom"}

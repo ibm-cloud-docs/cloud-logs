@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -40,7 +40,7 @@ The following table lists the different S2S authorizations that you might need w
 | Authorize sending logs to a tenant | {{site.data.keyword.logs_routing_full}} | {{site.data.keyword.logs_full_notm}} |
 | Authorize access to the {{site.data.keyword.en_full_notm}} service | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.en_full_notm}} |
 | Authorize access to the {{site.data.keyword.messagehub_full}} service | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.messagehub_full}} |
-{: caption="Table 1. S2S authorizations."}
+{: caption="S2S authorizations."}
 
 For more information, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
 
@@ -61,7 +61,7 @@ The following table outlines the permissions that are needed on the target servi
 | View all authorizations that are configured in the account | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
 | Create authorizations | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
 | Delete authorizations | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
-{: caption="Table 2. Actions on the target service that are required to manage authorizations" caption-side="top"}
+{: caption="Actions on the target service that are required to manage authorizations" caption-side="top"}
 
 Users can only see authorizations that they configure in the account.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -38,7 +38,7 @@ The schema for a Fluent Bit configuration is divided into multiple sections.
 
 The following diagram shows the order in which sections are applied:
 
-![Fluent Bit processing order of sections](../images/logging-agent-plugin-flow.svg "Fluent Bit processing order of sections"){: caption="Figure 1. Fluent Bit processing order of sections" caption-side="bottom"}
+![Fluent Bit processing order of sections](../images/logging-agent-plugin-flow.svg "Fluent Bit processing order of sections"){: caption="Fluent Bit processing order of sections" caption-side="bottom"}
 
 
 ### SERVICE section

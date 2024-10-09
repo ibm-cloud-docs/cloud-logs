@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -19,7 +19,7 @@ After you enable notifications to {{site.data.keyword.en_full_notm}} from {{site
 
 
 The following image shows the relationship of components that are required for alerting:
-![Relationship of components required for alerting](../images/event-notification-resources.svg "Relationship of components required for alerting"){: caption="Figure 1. Relationship of components required for alerting" caption-side="bottom"}
+![Relationship of components required for alerting](../images/event-notification-resources.svg "Relationship of components required for alerting"){: caption="Relationship of components required for alerting" caption-side="bottom"}
 
 To configure the {{site.data.keyword.en_full_notm}} instance to route event notifications when an alert is triggered in {{site.data.keyword.logs_full_notm}} to your target destinations, you must complete the following steps:
 

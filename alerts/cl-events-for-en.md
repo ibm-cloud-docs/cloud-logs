@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -46,7 +46,7 @@ The following table lists the event types that {{site.data.keyword.logs_full_not
 | `com.ibm.cloud.logs.SpikeAnomaly` | Spike Anomaly event |
 | `com.ibm.cloud.logs.DailyReport` | Daily Report event|
 | `com.ibm.cloud.logs.DataUsage` | Data Usage event |
-{: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
+{: caption="Actions that generate event notifications" caption-side="bottom"}
 
 ## Event subtypes
 {: #cl-events-for-en-subtypes}
@@ -57,4 +57,4 @@ The following table lists the {{site.data.keyword.logs_full_notm}} subtypes per 
 |-----------------------------|---------|
 | `AlertTriggered`  | The alert is triggered. |
 | `AlertResolved` | The alert is resolved. |
-{: caption="Table 2. Subtypes for actions that generate event notifications" caption-side="bottom"}
+{: caption="Subtypes for actions that generate event notifications" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -42,7 +42,7 @@ Each pipeline offers different features that you can use to work with the data.
 | Re-index logs for further analysis        | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 | Search logs in {{site.data.keyword.cos_full_notm}}        | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 | Store logs in {{site.data.keyword.cos_full_notm}}        | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
-{: caption="Table 1. Features available in each data pipeline" caption-side="top"}
+{: caption="Features available in each data pipeline" caption-side="top"}
 
 ### Using the {{site.data.keyword.tco-optimizer}}
 {: #about-tco-use}
@@ -57,7 +57,7 @@ You can exclude data by defining a TCO policy that is applied immediately after 
 
 When you configure parsing rules that add metadata, drop data, or replace data in a log record, or when you enrich log data, the log line that is archived is the log line modified.
 
-![The image shows the different available data pipelines.](images/tco_optimizer.png){: caption="Figure 1. Available data pipelines." caption-side="bottom"}
+![The image shows the different available data pipelines.](images/tco_optimizer.png){: caption="Available data pipelines." caption-side="bottom"}
 
 The following table outlines core features by data pipeline for data ingested after TCO policies are applied:
 
@@ -71,7 +71,7 @@ The following table outlines core features by data pipeline for data ingested af
 | Templating                 | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
 | Anomaly detection          | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
 | Indexing                   | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Table 2. Core features by data pipeline for data ingested after TCO policies are applied" caption-side="top"}
+{: caption="Core features by data pipeline for data ingested after TCO policies are applied" caption-side="top"}
 
 ### {{site.data.keyword.cos_full_notm}} requirement
 {: #about-cos-use}

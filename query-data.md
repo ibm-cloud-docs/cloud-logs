@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-06"
+  years:  2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -91,7 +91,7 @@ The following are the limitations placed on queries.
 | Parquet files | Scanned	up to 500K files |
 | Clone results |	Up to 1M results while running Archive Query |
 | Time out |	Up to 5 minutes of query execution |
- {: caption="Table 1. Archive query limitations" caption-side="bottom"}
+ {: caption="Archive query limitations" caption-side="bottom"}
 
 You also need to be aware of the following when querying archived data:
 

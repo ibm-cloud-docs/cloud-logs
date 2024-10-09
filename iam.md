@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -43,7 +43,7 @@ Use the following table to identify the **Account management** **{{site.data.key
 | Administrator            | As an administrator, you can perform all platform actions based on the resource where the role is being assigned, including assigning access policies to other users. |
 | Service Configuration Reader | As a service configuration reader you can read the service configuration for governance management |
 | Key Manager | As a key manager you can manage resource keys, for example creating a new resource key for a resource instance |
-{: caption="Table 1. IAM platform roles for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+{: caption="IAM platform roles for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
 
 
 ## {{site.data.keyword.cloud_notm}} service roles
@@ -58,7 +58,7 @@ The following table lists the service roles available in {{site.data.keyword.clo
 | Reader             | As a reader, you can perform read-only actions on the data such as querying logs and viewing dashboards. |
 | Sender             | As a sender, you can send logs to your {{site.data.keyword.logs_full_notm}} service instance - but not query or tail logs. This role is meant to be used by agents and routers sending logs. |
 | Data Access Reader | With data access reader permissions, you can access log data that is defined by specific rules. These rules are set using the Data Access Rule attribute. |
-{: caption="Table 2. IAM service roles for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+{: caption="IAM service roles for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
 
 
 ## {{site.data.keyword.cloud_notm}} resource attributes with dynamic values
@@ -69,7 +69,7 @@ The following table lists the available {{site.data.keyword.cloud_notm}} resourc
 | Resource attribute           | Value  |
 |--------------------------|------------------------|
 | Data Access Rule | Specify which rule to use to restrict access to logs. This attribute must be associated with the Data Access Reader service role. |
-{: caption="Table 3. Resource attributes for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
+{: caption="Resource attributes for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
 
 ## IAM platform actions
 {: #iam-platform-actions}
@@ -96,7 +96,7 @@ You can assign access for the following platform actions.
 | `iam.service.read` | View services. |
 | `iam.role.assign` | Assign roles to policies. |
 | `iam.role.read` | View roles. |
-{: caption="Table 4. IAM platform actions" caption-side="top"}
+{: caption="IAM platform actions" caption-side="top"}
 
 
 ## IAM service actions

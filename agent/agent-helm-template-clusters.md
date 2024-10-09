@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -225,7 +225,7 @@ The following table contains a list of the parameters that you can configure in 
 | `loggingLevel` | The type of logs that should be reported by the agent itself. Valid values are: `debug`, `info`, or `error`. | Required | `info` |
 | `additionalMetadata` | A list of key/value pair tags that can be added as metadata to every log line. \n For more information, see [additionalMetadata](#agent-helm-template-clusters-deploy-chart-options-additional-metadata). | Optional | No default value  |
 | `iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens.  \n For more information, see [iamEnvironment](agent-helm-template-clusters-chart-options-iam-env). | Required | `Production` |
-{: caption="Table 1. Helm chart parameters" caption-side="bottom"}
+{: caption="Helm chart parameters" caption-side="bottom"}
 
 ## env.iamMode
 {: #agent-helm-template-clusters-chart-options-iammode}

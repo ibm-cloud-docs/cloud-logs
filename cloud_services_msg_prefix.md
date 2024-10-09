@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -45,7 +45,7 @@ The following table lists message ID prefixes for the [{{site.data.keyword.vpc_f
 |-----------------------------------------------------|-------------------------------------------|---------------------------|------------------|
 | [Dedicated host](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances)  | `dedicated-host`    | `<crn-service-name>.#####<severity>` | `dedicated-host.00001` |
 | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs)  | `is.flow-log-collector`                   | `<crn-service-name>.#####<severity>` | `is.flow-log-collector.00001E` |
-{: caption="Table 1. VPC infrastructure service" caption-side="top"}
+{: caption="VPC infrastructure service" caption-side="top"}
 
 
 
@@ -59,4 +59,4 @@ The following table lists message ID prefixes for the developer tools services t
 | Service                                             | CRN service name  \n `crn-service-name`  | Message ID format      | Sample |
 |-----------------------------------------------------|-------------------------------------------|---------------------------|------------------|
 | {{site.data.keyword.en_full}}  | `event-notifications`    | `<crn-service-name>.#####<severity>` | `event-notifications.00001E` |
-{: caption="Table 2. Developer tools services" caption-side="top"}
+{: caption="Developer tools services" caption-side="top"}

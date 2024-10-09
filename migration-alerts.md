@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -100,7 +100,7 @@ To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the foll
 
 The following figure shows the high level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} service that you might configure:
 
-![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance](/images/alerts-cl-en-integration.svg "High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance"){: caption="Figure 1. High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance" caption-side="bottom"}
+![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance](/images/alerts-cl-en-integration.svg "High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance"){: caption="High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance" caption-side="bottom"}
 
 
 

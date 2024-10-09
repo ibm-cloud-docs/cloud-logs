@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -24,7 +24,7 @@ Review the following sample architecture for {{site.data.keyword.logs_full_notm}
 
 {{site.data.keyword.logs_full_notm}} is a multi-tenant, regional service that is available in {{site.data.keyword.cloud_notm}}. With {{site.data.keyword.logs_full_notm}}, you can analyze, process, store, and query your logs. See [List of supported locations](/docs/cloud-logs?topic=cloud-logs-regions).
 
-![A diagram that shows a sample {{site.data.keyword.logs_full_notm}} architecture.](images/architecture-workload-isolation.drawio.svg "{{site.data.keyword.logs_full_notm}} architecture sample."){: caption="Figure 1. {{site.data.keyword.logs_full_notm}} sample architecture" caption-side="bottom"}
+![A diagram that shows a sample {{site.data.keyword.logs_full_notm}} architecture.](images/architecture-workload-isolation.drawio.svg "{{site.data.keyword.logs_full_notm}} architecture sample."){: caption="{{site.data.keyword.logs_full_notm}} sample architecture" caption-side="bottom"}
 
 The following sections provide details about specific sections of the architecture.
 
@@ -67,7 +67,7 @@ Storage components store data used by {{site.data.keyword.logs_full_notm}}.
 | {{site.data.keyword.messagehub_full}} | You can send logs from {{site.data.keyword.logs_full_notm}} to an {{site.data.keyword.messagehub_full}} topic.  |
 | {{site.data.keyword.en_full_notm}} | You can use {{site.data.keyword.en_full_notm}} to notify your operators or other systems about {{site.data.keyword.logs_full_notm}} alerts. For more information, see [Enabling event notifications for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events). |
 | {{site.data.keyword.iamlong}} | To authenticate requests to the service and authorize user actions, {{site.data.keyword.logs_full_notm}} implements platform and service access roles in {{site.data.keyword.iamshort}} (IAM). For more information about required IAM permissions to work with the service, see [Managing access for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-iam).  \n. \n {{site.data.keyword.logs_full_notm}} accesses IAM through {{site.data.keyword.cloud_notm}} public network. |
-{: caption="Table 1. {{site.data.keyword.logs_full_notm}}  integration with other {{site.data.keyword.cloud_notm}} services." caption-side="top"}
+{: caption="{{site.data.keyword.logs_full_notm}}  integration with other {{site.data.keyword.cloud_notm}} services." caption-side="top"}
 {: summary="The first column is the service. The second column is a description of the service."}
 
 ## Workload isolation

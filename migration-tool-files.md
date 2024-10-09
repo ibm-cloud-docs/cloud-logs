@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -79,7 +79,7 @@ Files are written with details on the current resources.
 | Screens | `migration-tool/tmp/accountID/instanceID/screens.json`|
 | Parsing rules | `migration-tool/tmp/accountID/instanceID/parsing_rules_summary.json` |
 | Archive configuration | `migration-tool/tmp/accountID/instanceID/archive_summary.json` |
-{: caption="Table 1. Resource temporary files" caption-side="bottom"}
+{: caption="Resource temporary files" caption-side="bottom"}
 
 
 
@@ -96,7 +96,7 @@ Files are written with details on the current resources.
 | `migration-tool/cl/accountID/iam_users_summary.json` | Information on users that need to be migrated |
 | `migration-tool/cl/accountID/platform_roles_map.json` | Information about how prefefined IAM platform roles are mapped |
 | `migration-tool/cl/accountID/service_roles_map.json` | Information about how predefined IAM service roles are mapped |
-{: caption="Table 2. Exception report locations" caption-side="bottom"}
+{: caption="Exception report locations" caption-side="bottom"}
 
 ## Exception reports
 {: #migration-ex-report}
@@ -107,7 +107,7 @@ The tool generates exception reports with information on resources that need att
 |-----------|-------------|
 | `migration-tool/cl/accountID/exceptions_report.json` | Exception report for an {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance |
 | `migration-tool/cl/accountID/iam_exception_report.json` | Exception report for {{site.data.keyword.iamshort}} resources |
-{: caption="Table 3. Exception report locations" caption-side="bottom"}
+{: caption="Exception report locations" caption-side="bottom"}
 
 At the instance level, you can also get the `migration-tool/cl/accountID/instanceID/error.txt` file that indicates issues that have been found when running the migration tool.
 {: note}
@@ -125,7 +125,7 @@ The Migration tool generates Terraform files that can be used to create more ins
 | `migration-tool/cl/accountID/instanceID/la/payloads/` | Directory that includes JSON files with the payload that is used to create the resources in an {{site.data.keyword.logs_full_notm}} instance |
 | `migration-tool/cl/accountID/manual-tf-files/iam-tf-files/` | Directory for Terraform files to recreate {{site.data.keyword.iamshort}} resources |
 | `migration-tool/cl/accountID/manual-tf-files/event-notification-tf-files` | Directory for Terraform files to recreate {{site.data.keyword.en_full_notm}} resources |
-{: caption="Table 4. Terraform file locations" caption-side="bottom"}
+{: caption="Terraform file locations" caption-side="bottom"}
 
 
 
