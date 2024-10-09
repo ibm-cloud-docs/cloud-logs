@@ -16,8 +16,9 @@ subcollection: cloud-logs
 # Understanding indexing and field mapping
 {: #indexing_mapping}
 
-To best query your logs, it is important to understand how {{site.data.keyword.logs_full_notm}} indexes your data after it is analyzed.
+To best query your logs in {{site.data.keyword.frequent-search}}, it is important to understand how {{site.data.keyword.logs_full_notm}} indexes your data after it is analyzed.
 {: shortdesc}
+
 
 Indexing logs lets you quickly retrieve matching by logs using:
 
