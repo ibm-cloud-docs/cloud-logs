@@ -125,6 +125,8 @@ toc:
             navtitle: Managing instances in the Observability UI
           - topic: instance-remove.md
             navtitle: Deleting an instance
+          - topic: instance-reclaim.md
+            navtitle: Recovering a deleted instance
           - topic: terraform-setup.md
             navtitle: Using Terraform
       - topicgroup:
