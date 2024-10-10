@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -82,7 +82,7 @@ Review following table for more information about event notification properties.
 | `notification_id` | The identifier created by {{site.data.keyword.en_short}}. |
 | `source` | The Cloud Resource Name (CRN) that uniquely identifies your {{site.data.keyword.logs_full_notm}} service instance. |
 | `type` | The combination of the [type of event](#event-notifications-list) that triggered a notification and The subtype that corresponds with the [type of event](#event-notifications-list) that triggered a notification. |
-{: caption="Table 1. Properties in an event notification payload" caption-side="bottom"}
+{: caption="Properties in an event notification payload" caption-side="bottom"}
 
 
 ## Data Size
@@ -98,7 +98,7 @@ In an event, the following lengths apply:
 | data.alert_definition.name | 100 |
 | data.alert_definition.description | 100 |
 | data.alert_definition.query_statement |	100|
-{: caption="Table 2. Data size" caption-side="bottom"}
+{: caption="Data size" caption-side="bottom"}
 
 
 Each field in the payload has a specific size. If any field exceeds its maximum number of characters, the payload will be truncated.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -60,7 +60,7 @@ The following table lists the options that you get to configure this type of ale
 | `More Than`  `[*]`   | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours, 36 hours |
 | `Less Than`          | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours, 36 hours |
 | `More Than Usual`    | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours |
-{: caption="Table 1. Standard alert conditions" caption-side="bottom"}
+{: caption="Standard alert conditions" caption-side="bottom"}
 
 `[*]`When the alert is set to `More than`, you can select an Evaluation Window type that defines the frequency to evaluate the filtering criteria. Choose one of the following options:
 
@@ -92,4 +92,3 @@ The following table lists the options that you get to configure this type of ale
 
 
 {{/_include-segments/alerts-next-steps.md}}
-

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -38,7 +38,7 @@ Public endpoints can be accessed from the public internet.
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.ingress.us-south.logs.cloud.ibm.com` |
 | North America  | Washington (`us-east`) | `<service-instance-guid>.ingress.us-east.logs.cloud.ibm.com` |
 | South America  | Sao Paulo (`br-sao`) | `<service-instance-guid>.ingress.br-sao.logs.cloud.ibm.com` |
-{: caption="Table 1. List of {{site.data.keyword.logs_full_notm}} ingress endpoints" caption-side="top"}
+{: caption="List of {{site.data.keyword.logs_full_notm}} ingress endpoints" caption-side="top"}
 
 ## Private endpoints
 {: #ingress-private-endpoints}
@@ -57,7 +57,7 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.ingress.private.us-south.logs.cloud.ibm.com` |
 | North America  | Washington (`us-east`) | `<service-instance-guid>.ingress.private.us-east.logs.cloud.ibm.com` |
 | South America  | Sao Paulo (`br-sao`) | `<service-instance-guid>.ingress.private.br-sao.logs.cloud.ibm.com` |
-{: caption="Table 2. List of {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
+{: caption="List of {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
 
 
 When connecting to a private endpoint using a [VPE](/docs/cloud-logs?topic=cloud-logs-vpe-connection&interface=cli), use port 443. When connecting to a private endpoint using a [CSE](/docs/account?topic=account-service-endpoints-overview), use port 3443.

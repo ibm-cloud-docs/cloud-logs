@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -27,7 +27,7 @@ subcollection: cloud-logs
 
 Alerts follow a general workflow for how they are generated, triggered, and delivered to users.
 
-![Alerting in {{site.data.keyword.logs_full_notm}}](../images/alert-overview.svg "Alerting in {{site.data.keyword.logs_full_notm}}"){: caption="Figure 1. Alerting in {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+![Alerting in {{site.data.keyword.logs_full_notm}}](../images/alert-overview.svg "Alerting in {{site.data.keyword.logs_full_notm}}"){: caption="Alerting in {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 1. Set alert rules
 

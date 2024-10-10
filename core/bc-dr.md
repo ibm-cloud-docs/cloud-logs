@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -34,7 +34,7 @@ For more information about your responsibilities when you are using {{site.data.
 |---|---|
 |  RPO |  Within 4 hours |
 |  RTO |  Within 24 hours |
-{: caption="Table 1. RPO and RTO for {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+{: caption="RPO and RTO for {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 {{site.data.keyword.logs_full_notm}} regularly backups the metadata in each region as follows:
 

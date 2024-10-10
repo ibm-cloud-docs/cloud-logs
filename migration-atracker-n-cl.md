@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -21,7 +21,7 @@ You can use the Migration tool to migrate {{site.data.keyword.at_full_notm}} ins
 
 The following image shows a high-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}:
 
-![High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}](/images/migration-atracker-many.svg "Account overview of handling activity tracking events."){: caption="Figure 1. High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+![High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}](/images/migration-atracker-many.svg "Account overview of handling activity tracking events."){: caption="High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 ## Scenario
 {: #migration-atracker-n-cl-scenario}

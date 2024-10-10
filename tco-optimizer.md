@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -43,7 +43,7 @@ When you configure TCO policies, the selected priority determines the TCO pipeli
 | `Medium` | {{site.data.keyword.monitoring}} |
 | `Low` | {{site.data.keyword.compliance}} |
 | `Blocked` | `[*]` |
-{: caption="Table 1. Mapping of policy priority to TCO pipeline" caption-side="bottom"}
+{: caption="Mapping of policy priority to TCO pipeline" caption-side="bottom"}
 {: #tco_mapping}
 
 `[*]` Logs matching policies with the `Blocked` priority are dropped and are not sent to any TCO pipeline.

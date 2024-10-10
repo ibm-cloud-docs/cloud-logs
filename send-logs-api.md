@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-05"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -28,7 +28,7 @@ The following table outlines the endpoint details:
 | `HTTP Method`  | `POST` |
 | Header `Content-Type` | `application/json`|
 | Header `Authorization` | `Bearer $IAM_TOKEN` |
-{: caption="Table 1. Singles ingestion endpoint details" caption-side="top"}
+{: caption="Singles ingestion endpoint details" caption-side="top"}
 
 Where
 
@@ -56,7 +56,7 @@ The following table outlines the JSON objects that you can include per log line 
 | `methodName`	     | `string`      | No              | |
 | `threadId`         | `string`	     | No              | |
 | `hiResTimestamp`   | `string`      | No              | UTC nanoseconds |
-{: caption="Table 2. Array of JSON objects" caption-side="top"}
+{: caption="Array of JSON objects" caption-side="top"}
 
 If you do not specify `severity`, logs are assigned the severity of `1 – Debug`.
 {: note}

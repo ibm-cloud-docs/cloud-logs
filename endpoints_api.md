@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -48,7 +48,7 @@ Public endpoints can be accessed from the public internet.
 | North America  | Washington (`us-east`) | `dashboard.us-east.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
 | South America  | Sao Paulo (`br-sao`) | `<service-instance-guid>.api.br-sao.logs.cloud.ibm.com` | Query logs and manage the instance |
 | South America  | Sao Paulo (`br-sao`) | `dashboard.br-sao.logs.cloud.ibm.com/<service-instance-guid>` | Access to the dashboard |
-{: caption="Table 1. List of {{site.data.keyword.logs_full_notm}} public endpoints" caption-side="top"}
+{: caption="List of {{site.data.keyword.logs_full_notm}} public endpoints" caption-side="top"}
 
 These endpoints are proxied using {{site.data.keyword.cis_full}}, which uses IP address described in [CIS allowlisted IP addresses](/docs/cis?topic=cis-cis-allowlisted-ip-addresses).
 
@@ -69,7 +69,7 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 | North America  | Dallas (`us-south`) | `<service-instance-guid>.api.private.us-south.logs.cloud.ibm.com` | Query logs and manage the instance |
 | North America  | Washington (`us-east`) | `<service-instance-guid>.api.private.us-east.logs.cloud.ibm.com` | Query logs and manage the instance |
 | South America  | Sao Paulo (`br-sao`) | `<service-instance-guid>.api.private.br-sao.logs.cloud.ibm.com` | Query logs and manage the instance |
-{: caption="Table 2. List of {{site.data.keyword.logs_full_notm}} private endpoints" caption-side="top"}
+{: caption="List of {{site.data.keyword.logs_full_notm}} private endpoints" caption-side="top"}
 
 
 When connecting to a private endpoint using a [VPE](/docs/cloud-logs?topic=cloud-logs-vpe-connection&interface=cli), use port 443. When connecting to a private endpoint using a [CSE](/docs/account?topic=account-service-endpoints-overview), use port 3443.

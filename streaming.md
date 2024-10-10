@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -25,7 +25,7 @@ When you stream data to data lakes, other analysis tools, or other SIEM tools, y
 
 For example, when you enable streaming on an {{site.data.keyword.logs_full}} instance, you configure {{site.data.keyword.logs_full}} to send data to an {{site.data.keyword.messagehub}} instance. Then, you can configure Kafka Connect to consume the data and forward it to your destination tool. Once the data is persisted within {{site.data.keyword.messagehub}}, you can configure any application or service to create a subscription and take action on the log data being streamed.
 
-![Streaming example with {{site.data.keyword.messagehub}}](images/logs_streams.svg "Streaming examples with {{site.data.keyword.messagehub}}"){: caption="Figure 1. Streaming example with {{site.data.keyword.messagehub}}" caption-side="bottom"}
+![Streaming example with {{site.data.keyword.messagehub}}](images/logs_streams.svg "Streaming examples with {{site.data.keyword.messagehub}}"){: caption="Streaming example with {{site.data.keyword.messagehub}}" caption-side="bottom"}
 
 
 If you have any regulatory requirement for data residency and compliance needs, you must control the location where {{site.data.keyword.logs_full_notm}}, {{site.data.keyword.messagehub}}, Kafka Connect and the destination tool are available.
@@ -56,4 +56,4 @@ The following {{site.data.keyword.atracker_short}} events are generated when you
 |--------|-------------|-------------|
 | `logs.logs-stream-setup.get` | reader | This event is generated when details about a specific streaming configuration between {{site.data.keyword.logs_full_notm}} to {{site.data.keyword.messagehub}} is retrieved. |
 | `logs.logs-stream-setup.list` | reader | This event is generated when a list of all streaming configurations between {{site.data.keyword.logs_full_notm}} to {{site.data.keyword.messagehub}} is requested. |
-{: caption="Table 1. Events generated when configuring streaming" caption-side="bottom"}
+{: caption="Events generated when configuring streaming" caption-side="bottom"}

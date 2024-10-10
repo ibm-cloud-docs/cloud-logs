@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -107,7 +107,7 @@ Complete the following steps:
     | `env.ingestionPort` | the ingress endpoint port \nPublic ingress endpoint = `443`\nPrivate ingress endpoint(VPE) = `443`\n Private ingress endpoint(CSE) = `3443` |
     | `iamMode` | `TrustedProfile` or `IAMAPIKey` based on the authentication method chosen in [Step 1](#agent-helm-os-deploy-deploy-step1) |
     | `trustedProfileID` | If `iamMode` is `TrustedProfile` then provide the Trusted Profile ID, otherwise it's not required (for example: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` ) |
-    {: caption="Table 1. Helm chart required parameters" caption-side="bottom"}
+    {: caption="Helm chart required parameters" caption-side="bottom"}
 
 ## Step 3. Install the Helm chart
 {: #agent-helm-os-deploy-deploy-step3a}

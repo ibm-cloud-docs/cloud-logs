@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-13"
+  years:  2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -33,7 +33,7 @@ The following table lists the minimum policies that a user must have to be able 
 |--------------------------------------|---------------------------|---------------------|
 | `{{site.data.keyword.logs_full_notm}}` | Platform role: Viewer     | Allows the user to view the list of service instances in the Observability Logging Instances dashboard. |
 | `{{site.data.keyword.logs_full_notm}}` | Service role: Reader      | Allows the user to launch the UI and view logs.    |
-{: caption="Table 1. IAM policies" caption-side="top"}
+{: caption="IAM policies" caption-side="top"}
 
 For more information on how to configure these policies for a user, see [Granting permissions to a user to view logs](/docs/cloud-logs?topic=cloud-logs-iam-assign-access&interface=ui).
 

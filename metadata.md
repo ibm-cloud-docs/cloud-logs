@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -33,7 +33,7 @@ The following are the application names based on the log source:
 | Platform logs | `ibm-platform-log`|
 | {{site.data.keyword.openshiftlong_notm}} logs | `kubernetes.namespace_name`  |
 | {{site.data.keyword.containerlong_notm}} logs | `kubernetes.namespace_name` |
-{: caption="Table 1. Application names" caption-side="bottom"}
+{: caption="Application names" caption-side="bottom"}
 
 
 ## Subsystem name
@@ -51,4 +51,4 @@ The following are the subsystem names based on the log source:
 | VPC Platform logs | `is:resourceType`|
 | {{site.data.keyword.openshiftlong_notm}} logs | `kubernetes.container_name`  |
 | {{site.data.keyword.containerlong_notm}} logs | `kubernetes.container_name`  |
-{: caption="Table 2. Subsystem names" caption-side="bottom"}
+{: caption="Subsystem names" caption-side="bottom"}

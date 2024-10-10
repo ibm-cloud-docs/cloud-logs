@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-19"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -22,7 +22,7 @@ You can use the migration tool to help you migrate {{site.data.keyword.at_full_n
 
 The following image shows a high-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}.
 
-![High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}](/images/migration-atracker-central.svg "Account overview of activity tracking event hanlding."){: caption="Figure 1. High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+![High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}](/images/migration-atracker-central.svg "Account overview of activity tracking event hanlding."){: caption="High-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into 1 instance of {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 ## Scenario
 {: #migration-atracker-1-cl-scenario}

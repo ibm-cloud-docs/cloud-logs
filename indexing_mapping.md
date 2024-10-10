@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-13"
+  years:  2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -14,10 +14,11 @@ subcollection: cloud-logs
 
 
 # Understanding indexing and field mapping
-{: #index-field-map}
+{: #indexing_mapping}
 
-To best query your logs, it is important to understand how {{site.data.keyword.logs_full_notm}} indexes your data after it is analyzed.
+To best query your logs in {{site.data.keyword.frequent-search}}, it is important to understand how {{site.data.keyword.logs_full_notm}} indexes your data after it is analyzed.
 {: shortdesc}
+
 
 Indexing logs lets you quickly retrieve matching by logs using:
 
@@ -28,7 +29,8 @@ Indexing logs lets you quickly retrieve matching by logs using:
 It is recommended to serialize your logs as JSON to get maximum value from {{site.data.keyword.logs_full_notm}} analytics features. See [Configuring unstructured text into JSON](/docs/cloud-logs?topic=cloud-logs-parse-rule&interface=ui) for more information about parsing unstructured logs to JSON.
 {: tip}
 
-For a service instance, the daily default limit of indexed fields is set to 1000. Having too many fields in your index can lead to a mapping problem. The daily default limit of 1000 fields exists to avoid search and performance degradation.
+For a service instance, the daily default limit of indexed fields is set to 3000. Having too many fields in your index can lead to a mapping problem. The daily default limit of 3000 fields exists to avoid search and performance degradation.
+{: note}
 
 You can find out how many indexed fields you have used in **Usage** in the **Mapping stats** section.
 {: tip}
@@ -68,7 +70,7 @@ Object
 
 Consider the following when querying data:
 
-* {{site.data.keyword.logs_full_notm}} has a default limit of 1000 mapped fields. You can view your team's mapped field statistics under **Usage** section ![Usage icon](/icons/usage.svg "Usage") > **Mapping stats**.
+* {{site.data.keyword.logs_full_notm}} has a default limit of 3000 indexed fields per instance per day. You can view your team's mapped field statistics under **Usage** section ![Usage icon](/icons/usage.svg "Usage") > **Mapping stats**.
 
 * Explicit mapping is supported for timestamps and geopoints. Appending `_timestamp` or `_geopoint` to your field name will map it respectively as a date or geopoint. For example, a field named `duration_timestamp` is mapped as a date.
 
@@ -87,4 +89,3 @@ Consider the following when querying data:
    * Text, Object, Date, or Geopoint
    * Keyword
    * Numeric
-

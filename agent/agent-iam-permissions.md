@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -58,7 +58,7 @@ Use the appropriate command for the type of identity:
 | User account      | `ibmcloud iam user-policy-create <username> --roles Sender --service-name logs` |
 | Service ID        | `ibmcloud iam service-policy-create <serviceID> --roles Sender --service-name logs` |
 | Trusted profile   | `ibmcloud iam tp-policy-create <trustedProfile> --roles Sender --service-name logs` |
-{: caption="Table 1. Command to grant IAM permissions by type of identity" caption-side="top"}
+{: caption="Command to grant IAM permissions by type of identity" caption-side="top"}
 
 Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
 {: tip}
@@ -79,7 +79,7 @@ Use the appropriate command for the type of identity:
 | User account      | `ibmcloud iam user-policy-create <username> --roles Writer --service-name logs` |
 | Service ID        | `ibmcloud iam service-policy-create <serviceID> --roles Writer --service-name logs` |
 | Trusted profile   | `ibmcloud iam tp-policy-create <trustedProfile> --roles Writer --service-name logs` |
-{: caption="Table 1. Command to grant IAM permissions by type of identity" caption-side="top"}
+{: caption="Command to grant IAM permissions by type of identity" caption-side="top"}
 
 Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
 {: tip}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -78,7 +78,7 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 | Operator               | `crn:v1:bluemix:public:logs::::serviceRole:Operator`      |
 | Editor                 | `crn:v1:bluemix:public:logs::::serviceRole:Editor`        |
 | Administrator          | `crn:v1:bluemix:public:logs::::serviceRole:Administrator` |
-{: caption="Table 2. Role ID values for API use" caption-side="bottom"}
+{: caption="Role ID values for API use" caption-side="bottom"}
 
 The following example is for assigning the `Viewer` role for {{site.data.keyword.logs_full_notm}}:
 
