@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-10"
 
 keywords:
 
@@ -25,6 +25,18 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
+
+## 10 October 2024
+{: #migration-oct1024}
+
+The migration tool plug-in v0.1.23 is available.
+:   Updates include:
+
+    * Enhanced query mapping to add mappings for Kubernetes fields: `node`, `pod`, `namespace`, and `cluster_name` to `kubernetes.node_name`, `kubernetes.pod_name`, `kubernetes.namespace_name`, `kubernetes.cluster_name`.
+
+    * Add support to automatically migrate IAM resources, users, serviceIds, trusted profiles and access groups per instance.
+
+    * Fixes a bug where alerts were failing to create properly if an alert encountered a problem.
 
 ## 2 October 2024
 {: #migration-oct0224}
