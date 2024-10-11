@@ -48,6 +48,12 @@ When you search in {{site.data.keyword.frequent-search}}, log records that inclu
 
 If you have a data bucket associated to the instance, you can search logs through **All Logs**. You can search by using a free text query or by using key:value pairs.
 
+## Alerting
+{: #query-mapping-exceptions_alert}
+
+Alerting is not affected by data mapping exceptions and will continue to be triggered as normal.
+
+
 ## Fixing fields with mapping exceptions
 {: #query-mapping-exceptions-4}
 

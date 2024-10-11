@@ -94,6 +94,10 @@ To check the number of index fields per instance and how many you have used, in 
 For a service instance, the daily default limit of index fields is set to 3000.
 {: note}
 
+The index counter is reset at midnight UTC.
+{: note}
+
+
 ## What happens when you reach the number of index fields in a day
 {: #indexing_mapping_limit}
 
@@ -110,3 +114,8 @@ An exclamation mark will be displayed on the fields that have mapping exceptions
 When you search in {{site.data.keyword.frequent-search}}, log records that include a mapping exception can be searched by using a free text query for fields that are not indexed and by using key:value pairs of fields that are indexed.
 
 If you have a data bucket associated to the instance, you can search logs through **All Logs**. You can search by using a free text query or by using key:value pairs.
+
+## Alerting
+{: #indexing_mapping_alert}
+
+Alerting is not affected by data mapping exceptions and will continue to be triggered as normal.
