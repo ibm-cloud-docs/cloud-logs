@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-11"
 
 keywords:
 
@@ -12,10 +12,10 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing mapping exceptions
+# Managing data mapping exceptions
 {: #query-mapping-exceptions}
 
-In {{site.data.keyword.logs_full_notm}}, you can get a mapping exception when data that is ingested through the {{site.data.keyword.frequent-search}} data pipeline detects the same field sent by different log records with different types.
+In {{site.data.keyword.logs_full_notm}}, you can get a data mapping exception when data that is ingested through the {{site.data.keyword.frequent-search}} data pipeline detects the same field sent by different log records with different types.
 {: shortdesc}
 
 
@@ -41,14 +41,17 @@ _exists_:"coralogix.failed_reason"
 ```
 {: codeblock}
 
-
-## Fixing fields with mapping exceptions
+## Searching data that includes mapping exceptions
 {: #query-mapping-exceptions-3}
 
-To fix a mapping exception, identify the field that reports a mapping exception and the applications that are sending the same field with different types. Then, try to fix the problem at source.
+When you search in {{site.data.keyword.frequent-search}}, log records that include a mapping exception can only be searched by using a free text query.
 
-Log records that include a mapping exception can only be searched by using a free text query.
-{: note}
+If you have a data bucket associated to the instance, you can search logs through **All Logs**. You can search by using a free text query or by using key:value pairs.
+
+## Fixing fields with mapping exceptions
+{: #query-mapping-exceptions-4}
+
+To fix a mapping exception, identify the field that reports a mapping exception and the applications that are sending the same field with different types. Then, try to fix the problem at source.
 
 
 {{_include-segments/mapping-exception-fix.md}}

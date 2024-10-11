@@ -222,7 +222,7 @@ toc:
           - topic: indexing_mapping.md
             navtitle: Indexing and field mapping
           - topic: query-mapping-exceptions.md
-            navtitle: Managing mapping exceptions
+            navtitle: Managing data mapping exceptions
           - topic: benchmarks.md
             navtitle: Using benchmark tags
           - topic: query-data.md
