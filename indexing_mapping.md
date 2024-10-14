@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-11"
 
 keywords:
 
@@ -19,7 +19,6 @@ subcollection: cloud-logs
 To best query your logs in {{site.data.keyword.frequent-search}}, it is important to understand how {{site.data.keyword.logs_full_notm}} indexes your data after it is analyzed.
 {: shortdesc}
 
-
 Indexing logs lets you quickly retrieve matching by logs using:
 
 * Free-text searches
@@ -29,14 +28,9 @@ Indexing logs lets you quickly retrieve matching by logs using:
 It is recommended to serialize your logs as JSON to get maximum value from {{site.data.keyword.logs_full_notm}} analytics features. See [Configuring unstructured text into JSON](/docs/cloud-logs?topic=cloud-logs-parse-rule&interface=ui) for more information about parsing unstructured logs to JSON.
 {: tip}
 
-For a service instance, the daily default limit of indexed fields is set to 3000. Having too many fields in your index can lead to a mapping problem. The daily default limit of 3000 fields exists to avoid search and performance degradation.
-{: note}
-
-You can find out how many indexed fields you have used in **Usage** in the **Mapping stats** section.
-{: tip}
 
 ## Data types
-{: #data-types}
+{: #indexing_mapping_data_types}
 
 {{site.data.keyword.logs_full_notm}} supports the following data types:
 
@@ -65,12 +59,12 @@ Geopoint
 Object
 :   This type represents a hierarchy. This means that it can contain fields of any other type (including objects).
 
+
+
 ## Data type considerations
 {: #type-considerations}
 
 Consider the following when querying data:
-
-* {{site.data.keyword.logs_full_notm}} has a default limit of 3000 indexed fields per instance per day. You can view your team's mapped field statistics under **Usage** section ![Usage icon](/icons/usage.svg "Usage") > **Mapping stats**.
 
 * Explicit mapping is supported for timestamps and geopoints. Appending `_timestamp` or `_geopoint` to your field name will map it respectively as a date or geopoint. For example, a field named `duration_timestamp` is mapped as a date.
 
@@ -89,3 +83,39 @@ Consider the following when querying data:
    * Text, Object, Date, or Geopoint
    * Keyword
    * Numeric
+
+
+## Checking the number of index fields
+{: #indexing_mapping_check}
+
+
+To check the number of index fields per instance and how many you have used, in the navigation bar, click the **Usage** icon ![Usage icon](icons/usage.svg "Usage") > **Mapping Stats**. You can get the daily total number of indexes used in the *Used keys today* section.
+
+For a service instance, the daily default limit of index fields is set to 3000.
+{: note}
+
+The index counter is reset at midnight UTC.
+{: note}
+
+
+## What happens when you reach the number of index fields in a day
+{: #indexing_mapping_limit}
+
+When you reach the number of index fields in a day, new fields are not indexed until the counter is reset for the next day.
+
+An exclamation mark will be displayed on the fields that have mapping exceptions and could not be indexed.
+
+![Flagging of fields with mapping exceptions](images/me_03.png){: caption="Flagging of fields with mapping exceptions" caption-side="bottom"}
+
+
+## Searching data that includes mapping exceptions
+{: #indexing_mapping_search}
+
+When you search in {{site.data.keyword.frequent-search}}, log records that include a mapping exception can be searched by using a free text query for fields that are not indexed and by using key:value pairs of fields that are indexed.
+
+If you have a data bucket associated to the instance, you can search logs through **All Logs**. You can search by using a free text query or by using key:value pairs.
+
+## Alerting
+{: #indexing_mapping_alert}
+
+Alerting is not affected by data mapping exceptions and will continue to be triggered as normal.

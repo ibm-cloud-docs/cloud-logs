@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-10"
 
 keywords:
 
@@ -34,7 +34,7 @@ Template to plan migration from {{site.data.keyword.la_full}} instances with the
 
 The following list outlines the IAM permissions that you need to migrate:
 
-If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
+If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
 {: important}
 
 For more information on permissions, see [Required permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
@@ -56,6 +56,7 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 - [ ] IAM permissions to create buckets
 
 - [ ]  IAM permissions to configure alert destinations in IBM Cloud Event Notifications
+
 
 ## Migration planning
 {: #template-migration-la-3}
@@ -112,16 +113,14 @@ Run the Migration Tool in a development or staging environment to test and valid
 
         - [ ]  Target 2 includes the details to route platform logs to the Log Analysis instance
 
+    - [ ] IAM policies that apply to users, service IDs, trusted profiles, and access groups are migrated.
+
 The Migration Tool only migrates configuration of selected resources.
 {: important}
 
 ### Manual tasks
 
-- [ ] Generate the IAM report to identify the access groups, service IDs, users, and trusted profiles that have permissions configured on the instance that you are migrating.
-
-    - [ ] You must manually migrate the IAM permissions.
-
-    - [ ] For API keys (service ID / user ID) you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
+- [ ] IAM: For API keys (service ID / user ID), you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
 
 - [ ] If you have parsing rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs. (In Cloud Logs, you must use Regex to parse the data.) For more information, see [Extracting specific values as JSON keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule).
 
