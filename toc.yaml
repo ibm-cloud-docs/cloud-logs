@@ -287,7 +287,7 @@ toc:
               - topic: alerts-config-standard.md
                 navtitle: Standard alerts
           - topic: alerts/event-notifications-alerts.md
-            navtitle: Configuring Event Notifications 
+            navtitle: Configuring routing of events to destinations in Event Notifications 
           - topic: alerts/incidents.md
             navtitle: Managing triggered alerts in Cloud Logs
           - topic: alerts/cl-events-for-en.md
