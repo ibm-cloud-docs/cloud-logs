@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring {{site.data.keyword.en_full_notm}}
+# Configuring routing of events to destinations in {{site.data.keyword.en_full_notm}}
 {: #event-notifications-alerts}
 
 After you enable notifications to {{site.data.keyword.en_full_notm}} from {{site.data.keyword.logs_full_notm}}, and configure alerts in {{site.data.keyword.logs_full_notm}}, you can create topics and subscriptions in {{site.data.keyword.en_short}} so that alerts can be forwarded to destinations based on subscriptions that you configure.
