@@ -19,7 +19,7 @@ subcollection: cloud-logs
 You can use a Helm chart to deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from a Kubernetes cluster to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
-Complete the following steps to deploy an agent on an OpenShift cluster:
+Complete the following steps to deploy an agent on an Kubernetes cluster:
 
 ## Before you begin
 {: #agent-helm-kube-deploy-prereqs}
