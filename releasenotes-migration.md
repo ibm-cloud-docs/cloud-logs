@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-16"
 
 keywords:
 
@@ -96,7 +96,7 @@ The migration tool plug-in v0.1.20 is available.
 
     * Fix for Terraform description validation for invalid characters. Support was added for commas.
 
-    * Fix for {{site.data.keyword.cos_full_notm}} bucket creation error when the {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} have archiving configured to a {{site.data.keyword.cos_full_notm}} bucket and the endpoint used is a public endpint.
+    * Fix for {{site.data.keyword.cos_full_notm}} bucket creation error when the {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} have archiving configured to an {{site.data.keyword.cos_full_notm}} bucket and the endpoint used is a public endpint.
 
     * Fix for {{site.data.keyword.logs_routing_full_notm}} name error. The migration tool now enforces the 35 character naming limitation.
     
