@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-16"
 
 keywords:
 
@@ -22,7 +22,7 @@ You can use a Helm chart to deploy the {{site.data.keyword.agent}} to collect an
 Complete the following steps to deploy an agent on an OpenShift cluster:
 
 ## Before you begin
-{: #agent-helm-os-deploy-prereqs}
+{: #agent-helm-kube-deploy-prereqs}
 
 
 - Make sure you have access to Kubernetes cluster with permissions to create namespaces and deploy the agent.
@@ -40,7 +40,7 @@ Complete the following steps to deploy an agent on an OpenShift cluster:
 
 
 ## Step 1. Define the authentication method for the agent
-{: #agent-helm-os-deploy-step1}
+{: #agent-helm-kube-deploy-step1}
 
 Choose the type of identity and the authentication method for the agent. Then, create an API key if needed.
 
@@ -64,7 +64,7 @@ Complete the following steps:
 
 
 ## Step 2. Configuring the Helm chart values file for the {{site.data.keyword.agent}}
-{: #agent-helm-os-deploy-step2}
+{: #agent-helm-kube-deploy-step2}
 
 Complete the following steps:
 
@@ -110,10 +110,10 @@ Complete the following steps:
     {: caption="Helm chart required parameters" caption-side="bottom"}
 
 ## Step 3. Install the Helm chart
-{: #agent-helm-os-deploy-deploy-step3a}
+{: #agent-helm-kube-deploy-deploy-step3a}
 
 If you are using the `iamMode` as `IAMAPIKey` then the apikey needs to be present in a Kubernetes secret named `logs-agent` with the key name `IAM_API_KEY`.  The secret can be created using the Helm chart by including the `--set secret.iamAPIKey=<your iamAPIKey>` option when running the helm install.  If the secret has been created manually or if you are using `iamMode=TrustedProfile` then do not include this option.
-{:important}
+{: important}
 
 Complete the following steps:
 
@@ -164,7 +164,7 @@ Complete the following steps:
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm install <install-name> --dry-run oci://icr.io/ibm/observe/logs-agent-helm-os-deploy --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value> --hide-secret
+    helm install <install-name> --dry-run oci://icr.io/ibm/observe/logs-agent-helm-kube-deploy --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value> --hide-secret
     ```
     {: codeblock}
 
@@ -178,7 +178,7 @@ Complete the following steps:
 
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
-    ```
+    ```sh
     helm install logging-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.3.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
     ```
     {: screen}
@@ -201,7 +201,7 @@ Complete the following steps:
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm install <install-name> oci://icr.io/ibm/observe/logs-agent-helm-os-deploy --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
+    helm install <install-name> oci://icr.io/ibm/observe/logs-agent-helm-kube-deploy --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
     ```
     {: codeblock}
 
@@ -211,7 +211,7 @@ Complete the following steps:
 
 
 ## Step 4. Verify the agent is successfully deployed
-{: #agent-helm-os-deploy-deploy-step4}
+{: #agent-helm-kube-deploy-deploy-step4}
 
 When the agent is deployed, check the following resources are created:
 - The `ibm-observe` namespace.
@@ -275,7 +275,7 @@ When the agent is deployed, check the following resources are created:
     To check how many workers are available in your cluster, you can run the following command:
 
     ```sh
-    oc get nodes
+    kubectl get nodes
     ```
     {: codeblock}
 
@@ -294,7 +294,7 @@ When the agent is deployed, check the following resources are created:
     To view the logs of a pod, run `kubectl logs <POD_NAME>> -n ibm-observe`{: tip}
 
 ## Step 5. Verify logs are being delivered to your target destination
-{: #agent-helm-os-deploy-deploy-step5}
+{: #agent-helm-kube-deploy-deploy-step5}
 
 Complete the following steps:
 

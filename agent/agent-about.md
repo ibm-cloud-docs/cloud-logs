@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-16"
 
 keywords:
 
@@ -48,11 +48,11 @@ By default, the {{site.data.keyword.agent}} monitors and collects log data from 
 You can deploy the agent in the following platforms:
 - Kubernetes clusters
 
-    For more information, see [Deploying the {{site.data.keyword.agent}} on OpenShift using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy).
+    For more information, see [Deploying the {{site.data.keyword.agent}} on a Kubernetes cluster using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy).
 
 - OpenShift clusters
 
-    For more information, see [Deploying the {{site.data.keyword.agent}} on a Kubernetes cluster using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy).
+    For more information, see [Deploying the {{site.data.keyword.agent}} on OpenShift using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy).
 
 
 The following diagram shows the high level view when the source of logs is a Kubernetes or OpenShift cluster:
