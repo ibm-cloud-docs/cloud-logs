@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-17"
 
 keywords:
 
@@ -95,7 +95,7 @@ Complete the following steps:
 7. Run the configuration script.
 
    ```sh
-   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> [--send-directly-to-icl] [-s <vsi_secure_access_enabled>]
+   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> [--send-directly-to-icl] [-s <vsi_secure_access_enabled>] [-i <IAM_environment>]
    ```
    {: pre}
 
@@ -123,8 +123,15 @@ Complete the following steps:
     `-h <target_host>`
     : The host for {{site.data.keyword.logs_full_notm}} ingestion, found in the `Endpoints` section of your {{site.data.keyword.logs_full_notm}} instance `Overview`. Use the ingress endpoint. For more information, see [Ingress endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_ingress)
 
+    `-i <IAM_environment>`
+    :   Specifies whether a public or private endpoint is used for IAM authentication. `Production` indicates to use the public endpoint. `PrivateProduction` specifies to use the private endpoint. `Production` is the default.
+
+        If your system does not have access to the public internet, you must use `PrivateProduction` to use the private endpoint.
+        {: important}
+
+
     `-p <target_port>`
-    : Use `443` to send logs directly to {{site.data.keyword.logs_full_notm}}. 
+    :   Use `443` to send logs directly to {{site.data.keyword.logs_full_notm}}. 
 
     `-s <vsi_secure_access_enabled>`
     :   (Optional) Set this to `true` if you have secure access enabled in your VSI. It will be set to `false` by default. For example, `-s true`.
