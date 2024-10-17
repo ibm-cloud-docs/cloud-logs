@@ -164,7 +164,7 @@ Complete the following steps:
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm install <install-name> --dry-run oci://icr.io/ibm/observe/logs-agent-helm-kube-deploy --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value> --hide-secret
+    helm install <install-name> --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value> --hide-secret
     ```
     {: codeblock}
 
