@@ -95,7 +95,7 @@ Complete the following steps:
 7. Run the configuration script.
 
    ```sh
-   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> [--send-directly-to-icl] [-s <vsi_secure_access_enabled>]
+   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> [--send-directly-to-icl] [-s <vsi_secure_access_enabled>] [-i <IAM_environment>]
    ```
    {: pre}
 
