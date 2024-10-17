@@ -25,7 +25,10 @@ You get the following error message:
 {: tsSymptoms}
 
 ```text
-"msg":"Error setting up IAM Tokenmanager","error":"timeout while trying to set up Tokenmanager","stacktrace":"main.FLBPluginInit\n\t/root/pkg/plugin/logger-icl-output-plugin.go:80\n_cgoexp_eee5b56c7e4a_FLBPluginInit\n\t_cgo_gotypes.go:68\nruntime.cgocallbackg1\n\t/usr/local/go/src/runtime/cgocall.go:315\nruntime.cgocallbackg\n\t/usr/local/go/src/runtime/cgocall.go:234\nruntime.cgocallback\n\t/usr/local/go/src/runtime/asm_amd64.s:998"}
+"msg":"Error setting up IAM Tokenmanager","error":"timeout while trying to set up Tokenmanager","stacktrace":
+"main.FLBPluginInit\n\t/root/pkg/plugin/logger-icl-output-plugin.go:80\n_cgoexp_eee5b56c7e4a_FLBPluginInit\n\t_cgo_gotypes.go:68\nruntime.cgocallbackg1\n\t/usr/local/go/src/runtime/
+cgocall.go:315\nruntime.cgocallbackg\n\t/usr/local/go/src/runtime/cgocall.go:234\nruntime.cgocallback\n\t/usr/local/go/
+src/runtime/asm_amd64.s:998"}
 
 [error] [go proxy]: plugin 'logger-icl-output-plugin' failed to initialize
 ```
