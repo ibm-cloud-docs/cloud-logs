@@ -42,5 +42,5 @@ Your system does not have access to the public internet.
 Change your configuration to use a private endpoint. Specify `PrivateProduction` for `IAM_Environment` in your [output plugin parameters](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-plugin-parameters-authentication-parms) in your `/etc/fluent-bit/output-logs-router-agent.conf` file or specify the `-i PrivateProduction` option when running the [`post-config.sh` configuration script](/docs/cloud-logs?topic=cloud-logs-agent-linux#agent-linux-deploy-step2).
 {: tsResolve}
 
-The API key used for the agent must have the [`sender`](/docs/cloud-logs?topic=cloud-logs-iam) role to {{site.data.keyword.logs_full_notm}}.
+The API key used for the agent must have the [`sender`](/docs/cloud-logs?topic=cloud-logs-iam) role to {{site.data.keyword.logs_full_notm}}. The user granting the permission to the API key must have at least the `sender` permission to grant the permission to the API key.
 {: note}
