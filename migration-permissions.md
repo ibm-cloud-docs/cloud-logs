@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-17"
 
 keywords:
 
@@ -25,7 +25,7 @@ The {{site.data.keyword.logs_full}} migration tool requires that you have certai
 | {{site.data.keyword.at_full_notm}} | `viewer`, `reader` |
 | {{site.data.keyword.atracker_full_notm}} | `administrator`, `writer` |
 | {{site.data.keyword.la_full_notm}} | `viewer`, `reader` |
-| {{site.data.keyword.logs_full_notm}} | `manager`, `editor`, `sender` |
+| {{site.data.keyword.logs_full_notm}} | `manager`, `administrator`, `sender` |
 | {{site.data.keyword.cos_full_notm}} | `writer` `[*]`, `editor`, `service configuration reader`, `manager` `[**]` |
 | {{site.data.keyword.keymanagementservicelong_notm}} | `viewer`, `reader` |
 | {{site.data.keyword.logs_routing_full_notm}} | `manager` |
