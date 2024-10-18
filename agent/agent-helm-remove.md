@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-09-30"
 
 keywords:
 
@@ -43,38 +43,9 @@ Complete the following steps to remove a {{site.data.keyword.agent}}:
 
 1. Log in to the cluster.
 
-    To log in to a Kubernetes cluster, see [Access your cluster](/docs/containers?topic=containers-access_cluster).
+    {{site.data.keyword.openshiftlong_notm}} is integrated with IBM Cloud Identity and Access Management (IAM). With IAM, you can authenticate users and services by using their IAM identities and authorize actions with access roles and policies. When you authenticate as a user through the Red Hat OpenShift console, your IAM identity is used to generate a Red Hat OpenShift login token that you can use to log in to the command line. You can automate logging in to your cluster by creating an IAM API key or service ID to use for the oc login command. For more information, see [Accessing Red Hat OpenShift clusters](/docs/openshift?topic=openshift-access_cluster#access_automation). For example, complete the steps in [Using a service ID to log in to clusters](/docs/openshift?topic=openshift-access_cluster#access_service_id) to log in to your cluster.
 
-    To log in to an Openshift cluster: {{site.data.keyword.openshiftlong_notm}} is integrated with IBM Cloud Identity and Access Management (IAM). With IAM, you can authenticate users and services by using their IAM identities and authorize actions with access roles and policies. When you authenticate as a user through the Red Hat OpenShift console, your IAM identity is used to generate a Red Hat OpenShift login token that you can use to log in to the command line. You can automate logging in to your cluster by creating an IAM API key or service ID to use for the oc login command. For more information, see [Accessing Red Hat OpenShift clusters](/docs/openshift?topic=openshift-access_cluster#access_automation). For example, complete the steps in [Using a service ID to log in to clusters](/docs/openshift?topic=openshift-access_cluster#access_service_id) to log in to your cluster.
-
-2. Log in to the Helm registry. Choose one of the following options:
-
-    Option 1: Login to the Helm registry by running the `helm registry login` command:
-
-    ```sh
-    helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
-    ```
-    {: codeblock}
-
-    For more information, see [Using Helm charts in Container Registry: Pulling charts from another registry or Helm repository](/docs/Registry?topic=Registry-registry_helm_charts#registry_helm_charts_pull)
-
-    Option 2:  Log in to the Helm registry in {{site.data.keyword.registryshort}} by running the `ibmcloud cr login` command.
-
-    You can use the `ibmcloud cr login` command before you perform a Helm dry run or install. For more information, see [Accessing {{site.data.keyword.registryshort}}](/docs/Registry?topic=Registry-registry_access) and [ibmcloud cr login](/docs/Registry?topic=Registry-containerregcli#bx_cr_login).
-
-    Run the following commands:
-
-    ```sh
-    ibmcloud region-set global
-    ```
-    {: codeblock}
-
-    ```sh
-    ibmcloud cr login [--client CLIENT]
-    ```
-    {: codeblock}
-
-3. Run the helm uninstall to remove the resources created by the Helm chart
+2. Run the helm uninstall to remove the resources created by the Helm chart
 
    ```sh
    helm uninstall <install-name>
@@ -83,4 +54,4 @@ Complete the following steps to remove a {{site.data.keyword.agent}}:
 
     where:
 
-    - `<install-name>` is the name of the helm installation (ie. `logging-agent`)
+    - `<install-name>` is the name of the helm installation (ie. `logs-agent`)
