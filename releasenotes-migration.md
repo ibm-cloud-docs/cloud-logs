@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-16"
+lastupdated: "2024-10-21"
 
 keywords:
 
@@ -26,7 +26,21 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
 
+## 21 October 2024
+{: #migration-oct2124}
 
+The migration tool plug-in v0.1.24 is available.
+:   Updates include:
+
+    * Fix for an error when migrating exclusion rules where filters were not being applied.
+
+    * Addition of a new `update-resources` command with an `--iam` option. This command option can be used to migrate IAM policies for users, service IDs, trusted profiles, and access groups associated with an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.logs_full_notm}} IAM policies. This includes migrating policies defining data access through log groups defined in {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}}.
+
+    * Enhancement of the `create-resources` command when migrating an IAM configuration to include migrating policies defining {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} data access policies using log groups.
+
+    * Migrating {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log groups into {{site.data.keyword.logs_full_notm}} data access rules. 
+
+      {{site.data.keyword.logs_full_notm}} uses DPXL as its query language. The migration converts the current {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} data access rules query to the {{site.data.keyword.logs_full_notm}} instance. Each query must be migrated to DPXL individually. For more information about DPXL, see the [DataPrime Expression Language (DPXL) reference](/docs/cloud-logs?topic=cloud-logs-dpxl_ref).
 
 ## 14 October 2024
 {: #migration-oct1424}
