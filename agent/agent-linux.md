@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-23"
 
 keywords:
 
@@ -104,7 +104,7 @@ Complete the following steps:
    Where
 
     `-t <target_path>`
-    :   Specify `/logs/v1/singles` to send data to an {{site.data.keyword.logs_routing_full_notm}} instance. 
+    :   Specify `/logs/v1/singles` to send data to an {{site.data.keyword.logs_full_notm}} instance. 
 
     `-a <auth_mode>`
     :   Specify `IAMAPIKey` or `VSITrustedProfile`.
