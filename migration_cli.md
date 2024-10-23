@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-02"
+lastupdated: "2024-10-21"
 
 keywords:
 
@@ -343,5 +343,71 @@ In this example, the {{site.data.keyword.logs_full_notm}} instance specified by 
 
 ```sh
 ibmcloud logging migrate remove-resources-tf --scope instance --crn CRN
+```
+{: pre}
+
+
+
+
+
+
+
+## ibmcloud logging migrate update-resources
+{: #logging-migrate-update-resources}
+
+Use this command to update an {{site.data.keyword.logs_full_notm}} instance with {{site.data.keyword.iamlong}} (IAM) configuration information from an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance.
+
+```text
+ibmcloud logging migrate update-resources --scope SCOPE [--instance-crn CRN] --cl-instance-crn CL-INSTANCE-CRN [--update-iam] [--api | --terraform] [--directory DIRECTORY] [--force]
+```
+{: pre}
+
+### Command options
+{: #mig-update-resources-options}
+
+`--scope`|`-s`
+:   The collection of resources that will be updated.
+
+    `instance`
+    :   Update from a specific instance. Specify the instance [CRN](/docs/account?topic=account-crn) by using `--instance-crn`.
+
+
+
+`--instance-crn`|`--crn`
+   :   The [CRN](/docs/account?topic=account-crn) of the {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance to be used for the update. 
+
+`--cl-instance-crn`|`--clcrn`
+   :   The [CRN](/docs/account?topic=account-crn) of the {{site.data.keyword.logs_full_notm}} instance to be updated with information from the {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance specified by `--instance-crn`.
+
+`--update-iam`
+   : Specifies that the {{site.data.keyword.logs_full_notm}} instance is to be updated with the {{site.data.keyword.iamlong}} (IAM) configuration information from the {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance.
+
+`--directory`
+   :   The directory on your local computer where migration files are written. If not specified, the directory where the command is run is used.
+
+`--api`|`-a`
+:   Use the API method to create {{site.data.keyword.logs_full_notm}} instances and resources. If not specified, `--terraform` is the default.
+
+`--terraform`|`-t`
+:   Use the Terraform method to create {{site.data.keyword.logs_full_notm}} instances and resources. If not specified, `--terraform` is the default.
+
+`--force`|`-f`
+   :   Runs the command without further prompting of the user.
+
+
+### Examples
+{: #mig-update-resources-examples}
+
+In this example the {{site.data.keyword.iamlong}} (IAM) permissions associated with an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance are migrated to the {{site.data.keyword.logs_full_notm}} instance using the API.
+
+```text
+ibmcloud logging migrate update-resources --scope instance --instance-crn CRN --cl-instance-crn CLCRN --iam -a
+```
+{: pre}
+
+In this example the {{site.data.keyword.iamlong}} (IAM) permissions associated with an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance are migrated to the {{site.data.keyword.logs_full_notm}} instance using Terraform.
+
+```text
+ibmcloud logging migrate update-resources --scope instance --instance-crn CRN --cl-instance-crn CLCRN --iam -t -f 
 ```
 {: pre}
