@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-10-24"
 
 keywords:
 
@@ -26,6 +26,8 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
 
+
+
 ## 21 October 2024
 {: #migration-oct2124}
 
@@ -36,11 +38,7 @@ The migration tool plug-in v0.1.24 is available.
 
     * Addition of a new `update-resources` command with an `--iam` option. This command option can be used to migrate IAM policies for users, service IDs, trusted profiles, and access groups associated with an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.logs_full_notm}} IAM policies.
 
-    * Enhancement of the `create-resources` command when migrating an IAM configuration to include migrating policies defining {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} data access policies using log groups.
-
-    * Migrating {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log groups into {{site.data.keyword.logs_full_notm}} data access rules. 
-
-      {{site.data.keyword.logs_full_notm}} uses DPXL as its query language. The migration copies the current {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log group configuration (1 or more queries) to a data rule in the {{site.data.keyword.logs_full_notm}} instance. Each query must be migrated to DPXL individually. For more information about DPXL, see the [DataPrime Expression Language (DPXL) reference](/docs/cloud-logs?topic=cloud-logs-dpxl_ref).
+    * Fix for terraform to add resource name validation.
 
 ## 14 October 2024
 {: #migration-oct1424}
@@ -53,7 +51,7 @@ The migration tool plug-in v0.1.23 is available.
     * Add support to automatically migrate IAM resources, users, serviceIds, trusted profiles and access groups per instance.
 
     * Fixes a bug where alerts were failing to create properly if an alert encountered a problem.
-    
+
 
 
 ## 2 October 2024
@@ -81,9 +79,9 @@ The migration tool plug-in v0.1.21 is available.
     * The period when an {{site.data.keyword.en_full_notm}} alert is re-sent is set to 10 minutes.
 
     * If a service to service policy for {{site.data.keyword.en_full_notm}} and {{site.data.keyword.logs_full_notm}} is not required, one is no longer created.
-    
+
     * A fix for an error during migration when you have archiving configured in your {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance, and the collection of metrics for the bucket is not enabled
-    
+
     * Parsing rules are now maintained in the correct default order. Rules created during migration within an instance are created after the default parsing rule that is included when you provision an instance of {{site.data.keyword.logs_full_notm}}.
 
 ## 18 September 2024
@@ -113,7 +111,7 @@ The migration tool plug-in v0.1.20 is available.
     * Fix for {{site.data.keyword.cos_full_notm}} bucket creation error when the {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} have archiving configured to an {{site.data.keyword.cos_full_notm}} bucket and the endpoint used is a public endpint.
 
     * Fix for {{site.data.keyword.logs_routing_full_notm}} name error. The migration tool now enforces the 35 character naming limitation.
-    
+
 
 ## 4 September 2024
 {: #migration-sep0424}
