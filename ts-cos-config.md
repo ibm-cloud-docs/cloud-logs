@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-29"
 
 keywords: 
 
@@ -75,6 +75,4 @@ Follow the steps below to resolve this issue for existing instances with attache
 ## Next steps
 {: #next-steps}
 
-After running the above commands, the UI will correctly reflect the bucket. If further issues persist, [contact IBM Cloud support](/docs/get-support) for assistance.
-
-
+After running the above commands, the UI will correctly reflect the bucket. If further issues persist, [Contact IBM Support](/docs/account?topic=account-using-avatar&interface=ui) for assistance.
