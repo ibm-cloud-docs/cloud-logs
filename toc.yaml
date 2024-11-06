@@ -172,6 +172,7 @@ toc:
                 navtitle: Managing the agent Linux environments
           - topic: agent/agent-rsyslog.md
             navtitle: Using the Logging agent to collect and route (r)Syslog messages
+          - agent/agent-multiple-icl-targets.md
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
@@ -368,7 +369,6 @@ toc:
             navtitle: Managing the agent for Openshift clusters
           - topic: agent/agent-std-cluster.md
             navtitle: Managing the agent for Kubernetes clusters
-          - agent/agent-multiple-icl-targets.md
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields
           - topic: agent/configure-agent.md
