@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-06"
 
 keywords:
 
@@ -73,6 +73,9 @@ You can configure a data bucket for a {{site.data.keyword.logs_full_notm}} insta
 - You are responsible for the maintenance of the data bucket.
 
 For more information, see [Configuring the data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket).
+
+
+{{_include-segments/data-bucket-restrictions.md}}
 
 ## Metrics bucket
 {: #about-bucket-metrics}

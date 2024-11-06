@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-11-06"
 
 keywords:
 
@@ -26,6 +26,8 @@ Configure a bucket in {{site.data.keyword.cos_full_notm}} to store your {{site.d
 - You must have a {{site.data.keyword.cos_full_notm}} instance in the same account where your {{site.data.keyword.logs_full_notm}} instance is provisioned.
 - You must have permissions to create a bucket in the {{site.data.keyword.cos_full_notm}} instance or have the details of an existing bucket.
 
+
+{{_include-segments/data-bucket-restrictions.md}}
 
 ## Configure an IAM Service to service authorization
 {: #configure-data-bucket-s2s}
