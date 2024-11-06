@@ -368,6 +368,7 @@ toc:
             navtitle: Managing the agent for Openshift clusters
           - topic: agent/agent-std-cluster.md
             navtitle: Managing the agent for Kubernetes clusters
+          - agent/agent-multiple-icl-targets.md
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields
           - topic: agent/configure-agent.md
