@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-11-07"
 
 keywords:
 
@@ -17,6 +17,15 @@ subcollection: cloud-logs
 
 Template to plan migration from {{site.data.keyword.la_full}} instances with the platform flag enabled to {{site.data.keyword.logs_full_notm}} instances.
 {: shortdesc}
+
+
+## Overview
+{: #template-migration-la-ov}
+
+Migrating {{site.data.keyword.la_full}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires the configuration of the Logs Routing service in the account and provisioning 1 or more {{site.data.keyword.logs_full_notm}} instances. A migration tool is provided to help you migrate.
+
+![High-level view of the migration tool](/images/migration-la-12.png "High-level view of the migration tool"){: caption="High-level view of the migration tool" caption-side="bottom"}
+
 
 ## List of services that you might need for migration
 {: #template-migration-la-1}
@@ -37,7 +46,7 @@ The following list outlines the IAM permissions that you need to migrate:
 If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
 {: important}
 
-For more information on permissions, see [Required permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
+For more information on permissions, see [Required permissions for running the Migration tool](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
 
 - [ ] IAM permissions to view Log Analysis instances and resources
 
@@ -70,10 +79,23 @@ You can run the migration tool as follows:
 Run the Migration Tool in a development or staging environment to test and validate the migration.
 {: important}
 
+- [ ] When you migrate by using Terraform,
+
+    1. Set the API key that is required to create resources.
+
+        Set the API key that you must configure to create resources for migration.
+
+        Run `export IC_API_KEY=xxxxxx` in the command line where you plan to run the Terraform CLI commands.
+
+        If running in Windows, use `set IC_API_KEY=xxxxxx` instead.
+        {: note}
+
+    2. Check you have the Terraform CLI installed. For more information, see [Installing the Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation_step).
+
 - [ ] Run the migration tool
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx --platform --ingestion-key xxxxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--api]|[-t -f]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx --platform --ingestion-key xxxxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN] [--api]|[-t -f]
     ```
     {: codeblock}
 
@@ -84,6 +106,8 @@ Run the Migration Tool in a development or staging environment to test and valid
     You can add a new name for the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
     You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
+
+    You can configure Event Notifications by adding destinations for your notification channels and topics and subscriptions to trigger alerts by adding the option `--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN`.
 
     For more information, see [Migrating Log Analysis instances with platform logs](/docs/cloud-logs?topic=cloud-logs-migration-platform-logs).
 
@@ -127,5 +151,15 @@ The Migration Tool only migrates configuration of selected resources.
 - [ ] If you have log groups configured, you must manually migrate them to data access rules.
 
 - [ ] If you have streaming configured, you must manually migrate the configuration. For more information, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming).
+
+- [ ] If you also collect operational logs in this instance, deploy/ configure the Logging agent to collect and route logs to the Cloud Logs instance.
+
+    - [ ] [Deploy agent for Kubernetes clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy)
+
+    - [ ] [Deploy agent for OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy)
+
+    - [ ] [Deploy agent for Linux servers](/docs/cloud-logs?topic=cloud-logs-agent-linux)
+
+    - [ ] [Deploy agent to collect and route rSyslog data](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog)
 
 - [ ] Modify any runbooks for DevOps
