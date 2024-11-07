@@ -14,14 +14,14 @@ subcollection: cloud-logs
 
 
 
-# About the {{site.data.keyword.agent}}
+# Monitoring operational logs
 {: #agent-about}
 
-The {{site.data.keyword.agent}} is based on the Fluent Bit open-source agent which is used to collect and process log data. You can deploy the {{site.data.keyword.agent}} in supported environments and manage data from various sources and formats.
+You can configure the {{site.data.keyword.agent}} to collect and send infrastructure and application logs to an {{site.data.keyword.logs_full_notm}} instance directly.
 {: shortdesc}
 
+The {{site.data.keyword.agent}} is based on the Fluent Bit open-source agent which is used to collect and process log data. You can deploy the {{site.data.keyword.agent}} in supported environments and manage data from various sources and formats.
 
-You can configure the {{site.data.keyword.agent}} to collect and send infrastructure and application logs to an {{site.data.keyword.logs_full_notm}} instance directly.
 
 The following diagram shows the high level view when the destination is an {{site.data.keyword.logs_full_notm}} instance:
 
