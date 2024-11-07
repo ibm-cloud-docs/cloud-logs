@@ -16,9 +16,16 @@ subcollection: cloud-logs
 # Template for migrating Activity Tracker instances in the account
 {: #template-migration-at}
 
-Template to plan migration from {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} instances.
+Template to plan migration from 1 {{site.data.keyword.at_full}} instance to 1 {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
+
+## Overview
+{: #template-migration-at-ov}
+
+Migrating {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires the configuration of the {{site.data.keyword.atracker_full_notm}} service in the account and provisioning 1 or more {{site.data.keyword.logs_full_notm}} instances. A migration tool is provided to help you migrate.
+
+![High-level view of the migration tool](/images/migration-at-1.png "High-level view of the migration tool"){: caption="High-level view of the migration tool" caption-side="bottom"}
 
 ## List of services that you might need for migration
 {: #template-migration-at-1}
@@ -27,7 +34,7 @@ Template to plan migration from {{site.data.keyword.at_full}} instances to {{sit
 
     - [ ] Cloud Object Storage (to store data and metrics)
 
-    - [ ] Event Notifications (to trigger alerts thorugh Email, PD, Slack, webhook)
+    - [ ] Event Notifications (to trigger alerts through Email, PD, Slack, webhook)
 
     - [ ] {{site.data.keyword.logs_full_notm}} (the new logging service in IBM Cloud Observability)
 
@@ -78,17 +85,19 @@ Run the Migration Tool in a development or staging environment to test and valid
 - [ ] Run the migration tool
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--api]|[-t -f]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN] [--api]|[-t -f]
     ```
     {: codeblock}
 
-    Add `--api` to migrate and create resources.
+    Add `--api` to migrate and create resources. Notice that when you run the API mode, you will be ask to create resources in IAM and Event Notifications.
 
     Add `-t -f` to generate Terraform files and apply creation of resources. You are asked to confirm that you want to apply the scripts.
 
     You can add a new name for the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
     You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
+
+    You can configure Event Notifications by adding destinations for your notification channels and topics and subscriptions to trigger alerts by adding the option `--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN`.
 
     For more information, see [Migrating Activity Tracker instances](/docs/cloud-logs?topic=cloud-logs-migration-atracker-n-cl).
 
@@ -122,7 +131,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 
         - [ ]  Add some default dashboards, parsing rules, and views to manage auditing events.
 
-    - [ ] IAM policies that apply to users, service IDs, trusted profiles, and access groups are migrated.
+    - [ ] Create IAM policies for users, service IDs, trusted profiles, and access groups based on the IAM policies currently assigned to the Activity Tracker instance..
 
 The Migration Tool only migrates configuration of selected resources.
 {: important}
