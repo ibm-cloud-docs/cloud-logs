@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-11-06"
 
 keywords:
 
@@ -115,7 +115,11 @@ Complete the following steps:
         For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
         {: tip}
 
-    
+    `-d <trusted_profile_id>`
+    :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information, see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers).
+
+        For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
+        {: tip}
 
     `--send-directly-to-icl`
     :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.

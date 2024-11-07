@@ -172,6 +172,7 @@ toc:
                 navtitle: Managing the agent Linux environments
           - topic: agent/agent-rsyslog.md
             navtitle: Using the Logging agent to collect and route (r)Syslog messages
+          - agent/agent-multiple-icl-targets.md
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
