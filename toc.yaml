@@ -400,22 +400,14 @@ toc:
               label: Activity Tracker instances
               topics:
               - topic: migration-at.md
-                navtitle: Migrating Activity Tracker instances
-              - topic: migration-atracker-1-cl.md
-                navtitle: Migrating activity tracking events to 1 Cloud Logs instance
-              - topic: migration-atracker-n-cl.md
-                navtitle: Migrating activity tracking events to N Cloud Logs instances
-              - topic: migration-atracker.md
-                navtitle: Migrating Activity Tracker Event Routing
+                navtitle: Migrating Activity Tracker instances 
           - topicgroup:
               label: Log Analysis instances
               topics:
               - topic: migration-la.md
                 navtitle: Migrating Log Analysis instances
               - topic: migration-platform-logs.md
-                navtitle: Migrating instances that collect platform logs
-              - topic: migration-la-op.md
-                navtitle: Migrating instances that collect application and operational logs
+                navtitle: Migrating instances that collect platform logs 
           - topicgroup:
               label: Migration tool
               topics:
@@ -432,16 +424,12 @@ toc:
               - topic: migration-limitations.md
                 navtitle: Known limitations
           - topicgroup:
-              label: Post-migration
-              topics:
-              - topic: migration_post.md
-                navtitle: Post-migrating steps
-          - topicgroup:
               label: Troubleshooting migration
               topics:
               - topic: migration_troubleshooting.md
                 navtitle: Troubleshooting migration issues
-
+              - topic: migration-exclusion-rules.md
+                navtitle: Excluding ingestion data to avoid duplication of logs
   - navgroup:
         id: help
         topics:
