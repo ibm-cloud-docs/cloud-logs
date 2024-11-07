@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-07"
 
 keywords:
 
@@ -72,7 +72,7 @@ The following figure shows the high level view of an {{site.data.keyword.logs_fu
 ## Migrating the archiving configuration
 {: #migration-archive-config}
 
-The archiving configuration is migrated when you migrate an instance. For more information, see [Migrating instances](/docs/cloud-logs?topic=cloud-logs-migration-instance).
+The archiving configuration is migrated when you migrate an instance.
 {: note}
 
 
