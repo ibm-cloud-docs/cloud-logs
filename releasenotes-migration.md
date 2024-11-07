@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-24"
+lastupdated: "2024-11-07"
 
 keywords:
 
@@ -27,6 +27,18 @@ Only the current plug-in version and two previous versions are available at any 
 {: note}
 
 
+
+## 25 October 2024
+{: #migration-oct2524}
+
+The migration tool plug-in v0.1.25 is available.
+:   Updates include:
+
+    * Fix duplicate topic name creation to allow creation of views that have the same name in an instance. A counter has been used to differentiate views with duplicate names.
+
+    * Add mandatory check before command execution to bring awareness of prerequisites before running the tool.
+
+    * Corrected the help for the `update-resources` command.
 
 ## 21 October 2024
 {: #migration-oct2124}
