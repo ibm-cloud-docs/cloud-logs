@@ -421,8 +421,8 @@ toc:
           - topicgroup:
               label: Migration tool
               topics:
-              - topic: migration-tool.md
-                navtitle: Migration tool
+              - topic: migration-instance-resources.md
+                navtitle: Migrating instance resources
               - topic: migration-mapping-rule.md
                 navtitle: Mapping rules for views and alerts (IBM Internal)
               - topic: migration-tool-files.md
@@ -433,8 +433,6 @@ toc:
                 navtitle: Applying Terraform
               - topic: migration-limitations.md
                 navtitle: Known limitations
-          - topic: migration-instance-resources.md
-            navtitle: Migrating instance resources
           - topicgroup:
               label: Post-migration
               topics:
@@ -445,6 +443,7 @@ toc:
               topics:
               - topic: migration_troubleshooting.md
                 navtitle: Troubleshooting migration issues
+
 
   - navgroup:
         id: help

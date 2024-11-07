@@ -55,7 +55,7 @@ For more information on permissions, see [Required permissions for running the M
 
 - [ ] IAM permissions to create buckets
 
-- [ ]  IAM permissions to configure alert destinations in IBM Cloud Event Notifications
+- [ ] IAM permissions to configure alert destinations in IBM Cloud Event Notifications
 
 
 
@@ -127,6 +127,14 @@ The Migration Tool only migrates configuration of selected resources.
 
 ### Manual tasks
 {: #template_migration_manual}
+
+- [ ] Validate the queries migrated for views, and alerts.
+
+- [ ] For dahboards, review the queries and design the layout of the widgets.
+
+- [ ] If you have alerts and migrate by using Terraform, you must apply the Terraform files in `/cl/accountID/manual-tf-files/event-notifications`.
+
+- [ ] If you migrate by using Terraform, you must apply the Terraform files in `/cl/accountID/manual-tf-files/iam-policies/` to create IAM policies for the new Cloud Logs instance.
 
 - [ ] IAM: For API keys (service ID / user ID), you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
 
