@@ -40,10 +40,15 @@ toc:
             navtitle: Metadata fields
           - topic: control-data.md
             navtitle: Controlling ingested data for search
-      - topic: cl-at-events.md
-        navtitle: Monitoring activity tracking events
-      - topic: agent/agent-about.md
-        navtitle: Monitoring operational logs
+      - topicgroup:
+          label: Sending telemetry data
+          topics:
+          - topic: cl-at-events.md
+            navtitle: Activity tracking events
+          - topic: cl-at-platform-logs.md
+            navtitle: Platform logs
+          - topic: agent/agent-about.md
+            navtitle: Operational logs
       - topicgroup:
           label: Migrating from Activity Tracker and Log Analysis
           topics:
