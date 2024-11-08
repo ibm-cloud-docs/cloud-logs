@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-08"
 
 keywords:
 
@@ -130,7 +130,7 @@ The Migration Tool only migrates configuration of selected resources.
 
 - [ ] Validate the queries migrated for views, and alerts.
 
-- [ ] For dahboards, review the queries and design the layout of the widgets.
+- [ ] For dashboards, review the queries and design the layout of the widgets.
 
 - [ ] If you have alerts and migrate by using Terraform, you must apply the Terraform files in `/cl/accountID/manual-tf-files/event-notifications`.
 

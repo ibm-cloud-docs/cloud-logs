@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-08"
 
 keywords:
 
@@ -60,7 +60,7 @@ For more information on permissions, see [Required permissions for running the M
 
     - [ ] Cloud Logs and Cloud Object Storage
 
-     - [ ] Cloud Logs and IBM Cloud Event Notifications
+    - [ ] Cloud Logs and IBM Cloud Event Notifications
 
 - [ ] IAM permissions to create buckets
 
@@ -73,6 +73,7 @@ For more information on permissions, see [Required permissions for running the M
 - [ ] Identify the regions where you have provisioned Log Analysis instances to collect platform logs.
 
 ### For each instance
+{: #la_tmp_more}
 
 You can run the migration tool as follows:
 
@@ -143,10 +144,11 @@ The Migration Tool only migrates configuration of selected resources.
 {: important}
 
 ### Manual tasks
+{: #la_tmp_mt}
 
 - [ ] Validate the queries migrated for views, and alerts.
 
-- [ ] For dahboards, review the queries and design the layout of the widgets.
+- [ ] For dashboards, review the queries and design the layout of the widgets.
 
 - [ ] If you have alerts and migrate by using Terraform, you must apply the Terraform files in `/cl/accountID/manual-tf-files/event-notifications`.
 

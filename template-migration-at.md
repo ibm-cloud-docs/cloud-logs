@@ -157,7 +157,7 @@ Complete the following manual tasks:
 
 - [ ] Validate the queries migrated for views, and alerts.
 
-- [ ] For dahboards, review the queries and design the layout of the widgets.
+- [ ] For dashboards, review the queries and design the layout of the widgets.
 
 - [ ] If you have alerts and migrate by using Terraform, you must apply the Terraform files in `/cl/accountID/manual-tf-files/event-notifications`.
 
