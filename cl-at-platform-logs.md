@@ -20,6 +20,12 @@ subcollection: cloud-logs
 You can use the {{site.data.keyword.logs_full_notm}} service to monitor and alert on platform logs that are generated in an {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
+
+The following diagram shows the high level view when the destination is an {{site.data.keyword.logs_full_notm}} instance:
+
+![Flow of logs](../images/telemetry-logs.png "Flow of logs"){: caption="Flow of logs" caption-side="bottom"}
+
+
 Before you can monitor platform logs that are generated in an {{site.data.keyword.cloud_notm}} account, you must configure the {{site.data.keyword.logs_routing_full_notm}} service in the account to define what platform logs you want to collect, the destination where you want to monitor the platform logs, and the routing rules that define where the platform logs are routed.
 
 - You can configure 1 or more {{site.data.keyword.logs_full_notm}} instances in the account.
