@@ -23,7 +23,7 @@ You can use the {{site.data.keyword.logs_full_notm}} service to monitor and aler
 
 The following diagram shows the high level view when the destination is an {{site.data.keyword.logs_full_notm}} instance:
 
-![Flow of events](simages/telemetry-logs.png "Flow of events"){: caption="Flow of events" caption-side="bottom"}
+![Flow of events](images/telemetry-events.png "Flow of events"){: caption="Flow of events" caption-side="bottom"}
 
 
 Before you can monitor activity tracking events that are generated in an {{site.data.keyword.cloud_notm}} account, you must configure the {{site.data.keyword.atracker_full_notm}} service in the account to define what activity tracking events you want to collect, the destination where you want to monitor the events, and the routing rules that define where the events are routed.
