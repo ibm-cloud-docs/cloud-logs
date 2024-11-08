@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-11-08"
 
 keywords:
 
@@ -37,7 +37,7 @@ The following list outlines the IAM permissions that you need to migrate:
 If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
 {: important}
 
-For more information on permissions, see [Required permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
+For more information on permissions, see [Required permissions for running the Migration tool](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
 
 - [ ] IAM permissions to view Log Analysis instances and resources
 
@@ -55,7 +55,7 @@ For more information on permissions, see [Required permissions](/docs/cloud-logs
 
 - [ ] IAM permissions to create buckets
 
-- [ ]  IAM permissions to configure alert destinations in IBM Cloud Event Notifications
+- [ ] IAM permissions to configure alert destinations in IBM Cloud Event Notifications
 
 
 
@@ -72,10 +72,23 @@ You can run the migration tool as follows:
 Run the Migration Tool in a development or staging environment to test and validate the migration.
 {: important}
 
+- [ ] When you migrate by using Terraform,
+
+    1. Set the API key that is required to create resources.
+
+        Set the API key that you must configure to create resources for migration.
+
+        Run `export IC_API_KEY=xxxxxx` in the command line where you plan to run the Terraform CLI commands.
+
+        If running in Windows, use `set IC_API_KEY=xxxxxx` instead.
+        {: note}
+
+    2. Check you have the Terraform CLI installed. For more information, see [Installing the Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation_step).
+
 - [ ] Run the migration tool
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--api]|[-t -f]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn xxx [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN] [--api]|[-t -f]
     ```
     {: codeblock}
 
@@ -86,6 +99,8 @@ Run the Migration Tool in a development or staging environment to test and valid
     You can add a new name for the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
     You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
+
+    You can configure Event Notifications by adding destinations for your notification channels and topics and subscriptions to trigger alerts by adding the option `--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN`.
 
     This command will:
 
@@ -112,6 +127,14 @@ The Migration Tool only migrates configuration of selected resources.
 
 ### Manual tasks
 {: #template_migration_manual}
+
+- [ ] Validate the queries migrated for views, and alerts.
+
+- [ ] For dashboards, review the queries and design the layout of the widgets.
+
+- [ ] If you have alerts and migrate by using Terraform, you must apply the Terraform files in `/cl/accountID/manual-tf-files/event-notifications`.
+
+- [ ] If you migrate by using Terraform, you must apply the Terraform files in `/cl/accountID/manual-tf-files/iam-policies/` to create IAM policies for the new Cloud Logs instance.
 
 - [ ] IAM: For API keys (service ID / user ID), you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
 

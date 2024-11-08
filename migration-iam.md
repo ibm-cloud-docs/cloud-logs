@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-04-02"
+lastupdated: "2024-11-07"
 
 keywords:
 
@@ -21,7 +21,22 @@ The {{site.data.keyword.logs_full}} migration tool is a command line tool that y
 {: shortdesc}
 
 
-You can run the following command to find out what IAM resources you will need to migrate and get Terraform for IAM resources that the tool can provide to help you migrate IAM resources:
+Run the migration tool command to create the IAM policies that are identified for migration when migrating one instance:
+
+```text
+ibmcloud logging migrate create-resources --scope instance ....
+```
+{: pre}
+
+The folder `/cl/accountID/manual-tf-files/iam-policies/` is created. In this directory, you can find the Terraform files to migrate the IAM policies that are identified for the instance that is being migrated.
+
+Notice that IAM policies are not applied automatically. You must apply them after you reeview the files.
+
+## Getting info on IAM permissions for instances that must be migrated
+{: #migiam-files-acc}
+
+
+You can also run the following command to find out what IAM resources in the account you will need to migrate and get Terraform for IAM resources that the tool can provide to help you migrate IAM resources:
 
 ```text
 ibmcloud logging migrate generate-terraform --scope iam
@@ -31,12 +46,12 @@ ibmcloud logging migrate generate-terraform --scope iam
 
 
 
-## Files generated
+### Files generated
 {: #migiam-files}
 
 By default the migration tools writes temporary files to the `migration-tool/` directory. You can specify a different directory if required.
 
-### Temporary files
+#### Temporary files
 {: #migiam-temp}
 
 
@@ -57,7 +72,7 @@ The directory `migration-tool/tmp/accountID/` includes the following information
 | `iam_users_summary` | Information on users that need to be migrated |
 {: caption="Temporary files" caption-side="bottom"}
 
-### Terraform files
+#### Terraform files
 {: #migiam-tf}
 
 The directory `/migration-tool/cl/accountID/manual-tf-files/iam-tf-files` includes the following Terraform files:

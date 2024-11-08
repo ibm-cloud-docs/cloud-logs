@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-07"
 
 keywords:
 
@@ -107,7 +107,7 @@ The following figure shows the high level view of an {{site.data.keyword.logs_fu
 ## Migrating alerts
 {: #migration-alerts-4}
 
-When you migrate an instance by using the Migration tool, alerts are migrated, an outbound integration is created and destinations are created. For more information, see [Migrating instances](/docs/cloud-logs?topic=cloud-logs-migration-instance).
+When you migrate an instance by using the Migration tool, alerts are migrated, an outbound integration is created and destinations are created.
 {: note}
 
 

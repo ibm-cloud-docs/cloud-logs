@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-04"
+lastupdated: "2024-11-07"
 
 keywords:
 
@@ -51,7 +51,7 @@ In {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}, you
 
 In {{site.data.keyword.logs_full_notm}}, you can use folders to group related resources. You have folders for views, and folders for dashboards.
 
-When you migrate an instance, migration of folders is included in the migration. For more information, see [Migrating instances](/docs/cloud-logs?topic=cloud-logs-migration-instance).
+When you migrate an instance, migration of categories is included in the migration.
 
 In {{site.data.keyword.logs_full_notm}}, the name of a folder for views must be unique within the instance and the name of a folder for dashboards must be unique within the instance.
 {: important}
@@ -75,7 +75,7 @@ In {{site.data.keyword.logs_full_notm}}, views and alerts are decoupled. You do 
 
 - For more information on alerts, see [Migrating alerts](/docs/cloud-logs?topic=cloud-logs-migration-alerts).
 
-You can use the Migration tool to migrate views and alerts configured in {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}. When you migrate an instance, migration of views and alerts is included. For more information, see [Migrating instances](/docs/cloud-logs?topic=cloud-logs-migration-instance).
+You can use the Migration tool to migrate views and alerts configured in {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}. When you migrate an instance, migration of views and alerts is included.
 - A view is migrated to an {{site.data.keyword.logs_full_notm}} public view.
 - A view with an alert is migrated to an {{site.data.keyword.logs_full_notm}} public view and an alert definition.
 
@@ -102,7 +102,7 @@ Dashboards and screens are migrated into dashboards in {{site.data.keyword.logs_
 
 You can also configure other widgets such as a vertical line chart, a horizontal line char, DataPrime creator widgets or even create widgets by using Markdown coding.
 
-When you migrate an instance, migration of Dashboards and screens are included in the migration. For dashboards, only plots are migrated and streamlined, so you will need to manually customaize the dashboard layout. For more information, see [Migrating instances](/docs/cloud-logs?topic=cloud-logs-migration-instance).
+When you migrate an instance, migration of Dashboards and screens are included in the migration. For dashboards, only plots are migrated and streamlined, so you will need to manually customaize the dashboard layout.
 
 In {{site.data.keyword.logs_full_notm}}, the name of a dashboard must be unique within the instance.
 {: important}
@@ -117,7 +117,7 @@ In {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}, you
 
 In {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}, you can configure the exclusion rule so that you can view in livetail the data (shown as not retained). In {{site.data.keyword.logs_full_notm}}, you can also configure a block parsing rule so that you can view through the Livetail feature the data and store in the {{site.data.keyword.compliance}} data pipleine your excluded data. You can then query the excluded data directly from the archive.
 
-You can use the Migration tool to migrate exclusion rules. When you migrate an instance, resources such as exclusion rules are included in the migration. For more information, see [Migrating instances](/docs/cloud-logs?topic=cloud-logs-migration-instance).
+You can use the Migration tool to migrate exclusion rules. When you migrate an instance, resources such as exclusion rules are included in the migration.
 
 
 ## Migrating parsing rules
