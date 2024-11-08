@@ -336,6 +336,8 @@ toc:
         navtitle: Limits
       - topic: shared-responsibilities.md
         navtitle: Your responsibilities
+      - topic: core/data-portability.md
+        navtitle: Data portability
       - topicgroup:
           label: High availability and disaster recovery
           topics:
