@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-09"
 
 keywords:
 
@@ -16,23 +16,21 @@ subcollection: cloud-logs
 # Managing the {{site.data.keyword.agent}} for Linux
 {: #agent-linux}
 
-You can deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from RHEL8, RHEL9, Debian, and Ubuntu environments to an {{site.data.keyword.logs_full_notm}} instance.
+You can deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from Linux environments such as RHEL8, RHEL9, Debian, and Ubuntu to an {{site.data.keyword.logs_full_notm}} instance. For more information on supported Linux environments, see [{{site.data.keyword.agent}} for non-orchestarted environments](/docs/cloud-logs?topic=cloud-logs-agent-about#agent-about-std).
 {: shortdesc}
 
 
-## Deploying the agent
-{: #agent-linux-deploy}
-
 Complete the following steps to deploy an agent to a supported Linux environment.
 
-### Step 1. Define the authentication method for the agent
+## Define the authentication method for the agent
 {: #agent-linux-deploy-step1}
+{: step}
 
 Choose the type of identity and the authentication method for the agent. Then, create an API key if needed.
 
 Complete the following steps:
 
-1. Choose the type of identity: user, or service ID.
+1. Choose the type of identity: user or service ID.
 
     You can use a user, or a service ID as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full_notm}} service.
 
@@ -49,25 +47,36 @@ Complete the following steps:
     For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-api-key).
 
 
-### Step 2. Setting up and deploying the {{site.data.keyword.agent}} configuration
-{: #agent-linux-deploy-step2}
+## Download the required RPM or DEB packages
+{: #agent-linux-step2}
+{: step}
+
+Complete the following steps:
+
+1. Download the required RPM or DEB packages.
+
+    For information about the current {{site.data.keyword.agent}} version, see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
+
+2. Validate the checksum by running the following command:
+
+    ```sh
+    sha256sum -c <sha256_filename>
+    ```
+    {: pre}
+
+    Where `<sha256_filename>` is the filename of the download `*.sha256` file.
+
+
+
+## Set up and deploy the {{site.data.keyword.agent}} configuration
+{: #agent-linux-deploy-step4}
+{: step}
 
 Complete the following steps:
 
 1. Log in to your Linux environment.
 
-2. Download the required RPM or DEB packages. For information about the current {{site.data.keyword.agent}} version, see the [agent release notes.](/docs/cloud-logs?topic=cloud-logs-release-notes-agent)
-
-3. Validate the checksum by running the following command:
-
-   ```sh
-   sha256sum -c <sha256_filename>
-   ```
-   {: pre}
-
-   Where `<sha256_filename>` is the filename of the download `*.sha256` file.
-
-5. Install the agent.
+2. Install the agent.
 
    * For RHEL run:
 
@@ -115,11 +124,7 @@ Complete the following steps:
         For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
         {: tip}
 
-    `-d <trusted_profile_id>`
-    :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information, see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers).
-
-        For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
-        {: tip}
+    
 
     `--send-directly-to-icl`
     :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.
@@ -142,14 +147,19 @@ Complete the following steps:
 
 
 
-### Step 3. Verify logs are being delivered to your target destination
+## Verify logs are being delivered to your target destination
 {: #agent-linux-deploy-step4}
+{: step}
 
 Complete the following steps:
 
 1. [Go to the web UI for your {{site.data.keyword.logs_full_notm}} instance.](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
 2. When your agent is correctly configured, you can see logs through the default dashboard view.
+
+
+
+
 
 ### Step 4. (Optional) Add additional metadata fields
 {: #agent-linux-deploy-step5}
