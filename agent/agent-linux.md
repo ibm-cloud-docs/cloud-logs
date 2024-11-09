@@ -69,7 +69,7 @@ Complete the following steps:
 
 
 ## Set up and deploy the {{site.data.keyword.agent}} configuration
-{: #agent-linux-deploy-step4}
+{: #agent-linux-deploy-step3}
 {: step}
 
 Complete the following steps:
@@ -146,9 +146,64 @@ Complete the following steps:
     :   (Optional) Set this to `true` if you have secure access enabled in your VSI. It will be set to `false` by default. For example, `-s true`.
 
 
+## Add additional metadata fields
+{: #agent-linux-deploy-step4}
+{: step}
+
+You can add additional metadata fields to the routed logs.
+
+1. Edit the `fluent-bit.conf` file in the `/etc/fluent-bit/` folder.
+
+2. Add your custom metadata using this structure: `<meta.key_name> <your_custom_value>`
+
+    Add
+
+    ```yaml
+    [FILTER]
+         Name modify
+         Match *
+         Add subsystemName subsystemName
+         Add applicationName applicationName
+         Add meta.hostname ${HOSTNAME}
+         Add meta.agentVersion agentVersion
+
+      [FILTER]
+         Name nest
+         Match *
+         Operation nest
+         Wildcard meta.*
+         Nest_under meta
+         Remove_prefix meta.
+    ```
+    {: codeblock}
+
+    Where
+
+    - `applicationName`: The application name defines the environment (`${HOSTNAME}`) that produces and sends logs to {{site.data.keyword.logs_full_notm}}. You must add an applicationName, for example, you can set it to `${HOSTNAME}`.
+    - `subsystemName`: The subsystem name is the service or application that produces and sends logs, or metrics to {{site.data.keyword.logs_full_notm}}. You must add a subsystemName.
+    - `<meta.key_name>` is the name of the metadata field to be added (for example, `meta.env`) and `<your_custom_value>` is the value to be assigned to the field (for example, the name of your environment).
+
+    For example, if you want to add an environment and region name as metadata, the configuration would be similar to this:
+
+    ```yaml
+      [FILTER]
+         Name modify
+         Match *
+         Add subsystemName subsystemName
+         Add applicationName applicationName
+         Add meta.hostname ${HOSTNAME}
+         Add agentVersion 1.3.1
+         Add region us-east
+   ```
+   {: codeblock}
+
+3. Save the configuration file.
+
+4. Restart the agent to apply the changes.
+
 
 ## Verify logs are being delivered to your target destination
-{: #agent-linux-deploy-step4}
+{: #agent-linux-deploy-step5}
 {: step}
 
 Complete the following steps:
@@ -156,42 +211,3 @@ Complete the following steps:
 1. [Go to the web UI for your {{site.data.keyword.logs_full_notm}} instance.](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
 2. When your agent is correctly configured, you can see logs through the default dashboard view.
-
-
-
-
-
-### Step 4. (Optional) Add additional metadata fields
-{: #agent-linux-deploy-step5}
-
-You can add additional metadata fields to the routed logs.
-
-1. Edit the `fluent-bit.conf` file in the `/etc/fluent-bit/` folder.
-
-2. Add your custom metadata using this structure:
-
-   ```yaml
-    [FILTER]
-       Name record_modifier
-       Match *
-       Record <meta.key_name> <your_custom_value>
-   ```
-   {: codeblock}
-
-   Where `<meta.key_name>` is the name of the metadata field to be added (for example, `meta.env`) and `<your_custom_value>` is the value to be assigned to the field (for example, the name of your environment).
-
-   For example, if you want to add an environment and region name as metadata, the configuration would be similar to this:
-
-   ```yaml
-   [FILTER]
-       Name record_modifier
-       Match *
-       Record meta.cluster_name my-cluster
-       Record meta.env production
-       Record meta.region us-east
-   ```
-   {: codeblock}
-
-3. Save the configuration file.
-
-4. Restart the agent to apply the changes.
