@@ -116,7 +116,7 @@ Complete the following steps:
     :   Specify `/logs/v1/singles` to send data to an {{site.data.keyword.logs_full_notm}} instance. 
 
     `-a <auth_mode>`
-    :   Specify `IAMAPIKey` or `VSITrustedProfile`.
+    :   Specify `IAMAPIKey` .
 
     `-k <iam_api_key>`
     :   Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-api-key).
