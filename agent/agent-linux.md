@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-09"
+lastupdated: "2024-11-11"
 
 keywords:
 
@@ -13,12 +13,14 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing the {{site.data.keyword.agent}} for Linux
+# Deploying the {{site.data.keyword.agent}} for Linux
 {: #agent-linux}
 
 You can deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from Linux environments such as RHEL8, RHEL9, Debian, and Ubuntu to an {{site.data.keyword.logs_full_notm}} instance. For more information on supported Linux environments, see [{{site.data.keyword.agent}} for non-orchestarted environments](/docs/cloud-logs?topic=cloud-logs-agent-about#agent-about-std).
 {: shortdesc}
 
+These instructions are for Red Hat Linux systems but can be used for other Linux RPM-based servers.
+{: note}
 
 Complete the following steps to deploy an agent to a supported Linux environment.
 
@@ -116,7 +118,7 @@ Complete the following steps:
     :   Specify `/logs/v1/singles` to send data to an {{site.data.keyword.logs_full_notm}} instance. 
 
     `-a <auth_mode>`
-    :   Specify `IAMAPIKey` .
+    :   Specify `IAMAPIKey` or `VSITrustedProfile`.
 
     `-k <iam_api_key>`
     :   Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-api-key).
@@ -124,7 +126,11 @@ Complete the following steps:
         For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
         {: tip}
 
-    
+    `-d <trusted_profile_id>`
+    :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers).
+
+        For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
+        {: tip}
 
     `--send-directly-to-icl`
     :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.
@@ -152,58 +158,106 @@ Complete the following steps:
 
 You can add additional metadata fields to the routed logs.
 
+Complete the following steps:
+
 1. Edit the `fluent-bit.conf` file in the `/etc/fluent-bit/` folder.
 
-2. Add your custom metadata using this structure: `<meta.key_name> <your_custom_value>`
-
-    Add
+2. Add your custom metadata using this structure: `Add <meta.key_name> <your_custom_value>`
 
     ```yaml
     [FILTER]
-         Name modify
-         Match *
-         Add subsystemName subsystemName
-         Add applicationName applicationName
-         Add meta.hostname ${HOSTNAME}
-         Add meta.agentVersion agentVersion
+      Name modify
+      Match *
+      Add subsystemName subsystemName
+      Add applicationName applicationName
+      Add meta.hostname ${HOSTNAME}
+      Add meta.agentVersion agentVersion
 
-      [FILTER]
-         Name nest
-         Match *
-         Operation nest
-         Wildcard meta.*
-         Nest_under meta
-         Remove_prefix meta.
+    [FILTER]
+      Name nest
+      Match *
+      Operation nest
+      Wildcard meta.*
+      Nest_under meta
+      Remove_prefix meta.
     ```
     {: codeblock}
 
     Where
 
-    - `applicationName`: The application name defines the environment (`${HOSTNAME}`) that produces and sends logs to {{site.data.keyword.logs_full_notm}}. You must add an applicationName, for example, you can set it to `${HOSTNAME}`.
-    - `subsystemName`: The subsystem name is the service or application that produces and sends logs, or metrics to {{site.data.keyword.logs_full_notm}}. You must add a subsystemName.
+    - `applicationName`: The application name defines the environment that produces and sends logs to {{site.data.keyword.logs_full_notm}}. You must add an applicationName, for example, you can set it to `${HOSTNAME}`.
+    - `subsystemName`: The subsystem name is the service or application that produces and sends logs to {{site.data.keyword.logs_full_notm}}. You must add a subsystemName.
     - `<meta.key_name>` is the name of the metadata field to be added (for example, `meta.env`) and `<your_custom_value>` is the value to be assigned to the field (for example, the name of your environment).
 
-    For example, if you want to add an environment and region name as metadata, the configuration would be similar to this:
+    For example, if you want to add the agent version and the region as metadata, the configuration would be similar to this:
 
     ```yaml
-      [FILTER]
-         Name modify
-         Match *
-         Add subsystemName subsystemName
-         Add applicationName applicationName
-         Add meta.hostname ${HOSTNAME}
-         Add agentVersion 1.3.1
-         Add region us-east
-   ```
-   {: codeblock}
+    [FILTER]
+      Name modify
+      Match *
+      Add subsystemName subsystemName
+      Add applicationName ${HOSTNAME}
+      Add agentVersion 1.3.1
+      Add region us-east
+    ```
+    {: codeblock}
 
 3. Save the configuration file.
 
 4. Restart the agent to apply the changes.
 
+    ```pre
+    systemctl daemon-reload && systemctl restart fluent-bit
+    ```
+    {: codeblock}
+
+
+## Include or exclude files
+{: #agent-linux-deploy-step5}
+{: step}
+
+By default, the {{site.data.keyword.agent}} reads log files from _/var/log_, and forwards the log data to your logging instance.
+
+You can configure the agent to include or exclude files that the agent monitors.
+
+Complete the following steps:
+
+1. Edit the `fluent-bit.conf` file in the `/etc/fluent-bit/` folder.
+
+2. Modify the *INPUT* section.
+
+    Set the **Path** with the directories and files that you want to monitor.
+
+    Set the **Exclude_Path** with the directories and files that you want to exclude from monitoring.
+
+    ```yaml
+    [INPUT]
+      Name              tail
+      Tag               *
+      Path              /var/log/*.log
+      Path_Key          file
+      Exclude_Path      /var/log/audit.log
+      DB                /var/log/fluent-bit.DB
+      Buffer_Chunk_Size 32KB
+      Buffer_Max_Size   256KB
+      Skip_Long_Lines   On
+      Refresh_Interval  10
+      storage.type      filesystem
+      storage.pause_on_chunks_overlimit on
+    ```
+    {: codeblock}
+
+3. Save the configuration file.
+
+4. Restart the agent to apply the changes.
+
+    ```pre
+    systemctl daemon-reload && systemctl restart fluent-bit
+    ```
+    {: codeblock}
 
 ## Verify logs are being delivered to your target destination
-{: #agent-linux-deploy-step5}
+{: #agent-linux-deploy-step6}
 {: step}
 
 Complete the following steps:
@@ -211,3 +265,5 @@ Complete the following steps:
 1. [Go to the web UI for your {{site.data.keyword.logs_full_notm}} instance.](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
 2. When your agent is correctly configured, you can see logs through the default dashboard view.
+
+    For example, if you set the applicationName to the hostname in your agent, you can set the applicationname filter in a view to the name of your host.
