@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-11"
 
 keywords:
 
@@ -27,28 +27,30 @@ The application name is the environment that produces and sends logs to {{site.d
 
 The following are the application names based on the log source:
 
-| Source | Application Name |
-|-----|-------|
-| Activity tracking events | `ibm-audit-event` |
-| Platform logs | `ibm-platform-log`|
-| {{site.data.keyword.openshiftlong_notm}} logs | `kubernetes.namespace_name`  |
-| {{site.data.keyword.containerlong_notm}} logs | `kubernetes.namespace_name` |
+| Source                                           | Application Name            |
+|--------------------------------------------------|-----------------------------|
+| Activity tracking events                         | `ibm-audit-event` |
+| Platform logs                                    | `ibm-platform-log`|
+| {{site.data.keyword.openshiftlong_notm}} cluster | `kubernetes.namespace_name`  |
+| {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.namespace_name` |
+| Linux server                                     | `${HOSTNAME}` |
 {: caption="Application names" caption-side="bottom"}
 
 
 ## Subsystem name
 {: #md-sys-name}
 
-The subsystem name is the service or application that produces and sends logs, or metrics to {{site.data.keyword.logs_full_notm}}.
+The subsystem name is the service or application that produces and sends logs to {{site.data.keyword.logs_full_notm}}.
 
 The following are the subsystem names based on the log source:
 
-| Source | Subsystem Name |
-|-----|-------|
-| Activity tracking events | `CRNserviceName:instanceID` |
-| VPC Activity tracking events | `is:resourceType` |
-| Platform logs | `CRNserviceName:instanceID`|
-| VPC Platform logs | `is:resourceType`|
-| {{site.data.keyword.openshiftlong_notm}} logs | `kubernetes.container_name`  |
-| {{site.data.keyword.containerlong_notm}} logs | `kubernetes.container_name`  |
+| Source                                           | Subsystem Name |
+|--------------------------------------------------|-------|
+| Activity tracking events                         | `CRNserviceName:instanceID` |
+| VPC Activity tracking events                     | `is:resourceType` |
+| Platform logs                                    | `CRNserviceName:instanceID`|
+| VPC Platform logs                                | `is:resourceType`|
+| {{site.data.keyword.openshiftlong_notm}} cluster | `kubernetes.container_name`  |
+| {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.container_name`  |
+| Linux server                                     |  |
 {: caption="Subsystem names" caption-side="bottom"}

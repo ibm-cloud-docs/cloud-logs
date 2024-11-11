@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-11"
 
 keywords:
 
@@ -13,26 +13,26 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing the {{site.data.keyword.agent}} for Linux
+# Deploying the {{site.data.keyword.agent}} for Linux
 {: #agent-linux}
 
-You can deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from RHEL8, RHEL9, Debian, and Ubuntu environments to an {{site.data.keyword.logs_full_notm}} instance.
+You can deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from Linux environments such as RHEL8, RHEL9, Debian, and Ubuntu to an {{site.data.keyword.logs_full_notm}} instance. For more information on supported Linux environments, see [{{site.data.keyword.agent}} for non-orchestarted environments](/docs/cloud-logs?topic=cloud-logs-agent-about#agent-about-std).
 {: shortdesc}
 
-
-## Deploying the agent
-{: #agent-linux-deploy}
+These instructions are for Red Hat Linux systems but can be used for other Linux RPM-based servers.
+{: note}
 
 Complete the following steps to deploy an agent to a supported Linux environment.
 
-### Step 1. Define the authentication method for the agent
+## Define the authentication method for the agent
 {: #agent-linux-deploy-step1}
+{: step}
 
 Choose the type of identity and the authentication method for the agent. Then, create an API key if needed.
 
 Complete the following steps:
 
-1. Choose the type of identity: user, or service ID.
+1. Choose the type of identity: user or service ID.
 
     You can use a user, or a service ID as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full_notm}} service.
 
@@ -49,25 +49,36 @@ Complete the following steps:
     For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-api-key).
 
 
-### Step 2. Setting up and deploying the {{site.data.keyword.agent}} configuration
-{: #agent-linux-deploy-step2}
+## Download the required RPM or DEB packages
+{: #agent-linux-step2}
+{: step}
+
+Complete the following steps:
+
+1. Download the required RPM or DEB packages.
+
+    For information about the current {{site.data.keyword.agent}} version, see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
+
+2. Validate the checksum by running the following command:
+
+    ```sh
+    sha256sum -c <sha256_filename>
+    ```
+    {: pre}
+
+    Where `<sha256_filename>` is the filename of the download `*.sha256` file.
+
+
+
+## Set up and deploy the {{site.data.keyword.agent}} configuration
+{: #agent-linux-deploy-step3}
+{: step}
 
 Complete the following steps:
 
 1. Log in to your Linux environment.
 
-2. Download the required RPM or DEB packages. For information about the current {{site.data.keyword.agent}} version, see the [agent release notes.](/docs/cloud-logs?topic=cloud-logs-release-notes-agent)
-
-3. Validate the checksum by running the following command:
-
-   ```sh
-   sha256sum -c <sha256_filename>
-   ```
-   {: pre}
-
-   Where `<sha256_filename>` is the filename of the download `*.sha256` file.
-
-5. Install the agent.
+2. Install the agent.
 
    * For RHEL run:
 
@@ -116,7 +127,7 @@ Complete the following steps:
         {: tip}
 
     `-d <trusted_profile_id>`
-    :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information, see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers).
+    :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers).
 
         For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
         {: tip}
@@ -141,9 +152,113 @@ Complete the following steps:
     :   (Optional) Set this to `true` if you have secure access enabled in your VSI. It will be set to `false` by default. For example, `-s true`.
 
 
-
-### Step 3. Verify logs are being delivered to your target destination
+## Add additional metadata fields
 {: #agent-linux-deploy-step4}
+{: step}
+
+You can add additional metadata fields to the routed logs.
+
+Complete the following steps:
+
+1. Edit the `fluent-bit.conf` file in the `/etc/fluent-bit/` folder.
+
+2. Add your custom metadata using this structure: `Add <meta.key_name> <your_custom_value>`
+
+    ```yaml
+    [FILTER]
+      Name modify
+      Match *
+      Add subsystemName subsystemName
+      Add applicationName applicationName
+      Add meta.hostname ${HOSTNAME}
+      Add meta.agentVersion agentVersion
+
+    [FILTER]
+      Name nest
+      Match *
+      Operation nest
+      Wildcard meta.*
+      Nest_under meta
+      Remove_prefix meta.
+    ```
+    {: codeblock}
+
+    Where
+
+    - `applicationName`: The application name defines the environment that produces and sends logs to {{site.data.keyword.logs_full_notm}}. You must add an applicationName, for example, you can set it to `${HOSTNAME}`.
+    - `subsystemName`: The subsystem name is the service or application that produces and sends logs to {{site.data.keyword.logs_full_notm}}. You must add a subsystemName.
+    - `<meta.key_name>` is the name of the metadata field to be added (for example, `meta.env`) and `<your_custom_value>` is the value to be assigned to the field (for example, the name of your environment).
+
+    For example, if you want to add the agent version and the region as metadata, the configuration would be similar to this:
+
+    ```yaml
+    [FILTER]
+      Name modify
+      Match *
+      Add subsystemName subsystemName
+      Add applicationName ${HOSTNAME}
+      Add agentVersion 1.3.1
+      Add region us-east
+    ```
+    {: codeblock}
+
+3. Save the configuration file.
+
+4. Restart the agent to apply the changes.
+
+    ```pre
+    systemctl daemon-reload && systemctl restart fluent-bit
+    ```
+    {: codeblock}
+
+
+## Include or exclude files
+{: #agent-linux-deploy-step5}
+{: step}
+
+By default, the {{site.data.keyword.agent}} reads log files from _/var/log_, and forwards the log data to your logging instance.
+
+You can configure the agent to include or exclude files that the agent monitors.
+
+Complete the following steps:
+
+1. Edit the `fluent-bit.conf` file in the `/etc/fluent-bit/` folder.
+
+2. Modify the *INPUT* section.
+
+    Set the **Path** with the directories and files that you want to monitor.
+
+    Set the **Exclude_Path** with the directories and files that you want to exclude from monitoring.
+
+    ```yaml
+    [INPUT]
+      Name              tail
+      Tag               *
+      Path              /var/log/*.log
+      Path_Key          file
+      Exclude_Path      /var/log/audit.log
+      DB                /var/log/fluent-bit.DB
+      Buffer_Chunk_Size 32KB
+      Buffer_Max_Size   256KB
+      Skip_Long_Lines   On
+      Refresh_Interval  10
+      storage.type      filesystem
+      storage.pause_on_chunks_overlimit on
+    ```
+    {: codeblock}
+
+3. Save the configuration file.
+
+4. Restart the agent to apply the changes.
+
+    ```pre
+    systemctl daemon-reload && systemctl restart fluent-bit
+    ```
+    {: codeblock}
+
+## Verify logs are being delivered to your target destination
+{: #agent-linux-deploy-step6}
+{: step}
 
 Complete the following steps:
 
@@ -151,37 +266,4 @@ Complete the following steps:
 
 2. When your agent is correctly configured, you can see logs through the default dashboard view.
 
-### Step 4. (Optional) Add additional metadata fields
-{: #agent-linux-deploy-step5}
-
-You can add additional metadata fields to the routed logs.
-
-1. Edit the `fluent-bit.conf` file in the `/etc/fluent-bit/` folder.
-
-2. Add your custom metadata using this structure:
-
-   ```yaml
-    [FILTER]
-       Name record_modifier
-       Match *
-       Record <meta.key_name> <your_custom_value>
-   ```
-   {: codeblock}
-
-   Where `<meta.key_name>` is the name of the metadata field to be added (for example, `meta.env`) and `<your_custom_value>` is the value to be assigned to the field (for example, the name of your environment).
-
-   For example, if you want to add an environment and region name as metadata, the configuration would be similar to this:
-
-   ```yaml
-   [FILTER]
-       Name record_modifier
-       Match *
-       Record meta.cluster_name my-cluster
-       Record meta.env production
-       Record meta.region us-east
-   ```
-   {: codeblock}
-
-3. Save the configuration file.
-
-4. Restart the agent to apply the changes.
+    For example, if you set the applicationName to the hostname in your agent, you can set the applicationname filter in a view to the name of your host.

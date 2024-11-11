@@ -153,7 +153,7 @@ toc:
           - topic: send-logs-api.md
             navtitle: Using the REST API
           - topicgroup:
-              label: Using the Logging agent for orchestrated environments
+              label: Logging agent for orchestrated environments
               topics:
               - topic: agent/agent-helm-os-deploy.md
                 navtitle: Deploying the Logging agent on OpenShift using a Helm chart
@@ -168,12 +168,12 @@ toc:
               - topic: agent/helm-chart-versions.md
                 navtitle: Checking the available Helm chart versions
           - topicgroup:
-              label: Using the Logging agent for non-orchestrated environments
+              label: Logging agent for Linux environments
               topics:
               - topic: agent/agent-linux.md
-                navtitle: Managing the agent Linux environments
-          - topic: agent/agent-rsyslog.md
-            navtitle: Using the Logging agent to collect and route (r)Syslog messages
+                navtitle: Deploying the agent
+              - topic: agent/agent-rsyslog.md
+                navtitle: Configure the Logging agent to collect and route (r)Syslog messages 
           - agent/agent-multiple-icl-targets.md
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
