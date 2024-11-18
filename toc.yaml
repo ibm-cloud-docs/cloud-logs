@@ -101,6 +101,7 @@ toc:
             navtitle: IAM actions by role
           - topic: iam-custom-roles.md
             navtitle: Managing custom roles
+          - data-access-rules.md
           - topicgroup:
               label: S2S authorizations
               topics:
