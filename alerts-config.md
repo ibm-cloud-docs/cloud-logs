@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-11-19"
 
 keywords:
 
@@ -39,6 +39,9 @@ Create an alert in {{site.data.keyword.logs_full_notm}} for early detection of a
 
 
 Specify the triggering condition that is evaluated against the data included for analysis for this alert.
+
+You must define your triggering condition. Do not leave the triggering condition configuration blank or you will have all logs generating alerts.
+{: important}
 
 This condition you specifies differs depending on the alert type. 
 

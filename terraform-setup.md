@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-19"
 
 keywords: 
 
@@ -39,7 +39,7 @@ Complete the following steps to install the Terraform CLI:
 
 2. Download the Terraform version that you want. For example, you can download `terraform_0.15.5_darwin_amd64.zip` for a MacOS.
 
-    The IBM Cloud Provider plug-in for Terraform currently supports Terraform version 0.12.x, 0.13.x, and 0.14.x only. Make sure to select a supported Terraform version.
+   The IBM Cloud Provider plug-in for Terraform currently supports Terraform version 0.15.x or later. Make sure to select a supported Terraform version.
 
 3. Extract the Terraform zip file and copy the files to your terraform directory.
 
@@ -63,9 +63,9 @@ Complete the following steps to install the Terraform CLI:
 
 After the Terraform CLI installation is complete, you must set up the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform so that you can start working with resources and services in IBM Cloud. For a list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
-The setup of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depending on the Terraform CLI version that you want to use. To run your Terraform configuration files with Terraform version 0.13.x or higher, installation of the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform is not required. For more information, see [Terraform v0.13.x and higher](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
 
-For example, to run your Terraform configuration files with Terraform version 0.13.x or higher, complete the following steps:
+
+To run your Terraform configuration files with Terraform version 0.15.x or higher, complete the following steps:
 1. Create a `versions.tf` file and specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter.
 
     ```terraform
