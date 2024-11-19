@@ -37,7 +37,7 @@ You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to 
    Option 1: Run the `ibmcloud logs config set` command.
 
    ```text
-   ibmcloud logs config set service-url https://{instance_ID}.api.{region}.logs.cloud.ibm.com
+   ibmcloud logs config set service-url https://{API_endpoint}
    ```
    {: pre}
 
@@ -45,18 +45,18 @@ You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to 
    Option 2: Export an environment variable with your {{site.data.keyword.logs_full_notm}} service endpoint URL.
 
    ```text
-   export LOGS_URL=https://{instance_ID}.api.{region}.logs.cloud.ibm.com
+   export LOGS_URL=https://{API_endpoint}
    ```
    {: pre}
 
    Option 3: Set the service endpoint in the command.
 
    ```text
-   ibmcloud logs --service-url https://{instance_ID}.api.{region}.logs.cloud.ibm.com
+   ibmcloud logs --service-url https://{API_endpoint}
    ```
    {: pre}
 
-   Replace `{instance_ID}` and `{region}` with the values that apply to your {{site.data.keyword.logs_full_notm}} service instance. The endpoint URL that is specific to your instance can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
+   Replace `{API_endpoint}` with the API endpoint that is specific to your instance. The API endpoint information can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
 
 ## Commands
 {: #cl-commands}
