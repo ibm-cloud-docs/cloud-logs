@@ -36,7 +36,7 @@ The migration tool plug-in v0.1.26 is available.
 
     * Migrating {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log groups into {{site.data.keyword.logs_full_notm}} data access rules.
 
-      {{site.data.keyword.logs_full_notm}} uses DPXL as its query language. The migration copies the current {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log group configuration (1 or more queries) to a data rule in the {{site.data.keyword.logs_full_notm}} instance. Each query must be migrated to DPXL individually. For more information about DPXL, see the [DataPrime Expression Language (DPXL) reference](/docs/cloud-logs?topic=cloud-logs-dpxl_ref).
+      {{site.data.keyword.logs_full_notm}} uses DPXL as its query language. The migration copies the current {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log group configuration (1 or more queries) to a data rule in the {{site.data.keyword.logs_full_notm}} instance. Each query must be manually migrated to DPXL individually. For more information about DPXL, see the [DataPrime Expression Language (DPXL) reference](/docs/cloud-logs?topic=cloud-logs-dpxl_ref).
 
     * Fixes related to configuring {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.cos_full_notm}} buckets, including Windows support.
 
