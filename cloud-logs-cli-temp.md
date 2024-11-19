@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-23"
+lastupdated: "2024-11-19"
 
 keywords:
 
@@ -24,39 +24,39 @@ You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 * Install the {{site.data.keyword.logs_full_notm}} CLI plug-in by running the following command:
 
-    ```text
-    ibmcloud plugin install logs
-    ```
-    {: pre}
+   ```text
+   ibmcloud plugin install logs
+   ```
+   {: pre}
 
-    You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
-    {: tip}
+   You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
+   {: tip}
 
 * To target the {{site.data.keyword.logs_full_notm}} instance, use one of the following options.
 
-    Option 1: Run the `ibmcloud logs config set` command.
+   Option 1: Run the `ibmcloud logs config set` command.
 
-      ```text
-       ibmcloud logs config set service-url https://{instance_ID}.api.{region}.logs.cloud.ibm.com
-      ```
-      {: pre}
+   ```text
+   ibmcloud logs config set service-url https://{instance_ID}.api.{region}.logs.cloud.ibm.com
+   ```
+   {: pre}
 
 
-    Option 2: Export an environment variable with your {{site.data.keyword.logs_full_notm}} service endpoint URL.
+   Option 2: Export an environment variable with your {{site.data.keyword.logs_full_notm}} service endpoint URL.
 
-      ```text
-      export LOGS_URL=https://{instance_ID}.api.{region}.logs.cloud.ibm.com
-      ```
-      {: pre}
+   ```text
+   export LOGS_URL=https://{instance_ID}.api.{region}.logs.cloud.ibm.com
+   ```
+   {: pre}
 
-    Option 3: Set the service endpoint in the command.
+   Option 3: Set the service endpoint in the command.
 
-      ```text
-      ibmcloud logs --service-url https://{instance_ID}.api.{region}.logs.cloud.ibm.com
-      ```
-      {: pre}
+   ```text
+   ibmcloud logs --service-url https://{instance_ID}.api.{region}.logs.cloud.ibm.com
+   ```
+   {: pre}
 
-    Replace `{instance_ID}` and `{region}` with the values that apply to your {{site.data.keyword.logs_full_notm}} service instance. The endpoint URL that is specific to your instance can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
+   Replace `{instance_ID}` and `{region}` with the values that apply to your {{site.data.keyword.logs_full_notm}} service instance. The endpoint URL that is specific to your instance can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
 
 ## Commands
 {: #cl-commands}
@@ -113,4 +113,3 @@ The current supported version of the {{site.data.keyword.logs_full_notm}} CLI is
 {: caption="{{site.data.keyword.logs_full_notm}} CLI commands" caption-side="bottom"}
 
 For more information about using these commands, log in to the {{site.data.keyword.cloud_notm}} and run `ibmcloud logs command_name -h`. For example, `ibmcloud logs views -h`.
-
