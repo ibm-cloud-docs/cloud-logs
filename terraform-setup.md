@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-19"
 
 keywords: 
 
@@ -39,7 +39,7 @@ Complete the following steps to install the Terraform CLI:
 
 2. Download the Terraform version that you want. For example, you can download `terraform_0.15.5_darwin_amd64.zip` for a MacOS.
 
-    The IBM Cloud Provider plug-in for Terraform currently supports Terraform version 0.12.x, 0.13.x, and 0.14.x only. Make sure to select a supported Terraform version.
+   The IBM Cloud Provider plug-in for Terraform currently supports Terraform version 0.15.x or later. Make sure to select a supported Terraform version.
 
 3. Extract the Terraform zip file and copy the files to your terraform directory.
 
