@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-19"
 
 keywords:
 
@@ -26,6 +26,23 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
 
+## 19 November 2024
+{: #migration-nov1924}
+
+The migration tool plug-in v0.1.26 is available.
+:   Updates include:
+
+    * Enhancement of the `create-resources` command when migrating an IAM configuration to include migrating policies defining {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} data access policies using log groups.
+
+    * Migrating {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log groups into {{site.data.keyword.logs_full_notm}} data access rules.
+
+      {{site.data.keyword.logs_full_notm}} uses DPXL as its query language. The migration copies the current {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log group configuration (1 or more queries) to a data rule in the {{site.data.keyword.logs_full_notm}} instance. Each query must be migrated to DPXL individually. For more information about DPXL, see the [DataPrime Expression Language (DPXL) reference](/docs/cloud-logs?topic=cloud-logs-dpxl_ref).
+
+    * Fixes related to configuring {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.cos_full_notm}} buckets, including Windows support.
+
+    * Fixes for errors when migrating IAM policies for users when an inactive user is found.
+
+    * Fixes for errors when `threshold` was found to be of different types, for example, `string` in some cases and `float64` in others.
 
 
 ## 25 October 2024
