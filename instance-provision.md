@@ -161,5 +161,5 @@ To provision an instance of {{site.data.keyword.logs_full_notm}} through the com
 After you provision the instance, you can:
 
 - Attach a data bucket and a metrics bucket. For more information, see [Configuring buckets](/docs/cloud-logs?topic=cloud-logs-about-bucket).
-- Configure an outbound integration. For more information, see           c.
+- Configure an outbound integration. For more information, see [Configuring an outbound integration to connect {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.en_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 - Configure a log source by adding a logging agent. This agent is responsible for collecting and forwarding logs to your instance.
