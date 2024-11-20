@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -65,7 +65,7 @@ Storage components store data used by {{site.data.keyword.logs_full_notm}}.
 | {{site.data.keyword.logs_routing_full_notm}} | You can use {{site.data.keyword.logs_full_notm}} as a target for platform and application logs. For more information, see [Creating an {{site.data.keyword.logs_full_notm}} tenant in {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-tenant-create&interface=ui).  \n. \n You can use the {{site.data.keyword.agent}} to collect and forward application logs to {{site.data.keyword.logs_full_notm}}.  |
 | {{site.data.keyword.cos_full_notm}} | {{site.data.keyword.logs_full_notm}} uses {{site.data.keyword.cos_short}} buckets, owned by you, for long term storage and search of logs and log metrics. You need to attach the {{site.data.keyword.cos_short}} buckets to your {{site.data.keyword.logs_full_notm}} service instance. For more information, see [Configuring buckets for long term storage and search](/docs/cloud-logs?topic=cloud-logs-about-bucket). |
 | {{site.data.keyword.messagehub_full}} | You can send logs from {{site.data.keyword.logs_full_notm}} to an {{site.data.keyword.messagehub_full}} topic.  |
-| {{site.data.keyword.en_full_notm}} | You can use {{site.data.keyword.en_full_notm}} to notify your operators or other systems about {{site.data.keyword.logs_full_notm}} alerts. For more information, see [Enabling event notifications for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events). |
+| {{site.data.keyword.en_full_notm}} | You can use {{site.data.keyword.en_full_notm}} to notify your operators or other systems about {{site.data.keyword.logs_full_notm}} alerts. For more information, see [Configuring an outbound integration for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure). |
 | {{site.data.keyword.iamlong}} | To authenticate requests to the service and authorize user actions, {{site.data.keyword.logs_full_notm}} implements platform and service access roles in {{site.data.keyword.iamshort}} (IAM). For more information about required IAM permissions to work with the service, see [Managing access for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-iam).  \n. \n {{site.data.keyword.logs_full_notm}} accesses IAM through {{site.data.keyword.cloud_notm}} public network. |
 {: caption="{{site.data.keyword.logs_full_notm}}  integration with other {{site.data.keyword.cloud_notm}} services." caption-side="top"}
 {: summary="The first column is the service. The second column is a description of the service."}

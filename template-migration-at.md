@@ -112,7 +112,7 @@ Run the Migration Tool in a development or staging environment to test and valid
 
     You can configure Event Notifications by adding destinations for your notification channels and topics and subscriptions to trigger alerts by adding the option `--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN`.
 
-    For more information, see [Migrating Activity Tracker instances](/docs/cloud-logs?topic=cloud-logs-migration-atracker-n-cl).
+    
 
     This command will:
 

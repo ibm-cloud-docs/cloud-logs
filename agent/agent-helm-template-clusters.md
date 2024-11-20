@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -211,7 +211,7 @@ The following table contains a list of the parameters that you can configure in 
 | `env.ingestionPort` | The {{site.data.keyword.logs_full_notm}} port to send the logs to | Required | No default value |
 | `env.iamMode` | Indicate the IAM authentication mechanism used. Valid values are: `TrustedProfile` or `IAMAPIKey` | Required | `TrustedProfile` |
 | `env.trustedProfileID` | The Trusted profile ID. | This parameter is required when `iamMode=TrustedProfile` | No default value |
-| `secret.iamAPIKey` | The APIKey ID. You only should provide this value via the CLI. For more information, see [env.iamMode](#agent-helm-os-deploy-chart-options-iammode) | This parameter is required when `iamMode=IAMAPIKey`   | No default value |
+| `secret.iamAPIKey` | The APIKey ID. You only should provide this value via the CLI. For more information, see `env.iamMode`. | This parameter is required when `iamMode=IAMAPIKey`   | No default value |
 | `clusterName` | The name of the kubernetes cluster | Optional | No default value |
 | `scc.create` | Indicates when to create the Secure Context Constraints in Openshift | Required for Openshift cluster deployments only. | `false` |
 | `defaultMetadata.subsystemName` | Static string to override the subsystemName in {{site.data.keyword.logs_full_notm}} | Optional | The default value is set to the namespace that generated the log |
@@ -220,11 +220,11 @@ The following table contains a list of the parameters that you can configure in 
 | `additionalLogSourcePaths` | The path of additional logs beyond the default. /var/log/containers/*.log \n For more information, see [Log Source Paths configurations](#agent-helm-template-clusters-chart-options-log-source-paths).| Optional | No default value |
 | `excludeLogSourcePaths` | The path of additional logs that should not be collected by the agent. \n For more information, see [Log Source Paths configurations](#agent-helm-template-clusters-chart-options-log-source-paths).| Optional | No default value |
 | `selectedLogSourcePaths` | The path of logs that are collected by the agent, excluding the default path and any files configured in `additionalLogSourcePaths`. \n For more information, see [Log Source Paths configurations](#agent-helm-template-clusters-chart-options-log-source-paths).| Optional | No default value |
-| `includeAnnotations` | Instruct the kubernetes plugin to include the container annotations with the log messages \n For more information, see [includeAnnotations](agent-helm-template-clusters-chart-options-include-annotations).| Required | `false` |
+| `includeAnnotations` | Instruct the kubernetes plugin to include the container annotations with the log messages \n For more information, see [includeAnnotations]#agent-helm-template-clusters-chart-options-include-annotations).| Required | `false` |
 | `retryLimit` | Limit the number of retries that will be attempted \n For more information, see [retryLimit](#agent-helm-template-clusters-deploy-chart-options-retrylimit)| Required | False |
 | `loggingLevel` | The type of logs that should be reported by the agent itself. Valid values are: `debug`, `info`, or `error`. | Required | `info` |
 | `additionalMetadata` | A list of key/value pair tags that can be added as metadata to every log line. \n For more information, see [additionalMetadata](#agent-helm-template-clusters-deploy-chart-options-additional-metadata). | Optional | No default value  |
-| `iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens.  \n For more information, see [iamEnvironment](agent-helm-template-clusters-chart-options-iam-env). | Required | `Production` |
+| `iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens.  \n For more information, see [iamEnvironment](#agent-helm-template-clusters-chart-options-iam-env). | Required | `Production` |
 {: caption="Helm chart parameters" caption-side="bottom"}
 
 ## env.iamMode

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -66,7 +66,7 @@ In this case, the two input plug-ins have distinct tags so that they can be rout
 
 For the output, the plug-in will be the {{site.data.keyword.logs_full_notm}} output plug-in configured for your {{site.data.keyword.logs_full_notm}} instance destinations.
 
-For details about configuring the {{site.data.keyword.logs_full_notm}} agent output plug-in, see [plug-in parameters](/docs/cloud-logs?topic=cloud-logs-logs-plugin-parameters).
+For details about configuring the {{site.data.keyword.logs_full_notm}} agent output plug-in, see [plug-in parameters](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters).
 
 The `Match` parameter corresponds to one of the tags previously specified in the input plug-ins. The ID must be unique for each [OUTPUT] section.
 {: note}
@@ -108,5 +108,3 @@ When using an API key, you need to provide this API key in the [OUTPUT] stanza i
 This can also be used to work with multiple {{site.data.keyword.logs_full_notm}} instances located in different accounts.
 To not persist the API key in a configuration file for security reasons, it is strongly recommended to provide the API key in a unique environment variable and refer to it with the following notation: `IAM_API_key ${NAME_OF_ENV_VARIABLE_WHERE_API_KEY_IS_STORED}`.
 {: tip}
-
-
