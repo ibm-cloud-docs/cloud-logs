@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -61,7 +61,7 @@ The {{site.data.keyword.at_full_notm}} service is deprecated.
 
 You must migrate your {{site.data.keyword.at_full_notm}} instances to {{site.data.keyword.logs_full_notm}} instances.
 
-If you already use {{site.data.keyword.atracker_full_notm}}, see [Migrating {{site.data.keyword.atracker_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-atracker).
+
 
 If you just have {{site.data.keyword.at_full_notm}} instances provisioned in your account, you must decide whether you want to keep the current {{site.data.keyword.at_full_notm}} architecture and maintain data locality or if you prefer to move to a centralize model where all activity tracking events are collected in a single {{site.data.keyword.logs_full_notm}} instance.
 
@@ -80,7 +80,7 @@ Choose based on your requirements from any of the following options:
 
 You can manually migrate {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance, and configure {{site.data.keyword.atracker_full_notm}} in the account.
 
-You can use the migration tool to migrate {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance, and configure {{site.data.keyword.atracker_full_notm}} in the account. For more information, see [Migrating {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance for centralize auditing events](/docs/cloud-logs?topic=cloud-logs-migration-atracker-1-cl).
+You can use the migration tool to migrate {{site.data.keyword.at_full_notm}} instances into 1 {{site.data.keyword.logs_full_notm}} instance, and configure {{site.data.keyword.atracker_full_notm}} in the account. 
 
 The following image shows a high-level view of the account after you migrate {{site.data.keyword.at_full_notm}} instances from multiple regions in the account into 1 instance of {{site.data.keyword.logs_full_notm}}:
 
@@ -89,7 +89,7 @@ The following image shows a high-level view of the account after you migrate {{s
 ## Migrating maintaing data locality
 {: #migration-at-options-2}
 
-You can use the migration tool to migrate {{site.data.keyword.at_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances, replicating the current {{site.data.keyword.at_full_notm}} architecture. Then, after you have migrated all instances, you can use the migration tool to configure {{site.data.keyword.atracker_full_notm}} in the account. For more information, see [Migrating {{site.data.keyword.at_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances for data locality](/docs/cloud-logs?topic=cloud-logs-migration-atracker-n-cl).
+You can use the migration tool to migrate {{site.data.keyword.at_full_notm}} instances into N {{site.data.keyword.logs_full_notm}} instances, replicating the current {{site.data.keyword.at_full_notm}} architecture. Then, after you have migrated all instances, you can use the migration tool to configure {{site.data.keyword.atracker_full_notm}} in the account. 
 
 The following image shows a high-level view of the account after {{site.data.keyword.at_full_notm}} instances from multiple regions in the account are migrated into multiple instances of {{site.data.keyword.logs_full_notm}}:
 

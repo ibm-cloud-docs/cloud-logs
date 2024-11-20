@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -67,9 +67,9 @@ Complete the following steps to create a topic:
 
     - Option 1: Configure the event type, event subtype or event severity.
 
-        You can choose an event type. To see the list of supported types, see [Event types](/docs/cloud-logs?topic=cloud-logs-cl-events-for-en-types).
+        You can choose an event type. To see the list of supported types, see [Event types]/docs/cloud-logs?topic=cloud-logs-cl-events-for-en#cl-events-for-en-types).
 
-        You can choose an event subtype. To see the list of supported subtypes, see [Event subtypes](/docs/cloud-logs?topic=cloud-logs-cl-events-for-en-subtypes).
+        You can choose an event subtype. To see the list of supported subtypes, see [Event subtypes](/docs/cloud-logs?topic=cloud-logs-cl-events-for-en#cl-events-for-en-subtypes).
 
         You can choose a severity value. To see the list of supported severities, see [Event severities](/docs/cloud-logs?topic=cloud-logs-event-severities).
 
@@ -91,7 +91,7 @@ Complete the following steps to create a topic:
 
 A destination defines a notification channel that you can use to notify when an alert is triggered.
 
-Destinations are custom protocols, which are either services or user reachable entities. For more information on supported destinations, see [Supported destinations](/docs/event-notifications?topic=event-notifications-supported-destinations).
+Destinations are custom protocols, which are either services or user reachable entities. For more information on supported destinations, see [Supported destinations](/docs/event-notifications?topic=event-notifications-en-destination).
 
 For information on how to create a destination, see [Create an {{site.data.keyword.en_full_notm}} destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination).
 

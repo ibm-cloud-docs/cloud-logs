@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -50,7 +50,7 @@ You might need to:
 - Update your disaster recovery process.
 - Provision the {{site.data.keyword.en_full_notm}} service.
 
-    In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. If you do not currently use the service and have alerts configured in your {{site.data.keyword.at_full_notm}} instances, you must provision an instance of the {{site.data.keyword.en_full_notm}} service. For more information, see [Enabling event notifications for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events).
+    In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. If you do not currently use the service and have alerts configured in your {{site.data.keyword.at_full_notm}} instances, you must provision an instance of the {{site.data.keyword.en_full_notm}} service. For more information, see [Configuring an outbound integration for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 
 The data format of activity tracking events and platform logs does not change.
 {: important}
@@ -67,10 +67,6 @@ For more information, see:
 
 
 
-## Migrating your {{site.data.keyword.atracker_full_notm}} architecture
-{: #migration-intro-atarcker}
-
-If you have {{site.data.keyword.atracker_full_notm}} configured in the account, see [Migrating {{site.data.keyword.atracker_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-atracker).
 
 
 ## Migrating your {{site.data.keyword.la_full_notm}} architecture

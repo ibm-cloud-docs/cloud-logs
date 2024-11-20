@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -81,7 +81,7 @@ Review following table for more information about event notification properties.
 | `id` | The identifier provided by {{site.data.keyword.logs_full_notm}} that would identify the event in {{site.data.keyword.logs_full_notm}} |
 | `notification_id` | The identifier created by {{site.data.keyword.en_short}}. |
 | `source` | The Cloud Resource Name (CRN) that uniquely identifies your {{site.data.keyword.logs_full_notm}} service instance. |
-| `type` | The combination of the [type of event](#event-notifications-list) that triggered a notification and The subtype that corresponds with the [type of event](#event-notifications-list) that triggered a notification. |
+| `type` | The combination of the [type of event](/docs/cloud-logs?topic=cloud-logs-cl-events-for-en#cl-events-for-en-types) that triggered a notification and The [subtype](/docs/cloud-logs?topic=cloud-logs-cl-events-for-en#cl-events-for-en-subtypes) that corresponds with the type of event that triggered a notification. |
 {: caption="Properties in an event notification payload" caption-side="bottom"}
 
 

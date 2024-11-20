@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -34,13 +34,6 @@ You can use {{site.data.keyword.la_full_notm}} instances to monitor application 
 
     To migrate these instances, see [Migrating instances that collect platform logs](/docs/cloud-logs?topic=cloud-logs-migration-platform-logs).
 
-- Scenario 2: {{site.data.keyword.la_full_notm}} instances that collect application and operational logs:
-
-    You can send logs to the {{site.data.keyword.la_full_notm}} instance through different methods depending on the source such as configuring the LogDNA agent or using the ingestion REST API and libraries to send application logs.
-
-    To migrate these instances, see [Migrating instances that collect application and operational logs](/docs/cloud-logs?topic=cloud-logs-migration-la-op).
-
-- Scenario 3: {{site.data.keyword.la_full_notm}} instances that collect all types of logs such as service, application and operational logs, and platform logs.
 
 
 

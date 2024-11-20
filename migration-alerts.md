@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -26,9 +26,9 @@ You can use the Migration tool to help you migrate alerts that you have configur
 
 - Learn about migration. For more information, see [Migrating {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-intro).
 
-- Learn about the Migration tool. For more information, see [Migrating tool](/docs/cloud-logs?topic=cloud-logs-migration-tool).
+- Learn about the Migration tool. For more information, see [Migration CLI](/docs/cloud-logs?topic=cloud-logs-migration_cli).
 
-- Learn about enabling event notifications for {{site.data.keyword.logs_full_notm}}. For more information, see [Enabling event notifications](/docs/cloud-logs?topic=cloud-logs-event-notifications-events).
+- Learn about enabling event notifications for {{site.data.keyword.logs_full_notm}}. For more information, see [Configuring an outbound integration](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 
 - Learn about alerts. For more information, see [Alerting](/docs/cloud-logs?topic=cloud-logs-alerts).
 
@@ -65,7 +65,7 @@ When you configure alerts in an {{site.data.keyword.logs_full_notm}} instance, c
 
 
 To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the following steps:
-1. In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. If you do not currently use the service and have alerts configured in your {{site.data.keyword.at_full_notm}} instances or your {{site.data.keyword.la_full_notm}} instances, you must provision an instance of the {{site.data.keyword.at_full_notm}} service. For more information, see [Enabling event notifications for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events).
+1. In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. If you do not currently use the service and have alerts configured in your {{site.data.keyword.at_full_notm}} instances or your {{site.data.keyword.la_full_notm}} instances, you must provision an instance of the {{site.data.keyword.at_full_notm}} service. For more information, see [Configuring an outbound integration for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 
 2. In IAM, define a service to service authorization between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance. For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 
@@ -89,7 +89,7 @@ To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the foll
 
         A destination defines a notification channel that you can use to notify when an alert is triggered.
 
-        For more information on destinations, see [Supported destinations](/docs/event-notifications?topic=event-notifications-supported-destinations).
+        For more information on destinations, see [Supported destinations](/docs/event-notifications?topic=event-notifications-en-destination).
 
     - Define 1 or more subscriptions.
 

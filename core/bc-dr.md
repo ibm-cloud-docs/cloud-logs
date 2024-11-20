@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-29"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -114,7 +114,7 @@ In the case of a regional disaster, you must complete the following steps to rec
 
     * Define IAM authorizations between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance. For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en&interface=ui).
 
-    * Configure {{site.data.keyword.en_full_notm}} as an outbound integration. [Configure {{site.data.keyword.logs_full_notm}} as a source in {{site.data.keyword.en_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-events&interface=ui).
+    * Configure {{site.data.keyword.en_full_notm}} as an outbound integration. For more information, see [Configure routing of events to destinations in {{site.data.keyword.en_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-alerts).
 
 5. Recreate the resources in the new {{site.data.keyword.logs_full_notm}} instance.
 

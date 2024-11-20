@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-21"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -179,7 +179,7 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
     `atracker`
     :   Migrate {{site.data.keyword.atracker_full_notm}} targets and routes associated with migrated {{site.data.keyword.at_full_notm}} instances.
 
-        For more information about {{site.data.keyword.atracker_full_notm}} migration, see [Migrating {{site.data.keyword.atracker_full_notm}} routes and targets](/docs/cloud-logs?topic=cloud-logs-migration-atracker).
+        
 
     `platform-logs`
     :   Sets the target {{site.data.keyword.logs_full_notm}} location within the region where platform logs will be sent.

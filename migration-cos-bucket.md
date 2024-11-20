@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -26,7 +26,7 @@ You can use the Migration tool to migrate the archiving configuration of an {{si
 
 - Learn about migration. For more information, see [Migrating {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-migration-intro).
 
-- Learn about the Migration tool. For more information, see [Migrating tool](/docs/cloud-logs?topic=cloud-logs-migration-tool).
+- Learn about the Migration tool. For more information, see [Migration CLI](/docs/cloud-logs?topic=cloud-logs-migration_cli).
 
 - Learn about the {{site.data.keyword.cos_full_notm}} buckets that you can configure with an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Configuring buckets](/docs/cloud-logs?topic=cloud-logs-about-bucket).
 
