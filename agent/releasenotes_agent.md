@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-11-21"
 
 keywords:
 
@@ -21,13 +21,59 @@ Use these release notes to learn about updates to the {{site.data.keyword.agent}
 
 
 
+## 21 November 2024
+{: #logs-router-agent-nov2124}
+{: release-note}
+
+Release of the {{site.data.keyword.agent}} version 1.4.0
+:   {{site.data.keyword.agent}} version 1.4.0 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, and Debian 11, and Debian 12.  This release is based on fluentbit [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external}.
+
+   This version includes the following notable changes:
+
+   * Concurrent processing changes in {{site.data.keyword.logs_full_notm}} output plug-in.
+      * Users might need to update the output plug-in to contain the `workers` option.
+   * Improved error handling of connectivity issues when sending data directly to {{site.data.keyword.logs_full_notm}}.
+   * Resolved an issue for some log entries incorrectly being grouped into the `ibm-subsystem-not found` subsystem.
+   * Support for custom IAM environments.
+
+   The following new {{site.data.keyword.agent}} packages are available.
+
+   Both packages are required for the installation.
+   {: important}
+
+   RHEL 8
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.4.0.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.4.0.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.4.0.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.4.0.rpm.sha256){: external}
+
+   RHEL 9
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.4.0.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.4.0.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.4.0.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.4.0.rpm.sha256){: external}
+
+   Debian 11
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.4.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.4.0.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.4.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.4.0.deb.sha256){: external}
+
+
+   Ubuntu 20
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.4.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.4.0.deb.sha256){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.4.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.4.0.deb){: external}
+
+
+   Debian 12 & Ubuntu 22
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.4.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.4.0.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.4.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.4.0.deb.sha256){: external}
 
 ## 24 October 2024
 {: #logs-router-agent-oct2424}
 {: release-note}
 
-Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.2
-:   {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.2 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, and Debian 11, and Debian 12.  This release is based on fluentbit [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external}.
+Release of the {{site.data.keyword.agent}} version 1.3.2
+:   {{site.data.keyword.agent}} version 1.3.2 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, and Debian 11, and Debian 12.  This release is based on fluentbit [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external}.
 
    This version includes the following notable changes:
 
@@ -35,7 +81,7 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.2
    * VSI trusted profile support for sending directly to {{site.data.keyword.logs_full_notm}}.
    * Support for multiple {{site.data.keyword.logs_full_notm}} outputs using different authentication forms.
 
-   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available.
+   The following new {{site.data.keyword.agent}} packages are available.
 
    Both packages are required for the installation.
    {: important}
@@ -71,8 +117,8 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.2
 {: #logs-router-agent-oct1024}
 {: release-note}
 
-Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.1
-:   {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.1 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, and Debian 11, and Debian 12.  This release is based on fluentbit [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external}.
+Release of the {{site.data.keyword.agent}}version 1.3.1
+:   {{site.data.keyword.agent}} version 1.3.1 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, and Debian 11, and Debian 12.  This release is based on fluentbit [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external}.
 
    This version includes the following notable changes:
 
@@ -80,7 +126,7 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.1
    * Removed double JSON marshaling in the output plug-ins.
    * Concurrency and performance improvements.
 
-   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available.
+   The following new {{site.data.keyword.agent}} packages are available.
 
    Both packages are required for the installation.
    {: important}
@@ -116,15 +162,15 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.1
 {: #logs-router-agent-sep0224}
 {: release-note}
 
-Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.0
-:   {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.0 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, and Debian 11, and Debian 12.  This release is based on fluentbit [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external}.
+Release of the {{site.data.keyword.agent}} version 1.3.0
+:   {{site.data.keyword.agent}} version 1.3.0 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, and Debian 11, and Debian 12.  This release is based on fluentbit [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external}.
 
    This version includes the following notable changes:
 
    * The `logger-agent-plugin` now supports stanza-specific API keys.
    * The `systemd` plug-in is now enabled.
 
-   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available.
+   The following new {{site.data.keyword.agent}} packages are available.
 
    Both packages are required for the installation.
    {: important}
