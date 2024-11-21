@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-11-21"
 
 keywords:
 
@@ -73,7 +73,7 @@ Review following table for more information about event notification properties.
 
 | Property | Description |
 | ---- | ---- |
-| `alert_definition` |  - `alert_type`: The [type of alert](#event-notifications-list) that triggered a notification.  \n - `condition`: Alerts configuration about when alerts can be triggered.  \n - `description`: The description of the alert.  \n - `id`: The id of the given alert.  \n - `name`: The name of the given alert.  \n - `query_statement`: The search query of the given alert.  \n - `severity`: The severity level of the given alert. |
+| `alert_definition` |  - `alert_type`: The [type of alert](/docs/cloud-logs?topic=cloud-logs-alerts#alert-types) that triggered a notification.  \n - `condition`: Alerts configuration about when alerts can be triggered.  \n - `description`: The description of the alert.  \n - `id`: The id of the given alert.  \n - `name`: The name of the given alert.  \n - `query_statement`: The search query of the given alert.  \n - `severity`: The severity level of the given alert. |
 | `latest_event_timestamp` | The date and time the event was generated. |
 | `links` |  - `edit_alert`: Link to the page to modify configurations of the alert.  \n - `view_alert`: Link to the page to check alert details. |
 | `status` | The status of the given alert. |
