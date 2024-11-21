@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-11-21"
 
 keywords:
 
@@ -40,7 +40,7 @@ Complete the following steps to configure an outbound integration:
 
 1. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list**.
 2. Select your instance of {{site.data.keyword.logs_full_notm}}.
-3. In the {{site.data.keyword.logs_full_notm}} navigation, click the **Integrations** icon ![Integrations icon](../icons/integrations.svg "Integrations") > **Outbound integrations**.
+3. In the {{site.data.keyword.logs_full_notm}} navigation, click the **Integrations** icon ![Integrations icon](../icons/integrations.svg) > **Outbound integrations**.
 4. In the outbound integrations section, find {{site.data.keyword.en_short}} and click **Add**.
 5. On the *Integrations* page, click **Add new**.
 6. If an IAM authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_short}} doesn't exist in your account, you must configure one by clicking **IAM Authorizations**. Follow the prompts to grant access between the services. For more information, see [Creating a S2S authorization to work with the IBM Cloud Event Notifications service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
