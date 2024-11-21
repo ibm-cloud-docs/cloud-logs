@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-19"
+lastupdated: "2024-11-21"
 
 keywords:
 
@@ -26,13 +26,13 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
 
+
+
 ## 19 November 2024
 {: #migration-nov1924}
 
 The migration tool plug-in v0.1.26 is available.
 :   Updates include:
-
-    * Enhancement of the `create-resources` command when migrating an IAM configuration to include migrating policies defining {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} data access policies using log groups.
 
     * Migrating {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} log groups into {{site.data.keyword.logs_full_notm}} data access rules.
 
