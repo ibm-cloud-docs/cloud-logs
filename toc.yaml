@@ -440,12 +440,15 @@ toc:
         - getting-help.md
         - topic: faqs.md
           navtitle: FAQs
-
         - topicgroup:
             label: Troubleshooting
-            topics:
-             - ts-no-metrics-bucket.md
-             - ts-en-500.md
-             - ts-mapping-exceptions.md
-             - ts-cos-config.md
-             - ts-no-public.md
+            topics: 
+
+            - topicgroup:
+                label: Troubleshooting Cloud Logs
+                topics:
+                 - ts-no-metrics-bucket.md
+                 - ts-en-500.md
+                 - ts-mapping-exceptions.md
+                 - ts-cos-config.md
+                 - ts-no-public.md
