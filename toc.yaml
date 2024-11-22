@@ -438,8 +438,13 @@ toc:
         id: help
         topics:
         - getting-help.md
-        - topic: faqs.md
-          navtitle: FAQs
+        - topicgroup:
+            label: FAQs
+            topics:
+              - topic: faqs.md
+                navtitle: FAQs
+              - topic: agent/agent-faqs.md
+                navtitle: Agent FAQs
         - topicgroup:
             label: Troubleshooting
             topics: 

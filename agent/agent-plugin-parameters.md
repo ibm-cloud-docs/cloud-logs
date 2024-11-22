@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-22"
 
 keywords:
 
@@ -28,6 +28,7 @@ List of parameters that you can use to configure the output plugin to send data 
 | `Id`     |  Unique ID for the plug-in. |  n/a |  any string  | true  |
 | `Match`  |  Use to specify how to match events. |  n/a |  any string  | true  |
 | `Retry_Limit` |  Retry processing if the plug-in fails to send data to Cloud Logs.  \n Set `False` if you want to retry forever, otherwise set to an Integer value.  \n For more information about how to configure retries, see [here](https://docs.fluentbit.io/manual/administration/scheduling-and-retries#configuring-retries){: external} |  1 |  `False` or N >= 1  | true  |
+| `Workers` | The number of concurrent worker threads sending to {{site.data.keyword.logs_full_notm}}.  \n In order to increase the throughput of logs sent to {{site.data.keyword.logs_full_notm}}, you can increase the number of concurrent threads sending from each agent.  \n See [here](#agent-worker-configuration-considerations)  | 1 | 1 or more | false |
 {: caption="Fluentbit parameters" caption-side="bottom"}
 
 
@@ -66,3 +67,27 @@ When `Authentication_Mode` is set to `IAMAPIKey`, consider the following informa
 
 - The API key must be specified in an environment variable called `IAM_API_KEY`.
 - If no value is provided in the `IAM_API_KEY` variable, the plug-in initialization will fail.
+
+
+
+## Agent Workers configuration considerations
+{: #agent-workers-configuration-considerations}
+
+The `Workers` output plugin configuration can be used to increase the concurrency of data that is being sent from each agent to an {{site.data.keyword.logs_full_notm}} instance.  By default, `Workers=1` is the default and this will work for workloads generating log volumes less than 1MB/sec.
+
+In an environment with greater logging volumes (more than 1 MB/sec) it might be necessary to increase the Workers configuration in order for the output plugin to be able to process the logs being consumed.
+
+The Helm chart for [Openshift](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy) and [Kubernetes](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy) deployments are configured with 4 workers since this is generally a good setting for most Kubernetes workloads.
+
+Use the `outputWorkers` Helm variable to manage the Workers setting for the output plugin if you are using the Helm chart.
+{: tip}
+
+Here are some considerations when setting the `Workers` value in your environment:
+
+- Reducing the number of workers from 4 to 2 might reduce the CPU requirements for the {{site.data.keyword.agent}}.
+
+- Increasing the number of workers to greater than 4 without also increasing the CPU limit in a Kubernetes environment will usually not result in more logs processed by the {{site.data.keyword.agent}}. There is a point when the CPU will limit the throughput and must be increased as well.
+
+- If you see messages in the {{site.data.keyword.agent}} logs reporting `[input] pausing tail` followed closely by `[input] resume tail` this is an indication that the output plugin that is sending the logs is unable to keep up with the volume of logs generated.  If the CPU usage has not reached the CPU limit defined, then increasing the number of workers will usually increase the throughput.  If the CPU usage is close to the limit, then you can need to increase the CPU limit in addition to increasing the number of workers.  It is OK if the `[input] pausing tail` message is issued a few times an hour.  If this message occurs many times a minute you should consider a configuration change.
+
+- If you see the message `[ warn] [input:tail:tail.0] purged rotated file while data ingestion is paused, consider increasing rotate_wait`, this is usually an indication that the volume of input is significantly faster than the agent is able to process.  Failing to increase the number of workers or CPU (or both) will lead to missing logs since the rotated files are no longer being processed due to the file rotation and the ingestion is paused.  You need to increase the workers or CPU limits (or both) if you are encountering this error.
