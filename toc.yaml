@@ -443,7 +443,6 @@ toc:
         - topicgroup:
             label: Troubleshooting
             topics: 
-
             - topicgroup:
                 label: Troubleshooting Cloud Logs
                 topics:
@@ -452,3 +451,8 @@ toc:
                  - ts-mapping-exceptions.md
                  - ts-cos-config.md
                  - ts-no-public.md
+
+            - topicgroup:
+                label: Troubleshooting migration
+                topics:
+                - ts-mig-iam.md
