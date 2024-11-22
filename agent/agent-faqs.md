@@ -1,0 +1,41 @@
+---
+
+copyright:
+  years:  2024
+lastupdated: "2024-11-22"
+
+keywords:
+
+subcollection: cloud-logs
+
+content-type: faq
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# FAQs for the {{site.data.keyword.agent}}
+{: #agent_faq}
+
+Frequently asked questions about the {{site.data.keyword.agent}}.
+{: shortdesc}
+
+## Is there a recommended setting for the Workers configuration for the {{site.data.keyword.agent}}?
+{: #agent_faq_agent_workers}
+{: faq}
+
+The `Workers` configuration setting for the output plug-in depends on the log volume being processed.  See the [Agent Workers Configuration Considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-workers-configuration-considerations) which describes the logs that you can look for to help determine the appropriate setting for your environment.
+
+## What do the `[input] pausing tail` messages in my agent log mean?
+{: #agent_faq_agent_input_pausing_tail}
+{: faq}
+
+The message `[input] pausing tail` is an indication that the buffers managed by the {{site.data.keyword.agent}} are full and that the {{site.data.keyword.agent}} is unable to process any more content from the file so it's pausing the input processing.  This can happen for a number of reasons and the frequency and persistence of the warning message will determine your action.
+
+- If the logging volume increase is temporary and the message only occurs a few times over an hour and is followed almost immediately by a `[input] resume tail` message, then this is likely a temporary situation and you can safely ignore the message.  Some logs might be delayed by less than a minute, but generally speaking you will likely not notice a difference when you review your logs in {{site.data.keyword.logs_full_notm}}.
+
+- If the `[input] resume tail` message does not appear within a few seconds then this might be an indication of a problem sending to {{site.data.keyword.logs_full_notm}}.  You should check the network connectivity between the {{site.data.keyword.agent}} and {{site.data.keyword.logs_full_notm}}.  Not observing the `[input] resume tail` message may also be an indication of an {{site.data.keyword.logs_full_notm}} service disruption.
+
+- If the `[input] resume tail` and `[input] pausing tail` messages occur more than 30 times within 5 minutes, this is typically an indication that the agent is not configured appropriately to handle the log volume that the agent is processing.  This can usually be corrected by increasing the `Workers` configuration in the output plug-in, increasing the CPU limit assigned to the agent process or both actions.  See the [Agent Workers Configuration Considerations]((/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-workers-configuration-considerations) for more details.
+
+- Consider reviewing the logs that are being collected and determine whether all of the logs are required.  See the [Filtering logs](/docs/cloud-logs?topic=cloud-logs-configure-include-exclude) topic for ways that you can reduce the volume of logs sent from the {{site.data.keyword.agent}} to {{site.data.keyword.logs_full_notm}}.
