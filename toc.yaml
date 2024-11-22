@@ -456,6 +456,7 @@ toc:
                  - ts-mapping-exceptions.md
                  - ts-cos-config.md
                  - ts-no-public.md
+                 - ts-input-error.md
 
             - topicgroup:
                 label: Troubleshooting migration
