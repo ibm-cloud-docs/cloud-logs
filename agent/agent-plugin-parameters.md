@@ -75,7 +75,7 @@ When `Authentication_Mode` is set to `IAMAPIKey`, consider the following informa
 
 The `Workers` output plugin configuration can be used to increase the concurrency of data that is being sent from each agent to an {{site.data.keyword.logs_full_notm}} instance.  By default, `Workers=1` is the default and this will work for workloads generating log volumes less than 1MB/sec.
 
-In an environment with greater logging volumes (more than 1 MB/sec) it might be necessary to increase the Workers configuration in order for the output plugin to be able to process the logs being consumed.
+In an environment with greater logging volumes (more than 1 MB/sec) it might be necessary to increase the `Workers` configuration in order for the output plug-in to be able to process the logs being consumed.
 
 The Helm chart for [Openshift](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy) and [Kubernetes](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy) deployments are configured with 4 workers since this is generally a good setting for most Kubernetes workloads.
 
