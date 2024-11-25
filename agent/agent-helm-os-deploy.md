@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-11-25"
 
 keywords:
 
@@ -79,6 +79,11 @@ Complete the following steps:
       version: "1.3.0"  # required
 
     clusterName: ""     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
+
+    additionalMetadata: # add additional metadata, for example:
+      region: au-syd
+      env: production
+      logging-agent-version: 1.4.0     # Enter the agent version that you want to deploy
 
     env:
       # ingestionHost is a required field. For example:
