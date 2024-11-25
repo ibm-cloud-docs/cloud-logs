@@ -53,7 +53,7 @@ Complete the following steps to modify the Helm chart with the agent version tha
     metadata:
       name: "logs-agent"
     image:
-      version: "1.3.0"  # Modify the agent version and enter the version that you want to deploy
+      version: "1.4.0"  # Modify the agent version and enter the version that you want to deploy
 
     clusterName: ""     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
 
