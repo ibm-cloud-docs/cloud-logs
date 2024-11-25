@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-11-25"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Uninstalling the {{site.data.keyword.agent}} using a Helm chart
 {: #agent-helm-remove}
 
-You can use a Helm chart to uninstall the {{site.data.keyword.agent}} from an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) cluster to an {{site.data.keyword.logs_full_notm}} instance.
+You can use Helm to uninstall the {{site.data.keyword.agent}} from a cluster.
 {: shortdesc}
 
 
@@ -29,7 +29,9 @@ You can use a Helm chart to uninstall the {{site.data.keyword.agent}} from an {{
 
     - The {{site.data.keyword.cloud_notm}} CLI to log in to the {{site.data.keyword.cloud_notm}} and manage {{site.data.keyword.cloud_notm}} services such as creating an API key.
 
-    - The Openshift CLI to manage the cluster from the command line. [Learn more](/docs/openshift?topic=openshift-cli-install).
+    - The Kubernetes CLI to manage Kubernetes clusters by using `kubectl` commands. [Learn more](/docs/containers?topic=containers-cli-install).
+
+    - The Openshift CLI to manage OpenShift clusters from the command line. [Learn more](/docs/openshift?topic=openshift-cli-install).
 
     - The latest release of the version 3 [Helm CLI](https://github.com/helm/helm/releases)
 
@@ -84,4 +86,3 @@ Complete the following steps to remove a {{site.data.keyword.agent}}:
     where:
 
     - `<install-name>` is the name of the helm installation (ie. `logging-agent`)
- 

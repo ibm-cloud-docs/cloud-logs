@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-11-25"
 
 keywords:
 
@@ -22,6 +22,32 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
+
+## 25 November 2024
+{: #cloud-logs-nov2524}
+{: release-note}
+
+Fixes implemented
+:   The following issues are resolved.   
+    - [API]\[Views] - Fixed a bug where setting `quick_selection` using the API sets a custom selection in the UI.
+    - [UI]\[TCO] - Resolved an error when clicking **Reset all overrides** resulted in displaying `ERROR: Failed to reset all overrides`.
+    - [API]\[View Folder] - Fixed failure when updating view folders through the API.
+    - [API]\[Events2Metrics] - Fixed failure when updating Events to Metrics rules through the API.
+    - [Query] - Fixed query errors when using longer query windows, for example, for 6 or 12 hours.
+    - [UI] - Fixed an error where the dashboard login displayed intermittent HTTP 500 errors.
+    - [UI] - Fixed log highlighting for `surrounding logs` improving the ability to view the context around the logs. 
+    - [Alerts] - Fixed an error where the alert payload was not sent as valid JSON.
+    - [UI]\[TCO] - Fixed an error where editing an existing TCO policy would wait to refresh for a long time.
+
+## 6 November 2024
+{: #cloud-logs-nov0624}
+{: release-note}
+
+Fixes implemented
+:   The following issue is resolved. 
+    - Fixed custom dashboards displaying "Something went wrong" when selecting Analyze and Alert.
+
+
 
 ## 18 September 2024
 {: #cloud-logs-sep1824}

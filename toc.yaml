@@ -160,6 +160,8 @@ toc:
                 navtitle: Deploying the Logging agent on OpenShift using a Helm chart
               - topic: agent/agent-helm-kube-deploy.md
                 navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
+              - topic: agent/agent-helm-update.md
+                navtitle: Updating the Logging agent version
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
               - topic: agent/agent-helm-template-clusters.md
@@ -447,7 +449,7 @@ toc:
                 navtitle: Agent FAQs
         - topicgroup:
             label: Troubleshooting
-            topics: 
+            topics:
             - topicgroup:
                 label: Troubleshooting Cloud Logs
                 topics:
@@ -457,6 +459,10 @@ toc:
                  - ts-cos-config.md
                  - ts-no-public.md
                  - ts-input-error.md
+                 - ts-fb-error.md
+                 - topic: ts-no-logs.md
+                   navtitle: Why can't I see platform logs in the UI?
+                 - ts-alerts.md
 
             - topicgroup:
                 label: Troubleshooting migration

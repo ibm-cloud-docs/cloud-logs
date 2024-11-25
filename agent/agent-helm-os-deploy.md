@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-11-25"
 
 keywords:
 
@@ -76,9 +76,14 @@ Complete the following steps:
     metadata:
       name: "logs-agent"
     image:
-      version: "1.3.0"  # required
+      version: "1.4.0"  # required
 
     clusterName: ""     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
+
+    additionalMetadata: # add additional metadata, for example:
+      region: au-syd
+      env: production
+      logging-agent-version: 1.4.0     # Enter the agent version that you want to deploy
 
     env:
       # ingestionHost is a required field. For example:
@@ -163,12 +168,6 @@ Complete the following steps:
     ```
     {: codeblock}
 
-    where:
-
-    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
-    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
-    - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
-
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
@@ -178,6 +177,9 @@ Complete the following steps:
 
     where:
 
+    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
+    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
+    - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-step1)
     - Add `--hide-secret` to hide the API key from showing in the output data after the command runs.
 
@@ -200,12 +202,6 @@ Complete the following steps:
     ```
     {: codeblock}
 
-    where:
-
-    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
-    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
-    - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
-
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
@@ -213,8 +209,11 @@ Complete the following steps:
     ```
     {: codeblock}
 
-    Where:
+    where:
 
+    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
+    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
+    - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-step1)
 
 
