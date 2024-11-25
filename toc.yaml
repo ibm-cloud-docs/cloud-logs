@@ -459,6 +459,9 @@ toc:
                  - ts-cos-config.md
                  - ts-no-public.md
                  - ts-input-error.md
+                 - ts-fb-error.md
+                 - topic: ts-no-logs.md
+                   navtitle: Why can't I see platform logs in the UI?
 
             - topicgroup:
                 label: Troubleshooting migration
