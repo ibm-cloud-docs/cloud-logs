@@ -129,7 +129,7 @@ Complete the following steps:
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm upgrade <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
+    helm update <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
     ```
     {: codeblock}
 
