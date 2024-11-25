@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-24"
+lastupdated: "2024-11-25"
 
 keywords:
 
@@ -126,12 +126,6 @@ Complete the following steps:
     ```
     {: codeblock}
 
-    where:
-
-    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
-    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
-    - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
-
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
@@ -141,16 +135,15 @@ Complete the following steps:
 
     where:
 
+    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
+    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
+    - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-kube-deploy-step1)
-    - Add `--hide-secret` to hide the API key from showing in the output data after the command runs.
-
-    If you would like to inspect the helm chart contents locally, you can download the helm chart to your computer using the command: `helm pull oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version>`.  The downloaded tgz file contains the chart contents.
-    {: tip}
 
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
     ```sh
-    helm update logging-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.4.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
+    helm update logging-agent oci://icr.io/ibm/observe/logs-agent-helm --version 1.4.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
     ```
     {: screen}
 

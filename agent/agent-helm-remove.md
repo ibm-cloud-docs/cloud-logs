@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-24"
+lastupdated: "2024-11-25"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Uninstalling the {{site.data.keyword.agent}} using a Helm chart
 {: #agent-helm-remove}
 
-You can use a Helm chart to uninstall the {{site.data.keyword.agent}} from an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) cluster to an {{site.data.keyword.logs_full_notm}} instance.
+You can use Helm to uninstall the {{site.data.keyword.agent}} from a cluster.
 {: shortdesc}
 
 
