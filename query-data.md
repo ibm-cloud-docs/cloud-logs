@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-11-25"
 
 keywords:
 
@@ -43,7 +43,7 @@ There are considerations when querying log data in the {{site.data.keyword.logs_
 - Filtering can be used in conjunction with searching using [Lucene](/docs/cloud-logs?topic=cloud-logs-query-data-lucene) or [DataPrime](/docs/cloud-logs?topic=cloud-logs-query-data-dataprime).
 - Logs in the [{{site.data.keyword.frequent-search}} pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) are indexed. If your instance reaches its maximum amount of indexed fields, additional fields are unavailable to query. For more information on indexing and data mapping, see [Understanding indexing and field mapping](/docs/cloud-logs?topic=cloud-logs-indexing_mapping).
 - You can get a mapping exception when data that is ingested through the {{site.data.keyword.frequent-search}} data pipeline detects the same field sent by different log records with different types. Mapping exceptions make fields unavailable to query. For more information, see [Mapping exceptions](/docs/cloud-logs?topic=cloud-logs-query-mapping-exceptions).
-- Logs ingested through the {{site.data.keyword.monitoring}} and {{site.data.keyword.monitoring}} data pipelines can only be [directly queried from the archive.](/docs/cloud-logs?topic=cloud-logs-query-archive-data-bucket&interface=ui).
+- Logs ingested through the {{site.data.keyword.monitoring}} and {{site.data.keyword.compliance}} data pipelines can only be [directly queried from the archive.](/docs/cloud-logs?topic=cloud-logs-query-archive-data-bucket&interface=ui).
 - You can query logs that are ingested and processed through the [{{site.data.keyword.frequent-search}} data pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) by using a Lucene query or a DataPrime query.
 
     For example, when you define a Lucene query, you can run queries such as free-text searches, regular RegEX expressions, or using field searches.
@@ -63,7 +63,7 @@ You can query data from the Explorer logs page or by running an archive query.
 
 There are considerations when querying log data from the data bucket:
 
-- Data stored in the data bucket include data ingested through the {{site.data.keyword.frequent-search}}, {{site.data.keyword.monitoring}}, and {{site.data.keyword.compliance}} data pipelines.
+- Data stored in the data bucket include data ingested through the {{site.data.keyword.frequent-search}}, {{site.data.keyword.monitoring}}, and {{site.data.keyword.compliance}} data pipelines. It also includes logs that are matched through a Parsing Block rule that has the *View blocked logs in Live tail and archive to IBM Cloud Object Storage* option enabled.
 - You maintain the data in the bucket. You can keep the data for as long as you need and query it via the **Logs** page, selecting the **All logs** option.
 - Filtering can be used in conjunction with searching using [Lucene](/docs/cloud-logs?topic=cloud-logs-query-data-lucene) or [DataPrime](/docs/cloud-logs?topic=cloud-logs-query-data-dataprime).
 - You can query data with unlimited time frames. There are no restrictions on how far back in time your data can go. You maintain the data and you ahve access to the data for as long as you keep it.
