@@ -434,13 +434,6 @@ toc:
                 navtitle: Applying Terraform
               - topic: migration-limitations.md
                 navtitle: Known limitations 
-          - topicgroup:
-              label: Troubleshooting migration
-              topics:
-              - topic: migration_troubleshooting.md
-                navtitle: Troubleshooting migration issues
-              - topic: migration-exclusion-rules.md
-                navtitle: Excluding ingestion data to avoid duplication of logs
   - navgroup:
         id: help
         topics:
@@ -472,6 +465,9 @@ toc:
             - topicgroup:
                 label: Troubleshooting migration
                 topics:
+                - migration_troubleshooting.md
+                - topic: migration-exclusion-rules.md
+                  navtitle: Excluding ingestion data to avoid duplication of logs
                 - ts-mig-iam.md
                 - ts-mig-en.md
                 - ts-mig-views.md
