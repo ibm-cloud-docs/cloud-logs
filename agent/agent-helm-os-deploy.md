@@ -92,7 +92,6 @@ Complete the following steps:
       iamMode: "TrustedProfile"
       # trustedProfileID - trusted profile id - required for iam trusted profile mode
       trustedProfileID: "Profile-yyyyyyyy-xxxx-xxxx-yyyy-zzzzzzzzzzzz" # required if iamMode is set to TrustedProfile
-      CR_Token_Mount_Path /var/run/secrets/tokens/vault-token
 
     scc:
       # true here enables creation of Security Context Constraints in Openshift

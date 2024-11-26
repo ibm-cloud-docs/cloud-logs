@@ -46,6 +46,12 @@ Consider the following information when using IAM API Keys:
 - Grant permissions to send logs to a user ID for testing purposes only.
 - When you use an API key as the authorization method of the {{site.data.keyword.agent}}, the {{site.data.keyword.agent}} can be hosted both inside and outside of {{site.data.keyword.cloud}}.
 
+
+For more information on how to generate an API key, see:
+- [Generating an API Key for ingestion by using a service ID for authentication](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
+- [Generating an API Key for ingestion by using a user ID for authentication](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-userid-api-key).
+
+
 ## Trusted Profiles
 {: #iam-ingestion-permissions-tps}
 
@@ -54,55 +60,4 @@ Consider the following information when using Trusted Profiles:
 - The Trusted Profile, the compute resource, and the {{site.data.keyword.logs_full_notm}} instance must be located in the same account.
 - You must grant the `Sender` permission to a trusted profile before using it.
 
-
-## Assigning access to {{site.data.keyword.logs_full_notm}} in the console
-{: #agent-iam-permissions-access-ui}
-{: ui}
-
-There are two common ways to assign access to {{site.data.keyword.logs_full_notm}} in the console:
-
-* Access groups. You can manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
-
-* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
-
-
-
-## Setting up permissions for ingestion by sending directly
-{: #agent-iam-permissions-d-cli}
-{: cli}
-
-To send logs directly to the {{site.data.keyword.logs_full_notm}} instance, the API key or trusted profile must have the `Sender` role for the {{site.data.keyword.logs_full_notm}} service.
-
-Use the appropriate command for the type of identity:
-
-| Type of identity  | Command |
-|-------------------|---------|
-| Access group      | `ibmcloud iam access-group-policy-create ACCESS_GROUP --roles Sender --service-name logs` |
-| User account      | `ibmcloud iam user-policy-create <username> --roles Sender --service-name logs` |
-| Service ID        | `ibmcloud iam service-policy-create <serviceID> --roles Sender --service-name logs` |
-| Trusted profile   | `ibmcloud iam tp-policy-create <trustedProfile> --roles Sender --service-name logs` |
-{: caption="Command to grant IAM permissions by type of identity" caption-side="top"}
-
-Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
-{: tip}
-
-## Setting up permissions for ingestion by using {{site.data.keyword.logs_full_notm}}
-{: #agent-iam-permissions-lr-cli}
-{: cli}
-
-If you configure your agent to send logs through the {{site.data.keyword.logs_full_notm}} service, the API key or trusted profile must have the `Writer` role for the {{site.data.keyword.logs_routing_full_notm}} service.
-
-Granting the role can be done by using the `ibmcloud` CLI.
-
-Use the appropriate command for the type of identity:
-
-| Type of identity  | Command |
-|-------------------|---------|
-| Access group      | `ibmcloud iam access-group-policy-create ACCESS_GROUP --roles Writer --service-name logs` |
-| User account      | `ibmcloud iam user-policy-create <username> --roles Writer --service-name logs` |
-| Service ID        | `ibmcloud iam service-policy-create <serviceID> --roles Writer --service-name logs` |
-| Trusted profile   | `ibmcloud iam tp-policy-create <trustedProfile> --roles Writer --service-name logs` |
-{: caption="Command to grant IAM permissions by type of identity" caption-side="top"}
-
-Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
-{: tip}
+For more information on how to create the Trusted Profile, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
