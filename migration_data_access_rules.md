@@ -19,7 +19,7 @@ subcollection: cloud-logs
 Using the {{site.data.keyword.logs_full}} migration tool you can migrate {{site.data.keyword.la_full_notm}} and {{site.data.keyword.at_full_notm}} log groups into {{site.data.keyword.logs_full}} data access rules.
 {: shortdesc}
 
-When you run the `ibmcloud loggin migrate create-resources` command, data access rules are created in the {{site.data.keyword.logs_full_notm}} instance based on the log groups defined in the migrated {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance.
+When you run the `ibmcloud loggin migrate create-resources` command, [data access rules](/docs/cloud-logs?topic=cloud-logs-data-access-rules&interface=ui) are created in the {{site.data.keyword.logs_full_notm}} instance based on the log groups defined in the migrated {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance.
 
 A data rule is created for each log group. The data rule is configured with the same name as the log group.
 
@@ -44,4 +44,3 @@ When running the migration tool in `api` mode, if you have already migrated your
 ibmcloud logging migrate update-resources --scope SCOPE [--instance-crn CRN] --cl-instance-crn CL-INSTANCE-CRN [--update-iam] --api 
 ```
 {: pre}
-
