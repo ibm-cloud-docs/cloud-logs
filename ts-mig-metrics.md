@@ -14,7 +14,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 # I am getting an error when enabling data usage metrics using Terraform
-{: #ts-mig-views}
+{: #ts-mig-metrics}
 {: troubleshoot}
 {: support}
 
@@ -47,4 +47,3 @@ After attaching the metrics bucket, the migration tool might attempt to configur
 
 Verify that a metrics bucket is attached to the {{site.data.keyword.logs_full_notm}} instance and run `terraform init` and `terraform apply` to create the data usage metrics.
 {: tsResolve}
-
