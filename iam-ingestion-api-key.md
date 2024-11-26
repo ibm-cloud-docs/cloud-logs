@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-11-26"
 
 keywords:
 
@@ -15,12 +15,18 @@ subcollection: cloud-logs
 # Generating an API Key for ingestion
 {: #api-key}
 
-When you are using a user account or a service ID, you must generate an API key to open a secure web socket to the ingestion endpoint to authenticate the {{site.data.keyword.agent}} with the {{site.data.keyword.logs_full_notm}} service.
+To send logs to an {{site.data.keyword.logs_full_notm}} instance, you can use an IAM API key as the authentication method. The API key is used to open a secure web socket to the {{site.data.keyword.logs_full_notm}} ingestion endpoint to authenticate the {{site.data.keyword.agent}} with the {{site.data.keyword.logs_full_notm}} service.
 {: shortdesc}
 
-When you are using a user account or service ID, an API key must be created to authenticate the agent. For authentication with trusted profiles, an API key is not required.
-{: note}
+You can generate a user ID API key or a service ID API key that has the `sender` permissions to send logs to an {{site.data.keyword.logs_full_notm}} instance.
 
+Choose any of the following options based on the method you choose to send logs:
+
+| Method sending logs                      | User API key | Service ID API Key |
+|------------------------------------------|--------------|--------------------|
+| By using the REST API                    | supported    | supported          |
+| By using the {{site.data.keyword.agent}} | not recommended | supported       |
+{: caption="Supported authorization methods" caption-side="bottom"}
 
 ## Generating an API Key for user authentication
 {: #api-key-for-user-id}
@@ -42,7 +48,14 @@ For example, complete the following steps to generate an API key by using the CL
 
     After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} dashboard opens.
 
-2. Create an API key for the logged-in account.
+2. Add an IAM policy for your user ID that grants access to send logs.
+
+    ```sh
+    ibmcloud iam user-policy-create <USER_ID> --service-name logs --roles Sender
+    ```
+    {: pre}
+
+3. Create an API key for the logged-in account.
 
     Make sure to log in as the identity with the `Sender` role.{: note}
 
@@ -57,8 +70,12 @@ For example, complete the following steps to generate an API key by using the CL
 {: #api-key-for-service-id}
 
 You can create a service ID to enable access to the {{site.data.keyword.logs_full_notm}} service by the {{site.data.keyword.agent}}. The agent can be hosted both inside and outside of {{site.data.keyword.cloud}}.
+{: note}
 
 API keys are used by the agent to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+
+Make sure the user who grants the policy has the `Sender` role permissions.
+{: important}
 
 Make sure to grant the service ID the `Sender` role.
 {: note}

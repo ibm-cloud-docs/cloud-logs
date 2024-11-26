@@ -97,11 +97,18 @@ toc:
             navtitle: Required permissions to work with views
           - topic: iam-assign-access.md
             navtitle: Granting service access
+          - topic: agent/agent-iam-permissions.md
+            navtitle: Setting up IAM permissions for ingestion
+          - topic: iam-ingestion-api-key.md
+            navtitle: Generating an API Key for ingestion
+          - topic: iam-ingestion-trusted-profile.md
+            navtitle: Generating a Trusted Profile for ingestion
           - topic: iam-actions.md
             navtitle: IAM actions by role
           - topic: iam-custom-roles.md
             navtitle: Managing custom roles
-          - data-access-rules.md
+          - topic: data-access-rules.md
+            navtitle: Data access rules 
           - topicgroup:
               label: S2S authorizations
               topics:
@@ -147,10 +154,6 @@ toc:
       - topicgroup:
           label: Sending data to Cloud Logs
           topics:
-          - topic: agent/agent-iam-permissions.md
-            navtitle: Setting up IAM permissions for ingestion
-          - topic: agent/api-key.md
-            navtitle: Generating an API Key for ingestion
           - topic: send-logs-api.md
             navtitle: Using the REST API
           - topicgroup:
