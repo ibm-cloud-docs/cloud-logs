@@ -25,7 +25,7 @@ API keys are used to authenticate as a particular service ID and are granted the
 Make sure the user who grants the policy has the `Sender` role permissions.
 {: important}
 
-Make sure to grant the service ID the `Sender` role.
+Make sure to grant the service ID the `Sender` role before generating the API key.
 {: note}
 
 - [Creating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#create_service_key).

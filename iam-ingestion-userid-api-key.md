@@ -24,6 +24,12 @@ A federated user or non-federated user can create an API key to use in the CLI o
 
 The API key inherits all assigned access for the user identity for which it is created, and the access is not limited to just the account where the API key is created because it inherits any policies that are assigned to the user. Because the API key that is associated with your user identity has all of the access you're entitled to across any account that you are a member of, you must be cautious with how you use your API key. For more information, see [Managing user API keys](/docs/account?topic=account-userapikey).
 
+Make sure the user who grants the policy has the `Sender` role permissions.
+{: important}
+
+Make sure to grant the user ID the `Sender` role before generating the API key.
+{: note}
+
 You can use the console, CLI, or API to manage your {{site.data.keyword.cloud_notm}} API keys by listing your keys, creating keys, updating keys, or deleting keys.
 
 - [Creating an API key](/docs/account?topic=account-userapikey&interface=ui#create_user_key).
