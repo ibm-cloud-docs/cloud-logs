@@ -96,6 +96,11 @@ Choose a supported authorization method for the environment where you plan to de
 | Other Cloud Linux servers                           | supported    | |
 {: caption="Supported authorization methods" caption-side="bottom"}
 
+You can only use Trusted Profiles to authenticate {{site.data.keyword.cloud_notm}} resources with an {{site.data.keyword.logs_full_notm}} instance when the compute resource and the instance are located in the same account.
+{: note}
+
+To send logs from a Kubernetes cluster that is provisioned in a different {{site.data.keyword.cloud_notm}} account than the {{site.data.keyword.logs_full_notm}} instance, you can only use a service ID API key as the agent's authorization method.
+{: note}
 
 For more information on how to generate an API key, see [Generating an API Key for ingestion by using a service ID for authentication](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
