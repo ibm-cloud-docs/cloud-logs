@@ -25,6 +25,8 @@ To send logs by using the Ingestion REST API, you must get an {{site.data.keywor
 To send logs to an {{site.data.keyword.logs_full_notm}} instance, you can use as the authentication method any of the following options:
 - An IAM API key: The API key is used to open a secure web socket to the {{site.data.keyword.logs_full_notm}} ingestion endpoint to authenticate the {{site.data.keyword.agent}} with the {{site.data.keyword.logs_full_notm}} service.
 - A Trusted profile
+
+
 You must grant `Sender` permissions to the API key or trusted profile that you use to request authorization to send logs to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}}.
 
 Choose one of the following options to send logs to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}}:
