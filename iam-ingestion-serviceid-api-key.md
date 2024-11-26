@@ -15,10 +15,10 @@ subcollection: cloud-logs
 # Generating an API Key for ingestion by using a service ID for authentication
 {: #iam-ingestion-serviceid-api-key}
 
-You can use a service ID API key to send logs by using the Ingestion REST API, or by using the {{site.data.keyword.agent}}.
+You can use a service ID API key to send logs by using the {{site.data.keyword.agent}}.
 {: shortdesc}
 
-The API key is used to open a secure web socket to the {{site.data.keyword.logs_full_notm}} ingestion endpoint to authenticate the {{site.data.keyword.agent}} or the API request with the {{site.data.keyword.logs_full_notm}} service.
+The API key is used to open a secure web socket to the {{site.data.keyword.logs_full_notm}} ingestion endpoint to authenticate the {{site.data.keyword.agent}}.
 
 API keys are used to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
 

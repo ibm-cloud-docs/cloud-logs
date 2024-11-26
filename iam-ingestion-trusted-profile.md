@@ -36,9 +36,9 @@ Complete the following steps to create a Trusted Profile:
 
     In the *Select compute resource* section, click **Specific resources> Add a resource**. Then, choose your resource.
 
-    - For a **Kubernetes** compute service type, you must choose the Kubernetes cluster where you plan to deploy the agent; enter **ibm-observe** as the namespace; and enter **logger-agent-sa** as the service account.
+    - For a **Kubernetes** compute service type, you must choose the Kubernetes cluster where you plan to deploy the agent; enter **ibm-observe** as the namespace; and enter **logs-agent** as the service account.
 
-    - For a **Red Hat OpenShift on IBM Cloud** compute service type, you must choose the OpenShift cluster where you plan to deploy the agent; enter **ibm-observe** as the namespace; and enter **logger-agent-sa** as the service account.
+    - For a **Red Hat OpenShift on IBM Cloud** compute service type, you must choose the OpenShift cluster where you plan to deploy the agent; enter **ibm-observe** as the namespace; and enter **logs-agent** as the service account.
 
     - For a **Virtual Server for VPC** compute service type, you must choose an instance.
 

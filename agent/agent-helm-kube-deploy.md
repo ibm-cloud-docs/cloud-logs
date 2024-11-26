@@ -46,12 +46,15 @@ Choose the type of identity and the authentication method for the agent. Then, c
 
 You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full}} service. For more information, see [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
 
-### Create a trusted profile
+
+Choose one of the following options:
+
+### Option 1: Authentication using a trusted profile
 {: #agent-helm-kube-deploy-step1-tp}
 
 Create a Trusted Profile. For more information, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
 
-### Generate a service ID API key
+### Option 2: Authentication using a service ID API key
 {: #agent-helm-kube-deploy-step1-key}
 
 Generate an API Key for service ID authentication. For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
@@ -73,11 +76,6 @@ Complete the following steps:
       version: "1.4.0"  # required
 
     clusterName: ""     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
-
-    additionalMetadata: # add additional metadata, for example:
-      region: au-syd
-      env: production
-      logging-agent-version: 1.4.0     # Enter the agent version that you want to deploy
 
     env:
       # ingestionHost is a required field. For example:

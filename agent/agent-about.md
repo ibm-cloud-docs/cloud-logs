@@ -97,7 +97,9 @@ Choose a supported authorization method for the environment where you plan to de
 {: caption="Supported authorization methods" caption-side="bottom"}
 
 
+For more information on how to generate an API key, see [Generating an API Key for ingestion by using a service ID for authentication](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
+For more information on how to create the Trusted Profile, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
 
 ## Supported formats
 {: #agent-about-formats}

@@ -100,9 +100,7 @@ toc:
           - topic: iam-ingestion-trusted-profile.md
             navtitle: Generating a Trusted Profile for ingestion
           - topic: iam-ingestion-serviceid-api-key.md
-            navtitle: Generating a service ID API Key for ingestion
-          - topic: iam-ingestion-userid-api-key.md
-            navtitle: Generating a user ID API Key for ingestion
+            navtitle: Generating a service ID API Key for ingestion 
           - topic: iam-actions.md
             navtitle: IAM actions by role
           - topic: iam-views.md
