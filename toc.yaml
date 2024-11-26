@@ -344,7 +344,8 @@ toc:
       - service_plans.md
       - topic: limits.md
         navtitle: Limits
-      - severities.md
+      - topic: severities.md
+        navtitle: Severity mapping
       - topic: shared-responsibilities.md
         navtitle: Your responsibilities
       - topic: core/data-portability.md
