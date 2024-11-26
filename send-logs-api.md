@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-26"
 
 keywords:
 
@@ -19,6 +19,41 @@ subcollection: cloud-logs
 
 You can send logs to an {{site.data.keyword.logs_full_notm}} instance by using the ingestion API.
 {: shortdesc}
+
+
+## Authenticate by using a bearer token
+{: #send-logs-token}
+{: step}
+
+You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests.
+
+To obtain your token by using the IBM Cloud CLI, complete the following steps:
+1. Log in to {{site.data.keyword.cloud_notm}}.
+
+    Make sure the entity with which you log in has the `Sender` role for the {{site.data.keyword.logs_full_notm}} service.
+
+2. Run the following command:
+
+    ```
+    ibmcloud iam oauth-tokens
+    ```
+    {: codeblock}
+
+3. Place this token in the Authorization header of the HTTP request in the form Bearer <token>.
+
+
+
+
+For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
+
+```sh
+export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+```
+{: pre}
+
+## Send logs by using cURL
+{: #send-logs-curl}
+{: step}
 
 The following table outlines the endpoint details:
 
@@ -37,8 +72,25 @@ Where
 - `IAM_TOKEN`: [IAM bearer token](#send-logs-token) used to request authorization to seng to logs. The pemission `logs.data.send` is required.
 
 
-You can send up to 2MB per request, which is approximately 3,000 medium-sized logs.
-{: note}
+Use the following cURL command to send a log line:
+
+```sh
+curl -v --location "<INSTANCE_ID>.ingress.<REGION>.logs.cloud.ibm.com/logs/v1/singles" \
+--header "Content-Type: application/json" \
+--header "Authorization: $IAM_TOKEN" \
+--data '[{
+      "applicationName": "ENTER_APPLICATION_NAME",
+      "subsystemName": "ENTER_SUBSYSTEM_NAME",
+      "severity": "ENTER_SEVERITY",
+      "computerName": "ENTER_VALUE",
+      "text": ENTER_LOG_LINE,
+      "category": "ENTER_VALUE",
+      "className": "ENTER_VALUE",
+      "methodName": "ENTER_VALUE",
+      "threadId": "ENTER_VALUE"
+    }]'
+```
+{: pre}
 
 The following table outlines the JSON objects that you can include per log line in a request:
 
@@ -62,6 +114,10 @@ If you do not specify `severity`, logs are assigned the severity of `1 – Debug
 {: note}
 
 
+You can send up to 2MB per request, which is approximately 3,000 medium-sized logs.
+{: note}
+
+
 For example, you can run the following command to send logs to an instance in the `eu-es` region:
 
 ```sh
@@ -81,56 +137,5 @@ curl -v --location "https://90d208cc-e1dd-4fb2-a938-358e5996f056.ingress.eu-es.l
 ```
 {: pre}
 
-
-
-Where
-
-- `INSTANCE_ID`
-- `REGION`
-- `IAM_TOKEN` is your [IAM bearer token](#send-logs-token)
-- `APPLICATION_NAME`
-- `SUBSYSTEM_NAME`
-- `COMPUTER_NAME`
-- `SEVERITY`
-- `MESSAGE`
-- `CATEGORY`
-- `CLASS`
-- `METHOD`
-- `THREAD_ID`
-
-
 The `-v` option provides verbose output which can help you determine if the command completed successfully or if there were authorization or connectivity issues.
 {: tip}
-
-
-
-```sh
-curl -v --location "https://90d208cc-e1dd-4fb2-a938-358e5996f056.ingress.eu-es.logs.cloud.ibm.com/logs/v1/singles" \
---header "Content-Type: application/json" \
---header "Authorization: $IAM_TOKEN" \
---data '[{
-      "applicationName": "app2",
-      "subsystemName": "cs-rest-test3",
-      "computerName": "computer test3",
-      "text": "this is a verbose text message",
-      "category": "cat-1",
-      "className": "class-1",
-      "methodName": "method-1",
-      "threadId": "thread-1"
-    }]'
-
-```
-{: pre}
-
-## Retrieving the IAM bearer token
-{: #send-logs-token}
-
-
-You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests.
-
-For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
-
-```sh
-export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
-```
-{: pre}

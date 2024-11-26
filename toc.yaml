@@ -76,7 +76,7 @@ toc:
       id: tutorial
       topics:
       - topic: kube-logs.md
-        navtitle: Send IBM Cloud Kubernetes Service log data to IBM Cloud Logs
+        navtitle: Send IBM Cloud Kubernetes Service log data to IBM Cloud Logs 
   - navgroup:
       id: howto
       topics:
@@ -93,15 +93,24 @@ toc:
           topics:
           - topic: iam.md
             navtitle: Getting started with IAM
-          - topic: iam-views.md
-            navtitle: Required permissions to work with views
           - topic: iam-assign-access.md
             navtitle: Granting service access
+          - topic: iam-ingestion-permissions.md
+            navtitle: Granting permissions for ingestion
+          - topic: iam-ingestion-trusted-profile.md
+            navtitle: Generating a Trusted Profile for ingestion
+          - topic: iam-ingestion-serviceid-api-key.md
+            navtitle: Generating a service ID API Key for ingestion 
           - topic: iam-actions.md
             navtitle: IAM actions by role
+          - topic: iam-views.md
+            navtitle: Required permissions to work with views
           - topic: iam-custom-roles.md
             navtitle: Managing custom roles
-          - data-access-rules.md
+          - topic: data-access-rules.md
+            navtitle: Data access rules
+          - topic: iam-access-report.md
+            navtitle: Access reports
           - topicgroup:
               label: S2S authorizations
               topics:
@@ -147,10 +156,6 @@ toc:
       - topicgroup:
           label: Sending data to Cloud Logs
           topics:
-          - topic: agent/agent-iam-permissions.md
-            navtitle: Setting up IAM permissions for ingestion
-          - topic: agent/api-key.md
-            navtitle: Generating an API Key for ingestion
           - topic: send-logs-api.md
             navtitle: Using the REST API
           - topicgroup:
@@ -164,6 +169,8 @@ toc:
                 navtitle: Updating the Logging agent version
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
+              - topic: agent/configure-agent.md
+                navtitle: Filtering logs
               - topic: agent/agent-helm-template-clusters.md
                 navtitle: Template to deploy the Logging agent using a Helm chart
               - topic: agent/agent-version.md
@@ -337,6 +344,8 @@ toc:
       - service_plans.md
       - topic: limits.md
         navtitle: Limits
+      - topic: severities.md
+        navtitle: Severity mapping
       - topic: shared-responsibilities.md
         navtitle: Your responsibilities
       - topic: core/data-portability.md
@@ -371,23 +380,17 @@ toc:
           label: Logging agent
           topics:
           - topic: agent/agent-fluentbit.md
-            navtitle: Understanding the agent configuration file
-          - topic: agent/download-agent-yaml.md
-            navtitle: Downloading the agent YAML file
+            navtitle: Understanding the agent configuration file 
           - topic: agent/agent-openshift.md
             navtitle: Managing the agent for Openshift clusters
           - topic: agent/agent-std-cluster.md
             navtitle: Managing the agent for Kubernetes clusters
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields
-          - topic: agent/configure-agent.md
-            navtitle: Filtering logs
           - topic: agent/agent-plugin-parameters.md
             navtitle: Output plug-in parameters to send data to Cloud Logs
           - topic: agent/agent-plugin-support.md
-            navtitle: Fluent Bit plug-ins supported
-          - topic: agent/agent-config.md
-            navtitle: Configuration files for orchestrated environments
+            navtitle: Fluent Bit plug-ins supported 
       - topicgroup:
           label: DataPrime Reference
           topics:
@@ -469,3 +472,5 @@ toc:
                 topics:
                 - ts-mig-iam.md
                 - ts-mig-en.md
+                - ts-mig-views.md
+                - ts-mig-metrics.md
