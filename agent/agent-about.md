@@ -85,15 +85,15 @@ Choose a supported authorization method for the environment where you plan to de
 
 | Environment                                         | Service ID API key | Trusted Profile |
 |-----------------------------------------------------|--------------|--------------------|
-| {{site.data.keyword.cloud_notm}} Kubernetes cluster | supported    | supported    |
-| {{site.data.keyword.cloud_notm}} OpenShift cluster  | supported    | supported    |
-| {{site.data.keyword.cloud_notm}} Linux VSI          | supported    | supported    |
-| On-prem Kubernetes cluster                          | supported    | |
-| On-prem OpenShift cluster                           | supported    | |
-| On-prem Linux server                                | supported    | |
-| Other Cloud Kubernetes clusters                     | supported    | |
-| Other Cloud OpenShift clusters                      | supported    | |
-| Other Cloud Linux servers                           | supported    | |
+| {{site.data.keyword.cloud_notm}} Kubernetes cluster | Supported    | Supported    |
+| {{site.data.keyword.cloud_notm}} OpenShift cluster  | Supported    | Supported    |
+| {{site.data.keyword.cloud_notm}} Linux VSI          | Supported    | Supported    |
+| On-prem Kubernetes cluster                          | Supported    | Not supported |
+| On-prem OpenShift cluster                           | Supported    | Not supported |
+| On-prem Linux server                                | Supported    | Not supported |
+| Other Cloud Kubernetes clusters                     | Supported    | Not supported |
+| Other Cloud OpenShift clusters                      | Supported    | Not supported |
+| Other Cloud Linux servers                           | Supported    | Not supported |
 {: caption="Supported authorization methods" caption-side="bottom"}
 
 You can only use Trusted Profiles to authenticate {{site.data.keyword.cloud_notm}} resources with an {{site.data.keyword.logs_full_notm}} instance when the compute resource and the instance are located in the same account.

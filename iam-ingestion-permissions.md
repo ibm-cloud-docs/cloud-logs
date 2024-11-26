@@ -33,12 +33,12 @@ Choose one of the following options to send logs to an {{site.data.keyword.logs_
 
 | Environment                                                 | Service ID API Key | Trusted Profile    |
 |-------------------------------------------------------------|--------------------|--------------------|
-| Kubernetes cluster in {{site.data.keyword.cloud_notm}}      | supported          | supported          |
-| OpenShift cluster in {{site.data.keyword.cloud_notm}}       | supported          | supported          |
-| Virtual Server for VPC in {{site.data.keyword.cloud_notm}}  | supported          | supported          |
-| Kubernetes cluster on-prem or in other clouds               | supported          | Not supported      |
-| OpenShift cluster on-prem or in other clouds                | supported          | Not supported      |
-| Linux server on-prem or in other clouds                     | supported          | Not supported       |
+| Kubernetes cluster in {{site.data.keyword.cloud_notm}}      | Supported          | Supported          |
+| OpenShift cluster in {{site.data.keyword.cloud_notm}}       | Supported          | Supported          |
+| Virtual Server for VPC in {{site.data.keyword.cloud_notm}}  | Supported          | Supported          |
+| Kubernetes cluster on-prem or in other clouds               | Supported          | Not supported      |
+| OpenShift cluster on-prem or in other clouds                | Supported          | Not supported      |
+| Linux server on-prem or in other clouds                     | Supported          | Not supported       |
 {: caption="Authorization methods by method sending logs" caption-side="bottom"}
 
 You can only use Trusted Profiles to authenticate {{site.data.keyword.cloud_notm}} resources with an {{site.data.keyword.logs_full_notm}} instance when the compute resource and the instance are located in the same account.
@@ -70,12 +70,9 @@ Use the appropriate command for the type of identity:
 {: #iam-ingestion-permissions-apikey}
 
 Consider the following information when using IAM API Keys:
-- You must grant the `Sender` permission to a user ID, a service ID, or an access group to send logs to an {{site.data.keyword.logs_full_notm}} instance.
-- You must generate a new user API key or a new service ID API key after the permissions to send logs are granted to the access group, service ID, or user ID.
-- When you grant permissions via an access group, the users and service IDs that are included in the access group will inherit the permissions.
-- Grant permissions to send logs to a user ID for testing purposes only.
+- You must grant the `Sender` permission to the service ID.
+- You must generate a new service ID API key after the `Sender` permission to send logs is granted to the service ID.
 - When you use an API key as the authorization method of the {{site.data.keyword.agent}}, the {{site.data.keyword.agent}} can be hosted both inside and outside of {{site.data.keyword.cloud}}.
-
 
 For more information on how to generate an API key, see [Generating an API Key for ingestion by using a service ID for authentication](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
