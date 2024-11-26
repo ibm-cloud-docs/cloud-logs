@@ -97,10 +97,12 @@ toc:
             navtitle: Required permissions to work with views
           - topic: iam-assign-access.md
             navtitle: Granting service access
-          - topic: agent/agent-iam-permissions.md
+          - topic: iam-ingestion-permissions.md
             navtitle: Setting up IAM permissions for ingestion
-          - topic: iam-ingestion-api-key.md
-            navtitle: Generating an API Key for ingestion
+          - topic: iam-ingestion-serviceid-api-key.md
+            navtitle: Generating a service ID API Key for ingestion
+          - topic: iam-ingestion-userid-api-key.md
+            navtitle: Generating a user ID API Key for ingestion
           - topic: iam-ingestion-trusted-profile.md
             navtitle: Generating a Trusted Profile for ingestion
           - topic: iam-actions.md

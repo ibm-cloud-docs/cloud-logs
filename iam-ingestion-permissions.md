@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 # Setting up IAM permissions for ingestion
-{: #agent-iam-permissions}
+{: #iam-ingestion-permissions}
 
 You must grant `Sender` permissions to the API key or trusted profile that you use to send logs to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
@@ -33,7 +33,6 @@ Choose one of the following options to send logs to an {{site.data.keyword.logs_
 | By using the {{site.data.keyword.agent}} | not recommended | supported          |
 {: caption="Authorization methods by method sending logs" caption-side="bottom"}
 
-
 You can also use Trusted Profiles to authenticate {{site.data.keyword.cloud_notm}} resources with an {{site.data.keyword.logs_full_notm}} instance when the resource and the instance are located in the same account.
 {: note}
 
@@ -42,6 +41,7 @@ Consider the following information when using IAM API Keys:
 - You must generate a new user API key or a new service ID API key after the permissions to send logs are granted to the access group, service ID, or user ID.
 - When you grant permissions via an access group, the users and service IDs that are included in the access group will inherit the permissions.
 - Grant permissions to send logs to a user ID for testing purposes only.
+- When you use an API key as the authorization method of the {{site.data.keyword.agent}}, the {{site.data.keyword.agent}} can be hosted both inside and outside of {{site.data.keyword.cloud}}.
 
 Consider the following information when using Trusted Profiles:
 - You can only use Trusted Profiles to authenticate {{site.data.keyword.cloud_notm}} resources with an {{site.data.keyword.logs_full_notm}} instance.
@@ -49,6 +49,7 @@ Consider the following information when using Trusted Profiles:
 - You must grant the `Sender` permission to a trusted profile before using it.
 
 
+You can generate a user ID API key or a service ID API key that has the `sender` permissions to send logs to an {{site.data.keyword.logs_full_notm}} instance.
 
 ## Assigning access to {{site.data.keyword.logs_full_notm}} in the console
 {: #agent-iam-permissions-access-ui}
