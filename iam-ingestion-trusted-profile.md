@@ -12,89 +12,43 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Generating an Trusted Profile (TP) for ingestion
-{: #trusted-profile}
+# Generating a Trusted Profile for ingestion
+{: #iam-ingestion-trusted-profile}
 
-When you are using a user account or a service ID, you must generate an API key to open a secure web socket to the ingestion endpoint to authenticate the {{site.data.keyword.agent}} with the {{site.data.keyword.logs_full_notm}} service.
+You can use a Trusted Profile (TP) to send logs from a compute resource in {{site.data.keyword.cloud_notm}} to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}}.
 {: shortdesc}
 
-When you are using a user account or service ID, an API key must be created to authenticate the agent. For authentication with trusted profiles, an API key is not required.
-{: note}
+
+## Creating a Trusted Profile for ingestion
+{: #iam-ingestion-trusted-profile-create}
+
+Complete the following steps to create a Trusted Profile:
 
 
-## Generating an API Key for user authentication
-{: #api-key-for-user-id}
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage > Access (IAM) > Trusted profiles**. Then, click **Create profile**.
 
-A federated user or non-federated user can create an API key to use in the CLI or as part of automation to log in as your user identity.
+2. Describe your profile by providing a name and a description. Then, click **Continue**.
 
-The API key inherits all assigned access for the user identity for which it is created, and the access is not limited to just the account where the API key is created because it inherits any policies that are assigned to the user. Because the API key that is associated with your user identity has all of the access you're entitled to across any account that you are a member of, you must be cautious with how you use your API key. For more information, see [Managing user API keys](/docs/account?topic=account-userapikey).
+3. Establish trust. Select the trusted profile entity **Compute resources**.
 
-You can use the console, CLI, or API to manage your {{site.data.keyword.cloud_notm}} API keys by listing your keys, creating keys, updating keys, or deleting keys.
+5. Create a trust relationship.
 
-- [Creating an API key](/docs/account?topic=account-userapikey&interface=ui#create_user_key).
-- [Updating an API Key](/docs/account?topic=account-userapikey&interface=ui#update_user_key).
-- [Deleting an API key](/docs/account?topic=account-userapikey&interface=ui#delete_user_key).
+    - Select a *Compute service type*. For example, choose **Kubernetes**.
 
+    - In the *Select compute resource* section, click **Specific resources> Add a resource**. Then, choose your resource. For a Kubernetes compute resource, you must choose the Kubernetes cluster where you plan to deploy the agent.
 
-For example, complete the following steps to generate an API key by using the CLI:
+    - Click **Continue**.
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+6. Assign access. Select **Access policy**.
 
-    After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} dashboard opens.
+    The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`. For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
 
-2. Create an API key for the logged-in account.
+    - Select the service **Cloud Logs**. Then, click **Next**.
 
-    Make sure to log in as the identity with the `Sender` role.{: note}
+    - In *Resources*, select **Specific resources**. Choose the {{site.data.keyword.logs_full_notm}} instance where you plan to send the logs. Then, click **Next**.
 
-    ```sh
-    export INGESTION_API_KEY=`ibmcloud iam api-key-create logs-ingestion --output json | jq -r '.apikey'`
-    ```
-    {: pre}
+    - In the **Roles and actions**, select the service access **Sender**. Then, click **Next**.
 
+    - Click **Add > Create**.
 
-
-## Generating an API Key for service ID authentication
-{: #api-key-for-service-id}
-
-You can create a service ID to enable access to the {{site.data.keyword.logs_full_notm}} service by the {{site.data.keyword.agent}}. The agent can be hosted both inside and outside of {{site.data.keyword.cloud}}.
-
-API keys are used by the agent to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
-
-Make sure to grant the service ID the `Sender` role.
-{: note}
-
-- [Creating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#create_service_key).
-- [Updating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#update_service_key).
-- [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#delete_service_key).
-
-
-For example, complete the following steps to generate an API key for a service ID by using the CLI:
-
-1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
-
-    After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} dashboard opens.
-
-2. Create a service ID that is used for the IAM policies and API key credentials.
-
-    Be sure to give the service ID a description that helps you retrieve the service ID later.
-
-    ```sh
-    ibmcloud iam service-id-create logs-svc-id --description "Service ID for IBM Cloud Logs"
-    ```
-    {: pre}
-
-3. Add an IAM policy for your service ID that grants access to send logs.
-
-    ```sh
-    ibmcloud iam service-policy-create <SERVICE_ID> --service-name logs --roles Sender
-    ```
-    {: pre}
-
-4. Create an API key for the service ID.
-
-    Be sure to give the API key a description that helps you retrieve the key later. Save your API key in a secure location. You can't retrieve the API key again. If you want to export the output to a file on your local machine, include the `--file <path>/<file_name>` option.
-
-    ```sh
-    ibmcloud iam service-api-key-create logs-ingestion-key <SERVICE_ID> --description "API key for service ID <SERVICE_ID> with permissions to send logs to the IBM Cloud Logs service"
-    ```
-    {: pre}
+For more information about the fields that are used to create conditions for trusted profiles, see IAM condition properties. {: tip}

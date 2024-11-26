@@ -93,24 +93,26 @@ toc:
           topics:
           - topic: iam.md
             navtitle: Getting started with IAM
-          - topic: iam-views.md
-            navtitle: Required permissions to work with views
           - topic: iam-assign-access.md
             navtitle: Granting service access
           - topic: iam-ingestion-permissions.md
-            navtitle: Setting up IAM permissions for ingestion
+            navtitle: Granting permissions for ingestion
+          - topic: iam-ingestion-trusted-profile.md
+            navtitle: Generating a Trusted Profile for ingestion
           - topic: iam-ingestion-serviceid-api-key.md
             navtitle: Generating a service ID API Key for ingestion
           - topic: iam-ingestion-userid-api-key.md
             navtitle: Generating a user ID API Key for ingestion
-          - topic: iam-ingestion-trusted-profile.md
-            navtitle: Generating a Trusted Profile for ingestion
           - topic: iam-actions.md
             navtitle: IAM actions by role
+          - topic: iam-views.md
+            navtitle: Required permissions to work with views
           - topic: iam-custom-roles.md
             navtitle: Managing custom roles
           - topic: data-access-rules.md
-            navtitle: Data access rules 
+            navtitle: Data access rules
+          - topic: iam-access-report.md
+            navtitle: Access reports
           - topicgroup:
               label: S2S authorizations
               topics:

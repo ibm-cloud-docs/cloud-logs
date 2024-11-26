@@ -13,10 +13,10 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Setting up IAM permissions for ingestion
+# Granting IAM permissions for ingestion
 {: #iam-ingestion-permissions}
 
-You must grant `Sender` permissions to the API key or trusted profile that you use to send logs to an {{site.data.keyword.logs_full_notm}} instance.
+You must grant `Sender` permissions to the API key or trusted profile that you use to request authorization to send logs to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
 You can send logs to an {{site.data.keyword.logs_full_notm}} instance by using the Ingestion REST API, or by using the {{site.data.keyword.agent}}.
@@ -33,23 +33,27 @@ Choose one of the following options to send logs to an {{site.data.keyword.logs_
 | By using the {{site.data.keyword.agent}} | not recommended | supported          |
 {: caption="Authorization methods by method sending logs" caption-side="bottom"}
 
-You can also use Trusted Profiles to authenticate {{site.data.keyword.cloud_notm}} resources with an {{site.data.keyword.logs_full_notm}} instance when the resource and the instance are located in the same account.
+You can also use Trusted Profiles to authenticate {{site.data.keyword.cloud_notm}} resources with an {{site.data.keyword.logs_full_notm}} instance when the compute resource and the instance are located in the same account.
 {: note}
 
+## IAM API keys
+{: #iam-ingestion-permissions-apikey}
+
 Consider the following information when using IAM API Keys:
-- You can grant permissions to a user ID, a service ID, or an access group to send logs to an {{site.data.keyword.logs_full_notm}} instance.
+- You must grant the `Sender` permission to a user ID, a service ID, or an access group to send logs to an {{site.data.keyword.logs_full_notm}} instance.
 - You must generate a new user API key or a new service ID API key after the permissions to send logs are granted to the access group, service ID, or user ID.
 - When you grant permissions via an access group, the users and service IDs that are included in the access group will inherit the permissions.
 - Grant permissions to send logs to a user ID for testing purposes only.
 - When you use an API key as the authorization method of the {{site.data.keyword.agent}}, the {{site.data.keyword.agent}} can be hosted both inside and outside of {{site.data.keyword.cloud}}.
 
+## Trusted Profiles
+{: #iam-ingestion-permissions-tps}
+
 Consider the following information when using Trusted Profiles:
 - You can only use Trusted Profiles to authenticate {{site.data.keyword.cloud_notm}} resources with an {{site.data.keyword.logs_full_notm}} instance.
-- The Trusted Profile and the {{site.data.keyword.logs_full_notm}} instance must be located in the same account.
+- The Trusted Profile, the compute resource, and the {{site.data.keyword.logs_full_notm}} instance must be located in the same account.
 - You must grant the `Sender` permission to a trusted profile before using it.
 
-
-You can generate a user ID API key or a service ID API key that has the `sender` permissions to send logs to an {{site.data.keyword.logs_full_notm}} instance.
 
 ## Assigning access to {{site.data.keyword.logs_full_notm}} in the console
 {: #agent-iam-permissions-access-ui}
