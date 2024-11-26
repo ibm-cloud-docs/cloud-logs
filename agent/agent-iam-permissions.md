@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-26"
 
 keywords:
 
@@ -20,9 +20,6 @@ You must grant permissions to the API key or trusted profile that you use to sen
 {: shortdesc}
 
 To set the permissions on the API key or trusted profile that you use to send logs to the {{site.data.keyword.logs_full_notm}} instance, the API key or trusted profile must have the `Sender` role for the {{site.data.keyword.logs_full_notm}} service if you configure your agent to send logs directly to the {{site.data.keyword.logs_full_notm}} service.
-
-Trusted profiles are not supported on Linux.
-{: note}
 
 You can grant premissions to:
 - An access group: The users and service IDs that are included in the access group will inherit the permissions. You must generate a user API key or a service ID API key after the permissions to send logs are granted to the access group.

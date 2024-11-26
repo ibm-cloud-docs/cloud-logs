@@ -43,7 +43,7 @@ You can deploy the agent on clusters that you run on-prem, in {{site.data.keywor
 
 The {{site.data.keyword.agent}} is a daemon set that is designed to have one pod running on each node of a cluster. Each pod will collect relevant logs for the node its running on. The {{site.data.keyword.agent}} will then forward those logs to the {{site.data.keyword.logs_full_notm}} service.
 
-By default, the {{site.data.keyword.agent}} monitors and collects log data from files matching the specified path pattern in `/var/log/containers/`, excluding logs from files matching the exclusion pattern. The refresh interval is set to 10 seconds. You can change these values and more in the config map `logger-agent-config`.
+By default, the {{site.data.keyword.agent}} monitors and collects log data from files matching the specified path pattern in `/var/log/containers/`, excluding logs from files matching the exclusion pattern. The refresh interval is set to 10 seconds. You can change these values and more in the config map `logger-agent-config`. For more information, see [Filtering logs](/docs/cloud-logs?topic=cloud-logs-configure-include-exclude).
 
 You can deploy the agent in the following platforms:
 - Kubernetes clusters
@@ -76,9 +76,31 @@ The following platforms are supported:
 
 For more information, see [Managing the agent Linux environments](/docs/cloud-logs?topic=cloud-logs-agent-linux).
 
+## Authorization methods
+{: #agent-auth-methods}
+
+You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full}} service.
+
+Choose a supported authorization method for the environment where you plan to deploy the agent:
+
+| Environment                                         | Service ID API key | Trusted Profile |
+|-----------------------------------------------------|--------------|--------------------|
+| {{site.data.keyword.cloud_notm}} Kubernetes cluster | supported    | supported    |
+| {{site.data.keyword.cloud_notm}} OpenShift cluster  | supported    | supported    |
+| {{site.data.keyword.cloud_notm}} Linux VSI          | supported    | supported    |
+| On-prem Kubernetes cluster                          | supported    | |
+| On-prem OpenShift cluster                           | supported    | |
+| On-prem Linux server                                | supported    | |
+| Other Cloud Kubernetes clusters                     | supported    | |
+| Other Cloud OpenShift clusters                      | supported    | |
+| Other Cloud Linux servers                           | supported    | |
+{: caption="Supported authorization methods" caption-side="bottom"}
+
+
+
+
 ## Supported formats
 {: #agent-about-formats}
-
 
 The agent supports the following input formats:
 

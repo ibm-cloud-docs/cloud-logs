@@ -76,7 +76,7 @@ toc:
       id: tutorial
       topics:
       - topic: kube-logs.md
-        navtitle: Send IBM Cloud Kubernetes Service log data to IBM Cloud Logs
+        navtitle: Send IBM Cloud Kubernetes Service log data to IBM Cloud Logs 
   - navgroup:
       id: howto
       topics:
@@ -164,6 +164,8 @@ toc:
                 navtitle: Updating the Logging agent version
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
+              - topic: agent/configure-agent.md
+                navtitle: Filtering logs
               - topic: agent/agent-helm-template-clusters.md
                 navtitle: Template to deploy the Logging agent using a Helm chart
               - topic: agent/agent-version.md
@@ -371,23 +373,17 @@ toc:
           label: Logging agent
           topics:
           - topic: agent/agent-fluentbit.md
-            navtitle: Understanding the agent configuration file
-          - topic: agent/download-agent-yaml.md
-            navtitle: Downloading the agent YAML file
+            navtitle: Understanding the agent configuration file 
           - topic: agent/agent-openshift.md
             navtitle: Managing the agent for Openshift clusters
           - topic: agent/agent-std-cluster.md
             navtitle: Managing the agent for Kubernetes clusters
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields
-          - topic: agent/configure-agent.md
-            navtitle: Filtering logs
           - topic: agent/agent-plugin-parameters.md
             navtitle: Output plug-in parameters to send data to Cloud Logs
           - topic: agent/agent-plugin-support.md
-            navtitle: Fluent Bit plug-ins supported
-          - topic: agent/agent-config.md
-            navtitle: Configuration files for orchestrated environments
+            navtitle: Fluent Bit plug-ins supported 
       - topicgroup:
           label: DataPrime Reference
           topics:
