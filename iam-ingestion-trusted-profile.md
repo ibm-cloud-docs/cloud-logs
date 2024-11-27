@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-11-26"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -46,7 +46,7 @@ Complete the following steps to create a Trusted Profile:
 
 6. Assign access. Select **Access policy**.
 
-    The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`. For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
+    The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`. For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
     Make sure the user who grants the policy has the `Sender` role permissions.
     {: important}

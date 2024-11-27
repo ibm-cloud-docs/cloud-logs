@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -62,13 +62,13 @@ Complete the following steps:
 
     The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
-    For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
+    For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
 3. Generate an API Key for user authentication or for service ID authentication.
 
     For authentication with trusted profiles, this step is not required.
 
-    For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-api-key).
+    For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
 
 
@@ -109,12 +109,12 @@ Complete the following steps:
     :   IAM authentication mode (`TrustedProfile` | `IAMAPIKey`).
 
     `-i <trusted_profile_id>`
-    :   Trusted profile ID (required for `TrustedProfile` mode). Provide the Trusted Profile ID. When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli).
+    :   Trusted profile ID (required for `TrustedProfile` mode). Provide the Trusted Profile ID. When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions&interface=cli).
 
         For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile). {: tip}
 
     `-k <iam_api_key>`
-    :   IAM API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-api-key).
+    :   IAM API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
         For more information about IAM API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
         {: tip}
