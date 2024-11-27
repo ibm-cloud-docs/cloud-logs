@@ -461,6 +461,7 @@ toc:
                  - topic: ts-no-logs.md
                    navtitle: Why can't I see platform logs in the UI?
                  - ts-alerts.md
+                 - ts-helm-proxy.md
 
             - topicgroup:
                 label: Troubleshooting migration
