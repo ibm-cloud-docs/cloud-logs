@@ -2,9 +2,9 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-11-28"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -37,10 +37,10 @@ Error: Get "https://icr.io/v2/": unauthorized: {"errors":[{"code":"UNAUTHORIZED"
 ```
 {: screen}
 
-Your environment might have a proxy in place that is dropping the headers included in the access token.
+Your environment might have a proxy in place that is dropping the headers that include the access token.
 {: tsCauses}
 
-Do the following to determine if a proxy is in place and install the {{site.data.keyword.agent}} a different way.
+Do the following to determine if a proxy is in place and install the {{site.data.keyword.agent}} a different way or resolve your proxy configuration.
 {: tsResolve}
 
 1. Run the following command to determine if a proxy is in place and is causing the problem.
@@ -51,5 +51,3 @@ Do the following to determine if a proxy is in place and install the {{site.data
    {: pre}
 
 2. If the command returns `401`, use the [Cloud Shell](/docs/cloud-shell) to deploy the {{site.data.keyword.agent}} using the {{site.data.keyword.agent}} deployment steps.
-
-
