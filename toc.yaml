@@ -453,12 +453,18 @@ toc:
             - topicgroup:
                 label: Troubleshooting Cloud Logs
                 topics:
-                - ts-no-metrics-bucket.md
-                - ts-en-500.md
                 - ts-mapping-exceptions.md
-                - ts-cos-config.md
-                - ts-alerts.md
                 - ts-rules.md
+            - topicgroup:
+                label: Troubleshooting alerts
+                topics:
+                - ts-alerts.md
+                - ts-en-500.md
+            - topicgroup:
+                label: Troubleshooting Cloud Object Storage
+                topics:
+                - ts-no-metrics-bucket.md
+                - ts-cos-config.md
             - topicgroup:
                 label: Troubleshooting platform data
                 topics:
