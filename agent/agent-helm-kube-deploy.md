@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-11-28"
 
 keywords:
 
@@ -178,7 +178,7 @@ Complete the following steps:
 
 4. Once the resources to be created are verified, then run the Helm install without the `--dry-run` option
 
-     If you are using the `iamMode`=`TrustedProfile` then the complete command is:
+    If you are using the `iamMode`=`TrustedProfile` then the complete command is:
 
      ```sh
     helm install <install-name>  oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace
