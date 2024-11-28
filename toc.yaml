@@ -453,17 +453,24 @@ toc:
             - topicgroup:
                 label: Troubleshooting Cloud Logs
                 topics:
-                 - ts-no-metrics-bucket.md
-                 - ts-en-500.md
-                 - ts-mapping-exceptions.md
-                 - ts-cos-config.md
-                 - ts-no-public.md
-                 - ts-input-error.md
-                 - ts-fb-error.md
-                 - topic: ts-no-logs.md
-                   navtitle: Why can't I see platform logs in the UI?
-                 - ts-alerts.md
-                 - ts-helm-proxy.md
+                - ts-no-metrics-bucket.md
+                - ts-en-500.md
+                - ts-mapping-exceptions.md
+                - ts-cos-config.md
+                - ts-alerts.md
+                - ts-rules.md
+            - topicgroup:
+                label: Troubleshooting platform data
+                topics:
+                - topic: ts-no-logs.md
+                  navtitle: Why can't I see platform logs in the UI?
+            - topicgroup:
+                label: Troubleshooting the Logging agent
+                topics:
+                - ts-no-public.md
+                - ts-input-error.md
+                - ts-fb-error.md
+                - ts-helm-proxy.md
 
             - topicgroup:
                 label: Troubleshooting migration
