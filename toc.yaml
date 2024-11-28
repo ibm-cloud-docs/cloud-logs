@@ -380,7 +380,9 @@ toc:
           label: Logging agent
           topics:
           - topic: agent/agent-fluentbit.md
-            navtitle: Understanding the agent configuration file 
+            navtitle: Understanding the agent configuration file
+          - topic: agent/download-agent-yaml.md
+            navtitle: Downloading the agent YAML file
           - topic: agent/agent-openshift.md
             navtitle: Managing the agent for Openshift clusters
           - topic: agent/agent-std-cluster.md

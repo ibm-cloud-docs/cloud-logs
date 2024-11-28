@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-11-28"
 
 keywords:
 
@@ -83,8 +83,6 @@ You can configure the number of available workers that are available in the outp
 
 Use the `outputWorkers` Helm variable to manage the Workers setting for the output plugin if you are using the Helm chart.
 {: tip}
-
-The Helm chart for [Openshift](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy) and [Kubernetes](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy) deployments are configured with 4 workers since this is generally a good setting for most Kubernetes workloads.
 
 Here are some considerations when setting the `Workers` value in your environment:
 
