@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -40,13 +40,13 @@ Complete the following steps:
 
     The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
-    For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions).
+    For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
 3. Generate an API Key for user authentication or for service ID authentication.
 
     
 
-    For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-api-key).
+    For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
 
 ## Download the required RPM or DEB packages
@@ -121,13 +121,13 @@ Complete the following steps:
     :   Specify `IAMAPIKey` or `VSITrustedProfile`.
 
     `-k <iam_api_key>`
-    :   Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-api-key).
+    :   Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
         For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
         {: tip}
 
     `-d <trusted_profile_id>`
-    :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information see [Creating virtual server instances](/docs/vpc?topic=vpc-creating-virtual-servers).
+    :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information see [Creating virtual server instances](/docs/vpc?topic=vpc-creating-virtual-servers).
 
         For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
         {: tip}

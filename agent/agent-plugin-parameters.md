@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-22"
+lastupdated: "2024-11-28"
 
 keywords:
 
@@ -28,7 +28,7 @@ List of parameters that you can use to configure the output plugin to send data 
 | `Id`     |  Unique ID for the plug-in. |  n/a |  any string  | true  |
 | `Match`  |  Use to specify how to match events. |  n/a |  any string  | true  |
 | `Retry_Limit` |  Retry processing if the plug-in fails to send data to Cloud Logs.  \n Set `False` if you want to retry forever, otherwise set to an Integer value.  \n For more information about how to configure retries, see [here](https://docs.fluentbit.io/manual/administration/scheduling-and-retries#configuring-retries){: external} |  1 |  `False` or N >= 1  | true  |
-| `Workers` | The number of concurrent worker threads sending to {{site.data.keyword.logs_full_notm}}.  \n In order to increase the throughput of logs sent to {{site.data.keyword.logs_full_notm}}, you can increase the number of concurrent threads sending from each agent.  \n See [here](#agent-worker-configuration-considerations)  | 1 | 1 or more | false |
+| `Workers` | The number of concurrent worker threads sending to {{site.data.keyword.logs_full_notm}}.  \n In order to increase the throughput of logs sent to {{site.data.keyword.logs_full_notm}}, you can increase the number of concurrent threads sending from each agent.  \n See [here](#agent-workers-configuration-considerations)  | 1 | 1 or more | false |
 {: caption="Fluentbit parameters" caption-side="bottom"}
 
 
@@ -70,14 +70,16 @@ When `Authentication_Mode` is set to `IAMAPIKey`, consider the following informa
 
 
 
-## Agent Workers configuration considerations
-{: #agent-workers-configuration-considerations}
+## Fluentbit Agent Workers configuration considerations
+{: #agent-worker-configuration-considerations}
 
-The `Workers` output plugin configuration can be used to increase the concurrency of data that is being sent from each agent to an {{site.data.keyword.logs_full_notm}} instance.  By default, `Workers=1` is the default and this will work for workloads generating log volumes less than 1MB/sec.
+A `worker`, in the context of the {{site.data.keyword.agent}}, represents a CPU thread that is available to the {{site.data.keyword.agent}} for handling logs.
 
-In an environment with greater logging volumes (more than 1 MB/sec) it might be necessary to increase the `Workers` configuration in order for the output plug-in to be able to process the logs being consumed.
+You can configure the number of available workers that are available in the output plugin configuration.
 
-The Helm chart for [Openshift](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy) and [Kubernetes](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy) deployments are configured with 4 workers since this is generally a good setting for most Kubernetes workloads.
+- In the fluent-bit default configuration, `Workers=1` is the default configuration and this will work for workloads generating log volumes less than 1MB/sec.
+- In an environment with greater logging volumes, more than 1 MB/sec, it might be necessary to increase the `Workers` configuration in order for the output plug-in to be able to process the logs being consumed.
+- The Helm chart for [Openshift](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy) and [Kubernetes](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy) deployments are configured with 4 workers since this is generally a good setting for most Kubernetes workloads.
 
 Use the `outputWorkers` Helm variable to manage the Workers setting for the output plugin if you are using the Helm chart.
 {: tip}

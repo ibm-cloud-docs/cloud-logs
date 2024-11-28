@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -205,7 +205,7 @@ subcollection: cloud-logs
 {: caption="IAM actions available for the Sender role" caption-side="top"}
 
 
-##  DataAccessRestrictionReader role
+##  Data Access Reader role
 {: #iam-actions-DataAccessRestrictionReader}
 
 | Action | Description |

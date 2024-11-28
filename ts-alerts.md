@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-25"
+lastupdated: "2024-11-27"
 
 keywords: 
 
@@ -97,9 +97,7 @@ Review your alert configuration for errors such as:
 
 * Are you using parentheses in your query to determine [operator precedence](/docs/cloud-logs?topic=cloud-logs-query-data-lucene#lucene-operators)? Are your parentheses correctly coded?
 
-* Is your log affected by [configured suppression rules](/docs/cloud-logs?topic=cloud-logs-suppression_rules)?
 
-   ![Log affected by suppression rules.](/images/tsa_03.png){: caption="Log affected by suppression rules." caption-side="bottom"}
 
 For more information, see [Configuring alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-alerts-config).
 
@@ -108,4 +106,3 @@ For more information, see [Configuring alerts in {{site.data.keyword.logs_full_n
 {: #ts-alert-en-config}
 
 If {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_full_notm}} are not correctly configured, your alert will not trigger your intended notification. See [Configuring the integration with the {{site.data.keyword.en_short}} service](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure) for information about configuring the integration between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_full_notm}}.
-
