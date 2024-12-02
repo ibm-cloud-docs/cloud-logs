@@ -47,7 +47,7 @@ toc:
             navtitle: Activity tracking events
           - topic: cl-at-platform-logs.md
             navtitle: Platform logs
-          - topic: agent/cl-at-platform-logs.md
+          - topic: agent/cl-at-operational-logs.md
             navtitle: Operational logs
       - topicgroup:
           label: Migrating from Activity Tracker and Log Analysis

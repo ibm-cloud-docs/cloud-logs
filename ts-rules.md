@@ -29,7 +29,7 @@ You have one or more log records with a severity that does not match the severit
 Some issues that can cause severity to be set with a different value of what you expect:
 {: tsCauses}
 
-- The data that you send by using the {{site.data.keyword.agent}} sets the severity based on information in your log record or `info` if the agent is unable to determine the severity of the log record. For more infoirmation, see []().
+- The data that you send by using the {{site.data.keyword.agent}} sets the severity based on information in your log record or `info` if the agent is unable to determine the severity of the log record. For more infoirmation, see [About the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about#agent-about-ov).
 - The data that you send by using the Ingestion REST API sets the severity based on the data in the parameter *severity*. If the parameter severity is not included, `debug` is set as the default value.
 - A parsing rule in your instance is enabled and sets the severity of a log record overriding the agent's behaviour or the ingestion by using the REST API.
 
