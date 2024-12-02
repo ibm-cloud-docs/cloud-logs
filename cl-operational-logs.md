@@ -22,7 +22,7 @@ You can send infrastructure and application logs to an {{site.data.keyword.logs_
 
 
 
-## By deploying the {{site.data.keyword.agent}} on the platform
+## By deploying the {{site.data.keyword.agent}}
 {: #cl-operational-logs-agent}
 
 The {{site.data.keyword.agent}} is based on the Fluent Bit open-source agent which is used to collect and process log data. You can deploy the {{site.data.keyword.agent}} in supported environments and manage data from various sources and formats. For more information, see [About the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about).
@@ -44,6 +44,6 @@ You can send logs to an {{site.data.keyword.logs_full_notm}} instance by using t
 
 You can configure a centralized logging service on Linux with Rsyslog where you can deploy a Linux {{site.data.keyword.agent}} to collect and route (r)Syslog data to an {{site.data.keyword.logs_full_notm}} instance.
 
-The following diagram shows the high level view of sources where you can configure rsyslog to send logs to a Linux server:
+The following diagram shows the high level view of a source, such as PowerVS, where you can configure rsyslog to send logs to a Linux server:
 
 ![Sources such as PowerVS where the agent is supported](images/sending-logs-agent-collector.svg "Sources where the agent is supported"){: caption="Flow of logs from agent" caption-side="bottom"}

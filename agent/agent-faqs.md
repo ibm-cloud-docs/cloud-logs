@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-28"
+lastupdated: "2024-12-02"
 
 keywords:
 
@@ -29,7 +29,7 @@ You can configure the number of available workers that are available in the outp
 
 The `Workers` configuration setting for the output plug-in depends on the log volume being processed.  See the [Agent Workers Configuration Considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-workers-configuration-considerations) which describes the logs that you can look for to help determine the appropriate setting for your environment.
 
-For example, the {{site.data.keyword.agent}} is deployed as a Daemonset in a Kubernetes or OpenShift cluster. 1 {{site.data.keyword.agent}} pod is deployed in each worker (node) in the cluster.  The Helm charts for Openshift and Kubernetes deployments are configured with 4 workers by default. Each {{site.data.keyword.agent}} pod is configured by default to use 4 fluent-bit workers (or threads) to handle the processing of logs in each pod. You can use the guidance in https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-workers-configuration-considerations to configure the number of workers based on your log volumes.
+For example, the {{site.data.keyword.agent}} is deployed as a Daemonset in a Kubernetes or OpenShift cluster. 1 {{site.data.keyword.agent}} pod is deployed in each worker (node) in the cluster.  The Helm charts for Openshift and Kubernetes deployments are configured with 4 workers by default. Each {{site.data.keyword.agent}} pod is configured by default to use 4 fluent-bit workers (or threads) to handle the processing of logs in each pod. You can use the guidance in [Fluentbit Agent Workers configuration considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-workers-configuration-considerations) to configure the number of workers based on your log volumes.
 
 
 
