@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-# Monitoring operational logs
+# The {{site.data.keyword.agent}}
 {: #agent-about}
 
 You can configure the {{site.data.keyword.agent}} to collect and send infrastructure and application logs to an {{site.data.keyword.logs_full_notm}} instance directly.
@@ -28,10 +28,17 @@ The following diagram shows the high level view when the destination is an {{sit
 ![Flow of logs from agent](../images/telemetry-logs.png "Flow of logs from agent"){: caption="Flow of logs from agent" caption-side="bottom"}
 
 
-When you can configure the {{site.data.keyword.agent}} to send logs to the {{site.data.keyword.logs_full_notm}} service, logs that you send must include a value for the `applicationName` and `subsystemName` metadata fields. By default, when you configure the {{site.data.keyword.agent}}, the agent sets default values for these fields. You can configure your own custom values to replace the default values.
+## About the {{site.data.keyword.agent}}
+{: #agent-about-ov}
+
+When you use the {{site.data.keyword.agent}} to send logs to the {{site.data.keyword.logs_full_notm}} service, logs that you send must include a value for the `applicationName` and `subsystemName` metadata fields. By default, when you configure the {{site.data.keyword.agent}}, the agent sets default values for these fields. You can configure your own custom values to replace the default values.
 - For more information on default values, see [Metadata fields](/docs/cloud-logs?topic=cloud-logs-metadata).
 - For more information on how to configure the agent, see [Configuring the agent to set custom values for applicationName and subsystemName metadata fields](/docs/cloud-logs?topic=cloud-logs-agent-set-appsubname).
 
+The severity of the events is identified by the {{site.data.keyword.agent}} as follows:
+1. If the log is parsed by the {{site.data.keyword.agent}} and contains a field named `severity`, `level` or `logLevel`, that field is used to set the severity.
+2. If the log record does not contain a field named `severity`, `level` or `logLevel`, the message field is scanned to set the level based on a text search for `debug`, `info`, `error`, or `warn`.
+If the {{site.data.keyword.agent}} cannot determine the severity of a log record, sets the severity to `info`.
 
 
 ## {{site.data.keyword.agent}} for orchestrated environments

@@ -47,7 +47,7 @@ toc:
             navtitle: Activity tracking events
           - topic: cl-at-platform-logs.md
             navtitle: Platform logs
-          - topic: agent/agent-about.md
+          - topic: agent/cl-at-platform-logs.md
             navtitle: Operational logs
       - topicgroup:
           label: Migrating from Activity Tracker and Log Analysis
@@ -156,6 +156,8 @@ toc:
       - topicgroup:
           label: Sending data to Cloud Logs
           topics:
+          - topic: agent/agent-about.md
+            navtitle: About the Logging agent
           - topic: send-logs-api.md
             navtitle: Using the REST API
           - topicgroup:
