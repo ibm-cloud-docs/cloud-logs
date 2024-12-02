@@ -35,10 +35,11 @@ When you use the {{site.data.keyword.agent}} to send logs to the {{site.data.key
 - For more information on default values, see [Metadata fields](/docs/cloud-logs?topic=cloud-logs-metadata).
 - For more information on how to configure the agent, see [Configuring the agent to set custom values for applicationName and subsystemName metadata fields](/docs/cloud-logs?topic=cloud-logs-agent-set-appsubname).
 
-The severity of the events is identified by the {{site.data.keyword.agent}} as follows:
+The severity of a log record is identified by the {{site.data.keyword.agent}} as follows:
 1. If the log is parsed by the {{site.data.keyword.agent}} and contains a field named `severity`, `level` or `logLevel`, that field is used to set the severity.
 2. If the log record does not contain a field named `severity`, `level` or `logLevel`, the message field is scanned to set the level based on a text search for `debug`, `info`, `error`, or `warn`.
-If the {{site.data.keyword.agent}} cannot determine the severity of a log record, sets the severity to `info`.
+
+If the {{site.data.keyword.agent}} cannot determine the severity of a log record, it sets the severity to `info`.
 
 
 ## {{site.data.keyword.agent}} for orchestrated environments
