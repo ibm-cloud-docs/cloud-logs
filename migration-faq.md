@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for {{site.data.keyword.logs_full_notm}}
+# FAQs for using the Migration Tool
 {: #migration-faq}
 
 Frequently asked questions about the Migration Tool.
