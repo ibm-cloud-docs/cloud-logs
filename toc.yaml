@@ -153,8 +153,6 @@ toc:
           - topic: cos.md
       - topic: instance-launch.md
         navtitle: Launching the UI
-      - topic: export-data.md
-        navtitle: Exporting data
       - topicgroup:
           label: Sending data to Cloud Logs
           topics:
@@ -282,6 +280,8 @@ toc:
                 navtitle: Markdown
               - topic: widget_dataprime.md
                 navtitle: DataPrime creator
+      - topic: export-data.md
+        navtitle: Exporting data
       - topicgroup:
           label: Working with templates
           topics:
