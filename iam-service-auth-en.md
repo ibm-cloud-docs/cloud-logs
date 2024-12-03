@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-12-03"
 
 keywords:
 
@@ -39,6 +39,7 @@ The autorization that you define for the {{site.data.keyword.logs_full_notm}} se
 You can select any of the following roles that the source can use to interact with the target. You can grant only the level of access that you have as a user of the target that you selected.
 - `Event Source Manager`: You must grant `Event Source Manager` role to handle source integration with the {{site.data.keyword.en_full_notm}} service.
 - `Reader`: You must grant `Reader` role to perform read-only actions within a service such as viewing service-specific resources.
+- `Viewer`: You must grant `Viewer` role to list the {{site.data.keyword.en_full_notm}} service instances.
 
 For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 
