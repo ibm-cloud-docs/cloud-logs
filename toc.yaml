@@ -153,6 +153,8 @@ toc:
           - topic: cos.md
       - topic: instance-launch.md
         navtitle: Launching the UI
+      - topic: export-data.md
+        navtitle: Exporting data
       - topicgroup:
           label: Sending data to Cloud Logs
           topics:
