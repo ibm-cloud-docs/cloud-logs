@@ -280,6 +280,8 @@ toc:
                 navtitle: Markdown
               - topic: widget_dataprime.md
                 navtitle: DataPrime creator
+      - topic: export-data.md
+        navtitle: Exporting data
       - topicgroup:
           label: Working with templates
           topics:
@@ -449,6 +451,8 @@ toc:
                 navtitle: FAQs
               - topic: agent/agent-faqs.md
                 navtitle: Agent FAQs
+              - topic: migration-faq.md
+                navtitle: Migration Tool FAQs
         - topicgroup:
             label: Troubleshooting
             topics:
