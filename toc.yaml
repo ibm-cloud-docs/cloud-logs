@@ -451,6 +451,8 @@ toc:
                 navtitle: FAQs
               - topic: agent/agent-faqs.md
                 navtitle: Agent FAQs
+              - topic: migration-faq.md
+                navtitle: Migration Tool FAQs
         - topicgroup:
             label: Troubleshooting
             topics:
