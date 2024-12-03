@@ -73,6 +73,11 @@ The following diagram shows the high level view when the source of logs is a Kub
 
 You can deploy the {{site.data.keyword.agent}} in Linux environments.
 
+You must configure the log files that the {{site.data.keyword.agent}} monitors and forwards its data to your {{site.data.keyword.logs_full_notm}} instance.
+
+The agent runs as a Linux daemon by using `systemd`. You can manage the agent by using `systemctl`.
+
+
 The following platforms are supported:
 
 - RHEL 8
