@@ -2,9 +2,9 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-25"
+lastupdated: "2024-12-02"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -13,7 +13,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# I am getting an error when starting the {{site.data.keyword.agent}}.
+# I am getting an error when starting the {{site.data.keyword.agent}}?
 {: #ts-fb-error}
 {: troubleshoot}
 {: support}
@@ -21,7 +21,7 @@ subcollection: cloud-logs
 When starting the {{site.data.keyword.logs_full}} {{site.data.keyword.agent}} an error is returned.
 {: shortdesc}
 
-You get the following error message: 
+You get the following error message:
 {: tsSymptoms}
 
 ```text

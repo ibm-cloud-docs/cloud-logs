@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-28"
+lastupdated: "2024-12-02"
 
 keywords:
 
@@ -58,7 +58,8 @@ List of parameters that you can use to configure the output plugin to send data 
 |  Key   |  Description |  Default | Value Choices  | Required  |
 |--------|---|---|---|---|
 |  `Authentication_Mode` |  Specify the authentication mode |  `TrustedProfile` | `TrustedProfile`  \n `IAMAPIKey`  | false  |
-|  `IAM_Environment` |  Specify the IAM environment for authentication |  `Production` |  `Production` specifies the public endpoint `iam.cloud.ibm.com`  \n `PrivateProduction` specifies the private endpoint `private.iam.cloud.ibm.com` | false  |
+|  `IAM_Environment` |  Specify the IAM environment for authentication |  `Production` |  `Production` specifies the public endpoint `iam.cloud.ibm.com`  \n  \n `PrivateProduction` specifies the private endpoint `private.iam.cloud.ibm.com`  \n  \n `Custom` specifies an endpoint specified by the parameter `IAM_Host` | false  |
+|  `IAM_Host`  | The IAM hostname for a custom IAM environment | n/a | The fully qualified IAM host name for example: `private.eu-de.iam.cloud.ibm.com` | Only used when `IAM_Environment` is set to `Custom` |
 |  `CR_Token_Mount_Path` |  Path where the CRToken is present |  `/var/run/secrets/tokens/vault-token` | any string  | false - Only used when Authentication_Mode is set to TrustedProfile  |
 |  `Trusted_Profile_ID` |  ID of the Trusted Profile to be used |  n/a |  any string	  | true - Only used when Authentication_Mode is set to TrustedProfile |
 {: caption="Authentication parameters" caption-side="bottom"}

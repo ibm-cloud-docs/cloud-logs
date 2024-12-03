@@ -15,7 +15,7 @@ subcollection: cloud-logs
 
 
 # Monitoring platform logs in {{site.data.keyword.logs_full_notm}}
-{: #cl-at-platform-logs}
+{: #cl-platform-logs}
 
 You can use the {{site.data.keyword.logs_full_notm}} service to monitor and alert on platform logs that are generated in an {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
@@ -37,7 +37,7 @@ For more information, see:
 - [{{site.data.keyword.cloud_notm}} services that generate platform logs](/docs/logs-router?topic=logs-router-cloud_services)
 
 ## Central model
-{: #cl-at-platform-logs-central}
+{: #cl-platform-logs-central}
 
 
 Configure {{site.data.keyword.logs_routing_full_notm}} in your account to route platform logs to 1 {{site.data.keyword.logs_full_notm}} instance if you have a requirement to centralize platform logs.
@@ -48,7 +48,7 @@ The following image shows a high-level view of the account when you adopt a cent
 ![High-level view of the account when you adopt a central model](/images/migration-plat-logs-central.svg "Account overview of handling platform logs."){: caption="High-level view of the account when you adopt a central model}}" caption-side="bottom"}
 
 ## Data locality model
-{: #cl-at-platform-logs-data-locality}
+{: #cl-platform-logs-data-locality}
 
 
 Configure {{site.data.keyword.logs_routing_full_notm}} in your account to route platform logs to multiple {{site.data.keyword.logs_full_notm}} instances if you have a requirement to maintain data locality.

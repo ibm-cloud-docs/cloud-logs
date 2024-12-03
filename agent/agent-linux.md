@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-03"
 
 keywords:
 
@@ -28,25 +28,21 @@ Complete the following steps to deploy an agent to a supported Linux environment
 {: #agent-linux-deploy-step1}
 {: step}
 
-Choose the type of identity and the authentication method for the agent. Then, create an API key if needed.
+Choose the type of identity and the authentication method for the agent. Then, create a trusted profile or an API key. The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
-Complete the following steps:
+You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full}} service. For more information, see [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
-1. Choose the type of identity: user or service ID.
+Choose one of the following options:
 
-    You can use a user, or a service ID as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full_notm}} service.
+### Option 1: Authentication using a trusted profile
+{: #agent-helm-os-deploy-step1-tp}
 
-2. Grant permissions for ingestion to the identity that you have chosen.
+Create a Trusted Profile. For more information, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
 
-    The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
+### Option 2: Authentication using a service ID API key
+{: #agent-helm-os-deploy-step1-key}
 
-    For more information, see [Setting up IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
-
-3. Generate an API Key for user authentication or for service ID authentication.
-
-    
-
-    For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
+Generate an API Key for service ID authentication. For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
 
 ## Download the required RPM or DEB packages
@@ -216,9 +212,8 @@ Complete the following steps:
 {: #agent-linux-deploy-step5}
 {: step}
 
-By default, the {{site.data.keyword.agent}} reads log files from _/var/log_, and forwards the log data to your logging instance.
-
-You can configure the agent to include or exclude files that the agent monitors.
+You must configure the log files that the {{site.data.keyword.agent}} monitors.
+{: important}
 
 Complete the following steps:
 

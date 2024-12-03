@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-11-28"
 
 keywords:
 
@@ -20,11 +20,11 @@ completion-time: 30m
 
 # Send {{site.data.keyword.containerlong_notm}} log data to {{site.data.keyword.logs_full_notm}}
 {: #kube2logs}
-{: toc-content-type="tutorial"} 
+{: toc-content-type="tutorial"}
 {: toc-services="containers, cloud-logs, logs-router"}
-{: toc-completion-time="30m"} 
+{: toc-completion-time="30m"}
 
-In this tutorial, you set up {{site.data.keyword.containerlong}} to send logs directly to {{site.data.keyword.logs_full_notm}} bypassing {{site.data.keyword.logs_routing_full_notm}} processing. These logs help you troubleshoot issues and improve the health and performance of your Kubernetes clusters and apps.
+In this tutorial, you set up {{site.data.keyword.containerlong}} to send logs directly to {{site.data.keyword.logs_full_notm}}. These logs help you troubleshoot issues and improve the health and performance of your Kubernetes clusters and apps.
 {: shortdesc}
 
 ## Goals
@@ -53,7 +53,7 @@ Before you begin, make sure you have the prerequisites.
 
  An alternative to installing the {{site.data.keyword.cloud_notm}} CLI, `kubectl`, `jq`, and `yq` would be to use the [{{site.data.keyword.cloud_notm}} Shell](http://cloud.ibm.com/shell){: external}
  {: tip}
- 
+
 ## Connect to your cluster
 {: #kube2logs_connect}
 {: step}
@@ -91,7 +91,7 @@ Connect to your {{site.data.keyword.containerlong_notm}} cluster. Connecting to 
 5. Verify that you are connected to your cluster and can run `kubectl` commands by listing all pods that are running in all namespaces.
 
    ```sh
-   kubectl get pods --all-namespaces 
+   kubectl get pods --all-namespaces
    ```
    {: pre}
 
@@ -164,124 +164,73 @@ ingestion_endpoint: 3a622101-7521-4002-bf91-8c26e17eedcf.ingress.eu-de.logs.clou
 {: #kube2logs_yaml}
 {: step}
 
-In this step, download and modify the YAML file that is used to configure the agent daemonset.
+In this step, create the YAML file that is used to configure the agent daemonset.
 
-1. Run the following command to download the agent configuration file:
+1. Create a file named `logs-values.yaml` with the following content:
 
-   ```sh
-   curl -sSL https://ibm.biz/iclr-agent-iks-yaml -o logger-agent-iks.yaml
-   ```
-   {: pre}
+    This file contains the configurations that are specific to your deployment.{: note}
 
-2. Modify the configuration to meet your requirements.
+    ```yaml
+    metadata:
+      name: "logs-agent"
+    image:
+      version: "1.4.0"  # required
 
-   Information about configuring the `logger-agent-iks.yaml` file can be found in [Understanding the agent configuration file](/docs/cloud-logs?topic=cloud-logs-agent-fluentbit). In this tutorial, you configure the system to send all container logs, which is a safe default. The YAML file includes multiple sections. You need to modify the `ConfigMap` section.
+    clusterName: ""     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
 
-   Edit the `logger-agent-iks.yaml` file and search for `input-kubernetes.conf` to locate the relevant section. The section to modify looks like:
+    env:
+      # ingestionHost is a required field. For example:
+      # ingestionHost: "<logs instance>.ingress.us-east.logs.cloud.ibm.com"
+      ingestionHost: "" # required
 
-   ```yaml
-     input-kubernetes.conf: |
-       [INPUT]
-           Name              tail
-           Tag               kube.*
-           Path              /var/log/containers/logger-agent-ds-*.log
-           Path_Key          file
-           Exclude_Path      /var/log/at/**
-           DB                /var/log/fluent-bit/fluent-bit.DB
-           Buffer_Chunk_Size 32KB
-           Buffer_Max_Size   256KB
-           Parser            cri
-           Skip_Long_Lines   On
-           Refresh_Interval  10
-           storage.type      filesystem
-           storage.pause_on_chunks_overlimit on
-   ```
-   {: codeblock}
+      # If you are using private CSE proxy, then use port number "3443"
+      # If you are using private VPE Gateway, then use port number "443"
+      # If you are using the public endpoint, then use port number "443"
+      ingestionPort: "" # required
 
-   Change the `Path` value to include all log files under `/var/log/containers/`:
+      iamMode: "TrustedProfile"
+      # trustedProfileID - trusted profile id - required for iam trusted profile mode
+      trustedProfileID: "Profile-yyyyyyyy-xxxx-xxxx-yyyy-zzzzzzzzzzzz" # required if iamMode is set to TrustedProfile
+    ```
+    {: codeblock}
 
-   ```yaml
-   Path              /var/log/containers/*.log
-   ```
-   {: codeblock}
+2. Update the fields in the yaml file with values specific to your environment.
 
-   With this modification, all container logs are captured.
 
 
 ## Deploying the daemonset
 {: #kube2logs_deploy}
 {: step}
 
-Using the API key, endpoint URL, and modified YAML file, deploy the agent to your cluster.
+Using the API key, endpoint URL, and YAML file, deploy the agent to your cluster.
 
-1. [Determine the current version of the agent](/docs/cloud-logs?topic=cloud-logs-check-agent-versions) in the {{site.data.keyword.registrylong_notm}}.
+1. Log in to the Helm registry by running the `helm registry login` command:
 
-   1. Install the {{site.data.keyword.registrylong_notm}} CLI plug-in.
+    ```sh
+    helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
+    ```
+    {: codeblock}
 
-      ```text
-      ibmcloud plugin install cr  
-      ```
-      {: pre}
+    For more information, see [Using Helm charts in Container Registry: Pulling charts from another registry or Helm repository](/docs/Registry?topic=Registry-registry_helm_charts#registry_helm_charts_pull).
 
-   2. Set the region to global.
+2. Deploy the agent.
 
-      ```text
-      ibmcloud cr region-set global
-      ```
-      {: pre}
+    If you are using a service ID API key (`iamMode`=`IAMAPIKey`), run the following command:
 
-   3. List the available agent versions. Select the highest number as the most current.
+    ```sh
+    helm install <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
+    ```
+    {: codeblock}
 
-      ```text
-      ibmcloud cr images --restrict ibm/observe/logger-agent-plugin
-      ```
-      {: pre}
-      
-This output indicates that 1.2.3 is the most current version:
+    where:
 
-```text
-Repository                               Tag     Digest         Namespace   Created        Size     Security status
-icr.io/ibm/observe/logger-agent-plugin   1.1.1   80b538cf5a90   ibm         2 months ago   106 MB   -
-icr.io/ibm/observe/logger-agent-plugin   1.2.0   886882f03ed0   ibm         1 month ago    91 MB    -
-icr.io/ibm/observe/logger-agent-plugin   1.2.2   0e4a7fbbf01c   ibm         1 month ago    97 MB    -
-icr.io/ibm/observe/logger-agent-plugin   1.2.3   92163c1328aa   ibm         2 weeks ago    97 MB    -
-```
-{: screen}
+    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
+    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
+    - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
+    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-kube-deploy-step1)
 
-2. Deploy the agent by running a single command.
-
-   Review your command carefully, since it contains values that were gathered previously. Be sure to make the necessary substitutions for the command to work as expected.
-   {: important}
-
-   ```sh
-   curl -sSL https://ibm.biz/logs-router-setup | bash -s -- \
-   -v 1.2.3  \
-   -m IAMAPIKey  \
-   -k <iam_api_key>  \
-   -t Kubernetes \
-   -r eu-de  \
-   --send-directly-to-icl  \
-   -h <ingestion_endpoint>
-   -p 443  \
-   -d <directory>\
-   ```
-   {: pre}
-
-| Parameter  |  Description |
-| ------------ | ------------ |
-|  `-sSL https://ibm.biz/logs-router-setup` |  Gets the `logs-router-setup` script. You might want to review this file to better understand the details of what is processed. At a high level, the script uses the set of parameters that are provided along with the YAML file, API key, and URL. |
-|  `-v 1.2.3` | Specifies the agent version as `1.2.3`.  |
-| `-m IAMAPIKey` | Indicates that we intend to use an API key for authentication.  |
-| `-k <iam_api_key>` | Specifies the IAM API key that we obtained. Replace `<iam_api_key>` with the value.  |
-| `-t Kubernetes` | Specifies that the cluster type is an {{site.data.keyword.containerlong}} cluster.  |
-| `--send-directly-to-icl`  | Indicates that logs bypass {{site.data.keyword.logs_routing_full_notm}} and are sent directly to the {{site.data.keyword.logs_full_notm}} instance.  |
-| `-r eu-de`  | Specifies that the `eu-de` (Frankfurt) region is where the {{site.data.keyword.logs_routing_full_notm}} ingestion endpoint is located.  |
-| `-p  443`  | Sets the target port (443) for log ingestion.  |
-| `-h <ingestion_endpoint>`  | Specifies the {{site.data.keyword.logs_routing_full_notm}} ingress endpoint that was determined in previous steps.  |
-| `-d <directory>`  |  Specifies the directory where the `logger-agent-iks.yaml` file is stored.  |
-{: caption="Deployment parameters" caption-side="bottom"}
-
-
+    You can also deploy the agent using a trusted profile. For more information, see [Deploying the Logging agent for Kubernetes clusters using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy).
+    {: tip}
 
 ## Verify that logs are being sent
 {: #kube2logs_verify}
