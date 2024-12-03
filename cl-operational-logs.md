@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Monitoring operational logs
 {: #cl-operational-logs}
 
-You can send infrastructure and application logs to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}} or by using the REST API. You can also use a Linux server to collect logs via rsyslog and send them to an {{site.data.keyword.logs_full_notm}} instance.
+You can send infrastructure and application logs to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}} or by using the REST API. You can also use a Linux server to collect logs via rsyslog and send them to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}}.
 {: shortdesc}
 
 
@@ -43,6 +43,8 @@ You can send logs to an {{site.data.keyword.logs_full_notm}} instance by using t
 {: #cl-operational-logs-agent-collector}
 
 You can configure a centralized logging service on Linux with Rsyslog where you can deploy a Linux {{site.data.keyword.agent}} to collect and route (r)Syslog data to an {{site.data.keyword.logs_full_notm}} instance.
+
+{{site.data.keyword.logs_full_notm}} does not support a syslog endpoint.
 
 The following diagram shows the high level view of a source, such as PowerVS, where you can configure rsyslog to send logs to a Linux server:
 
