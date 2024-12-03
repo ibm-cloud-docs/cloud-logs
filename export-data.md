@@ -29,7 +29,7 @@ In the Explore **Logs** page, complete the following steps to export data for a 
 
 2. [Access your {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
 
-3. Click ![Explore logs icon](/icons/explore.svg "Explore logs") **Logs**. Then click the ![Settings icon](/icons/setting.svg "Settings icon") **Settings**  > **Export**.
+3. Click ![Explore logs icon](/icons/explore.svg "Explore logs") **Logs**. Then click  ![Settings icon](/icons/setting.svg "Settings icon") **Settings**  > **Export**.
 
 4. Select the file type for the exported data. Valid options are `JSON` and `CSV`.
 
@@ -39,7 +39,8 @@ In the Explore **Logs** page, complete the following steps to export data for a 
 
 7. Select the number of pages that you want to export.
 
-   You can export up to the first 20 pages, that is, aproximately 2000 logs records.{: note}
+    You can export up to the first 20 pages, that is, aproximately 2000 logs records.
+    {: note}
 
 8. Select the filter applied to the export.
 
