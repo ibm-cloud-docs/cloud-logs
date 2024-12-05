@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-21"
+lastupdated: "2024-12-05"
 
 keywords:
 
@@ -46,7 +46,8 @@ Complete the following steps to configure an outbound integration:
 6. If an IAM authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_short}} doesn't exist in your account, you must configure one by clicking **IAM Authorizations**. Follow the prompts to grant access between the services. For more information, see [Creating a S2S authorization to work with the IBM Cloud Event Notifications service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 7. Enter a name for the integration.
 8. Select the {{site.data.keyword.en_short}} service instance that you want to connect to your {{site.data.keyword.logs_full_notm}} instance.
-9. To confirm the connection, click **Save**.
+9. Select the **Endpoint Type** as public or private. For more information, see [Service endpoints for Event Notifications](/docs/event-notifications?topic=event-notifications-en-regions-endpoints#en-service-endpoints)
+10. To confirm the connection, click **Save**.
 
 ## Next step
 {: #event-notifications-configure-next}
