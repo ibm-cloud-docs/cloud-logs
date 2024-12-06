@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-05"
+lastupdated: "2024-12-06"
 
 keywords:
 
@@ -27,6 +27,18 @@ Only the current plug-in version and two previous versions are available at any 
 {: note}
 
 
+
+##  6 December 2024
+{: #migration-dec0624}
+
+The migration tool plug-in v0.1.27 is available.
+:   Updates include:
+
+    * Fix to resolve an issue when duplicate access rule names are found during migration.
+
+    * Improved checking that all required parameters are specified before running migration commands.
+
+    * Fix for progress bar not advancing.
 
 
 
