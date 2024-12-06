@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-12-06"
 
 keywords:
 
@@ -23,7 +23,7 @@ As workloads generate an expanding amount of observability data, pressure is inc
 
 {{site.data.keyword.logs_full_notm}} is designed to help users take control of their observability data and expedite insights to reduce application downtime.
 
-{{site.data.keyword.logs_full_notm}} supports integration with common workload environments on {{site.data.keyword.cloud_notm}} including {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}}. Integration with nonorchestrated environments, such as Linux, is also supported.
+{{site.data.keyword.logs_full_notm}} supports integration with common workload environments on {{site.data.keyword.cloud_notm}} including {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}}. Integration with non-orchestrated environments, such as Linux and Windows, is also supported.
 
 With {{site.data.keyword.logs_full_notm}}, you can send both log data and activity tracking events into the service, which gives you flexibility in how you handle your data. Log and event data can be sent to separate {{site.data.keyword.logs_full_notm}} instances or combined into a single instance to expand observability insights.
 
@@ -119,4 +119,3 @@ For more information about {{site.data.keyword.logs_full_notm}} features, see th
 | Data usage | [Link](/docs/cloud-logs?topic=cloud-logs-data-usage) |
 | Metadata fields | [Link](/docs/cloud-logs?topic=cloud-logs-metadata) |
 {: caption="Links where you can find more information about {{site.data.keyword.logs_full_notm}} features" caption-side="bottom"}
-

@@ -186,6 +186,13 @@ toc:
                 navtitle: Deploying the agent
               - topic: agent/agent-rsyslog.md
                 navtitle: Configure the Logging agent to collect and route (r)Syslog messages 
+          - topicgroup:
+              label: Logging agent for Windows environments
+              topics:
+              - topic: agent/agent-windows.md
+                navtitle: Deploying the agent 
+              - topic: agent/agent-windows-manage.md
+                navtitle: Managing the agent
           - agent/agent-multiple-icl-targets.md
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer

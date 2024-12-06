@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-12-06"
 
 keywords:
 
@@ -72,7 +72,7 @@ For more information, see:
 ## Migrating your {{site.data.keyword.la_full_notm}} architecture
 {: #migration-intro-la}
 
-To migrate {{site.data.keyword.la_full_notm}} instances that collect only operational and application logs, you must provision {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances. You must also configure your data sources to send data to these {{site.data.keyword.logs_full_notm}} instances. Your data sources can be located in {{site.data.keyword.cloud_notm}}, on-prem, or running in another cloud. For example, you can configure an {{site.data.keyword.agent}} on supported platforms such as Kubernetes clusters, Red Hat OpenShift clusters, and Linux servers, or send data directly to {{site.data.keyword.logs_full_notm}} by using the public or private ingress endpoint.
+To migrate {{site.data.keyword.la_full_notm}} instances that collect only operational and application logs, you must provision {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances. You must also configure your data sources to send data to these {{site.data.keyword.logs_full_notm}} instances. Your data sources can be located in {{site.data.keyword.cloud_notm}}, on-prem, or running in another cloud. For example, you can configure an {{site.data.keyword.agent}} on supported platforms such as Kubernetes clusters, Red Hat OpenShift clusters, Linux and Windows servers, or send data directly to {{site.data.keyword.logs_full_notm}} by using the public or private ingress endpoint.
 
 For more information, see:
 - [Template for tasks for migrating Log Analysis instances collecting logs in the account](/docs/cloud-logs?topic=cloud-logs-template-migration-logs).
