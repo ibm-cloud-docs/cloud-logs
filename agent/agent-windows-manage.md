@@ -32,19 +32,19 @@ See [Deploying the {{site.data.keyword.agent}} for Windows](/docs/cloud-logs?top
 
 To remove the agent, remove the application directory.
 
-  * Using the command prompt:
+   * Using the command prompt:
 
-    ```bat
-    rmdir /S "C:\Program Files\logs-agent"
-    ```
-    {: pre}
+     ```bat
+     rmdir /S "C:\Program Files\logs-agent"
+     ```
+     {: pre}
 
-  * Using Powershell:
+   * Using Powershell:
 
-    ```bat
-    Remove-Item -Path "C:\Program Files\logs-agent" -Recurse -Force
-    ```
-    {: pre}
+     ```bat
+     Remove-Item -Path "C:\Program Files\logs-agent" -Recurse -Force
+     ```
+     {: pre}
 
 
 
@@ -85,19 +85,19 @@ To update the agent, download a new agent Windows agent ZIP archive and follow t
 
 Run the following command to find the installed agent version:
 
-  * Using the command prompt:
+   * Using the command prompt:
 
-    ```bat
-    type "C:\Program Files\logs-agent\version.txt"
-    ```
-    {: pre}
+     ```bat
+     type "C:\Program Files\logs-agent\version.txt"
+     ```
+     {: pre}
+ 
+   * Using Powershell:
 
-  * Using Powershell:
-
-    ```bat
-    Get-Content -Path "C:\Program Files\logs-agent\version.txt"
-    ```
-    {: pre}
+     ```bat
+     Get-Content -Path "C:\Program Files\logs-agent\version.txt"
+     ```
+     {: pre}
 
 
 ## Creating a service that can be started and stopped by a non-root user
@@ -105,26 +105,25 @@ Run the following command to find the installed agent version:
 
 By default, only administrators can manage services. To grant a specific user or group the ability to start and stop the service, use `sc.exe sdset` to modify the sercurity descriptor of the agent service.
 
-  * Get the current security descriptor by running the following command.
+   * Get the current security descriptor by running the following command.
 
-    ```bat
-    sc.exe sdshow fluent-bit
-    ```
-    {: pre}
+     ```bat
+     sc.exe sdshow fluent-bit
+     ```
+     {: pre}
 
-    The output will be the security descriptor for the agent service and will be similar to the following.
+     The output will be the security descriptor for the agent service and will be similar to the following.
 
-    ```
-    D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)
-    ```
-    {: pre}
+     ```bat
+     D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A; ;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)
+     ```
+     {: pre}
 
-  * Add a new user to the service security descriptor.
+   * Add a new user to the service security descriptor.
 
-    The format for granting permissions is `A;;RPWP;;;SID` where `RP` and `WP` are permissions to start and stop the service, and `SID` is the security identifier if a user or group.
+     The format for granting permissions is `A;;RPWP;;;SID` where `RP` and `WP` are permissions to start and stop the service, and `SID` is the security identifier if a user or group.
 
-    ```bat
-    sc.exe sdset fluent-bit D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)(A;;RPWP;;;S-1-5-21-USER_SID)
-    ```
-    {: pre}
-
+     ```bat
+     sc.exe sdset fluent-bit D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)(A;;RPWP;;;S-1-5-21-USER_SID)
+     ```
+     {: pre}
