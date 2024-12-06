@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-08"
+lastupdated: "2024-12-06"
 
 keywords:
 
@@ -169,6 +169,8 @@ The Migration Tool only migrates configuration of selected resources.
     - [ ] [Deploy agent for OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy)
 
     - [ ] [Deploy agent for Linux servers](/docs/cloud-logs?topic=cloud-logs-agent-linux)
+
+    - [ ] [Deploy agent for Windows servers](/docs/cloud-logs?topic=cloud-logs-agent-windows)
 
     - [ ] [Deploy agent to collect and route rSyslog data](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog)
 

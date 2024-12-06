@@ -71,7 +71,7 @@ The following diagram shows the high level view when the source of logs is a Kub
 ## {{site.data.keyword.agent}} for non-orchestarted environments
 {: #agent-about-std}
 
-You can deploy the {{site.data.keyword.agent}} in Linux environments.
+You can deploy the {{site.data.keyword.agent}} in Linux and Windows environments.
 
 You must configure the log files that the {{site.data.keyword.agent}} monitors and forwards its data to your {{site.data.keyword.logs_full_notm}} instance.
 
@@ -86,8 +86,13 @@ The following platforms are supported:
 - Ubuntu 22
 - Debian 11
 - Debian 12
+- Windows Server 2016
+- Windows Server 2019
+- Windows Server 2022
+- Windows 10 Enterprise
+- Windows 11 Enterprise
 
-For more information, see [Managing the agent Linux environments](/docs/cloud-logs?topic=cloud-logs-agent-linux).
+For more information, see [Managing the agent in Linux environments](/docs/cloud-logs?topic=cloud-logs-agent-linux) or [Managing the agent in Windows environments](/docs/cloud-logs?topic=cloud-logs-agent-windows).
 
 ## Authorization methods
 {: #agent-auth-methods}
@@ -101,6 +106,7 @@ Choose a supported authorization method for the environment where you plan to de
 | {{site.data.keyword.cloud_notm}} Kubernetes cluster | Supported    | Supported    |
 | {{site.data.keyword.cloud_notm}} OpenShift cluster  | Supported    | Supported    |
 | {{site.data.keyword.cloud_notm}} Linux VSI          | Supported    | Supported    |
+| {{site.data.keyword.cloud_notm}} Windows VSI        | Supported    | Supported    |
 | On-prem Kubernetes cluster                          | Supported    | Not supported |
 | On-prem OpenShift cluster                           | Supported    | Not supported |
 | On-prem Linux server                                | Supported    | Not supported |

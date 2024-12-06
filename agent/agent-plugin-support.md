@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-12-06"
 
 keywords:
 
@@ -74,6 +74,9 @@ The {{site.data.keyword.agent}} includes the following Fluent Bit [input plug-in
 | `tcp` | input | Receive messages over TCP interface | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/tcp){: external} |
 | `udp` | input | Receive messages over UDP interface | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/udp){: external} |
 | `opentelemetry` | input | Receive data in OTLP | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/opentelemetry){: external} |
+| `winlog` | input | Read Windows Event Log | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/windows-event-log){: external} |
+| `winevtlog` | input | Read Windows Event Log using the `winevt` API | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/windows-event-log-winevtlog){: external} |
+| `windows_exporter_metrics` | input | Collect system/host metrics on Windows systems | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/windows-exporter-metrics){: external} |
 
 ### Available filter plug-ins
 {: #filter-plugins-available}
@@ -150,9 +153,6 @@ The following input plugins are not included with the {{site.data.keyword.agent}
 | `serial` | input | Collect messages/data via serial interface | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/serial-interface){: external} |
 | `statsd` | input | Receive metrics via StatsD protocol | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/statsd){: external} |
 | `thermal` | input | Report system temperature | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/thermal){: external} |
-| `winlog` | input | Read Windows Event Log | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/windows-event-log){: external} |
-| `winevtlog` | input | Read Windows Event Log using winevt API | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/windows-event-log-winevtlog){: external} |
-| `windows_exporter_metrics` | input | Collect system/host metrics on Windows systems | [documentation](https://docs.fluentbit.io/manual/pipeline/inputs/windows-exporter-metrics){: external} |
 
 ### Filter plug-ins
 {: #filter-plugins-unavailable}

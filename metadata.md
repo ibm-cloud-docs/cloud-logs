@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-11"
+lastupdated: "2024-12-06"
 
 keywords:
 
@@ -34,6 +34,7 @@ The following are the application names based on the log source:
 | {{site.data.keyword.openshiftlong_notm}} cluster | `kubernetes.namespace_name`  |
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.namespace_name` |
 | Linux server                                     | `${HOSTNAME}` |
+| Windows server                                   | `${COMPUTERNAME}` |
 {: caption="Application names" caption-side="bottom"}
 
 
@@ -53,4 +54,5 @@ The following are the subsystem names based on the log source:
 | {{site.data.keyword.openshiftlong_notm}} cluster | `kubernetes.container_name`  |
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.container_name`  |
 | Linux server                                     |  |
+| Windows server                                   |  |
 {: caption="Subsystem names" caption-side="bottom"}

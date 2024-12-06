@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-12-06"
 
 keywords:
 
@@ -78,6 +78,7 @@ You can send {{site.data.keyword.cloud_notm}} platform data, and application, in
 - Use the {{site.data.keyword.agent}} to send data to a {{site.data.keyword.openshiftlong_notm}} cluster. For more information, see [Deploying the Logging agent on OpenShift using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy).
 - Use the {{site.data.keyword.agent}} to send data to an {{site.data.keyword.containerlong_notm}} cluster. For more information, see [Deploying the Logging agent on Kubernetes using a Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy).
 - Use the {{site.data.keyword.agent}} to send data to a Linux server. For more information, see [Managing the {{site.data.keyword.agent}} for Linux](/docs/cloud-logs?topic=cloud-logs-agent-linux).
+- Use the {{site.data.keyword.agent}} to send data to a Windows server. For more information, see [Managing the {{site.data.keyword.agent}} for Windows](/docs/cloud-logs?topic=cloud-logs-agent-windows).
 
 
 

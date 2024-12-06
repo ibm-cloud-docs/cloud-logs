@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-12-06"
 
 keywords:
 
@@ -33,6 +33,7 @@ Be sure that you have completed the following steps:
    - For more information, see [managing the agent for Openshift](/docs/cloud-logs?topic=cloud-logs-agent-openshift) for deploying to Openshift clusters.
    - For more information, see [managing the agent for Kubernetes](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster) for deploying to Kubernetes clusters.
    - For more information, see [managing the agent for Linux](/docs/cloud-logs?topic=cloud-logs-agent-linux) for deploying on Linux.
+   - For more information, see [managing the agent for Windows](/docs/cloud-logs?topic=cloud-logs-agent-windows) for deploying on Windows systems.
 
 
 ## Configuring tags for the input plug-ins
