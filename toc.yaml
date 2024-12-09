@@ -173,6 +173,8 @@ toc:
                 navtitle: Uninstalling the Logging agent using a Helm chart
               - topic: agent/configure-agent.md
                 navtitle: Filtering logs
+              - topic: agent/agent-multiline.md
+                navtitle: Supporting multiline logs in the {{site.data.keyword.agent}} by converting them to single line logs
               - topic: agent/agent-helm-template-clusters.md
                 navtitle: Template to deploy the Logging agent using a Helm chart
               - topic: agent/agent-version.md
