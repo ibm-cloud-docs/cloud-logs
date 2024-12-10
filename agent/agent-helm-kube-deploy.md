@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-28"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -76,6 +76,8 @@ Complete the following steps:
       version: "1.4.0"  # required
 
     clusterName: ""     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
+
+    enableMultiline: true   # Set to true to enable multiline support. Notice the default parser is cri.
 
     env:
       # ingestionHost is a required field. For example:

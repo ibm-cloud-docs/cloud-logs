@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -47,3 +47,10 @@ To migrate an {{site.data.keyword.la_full_notm}} instance, see [Template for tas
 {: faq}
 
 To migrate an {{site.data.keyword.la_full_notm}} instance that is configured to receive [platform logs](/docs/log-analysis?topic=log-analysis-config_svc_logs&interface=ui), see [Template for migrating Log Analysis instances with platform logs flag enabled in the account](/docs/cloud-logs?topic=cloud-logs-template-migration-la).
+
+
+## Can I migrate an {{site.data.keyword.la_full_notm}} instance that is configured to receive platform logs without using the Migration Tool?
+{: #mig_faq_5}
+{: faq}
+
+If you want to manually migrate an {{site.data.keyword.la_full_notm}} instance that is configured to receive platform logs without using the Migration Tool, you must create an {{site.data.keyword.logs_full_notm}} instance and manually configure resources. You must also configure the {{site.data.keyword.logs_routing_full_notm}} service. For more information, see [Getting started with {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-getting-started).

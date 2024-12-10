@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-09"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -19,12 +19,25 @@ subcollection: cloud-logs
 To support the ingestion of multiline logs, you must make changes to the {{site.data.keyword.agent}} configuration. This change includes the parsing required to group log lines that are supposed to be together as a single log record.
 {: shortdesc}
 
-## Default configuration
-{: #multiline-default-configuration}
+## About
+{: #agent-multiline-about}
 
-The default {{site.data.keyword.agent}} configuration includes a multiline parser that is enabled by using the `enableMultiline` value in Helm.
+- You can configure the {{site.data.keyword.agent}} beginning with 1.4.1 to support multiline logs.
+- You can configure the {{site.data.keyword.agent}} with the default multiline configuration and the `cri` parser for OpenShift and Kubernetes clusters.
+- Alternatively, you can configure the {{site.data.keyword.agent}} with a supported multiline fluent bit parser, or with your own custom multiline parser.
 
-The following is the provided multiline parser: 
+To enable the {{site.data.keyword.agent}} to handle multiline, you can choose one of the following options:
+- Deploy the {{site.data.keyword.agent}} by adding a new value `enableMultiline` in the `logs-values.yaml` file that you use to deploy the agent by using a Helm chart. For more information, see [Configuring the Helm chart values file for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy#agent-helm-os-deploy-step2) or [Configuring the Helm chart values file for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step2).
+- Update the {{site.data.keyword.agent}} to version 1.4.1. You must update the Helm chart `logs-values.yaml` file with the agent version and add the value `enableMultiline` to enable multiline support. For more information, see [Update the Helm chart values file for the Logging agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update#agent-helm-update-step1).
+- Modify the configmap by adding the multiline stanzas.
+
+
+## Multiline default configuration
+{: #agent-multiline-default-configuration}
+
+The default {{site.data.keyword.agent}} configuration includes a multiline parser.
+
+The following is the provided multiline parser:
 
 ```text
     [MULTILINE_PARSER]
@@ -58,9 +71,9 @@ For {{site.data.keyword.openshiftlong_notm}} and {{site.data.keyword.containerlo
 {: note}
 
 ## Changing the configuration to handle a colon at the end of a line
-{: #multiline-modify-configuration}
+{: #agent-multiline-modify-configuration}
 
-The default configuration assumes that any line ending with a colon (`:`) is a multiline. If this is not the case in your environment, you will need to change the parser to ignore the final `:` by removing `colon_cont` in the parser. With this change the multiline parser should look like the following: 
+The default configuration assumes that any line ending with a colon (`:`) is a multiline. If this is not the case in your environment, you will need to change the parser to ignore the final `:` by removing `colon_cont` in the parser. With this change the multiline parser should look like the following:
 
 ```text
     [MULTILINE_PARSER]
@@ -77,7 +90,7 @@ The default configuration assumes that any line ending with a colon (`:`) is a m
 The {{site.data.keyword.agent}} configuration must also include a `FILTER` after the `INPUT` plug-in. The filter will apply the pattern of the configured `MULTILINE_PARSER`. The `Name` value of the `MULTILINE_PARSER` must match the `Multiline.parser` value in the `FILTER`.
 
 ## Fluent Bit supported multiline parsers
-{: #multiline-fluentbit}
+{: #agent-multiline-fluentbit}
 
 There are supported multiline fluent bit parsers that can be used in place of the {{site.data.keyword.agent}} default parser. Fluent bit supports multiline parsers for `docker`, `cri` `java`, `go`, and `python`.
 
@@ -98,7 +111,7 @@ filter-multiline.conf: |
 The {{site.data.keyword.agent}} configuration must also `@INCLUDE` the filter right after the input plug-in.
 
 ## Adding a custom multiline parser
-{: #multiline-new-parser}
+{: #agent-multiline-new-parser}
 
 To create a custom multiline parser for use with the {{site.data.keyword.agent}}, follow the instructions in [Configurable Multiline Parsers](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/multiline-parsing#configurable-multiline-parsers).{: external} You will define a custom regex to determine the multiline pattern.
 

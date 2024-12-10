@@ -163,6 +163,16 @@ toc:
           - topicgroup:
               label: Logging agent for orchestrated environments
               topics:
+              - topic: agent/agent-version.md
+                navtitle: Checking the available agent versions
+              - topic: agent/helm-chart-versions.md
+                navtitle: Checking the available Helm chart versions
+              - topic: agent/helm-chart-download.md
+                navtitle: Downloading a Helm chart
+              - topic: agent/configure-agent.md
+                navtitle: Filtering logs
+              - topic: agent/agent-multiline.md
+                navtitle: Supporting multiline logs
               - topic: agent/agent-helm-os-deploy.md
                 navtitle: Deploying the Logging agent on OpenShift using a Helm chart
               - topic: agent/agent-helm-kube-deploy.md
@@ -171,16 +181,8 @@ toc:
                 navtitle: Updating the Logging agent version
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
-              - topic: agent/configure-agent.md
-                navtitle: Filtering logs
-              - topic: agent/agent-multiline.md
-                navtitle: Supporting multiline logs
               - topic: agent/agent-helm-template-clusters.md
                 navtitle: Template to deploy the Logging agent using a Helm chart
-              - topic: agent/agent-version.md
-                navtitle: Checking the available agent versions
-              - topic: agent/helm-chart-versions.md
-                navtitle: Checking the available Helm chart versions
           - topicgroup:
               label: Logging agent for Linux environments
               topics:
@@ -192,7 +194,7 @@ toc:
               label: Logging agent for Windows environments
               topics:
               - topic: agent/agent-windows.md
-                navtitle: Deploying the agent 
+                navtitle: Deploying the agent
               - topic: agent/agent-windows-manage.md
                 navtitle: Managing the agent
           - agent/agent-multiple-icl-targets.md
@@ -360,7 +362,7 @@ toc:
       - topic: severities.md
         navtitle: Severity mapping
       - topic: shared-responsibilities.md
-        navtitle: Your responsibilities  
+        navtitle: Your responsibilities
       - topic: core/data-portability.md
         navtitle: Data portability
       - topic: core/ha-dr.md
@@ -480,6 +482,7 @@ toc:
                 topics:
                 - topic: ts-no-logs.md
                   navtitle: Why can't I see platform logs in the UI?
+
             - topicgroup:
                 label: Troubleshooting the Logging agent
                 topics:
