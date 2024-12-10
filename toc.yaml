@@ -363,13 +363,8 @@ toc:
         navtitle: Your responsibilities  
       - topic: core/data-portability.md
         navtitle: Data portability
-      - topicgroup:
-          label: High availability and disaster recovery
-          topics:
-          - topic: core/ha.md
-            navtitle: Understand high availability
-          - topic: core/bc-dr.md
-            navtitle: Understanding business continuity and disaster recovery
+      - topic: core/ha-dr.md
+        navtitle: Understanding high availability and disaster recovery
       - topicgroup:
           label: API Reference
           links:

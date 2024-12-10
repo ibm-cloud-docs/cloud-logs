@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-20"
+  years: 2024
+lastupdated: "2024-12-10"
 
-keywords:
+keywords: HA for Cloud Logs, DR for Cloud Logs, Cloud Logs recovery time objective, Cloud Logs recovery point objective
 
 subcollection: cloud-logs
 
@@ -12,16 +12,43 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding business continuity and disaster recovery for {{site.data.keyword.logs_full_notm}}
-{: #bc-dr}
+# Understanding high availability and disaster recovery for {{site.data.keyword.logs_full_notm}}
+{: #cloud-logs-ha-dr}
 
-[Disaster recovery](#x2113280){: term} involves a set of policies, tools, and procedures for returning a system, an application, or an entire data center to full operation after a catastrophic interruption. It includes procedures for copying and storing an installed system's essential data in a secure location, and for recovering that data to restore normalcy of operation.
+[High availability](#x2284708){: term} (HA) is the ability for a service to remain operational and accessible in the presence of unexpected failures. [Disaster recovery](#x2113280){: term} is the process of recovering the service instance to a working state.
 {: shortdesc}
 
 ## Responsibilities
-{: #bc-dr-responsibilities}
+{: #ha-responsibilities}
 
-For more information about your responsibilities when you are using {{site.data.keyword.logs_full_notm}}, see [Shared responsibilities for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-shared-responsibilities).
+To find out more about responsibility ownership for using {{site.data.keyword.cloud}} products between {{site.data.keyword.IBM_notm}} and the customer, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} products](/docs/overview?topic=overview-shared-responsibilities).
+
+To find out more about responsibility ownership for using {{site.data.keyword.logs_full_notm}}, see [Your responsibilities with using {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-shared-responsibilities&interface=ui).
+
+## What level of availability do I need?
+{: #ha-level}
+
+You can achieve high availability on different levels in your IT infrastructure and within different components of your architecture. The level of availability that you need depends on several factors, such as your business requirements, the service level agreements (SLAs) that you have with your customers, and the resources that you want to expend.
+
+## What level of availability does {{site.data.keyword.cloud_notm}} offer?
+{: #ha-service}
+
+Service level objectives (SLOs) describe the design points that the {{site.data.keyword.cloud_notm}} services are engineered to meet. {{site.data.keyword.logs_full_notm}} is designed to achieve the following availability target.
+
+| Availability target | Target Value   |
+|---|---|
+|  Availability % | 99.99%  |
+{: caption="SLO for {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
+
+The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo).
+{: note}
+
+
+## Locations
+{: #ha-locations}
+
+For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
+
 
 ## Disaster recovery strategy
 {: #bc-dr-strategy}
@@ -46,13 +73,6 @@ For more information about your responsibilities when you are using {{site.data.
 {{site.data.keyword.logs_full_notm}} does not back up the data in your {{site.data.keyword.cos_full_notm}} buckets. For more information about the disaster recovery strategy for {{site.data.keyword.cos_full_notm}}, see [Cross-Region Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-geo), [Data security](/docs/cloud-object-storage?topic=cloud-object-storage-security), [Create a Secure Content Store](/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store), and [Using replication for business continuity and disaster recovery](/docs/cloud-object-storage?topic=cloud-object-storage-replication-overview#replication-bcdr).
 
 {{site.data.keyword.logs_full_notm}} does not back up the data in your {{site.data.keyword.en_full_notm}} instance. For more information about the disaster recovery strategy for {{site.data.keyword.en_full_notm}}, see [Securing your data in {{site.data.keyword.en_full_notm}}](/docs/event-notifications?topic=event-notifications-en-mng-data) and [Disaster recovery](/docs/event-notifications?topic=event-notifications-en-responsibilities#en-disaster-recovery).
-
-
-## Locations
-{: #bcdr-ha-locations}
-
-For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
-
 
 ## Disaster Recovery of an {{site.data.keyword.logs_full_notm}} instance
 {: #bc-dr-disaster}
