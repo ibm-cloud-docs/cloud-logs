@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords:
 
@@ -55,9 +55,9 @@ Complete the following steps to modify the Helm chart with the agent version tha
     image:
       version: "1.4.0"  # Modify the agent version and enter the version that you want to deploy
 
-    clusterName: ""     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
+    clusterName: "ENTER_CLUSTER_NAME"     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
 
-    enableMultiline: true   # Set to true to enable multiline support. Notice the default parser is cri.
+    # enableMultiline: true   # Set to true to enable multiline support for applications, like Java or Python, where errors and stack traces can span several lines, and each line is sent as a separate log entry.
 
     additionalMetadata: # add additional metadata, for example:
       region: au-syd
