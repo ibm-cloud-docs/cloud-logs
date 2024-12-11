@@ -250,7 +250,7 @@ The pre-defined configuration assumes that any line ending with a colon (`:`) is
 
 The default configuration assumes that any line ending with a colon (`:`) is a multiline. If this is not the case in your environment, you will need to change the parser to ignore the final `:` by removing `colon_cont` in the parser. With this change the multiline parser should look like the following:
 
-```text
+```yaml
     [MULTILINE_PARSER]
         Name            multiline_pattern
         Type            regex
