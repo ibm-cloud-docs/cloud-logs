@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords:
 
@@ -13,14 +13,37 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Supporting multiline logs in the {{site.data.keyword.agent}} by converting them to single line logs
+# Supporting multiline logs in the {{site.data.keyword.agent}}
 {: #agent-multiline}
 
-To support the ingestion of multiline logs, you must make changes to the {{site.data.keyword.agent}} configuration. This change includes the parsing required to group log lines that are supposed to be together as a single log record.
+
 {: shortdesc}
+
+
+To support the ingestion of multiline logs, you must make changes to the {{site.data.keyword.agent}} configuration. This change includes the parsing required to group log lines that are supposed to be together as a single log record.
+
+
 
 ## About
 {: #agent-multiline-about}
+
+In OpenShift and Kubernetes clusters, containers are designed to support logging. The {{site.data.keyword.agent}} configuration supports the following logging method and logging format by default:
+- Logging method for containerized applications: Write to standard output (`stdout`) and standard error (`stderr`) streams.
+- Logging format: Container runtimes write logs following the CRI logging format.
+
+CRI uses tags to define if a log line is a single log line or a multiline log entry. Valid values for the tag are:
+- Partial (P): This tag is included in log lines that are the result of spliting a single log line into multiple lines by the runtime and the log entry has not ended yet.
+- Full (F): This tag is used to indicate that the log entry is completed. It is used for a single log line entry or to indicate that it is the last line of the multiple-line entry.
+
+By default, the {{site.data.keyword.agent}} includes the configuration of the `Tail plugin` to support multiline logs into a single log line for container runtimes that write logs following the CRI logging format into stdout and stderr.
+
+You might also have applications, like Java or Python, where errors and stack traces can span several lines, and each line is sent as a separate log entry. These applications can generate multiple log lines that should all be associated with one another into a single log line. To handle these multiline logs through the {{site.data.keyword.agent}}, you must configure the `MULTILINE PARSER`.
+
+
+
+## Configuring the MULTILINE PARSER
+{: #agent-multiline-config-parser}
+
 
 - You can configure the {{site.data.keyword.agent}} beginning with 1.4.1 to support multiline logs.
 - You can configure the {{site.data.keyword.agent}} with the default multiline configuration and the `cri` parser for OpenShift and Kubernetes clusters.
@@ -32,7 +55,7 @@ To enable the {{site.data.keyword.agent}} to handle multiline, you can choose on
 - Modify the configmap by adding the multiline stanzas.
 
 
-## Multiline default configuration
+## MULTILINE PARSER default configuration
 {: #agent-multiline-default-configuration}
 
 The default {{site.data.keyword.agent}} configuration includes a multiline parser.
@@ -67,10 +90,10 @@ filter-multiline.conf: |
 ```
 {: codeblock}
 `
-For {{site.data.keyword.openshiftlong_notm}} and {{site.data.keyword.containerlong_notm}} environments a `cri` parser will be part of the tail input plug-in and included as a Multiline.parser.
+For OpenShift and Kubernetes environments, a `cri` parser will be part of the tail input plug-in and included as a *Multiline.parser*.
 {: note}
 
-## Changing the configuration to handle a colon at the end of a line
+## Changing the multiline configuration to handle a colon at the end of a line
 {: #agent-multiline-modify-configuration}
 
 The default configuration assumes that any line ending with a colon (`:`) is a multiline. If this is not the case in your environment, you will need to change the parser to ignore the final `:` by removing `colon_cont` in the parser. With this change the multiline parser should look like the following:
