@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -19,18 +19,6 @@ subcollection: cloud-logs
 You can use a Helm chart to deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) cluster or a Kubernetes cluster to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
-## Template versions
-{: #agent-helm-template-clusters-versions}
-
-The following table lists the Helm chart version supported to deploy the {{site.data.keyword.agent}}:
-
-| {{site.data.keyword.agent}}  | Helm chart version   |  Based on Fluent Bit Version |
-|------------------------------|----------------------|------------------------------|
-| v1.3.0                       |  v1.3.0              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} |
-{: caption="Supported agent versions" caption-side="bottom"}
-
-For information on recommended and supported Fluent Bit plug-ins see [Fluent Bit support](/docs/cloud-logs?topic=cloud-logs-agent-plugin-support)
-{: tip}
 
 ## Template to deploy the {{site.data.keyword.agent}} using a Helm chart on an Openshift cluster
 {: #agent-helm-template-os-clusters-template}
