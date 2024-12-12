@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-12-12"
 keywords:
 
 subcollection: cloud-logs
@@ -22,10 +22,10 @@ subcollection: cloud-logs
 
 Use these IP addresses in firewalls and other configurations to ensure that the data received by your code, or another {{site.data.keyword.IBM_notm}} service, originates only from {{site.data.keyword.logs_full_notm}}.
 
-### IP addresses used for {{site.data.keyword.cos_full_notm}}
-{: #ip_cos}
+### Private IP addresses used for {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}
+{: #ip_private}
 
-These private IP addresses are used to archive logs to {{site.data.keyword.cos_full_notm}}.
+These private IP addresses are used to archive logs to {{site.data.keyword.cos_full_notm}}, send events to {{site.data.keyword.en_full_notm}} and stream logs to {{site.data.keyword.messagehub_full}}.
 
 
 | Region      | IP addresses     |
@@ -40,10 +40,10 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Tokyo (`jp-tok`) | 10.223.197.221  \n 10.223.208.108  \n 10.223.220.15 |
 | Toronto (`ca-tor`) | 10.223.153.79  \n 10.223.168.204  \n 10.223.176.163 |
 | Washington, DC (`us-east`) | 10.22.41.104  \n 10.22.53.64  \n 10.22.56.46 |
-{: caption="Private IP addresses for {{site.data.keyword.cos_full_notm}}" caption-side="top"}
+{: caption="Private IP addresses for {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
 
-### IP addresses used for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}
-{: #ip_en_es}
+### Public IP addresses used for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}
+{: #ip_public}
 
 These public IP addresses are used to send events to {{site.data.keyword.en_full_notm}} and stream logs to {{site.data.keyword.messagehub_full}}.
 
@@ -60,7 +60,6 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 | Toronto (`ca-tor`) | 163.66.94.68  \n 163.74.88.241  \n 163.74.88.241 |
 | Washington, DC (`us-east`) | 150.239.81.194  \n 169.63.190.140  \n 150.239.222.67 |
 {: caption="Public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
-
 
 ## IP addresses used by {{site.data.keyword.logs_full_notm}} private endpoints
 {: #ip_endpoints}
