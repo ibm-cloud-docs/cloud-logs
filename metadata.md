@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-06"
+lastupdated: "2024-12-13"
 
 keywords:
 
@@ -25,7 +25,7 @@ subcollection: cloud-logs
 
 The application name is the environment that produces and sends logs to {{site.data.keyword.logs_full_notm}}.
 
-The following are the application names based on the log source:
+The following are application names based on the log source:
 
 | Source                                           | Application Name            |
 |--------------------------------------------------|-----------------------------|
@@ -43,7 +43,7 @@ The following are the application names based on the log source:
 
 The subsystem name is the service or application that produces and sends logs to {{site.data.keyword.logs_full_notm}}.
 
-The following are the subsystem names based on the log source:
+The following are subsystem names based on the log source:
 
 | Source                                           | Subsystem Name |
 |--------------------------------------------------|-------|
@@ -54,5 +54,5 @@ The following are the subsystem names based on the log source:
 | {{site.data.keyword.openshiftlong_notm}} cluster | `kubernetes.container_name`  |
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.container_name`  |
 | Linux server                                     |  |
-| Windows server                                   |  |
+| Windows server                                   | `Channel` |
 {: caption="Subsystem names" caption-side="bottom"}
