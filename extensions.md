@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-12-15"
 
 keywords:
 
@@ -28,6 +28,12 @@ Extensions can include:
 * Predefined Explore views.
 * Predefined enrichments.
 * Predefined default actions.
+
+## {{site.data.keyword.cloud_notm}} extensions
+{: #extensions-ibm}
+
+The following list outlines extensions that you can deploy to monitor logs:
+- [System Monitoring](): Use it to get insights into your system's performance and usage of an {{site.data.keyword.logs_full_notm}} instance. 
 
 ## Determining available extensions
 {: #determine-extensions}
