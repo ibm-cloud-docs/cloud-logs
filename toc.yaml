@@ -195,8 +195,14 @@ toc:
               topics:
               - topic: agent/agent-windows.md
                 navtitle: Deploying the agent
+              - topic: agent/agent-windows-event-log.md
+                navtitle: Configuring the agent to collect the Windows event log
+              - topic: agent/agent-windows-read-files.md
+                navtitle: Configuring the agent to include or exclude files
+              - topic: agent/agent-windows-metadata.md
+                navtitle: Adding metadata
               - topic: agent/agent-windows-manage.md
-                navtitle: Managing the agent
+                navtitle: Managing the agent 
           - agent/agent-multiple-icl-targets.md
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-13"
 
 keywords:
 
@@ -167,7 +167,8 @@ Complete the following steps:
       Add subsystemName subsystemName
       Add applicationName applicationName
       Add meta.hostname ${HOSTNAME}
-      Add meta.agentVersion agentVersion
+      Add meta.environment prod   # Sample values: prod, staging, dev, qa
+      Add meta.platform linux
 
     [FILTER]
       Name nest
@@ -193,7 +194,8 @@ Complete the following steps:
       Match *
       Add subsystemName subsystemName
       Add applicationName ${HOSTNAME}
-      Add agentVersion 1.3.1
+      Add meta.environment prod
+      Add meta.platform linux
       Add region us-east
     ```
     {: codeblock}
