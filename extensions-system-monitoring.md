@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # System Monitoring extension
 {: #extensions-system-monitoring}
 
-Use the System Monitoring to gain insights into your system's performance and usage within an {{site.data.keyword.logs_full_notm}} instance. This extension includes a set of pre-configured dashboards that help you monitor critical metrics, identify anomalies, and optimize your system's performance.
+Use the System Monitoring extension to gain insights into your system's performance and usage within an {{site.data.keyword.logs_full_notm}} instance. This extension includes a set of pre-configured dashboards that help you monitor critical metrics, identify anomalies, and optimize your system's performance.
 {: shortdesc}
 
 

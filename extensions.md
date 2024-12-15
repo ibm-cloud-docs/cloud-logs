@@ -33,7 +33,7 @@ Extensions can include:
 {: #extensions-ibm}
 
 The following list outlines extensions that you can deploy to monitor logs:
-- [System Monitoring](): Use it to get insights into your system's performance and usage of an {{site.data.keyword.logs_full_notm}} instance. 
+- [System Monitoring](/docs/cloud-logs?topic=cloud-logs-extensions-system-monitoring): Use it to get insights into your system's performance and usage of an {{site.data.keyword.logs_full_notm}} instance. 
 
 ## Determining available extensions
 {: #determine-extensions}
