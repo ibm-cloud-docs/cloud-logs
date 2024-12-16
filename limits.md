@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-12-16"
 
 keywords:
 
@@ -38,7 +38,7 @@ subcollection: cloud-logs
 | Largest log size processed by the pipeline | 33 K |
 | Branches | 1500 |
 | Query time range | 8 days |
-| Maximum number of fields | 1500 |
+| Maximum number of fields | 3000 |
 {: caption="Limits per instance" caption-side="bottom"}
 
 ## Log ingestion limits
