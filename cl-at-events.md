@@ -32,11 +32,11 @@ In {{site.data.keyword.logs_full_notm}}, activity tracking events that are gener
 - `applicationName`: The application name is the environment that produces and sends logs to {{site.data.keyword.logs_full_notm}}. It is set to `ibm-audit-events` for activity tracking events.
 - `subsystemName`: The subsystem name is the service or application that produces and sends logs to {{site.data.keyword.logs_full_notm}}. It is set as follows for activity tracking events:
 
-    For {{site.data.keyword.cloud_notm}} services that you can provision, the format is: `crn-service-name:<INSTANCE_GUID>
+    For {{site.data.keyword.cloud_notm}} services that you can provision, the format is: `crn-service-name:<INSTANCE_GUID>`
 
-    For VPV services, the format is: `is:<VPC_SERVICE_NAME>
+    For VPC services, the format is: `is:<VPC_SERVICE_NAME>`
 
-    For platform services (this are services that you cannot provision), the format is: `crn-service-name:`
+    For platform services (these are services that you cannot provision), the format is: `crn-service-name:`
 
 Before you can monitor activity tracking events that are generated in an {{site.data.keyword.cloud_notm}} account, you must configure the {{site.data.keyword.atracker_full_notm}} service in the account to define what activity tracking events you want to collect, the destination where you want to monitor the events, and the routing rules that define where the events are routed.
 
