@@ -374,6 +374,11 @@ toc:
       - topic: core/ha-dr.md
         navtitle: Understanding high availability and disaster recovery
       - topicgroup:
+          label: Extensions
+          topics:
+          - topic: extensions-system-monitoring.md
+            navtitle: System Monitoring 
+      - topicgroup:
           label: API Reference
           links:
             - link:
