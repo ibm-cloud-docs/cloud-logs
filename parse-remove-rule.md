@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-13"
+lastupdated: "2024-12-17"
 
 keywords:
 
@@ -60,17 +60,12 @@ Complete the following steps:
 6. Click **Create Rule Group**.
 
 
-## Configuring a Remove fields rule using the API
-{: #parse-remove-3-api}
-{: api}
-
-Complete the following steps:
-
 
 
 
 ## Sample: Removing fields from a log
 {: #parse-remove-4}
+{: ui}
 
 The following steps can be used to remove fields from a log.
 
