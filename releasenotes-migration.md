@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-06"
+lastupdated: "2024-12-18"
 
 keywords:
 
@@ -14,10 +14,10 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for the {{site.data.keyword.logs_full_notm}} migration tool
+# Release notes for the {{site.data.keyword.logs_full_notm}} migration 
 {: #releasenotes-migration}
 
-Use these release notes to learn about the latest updates to the migration tool.
+Use these release notes to learn about the latest updates to the migration tool and other migration updates.
 {: shortdesc}
 
 For release notes about the {{site.data.keyword.logs_full_notm}} service, see [Release notes for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-logs-release-notes).
@@ -25,6 +25,9 @@ For release notes about the {{site.data.keyword.logs_full_notm}} service, see [R
 
 Only the current plug-in version and two previous versions are available at any time.
 {: note}
+
+
+
 
 
 
