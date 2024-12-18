@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-18"
 
 keywords: 
 
@@ -63,7 +63,7 @@ To determine the log ID value, from the {{site.data.keyword.logs_full_notm}} UI 
 3. Paste the value to a text editor.
 4. Find the `<LOG ID>` value. This value is prefixed by `logId=`. For example, `f5a16fe9-9817-4976-8aaa-5a2ef7c8c1e7`
 
-![Finding the TCO pipeline for a log. The TCO value must display high or medium for alerts on the log to be sent.](/images/tsa_01.png){: caption="Finding the TCO pipelie for a log" caption-side="bottom"}
+![Finding the TCO pipeline for a log. The TCO value must display high or medium for alerts on the log to be sent.](/images/tsa_01.png){: caption="Finding the TCO pipeline for a log" caption-side="bottom"}
 
 If the `TCO` value is `low`, then the log is being sent to the {{site.data.keyword.compliance}} pipeline and alerts cannot be triggered by logs in the {{site.data.keyword.compliance}} pipeline. 
 
