@@ -35,9 +35,10 @@ The following are samples of application names based on the log source:
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.namespace_name` |
 | Linux server                                     | `${HOSTNAME}` |
 | Windows server                                   | `${COMPUTERNAME}` |
-| {{site.data.keyword.cis_full}} logs | `Internet-svcs` |
+| {{site.data.keyword.cis_full}} logs `[*]` | `Internet-svcs` |
 {: caption="Application names" caption-side="bottom"}
 
+`[*]` - For information about {{site.data.keyword.cis_full}} logs, see [Creating a Logpush job to send logs to {{site.data.keyword.logs_full_notm}}](/docs/cis?topic=cis-logpush&interface=api#logpush-setup-cloud-logs-api).
 
 ## Subsystem name
 {: #md-sys-name}
@@ -56,5 +57,7 @@ The following are samples of subsystem names based on the log source:
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.container_name`  |
 | Linux server                                     |  |
 | Windows server                                   | `ProviderName` |
-| {{site.data.keyword.cis_full}} logs | `cisinstanceid:domain_name` |
+| {{site.data.keyword.cis_full}} logs `[*]` | `cisinstanceid:domain_name` |
 {: caption="Subsystem names" caption-side="bottom"}
+
+`[*]` - For information about {{site.data.keyword.cis_full}} logs, see [Creating a Logpush job to send logs to {{site.data.keyword.logs_full_notm}}](/docs/cis?topic=cis-logpush&interface=api#logpush-setup-cloud-logs-api).
