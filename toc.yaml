@@ -488,6 +488,7 @@ toc:
                 topics:
                 - ts-no-metrics-bucket.md
                 - ts-cos-config.md
+                - ts-no-data.md
             - topicgroup:
                 label: Troubleshooting platform data
                 topics:
