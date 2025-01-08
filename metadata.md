@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-12-15"
+lastupdated: "2024-12-19"
 
 keywords:
 
@@ -36,6 +36,7 @@ The following are samples of application names based on the log source:
 | Linux server                                     | `${HOSTNAME}` |
 | Windows server                                   | `${COMPUTERNAME}` |
 {: caption="Application names" caption-side="bottom"}
+
 
 
 ## Subsystem name

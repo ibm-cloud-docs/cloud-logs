@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-10"
+  years:  2025
+lastupdated: "2025-01-08"
 
 keywords:
 
@@ -76,7 +76,7 @@ selectedLogSourcePaths: ""  # overrides the default path `/var/log/containers/*.
 # The default value is `Production`.
 # Valid values are :
 # Set `Production` to use the iam.cloud.ibm.com default endpoint
-# Set ProductionPrivate to use the private.iam.cloud.ibm.com endpoint
+# Set PrivateProduction to use the private.iam.cloud.ibm.com endpoint
 iamEnvironment: "Production"
 
 # Configure this parameter to change the setting for the Kubernetes filter to include the annotations from Kubernetes with the log records.
@@ -160,7 +160,7 @@ selectedLogSourcePaths: ""  # overrides the default path `/var/log/containers/*.
 # The default value is `Production`.
 # Valid values are :
 # Set `Production` to use the iam.cloud.ibm.com default endpoint
-# Set ProductionPrivate to use the private.iam.cloud.ibm.com endpoint
+# Set PrivateProduction to use the private.iam.cloud.ibm.com endpoint
 iamEnvironment: "Production"
 
 # Configure this parameter to change the setting for the Kubernetes filter to include the annotations from Kubernetes with the log records.
@@ -322,7 +322,7 @@ The default value is `Production`.
 
 Valid values are :
 - Set `Production` to use the `iam.cloud.ibm.com` default endpoint
-- Set `ProductionPrivate` to use the `private.iam.cloud.ibm.com` endpoint
+- Set `PrivateProduction` to use the `private.iam.cloud.ibm.com` endpoint
 
 The entry in the `logs-values.yaml` file looks as follows:
 

@@ -68,9 +68,9 @@ toc:
           - topic: release-notes.md
             navtitle: Release notes
           - topic: agent/releasenotes_agent.md
-            navtitle: Agent release notes
+            navtitle: Logging agent release notes
           - topic: releasenotes-migration.md
-            navtitle: Release notes for the migration tool
+            navtitle: Migration release notes
           - releasenotes_notifications.md
   - navgroup:
       id: tutorial
@@ -488,6 +488,7 @@ toc:
                 topics:
                 - ts-no-metrics-bucket.md
                 - ts-cos-config.md
+                - ts-no-data.md
             - topicgroup:
                 label: Troubleshooting platform data
                 topics:
