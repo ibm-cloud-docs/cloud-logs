@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-25"
+  years:  2025
+lastupdated: "2025-01-09"
 
 keywords:
 
@@ -22,6 +22,19 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
+
+## 12 December 2024
+{: #cloud-logs-dec1224}
+{: release-note}
+
+[UI]\[LiveTail] Livetail support
+:   Livetail now supports `Application` and `Subsystem` drop-down filters which can be used to filter logs based on `Application` and `Subsystem`.
+
+Fixes implemented
+:   The following issues are resolved.
+    - [Query] - Fixed an issue where running a query in `All Logs` would result in a "Query Failed" message with no results returned even if the query ran up to the maximum timeout of 5 minutes.
+    - [Alerts] - Fixed an error where Metric alerts were not triggering notifications. 
+    - [UI]\[Logs] - Fixed an issue where the selected keys in the `Content` column are reset when switching between `Priority Insights` and `All Logs`. 
 
 ## 25 November 2024
 {: #cloud-logs-nov2524}
