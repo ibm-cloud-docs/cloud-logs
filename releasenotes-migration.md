@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-18"
+  years:  2025
+lastupdated: "2025-01-09"
 
 keywords:
 
@@ -30,11 +30,19 @@ Only the current plug-in version and two previous versions are available at any 
 
 
 
+##  9 January 2025
+{: #migration-jan0925}
+
+The migration tool plug-in v0.1.29 is available.
+:   Updates include:
+
+    * Fix for namespace query mapping for views and alerts.
+
 
 ##  6 December 2024
 {: #migration-dec0624}
 
-The migration tool plug-in v0.1.27 is available.
+The migration tool plug-in v0.1.28 is available.
 :   Updates include:
 
     * Fix to resolve an issue when duplicate access rule names are found during migration.
