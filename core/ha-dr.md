@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-10"
+  years: 2024, 2025
+lastupdated: "2025-01-13"
 
 keywords: HA for Cloud Logs, DR for Cloud Logs, Cloud Logs recovery time objective, Cloud Logs recovery point objective
 
@@ -82,9 +82,11 @@ In a major regional disaster, such as an earthquake, flood, or tornado, an entir
 To recover an {{site.data.keyword.logs_full_notm}} instance, you must provision a new {{site.data.keyword.logs_full_notm}} instance and recreate resources. You must also have a DR strategy for the buckets that are associated with the instance, and the {{site.data.keyword.en_full_notm}} instance that you might have configured to trigger notification alerts.
 
 To ensure that your workloads are resilient to such events, complete the following steps:
+
 1. Define the regional strategy where you can restore the configuration that is down.
 
-    Check your data locality and compliance requirements when choosing the recovery region.{: note}
+    Check your data locality and compliance requirements when choosing the recovery region.
+    {: note}
 
     For more information on locations, see:
 
@@ -126,7 +128,8 @@ In the case of a regional disaster, you must complete the following steps to rec
 
     * Define IAM authorizations between the {{site.data.keyword.logs_full_notm}} instance and the buckets. For more information, see [Creating a S2S authorization to grant access to a bucket](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos&interface=ui).
 
-    If your instance in the disaster affected region was not configured with buckets, the logs and metrics data will be lost.{: note}
+    If your instance in the disaster affected region was not configured with buckets, the logs and metrics data will be lost.
+    {: note}
 
 4. If your instance has alerts configured, complete the following steps:
 
