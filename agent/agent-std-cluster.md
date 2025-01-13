@@ -256,7 +256,7 @@ Complete the following steps:
 
 You can add additional metadata fields to the routed logs.
 
-1. Edit the `logger-agent-config.yaml` file in the `logger-agent` namespace.
+1. Edit the `logger-agent-config.yaml` file or configmap in the ``ibm-observe namespace.
 
 2. In the `fluent-bit.conf` section add your custom metadata using this structure.
 
@@ -287,7 +287,7 @@ You can add additional metadata fields to the routed logs.
 4. Restart the daemon set to apply the changes by running the following:
 
    ```sh
-   kubectl rollout restart daemonset logger-agent-ds -n logger-agent
+   kubectl rollout restart daemonset logger-agent-ds -n ibm-observe
    ```
    {: codeblock}
 
