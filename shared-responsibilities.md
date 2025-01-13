@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-01-13"
 
 keywords:
 
@@ -78,7 +78,7 @@ Disaster recovery includes tasks such as:
 
 | Task                                                            | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-----------------------------------------------------------------|-------------------------------------------------|-----------------------|
-| Restore functionality for {{site.data.keyword.logs_full_notm}}  | Recover and restart {{site.data.keyword.logs_full_notm}} components after any disaster event. `[*]` |  [Complete the disaster recovery (DR) steps for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-bc-dr). |
+| Restore functionality for {{site.data.keyword.logs_full_notm}}  | Recover and restart {{site.data.keyword.logs_full_notm}} components after any disaster event. `[*]` |  [Complete the disaster recovery (DR) steps for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-cloud-logs-ha-dr). |
 | Backup {{site.data.keyword.logs_full_notm}} components   | Ensure that backup of {{site.data.keyword.logs_full_notm}} metadata is in place and properly working according to defined policies. | * Follow the {{site.data.keyword.cos_full_notm}} disaster revovery strategy guidance. For more information, see [Data security](/docs/cloud-object-storage?topic=cloud-object-storage-security), [Create a Secure Content Store](/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store), and [Using replication for business continuity and disaster recovery](/docs/cloud-object-storage?topic=cloud-object-storage-replication-overview#replication-bcdr).  \n * Ensure that log files in the {{site.data.keyword.cos_full_notm}} bucket are retained according to the desired policy.  \n * Follow the {{site.data.keyword.en_full_notm}} service disaster revovery strategy guidance. For more information, see [Securing your data in {{site.data.keyword.en_full_notm}}](/docs/event-notifications?topic=event-notifications-en-mng-data) and [Disaster recovery](/docs/event-notifications?topic=event-notifications-en-responsibilities#en-disaster-recovery).|
 {: caption="Responsibilities for disaster recovery" caption-side="top"}
 
