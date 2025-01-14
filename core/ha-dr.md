@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-13"
+lastupdated: "2025-01-14"
 
 keywords: HA for Cloud Logs, DR for Cloud Logs, Cloud Logs recovery time objective, Cloud Logs recovery point objective
 
@@ -106,7 +106,8 @@ To ensure that your workloads are resilient to such events, complete the followi
 
     You can use Terraform to create your IAM authorizations and permissions. See [IAM Terraform resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/policy_assignment).
 
-    Always test that you can restore the backup configuration into an alternative region.{: important}
+    Always test that you can restore the backup configuration into an alternative region.
+    {: important}
 
 
 ## Disaster recovery (DR) in a region
