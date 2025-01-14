@@ -114,18 +114,20 @@ toc:
           - topicgroup:
               label: S2S authorizations
               topics:
-               - topic: iam-service-auth.md
-                 navtitle: Managing authorizations
-               - topic: iam-service-auth-cos.md
-                 navtitle: S2S for Cloud Object Storage
-               - topic: iam-service-auth-logs-routing.md
-                 navtitle: S2S for Logs Routing
-               - topic: iam-service-auth-en.md
-                 navtitle: S2S for Event Notification
-               - topic: iam-service-auth-es.md
-                 navtitle: S2S for Event Streams
-               - topic: iam-service-auth-remove-auth.md
-                 navtitle: Removing authorizations
+              - topic: iam-service-auth.md
+                navtitle: Managing authorizations
+              - topic: iam-service-auth-cos.md
+                navtitle: S2S for Cloud Object Storage
+              - topic: iam-service-auth-logs-routing.md
+                navtitle: S2S for Logs Routing
+              - topic: iam-service-auth-atracker.md
+                navtitle: S2S for Activity Tracker Event Routing
+              - topic: iam-service-auth-en.md
+                navtitle: S2S for Event Notification
+              - topic: iam-service-auth-es.md
+                navtitle: S2S for Event Streams
+              - topic: iam-service-auth-remove-auth.md
+                navtitle: Removing authorizations
       - topicgroup:
           label: Managing instances
           topics:

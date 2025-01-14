@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-18"
+  years:  2024, 2025
+lastupdated: "2025-01-14"
 
 keywords:
 
@@ -24,14 +24,14 @@ Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {
 {: #iam-service-auth-en-prereqs}
 
 - Read about [Managing authorizations to grant access between services](/docs/cloud-logs?topic=cloud-logs-iam-service-auth).
+
 - You must have access to the {{site.data.keyword.en_full_notm}} target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
 
-The target service is located always in the account where the authorization is created.
-{: important}
+- The target service is located always in the account where the authorization is created.
 
-The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.en_full_notm}} target.
-{: important}
+- The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.en_full_notm}} target.
 
+- If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account ID. 
 
 ## Service access roles
 {: #iam-service-auth-en-roles}

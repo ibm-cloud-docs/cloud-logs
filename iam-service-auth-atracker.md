@@ -12,35 +12,37 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a S2S authorization to grant access to a bucket
-{: #iam-service-auth-cos}
+# Creating a S2S authorization to grant {{site.data.keyword.atracker_full_notm}} access to send data to {{site.data.keyword.logs_full_notm}}
+{: #iam-service-auth-atracker}
 
-Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_full_notm}} access to a {{site.data.keyword.cos_full_notm}} bucket.
+Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.atracker_full_notm}} access to the {{site.data.keyword.logs_full_notm}} service.
 {: shortdesc}
 
-
+You must configure the service to service (S2S) authorization in the {{site.data.keyword.cloud_notm}} account where the {{site.data.keyword.logs_full_notm}} instance is located.
+{: important}
 
 ## Before you begin
-{: #iam-service-auth-cos-prereqs}
+{: #iam-service-auth-logs-prereqs}
 
-- Read about [Managing authorizations to grant access between services](/docs/cloud-logs?topic=cloud-logs-iam-service-auth).
+- Read about [Managing authorizations to grant access between services](/docs/atracker?topic=atracker-iam-service-auth).
 
-- You must have access to the target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
+- You must have access to the target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/atracker?topic=atracker-iam-service-auth#iam-service-auth-permissions).
 
-- The target service is located always in the account where the authorization is created.
+- The autorization that you define for the {{site.data.keyword.atracker_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.logs_full_notm}} target instance.
 
-- The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.cos_full_notm}} target.
+- Make sure that you are defining the authorization in the account where the {{site.data.keyword.logs_full_notm}} instance is located.
 
 - If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account ID. 
 
-## Service access roles
-{: #iam-service-auth-cos-roles}
 
-You must grant `Writer` role to grant permissions to work with buckets.
+## Service access roles
+{: #iam-service-auth-logs-roles}
+
+You must grant `Sender` role to grant permissions to send data to the {{site.data.keyword.logs_full_notm}} instance.
 
 
 ## Creating an authorization through the console
-{: #iam-service-auth-cos-create-ui}
+{: #iam-service-auth-logs-create-ui}
 {: ui}
 
 Complete the following steps:
@@ -49,54 +51,65 @@ Complete the following steps:
 2. Click **Create**.
 3. Select a source account.
 
-    If the source service that needs access to the target service is in this account, select **This account**.
+    If {{site.data.keyword.atracker_full_notm}} and the {{site.data.keyword.logs_full_notm}} instance are in the same account where you are defining the authorization, select **This account**.
 
-    If the source service that needs access to the target service is in a different account, select **Other account**. Then, enter the account ID of the source account.
+    If {{site.data.keyword.atracker_full_notm}} and the {{site.data.keyword.logs_full_notm}} instance are in different accounts, select **Other account**. Then, enter the account ID of the source account, that is, the account where {{site.data.keyword.atracker_full_notm}} is to be configured to send data to an {{site.data.keyword.logs_full_notm}} instance.
 
-4. Select `Cloud Logs` as the source service. Then, set the scope of the access.
+4. Select `Activity Tracker Event Routing` as the source service. Then, set the scope of the access to **All resources**.
 
-    Select **All resources** to grant access for all instances in the account.
-
-    Select **Source service instance** to grant access to a single {{site.data.keyword.logs_full_notm}} instance.
-
-5. Select **Cloud Object Storage** as the target service. Then, set the scope of the access.
+5. Select **Cloud Logs** as the target service. Then, set the scope of the access.
 
     To grant access to all instances and resources in the account, select **All resources**.
 
     To grant access to a specific instance, select single instance by configuring **Resources based on selected attributes** &gt; **Service Instance**.
 
-    To grant access to a single bucket, select single instance by configuring **Resources based on selected attributes** &gt; **Service Instance**. Then, set **Resource ID** with the name of the bucket, and **Resource type** to *bucket*.
-
-6. In the *Service Access* section, select **Writer** to assign access to the source service that accesses the target service.
+6. In the *Service Access* section, select **Sender** to assign {{site.data.keyword.atracker_full_notm}} access to the bucket.
 
 7. Click **Authorize**.
 
-If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account number. 
-{: note}
+
 
 ## Creating an authorization by using the CLI
-{: #iam-service-auth-cos-create-cli}
+{: #iam-service-auth-logs-create-cli}
 {: cli}
 
 
-Run the following command to create an authorization for the {{site.data.keyword.logs_full_notm}} service.
+Run the following command to create an authorization for the {{site.data.keyword.atracker_full_notm}} service.
 
 ```sh
-ibmcloud iam authorization-policy-create logs cloud-object-storage "Writer" [--source-service-instance-name SOURCE_SERVICE_INSTANCE_NAME | --source-service-instance-id SOURCE_SERVICE_INSTANCE_ID] [--target-service-instance-name TARGET_SERVICE_INSTANCE_NAME | --target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--target-resource-type RESOURCE_TYPE] [--target-resource RESOURCE]
+ibmcloud iam authorization-policy-create atracker logs "Sender" [--target-service-instance-id TARGET_SERVICE_INSTANCE_ID]
 ```
 {: codeblock}
 
 Where you can set the following parameters to grant access to a single bucket:
-- `TARGET_SERVICE_INSTANCE_NAME`: CRN of the {{site.data.keyword.cos_full_notm}} instance.
-- `RESOURCE_TYPE`: Must be set to **bucket**.
-- `RESOURCE`: CRN of the bucket
+- `TARGET_SERVICE_INSTANCE_ID`: ID of the {{site.data.keyword.logs_full_notm}} instance.
+
+
+For more information about all of the parameters that are available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
+
+
+## Creating an authorization cross accounts by using the CLI
+{: #iam-service-auth-logs-create-cli-cross}
+{: cli}
+
+
+Run the following command to create an authorization in the account where the target service is located when the {{site.data.keyword.atracker_full_notm}} service and the target service are in different accounts:
+
+```sh
+ibmcloud iam authorization-policy-create atracker cloud-object-storage "Object Writer" [--target-service-instance-id TARGET_SERVICE_INSTANCE_ID] [--source-service-account SOURCE_SERVICE_ACCOUNT_GUID ]
+```
+{: codeblock}
+
+Where you can set the following parameters to grant access to a single bucket:
+- `TARGET_SERVICE_INSTANCE_NAME`: CRN of the {{site.data.keyword.logs_full_notm}} instance.
+- `SOURCE_SERVICE_ACCOUNT_GUID`: Set the account GUID where {{site.data.keyword.atracker_full_notm}} is configured to send data to the target service. Only use this option if the source service is from another account.
 
 
 For more information about all of the parameters that are available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
 
 
 ## Creating an authorization by using Terraform
-{: #iam-service-auth-cos-create-terra}
+{: #iam-service-auth-logs-create-terra}
 {: terraform}
 
 
@@ -113,9 +126,9 @@ Use the following steps to create an authorization by using Terraform:
 
     ```terraform
     resource "ibm_iam_authorization_policy" "policy" {
-     source_service_name = "logs"
-     target_service_name = "cloud-object-storage"
-     roles               = ["Writer"]
+     source_service_name = "atracker"
+     target_service_name = "logs"
+     roles               = ["Sender"]
      description         = "Authorization Policy"
      transaction_id     = "terraformAuthorizationPolicy"
     }
@@ -126,11 +139,11 @@ Use the following steps to create an authorization by using Terraform:
 
     ```terraform
     resource "ibm_iam_authorization_policy" "policy" {
-      source_service_name         = "logs"
+      source_service_name         = "atracker"
       source_resource_instance_id = ibm_resource_instance.instance1.guid
-      target_service_name         = "cloud-object-storage"
+      target_service_name         = "logs"
       target_resource_instance_id = ibm_resource_instance.instance2.guid
-      roles                       = ["Writer"]
+      roles                       = ["Sender"]
     }
     ```
     {: codeblock}
@@ -138,7 +151,7 @@ Use the following steps to create an authorization by using Terraform:
     The `ibm_iam_authorization_policy` resource requires the source service, target service, and role. The source service is granted access to the target service, and the role is the level of permission that the access allows. Optionally, you can add a description for the authorization and a transaction ID.
     {: note}
 
-    - You can provide a `target_resource_instance_id` to scope a {{site.data.keyword.cos_full_notm}} target instance.
+    - You can provide a `target_resource_instance_id` to scope a {{site.data.keyword.logs_full_notm}} target instance.
 
     - For more examples, see the [Terraform documentation for authorization resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_authorization_policy){: external}.
 
@@ -166,7 +179,7 @@ Use the following steps to create an authorization by using Terraform:
         {: pre}
 
 ## Creating an authorization by using the API
-{: #iam-service-auth-cos-create-api}
+{: #iam-service-auth-logs-create-api}
 {: api}
 
 To authorize a source service access to a target service, use the [IAM Policy Management API](/apidocs/iam-policy-management#create-policy). See the following API example for create a policy method with the `type=authorization` specified for a `cloud-object-storage` bucket as the target.
@@ -190,14 +203,14 @@ curl --request POST \
                 },
                 {
                     "name": "serviceName",
-                    "value": "logs"
+                    "value": "atracker"
                 }
             ]
         }
     ],
     "roles": [
         {
-            "role_id": "crn:v1:bluemix:public:cloud-object-storage::::serviceRole:Writer"
+            "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Sender"
         }
     ],
     "resources": [
@@ -205,21 +218,11 @@ curl --request POST \
             "attributes": [
                 {
                     "name": "serviceName",
-                    "value": "cloud-object-storage"
+                    "value": "logs"
                 },
                 {
                     "name": "serviceInstance",
-                    "value": "$COS_INSTANCE_CRN",
-                    "operator": "stringEquals"
-                },
-                {
-                    "name": "resourceType",
-                    "value": "bucket",
-                    "operator": "stringEquals"
-                },
-                {
-                    "name": "resource",
-                    "value": "$BUCKET_CRN",
+                    "value": "$CLOUD_LOGS_INSTANCE_ID",
                     "operator": "stringEquals"
                 }
             ]

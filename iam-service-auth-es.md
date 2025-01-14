@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-08-22"
+  years:  2024, 2025
+lastupdated: "2025-01-14"
 
 keywords:
 
@@ -24,20 +24,19 @@ Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {
 {: #iam-service-auth-es-prereqs}
 
 - Read about [Managing authorizations to grant access between services](/docs/cloud-logs?topic=cloud-logs-iam-service-auth).
+
 - You must have access to the target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
 
-The target service is located always in the account where the authorization is created.
-{: important}
+- The target service is located always in the account where the authorization is created.
 
-The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.messagehub_full}} target.
-{: important}
+- The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.messagehub_full}} target.
+
 
 
 ## Service access roles
 {: #iam-service-auth-es-roles}
 
-You can select any of the following roles that the source can use to interact with the target. You can grant only the level of access that you have as a user of the target that you selected.
-- `Writer`: You must grant `Writer` role to handle source integration with the {{site.data.keyword.messagehub_full}} service.
+You must grant `Writer` role to handle source integration with the {{site.data.keyword.messagehub_full}} service.
 
 
 ## Creating an authorization through the console
