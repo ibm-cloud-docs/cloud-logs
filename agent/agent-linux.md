@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-13"
+  years:  2024, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -35,12 +35,12 @@ You can use a service ID or a trusted profile as the identity that is used by th
 Choose one of the following options:
 
 ### Option 1: Authentication using a trusted profile
-{: #agent-helm-os-deploy-step1-tp}
+{: #agent-helm-linux-deploy-step1-tp}
 
 Create a Trusted Profile. For more information, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
 
 ### Option 2: Authentication using a service ID API key
-{: #agent-helm-os-deploy-step1-key}
+{: #agent-helm-linux-deploy-step1-key}
 
 Generate an API Key for service ID authentication. For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 

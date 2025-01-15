@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-13"
+  years:  2024, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -231,7 +231,7 @@ The agent will start and establish a connection to the desired target.
 
 
 ## Create a Windows service
-{: #agent-windows-deploy-step4}
+{: #agent-windows-deploy-step7}
 {: step}
 
 
@@ -264,7 +264,7 @@ Complete the following steps:
 
 
 ## Verify logs are being delivered to your target destination
-{: #agent-windows-deploy-step5}
+{: #agent-windows-deploy-step8}
 {: step}
 
 Complete the following steps:
