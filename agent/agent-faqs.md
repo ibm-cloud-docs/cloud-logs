@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-02"
+  years:  2024, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -27,9 +27,9 @@ Frequently asked questions about the {{site.data.keyword.agent}}.
 A worker, in the context of the {{site.data.keyword.agent}}, represents a CPU thread that is available to the {{site.data.keyword.agent}} for handling logs.
 You can configure the number of available workers that are available in the output plugin configuration.
 
-The `Workers` configuration setting for the output plug-in depends on the log volume being processed.  See the [Agent Workers Configuration Considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-workers-configuration-considerations) which describes the logs that you can look for to help determine the appropriate setting for your environment.
+The `Workers` configuration setting for the output plug-in depends on the log volume being processed.  See the [agent workers configuration considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-worker-configuration-considerations) which describes the logs that you can look for to help determine the appropriate setting for your environment.
 
-For example, the {{site.data.keyword.agent}} is deployed as a Daemonset in a Kubernetes or OpenShift cluster. 1 {{site.data.keyword.agent}} pod is deployed in each worker (node) in the cluster.  The Helm charts for Openshift and Kubernetes deployments are configured with 4 workers by default. Each {{site.data.keyword.agent}} pod is configured by default to use 4 fluent-bit workers (or threads) to handle the processing of logs in each pod. You can use the guidance in [Fluentbit Agent Workers configuration considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-workers-configuration-considerations) to configure the number of workers based on your log volumes.
+For example, the {{site.data.keyword.agent}} is deployed as a Daemonset in a Kubernetes or OpenShift cluster. 1 {{site.data.keyword.agent}} pod is deployed in each worker (node) in the cluster.  The Helm charts for Openshift and Kubernetes deployments are configured with 4 workers by default. Each {{site.data.keyword.agent}} pod is configured by default to use 4 fluent-bit workers (or threads) to handle the processing of logs in each pod. You can use the guidance in [agent workers configuration considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-worker-configuration-considerations) to configure the number of workers based on your log volumes.
 
 
 
@@ -43,6 +43,6 @@ The message `[input] pausing tail` is an indication that the buffers managed by 
 
 - If the `[input] resume tail` message does not appear within a few seconds then this might be an indication of a problem sending to {{site.data.keyword.logs_full_notm}}.  You should check the network connectivity between the {{site.data.keyword.agent}} and {{site.data.keyword.logs_full_notm}}.  Not observing the `[input] resume tail` message may also be an indication of an {{site.data.keyword.logs_full_notm}} service disruption.
 
-- If the `[input] resume tail` and `[input] pausing tail` messages occur more than 30 times within 5 minutes, this is typically an indication that the agent is not configured appropriately to handle the log volume that the agent is processing.  This can usually be corrected by increasing the `Workers` configuration in the output plug-in, increasing the CPU limit assigned to the agent process or both actions.  See the [Agent Workers Configuration Considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-workers-configuration-considerations) for more details.
+- If the `[input] resume tail` and `[input] pausing tail` messages occur more than 30 times within 5 minutes, this is typically an indication that the agent is not configured appropriately to handle the log volume that the agent is processing.  This can usually be corrected by increasing the `Workers` configuration in the output plug-in, increasing the CPU limit assigned to the agent process or both actions.  See the [agent workers configuration considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-worker-configuration-considerations) for more details.
 
 - Consider reviewing the logs that are being collected and determine whether all of the logs are required.  See the [Filtering logs](/docs/cloud-logs?topic=cloud-logs-configure-include-exclude) topic for ways that you can reduce the volume of logs sent from the {{site.data.keyword.agent}} to {{site.data.keyword.logs_full_notm}}.

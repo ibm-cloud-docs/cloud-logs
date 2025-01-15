@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-14"
+lastupdated: "2025-01-15"
 
 keywords: HA for Cloud Logs, DR for Cloud Logs, Cloud Logs recovery time objective, Cloud Logs recovery point objective
 
@@ -40,7 +40,7 @@ Service level objectives (SLOs) describe the design points that the {{site.data.
 |  Availability % | 99.99%  |
 {: caption="SLO for {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
-The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo).
+The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/resiliency?topic=resiliency-slo).
 {: note}
 
 
@@ -167,7 +167,7 @@ To make it easier to recover an {{site.data.keyword.logs_full_notm}} instance, u
 
 After you recover the instance, you must reconfigure your data sources to send logs to the new instance:
 
-1. If the new region has an {{site.data.keyword.logs_routing_full_notm}} tenant configured, you must use the current target associated for that region to view and monitor platform logs. If the new region does not have an {{site.data.keyword.logs_routing_full_notm}} tenant configured, create an {{site.data.keyword.logs_routing_full_notm}} tenant that references your new {{site.data.keyword.logs_full_notm}} instance. See [Creating an {{site.data.keyword.logs_routing_full_notm}} tenant](/docs/logs-router?topic=logs-router-tenant-create&interface=ui) and [Understanding business continuity and disaster recovery for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-bc-dr).
+1. If the new region has an {{site.data.keyword.logs_routing_full_notm}} tenant configured, you must use the current target associated for that region to view and monitor platform logs. If the new region does not have an {{site.data.keyword.logs_routing_full_notm}} tenant configured, create an {{site.data.keyword.logs_routing_full_notm}} tenant that references your new {{site.data.keyword.logs_full_notm}} instance. See [Creating an {{site.data.keyword.logs_routing_full_notm}} tenant](/docs/logs-router?topic=logs-router-tenant-create&interface=ui) and [Understanding high availability and disaster recovery fo {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-logs-router-ha-dr).
 
 2. If the new region has an {{site.data.keyword.atracker_full_notm}} configuration that collects events from the region that is down, you can use the existing configuration to view and manage events. If the new region does not have an {{site.data.keyword.atracker_full_notm}} configuration that collects events from the region that is down, you must add a rule to indicate where and how you want to collect events. For more information, see [Creating a routing configuration resilient to a regional disaster](/docs/atracker?topic=atracker-dr_config).
 

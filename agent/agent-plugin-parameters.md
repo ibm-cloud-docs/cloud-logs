@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-02"
+  years:  2024, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -28,7 +28,7 @@ List of parameters that you can use to configure the output plugin to send data 
 | `Id`     |  Unique ID for the plug-in. |  n/a |  any string  | true  |
 | `Match`  |  Use to specify how to match events. |  n/a |  any string  | true  |
 | `Retry_Limit` |  Retry processing if the plug-in fails to send data to Cloud Logs.  \n Set `False` if you want to retry forever, otherwise set to an Integer value.  \n For more information about how to configure retries, see [here](https://docs.fluentbit.io/manual/administration/scheduling-and-retries#configuring-retries){: external} |  1 |  `False` or N >= 1  | true  |
-| `Workers` | The number of concurrent worker threads sending to {{site.data.keyword.logs_full_notm}}.  \n In order to increase the throughput of logs sent to {{site.data.keyword.logs_full_notm}}, you can increase the number of concurrent threads sending from each agent.  \n See [here](#agent-workers-configuration-considerations)  | 1 | 1 or more | false |
+| `Workers` | The number of concurrent worker threads sending to {{site.data.keyword.logs_full_notm}}.  \n In order to increase the throughput of logs sent to {{site.data.keyword.logs_full_notm}}, you can increase the number of concurrent threads sending from each agent.  \n [More information](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-worker-configuration-considerations)  | 1 | 1 or more | false |
 {: caption="Fluentbit parameters" caption-side="bottom"}
 
 

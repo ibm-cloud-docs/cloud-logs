@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-06"
+  years:  2024, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -51,7 +51,7 @@ To remove the agent, remove the application directory.
 ## Updating the logging agent
 {: #agent-windows-manage-update}
 
-To update the agent, download a new agent Windows agent ZIP archive and follow the instructions below to update the {{site.data.keyword.agent}}. For information about the current {{site.data.keyword.agent}} version, see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent). For instructions on installing the Windows agent, see [Deploy agent for Windows servers](/docs/cloud-logs?topic=cloud-logs-agent-windows-deploy-step3).
+To update the agent, download a new agent Windows agent ZIP archive and follow the instructions below to update the {{site.data.keyword.agent}}. For information about the current {{site.data.keyword.agent}} version, see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent). For instructions on installing the Windows agent, see [Deploy agent for Windows servers](/docs/cloud-logs?topic=cloud-logs-agent-windows#agent-windows-deploy-step3).
 
 1. Expand the Windows agent archive in the `upgrade` directory of your currently installed agent using Powershell.
 
