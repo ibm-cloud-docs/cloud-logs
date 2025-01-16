@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: HA for Cloud Logs, DR for Cloud Logs, Cloud Logs recovery time objective, Cloud Logs recovery point objective
 
@@ -134,7 +134,7 @@ In the case of a regional disaster, you must complete the following steps to rec
 
 4. If your instance has alerts configured, complete the following steps:
 
-    * Create a new {{site.data.keyword.en_full_notm}} instance or use an existing one that you might have available in a different region, always making sure it meets your compliance and data locality requirements. For more information, see [Provisioning an instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance). For more information about the disaster recovery strategy for {{site.data.keyword.en_full_notm}}, see [Securing your data in {{site.data.keyword.en_full_notm}}](/docs/event-notifications?topic=event-notifications-en-mng-data) and [Disaster recovery](/docs/event-notifications?topic=event-notifications-en-responsibilities#en-disaster-recovery).
+    * Create a new {{site.data.keyword.en_full_notm}} instance or use an existing one that you might have available in a different region, always making sure it meets your compliance and data locality requirements. For more information, see [Provisioning an instance](/docs/event-notifications?topic=event-notifications-getting-started). For more information about the disaster recovery strategy for {{site.data.keyword.en_full_notm}}, see [Securing your data in {{site.data.keyword.en_full_notm}}](/docs/event-notifications?topic=event-notifications-en-mng-data) and [Disaster recovery](/docs/event-notifications?topic=event-notifications-en-responsibilities#en-disaster-recovery).
 
     * Define IAM authorizations between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance. For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en&interface=ui).
 
