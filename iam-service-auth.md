@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-14"
+lastupdated: "2025-01-16"
 
 keywords:
 
@@ -73,6 +73,7 @@ Choose one of the following options to create a S2S authorization:
 
 - [Authorize access to read and write data into a bucket](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos).
 - [Authorize sending logs to a tenant](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-logs-routing).
+- [Authorize sending activity tracking events](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-atracker).
 - [Authorize working with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 - [Authorize working with the {{site.data.keyword.messagehub_full}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-es).
 

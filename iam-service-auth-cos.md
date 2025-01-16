@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-14"
+lastupdated: "2025-01-16"
 
 keywords:
 
@@ -12,10 +12,10 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a S2S authorization to grant access to a bucket
+# Creating a S2S authorization to grant {{site.data.keyword.logs_full_notm}} access to a bucket
 {: #iam-service-auth-cos}
 
-Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_full_notm}} access to a {{site.data.keyword.cos_full_notm}} bucket.
+Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_full_notm}} access to an {{site.data.keyword.cos_full_notm}} bucket.
 {: shortdesc}
 
 
