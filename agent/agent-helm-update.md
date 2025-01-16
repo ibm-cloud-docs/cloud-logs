@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-11"
+  years:  2024, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -140,7 +140,7 @@ Complete the following steps:
     - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
-    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-kube-deploy-step1)
+    - `<APIKey-value>` is the IAM apikey associated with the ServiceID.
 
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-12"
+  years:  2024, 2025
+lastupdated: "2025-01-14"
 
 keywords:
 
@@ -12,31 +12,33 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}
+# Creating a S2S authorization to grant {{site.data.keyword.logs_routing_full_notm}} access to send logs to {{site.data.keyword.logs_full_notm}}
 {: #iam-service-auth-logs-routing}
 
 Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to {{site.data.keyword.logs_full_notm}} so the {{site.data.keyword.logs_routing_full_notm}} service can send logs to your tenant.
 {: shortdesc}
 
+You must configure the service to service (S2S) authorization in the {{site.data.keyword.cloud_notm}} account where the {{site.data.keyword.logs_full_notm}} instance is located.
+{: important}
 
 ## Before you begin
 {: #iam-service-auth-logs-routing-prereqs}
 
 - Read about [Managing authorizations to grant access between services](/docs/cloud-logs?topic=cloud-logs-iam-service-auth).
+
 - You must have access to the target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
 
-The target service is located always in the account where the authorization is created.
-{: important}
+- The target service is located always in the account where the authorization is created.
 
-The authorization that you define for the {{site.data.keyword.logs_routing_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.logs_full_notm}} target.
-{: important}
+- The authorization that you define for the {{site.data.keyword.logs_routing_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.logs_full_notm}} target.
+
+- If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account ID. 
+
 
 ## Service access roles
 {: #iam-service-auth-logs-routing-roles}
 
-You can select any of the following roles that the source can use to interact with the target. You can grant only the level of access that you have as a user of the target that you selected.
-
-- `Sender`: As a sender, you can send logs to your {{site.data.keyword.logs_full_notm}} service instance - but not query or tail logs. This role is meant to be used by agents and routers sending logs.
+You must grant `Sender` role to grant permissions to send data to the {{site.data.keyword.logs_full_notm}} instance.
 
 ## Creating an authorization in the console
 {: #iam-service-auth-logs-routing-create-ui}

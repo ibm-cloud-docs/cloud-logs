@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-13"
+  years:  2024, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -39,7 +39,7 @@ Complete the following steps:
 
     For more information, see [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
-    For more information about Trusted Profiles, see [Generating a Trusted Profile for ingestion](/docs/account?topic=cloud-logs-iam-ingestion-trusted-profile).
+    For more information about Trusted Profiles, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
 
 4. Generate an API Key for service ID authentication.
 
@@ -123,13 +123,13 @@ Where
 :   Specify `IAMAPIKey` or `VSITrustedProfile`.
 
 `-IAMApiKey <iam_api_key>`
-:   (Optional) Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-api-key).
+:   (Optional) Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
     For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
     {: tip}
 
 `-TrustedProfile <trusted_profile_id>`
-:   (Optional) Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-agent-iam-permissions&interface=cli).
+:   (Optional) Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
     For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
     {: tip}
@@ -231,7 +231,7 @@ The agent will start and establish a connection to the desired target.
 
 
 ## Create a Windows service
-{: #agent-windows-deploy-step4}
+{: #agent-windows-deploy-step7}
 {: step}
 
 
@@ -264,7 +264,7 @@ Complete the following steps:
 
 
 ## Verify logs are being delivered to your target destination
-{: #agent-windows-deploy-step5}
+{: #agent-windows-deploy-step8}
 {: step}
 
 Complete the following steps:

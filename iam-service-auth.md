@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-01-16"
 
 keywords:
 
@@ -37,7 +37,8 @@ The following table lists the different S2S authorizations that you might need w
 |-------------------|----------------|----------------|
 | Authorize access to read and write data into the data bucket | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.cos_full_notm}} |
 | Authorize access to read and write data into the metrics bucket | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.cos_full_notm}} |
-| Authorize sending logs to a tenant | {{site.data.keyword.logs_routing_full}} | {{site.data.keyword.logs_full_notm}} |
+| Authorize sending logs to a tenant | {{site.data.keyword.logs_routing_full_notm}} | {{site.data.keyword.logs_full_notm}} |
+| Authorize sending activity tracking events | {{site.data.keyword.atracker_full_notm}} | {{site.data.keyword.logs_full_notm}} |
 | Authorize access to the {{site.data.keyword.en_full_notm}} service | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.en_full_notm}} |
 | Authorize access to the {{site.data.keyword.messagehub_full}} service | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.messagehub_full}} |
 {: caption="S2S authorizations."}
@@ -72,6 +73,7 @@ Choose one of the following options to create a S2S authorization:
 
 - [Authorize access to read and write data into a bucket](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos).
 - [Authorize sending logs to a tenant](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-logs-routing).
+- [Authorize sending activity tracking events](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-atracker).
 - [Authorize working with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 - [Authorize working with the {{site.data.keyword.messagehub_full}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-es).
 

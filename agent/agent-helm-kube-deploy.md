@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-11"
+  years:  2024, 2025
+lastupdated: "2025-01-15"
 
 keywords:
 
@@ -99,11 +99,11 @@ Complete the following steps:
 
     | Field Name | Description |
     |------------|-------------|
-    | `image.version` | the version of the agent to be deployed [see Step 1](#agent-helm-kube-deploy-step1) |
+    | `image.version` | the version of the agent to be deployed [see Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1) |
     | `clusterName`  | the name of the cluster - this will introduce the tag `kubernetes.cluster_name` into all log lines |
     | `env.ingestionHost` | the public or private ingress endpoint for the {{site.data.keyword.logs_full_notm}} instance to receive the logs |
     | `env.ingestionPort` | the ingress endpoint port \nPublic ingress endpoint = `443`\nPrivate ingress endpoint(VPE) = `443`\n Private ingress endpoint(CSE) = `3443` |
-    | `iamMode` | `TrustedProfile` or `IAMAPIKey` based on the authentication method chosen in [Step 1](#agent-helm-kube-deploy-step1) |
+    | `iamMode` | `TrustedProfile` or `IAMAPIKey` based on the authentication method chosen in [Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1) |
     | `trustedProfileID` | If `iamMode` is `TrustedProfile` then provide the Trusted Profile ID, otherwise it's not required (for example: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` ) |
     {: caption="Helm chart required parameters" caption-side="bottom"}
 
@@ -165,7 +165,7 @@ Complete the following steps:
     - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
-    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-kube-deploy-step1)
+    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1)
     - Add `--hide-secret` to hide the API key from showing in the output data after the command runs.
 
     If you would like to inspect the helm chart contents locally, you can download the helm chart to your computer using the command: `helm pull oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version>`.  The downloaded tgz file contains the chart contents.
@@ -199,7 +199,7 @@ Complete the following steps:
     - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
-    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-kube-deploy-step1)
+    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1)
 
 
 ## Step 4. Verify the agent is successfully deployed

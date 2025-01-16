@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-01-16"
 
 keywords:
 
@@ -34,11 +34,11 @@ Configure a bucket in {{site.data.keyword.cos_full_notm}} to store metrics from 
 You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.cos_full_notm}} to allow {{site.data.keyword.logs_full_notm}} to read and write data into the data bucket. For more information, see [Creating a S2S authorization to grant access to a bucket](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos).
 
 
-## Configure the data bucket
+## Configure the metrics bucket
 {: #configure-metrics-bucket-attach}
 {: step}
 
-Complete the following steps to configure a metrics bucket for a {{site.data.keyword.logs_full_notm}} instance:
+Complete the following steps to configure a metrics bucket for an {{site.data.keyword.logs_full_notm}} instance:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
