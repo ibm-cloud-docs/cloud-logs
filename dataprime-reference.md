@@ -272,7 +272,7 @@ This operator is functionally identical to `groupby` without any aggregate funct
 
 Enrich your logs using additional context from a lookup table.
 
-Upload your lookup table using **Data flow** ![Data Flow icon](/images/flow--data.svg "Data Flow") >  > Data Enrichment > Custom Enrichment.
+Upload your lookup table using **Data flow** ![Data Flow icon](/images/flow--data.svg "Data Flow") > Data Enrichment > Custom Enrichment.
 
 
 
