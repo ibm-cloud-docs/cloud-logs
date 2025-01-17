@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-08-26"
+  years:  2024, 2025
+lastupdated: "2025-01-17"
 
 keywords:
 
@@ -25,7 +25,7 @@ This guide provides a full glossary of all available DataPrime operators and exp
 
 DataPrime provides the following operators.
 
-### block
+### `block`
 {: #block}
 
 The negation of `filter`. Filters-out all events where the condition is true. The same effect can be achieved by using `filter` with `!(condition)`.
@@ -39,25 +39,25 @@ The data is exposed using the following fields:
 
 * $m - Event metadata
 
-   * timestamp
-   * severity – Possible values are Verbose, Debug, Info, Warning, Error, Critical
-   * priorityclass – Possible values are high, medium, low
-   * logid
+   * `timestamp`
+   * `severity` – Possible values are `Verbose`, `Debug`, `Info`, `Warning`, `Error`, `Critical`
+   * `priorityclass` – Possible values are `high`, `medium`, `low`
+   * `logid`
 
-* $l -Event labels
+* $l - Event labels
 
-   * applicationname
-   * subsystemname
-   * category
-   * classname
-   * computername
-   * methodname
-   * threadid
-   * ipaddress
+   * `applicationname`
+   * `subsystemname`
+   * `category`
+   * `classname`
+   * `computername`
+   * `methodname`
+   * `threadid`
+   * `ipaddress`
 
 * $d -The user’s data
 
-### bottom
+### `bottom`
 {: #bottom}
 
 *No grouping variation*: Limits the rows returned to a specified number and order the result by a set of expressions.
@@ -115,7 +115,7 @@ Will result in logs of the following form:
 
 Supported aggregation functions are listed in “Aggregation Functions” section.
 
-### choose
+### `choose`
 {: #choose}
 
 Leave only the keypaths provided, discarding all other keys. Fully supports nested keypaths in the output.
@@ -133,7 +133,7 @@ choose $d.my_superkey.mykey as $d.important_value, 10 as $d.the_value_ten
 ```
 {: codeblock}
 
-### convert
+### `convert`
 {: #convert}
 
 Convert the data types of keys.
@@ -154,7 +154,7 @@ convert $d.data.color:number,$d.item:string
 ```
 {: codeblock}
 
-### count
+### `count`
 {: #count}
 
 Returns a single row containing the number of rows produced by the preceding operators.
@@ -180,7 +180,7 @@ Will result in a single row of the following form:
 ```
 {: codeblock}
 
-### countby
+### `countby`
 {: #countby}
 
 Returns a row counting all the rows grouped by the expression.
@@ -208,7 +208,7 @@ groupby $data.verb calculate count() as $d.verb_count
 ```
 {: codeblock}
 
-### create
+### `create`
 {: #create}
 
 Create a new key and set its value to the result of the expression. Key creation is granular, meaning that parent keys in the path are not overwritten.
@@ -222,27 +222,27 @@ The creation can be controlled by adding the following clauses:
 
 * Adding `keypath exists` allows to choose what to do when the keypath already exists.
 
-   * overwrite – Overwrites the old value. This is the default value
+   * `overwrite` – Overwrites the old value. This is the default value
 
-   *  fail – Fails the query
+   * `fail` – Fails the query
 
-   * skip – Skips the creation of the key
+   * `skip` – Skips the creation of the key
 
 * Adding `keypath missing` chooses what to do when the new keypath does not exist.
 
-   * create – Creates the key. This is the default value
+   * `create` – Creates the key. This is the default value
 
-   * fail – Fails the query
+   * `fail` – Fails the query
 
-   * skip – Skips the creation of the new key
+   * `skip` – Skips the creation of the new key
 
 * Adding on `datatype changed` chooses what to do if the key already exists and the new data changes the datatype of the value.
 
-   * overwrite – Overwrites the value. This is the default value.
+   * `overwrite` – Overwrites the value. This is the default value.
 
-   * fail – Fails the query
+   * `fail` – Fails the query
 
-   * skip – Leaves the key with the original value (and type)
+   * `skip` – Leaves the key with the original value (and type)
 
 Examples:
 
@@ -255,7 +255,7 @@ create $d.temperature from 100*23 on datatype changed skip
 ```
 {: codeblock}
 
-### distinct
+### `distinct`
 {: #distinct}
 
 Returns one row for each distinct combination of the provided expressions.
@@ -267,12 +267,12 @@ distinct <expression> [as <alias>] [, <expression_2> [as <alias_2>], ...]
 
 This operator is functionally identical to `groupby` without any aggregate functions.
 
-### enrich
+### `enrich`
 {: #enrich}
 
 Enrich your logs using additional context from a lookup table.
 
-Upload your lookup table using **Data flow** ![Data Flow icon](/images/flow--data.svg "Data Flow") >  > Data Enrichment > Custom Enrichment.
+Upload your lookup table using **Data flow** ![Data Flow icon](/images/flow--data.svg "Data Flow") > Data Enrichment > Custom Enrichment.
 
 
 
@@ -349,7 +349,7 @@ Consider the following when using `enrich`:
 
    * All values are enriched in a string format. You can then convert them to your preferred format (for example, JSON, timestamp) using the appropriate functions.
 
-### extract
+### `extract`
 {: #extract}
 
 Extract data from some string value into a new object. Multiple extraction methods are supported.
@@ -361,9 +361,9 @@ Extract data from some string value into a new object. Multiple extraction metho
 
 The following are the supported extraction methods and their parameters:
 
-* regexp – Create a new object based on regexp capture-groups
+* `regexp` – Create a new object based on regexp capture-groups
 
-* e – A regular expression with names capture-groups.
+* `e` – A regular expression with names capture-groups.
 
 Example:
 
@@ -372,11 +372,11 @@ extract $d.my_text into $d.my_data using regexp(e=/user (?<user>.*) has logged i
 ```
 {: codeblock}
 
-* kv – Extract a new object from a string that contains key=value key=value... pairs
+* `kv` – Extract a new object from a string that contains key=value key=value... pairs
 
-* pair_delimiter – The delimiter to expect between pairs. Default is (a space)
+* `pair_delimiter` – The delimiter to expect between pairs. Default is (a space)
 
-* key_delimiter – The delimiter to expect separating between a key and a value. Default is =.
+* `key_delimiter` – The delimiter to expect separating between a key and a value. Default is =.
 
 Examples:
 
@@ -387,9 +387,9 @@ e $d.text into $d.my_kvs using kv(pair_delimiter=' ',key_delimiter='=')
 {: codeblock}
 
 
-* jsonobject – Extract a new object from a string contains an encoded json object, potentially attempting to unescape the string before decoding it into a json
+* `jsonobject` – Extract a new object from a string contains an encoded json object, potentially attempting to unescape the string before decoding it into a json
 
-* max_unescape_count – Max number of escaping levels to unescape before parsing the json. Default is 1. When set to 1 or more, the engine will detect whether the value contains an escaped JSON string and unescape it until its parsable or max unescape count is exceeded.
+* `max_unescape_count` – Max number of escaping levels to unescape before parsing the json. Default is 1. When set to 1 or more, the engine will detect whether the value contains an escaped JSON string and unescape it until its parsable or max unescape count is exceeded.
 
 Example:
 
@@ -422,7 +422,7 @@ query_results_duration_ms:number
 ```
 {: codeblock}
 
-### filter
+### `filter`
 {: #filter}
 
 Filter events, leaving only events for which the condition evaluates to true.
@@ -445,7 +445,7 @@ filter $l.applicationname == 'myapp' && $d.msg.contains('failure')
 Comparison with null works only for scalar values and will always return null on JSON subtrees.
 {: note}
 
-### groupby
+### `groupby`
 {: #groupby}
 
 Groups the results of the preceding operators by the specified grouping expressions and calculates aggregate functions for every group created.
@@ -487,7 +487,7 @@ Will result in logs of the following form:
 
 When querying with the `groupby` operator, you can apply an [aggregation function](#aggregation_functions) (such `asavg`, `max`, `sum`) to the bucket of results. This feature gives you the power to manipulate an aggregation expression inside the expression itself, allowing you to calculate and manipulate your data simultaneously.
 
-### limit
+### `limit`
 {: #limit}
 
 Limits the output to the first `event-count` events.
@@ -504,7 +504,7 @@ limit 100
 ```
 {: codeblock}
 
-### move
+### `move`
 {: #move}
 
 Move a key (including its child keys, if any) to a new location.
@@ -522,7 +522,7 @@ m $d.kubernetes.labels to $d.my_labels
 ```
 {: codeblock}
 
-### orderby / sortby / order by / sort by
+### `orderby` / `sortby` / `order by` / `sort by`
 {: #order_sort}
 
 Sort the data by ascending/descending order of the expression value. Ordering by multiple expressions is supported.
@@ -543,7 +543,7 @@ sortby $d.myfield desc
 
 Sorting numeric values can be done by casting expression to the type:, for example, `<expression>: number`. In some cases, this will be inferred automatically by the engine.
 
-### redact
+### `redact`
 {: #redact}
 
 Replace all substrings matching a regexp pattern from some keypath value, effectively hiding the original content.
@@ -565,7 +565,7 @@ redact $d.mysuperkey.user_id matchingn 'root' to 'UNKNOWN_USER'
 ```
 {: codeblock}
 
-### remove
+### `remove`
 {: #remove}
 
 Remove a keypath from the object.
@@ -583,18 +583,18 @@ remove $d.mysuperkey.service_name, $d.mysuperkey.unneeded_key
 ```
 {: codeblock}
 
-### replace
+### `replace`
 {: #replace}
 
 Replace the value of some key with a new value.
 
 If the replacement value changes the datatype of the keypath, the following options are available:
 
-* skip – The replacement will be ignored
+* `skip` – The replacement will be ignored
 
-* fail – The query will fail
+* `fail` – The query will fail
 
-* overwrite – The new value will overwrite the previous one, changing the datatype of the keypath
+* `overwrite` – The new value will overwrite the previous one, changing the datatype of the keypath
 
 ```text
 replace <keypath> with <expression> [on datatype changed skip/fail/overwrite]
@@ -609,7 +609,7 @@ replace $d.some_superkey.log_length_plus_10 with $d.original_log.length()+10 on 
 ```
 {: codeblock}
 
-### roundtime
+### `roundtime`
 {: #roundtime}
 
 Rounds the time of the event into some time interval, possibly creating a new key for the result.
@@ -646,7 +646,7 @@ roundtime to 60s into $d.rounded_ts_to_the_minute
 ```
 {: codeblock}
 
-### source
+### `source`
 {: #source}
 
 Set the data source that your DataPrime query is based on.
@@ -658,7 +658,7 @@ Set the data source that your DataPrime query is based on.
 
 Where `data_store` can be either:
 
-* logs
+* `logs`
 
 
 * The name of the custom enrichment. In this case, the command will display the custom enrichment table.
@@ -670,7 +670,7 @@ source logs
 ```
 {: codeblock}
 
-### top
+### `top`
 {: #top}
 
 *No grouping variation*: Limits the rows returned to a specified number and order the result by a set of expressions.
@@ -732,7 +732,7 @@ You can apply an [aggregation function.](#aggregation_functions)
 ## Text Search Operators
 {: #text_search}
 
-### find / text
+### `find` / `text`
 {: #find_text}
 
 Search for the string in a certain keypath.
@@ -750,7 +750,7 @@ text 'us-east-1' in $d.msg
 ```
 {: codeblock}
 
-### lucene
+### `lucene`
 {: #dp_lucene}
 
 A generic Lucene-compatible operator, allowing both free and wild text searches, and more complex search queries.
@@ -769,7 +769,7 @@ lucene 'pod:recommender AND (is_error:true or status_code:404)'
 ```
 {: codeblock}
 
-### wildfind / wildtext
+### `wildfind` / `wildtext`
 {: #wildfind_tex}
 
 Search for the string in the entire user data. This can be used when the keypath in which the text resides is unknown.
@@ -879,7 +879,7 @@ Various functions can be used to transform values. All functions can be called a
 ## String Functions
 {: #string}
 
-### chr
+### `chr`
 {: #chr}
 
 Returns the Unicode code point number as a single character string.
@@ -891,7 +891,7 @@ chr(number: number): string
 
 
 
-### codepoint
+### `codepoint`
 {: #codepoint}
 
 Returns the Unicode code point of the only character of string.
@@ -903,7 +903,7 @@ codepoint(string: string): number
 
 
 
-### concat
+### `concat`
 {: #concat}
 
 
@@ -916,7 +916,7 @@ concat(value: string, ...values: string): string
 {: codeblock}
 
 
-### contains
+### `contains`
 {: #contains}
 
 Returns true if substring is contained in string
@@ -928,7 +928,7 @@ contains(string: string, substring: string): bool
 
 
 
-### endsWith
+### `endsWith`
 {: #endswith}
 
 Returns true if string ends with suffix
@@ -940,7 +940,7 @@ endsWith(string: string, suffix: string): bool
 
 
 
-### indexOf
+### `indexOf`
 {: #indexof}
 
 Returns the position of substring in string, or -1 if not found.
@@ -952,7 +952,7 @@ indexOf(string: string, substring: string): number
 
 
 
-### length
+### `length`
 {: #length}
 
 Returns the length of value
@@ -964,7 +964,7 @@ length(value: string): number
 
 
 
-### ltrim
+### `ltrim`
 {: #ltrim}
 
 Removes whitespace to the left of the string value
@@ -976,7 +976,7 @@ ltrim(value: string): string
 
 
 
-### matches
+### `matches`
 {: #matches}
 
 Evaluates the regular expression pattern and determines if it is contained within string.
@@ -988,7 +988,7 @@ matches(string: string, regexp: regexp): bool
 
 
 
-### pad
+### `pad`
 {: #pad}
 
 Left pads string to `charCount`. If `size < fillWith.length()` of string, result is truncated. See [`padLeft`](#padleft) for more details. Alias for `padLeft`.
@@ -1000,7 +1000,7 @@ pad(value: string, charCount: number, fillWith: string): string
 
 
 
-### padLeft
+### `padLeft`
 {: #padleft}
 
 ```text
@@ -1010,7 +1010,7 @@ padLeft(value: string, charCount: number, fillWith: string): string
 
 Left pads string to `charCount`. If `size < fillWith.length()` of string, result is truncated.
 
-### padRight
+### `padRight`
 {: #padright}
 
 Right pads string to `charCount`. If `size < fillWith.length()` of string, result is truncated.
@@ -1022,7 +1022,7 @@ padRight(value: string, charCount: number, fillWith: string): string
 
 
 
-### regexpSplitParts
+### `regexpSplitParts`
 {: #regexpsplitparts}
 
 Splits string on regexp-delimiter, returns the field at index. Indexes start with 1.
@@ -1034,7 +1034,7 @@ regexpSplitParts(string: string, delimiter: regexp, index: number): string
 
 
 
-### rtrim
+### `rtrim`
 {: #rtrim}
 
 
@@ -1046,7 +1046,7 @@ rtrim(value: string): string
 {: codeblock}
 
 
-### splitParts
+### `splitParts`
 {: #splitparts}
 
 Splits string on delimiter, returns the field at index. Indexes start with 1.
@@ -1058,7 +1058,7 @@ splitParts(string: string, delimiter: string, index: number): string
 
 
 
-### startsWith
+### `startsWith`
 {: #startswith}
 
 Returns true if string starts with prefix.
@@ -1070,7 +1070,7 @@ startsWith(string: string, prefix: string): bool
 
 
 
-### substr
+### `substr`
 {: #substr}
 
 Returns the substring in value, from position from and up to length `length`.
@@ -1082,7 +1082,7 @@ substr(value: string, from: number, length: number?): string
 
 
 
-### toLowerCase
+### `toLowerCase`
 {: #tolowercase}
 
 Converts value to lowercase.
@@ -1094,7 +1094,7 @@ toLowerCase(value: string): string
 
 
 
-### toUpperCase
+### `toUpperCase`
 {: #touppercase}
 
 Converts value to uppercase.
@@ -1106,7 +1106,7 @@ toUpperCase(value: string): string
 
 
 
-### trim
+### `trim`
 {: #trim}
 
 Removes whitespace from the edges of a string value.
@@ -1121,7 +1121,7 @@ trim(value: string): string
 ## IP Functions
 {: #ip-functions}
 
-### ipInSubnet
+### `ipInSubnet`
 {: #ipinsubnet}
 
 Returns true if IP is in the subnet of `ipPrefix`.
@@ -1133,7 +1133,7 @@ ipInSubnet(ip: string, ipPrefix: string): bool
 
 
 
-### ipPrefix
+### `ipPrefix`
 {: #ipprefix}
 
 Returns the IP prefix of a given IP address with `subnetSize` bits (for example, 192.128.0.0/9).
@@ -1157,7 +1157,7 @@ ipPrefix(ip: string, subnetSize: number): string
 {: #uuid-functions}
 
 
-### isUuid
+### `isUuid`
 {: #isuuid}
 
 Returns true if UUID is valid.
@@ -1169,7 +1169,7 @@ isUuid(uuid: string): bool
 
 
 
-### randomUuid
+### `randomUuid`
 {: #randomuuid}
 
 Returns a random UUIDv4.
@@ -1183,7 +1183,7 @@ randomUuid(): string
 ## General Functions
 {: #general-functions}
 
-### firstNonNull
+### `firstNonNull`
 {: #firstnonnull}
 
 Returns the first non-null value from the parameters. Works only on scalars.
@@ -1194,7 +1194,7 @@ firstNonNull(value: any, ...values: any): any
 {: codeblock}
 
 
-### if
+### `if`
 {: #if}
 
 Return either the `then` or `else` according to the result of `condition`.
@@ -1206,7 +1206,7 @@ if(condition: bool, then: any, else: any?): any
 
 
 
-### in
+### `in`
 {: #in}
 
 Tests if the comparand is equal to any of the values in a set v1 ... vN.
@@ -1218,7 +1218,7 @@ in(comparand: any, value: any, ...values: any): bool
 
 
 
-### recordLocation
+### `recordLocation`
 {: #recordlocation}
 
 Returns the location of the record (for example, s3 URL).
@@ -1233,7 +1233,7 @@ recordLocation(): string
 ## Number Functions
 {: #number-functions}
 
-### abs
+### `abs`
 {: #abs}
 
 Returns the absolute value of number.
@@ -1245,7 +1245,7 @@ abs(number: number): number
 
 
 
-### ceil
+### `ceil`
 {: #ceil}
 
 Rounds the value up to the nearest integer.
@@ -1257,7 +1257,7 @@ ceil(number: number): number
 
 
 
-### e
+### `e`
 {: #euler}
 
 Returns the constant Euler’s number.
@@ -1269,7 +1269,7 @@ e(): number
 
 
 
-### floor
+### `floor`
 {: #floor}
 
 Rounds the value down to the nearest integer.
@@ -1281,7 +1281,7 @@ floor(number: number): number
 
 
 
-### fromBase
+### `fromBase`
 {: #frombase}
 
 Returns the value of string interpreted as a base-radix number.
@@ -1293,7 +1293,7 @@ fromBase(string: string, radix: number): number
 
 
 
-### ln
+### `ln`
 {: #ln}
 
 Returns the natural log of number.
@@ -1305,7 +1305,7 @@ ln(number: number): number
 
 
 
-### log
+### `log`
 {: #log}
 
 Returns the log of number in base `base`.
@@ -1317,7 +1317,7 @@ log(base: number, number: number): number
 
 
 
-### log2
+### `log2`
 {: #log2}
 
 Returns the log of number in base 2. Equivalent to `log(2, number)`.
@@ -1329,7 +1329,7 @@ log2(number: number): number
 
 
 
-### max
+### `max`
 {: #max-number}
 
 Returns the maximum number of all the numbers passed to the function.
@@ -1341,7 +1341,7 @@ max(value: number, ...values: number): number
 
 
 
-### min
+### `min`
 {: #min}
 
 Returns the least number of all the numbers passed to the function.
@@ -1353,7 +1353,7 @@ min(value: number, ...values: number): number
 
 
 
-### mod
+### `mod`
 {: #mod}
 
 Returns the modulus (remainder) of number divided by `divisor`.
@@ -1365,7 +1365,7 @@ mod(number: number, divisor: number): number
 
 
 
-### pi
+### `pi`
 {: #pi}
 
 Returns the constant Pi.
@@ -1377,7 +1377,7 @@ pi(): number
 
 
 
-### power
+### `power`
 {: #power}
 
 Returns `number`^`exponent`.
@@ -1389,7 +1389,7 @@ power(number: number, exponent: number): number
 
 
 
-### random
+### `random`
 {: #random}
 
 Returns a pseudo-random value in the range 0.0 <= x < 1.0.
@@ -1401,7 +1401,7 @@ random(): number
 
 
 
-### randomInt
+### `randomInt`
 {: #randomint}
 
 Returns a pseudo-random integer number between 0 and n (exclusive).
@@ -1412,7 +1412,7 @@ randomInt(upperBound: number): number
 {: codeblock}
 
 
-### round
+### `round`
 {: #round}
 
 Round `number` to `digits` decimal places.
@@ -1424,7 +1424,7 @@ round(number: number, digits: number?): number
 
 
 
-### sqrt
+### `sqrt`
 {: #sqrt}
 
 Returns square root of a number.
@@ -1436,7 +1436,7 @@ sqrt(number: number): number
 
 
 
-### toBase
+### `toBase`
 {: #tobase}
 
 Returns the base-radix representation of `number`.
@@ -1451,7 +1451,7 @@ toBase(number: number, radix: number): string
 ## URL Functions
 {: #url-functions}
 
-### urlDecode
+### `urlDecode`
 {: #urldecode}
 
 Unescapes the URL encoded in string. Contrast with [urlEncode](#urlencode).
@@ -1463,7 +1463,7 @@ urlDecode(string: string): string
 
 
 
-### urlEncode
+### `urlEncode`
 {: #urlencode}
 
 Escapes string by encoding it so that it can be safely included in URL. Contrast with [urlDecode](#urldecode).
@@ -1499,7 +1499,7 @@ DataPrime timestamps are always stored in the UTC time zone, but some date/time 
 * time zone shorthand (for example, 'UTC', 'GMT', 'EST', and so on)
 * time zone identifier (for example, 'Asia/Yerevan', 'Europe/Zurich', 'America/Winnipeg', and so on)
 
-### addInterval
+### `addInterval`
 {: #addinterval}
 
 Adds two intervals together. Also works with negative intervals. Equivalent to `left + right`.
@@ -1510,7 +1510,7 @@ addInterval(left: interval, right: interval): interval
 {: codeblock}
 
 
-### addTime
+### `addTime`
 {: #addtime}
 
 Adds an interval to a timestamp. Also works with negative intervals. Equivalent to `t + i`.
@@ -1522,7 +1522,7 @@ addTime(t: timestamp, i: interval): timestamp
 
 
 
-### diffTime
+### `diffTime`
 {: #difftime}
 
 Calculates the duration between two timestamps. Positive if `to` > `from`, negative if `to` < `from`. Equivalent to `to - from`.
@@ -1534,7 +1534,7 @@ diffTime(to: timestamp, from: timestamp): interval
 
 
 
-### extractTime
+### `extractTime`
 {: #extracttime}
 
 Extracts either a date or time unit from a timestamp. Returns a floating point number for time units less than a minute, otherwise an integer. Date units such as `month` or `week` start from 1 (not from 0).
@@ -1546,12 +1546,12 @@ extractTime(timestamp: timestamp, unit: dateunit | timeunit, tz: string?): numbe
 
 Function parameters:
 
-* timestamp (required) – the timestamp to extract from.
-* unit (required) – the date or time unit to extract. Must be a string literal and one of:
+* `timestamp` (required) – the timestamp to extract from.
+* `unit` (required) – the date or time unit to extract. Must be a string literal and one of:
    * any time unit in either long or short notation
    * a date unit in long notation: `year`, `month`, `week`, `day_of_year`, `day_of_week`
    * a date unit in short notation: `Y`, `M`, `W`, `doy`, `dow`
-* tz (optional) – a time zone to convert the timestamp before extracting.
+* `tz` (optional) – a time zone to convert the timestamp before extracting.
 
 
 Example 1: extract the hour in Tokyo
@@ -1584,7 +1584,7 @@ limit 1 | choose $m.timestamp.extractTime('dow') as d # Result 4: Tuesday { "d":
 
 
 
-### formatInterval
+### `formatInterval`
 {: #formatinterval}
 
 Formats `interval` to a string with an optional time unit `scale`.
@@ -1596,8 +1596,8 @@ formatInterval(interval: interval, scale: timeunit?): string
 
 Function parameters:
 
-* interval (required) – the interval to format.
-* scale (optional) – the maximum time unit of the interval to show. Defaults to nano.
+* `interval` (required) – the interval to format.
+* `scale` (optional) – the maximum time unit of the interval to show. Defaults to nano.
 
 
 Example:
@@ -1607,7 +1607,7 @@ limit 3 | choose formatInterval(now() - $m.timestamp, 's') as i # Results: { "i"
 ```
 {: codeblock}
 
-### formatTimestamp
+### `formatTimestamp`
 {: #formattimestamp}
 
 Formats a timestamp to a string with an optional format specification and destination time zone.
@@ -1619,15 +1619,15 @@ formatTimestamp(timestamp: timestamp, format: string?, tz: string?): string
 
 Function parameters:
 
-* timestamp (required) – the timestamp to format.
-* format (optional) – a date/time format specification for parsing timestamps. Defaults to 'iso8601'. The format can be any string with embedded date/time formatters, or one of several shorthands. Here are a few samples:
+* `timestamp` (required) – the timestamp to format.
+* `format` (optional) – a date/time format specification for parsing timestamps. Defaults to 'iso8601'. The format can be any string with embedded date/time formatters, or one of several shorthands. Here are a few samples:
    * '%Y-%m-%d' – print the date only, for example '2023-04-05'
    * '%H:%M:%S' – print the time only, for example '16:07:33'
    * '%F %H:%M:%S' – print both date and time, for example '2023-04-05 16:07:33'
    * 'iso8601' – print a timestamp in ISO 8601 format, for example '2023-04-05T16:07:33.123Z'
    * 'timestamp_milli' – print a timestamp in milliseconds (13 digits), for example '1680710853123'
 
-tz (optional) – the destination time zone to convert the timestamp before formatting.
+`tz` (optional) – the destination time zone to convert the timestamp before formatting.
 
 Example 1: print a timestamp with default format and +5h offset
 
@@ -1657,7 +1657,7 @@ limit 1 | choose $m.timestamp.formatTimestamp('timestamp_milli') as ms # Result 
 ```
 {: codeblock}
 
-### fromUnixTime
+### `fromUnixTime`
 {: #fromunixtime}
 
 Converts a number of a specific time units since the UNIX epoch to a timestamp (in UTC). The UNIX epoch starts on January 1, 1970 – earlier timestamps are represented by negative numbers.
@@ -1669,8 +1669,8 @@ fromUnixTime(unixTime: number, timeUnit: timeunit?): timestamp
 
 Function parameters:
 
-* unixTime (required) – the amount of time units to convert. Can be either positive or negative and will be rounded down to an integer.
-* timeUnit (optional) – the time units to convert. Defaults to 'milli'.
+* `unixTime` (required) – the amount of time units to convert. Can be either positive or negative and will be rounded down to an integer.
+* `timeUnit` (optional) – the time units to convert. Defaults to 'milli'.
 
 Example:
 
@@ -1679,7 +1679,7 @@ limit 1 | choose fromUnixTime(1658958157515, 'ms') as ts # Result: { "ts": 16589
 ```
 {: codeblock}
 
-### multiplyInterval
+### `multiplyInterval`
 {: #multiplyinterval}
 
 Multiplies an interval by a numeric factor. Works both with integer and fractional numbers. Equivalent to `i * factor`.
@@ -1691,7 +1691,7 @@ multiplyInterval(i: interval, factor: number): interval
 
 
 
-### now
+### `now`
 {: #now}
 
 Returns the current time at query execution time. Stable across all rows and within the entire query, even when used multiple times. Nanosecond resolution if the runtime supports it, otherwise millisecond resolution.
@@ -1710,7 +1710,7 @@ limit 3 | choose now() as now, now() - $m.timestamp as since # Results: { "now":
 ```
 {: codeblock}
 
-### parseInterval
+### `parseInterval`
 {: #parseinterval}
 
 Parses an interval from a string with format `NdNhNmNsNmsNusNns` where N is the amount of each time unit. Returns null when the input does not match the expected format:
@@ -1748,7 +1748,7 @@ limit 1 | choose '-5m45s'.parseInterval() as i # Result 3: { "i": "-5m45s" }
 ```
 {: codeblock}
 
-### parseTimestamp
+### `parseTimestamp`
 {: #parsetimestamp}
 
 Parses a timestamp from string with an optional format specification and time zone override. Returns null when the input does not match the expected format.
@@ -1760,14 +1760,14 @@ parseTimestamp(string: string, format: string?, tz: string?): timestamp
 
 Function parameters:
 
-* string (required) – the input from which the timestamp will be extracted.
-* format (optional) – a date/time format specification for parsing timestamps. Defaults to 'auto'. The format can be any string with embedded date/time extractors, one of several shorthands, or a cascade of formats to be attempted in sequence. Here are a few samples:
+* `string` (required) – the input from which the timestamp will be extracted.
+* `format` (optional) – a date/time format specification for parsing timestamps. Defaults to 'auto'. The format can be any string with embedded date/time extractors, one of several shorthands, or a cascade of formats to be attempted in sequence. Here are a few samples:
    * '%Y-%m-%d' – parse date only, for example '2023-04-05'
    * '%F %H:%M:%S' – parse date and time, for example '2023-04-05 16:07:33'
    * 'iso8601' – parse a timestamp in ISO 8601 format, for example '2023-04-05T16:07:33.123Z'
    * 'timestamp_milli' – parse a timestamp in milliseconds (13 digits), for example '1680710853123'
    * '%m/%d/%Y|timestamp_second' – parse either a date or a timestamp in seconds, in that order
-* tz (optional) – a time zone override to convert the timestamp while parsing. This parameter will override any time zone present in the input. A time zone can be extracted from the string by using an appropriate format and omitting this parameter.
+* `tz` (optional) – a time zone override to convert the timestamp while parsing. This parameter will override any time zone present in the input. A time zone can be extracted from the string by using an appropriate format and omitting this parameter.
 
 Example 1: parse a date with the default format
 
@@ -1797,7 +1797,7 @@ limit 1 | choose '1680710853'.parseTimestamp('timestamp_second') as ts # Result 
 ```
 {: codeblock}
 
-### roundInterval
+### `roundInterval`
 {: #roundinterval}
 
 Rounds an interval to a time unit `scale`. Lesser time units will be zeroed out.
@@ -1809,8 +1809,8 @@ roundInterval(interval: interval, scale: timeunit): interval
 
 Function parameters:
 
-* interval (required) – the interval to round.
-* scale (required) – the maximium time unit of the interval to keep.
+* `interval` (required) – the interval to round.
+* `scale` (required) – the maximium time unit of the interval to keep.
 
 Example:
 
@@ -1820,7 +1820,7 @@ limit 1 | choose 2h5m45s.roundInterval('m') as i # Result: { "i": "2h5m" }
 {: codeblock}
 
 
-### roundTime
+### `roundTime`
 {: #roundtime_interval}
 
 Rounds a timestamp to the given interval. Useful for bucketing, for example, rounding to 1h for hourly buckets. Equivalent to `date / interval`.
@@ -1838,7 +1838,7 @@ groupby $m.timestamp.roundTime(1h) as bucket count() as n # Results: { "bucket":
 ```
 {: codeblock}
 
-### subtractInterval
+### `subtractInterval`
 {: #subtractinterval}
 
 Subtracts one interval from another. Equivalent to `addInterval(left, -right)` and `left - right`.
@@ -1850,7 +1850,7 @@ subtractInterval(left: interval, right: interval): interval
 
 
 
-### subtractTime
+### `subtractTime`
 {: #subtracttime}
 
 Subtracts an interval from a timestamp. Equivalent to `addTime(t, -i)` and `t - i`.
@@ -1862,7 +1862,7 @@ subtractTime(t: timestamp, i: interval): timestamp
 
 
 
-### toInterval
+### `toInterval`
 {: #tointerval}
 
 Converts a number of specific time units to an interval. Works with both integer and floating point and positive and negative numbers.
@@ -1874,8 +1874,8 @@ toInterval(number: number, timeUnit: timeunit?): interval
 
 Function parameters:
 
-* number (required) – the amount of time units to convert.
-* timeUnit (optional) – Time units to convert. Defaults to nano.
+* `number` (required) – the amount of time units to convert.
+* `timeUnit` (optional) – Time units to convert. Defaults to nano.
 
 Example 1: convert a floating point number
 
@@ -1884,7 +1884,7 @@ limit 1 | choose 2.5.toInterval('h') as i # Result 1: { "i": "2h30m" } # Example
 ```
 {: codeblock}
 
-### toUnixTime
+### `toUnixTime`
 {: #tounixtime}
 
 Converts timestamp to a number of specific time units since the UNIX epoch (in UTC). The UNIX epoch starts on January 1, 1970 – earlier timestamps are represented by negative numbers.
@@ -1897,8 +1897,8 @@ toUnixTime(timestamp: timestamp, timeUnit: timeunit?): number
 
 Function parameters:
 
-* timestamp (required) – the timestamp to convert.
-* timeUnit (optional) – the time units to convert to. Defaults to 'milli'.
+* `timestamp` (required) – the timestamp to convert.
+* `timeUnit` (optional) – the time units to convert to. Defaults to 'milli'.
 
 Example:
 
@@ -1911,7 +1911,7 @@ limit 1 | choose $m.timestamp.toUnixTime('hour') as hr # Result: { "hr": 470363 
 {: #encode-decode}
 
 
-### decodeBase64
+### `decodeBase64`
 {: #decodebase64}
 
 Decode a base-64 encoded string.
@@ -1923,7 +1923,7 @@ decodeBase64(value: string): string
 
 
 
-### encodeBase64
+### `encodeBase64`
 {: #encodebase64}
 
 Encode a string into base-64.
@@ -1940,7 +1940,7 @@ encodeBase64(value: string): string
 
 Case expressions are special constructs in the language that allow choosing between multiple options in a readable way. They can be wherever an expression is expected.
 
-### case
+### `case`
 {: #case}
 
 Choose between multiple values based on several generic conditions. Uses a default-value if no condition is met.
@@ -1978,7 +1978,7 @@ source logs | ... | create $d.http_response_outcome from case {
 ```
 {: codeblock}
 
-### case_contains
+### `case_contains`
 {: #case-contains}
 
 Shorthand for `case` which allows checking if a string `s` contains one of several substrings without repeating the expression leading to `s`. The chosen value is the first which matches `s.contains(substring)`.
@@ -2007,7 +2007,7 @@ case_contains {
 ```
 {: codeblock}
 
-### case_equals
+### `case_equals`
 {: #caseequals}
 
 Shorthand for case which allows comparing some expression `e` to several results without repeating the expression. The chosen value is the first which matches `s == value`.
@@ -2035,7 +2035,7 @@ case_equals {
 ```
 {: codeblock}
 
-### case_greaterthan
+### `case_greaterthan`
 {: #casegreaterthan}
 
 Shorthand for case which allows comparing `n` to multiple values without repeating the expression leading to `n`. The chosen value is the first which matches `expression > value`.
@@ -2067,7 +2067,7 @@ case_greaterthan {
 ```
 {: codeblock}
 
-### case_lessthan
+### `case_lessthan`
 {: #caselessthan}
 
 Shorthand for case which allows comparing a number `n` to multiple values without repeating the expression leading to `n`. The chosen value is the first which matches `expression < value`.
@@ -2103,7 +2103,7 @@ case_lessthan {
 {: #aggregation_functions}
 
 
-### any_value
+### `any_value`
 {: #anyvalue}
 
 Returns any non-null expression value in the group. If expression is not defined, it defaults to the $data object.
@@ -2122,7 +2122,7 @@ groupby $m.severity calculate any_value($d.url)
 ```
 {: codeblock}
 
-### avg
+### `avg`
 {: #avg}
 
 Calculates the average value of a numerical expression in the group.
@@ -2139,7 +2139,7 @@ groupby $m.severity calculate avg($d.duration) as average_duration
 ```
 {: codeblock}
 
-### count
+### `count`
 {: #count-non-nnull}
 
 Counts non-null expression values. If expression is not defined, all rows will be counted.
@@ -2165,7 +2165,7 @@ will result in a single row of the following form:
 ```
 {: codeblock}
 
-### count_if
+### `count_if`
 {: #countif}
 
 Counts non-null expression values on rows which satisfy the condition. If expression is not defined, all rows that satisfy condition will be counted.
@@ -2183,7 +2183,7 @@ groupby $m.severity calculate count_if($d.duration > 500, $d.company_id) as $d.h
 ```
 {: codeblock}
 
-### distinct_count
+### `distinct_count`
 {: #distinctcount}
 
 Counts non-null distinct expression values.
@@ -2200,7 +2200,7 @@ groupby $l.applicationname calculate distinct_count($d.username) as active_users
 ```
 {: codeblock}
 
-### distinct_count_if
+### `distinct_count_if`
 {: #distinctcountif}
 
 Counts non-null distinct expression values on rows which satisfy condition.
@@ -2217,7 +2217,7 @@ groupby $l.applicationname calculate distinct_count_if($m.severity == 'Error', $
 ```
 {: codeblock}
 
-### max
+### `max`
 {: #max-of-group}
 
 Calculates the maximum value of a numerical expression in the group.
@@ -2234,7 +2234,7 @@ groupby $m.severity calculate max($d.duration)
 ```
 {: codeblock}
 
-### min
+### `min`
 {: #min-of-group}
 
 Calculates the minimum value of a numerical expression in the group.
@@ -2251,7 +2251,7 @@ groupby $m.severity calculate min($d.duration)
 ```
 {: codeblock}
 
-### percentile
+### `percentile`
 {: #percentile}
 
 Calculates the approximate n-th percentile value of a numerical expression in the group.
@@ -2270,7 +2270,7 @@ groupby $m.severity calculate percentile(0.99, $d.duration) as p99_latency
 ```
 {: codeblock}
 
-### sample_stddev
+### `sample_stddev`
 {: #samplestddev}
 
 Computes the sample standard deviation of a numerical expression in the group.
@@ -2287,7 +2287,7 @@ groupby $m.severity calculate sample_stddev($d.duration)
 ```
 {: codeblock}
 
-### sample_variance
+### `sample_variance`
 {: #samplevariance}
 
 Computes the variance of a numerical expression in the group.
@@ -2304,7 +2304,7 @@ groupby $m.severity calculate sample_variance($d.duration)
 ```
 {: codeblock}
 
-### stddev
+### `stddev`
 {: #stddev}
 
 Computes the standard deviation of a numerical expression in the group.
@@ -2321,7 +2321,7 @@ groupby $m.severity calculate stddev($d.duration)
 ```
 {: codeblock}
 
-### sum
+### `sum`
 {: #sum}
 
 Calculates the sum of a numerical expression in the group.
@@ -2340,7 +2340,7 @@ groupby $m.severity calculate sum($d.duration) as total_duration
 {: codeblock}
 
 
-### variance
+### `variance`
 {: #variance}
 
 Computes the variance of a numerical expression in the group.
