@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Tutorial for migrating 1 Activity Tracker instance in the account in steps
 {: #migration-tutorial-at-option1}
 
-Use this tutorial to migrate the {{site.data.keyword.at_full}} instance by using the migration tool, and then, configure manually the {{site.data.keyword.atracker_full_notm}} service afterwards.
+Use this tutorial to migrate 1 {{site.data.keyword.at_full}} instance by using the migration tool, and then, configure manually the {{site.data.keyword.atracker_full_notm}} service afterwards.
 {: shortdesc}
 
 
@@ -29,11 +29,13 @@ Options to migrate:
 - Option 1: Migrate the {{site.data.keyword.at_full}} instance by using the migration tool, and then, configure manually the {{site.data.keyword.atracker_full_notm}} service afterwards.
 - Option 2: Migrate the {{site.data.keyword.at_full}} instance and configure the {{site.data.keyword.atracker_full_notm}} service by running the migration tool.
 
-When you configure the {{site.data.keyword.atracker_full_notm}} service, you are taking the control in the account where events are routed. For migration, it is very important that you first configure {{site.data.keyword.atracker_full_notm}} and define a `logdna` target and a route for the region where the {{site.data.keyword.at_full}} instance is available so you configure the current default behavior in the account. Afterwards, you can define a `cloud_logs` target and route to send the same data to the migrated {{site.data.keyword.logs_full_notm}} instance. If you do not define a logdna target, events will stop being routed your current {{site.data.keyword.at_full}} instance.
+When you configure the {{site.data.keyword.atracker_full_notm}} service, you are taking the control in the account where events are routed. For migration, it is very important that you first configure {{site.data.keyword.atracker_full_notm}} and define a `logdna` target and a route for the region where the {{site.data.keyword.at_full}} instance is available so you configure the current default behavior in the account. Afterwards, you can define a `cloud_logs` target and route to send the same data to the migrated {{site.data.keyword.logs_full_notm}} instance. If you do not define a logdna target first, events will stop being routed to your current {{site.data.keyword.at_full}} instance.
 {: important}
+
 
 Always run the Migration Tool in a development or staging environment to test and validate the migration command and steps.
 {: important}
+
 
 ![High-level view of the migration tool](/images/migration-at-1.png "High-level view of the migration tool"){: caption="High-level view of the migration tool" caption-side="bottom"}
 
