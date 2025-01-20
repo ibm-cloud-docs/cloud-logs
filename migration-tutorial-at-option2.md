@@ -61,7 +61,7 @@ Complete these steps before you begin:
 
 1. Make sure you use an ID that has permissions for migrating your instance.
 
- See [Required permissions for running the Migration tool](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
+    See [Required permissions for running the Migration tool](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
 
     If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
     {: important}
@@ -149,7 +149,7 @@ Complete the following steps:
 
         - [ ] IAM authorization between Cloud Logs and the Event Notifications service.
 
-        - [ ] Add an external integration in Cloud Logs to the Event Notifications instance.
+    - [ ] Add an external integration in Cloud Logs to the Event Notifications instance.
 
     - [ ] Activity Tracker Event Routing is configured to continue receiving auditing events in the Activity Tracker instance and the new Cloud Logs instance.
 
@@ -175,13 +175,13 @@ Complete the following steps:
 
 6. Verify your views and alert configurations in Cloud Logs.
 
-    In Activity Tracker, a view and an alert are tightly coupled. You define the triggering condition (query) in the view and configure an alert to indicate when and to hoe many notification channels to send the event.
+    In Activity Tracker, a view and an alert are tightly coupled. You define the triggering condition (query) in the view and configure an alert to indicate when and to how many notification channels to send the event.
 
     In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. The migration tool creates a view and an alert as independent resources. The query is the same in both cases. Also adds an integration to the Event Notifications service so when is trigger, an event is sent to your destinations.
 
-    When you verify the query of a view, if you make any changes tp a view configuration such as changing the applicationName or the subsystemName, you must make the same changes to the alerts resource.
+    When you verify the query of a view, if you make any changes to a view configuration such as changing the applicationName or the subsystemName, you must make the same changes to the alerts resource.
 
-    You can check that alerts trigger in the [Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
+    You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
 
 7. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/activityTrackerInstanceID/`and verify that alerts are triggered.
 
@@ -191,13 +191,13 @@ Complete the following steps:
 
     The following Event Notification resources are required:
 
-        - [ ] 1 Source that defines the integration between the Cloud Logs instance and the Event Notifications instance
+    - [ ] 1 Source that defines the integration between the Cloud Logs instance and the Event Notifications instance
 
-        - [ ] Destination channels: You must have 1 destination per notification channel such as Slack, PagerDuty, WebHook
+    - [ ] Destination channels: You must have 1 destination per notification channel such as Slack, PagerDuty, WebHook
 
-        - [ ] Topics: A topic is created for the alerts that send notifications through the same destination.
+    - [ ] Topics: A topic is created for the alerts that send notifications through the same destination.
 
-        - [ ] Subscriptions to correlate topics and destinations.
+    - [ ] Subscriptions to correlate topics and destinations.
 
     Checklist of tasks:
 
