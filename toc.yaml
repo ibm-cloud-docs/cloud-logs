@@ -57,15 +57,15 @@ toc:
           - topic: migration-permissions.md
             navtitle: Required permissions
           - topic: migration-tutorial-at-option2.md
-            navtitle: Tutorial Migrating 1 instance of Activity Tracker end to end by using the migration tool
+            navtitle: Migrating 1 instance of Activity Tracker end to end
           - topic: migration-tutorial-at-option1.md
-            navtitle: Tutorial Migrating 1 instance of Activity Tracker in multiple steps by using the migration tool
+            navtitle: Migrating 1 instance of Activity Tracker in multiple steps
           - topic: migration-tutorial-at-option3.md
-            navtitle: Tutorial Configuring Activity Tracker in the account for a new setup that does not require migration
+            navtitle: Configuring Activity Tracker in the account for a new setup that does not require migration
           - topic: migration-tutorial-la.md
-            navtitle: Tutorial Migrating 1 instance of Log Analysis by using the migration tool
+            navtitle: Migrating 1 instance of Log Analysis
           - topic: migration-tutorial-la-plat.md
-            navtitle: Tutorial Migrating 1 instance of Log Analysis with platforms log enabled by using the migration tool
+            navtitle: Migrating 1 instance of Log Analysis with platforms log enabled
           - topic: template-migration-at.md
             navtitle: Planning template for Activity Tracker
           - topic: template-migration-la-platform.md

@@ -158,7 +158,7 @@ Complete the following steps:
 
 5. Deploy and configure the Logging agent to collect and route logs to the Cloud Logs instance.
 
-    You must use an authorization method that allows thw agent to send logs to a CLoud Logs instance. For more information, see [Authorization methods](/docs/cloud-logs?topic=cloud-logs-agent-about#agent-auth-methods).
+    You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the IBM® Cloud Logs service. Choose a supported authorization method for the environment where you plan to deploy the agent: For more information, see [Authorization methods](/docs/cloud-logs?topic=cloud-logs-agent-about#agent-auth-methods).
     {: important}
 
 
