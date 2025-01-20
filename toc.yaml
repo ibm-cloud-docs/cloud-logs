@@ -57,11 +57,11 @@ toc:
           - topic: migration-permissions.md
             navtitle: Required permissions
           - topic: migration-tutorial-at-option2.md
-            navtitle: Migrating 1 instance of Activity Tracker end to end
+            navtitle: Tutorial Migrating 1 instance of Activity Tracker end to end
           - topic: migration-tutorial-at-option1.md
-            navtitle: Migrating 1 instance of Activity Tracker in steps
+            navtitle: Tutorial Migrating 1 instance of Activity Tracker in steps
           - topic: migration-tutorial-at-option3.md
-            navtitle: Migrating Activity Tracker in the account
+            navtitle: Tutorial Configuring Activity Tracker in the account (new setup bypassing migration)
           - topic: template-migration-at.md
             navtitle: Planning template for Activity Tracker
           - topic: template-migration-la-platform.md
