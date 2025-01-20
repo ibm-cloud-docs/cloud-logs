@@ -56,6 +56,12 @@ toc:
             navtitle: Migrating to IBM Cloud Logs
           - topic: migration-permissions.md
             navtitle: Required permissions
+          - topic: migration-tutorial-at-option2.md
+            navtitle: Migrating 1 instance of Activity Tracker end to end
+          - topic: migration-tutorial-at-option1.md
+            navtitle: Migrating 1 instance of Activity Tracker in steps
+          - topic: migration-tutorial-at-option3.md
+            navtitle: Migrating Activity Tracker in the account
           - topic: template-migration-at.md
             navtitle: Planning template for Activity Tracker
           - topic: template-migration-la-platform.md
