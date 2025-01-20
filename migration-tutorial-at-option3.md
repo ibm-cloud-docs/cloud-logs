@@ -13,10 +13,10 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Tutorial for configuring Activity Tracker in the account (new setup bypassing migration)
+# Tutorial for configuring Activity Tracker in the account for a new setup that does not require migration
 {: #migration-tutorial-at-option3}
 
-Use this tutorial to configure the {{site.data.keyword.atracker_full_notm}} service to collect activity tracking events in a Cloud Logs instance in the account. No need to run the migration tool.
+Use this tutorial to configure the {{site.data.keyword.atracker_full_notm}} service to route activity tracking events to a Cloud Logs instance in the account. No need to run the migration tool.
 {: shortdesc}
 
 Migrating {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires the configuration of the {{site.data.keyword.atracker_full_notm}} service in the account to define where events are routed and the provisioning of 1 or more {{site.data.keyword.logs_full_notm}} instances. A migration tool is provided to help you migrate. However, you might find that you do not want to migrate and prefer to start fresh in Cloud Logs. If this is your scenario, complete this tutorial to create 1 Cloud Logs instance in the account where you collect activity tracking events that are generated in the account by configuring the Activity Tracker Event Routing service.

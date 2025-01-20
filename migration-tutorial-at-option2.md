@@ -37,8 +37,6 @@ When you configure the {{site.data.keyword.atracker_full_notm}} service, you are
 Always run the Migration Tool in a development or staging environment to test and validate the migration command and steps.
 {: important}
 
-![High-level view of the migration tool](/images/migration-at-1.png "High-level view of the migration tool"){: caption="High-level view of the migration tool" caption-side="bottom"}
-
 
 The following list outlines the services that you need access for migration an {{site.data.keyword.at_full}} instance:
 
@@ -217,7 +215,7 @@ Complete the following steps:
 
     - [ ] Verify that permissions have been applied and your users and IDs have the correct access.
 
-    The IAM policies that are defined in the roles.tf file are configured for the Cloud Logs instance ID. Why? Activity Tracker and Log Analysis are 2 different services that you must migrate. In the new architecture, the same service is used to manage the different types of data that Activity Tracker and Log Analysis monitor. Therefore, to avoid granting higher permissions that required when you gave policies for both services in an access group or for a user, for example, the policies included are specific to the Cloud Logs Instance ID to which they apply. The roles are identified by running the access report that you can also run manually to verify who has access to your instance.
+    The IAM policies that are defined in the roles.tf file are configured for the Cloud Logs instance ID. Why? Activity Tracker and Log Analysis are 2 different services that you must migrate. In the new architecture, the same service is used to manage the different types of data that Activity Tracker and Log Analysis monitor. Therefore, to avoid granting higher permissions than required when you give policies for both services in an access group or for a user, for example, the policies included are specific to the Cloud Logs Instance ID to which they apply. The roles are identified by running the access report that you can also run manually to verify who has access to your instance.
     {: important}
 
 10. Add other IAM configurations manually

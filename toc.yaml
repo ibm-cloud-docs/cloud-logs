@@ -62,6 +62,10 @@ toc:
             navtitle: Tutorial Migrating 1 instance of Activity Tracker in multiple steps by using the migration tool
           - topic: migration-tutorial-at-option3.md
             navtitle: Tutorial Configuring Activity Tracker in the account for a new setup that does not require migration
+          - topic: migration-tutorial-la.md
+            navtitle: Tutorial Migrating 1 instance of Log Analysis by using the migration tool
+          - topic: migration-tutorial-la-plat.md
+            navtitle: Tutorial Migrating 1 instance of Log Analysis with platforms log enabled by using the migration tool
           - topic: template-migration-at.md
             navtitle: Planning template for Activity Tracker
           - topic: template-migration-la-platform.md
