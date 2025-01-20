@@ -445,19 +445,7 @@ toc:
           - topic: migration-iam.md
             navtitle: Migrating IAM resources
           - topic: migration_data_access_rules.md
-            navtitle: Migrating log groups
-          - topicgroup:
-              label: Activity Tracker instances
-              topics:
-              - topic: migration-at.md
-                navtitle: Migrating Activity Tracker instances 
-          - topicgroup:
-              label: Log Analysis instances
-              topics:
-              - topic: migration-la.md
-                navtitle: Migrating Log Analysis instances
-              - topic: migration-platform-logs.md
-                navtitle: Migrating instances that collect platform logs 
+            navtitle: Migrating log groups 
           - topicgroup:
               label: Migration tool
               topics:
