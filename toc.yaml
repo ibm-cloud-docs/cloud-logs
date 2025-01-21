@@ -56,6 +56,12 @@ toc:
             navtitle: Migrating to IBM Cloud Logs
           - topic: migration-permissions.md
             navtitle: Required permissions
+          - topic: template-migration-at.md
+            navtitle: Planning template for Activity Tracker
+          - topic: template-migration-la-platform.md
+            navtitle: Planning template for instances collecting platform logs
+          - topic: template-migration-logs.md
+            navtitle: Planning template for instances collecting logs
           - topic: migration-tutorial-at-option2.md
             navtitle: Migrating 1 instance of Activity Tracker end to end
           - topic: migration-tutorial-at-option1.md
@@ -66,12 +72,6 @@ toc:
             navtitle: Migrating 1 instance of Log Analysis
           - topic: migration-tutorial-la-plat.md
             navtitle: Migrating 1 instance of Log Analysis with platforms log enabled
-          - topic: template-migration-at.md
-            navtitle: Planning template for Activity Tracker
-          - topic: template-migration-la-platform.md
-            navtitle: Planning template for instances collecting platform logs
-          - topic: template-migration-logs.md
-            navtitle: Planning template for instances collecting logs
       - topicgroup:
           label: Release notes
           topics:

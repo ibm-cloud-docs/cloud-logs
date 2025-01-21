@@ -13,10 +13,10 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Tutorial for migrating 1 instance of Log Analysis with platforms log enabled by using the migration tool
+# Migrating 1 instance of Log Analysis with platforms log enabled by using the migration tool
 {: #migration-tutorial-la-plat}
 
-Use this tutorial to migrate 1 {{site.data.keyword.la_full_notm}} instance with platforms log enabled by using the migration tool.
+Use this topic to migrate 1 {{site.data.keyword.la_full_notm}} instance with platforms log enabled by using the migration tool.
 {: shortdesc}
 
 

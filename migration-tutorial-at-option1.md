@@ -13,10 +13,10 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Tutorial for migrating 1 Activity Tracker instance in the account in steps
+# Migrating 1 Activity Tracker instance in the account in steps
 {: #migration-tutorial-at-option1}
 
-Use this tutorial to migrate 1 {{site.data.keyword.at_full}} instance by using the migration tool, and then, configure manually the {{site.data.keyword.atracker_full_notm}} service afterwards.
+Use this topic to migrate 1 {{site.data.keyword.at_full}} instance by using the migration tool, and then, configure manually the {{site.data.keyword.atracker_full_notm}} service afterwards.
 {: shortdesc}
 
 

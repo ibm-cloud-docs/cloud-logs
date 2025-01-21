@@ -13,10 +13,10 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Tutorial for migrating 1 Log Analysis instance in the account by using the migration tool
+# Migrating 1 Log Analysis instance in the account by using the migration tool
 {: #migration-tutorial-la}
 
-Use this tutorial to migrate 1 {{site.data.keyword.la_full_notm}} instance by using the migration tool.
+Use this topic to migrate 1 {{site.data.keyword.la_full_notm}} instance by using the migration tool.
 {: shortdesc}
 
 
