@@ -25,19 +25,19 @@ Migrating {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.lo
 - Configuration of the logging agent to send data to the Cloud Logs instance
 
 
-Always run the Migration Tool in a development or staging environment to test and validate the migration command and steps.
+Always run the migration tool in a development or staging environment to test and validate the migration command and steps.
 {: important}
 
 
-The following list outlines the services that you need access for migration an {{site.data.keyword.la_full_notm}} instance:
+The following list outlines the services that you need access to migrate an {{site.data.keyword.la_full_notm}} instance:
 
 - Cloud Object Storage (to store data and metrics)
 
-- Event Notifications (to trigger alerts through Email, PD, Slack, webhook)
+- Event Notifications (to trigger alerts through Email, PagerDuty, Slack, webhook)
 
 - {{site.data.keyword.logs_full_notm}} (the new logging service in IBM Cloud Observability)
 
-- Event Streams for managing streaming of data through a topic in Event Streams
+- Event Streams for managing streaming of data through a topic
 
 
 
@@ -48,7 +48,7 @@ Complete these steps before you begin:
 
 1. Make sure you use an ID that has permissions for migrating your instance.
 
-    See [Required permissions for running the Migration tool](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
+    See [Required permissions for running the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
 
     If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
     {: important}
@@ -57,11 +57,11 @@ Complete these steps before you begin:
 
     - [ ] IAM permissions to read the DEK key name that is associated to a bucket if you have archiving configured on a bucket that has Key Protect enabled.
 
-    - [ ] IAM permissions to manage the Log Analysis Event Routing service
+    - [ ] IAM permissions to manage the Logs Routing service
 
     - [ ] IAM permissions to create authorizations between services in the account
 
-        - [ ] Log Analysis Event Routing and Cloud Logs
+        - [ ] Logs Routing and Cloud Logs
 
         - [ ] Cloud Logs and Cloud Object Storage
 
@@ -73,7 +73,7 @@ Complete these steps before you begin:
 
     - [ ] IAM permissions to configure sources, destinations, topics and subscriptions in IBM Cloud Event Notifications
 
-2. Generate an API key to use when you apply your Terraform scripts to create resources. Must have these [permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
+2. Generate an API key to use when you apply your Terraform scripts to create resources. You must have these [permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
 
 3. Install the Terraform CLI. Complete the steps in [Geting started with Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
@@ -85,14 +85,14 @@ Complete these steps before you begin:
 
 Complete the following steps:
 
-1. Create a directory from where you plan to run the migration tool. Then, go to that directory and set the API key that you must configure to create resources for migration.
+1. Create a directory from where you plan to run the migration tool. Then, go to that directory and set the API key to create resources for migration.
 
     Run `export IC_API_KEY=xxxxxx` in the command line where you plan to run the Terraform CLI commands.
 
     If running in Windows, use `set IC_API_KEY=xxxxxx` instead.
     {: note}
 
-2. Run the migration tool to generate and apply the terraform files. Take time to review them and customize them before applying them if you need to make changes.
+2. Run the migration tool to generate and apply the terraform files. Take time to review the files and customize them before applying them if you need to make changes.
 
     ```sh
     ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] -t [-f]
@@ -105,13 +105,13 @@ Complete the following steps:
 
     You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
 
-    You can change the default values for the Cloud Object Storage resources by adding the options [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name].
+    You can change the default values for the Cloud Object Storage resources by adding the options `[--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name]`.
 
     Run the migration tool with the option `-f` to apply the terraform files when you run the command. If you just want to generate terraform files, do not include this option.
 
 3. Use the following checklist to verify that the following assets are created in your account when you migrate the instance:
 
-    The Migration Tool only migrates configuration of selected resources.
+    The migration tool only migrates the configuration of selected resources.
     {: important}
 
     - Cloud Logs instance, including resources such as views, dashboards, screens, alerts and exclusion rules. The type of resources varies depending on your {{site.data.keyword.la_full_notm}} instance resources.
@@ -146,19 +146,19 @@ Complete the following steps:
 
 5. Deploy and configure the Logging agent to collect and route logs to the Cloud Logs instance.
 
-    You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the IBM® Cloud Logs service. Choose a supported authorization method for the environment where you plan to deploy the agent: For more information, see [Authorization methods](/docs/cloud-logs?topic=cloud-logs-agent-about#agent-auth-methods).
+    You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the IBM Cloud Logs service. Choose a supported authorization method for the environment where you plan to deploy the agent: For more information, see [Authorization methods](/docs/cloud-logs?topic=cloud-logs-agent-about#agent-auth-methods).
     {: important}
 
 
-    - [ ] [Deploy agent for Kubernetes clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy)
+    - [ ] [Deploy the agent for Kubernetes clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy)
 
-    - [ ] [Deploy agent for OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy)
+    - [ ] [Deploy the agent for OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy)
 
-    - [ ] [Deploy agent for Linux servers](/docs/cloud-logs?topic=cloud-logs-agent-linux)
+    - [ ] [Deploy the agent for Linux servers](/docs/cloud-logs?topic=cloud-logs-agent-linux)
 
-    - [ ] [Deploy agent for Windows servers](/docs/cloud-logs?topic=cloud-logs-agent-windows)
+    - [ ] [Deploy the agent for Windows servers](/docs/cloud-logs?topic=cloud-logs-agent-windows)
 
-    - [ ] [Deploy agent to collect and route rSyslog data](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog)
+    - [ ] [Deploy the agent to collect and route rSyslog data](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog)
 
 6. Verify your views and alert configurations in Cloud Logs.
 
@@ -166,7 +166,7 @@ Complete the following steps:
 
     In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. The migration tool creates a view and an alert as independent resources. The query is the same in both cases. Also adds an integration to the Event Notifications service so when is trigger, an event is sent to your destinations.
 
-    When you verify the query of a view, if you make any changes to a view configuration such as changing the applicationName or the subsystemName, you must make the same changes to the alerts resource.
+    When you verify the query of a view, if you make any changes to a view configuration such as changing the `applicationName` or the `subsystemName`, you must make the same changes to the alerts resource.
 
     You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
 
@@ -204,12 +204,12 @@ Complete the following steps:
 
     - [ ] Verify that permissions have been applied and your users and IDs have the correct access.
 
-    The IAM policies that are defined in the roles.tf file are configured for the Cloud Logs instance ID. Why? Activity Tracker and Log Analysis are 2 different services that you must migrate. In the new architecture, the same service is used to manage the different types of data that Activity Tracker and Log Analysis monitor. Therefore, to avoid granting higher permissions than required when you give policies for both services in an access group or for a user, for example, the policies included are specific to the Cloud Logs Instance ID to which they apply. The roles are identified by running the access report that you can also run manually to verify who has access to your instance.
+    The IAM policies that are defined in the `roles.tf` file are configured for the Cloud Logs instance ID. Why? Activity Tracker and Log Analysis are 2 different services that you must migrate. In the new architecture, the same service is used to manage the different types of data that Activity Tracker and Log Analysis monitor. Therefore, to avoid granting higher permissions than required when you give policies for both services in an access group or for a user, for example, the policies included are specific to the Cloud Logs Instance ID to which they apply. The roles are identified by running the access report that you can also run manually to verify who has access to your instance.
     {: important}
 
 10. Add other IAM configurations manually
 
-    - [ ] For each API keys (service ID / user ID) that you have with permissions to work with the Log Analysis instance, you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
+    - [ ] For each API key (service ID / user ID) that you have with permissions to work with the Log Analysis instance, you need to recreate them and modify the applications that use it so they include permissions to work with the new services and resources.
 
     Make sure that before you generate the API keys, the permissions to work with the Cloud Logs instance are set.
     {: important}
@@ -218,6 +218,6 @@ Complete the following steps:
 
 12. After you have completed the migration and verification process, remove your Log Analysis instance and related resources.
 
-    - [ ] Clean IAM by removing IAM policies that apply to the Log Analysis instance.
+    - [ ] Clean up IAM by removing IAM policies that apply to the Log Analysis instance.
 
     - [ ] Delete the Log Analysis instance.

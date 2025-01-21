@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating 1 Activity Tracker instance in the account end to end
+# Migrating 1 Activity Tracker instance in the account using full migration tool automation
 {: #migration-tutorial-at-option2}
 
 Use this topic to migrate 1 {{site.data.keyword.at_full}} instance and configure the {{site.data.keyword.atracker_full_notm}} service by running the migration tool.
@@ -26,29 +26,29 @@ Use this topic to migrate 1 {{site.data.keyword.at_full}} instance and configure
 Migrating {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires the configuration of the {{site.data.keyword.atracker_full_notm}} service in the account to define where events are routed and the provisioning of {{site.data.keyword.logs_full_notm}} instances. A migration tool is provided to help you migrate.
 
 Options to migrate:
-- Option 1: Migrate the {{site.data.keyword.at_full}} instance by using the migration tool, and then, configure manually the {{site.data.keyword.atracker_full_notm}} service afterwards.
-- Option 2: Migrate the {{site.data.keyword.at_full}} instance and configure the {{site.data.keyword.atracker_full_notm}} service by running the migration tool.
+- [Option 1: Migrate the {{site.data.keyword.at_full}} instance by using the migration tool, and then, manually configure the {{site.data.keyword.atracker_full_notm}} service afterwards.](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-at-option1)
+- THIS TOPIC: [Option 2: Migrate the {{site.data.keyword.at_full}} instance and configure the {{site.data.keyword.atracker_full_notm}} service by running the migration tool.](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-at-option2)
 
 
-When you configure the {{site.data.keyword.atracker_full_notm}} service, you are taking the control in the account where events are routed. For migration, it is very important that when you configure {{site.data.keyword.atracker_full_notm}}, you define first a `logdna` target and a route for the region where the {{site.data.keyword.at_full}} instance is available so you configure the current default behavior in the account. Afterwards, you can define a `cloud_logs` target and route to send the same data to the migrated {{site.data.keyword.logs_full_notm}} instance. If you do not define a logdna target first, events will stop being routed to your current {{site.data.keyword.at_full}} instance.
+When you configure the {{site.data.keyword.atracker_full_notm}} service, you are controlling where events are routed in the account. For migration, it is very important that when you configure {{site.data.keyword.atracker_full_notm}}, that you define first a `logdna` target and a route for the region where the {{site.data.keyword.at_full}} instance is available so you configure the current default behavior in the account. Afterwards, you can define a `cloud_logs` target and route to send the same data to the migrated {{site.data.keyword.logs_full_notm}} instance. If you do not define a `logdna` target first, events will stop being routed to your current {{site.data.keyword.at_full}} instance.
 {: important}
 
 
-Always run the Migration Tool in a development or staging environment to test and validate the migration command and steps.
+Always run the migration tool in a development or staging environment to test and validate the migration command and steps.
 {: important}
 
 
-The following list outlines the services that you need access for migration an {{site.data.keyword.at_full}} instance:
+The following list outlines the services that you need access to migrate an {{site.data.keyword.at_full}} instance:
 
 - Cloud Object Storage (to store data and metrics)
 
-- Event Notifications (to trigger alerts through Email, PD, Slack, webhook)
+- Event Notifications (to trigger alerts through Email, PagerDuty, Slack, webhook)
 
 - {{site.data.keyword.logs_full_notm}} (the new logging service in IBM Cloud Observability)
 
 - {{site.data.keyword.atracker_full_notm}} for managing how events are routed in the account
 
-- Event Streams for managing streaming of data through a topic in Event Streams
+- Event Streams for managing streaming of data through a topic 
 
 
 
@@ -59,7 +59,7 @@ Complete these steps before you begin:
 
 1. Make sure you use an ID that has permissions for migrating your instance.
 
-    See [Required permissions for running the Migration tool](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
+    See [Required permissions for running the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
 
     If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
     {: important}
@@ -84,7 +84,7 @@ Complete these steps before you begin:
 
     - [ ] IAM permissions to configure sources, destinations, topics and subscriptions in IBM Cloud Event Notifications
 
-2. Generate an API key to use when you apply your Terraform scripts to create resources. Must have these [permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
+2. Generate an API key to use when you apply your Terraform scripts to create resources. You must have these [permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions).
 
 3. Install the Terraform CLI. Complete the steps in [Geting started with Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
@@ -96,14 +96,14 @@ Complete these steps before you begin:
 
 Complete the following steps:
 
-1. Create a directory from where you plan to run the migration tool. Then, go to that directory and set the API key that you must configure to create resources for migration.
+1. Create a directory from where you plan to run the migration tool. Then, go to that directory and set the API key that to create resources for migration.
 
     Run `export IC_API_KEY=xxxxxx` in the command line where you plan to run the Terraform CLI commands.
 
     If running in Windows, use `set IC_API_KEY=xxxxxx` instead.
     {: note}
 
-2. Run the migration tool to generate and apply the terraform files. Take time to review them and customize them before applying them if you need to make changes.
+2. Run the migration tool to generate and apply the terraform files. Take time to review the terraform files and customize them before applying them if you need to make changes.
 
     ```sh
     ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name]  -t [-f]
@@ -122,7 +122,7 @@ Complete the following steps:
 
 3. Use the following checklist to verify that the following assets are created in your account when you migrate the instance:
 
-    The Migration Tool only migrates configuration of selected resources.
+    The migration tool only migrates configuration of selected resources.
     {: important}
 
     - Cloud Logs instance, including resources such as views, dashboards, screens, alerts and exclusion rules. The type of resources varies depending on your {{site.data.keyword.at_full}} instance resources.
@@ -161,7 +161,7 @@ Complete the following steps:
 
 4. Verify the Activity Tracker Event Routing configuration.
 
-    - [ ] Check that you continue to see activity tracker events in tail mode in your Activity Tracker instance.
+    - [ ] Check that you continue to see activity tracking events in tail mode in your Activity Tracker instance.
 
     - [ ] Check that you see activity tracking events in your Cloud Logs instance. Filter by applicationName `ibm-audit-event`.
 
@@ -175,9 +175,9 @@ Complete the following steps:
 
     In Activity Tracker, a view and an alert are tightly coupled. You define the triggering condition (query) in the view and configure an alert to indicate when and to how many notification channels to send the event.
 
-    In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. The migration tool creates a view and an alert as independent resources. The query is the same in both cases. Also adds an integration to the Event Notifications service so when is trigger, an event is sent to your destinations.
+    In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. The migration tool creates a view and an alert as independent resources. The query is the same in both cases. The migration tool also adds an integration to the Event Notifications service so when an alert is triggered, an event is sent to your destinations.
 
-    When you verify the query of a view, if you make any changes to a view configuration such as changing the applicationName or the subsystemName, you must make the same changes to the alerts resource.
+    When you verify the query of a view, if you make any changes to a view configuration such as changing the `applicationName` or the `subsystemName`, you must make the same changes to the alerts resource.
 
     You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
 
@@ -215,7 +215,7 @@ Complete the following steps:
 
     - [ ] Verify that permissions have been applied and your users and IDs have the correct access.
 
-    The IAM policies that are defined in the roles.tf file are configured for the Cloud Logs instance ID. Why? Activity Tracker and Log Analysis are 2 different services that you must migrate. In the new architecture, the same service is used to manage the different types of data that Activity Tracker and Log Analysis monitor. Therefore, to avoid granting higher permissions than required when you give policies for both services in an access group or for a user, for example, the policies included are specific to the Cloud Logs Instance ID to which they apply. The roles are identified by running the access report that you can also run manually to verify who has access to your instance.
+    The IAM policies that are defined in the `roles.tf` file are configured for the Cloud Logs instance ID. Why? Activity Tracker and Log Analysis are 2 different services that you must migrate. In the new architecture, the same service is used to manage the different types of data that Activity Tracker and Log Analysis monitor. Therefore, to avoid granting higher permissions than required when you give policies for both services in an access group or for a user, for example, the policies included are specific to the Cloud Logs Instance ID to which they apply. The roles are identified by running the access report that you can also run manually to verify who has access to your instance.
     {: important}
 
 10. Add other IAM configurations manually
@@ -231,8 +231,8 @@ Complete the following steps:
 
 12. After you have completed the migration and verification process, remove your Activity Tracker instance and related resources.
 
-    - [ ] Clean IAM by removing IAM policies that apply to the Activity Tracker instance.
+    - [ ] Clean up IAM by removing IAM policies that apply to the Activity Tracker instance.
 
-    - [ ] Clean up Activity Tracker Event Routing target and route for the legacy Activity Tracker instance.
+    - [ ] Remove the Activity Tracker Event Routing target and route for the legacy Activity Tracker instance.
 
     - [ ] Delete the Activity Tracker instance.

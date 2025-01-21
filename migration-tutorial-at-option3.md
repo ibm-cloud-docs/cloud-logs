@@ -13,13 +13,13 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Configuring Activity Tracker in the account for a new setup that does not require migration
+# Configuring {{site.data.keyword.atracker_full_notm}} in the account for an {{site.data.keyword.logs_full_notm}} instance that was created without using the migratiion tool
 {: #migration-tutorial-at-option3}
 
-Use this topic to configure the {{site.data.keyword.atracker_full_notm}} service to route activity tracking events to a Cloud Logs instance in the account. No need to run the migration tool.
+Use this topic to configure the {{site.data.keyword.atracker_full_notm}} service to route activity tracking events to a Cloud Logs instance in the account without running the migration tool.
 {: shortdesc}
 
-Migrating {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires the configuration of the {{site.data.keyword.atracker_full_notm}} service in the account to define where events are routed and the provisioning of 1 or more {{site.data.keyword.logs_full_notm}} instances. A migration tool is provided to help you migrate. However, you might find that you do not want to migrate and prefer to start fresh in Cloud Logs. If this is your scenario, complete this tutorial to create 1 Cloud Logs instance in the account where you collect activity tracking events that are generated in the account by configuring the Activity Tracker Event Routing service.
+Migrating {{site.data.keyword.at_full}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires the configuration of the {{site.data.keyword.atracker_full_notm}} service in the account to define where events are routed and the provisioning of 1 or more {{site.data.keyword.logs_full_notm}} instances. A migration tool is provided to help you migrate. However, you might find that you do not want to migrate and prefer to start fresh in Cloud Logs. If this is your scenario, complete these steps to create 1 Cloud Logs instance in the account where you collect activity tracking events that are generated in the account by configuring the Activity Tracker Event Routing service.
 
 
 ## Prereqs
@@ -83,13 +83,13 @@ Configure Activity Tracker Event Routing to continue receiving auditing events i
 
 - [ ] [Create 1 `logdna` target for each Activity Tracker instance in the account](/docs/atracker?topic=atracker-target_v2_at&interface=ui)
 
-- [ ]  [Create the routes with rule that maps your current Activity Tracker instances location](/docs/atracker?topic=atracker-route_v2&interface=ui#route-create-ui):
+- [ ]  [Create the routes with a rule that maps your current Activity Tracker instances location](/docs/atracker?topic=atracker-route_v2&interface=ui#route-create-ui):
 
     For eu-de: Select `eu-de` and `global` events and as the target destination, choose the target you have configured for the eu-de region.
 
-    For the rest of the supported regions, choose the same region. For example, for us-south events, choose the target you have configured for the us-south region.
+    For the rest of the supported regions, choose the same region. For example, for `us-south` events, choose the target you have configured for the `us-south` region.
 
-    For Chennai, select `in-che` events, and choose the target you have configured for the in-che region.
+    For Chennai, select `in-che` events, and choose the target you have configured for the `in-che` region.
 
 - [ ] [Define a service to service authorization between Activity Tracker Event Routing and Cloud Logs](/docs/atracker?topic=atracker-iam-service-auth-logs)
 
@@ -101,7 +101,7 @@ Configure Activity Tracker Event Routing to continue receiving auditing events i
 
 Checklist to verify the Activity Tracker Event Routing configuration.
 
-- [ ] Check that you continue to see activity tracker events in tail mode in your Activity Tracker instances.
+- [ ] Check that you continue to see activity tracking events in tail mode in your Activity Tracker instances.
 
 - [ ] Check that you see activity tracking events, from all the regions where you have Activity Tracker instances, in your Cloud Logs instance. Filter by applicationName `ibm-audit-event`.
 
@@ -113,7 +113,7 @@ Cloud Logs integrates with the Event Notifications service to send events to you
 
 In Activity Tracker, a view and an alert are tightly coupled. You define the triggering condition (query) in the view and configure an alert to indicate when and to hoe many notification channels to send the event.
 
-In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. You create a view and an alert as independent resources. The query is the same in both cases if teh view and the alert are related. Also you can add an integration to the Event Notifications service when you configure an alert so when the alert triggers in Cloud Logs, an event is sent to your destinations through the Event Notifications service.
+In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. You create a view and an alert as independent resources. The query is the same in both cases if the view and the alert are related. You can also add an integration to the Event Notifications service when you configure an alert so when the alert triggers in Cloud Logs, an event is sent to your destinations through the Event Notifications service.
 
 1. Provision an instance of Event notifications.
 
@@ -146,8 +146,8 @@ You might want to configure some views and alerts that you currently have in you
 
 After you have completed the verification process, remove your Activity Tracker instances and related resources.
 
-- [ ] Clean IAM by removing IAM policies that apply to the Activity Tracker instances.
+- [ ] Clean up IAM by removing IAM policies that apply to the Activity Tracker instances.
 
-- [ ] Clean up Activity Tracker Event Routing target and route for the legacy Activity Tracker instances.
+- [ ] Remove Activity Tracker Event Routing target and route for the legacy Activity Tracker instances.
 
 - [ ] Delete the Activity Tracker instances in the account.

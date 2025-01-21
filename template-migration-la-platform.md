@@ -12,10 +12,10 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Template for tasks for migrating Log Analysis instances with platform logs flag enabled in the account
+# Planning for the migration of Analysis instances with platform logs flag enabled in the account
 {: #template-migration-la}
 
-Template to plan migration from {{site.data.keyword.la_full}} instances with the platform flag enabled to {{site.data.keyword.logs_full_notm}} instances.
+Plan for your migration of {{site.data.keyword.la_full}} instances with the platform flag enabled to {{site.data.keyword.logs_full_notm}} instances.
 {: shortdesc}
 
 Migrating {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires:
@@ -27,30 +27,30 @@ Migrating {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.lo
 ![High-level view of the migration tool](/images/migration-la-12.png "High-level view of the migration tool"){: caption="High-level view of the migration tool" caption-side="bottom"}
 
 
-When you configure the IBM Cloud Logs Routing service, you are taking the control in the account where platform logs are routed. For migration, it is very important that you first configure IBM Cloud Logs Routing and define a `Log Analysis` target to configure the current default behavior in the account. Afterwards, you can define a `Cloud Logs` target to send the same data to the migrated {{site.data.keyword.logs_full_notm}} instance. If you do not define a Log Analysis target first, platform logs will stop being routed to your current {{site.data.keyword.la_full}} instance.
+When you configure the IBM Cloud Logs Routing service, you are controlling where platform logs are routed in the account. For migration, it is very important that you first configure IBM Cloud Logs Routing and define a `Log Analysis` target to configure the current default behavior in the account. Afterwards, you can define a `Cloud Logs` target to send the same data to the migrated {{site.data.keyword.logs_full_notm}} instance. If you do not define a Log Analysis target first, platform logs will stop being routed to your current {{site.data.keyword.la_full}} instance.
 {: important}
 
-Always run the Migration Tool in a development or staging environment to test and validate the migration command and steps.
+Always run the migration tool in a development or staging environment to test and validate the migration command and steps.
 {: important}
 
 
-The following list outlines the services that you need access for migration an {{site.data.keyword.la_full_notm}} instance:
+The following list outlines the services that you need access to to migrate an {{site.data.keyword.la_full_notm}} instance:
 
 - Cloud Object Storage (to store data and metrics)
 
-- Event Notifications (to trigger alerts through Email, PD, Slack, webhook)
+- Event Notifications (to trigger alerts through Email, PagerDuty, Slack, webhook)
 
 - {{site.data.keyword.logs_full_notm}} (the new logging service in IBM Cloud Observability)
 
-- Event Streams for managing streaming of data through a topic in Event Streams
+- Event Streams for managing streaming of data through a topic
 
 - IBM Cloud Logs Routing
 
 
 
-## Migration planning
+## Migration steps
 {: #template-migration-la-3}
 
 - [ ] Identify the regions where you have provisioned Log Analysis instances to collect platform logs.
 
-- [ ] [Tutorial for migrating 1 instance of Log Analysis with platforms log enabled by using the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-la-plat).
+- [ ] [Migrate 1 instance of Log Analysis with platforms log enabled by using the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-la-plat).
