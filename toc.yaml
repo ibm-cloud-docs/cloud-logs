@@ -63,7 +63,7 @@ toc:
           - topic: template-migration-la-platform.md
             navtitle: Planning migrating of Log Analysis instances collecting platform logs
           - topic: migration-tutorial-at-option2.md
-            navtitle: Migrating 1 instance of Activity Tracker using full automation
+            navtitle: Migrating 1 instance of Activity Tracker using the migration tool
           - topic: migration-tutorial-at-option1.md
             navtitle: Migrating 1 instance of Activity Tracker in multiple steps
           - topic: migration-tutorial-at-option3.md

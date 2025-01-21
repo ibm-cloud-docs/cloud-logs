@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating 1 Activity Tracker instance in the account using full migration tool automation
+# Migrating 1 Activity Tracker instance in the account using the migration tool
 {: #migration-tutorial-at-option2}
 
 Use this topic to migrate 1 {{site.data.keyword.at_full}} instance and configure the {{site.data.keyword.atracker_full_notm}} service by running the migration tool.
