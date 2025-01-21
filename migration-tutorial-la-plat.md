@@ -236,4 +236,6 @@ Complete the following steps:
 
     - [ ] Clean IAM by removing IAM policies that apply to the Log Analysis instance.
 
+    - [ ] Clean up IBM Cloud Logs Routing target for the legacy Log Analysis instance.
+
     - [ ] Delete the Log Analysis instance.

@@ -247,4 +247,6 @@ Complete the following steps:
 
     - [ ] Clean IAM by removing IAM policies that apply to the Activity Tracker instance.
 
+    - [ ] Clean up Activity Tracker Event Routing target and route for the legacy Activity Tracker instance.
+
     - [ ] Delete the Activity Tracker instance.
