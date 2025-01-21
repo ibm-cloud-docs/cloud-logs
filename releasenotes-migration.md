@@ -31,20 +31,6 @@ Only the current plug-in version and two previous versions are available at any 
 
 
 
-##  21 January 2024
-{: #migration-jan2024}
-
-The migration tool plug-in v0.1.30 is available.
-:   Updates include:
-
-    * IBM Plugin provider is updated to 0.1.74.
-
-    * Due to an {{site.data.keyword.logs_full_notm}} requirement, buckets with retention policies cannot be attached to an {{site.data.keyword.logs_full_notm}} instance. If you have an archiving configuration in your {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance, the migration tool has been modified to create and attach buckets without any policies.
-
-    * Duplicate view names are not supported in {{site.data.keyword.logs_full_notm}}. The migration tool is enhanced to allow you to migrate duplicate views without the current manual steps. Duplicate views are created following the naming convention of `viewname-copy1`, `viewname-copy2`, and so on.
-
-    * Fix for error for empty groups data.
-
 
 
 ##  9 January 2025
