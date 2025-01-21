@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-21"
 
 keywords:
 
@@ -244,7 +244,7 @@ Complete the following steps:
     A single space is required after `binpath=`.{: note}
 
     ```bat
-    sc.exe create fluent-bit binpath= "C:\Program Files\logs-agent\bin\fluent-bit.exe -c C:\Program Files\logs-agent\etc\fluent-bit.conf"
+    sc.exe create fluent-bit binpath= "C:\Program Files\logs-agent\bin\fluent-bit.exe -c \"C:\Program Files\logs-agent\etc\fluent-bit.conf\""
     ```
     {: pre}
 
