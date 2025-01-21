@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-01-21"
 
 keywords:
 
@@ -106,7 +106,7 @@ Complete the following steps:
 2. Run the migration tool to generate and apply the terraform files. Take time to review them and customize them before applying them if you need to make changes.
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN] [--ingress-endpoint-type ingress-endpoint-type] -t [-f]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN] -t [-f]
     ```
     {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-01-21"
 
 keywords:
 
@@ -22,8 +22,8 @@ Use this tutorial to migrate 1 {{site.data.keyword.la_full_notm}} instance with 
 
 Migrating {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires:
 - Migration of the {{site.data.keyword.la_full_notm}} instance
-- Configuring the logging agent to send data to the Cloud Logs instance
-- Configuring IBM Cloud Logs Routing to define to which Cloud Logs instance platforms logs generated in a region are routed
+- Configuration of the logging agent to send data to the Cloud Logs instance
+- Configuration of IBM Cloud Logs Routing to define to which Cloud Logs instance platforms logs generated in a region are routed
 
 
 When you configure the IBM Cloud Logs Routing service, you are taking the control in the account where platform logs are routed. For migration, it is very important that you first configure IBM Cloud Logs Routing and define a `Log Analysis` target to configure the current default behavior in the account. Afterwards, you can define a `Cloud Logs` target to send the same data to the migrated {{site.data.keyword.logs_full_notm}} instance. If you do not define a Log Analysis target first, platform logs will stop being routed to your current {{site.data.keyword.la_full}} instance.
@@ -101,7 +101,7 @@ Complete the following steps:
 2. Run the migration tool to generate and apply the terraform files. Take time to review them and customize them before applying them if you need to make changes.
 
     ```sh
-    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN] [--ingress-endpoint-type ingress-endpoint-type] -t [-f]
+    ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --platform --ingestion-key INGESTION_KEY [--instance-name INSTANCENAME] [--instance-resource-group-id RESOURCEGROUPID] [--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name] [--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN] -t [-f]
     ```
     {: codeblock}
 
