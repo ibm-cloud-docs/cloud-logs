@@ -195,6 +195,9 @@ Complete the following steps:
 
     You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
 
+    
+    {{/_include-segments/verify-queries.md}}
+
 7. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/activityTrackerInstanceID/`and verify that alerts are triggered.
 
     The migration tool generates the event notification resources files but does not apply them. After you verify your views and alerts, apply them to validate that events are generated and you are getting notifications in your destinations.

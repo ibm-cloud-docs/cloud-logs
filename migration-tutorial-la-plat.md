@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -183,6 +183,9 @@ Complete the following steps:
     When you verify the query of a view, if you make any changes to a view configuration such as changing the `applicationName` or the `subsystemName`, you must make the same changes to the alerts resource.
 
     You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
+
+    
+    {{/_include-segments/verify-queries.md}}
 
 7. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/logAnalysisInstanceID/`and verify that alerts are triggered.
 

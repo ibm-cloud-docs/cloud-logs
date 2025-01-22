@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -37,6 +37,9 @@ When you configure the {{site.data.keyword.atracker_full_notm}} service, you are
 
 Always run the migration tool in a development or staging environment to test and validate the migration command and steps.
 {: important}
+
+
+{{/_include-segments/data-not-migrated.md}}
 
 The following list outlines the services that you need access to to migrate an {{site.data.keyword.at_full}} instance:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-07"
+  years:  2024, 2025
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -20,6 +20,8 @@ subcollection: cloud-logs
 Learn about migrating {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} resources to {{site.data.keyword.logs_full_notm}} resources.
 {: shortdesc}
 
+
+{{/_include-segments/data-not-migrated.md}}
 
 ## Understanding how {{site.data.keyword.logs_full_notm}} compares to existing services
 {: #migration-instance-resources-comparison}
@@ -79,6 +81,9 @@ You can use the Migration tool to migrate views and alerts configured in {{site.
 - A view is migrated to an {{site.data.keyword.logs_full_notm}} public view.
 - A view with an alert is migrated to an {{site.data.keyword.logs_full_notm}} public view and an alert definition.
 
+
+{{/_include-segments/verify-queries.md}}
+
 In {{site.data.keyword.logs_full_notm}}, the name of a view must be unique within the instance.
 {: important}
 
@@ -119,6 +124,8 @@ In {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}}, you
 
 You can use the Migration tool to migrate exclusion rules. When you migrate an instance, resources such as exclusion rules are included in the migration.
 
+
+{{/_include-segments/verify-queries.md}}
 
 ## Migrating parsing rules
 {: #migration-instance-resources-pars}

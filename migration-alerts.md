@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-20"
+  years:  2024, 2025
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -111,10 +111,7 @@ When you migrate an instance by using the Migration tool, alerts are migrated, a
 {: note}
 
 
-
-## Known issues
-{: #migration-alerts-issues}
-
+{{/_include-segments/verify-queries.md}}
 
 
 ## Known Migration tool limitations
