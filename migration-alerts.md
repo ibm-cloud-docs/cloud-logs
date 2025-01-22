@@ -112,9 +112,3 @@ When you migrate an instance by using the Migration tool, alerts are migrated, a
 
 
 {{/_include-segments/verify-queries.md}}
-
-
-## Known Migration tool limitations
-{: #migration-alerts-limitations}
-
-- Currently, the Migration tool creates only 1 topic to handle notifications of all the alerts through that topic.

@@ -33,6 +33,9 @@ Always run the migration tool in a development or staging environment to test an
 {: important}
 
 
+{{/_include-segments/data-not-migrated.md}}
+
+
 The following list outlines the services that you need access to migrate an {{site.data.keyword.la_full_notm}} instance:
 
 - Cloud Object Storage (to store data and metrics)
