@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Configuring {{site.data.keyword.atracker_full_notm}} in the account for an {{site.data.keyword.logs_full_notm}} instance that was created without using the migratiion tool
+# Configuring {{site.data.keyword.atracker_full_notm}} in the account for an {{site.data.keyword.logs_full_notm}} instance that was created without using the migration tool
 {: #migration-tutorial-at-option3}
 
 Use this topic to configure the {{site.data.keyword.atracker_full_notm}} service to route activity tracking events to a Cloud Logs instance in the account without running the migration tool.
