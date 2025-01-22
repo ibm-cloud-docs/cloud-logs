@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -149,49 +149,7 @@ Complete the following steps:
 
     - [ ] Add an external integration in Cloud Logs to the Event Notifications instance.
 
-4. Manually migrate parsing rules.
-
-    If you have parsing rules configured in the Activity Tracker instance, you must manually recreate them in Cloud Logs.
-
-    In Cloud Logs, you must use Regex to parse the data. For more information, see [Extracting specific values as JSON keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule).
-
-5. Verify your views and alert configurations in Cloud Logs.
-
-    In Activity Tracker, a view and an alert are tightly coupled. You define the triggering condition (query) in the view and configure an alert to indicate when and to how many notification channels to send the event.
-
-    In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. The migration tool creates a view and an alert as independent resources. The query is the same in both cases. Also adds an integration to the Event Notifications service so when is trigger, an event is sent to your destinations.
-
-    When you verify the query of a view, if you make any changes to a view configuration such as changing the applicationName or the subsystemName, you must make the same changes to the alerts resource.
-
-    You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
-
-6. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/activityTrackerInstanceID/`and verify that alerts are triggered.
-
-    The migration tool generates the event notification resources files but does not apply them. After you verify your views and alerts, apply them to validate that events are generated and you are getting notifications in your destinations.
-
-    The migration tool does not generate templates. You can manually configure templates for your resources. For more information, see [Creating an Event Notifications template](/docs/event-notifications?topic=event-notifications-en-create-en-template).
-
-    The following Event Notification resources are required:
-
-    - [ ] 1 Source that defines the integration between the Cloud Logs instance and the Event Notifications instance
-
-    - [ ] Destination channels: You must have 1 destination per notification channel such as Slack, PagerDuty, WebHook
-
-    - [ ] Topics: A topic is created for the alerts that send notifications through the same destination.
-
-    - [ ] Subscriptions to correlate topics and destinations.
-
-    Checklist of tasks:
-
-    - [ ] Apply the Event notifications terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/activityTrackerInstanceID/`
-
-    - [ ] Verify that alerts are triggered.
-
-7. If you have log groups configured in your Activity Tracker instance, manually map the data access rule query to a Data Expression (DPXL).
-
-    If you have log groups configured, the migration tool creates a data access rule for each log group and copies the Activity Tracker log group queries. You must manually migrate these queries to data access rules by using the Data Expression language. For more information, see [Create a rule in the IBM Cloud Logs service](/docs/cloud-logs?topic=cloud-logs-data-access-rules#data-access-rules-1).
-
-8.  Configure Activity Tracker Event Routing to continue receiving auditing events in the Activity Tracker instance and the new Cloud Logs instance. Then verify the Activity Tracker Event Routing configuration.
+4.  Configure Activity Tracker Event Routing to continue receiving auditing events in the Activity Tracker instance and the new Cloud Logs instance. Then verify the Activity Tracker Event Routing configuration.
 
     - [ ] [Create a `logdna` target whose destination is the Activity Tracker instance](/docs/atracker?topic=atracker-target_v2_at&interface=ui)
 
@@ -220,6 +178,48 @@ Complete the following steps:
     - [ ] Check that you continue to see activity tracker events in tail mode in your Activity Tracker instance.
 
     - [ ] Check that you see activity tracking events in your Cloud Logs instance. Filter by applicationName `ibm-audit-event`.
+
+5. Manually migrate parsing rules.
+
+    If you have parsing rules configured in the Activity Tracker instance, you must manually recreate them in Cloud Logs.
+
+    In Cloud Logs, you must use Regex to parse the data. For more information, see [Extracting specific values as JSON keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule).
+
+6. Verify your views and alert configurations in Cloud Logs.
+
+    In Activity Tracker, a view and an alert are tightly coupled. You define the triggering condition (query) in the view and configure an alert to indicate when and to how many notification channels to send the event.
+
+    In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. The migration tool creates a view and an alert as independent resources. The query is the same in both cases. Also adds an integration to the Event Notifications service so when is trigger, an event is sent to your destinations.
+
+    When you verify the query of a view, if you make any changes to a view configuration such as changing the applicationName or the subsystemName, you must make the same changes to the alerts resource.
+
+    You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
+
+7. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/activityTrackerInstanceID/`and verify that alerts are triggered.
+
+    The migration tool generates the event notification resources files but does not apply them. After you verify your views and alerts, apply them to validate that events are generated and you are getting notifications in your destinations.
+
+    The migration tool does not generate templates. You can manually configure templates for your resources. For more information, see [Creating an Event Notifications template](/docs/event-notifications?topic=event-notifications-en-create-en-template).
+
+    The following Event Notification resources are required:
+
+    - [ ] 1 Source that defines the integration between the Cloud Logs instance and the Event Notifications instance
+
+    - [ ] Destination channels: You must have 1 destination per notification channel such as Slack, PagerDuty, WebHook
+
+    - [ ] Topics: A topic is created for the alerts that send notifications through the same destination.
+
+    - [ ] Subscriptions to correlate topics and destinations.
+
+    Checklist of tasks:
+
+    - [ ] Apply the Event notifications terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/activityTrackerInstanceID/`
+
+    - [ ] Verify that alerts are triggered.
+
+8. If you have log groups configured in your Activity Tracker instance, manually map the data access rule query to a Data Expression (DPXL).
+
+    If you have log groups configured, the migration tool creates a data access rule for each log group and copies the Activity Tracker log group queries. You must manually migrate these queries to data access rules by using the Data Expression language. For more information, see [Create a rule in the IBM Cloud Logs service](/docs/cloud-logs?topic=cloud-logs-data-access-rules#data-access-rules-1).
 
 9. Apply the IAM terraform files located in `migration-tool/cl/accountID/manual-tf-files/iam-policies/activityTrackerInstanceID/`and verify that permissions have been applied.
 
