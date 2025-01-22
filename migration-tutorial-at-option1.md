@@ -92,6 +92,9 @@ Complete these steps before you begin:
 ## Migrating
 {: #migration-tutorial-at-option1-migrate}
 
+
+{{/_include-segments/verify-queries.md}}
+
 Complete the following steps:
 
 1. Create a directory from where you plan to run the migration tool. Then, go to that directory and set the API key that you must configure to create resources for migration.

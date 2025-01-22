@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -27,6 +27,9 @@ Migrating {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.lo
 
 Always run the migration tool in a development or staging environment to test and validate the migration command and steps.
 {: important}
+
+
+{{/_include-segments/data-not-migrated.md}}
 
 
 The following list outlines the services that you need access to migrate an {{site.data.keyword.la_full_notm}} instance:
@@ -82,6 +85,9 @@ Complete these steps before you begin:
 
 ## Migrating
 {: #migration-tutorial-la-migrate}
+
+
+{{/_include-segments/verify-queries.md}}
 
 Complete the following steps:
 

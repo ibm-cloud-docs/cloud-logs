@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -31,6 +31,9 @@ When you configure the IBM Cloud Logs Routing service, you are controlling where
 
 Always run the migration tool in a development or staging environment to test and validate the migration command and steps.
 {: important}
+
+
+{{/_include-segments/data-not-migrated.md}}
 
 
 The following list outlines the services that you need access to migrate an {{site.data.keyword.la_full_notm}} instance:
@@ -88,6 +91,9 @@ Complete these steps before you begin:
 
 ## Migrating
 {: #migration-tutorial-la-plat-migrate}
+
+
+{{/_include-segments/verify-queries.md}}
 
 Complete the following steps:
 
@@ -183,6 +189,8 @@ Complete the following steps:
     When you verify the query of a view, if you make any changes to a view configuration such as changing the `applicationName` or the `subsystemName`, you must make the same changes to the alerts resource.
 
     You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
+
+
 
 7. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/logAnalysisInstanceID/`and verify that alerts are triggered.
 

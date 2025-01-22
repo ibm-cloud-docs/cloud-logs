@@ -38,6 +38,9 @@ Always run the migration tool in a development or staging environment to test an
 {: important}
 
 
+{{/_include-segments/data-not-migrated.md}}
+
+
 The following list outlines the services that you need access to migrate an {{site.data.keyword.at_full}} instance:
 
 - Cloud Object Storage (to store data and metrics)
@@ -93,6 +96,9 @@ Complete these steps before you begin:
 
 ## Migrating
 {: #migration-tutorial-at-option2-migrate}
+
+
+{{/_include-segments/verify-queries.md}}
 
 Complete the following steps:
 
@@ -180,6 +186,7 @@ Complete the following steps:
     When you verify the query of a view, if you make any changes to a view configuration such as changing the `applicationName` or the `subsystemName`, you must make the same changes to the alerts resource.
 
     You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
+
 
 7. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/activityTrackerInstanceID/`and verify that alerts are triggered.
 
