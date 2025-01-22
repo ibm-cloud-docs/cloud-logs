@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -48,7 +48,7 @@ The following list outlines the services that you need access to migrate an {{si
 
 - {{site.data.keyword.atracker_full_notm}} for managing how events are routed in the account
 
-- Event Streams for managing streaming of data through a topic 
+- Event Streams for managing streaming of data through a topic
 
 
 

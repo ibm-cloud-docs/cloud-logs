@@ -2,9 +2,9 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-21"
+lastupdated: "2025-01-22"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -18,7 +18,7 @@ subcollection: cloud-logs
 {: troubleshoot}
 {: support}
 
-When migrating {{site.data.keyword.at_full}} or {{site.data.keyword.la_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance using the migration tool and running `terraform init` an error is returned.
+When migrating {{site.data.keyword.at_full}} or {{site.data.keyword.la_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance using the migration tool and running terraform commands such as `terraform init` an error is returned.
 {: shortdesc}
 
 You get an error message similar to the following:
@@ -41,29 +41,6 @@ Initializing provider plugins...
 ╵
 ```
 {: screen}
-
-Or
-
-```text
-error running 'terraform init' command. Error Output:
-Initializing the backend...
-
-Initializing provider plugins...
-- Finding ibm-cloud/ibm versions matching "1.70.0-beta0"...
-- Finding latest version of hashicorp/null...
-- Installing ibm-cloud/ibm v1.70.0-beta0...
-- Installing hashicorp/null v3.2.3...
-- Installed hashicorp/null v3.2.3 (signed by HashiCorp)
-╷
-│ Error: Failed to install provider
-│
-│ Error while installing ibm-cloud/ibm v1.70.0-beta0: unsuccessful request to
-│ https://github.com/IBM-Cloud/terraform-provider-ibm/releases/download/v1.70.0-beta0/terraform-provider-ibm_1.70.0-beta0_darwin_arm64.zip:
-│ 500 Internal Server Error
-╵
-```
-{: screen}
-
 
 The Terraform version needs to be updated.
 {: tsCauses}
@@ -112,22 +89,7 @@ Do the following to update the Terraform version.
    - Finding ibm-cloud/ibm versions matching "1.74.0"...
    - Finding latest version of hashicorp/null...
    - Installing ibm-cloud/ibm v1.74.0...
-   - Installed ibm-cloud/ibm v1.74.0 (self-signed, key ID AAD3B791C49XX1223)
-   - Using previously-installed hashicorp/null v3.2.3
-
-   Partner and community providers are signed by their developers.
-   If you'd like to know more about provider signing, you can read about it here:
-   https://www.terraform.io/docs/cli/plugins/signing.html
-
-   Terraform has made some changes to the provider dependency selections recorded
-   in the .terraform.lock.hcl file. Review those changes and commit them to your
-   version control system if they represent changes you intended to make.
-
-   Terraform has been successfully initialized!
-
-   You may now begin working with Terraform. Try running "terraform plan" to see
-   any changes that are required for your infrastructure. All Terraform commands
-   should now work.
+   .........
 
    If you ever set or change modules or backend configuration for Terraform,
    rerun this command to reinitialize your working directory. If you forget, other
