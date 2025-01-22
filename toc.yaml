@@ -57,11 +57,21 @@ toc:
           - topic: migration-permissions.md
             navtitle: Required permissions
           - topic: template-migration-at.md
-            navtitle: Planning template for Activity Tracker
-          - topic: template-migration-la-platform.md
-            navtitle: Planning template for instances collecting platform logs
+            navtitle: Planning your Activity Tracker migration
           - topic: template-migration-logs.md
-            navtitle: Planning template for instances collecting logs
+            navtitle: Planning migrating of Log Analysis instances collecting logs
+          - topic: template-migration-la-platform.md
+            navtitle: Planning migrating of Log Analysis instances collecting platform logs
+          - topic: migration-tutorial-at-option2.md
+            navtitle: Migrating 1 instance of Activity Tracker using the migration tool
+          - topic: migration-tutorial-at-option1.md
+            navtitle: Migrating 1 instance of Activity Tracker in multiple steps
+          - topic: migration-tutorial-at-option3.md
+            navtitle: Configuring Activity Tracker Event Routing in the account created without migration
+          - topic: migration-tutorial-la.md
+            navtitle: Migrating 1 instance of Log Analysis
+          - topic: migration-tutorial-la-plat.md
+            navtitle: Migrating 1 instance of Log Analysis with platforms log enabled
       - topicgroup:
           label: Release notes
           topics:
@@ -435,19 +445,7 @@ toc:
           - topic: migration-iam.md
             navtitle: Migrating IAM resources
           - topic: migration_data_access_rules.md
-            navtitle: Migrating log groups
-          - topicgroup:
-              label: Activity Tracker instances
-              topics:
-              - topic: migration-at.md
-                navtitle: Migrating Activity Tracker instances 
-          - topicgroup:
-              label: Log Analysis instances
-              topics:
-              - topic: migration-la.md
-                navtitle: Migrating Log Analysis instances
-              - topic: migration-platform-logs.md
-                navtitle: Migrating instances that collect platform logs 
+            navtitle: Migrating log groups 
           - topicgroup:
               label: Migration tool
               topics:
@@ -516,3 +514,4 @@ toc:
                 - ts-mig-views.md
                 - ts-mig-metrics.md
                 - ts-mig-tf-apply.md
+                - ts-mig-tf-version.md

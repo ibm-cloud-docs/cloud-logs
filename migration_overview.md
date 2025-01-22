@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-06"
+  years:  2024, 2025
+lastupdated: "2025-01-20"
 
 keywords:
 
@@ -63,8 +63,9 @@ To migrate {{site.data.keyword.at_full_notm}} instances, you must provision 1 or
 
 For more information, see:
 - [Template for migrating Activity Tracker instances in the account](/docs/cloud-logs?topic=cloud-logs-template-migration-at).
-- [Migrating {{site.data.keyword.at_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-at).
-
+- [Tutorial for migrating 1 Activity Tracker instance in the account end to end](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-at-option2).
+- [Tutorial for migrating 1 Activity Tracker instance in the account in steps](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-at-option1).
+- [Tutorial for configuring Activity Tracker in the account for a new setup that does not require migration](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-at-option3).
 
 
 
@@ -76,9 +77,9 @@ To migrate {{site.data.keyword.la_full_notm}} instances that collect only operat
 
 For more information, see:
 - [Template for tasks for migrating Log Analysis instances collecting logs in the account](/docs/cloud-logs?topic=cloud-logs-template-migration-logs).
-- [Migrating {{site.data.keyword.la_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-la).
+- [Tutorial for migrating 1 Log Analysis instance in the account by using the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-la).
 
 
 To migrate {{site.data.keyword.la_full_notm}} instances that collect platform logs, you must configure {{site.data.keyword.logs_routing_full_notm}} and provision 1 or more {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances that are configured to collect platform logs. For more information, see:
 - [Template for tasks for migrating Log Analysis instances with platform logs flag enabled in the account](/docs/cloud-logs?topic=cloud-logs-template-migration-la).
-- [Migrating instances that collect platform logs](/docs/cloud-logs?topic=cloud-logs-migration-platform-logs).
+- [Tutorial for migrating 1 instance of Log Analysis with platforms log enabled by using the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-la-plat).
