@@ -92,6 +92,9 @@ Complete these steps before you begin:
 ## Migrating
 {: #migration-tutorial-at-option1-migrate}
 
+
+{{/_include-segments/verify-queries.md}}
+
 Complete the following steps:
 
 1. Create a directory from where you plan to run the migration tool. Then, go to that directory and set the API key that you must configure to create resources for migration.
@@ -194,9 +197,6 @@ Complete the following steps:
     When you verify the query of a view, if you make any changes to a view configuration such as changing the applicationName or the subsystemName, you must make the same changes to the alerts resource.
 
     You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
-
-    
-    {{/_include-segments/verify-queries.md}}
 
 7. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/activityTrackerInstanceID/`and verify that alerts are triggered.
 

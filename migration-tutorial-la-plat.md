@@ -89,6 +89,9 @@ Complete these steps before you begin:
 ## Migrating
 {: #migration-tutorial-la-plat-migrate}
 
+
+{{/_include-segments/verify-queries.md}}
+
 Complete the following steps:
 
 1. Create a directory from where you plan to run the migration tool. Then, go to that directory and set the API key to create resources for migration.
@@ -184,8 +187,7 @@ Complete the following steps:
 
     You can check that alerts trigger in the Incidents page in your Cloud Logs instance. For more information, see [Managing triggered alerts in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-incidents).
 
-    
-    {{/_include-segments/verify-queries.md}}
+
 
 7. Apply the Event Notification terraform files located in `migration-tool/cl/accountID/manual-tf-files/event-notifications-tf-files/logAnalysisInstanceID/`and verify that alerts are triggered.
 
