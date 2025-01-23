@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-19"
+  years:  2024, 2025
+lastupdated: "2025-01-23"
 
 keywords:
 
@@ -25,7 +25,10 @@ Terraform on {{site.data.keyword.cloud}} enables predictable and consistent prov
 ## Prereqs
 {: #migration-tf-install-prereqs}
 
-- Run the migration tool to generate Terraform scripts that you can then use to migrate your {{site.data.keyword.at_full_notm}} and {{site.data.keyword.la_full_notm}} instances into a {{site.data.keyword.logs_full_notm}} instance. Customize them per your requirements.
+Run the migration tool to generate Terraform scripts that you can then use to migrate your {{site.data.keyword.at_full_notm}} and {{site.data.keyword.la_full_notm}} instances into a {{site.data.keyword.logs_full_notm}} instance. Customize them per your requirements.
+
+
+{{/_include-segments/clean-directory.md}}
 
 ## Step 1. Install the Terraform CLI
 {: #migration-tf-install-cli}

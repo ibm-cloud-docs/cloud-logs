@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-01-23"
 
 keywords:
 
@@ -22,6 +22,9 @@ The {{site.data.keyword.logs_full}} migration tool is a command line tool that y
 
 The Migration tool generates output files that you can use to determine future actions to be taken along with Terraform files that can be used to create more instances.
 {: note}
+
+
+{{/_include-segments/clean-directory.md}}
 
 ## Temporary files
 {: #migration-temp-files}
