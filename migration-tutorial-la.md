@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-01-23"
 
 keywords:
 
@@ -87,6 +87,9 @@ Complete these steps before you begin:
 {: #migration-tutorial-la-migrate}
 
 
+{{/_include-segments/clean-directory.md}}
+
+
 {{/_include-segments/verify-queries.md}}
 
 Complete the following steps:
@@ -144,9 +147,9 @@ Complete the following steps:
 
     - [ ] Add an external integration in Cloud Logs to the Event Notifications instance.
 
-4. Manually migrate parsing rules.
+4. Manually migrate parsing and exclusion rules.
 
-    If you have parsing rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs.
+    If you have parsing rules and exclusion rules configured in the Log Analysis instance, you must manually recreate them in Cloud Logs.
 
     In Cloud Logs, you must use Regex to parse the data. For more information, see [Extracting specific values as JSON keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule).
 

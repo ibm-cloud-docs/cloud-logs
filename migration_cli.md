@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-20"
+  years:  2024, 2025
+lastupdated: "2025-01-23"
 
 keywords:
 
@@ -20,8 +20,8 @@ subcollection: cloud-logs
 Use the migration CLI to migrate your {{site.data.keyword.la_full}} or {{site.data.keyword.at_full_notm}} instance configuration to {{site.data.keyword.logs_full_notm}}.
 {: shortdesc}
 
-This topic is still very much a work in progress and subject to significant change.
-{: important}
+
+{{/_include-segments/clean-directory.md}}
 
 ## Installing the CLI
 {: #migration-cli-prereq}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-01-23"
 
 keywords:
 
@@ -91,6 +91,9 @@ Complete these steps before you begin:
 
 ## Migrating
 {: #migration-tutorial-at-option1-migrate}
+
+
+{{/_include-segments/clean-directory.md}}
 
 
 {{/_include-segments/verify-queries.md}}
@@ -182,9 +185,9 @@ Complete the following steps:
 
     - [ ] Check that you see activity tracking events in your Cloud Logs instance. Filter by applicationName `ibm-audit-event`.
 
-5. Manually migrate parsing rules.
+5. Manually migrate parsing and exclusion rules.
 
-    If you have parsing rules configured in the Activity Tracker instance, you must manually recreate them in Cloud Logs.
+    If you have parsing rules and exclusion rules configured in the Activity Tracker instance, you must manually recreate them in Cloud Logs.
 
     In Cloud Logs, you must use Regex to parse the data. For more information, see [Extracting specific values as JSON keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule).
 
