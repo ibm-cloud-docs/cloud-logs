@@ -515,3 +515,4 @@ toc:
                 - ts-mig-metrics.md
                 - ts-mig-tf-apply.md
                 - ts-mig-tf-version.md
+                - ts-mig-tf-path-length.md
