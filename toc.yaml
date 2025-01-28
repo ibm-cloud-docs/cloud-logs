@@ -469,7 +469,7 @@ toc:
               - topic: agent/agent-faqs.md
                 navtitle: Agent FAQs
               - topic: migration-faq.md
-                navtitle: Migration Tool FAQs
+                navtitle: Migration tool FAQs
         - topicgroup:
             label: Troubleshooting
             topics:

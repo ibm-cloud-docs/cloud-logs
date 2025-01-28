@@ -82,7 +82,7 @@ Any changes made in the UI to view queries must be made in the Terraform `views.
 {: #mig_faq_7}
 {: faq}
 
-Yes. You can run the migration tool in test mode to generate the Terraform files.  For example:
+Yes. You can run the migration tool in [`-t`](docs/cloud-logs?topic=cloud-logs-migration_cli) mode to generate the Terraform files.  For example:
 
 ```text
 ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE --ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN --platform --ingestion-key INGESTION_KEY -t
@@ -109,7 +109,7 @@ Before using the migration tool, consider the following:
 
 * You must have the appropriate [permissions](/docs/cloud-logs?topic=cloud-logs-migration-permissions) to migrate.
 
-* Using the `--platform` option in the migration tool will change the way platform data is handled in the account. The migration tool creates targets and rules to continue sending events to existing {{site.data.keyword.la_full_notm}} and {{site.data.keyword.at_full_notm}} instances and to the newly created {{site.data.keyword.logs_full_notm}} instance.
+* Using the [`--platform`](docs/cloud-logs?topic=cloud-logs-migration_cli) option in the migration tool will change the way platform data is handled in the account. The migration tool creates targets and rules to continue sending events to existing {{site.data.keyword.la_full_notm}} and {{site.data.keyword.at_full_notm}} instances and to the newly created {{site.data.keyword.logs_full_notm}} instance.
 
    You can migrate instances and configure platform data after migrating.
    {: tip}
