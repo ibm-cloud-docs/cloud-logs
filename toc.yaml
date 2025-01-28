@@ -515,3 +515,5 @@ toc:
                 - ts-mig-metrics.md
                 - ts-mig-tf-apply.md
                 - ts-mig-tf-version.md
+                - topic: ts-mig-tf-path-length.md
+                  navtitle: Failed to install provider on Windows
