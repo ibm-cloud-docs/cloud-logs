@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-27"
+lastupdated: "2025-01-29"
 
 keywords:
 
@@ -30,6 +30,22 @@ Only the current plug-in version and two previous versions are available at any 
 
 
 
+
+##  28 January 2024
+{: #migration-jan2824}
+
+The migration tool plug-in v0.1.31 is available.
+:   Updates include:
+
+    * A fix for an {{site.data.keyword.cos_full_notm}} warning for life cycle policies when running Terraform.
+
+    * Support for configuring {{site.data.keyword.en_full_notm}} email notifications.
+
+    * Added the viewer role for {{site.data.keyword.en_full_notm}} policies.
+
+    * Removed a warning message when duplicate view names are found.
+
+    * Add support for filtering views allowing selection of multiple subsystems, applications, and severities.
 
 
 ##  22 January 2024
