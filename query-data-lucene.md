@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-01-29"
 
 keywords:
 
@@ -92,6 +92,7 @@ The following are examples of different types of searches and their results.
 | `status_code.numeric:{199 TO 300}` | Matches status codes between 200 and 299 (excluding 199 and 300). |
 | `status_code.numeric:[200 TO 300}` | Matches status codes between 200 and 299 (including 200 but excluding 300). |
 | `status_code.numeric:{199 TO 299]` | Matches status codes between 200 and 299 (excluding 199 but including 299). |
+| `status_code.numeric:<300` | Matches status codes less than 300. |
 {: caption="Example range searches" caption-side="bottom"}
 
 | Query | Results |
@@ -100,6 +101,12 @@ The following are examples of different types of searches and their results.
 | `version.keyword:/.*v.[1-5].[0-9]{2}.*/` | Matches logs that contain patterns like “v.1.24” or “v.5.69” in the version field. |
 {: caption="Example regex searches" caption-side="bottom"}
 
+| Query | Results |
+|-------|---------|
+| `FirewallMatchesActions:"abc" OR FirewallMatchesActions:"123"` | Matches logs containing the exact strings `abc` or `123`. |
+| `FirewallMatchesActions.keyword:/(abc\|123)/` | Matches logs containing the exact strings `abc` or `123` by using regex. |
+| `FirewallMatchesActions.keyword:/.*(abc\|123).*/` | Matches logs with strings containing the partial strings `abc` or `123` by using regex. |
+{: caption="Example array searches" caption-side="bottom"}
 
 ## Types of operators
 {: #lucene-operators}
