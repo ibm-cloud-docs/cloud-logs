@@ -92,7 +92,8 @@ The following are examples of different types of searches and their results.
 | `status_code.numeric:{199 TO 300}` | Matches status codes between 200 and 299 (excluding 199 and 300). |
 | `status_code.numeric:[200 TO 300}` | Matches status codes between 200 and 299 (including 200 but excluding 300). |
 | `status_code.numeric:{199 TO 299]` | Matches status codes between 200 and 299 (excluding 199 but including 299). |
-| `status_code.numeric:<300` | Matches status codes less than 300. |
+| `status_code.numeric:<300` | Matches status codes less than 300 (not including 300). |
+| `status_code.numeric:>0.003` | Matches status codes greater than 0.003 (not including 0.003). |
 {: caption="Example range searches" caption-side="bottom"}
 
 | Query | Results |
