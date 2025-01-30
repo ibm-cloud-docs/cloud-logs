@@ -124,7 +124,7 @@ Complete the following steps:
 
     You can configure `--ingress-endpoint-type`  to define the ingress endpoint type to use to send platform logs to the Cloud Logs instance. Valid values are `private` and `public`. If not specified the default is `public`.
 
-    Run the migration tool with the option `-f` to apply the terraform files when you run the command. If you just want to generate terraform files, do not include this option.
+    The `-f` option will run the migration tool without any additional prompts. Run the migration tool with the option `-f` to apply the Terraform files when you run the command. If you just want to generate Terraform files so you can review and modify them, do not include this option. Once reviewed or modified you can apply the Terraform files by running `terraform apply` from the directory containing the Terraform files.
 
 3. Use the following checklist to verify that the following assets are created in your account when you migrate the instance:
 

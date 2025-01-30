@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -116,7 +116,7 @@ Complete the following steps:
 
     You can change the default values for the Cloud Object Storage resources by adding the options `[--cos-instance-crn cos-instance-crn] [--cos-kms-key-crn cos-kms-key-crn] [--data-bucket-name data-bucket-name] [--metrics-bucket-name metrics-bucket-name]`.
 
-    Run the migration tool with the option `-f` to apply the terraform files when you run the command. If you just want to generate terraform files, do not include this option.
+    The `-f` option will run the migration tool without any additional prompts. Run the migration tool with the option `-f` to apply the Terraform files when you run the command. If you just want to generate Terraform files so you can review and modify them, do not include this option. Once reviewed or modified you can apply the Terraform files by running `terraform apply` from the directory containing the Terraform files.
 
 3. Use the following checklist to verify that the following assets are created in your account when you migrate the instance:
 
