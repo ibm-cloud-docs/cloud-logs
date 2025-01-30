@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -13,17 +13,17 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating 1 instance of Log Analysis with platforms log enabled by using the migration tool
+# Migrating 1 instance of Log Analysis with platform log enabled by using the migration tool
 {: #migration-tutorial-la-plat}
 
-Use this topic to migrate 1 {{site.data.keyword.la_full_notm}} instance with platforms log enabled by using the migration tool.
+Use this topic to migrate 1 {{site.data.keyword.la_full_notm}} instance with platform log enabled by using the migration tool.
 {: shortdesc}
 
 
 Migrating {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires:
 - Migration of the {{site.data.keyword.la_full_notm}} instance
 - Configuration of the logging agent to send data to the Cloud Logs instance
-- Configuration of IBM Cloud Logs Routing to define to which Cloud Logs instance platforms logs generated in a region are routed
+- Configuration of IBM Cloud Logs Routing to define to which Cloud Logs instance platform logs generated in a region are routed
 
 
 When you configure the IBM Cloud Logs Routing service, you are controlling where platform logs are routed in the account. For migration, it is very important that you first configure IBM Cloud Logs Routing and define a `Log Analysis` target to configure the current default behavior in the account. Afterwards, you can define a `Cloud Logs` target to send the same data to the migrated {{site.data.keyword.logs_full_notm}} instance. If you do not define a Log Analysis target first, platform logs will stop being routed to your current {{site.data.keyword.la_full}} instance.
@@ -124,7 +124,7 @@ Complete the following steps:
 
     You can configure `--ingress-endpoint-type`  to define the ingress endpoint type to use to send platform logs to the Cloud Logs instance. Valid values are `private` and `public`. If not specified the default is `public`.
 
-    Run the migration tool with the option `-f` to apply the terraform files when you run the command. If you just want to generate terraform files, do not include this option.
+    The `-f` option will run the migration tool without any additional prompts. Run the migration tool with the option `-f` to apply the Terraform files when you run the command. If you just want to generate Terraform files so you can review and modify them, do not include this option. Once reviewed or modified you can apply the Terraform files by running `terraform apply` from the directory containing the Terraform files.
 
 3. Use the following checklist to verify that the following assets are created in your account when you migrate the instance:
 

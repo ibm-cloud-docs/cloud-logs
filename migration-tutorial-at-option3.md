@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -111,7 +111,7 @@ Checklist to verify the Activity Tracker Event Routing configuration.
 
 Cloud Logs integrates with the Event Notifications service to send events to your destinations.
 
-In Activity Tracker, a view and an alert are tightly coupled. You define the triggering condition (query) in the view and configure an alert to indicate when and to hoe many notification channels to send the event.
+In Activity Tracker, a view and an alert are tightly coupled. You define the triggering condition (query) in the view and configure an alert to indicate when and to how many notification channels to send the event.
 
 In Cloud Logs, Views (known as Logs) and Alerts are resources that you manage separately. You create a view and an alert as independent resources. The query is the same in both cases if the view and the alert are related. You can also add an integration to the Event Notifications service when you configure an alert so when the alert triggers in Cloud Logs, an event is sent to your destinations through the Event Notifications service.
 
