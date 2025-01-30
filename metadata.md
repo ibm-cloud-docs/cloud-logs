@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-19"
+  years:  2024, 2025
+lastupdated: "2025-01-30"
 
 keywords:
 
@@ -30,7 +30,7 @@ The following are samples of application names based on the log source:
 | Source                                           | Application Name            |
 |--------------------------------------------------|-----------------------------|
 | Activity tracking events                         | `ibm-audit-event` |
-| Platform logs                                    | `ibm-platform-log`|
+| Platform logs                                    | `ibm-platform-logs`|
 | {{site.data.keyword.openshiftlong_notm}} cluster | `kubernetes.namespace_name`  |
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.namespace_name` |
 | Linux server                                     | `${HOSTNAME}` |
