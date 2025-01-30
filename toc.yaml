@@ -216,6 +216,8 @@ toc:
               - topic: agent/agent-windows-manage.md
                 navtitle: Managing the agent 
           - agent/agent-multiple-icl-targets.md
+          - topic: verify-key.md
+            navtitle: Verifying your API key
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
