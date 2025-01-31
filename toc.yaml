@@ -445,7 +445,7 @@ toc:
           - topic: migration-iam.md
             navtitle: Migrating IAM resources
           - topic: migration_data_access_rules.md
-            navtitle: Migrating log groups 
+            navtitle: Migrating log groups
           - topicgroup:
               label: Migration tool
               topics:
