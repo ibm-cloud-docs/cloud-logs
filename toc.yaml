@@ -269,6 +269,8 @@ toc:
             navtitle: Filtering data
           - topic: indexing_mapping.md
             navtitle: Indexing and field mapping
+          - topic: priority-insight-index-limits.md
+            navtitle: Daily index limit considerations
           - topic: query-mapping-exceptions.md
             navtitle: Managing data mapping exceptions
           - topic: benchmarks.md
