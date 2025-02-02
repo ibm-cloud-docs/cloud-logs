@@ -25,8 +25,7 @@ Indexing logs lets you quickly retrieve matching by logs using:
 * Regular expressions
 * Field searches
 
-{{site.data.keyword.logs_full_notm}} has daily index limits that might affect your {{site.data.keyword.frequent-search}} queries. For more information about these limits and how to manage them in your environment, see [Daily index limit considerations for {{site.data.keyword.logs_full_notm}} {{site.data.keyword.frequent-search}}](/docs/cloud-logs?topic=cloud-logs-priority-insight-index-limits)
-{: important}
+
 
 It is recommended to serialize your logs as JSON to get maximum value from {{site.data.keyword.logs_full_notm}} analytics features. See [Configuring unstructured text into JSON](/docs/cloud-logs?topic=cloud-logs-parse-rule&interface=ui) for more information about parsing unstructured logs to JSON.
 {: tip}
@@ -86,3 +85,40 @@ Consider the following when querying data:
    * Text, Object, Date, or Geopoint
    * Keyword
    * Numeric
+
+<
+
+## Checking the number of index fields
+{: #indexing_mapping_check}
+
+
+To check the number of index fields per instance and how many you have used, in the navigation bar, click the **Usage** icon ![Usage icon](icons/usage.svg "Usage") > **Mapping Stats**. You can get the daily total number of indexes used in the *Used keys today* section.
+
+For a service instance, the daily default limit of index fields is set to 3000.
+{: note}
+
+The index counter is reset at midnight UTC.
+{: note}
+
+
+## What happens when you reach the number of index fields in a day
+{: #indexing_mapping_limit}
+
+When you reach the number of index fields in a day, new fields are not indexed until the counter is reset for the next day.
+
+An exclamation mark will be displayed on the fields that have mapping exceptions and could not be indexed.
+
+![Flagging of fields with mapping exceptions](images/me_03.png){: caption="Flagging of fields with mapping exceptions" caption-side="bottom"}
+
+
+## Searching data that includes mapping exceptions
+{: #indexing_mapping_search}
+
+When you search in {{site.data.keyword.frequent-search}}, log records that include a mapping exception can be searched by using a free text query for fields that are not indexed and by using key:value pairs of fields that are indexed.
+
+If you have a data bucket associated to the instance, you can search logs through **All Logs**. You can search by using a free text query or by using key:value pairs.
+
+## Alerting
+{: #indexing_mapping_alert}
+
+Alerting is not affected by data mapping exceptions and will continue to be triggered as normal.
