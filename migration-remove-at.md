@@ -23,7 +23,7 @@ Use this topic as guidance to remove legacy Activity Tracker instances in the ac
 
 Complete the followign steps:
 
-- Review the Activity Tracker Event Routing configuration and verify events are routed to your `cloud_logs` targets.
+- [ ] Review the Activity Tracker Event Routing configuration and verify events are routed to your `cloud_logs` targets.
 
 - [ ]  Check Activity Tracker instances across all regions are migrated.
 

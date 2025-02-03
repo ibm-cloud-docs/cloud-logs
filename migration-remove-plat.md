@@ -23,7 +23,7 @@ Use this topic as guidance to remove legacy Log Analysis instances with platform
 
 Complete the followign steps:
 
-- Review the IBM Cloud Logs Routing configuration and verify platform logs are routed to your `cloud_logs` targets.
+- [ ] Review the IBM Cloud Logs Routing configuration and verify platform logs are routed to your `cloud_logs` targets.
 
 - [ ]  Check Log Analysis instances across all regions are migrated.
 
