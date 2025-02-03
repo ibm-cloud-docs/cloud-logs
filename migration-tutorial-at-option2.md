@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -53,6 +53,12 @@ The following list outlines the services that you need access to migrate an {{si
 
 - Event Streams for managing streaming of data through a topic
 
+The migration tool helps you migrate the following configuration:
+- 1 Activity Tracker instance and resources such as views, alerts, data usage, dashboards (limited), log groups (limited), exclusion rules (limited). Limited means that to complete you must take manual action as the technologies are very different.
+- Archiving configuration, if the Activity Tracker instance has archiving enabled. The migration tool also creates the IAM authorizations between the Cloud Logs instance and the Cloud Object Storage buckets
+- Alerting configuration, including the configuration required in Event Notification to trigger alerts to your notification channels (destinations).
+- IAM policies to grant permissions to work with the Cloud Logs instance based on the access report of the Activity Tracker instance.
+- Creates the Activity Tracker Event Routing configuration to keep data going to your deprecated instance and to the migrated instance.
 
 
 ## Prereqs
@@ -239,10 +245,4 @@ Complete the following steps:
 
 11. If you have streaming configured, you must manually migrate the configuration. For more information, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming).
 
-12. After you have completed the migration and verification process, remove your Activity Tracker instance and related resources.
-
-    - [ ] Clean up IAM by removing IAM policies that apply to the Activity Tracker instance.
-
-    - [ ] Remove the Activity Tracker Event Routing target and route for the legacy Activity Tracker instance.
-
-    - [ ] Delete the Activity Tracker instance.
+12. After you have completed the migration and verification process, remove your Activity Tracker instance and related resources by following the instructions in [Removing deprecated {{site.data.keyword.at_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-remove-at).

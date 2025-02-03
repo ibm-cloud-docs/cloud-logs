@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -66,6 +66,7 @@ For more information, see:
 - [Migrating 1 Activity Tracker instance in the account using the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-at-option2).
 - [Migrating 1 Activity Tracker instance in the account in steps](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-at-option1).
 - [Configuring IBM Cloud Activity Tracker Event Routing in the account for an IBM Cloud Logs instance that was created without using the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-at-option3).
+- [Removing deprecated {{site.data.keyword.at_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-remove-at).
 
 
 
@@ -78,8 +79,10 @@ To migrate {{site.data.keyword.la_full_notm}} instances that collect only operat
 For more information, see:
 - [Planning for the migration of Log Analysis instances collecting logs in the account](/docs/cloud-logs?topic=cloud-logs-template-migration-logs).
 - [Migrating 1 Log Analysis instance in the account by using the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-la).
+- [Removing deprecated {{site.data.keyword.la_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-remove-la)
 
 
 To migrate {{site.data.keyword.la_full_notm}} instances that collect platform logs, you must configure {{site.data.keyword.logs_routing_full_notm}} and provision 1 or more {{site.data.keyword.logs_full_notm}} instances in the account to replace the existing {{site.data.keyword.la_full_notm}} instances that are configured to collect platform logs. For more information, see:
 - [Planning for the migration of Analysis instances with platform logs flag enabled in the account](/docs/cloud-logs?topic=cloud-logs-template-migration-la).
 - [Migrating 1 instance of Log Analysis with platforms log enabled by using the migration tool](/docs/cloud-logs?topic=cloud-logs-migration-tutorial-la-plat).
+- [Removing deprecated {{site.data.keyword.la_full_notm}} instances with platform logs enabled](/docs/cloud-logs?topic=cloud-logs-migration-remove-plat)

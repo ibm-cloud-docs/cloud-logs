@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -144,10 +144,4 @@ You might want to configure some views and alerts that you currently have in you
 {: #migration-tutorial-at-option3-step6}
 {: step}
 
-After you have completed the verification process, remove your Activity Tracker instances and related resources.
-
-- [ ] Clean up IAM by removing IAM policies that apply to the Activity Tracker instances.
-
-- [ ] Remove Activity Tracker Event Routing target and route for the legacy Activity Tracker instances.
-
-- [ ] Delete the Activity Tracker instances in the account.
+After you have completed the migration and verification process, remove your Activity Tracker instance and related resources by following the instructions in [Removing deprecated {{site.data.keyword.at_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-remove-at).

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -22,7 +22,7 @@ Use this topic to migrate 1 {{site.data.keyword.la_full_notm}} instance by using
 
 Migrating {{site.data.keyword.la_full_notm}} instances to {{site.data.keyword.logs_full_notm}} in {{site.data.keyword.cloud_notm}} requires:
 - Migration of the {{site.data.keyword.la_full_notm}} instance
-- Configuration of the logging agent to send data to the Cloud Logs instance
+- Configuration of the logging agent to send data to the Cloud Logs instance, or configuration of rsyslog, or update to custom apps that use the REST API to send logs
 
 
 Always run the migration tool in a development or staging environment to test and validate the migration command and steps.
@@ -42,6 +42,11 @@ The following list outlines the services that you need access to migrate an {{si
 
 - Event Streams for managing streaming of data through a topic
 
+The migration tool helps you migrate the following configuration:
+- 1 Log Analysis instance and resources such as views, alerts, data usage, dashboards (limited), log groups (limited), exclusion rules (limited). Limited means that to complete you must take manual action as the technologies are very different.
+- Archiving configuration, if the Log Analysis instance has archiving enabled. the migration tool also creates the IAM authorizations between the Cloud Logs instance and the Cloud Object Storage buckets.
+- Alerting configuration, including the configuration required in Event Notification to trigger alerts to your notification channels (destinations).
+- IAM policies to grant permissions to work with the Cloud Logs instance based on the access report of the Log Analysis instance.
 
 
 ## Prereqs
@@ -225,8 +230,4 @@ Complete the following steps:
 
 11. If you have streaming configured, you must manually migrate the configuration. For more information, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming).
 
-12. After you have completed the migration and verification process, remove your Log Analysis instance and related resources.
-
-    - [ ] Clean up IAM by removing IAM policies that apply to the Log Analysis instance.
-
-    - [ ] Delete the Log Analysis instance.
+12. After you have completed the migration and verification process, remove your Log Analysis instance and related resources by following the instructions in [Removing deprecated {{site.data.keyword.la_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-remove-la).

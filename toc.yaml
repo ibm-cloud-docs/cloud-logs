@@ -74,6 +74,12 @@ toc:
             navtitle: Migrating 1 instance of Log Analysis with platforms log enabled
           - topic: migration-tutorial-la-plat-new.md
             navtitle: Configuring Logs Routing in an account created without migration
+          - topic: migration-remove-at.md
+            navtitle: Removing deprecated Activity Tracker instances
+          - topic: migration-remove-la.md
+            navtitle: Removing deprecated Log Analysis instances
+          - topic: migration-remove-plat.md
+            navtitle: Removing deprecated Log Analysis instances with platform logs enabled
       - topicgroup:
           label: Release notes
           topics:
