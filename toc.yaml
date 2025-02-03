@@ -74,6 +74,12 @@ toc:
             navtitle: Migrating 1 instance of Log Analysis with platforms log enabled
           - topic: migration-tutorial-la-plat-new.md
             navtitle: Configuring Logs Routing in an account created without migration
+          - topic: migration-remove-at.md
+            navtitle: Removing Legacy Activity Tracker instances
+          - topic: migration-remove-plat.md
+            navtitle: Removing Legacy Log Analysis instances with platform logs enabled
+          - topic: migration-remove-la.md
+            navtitle: Removing Legacy Log Analysis instances
       - topicgroup:
           label: Release notes
           topics:
@@ -498,6 +504,7 @@ toc:
                 topics:
                 - topic: ts-no-logs.md
                   navtitle: Why can't I see platform logs in the UI?
+
             - topicgroup:
                 label: Troubleshooting the Logging agent
                 topics:
