@@ -55,7 +55,7 @@ The following list outlines the services that you need access to migrate an {{si
 
 The migration tool helps you migrate the following configuration:
 - 1 Activity Tracker instance and resources such as views, alerts, data usage, dashboards (limited), log groups (limited), exclusion rules (limited). Limited means that to complete you must take manual action as the technologies are very different.
-- Archiving configuration, if the Activity Tracker instance has archiving enabled. It also creates the IAM authorizations between the Cloud Logs instance and the Cloud Object Storage buckets
+- Archiving configuration, if the Activity Tracker instance has archiving enabled. The migration tool also creates the IAM authorizations between the Cloud Logs instance and the Cloud Object Storage buckets
 - Alerting configuration, including the configuration required in Event Notification to trigger alerts to your notification channels (destinations).
 - IAM policies to grant permissions to work with the Cloud Logs instance based on the access report of the Activity Tracker instance.
 - Creates the Activity Tracker Event Routing configuration to keep data going to your deprecated instance and to the migrated instance.
