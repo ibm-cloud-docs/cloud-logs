@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -48,7 +48,11 @@ The following list outlines the services that you need access for migration an {
 
 - Event Streams for managing streaming of data through a topic in Event Streams
 
-
+The migration tool helps you migrate the following configuration:
+- 1 Activity Tracker instance and resources such as views, alerts, data usage, dashboards (limited), log groups (limited), exclusion rules (limited). Limited means that to complete you must take manual action as the technologies are very different.
+- Archiving configuration, if the Activity Tracker instance has archiving enabled. It also creates the IAM authorizations between the Cloud Logs instance and the Cloud Object Storage buckets
+- Alerting configuration, including the configuration required in Event Notification to trigger alerts to your notification channels (destinations).
+- IAM policies to grant permissions to work with the Cloud Logs instance based on the access report of the Activity Tracker instance.
 
 ## Prereqs
 {: #migration-tutorial-at-option1-prereqs}
