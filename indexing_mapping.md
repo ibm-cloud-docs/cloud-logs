@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-11"
+  years:  2024, 2025
+lastupdated: "2025-02-02"
 
 keywords:
 
@@ -24,6 +24,8 @@ Indexing logs lets you quickly retrieve matching by logs using:
 * Free-text searches
 * Regular expressions
 * Field searches
+
+
 
 It is recommended to serialize your logs as JSON to get maximum value from {{site.data.keyword.logs_full_notm}} analytics features. See [Configuring unstructured text into JSON](/docs/cloud-logs?topic=cloud-logs-parse-rule&interface=ui) for more information about parsing unstructured logs to JSON.
 {: tip}
@@ -84,6 +86,7 @@ Consider the following when querying data:
    * Keyword
    * Numeric
 
+<
 
 ## Checking the number of index fields
 {: #indexing_mapping_check}

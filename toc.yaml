@@ -72,6 +72,8 @@ toc:
             navtitle: Migrating 1 instance of Log Analysis
           - topic: migration-tutorial-la-plat.md
             navtitle: Migrating 1 instance of Log Analysis with platforms log enabled
+          - topic: migration-tutorial-la-plat-new.md
+            navtitle: Configuring Logs Routing in an account created without migration
       - topicgroup:
           label: Release notes
           topics:
@@ -216,6 +218,8 @@ toc:
               - topic: agent/agent-windows-manage.md
                 navtitle: Managing the agent 
           - agent/agent-multiple-icl-targets.md
+          - topic: verify-key.md
+            navtitle: Verifying your API key
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
@@ -445,7 +449,7 @@ toc:
           - topic: migration-iam.md
             navtitle: Migrating IAM resources
           - topic: migration_data_access_rules.md
-            navtitle: Migrating log groups 
+            navtitle: Migrating log groups
           - topicgroup:
               label: Migration tool
               topics:
