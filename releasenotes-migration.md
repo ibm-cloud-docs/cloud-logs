@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -31,8 +31,8 @@ Only the current plug-in version and two previous versions are available at any 
 
 
 
-##  28 January 2024
-{: #migration-jan2824}
+##  28 January 2025
+{: #migration-jan2825}
 
 The migration tool plug-in v0.1.31 is available.
 :   Updates include:
@@ -48,8 +48,8 @@ The migration tool plug-in v0.1.31 is available.
     * Add support for filtering views allowing selection of multiple subsystems, applications, and severities.
 
 
-##  22 January 2024
-{: #migration-jan2224}
+##  22 January 2025
+{: #migration-jan2225}
 
 The migration tool plug-in v0.1.30 is available.
 :   Updates include:
