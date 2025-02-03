@@ -253,10 +253,4 @@ Complete the following steps:
 
 11. If you have streaming configured, you must manually migrate the configuration. For more information, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming).
 
-12. After you have completed the migration and verification process, remove your Activity Tracker instance and related resources.
-
-    - [ ] Clean IAM by removing IAM policies that apply to the Activity Tracker instance.
-
-    - [ ] Clean up Activity Tracker Event Routing target and route for the legacy Activity Tracker instance.
-
-    - [ ] Delete the Activity Tracker instance.
+12. After you have completed the migration and verification process, remove your Activity Tracker instance and related resources by following the instructions in [Removing deprecated {{site.data.keyword.at_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-migration-remove-at).

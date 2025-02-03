@@ -248,10 +248,4 @@ Complete the following steps:
 
 11. If you have streaming configured, you must manually migrate the configuration. For more information, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming).
 
-12. After you have completed the migration and verification process, remove your Log Analysis instance and related resources.
-
-    - [ ] Clean up IAM by removing IAM policies that apply to the Log Analysis instance.
-
-    - [ ] Remove the IBM Cloud Logs Routing target for the legacy Log Analysis instance.
-
-    - [ ] Delete the Log Analysis instance.
+12. After you have completed the migration and verification process, remove your Log Analysis instance and related resources by following the instructions in [Removing deprecated {{site.data.keyword.la_full_notm}} instances with platform logs enabled](/docs/cloud-logs?topic=cloud-logs-migration-remove-plat).

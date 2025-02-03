@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Removing deprecated {{site.data.keyword.at_full_notm}} erinstances
+# Removing deprecated {{site.data.keyword.at_full_notm}} instances
 {: #migration-remove-at}
 
 After you have migrated to {{site.data.keyword.logs_full}} you will want to remove your deprecated {{site.data.keyword.at_full_notm}} instances in the account.

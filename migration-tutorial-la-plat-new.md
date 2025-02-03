@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-03"
 
 keywords:
 
@@ -167,10 +167,4 @@ You might want to configure some views and alerts that you currently have in you
 {: #migration-tutorial-la-plat-new-step8}
 {: step}
 
- After you have completed the migration and verification process, remove your {{site.data.keyword.la_full_notm}} instance and related resources.
-
-- [ ] Clean up IAM by removing IAM policies that apply to the {{site.data.keyword.la_full_notm}} instance.
-
-- [ ] Remove the {{site.data.keyword.logs_routing_full_notm}} target for the legacy {{site.data.keyword.la_full_notm}} instance.
-
-- [ ] Delete the {{site.data.keyword.la_full_notm}} instance.
+After you have completed the migration and verification process, remove your Log Analysis instance and related resources by following the instructions in [Removing deprecated {{site.data.keyword.la_full_notm}} instances with platform logs enabled](/docs/cloud-logs?topic=cloud-logs-migration-remove-plat).
