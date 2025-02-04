@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -47,7 +47,7 @@ Before you begin, make sure you have the prerequisites.
 
  - Install The Kubernetes command-line tool, [kubectl](https://kubernetes.io/docs/tasks/tools/){: external}.
 
- - Install the JSON CLI processor [(`jq`)](https://jqlang.github.io/jq/download/){: external}.
+ - Install the JSON CLI processor [(`jq`)](https://jqlang.org/download/){: external}.
 
  - Install the YAML CLI processor [(`yq`)](https://github.com/mikefarah/yq/){: external}.
 

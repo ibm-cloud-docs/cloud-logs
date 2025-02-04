@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-11-20"
+  years: 2024, 2025
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -84,7 +84,7 @@ In addition, {{site.data.keyword.logs_full_notm}} provides mechanisms to export 
 | Parsing rules | [List API](/apidocs/logs-service-api#list-rule-groups)  \n [Get API](/apidocs/logs-service-api#get-rule-group) |
 | Events to metrics | [List API](/apidocs/logs-service-api#list-e2m)  \n [Get API](/apidocs/logs-service-api#get-e2m) |
 | Data access rules | [List API](/apidocs/logs-service-api#list-data-access-rules) |
-| Data usage metrics | [List API](/apidocs/logs-service-api#get-data-usage-metrics-export-status) |
+| Data usage metrics | [List API](/apidocs/logs-service-api#export-data-usage) |
 {: caption="Configuration export methods" caption-side="bottom"}
 
 `[*]` - Only public views can be exported.

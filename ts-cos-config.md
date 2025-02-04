@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-29"
+  years:  2024, 2025
+lastupdated: "2025-02-04"
 
 keywords: 
 
@@ -37,7 +37,7 @@ Follow the steps below to resolve this issue for existing instances with attache
 1. Log in to your {{site.data.keyword.cloud_notm}} account through the CLI.
     - If you don’t have the CLI installed, refer to [Installing the IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. Install [`jq`](https://jqlang.github.io/jq/download/){: external} to parse the JSON response from the CLI:
+2. Install [`jq`](https://jqlang.org/download/){: external} to parse the JSON response from the CLI:
 
    - On macOS:
         ```bash
