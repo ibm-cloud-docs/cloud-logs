@@ -472,14 +472,14 @@ toc:
         topics:
         - getting-help.md
         - topicgroup:
-            label: FAQs
+            label: FAQ
             topics:
               - topic: faqs.md
-                navtitle: FAQs
+                navtitle: FAQ
               - topic: agent/agent-faqs.md
-                navtitle: Agent FAQs
+                navtitle: Agent FAQ
               - topic: migration-faq.md
-                navtitle: Migration tool FAQs
+                navtitle: Migration tool FAQ
         - topicgroup:
             label: Troubleshooting
             topics:

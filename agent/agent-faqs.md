@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for the {{site.data.keyword.agent}}
+# FAQ for the {{site.data.keyword.agent}}
 {: #agent_faq}
 
 Frequently asked questions about the {{site.data.keyword.agent}}.

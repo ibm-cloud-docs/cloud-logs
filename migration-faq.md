@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-28"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for using the Migration Tool
+# FAQ for using the Migration Tool
 {: #migration-faq}
 
 Frequently asked questions about the Migration Tool.

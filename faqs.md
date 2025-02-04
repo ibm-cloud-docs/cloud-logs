@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-28"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for {{site.data.keyword.logs_full_notm}}
+# FAQ for {{site.data.keyword.logs_full_notm}}
 {: #faq}
 
 Frequently asked questions about {{site.data.keyword.logs_full}}.
