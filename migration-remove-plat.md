@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -53,7 +53,7 @@ Complete the following steps to remove your {{site.data.keyword.la_full_notm}} i
 
     - [ ] Modify your custom apps that send logs directly by using the REST API.
 
-- [ ] In {{site.data.keyword.iam_full_notm}} (IAM), remove the policies that grant permissions to work with {{site.data.keyword.la_full_notm}} instances in the account.
+- [ ] In {{site.data.keyword.iamlong}} (IAM), remove the policies that grant permissions to work with {{site.data.keyword.la_full_notm}} instances in the account.
 
     - [ ] Remove policies from access groups.
 
