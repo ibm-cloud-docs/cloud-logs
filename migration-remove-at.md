@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -49,7 +49,7 @@ Complete the following steps to remove deprecated {{site.data.keyword.at_full_no
 
     - [ ] In {{site.data.keyword.atracker_full_notm}} remove the targets that define the deprecated {{site.data.keyword.at_full_notm}} instances.
 
-- [ ] In {{site.data.keyword.iam_full_notm}} (IAM), remove the policies that grant permissions to work with {{site.data.keyword.at_full_notm}} instances in the account.
+- [ ] In {{site.data.keyword.iamlong}} (IAM), remove the policies that grant permissions to work with {{site.data.keyword.at_full_notm}} instances in the account.
 
     - [ ] Remove policies from access groups.
 
