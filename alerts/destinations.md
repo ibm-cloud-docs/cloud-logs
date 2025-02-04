@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -62,7 +62,7 @@ The following table shows the mapping of fields between the {{site.data.keyword.
 | `routing_key`   | `routing_key`  (Destination configuration)   |
 | `event_action`  | Only the `trigger` action is supported |
 | `payload.summary` | Set to the event `ibmendefaultlong` field |
-| `payload.source` | |
+| `payload.source` | Set to the event `ibmensourceid` field |
 | `payload.severity` | Set to the event `ibmenseverity` field  |
 | `payload.timestamp` | Set to the event `time` field |
 | `payload.custom_details` | Set to the event `data` object |
@@ -121,6 +121,8 @@ You can configure email as a destination type.
 
    For more information about using custom domains, see [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email).
 
+   The ability to configure custom domains requires an {{site.data.keyword.en_full_notm}} instance running the Standard pricing plan.
+   {: important}
 
 ## ServiceNow
 {: #destinations-servicenow}
