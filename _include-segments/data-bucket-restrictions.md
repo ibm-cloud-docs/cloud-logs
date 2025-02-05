@@ -32,4 +32,4 @@ By archiving data that you do not need to search, you can retain the log data at
 ### Successful read activity tracking events
 {: #cos_databucket_readevents}
 
-{{site.data.keyword.atracker_full}} drops successful `cloud-object-storage.object.read` events that are initiated by {{site.data.keyword.logs_full_notm}} instances because they are not needed. When reviewing activity tracking events related to {{site.data.keyword.logs_full_notm}} activity, you will not see see successful `cloud-object-storage.object.read` events.
+{{site.data.keyword.atracker_full_notm}} drops successful `cloud-object-storage.object.read` events that are initiated by {{site.data.keyword.logs_full_notm}} instances because they are not needed. When reviewing activity tracking events related to {{site.data.keyword.logs_full_notm}} activity, you will not see see successful `cloud-object-storage.object.read` events.
