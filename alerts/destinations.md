@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-05"
 
 keywords:
 
@@ -103,6 +103,9 @@ You can configure email as a destination type.
    You can add your own reply-to address.
 
    You can add this type of destination directly to a subscription along with the email addresses of interest.
+
+   When using the {{site.data.keyword.en_short}} `Lite` plan, you can have up to 3 email addresses in the recipient list. If you are using the {{site.data.keyword.en_short}} `Standard` plan you can have up to 10000 email addresses in the recipient list.
+   {: note}
 
    Read the information in this topic before [Creating a subscription to the IBM Cloud Email service destination type](/docs/event-notifications?topic=event-notifications-en-create-en-subscription#en-Email-destination).
 
