@@ -4,7 +4,7 @@
 
 
 ### Storage classes
-{: #cos_databucket_storageclassed}
+{: #cos_databucket_storageclasses}
 
 {{site.data.keyword.cos_full_notm}} buckets used by {{site.data.keyword.logs_full_notm}} as data buckets can be configured only with the following [storage classes](/docs/cloud-object-storage?topic=cloud-object-storage-classes):
 
