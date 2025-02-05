@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-19"
+  years:  2024, 2025
+lastupdated: "2025-02-04"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-# Configuring alerts
+# Configuring alerts in {{site.data.keyword.logs_full_notm}}
 {: #alerts-config}
 
 Create an alert in {{site.data.keyword.logs_full_notm}} for early detection of anomalies, proactive incident response, or improved mean time to resolution (MTTR).

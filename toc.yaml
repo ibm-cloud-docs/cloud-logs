@@ -281,6 +281,8 @@ toc:
             navtitle: Using benchmark tags
           - topic: query-data.md
             navtitle: Querying data
+          - topic: query-regex.md
+            navtitle: Querying data by using regex
           - topic: query-data-lucene.md
             navtitle: Querying data by using Lucene
           - topic: query-data-dataprime.md
@@ -499,6 +501,7 @@ toc:
                 - ts-no-metrics-bucket.md
                 - ts-cos-config.md
                 - ts-no-data.md
+                - ts-cos-events.md
             - topicgroup:
                 label: Troubleshooting platform data
                 topics:
