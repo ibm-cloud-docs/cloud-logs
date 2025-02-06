@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-11"
+  years:  2024, 2025
+lastupdated: "2025-02-06"
 
 keywords:
 
@@ -171,7 +171,7 @@ Complete the following steps:
     where:
 
     - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
-    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
+    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-step1)
     - Add `--hide-secret` to hide the API key from showing in the output data after the command runs.
@@ -205,7 +205,7 @@ Complete the following steps:
     where:
 
     - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
-    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
+    - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-step1)
 
