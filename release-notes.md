@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-05"
+lastupdated: "2025-02-06"
 
 keywords:
 
@@ -22,6 +22,13 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
+
+## 6 February 2025
+{: #cloud-logs-feb0625}
+{: release-note}
+
+Context-based restrictions
+:  {{site.data.keyword.logs_full_notm}} now supports context-based restrictions (CBR). For more information see, [Protecting resources with context-based restrictions](/docs/cloud-logs?topic=cloud-logs-iam-cbr&interface=ui).
 
 ## 5 February 2025
 {: #cloud-logs-feb0525}
