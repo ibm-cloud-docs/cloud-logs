@@ -94,7 +94,11 @@ toc:
       id: tutorial
       topics:
       - topic: kube-logs.md
-        navtitle: Send IBM Cloud Kubernetes Service log data to IBM Cloud Logs 
+        navtitle: Send IBM Cloud Kubernetes Service log data to IBM Cloud Logs
+      - topic: iam-cbr-tutorial.md
+        navtitle: Restricting access from a network zone
+      - topic: iam-cbr-tutorial-integrated-services.md
+        navtitle: Restricting access to integrated services
   - navgroup:
       id: howto
       topics:
@@ -106,6 +110,8 @@ toc:
           - topic: core/vpe.md
             navtitle: Using virtual private endpoints
           - core/cse_proxy.md
+          - topic: iam-cbr.md
+            navtitle: Protecting resources with context-based restrictions
       - topicgroup:
           label: Managing access
           topics:
