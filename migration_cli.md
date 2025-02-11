@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-02-11"
 
 keywords:
 
@@ -37,7 +37,39 @@ Use the migration CLI to migrate your {{site.data.keyword.la_full}} or {{site.da
 You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up-to-date so that you can use the most current commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
 {: tip}
 
+## ibmcloud logging migrate export
+{: #logging-migrate-export}
 
+Use this command to export the {{site.data.keyword.logs_full_notm}} configuration of views from one instance and import it into another {{site.data.keyword.logs_full_notm}} instance.
+
+This command only supports exporting and importing views configured with Lucene queries.
+{: beta}
+
+```text
+ibmcloud logging migrate export --source-cl-crn SOURCE-CL-CRN --target-cl-crn TARGET-CL-CRN [--api | --terraform] [--force] [--directory DIRECTORY] 
+```
+{: pre}
+
+### Command options
+{: #export-options}
+
+`--source-cl`|`--sc`
+:   The CRN of the source {{site.data.keyword.logs_full_notm}} instance.
+
+`--target-cl`|`--tc`
+:   The CRN of the target {{site.data.keyword.logs_full_notm}} instance.
+
+`--api`|`-a`
+:   Use the API method to export and import the views configuration. If not specified, `--terraform` is the default.
+
+`--terraform`|`-t`
+:   Use the Terraform method to export and import the views configuration. If not specified, `--terraform` is the default.
+
+`--directory`
+   :   The directory on your local computer where migration files are written. If not specified, the directory where the command is run is used.
+
+`--force`|`-f`
+   :   Runs the command without further prompting of the user.
 
 ## ibmcloud logging migrate generate-terraform
 {: #logging-migrate-generate-terraform}

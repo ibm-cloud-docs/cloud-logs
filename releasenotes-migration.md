@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-11"
 
 keywords:
 
@@ -28,6 +28,29 @@ Only the current plug-in version and two previous versions are available at any 
 
 
 
+
+
+
+##  10 February 2025
+{: #migration-feb102825}
+
+The migration tool plug-in v0.1.32 is available.
+:   Updates include:
+
+    * A fix for an error in bucket lifecycle type conversion.
+    
+    * Enhancements for email notifications.
+    
+      * Support for both custom and default email notifications.
+
+      * By default the Terraform is created with a default subscription. If the `--ce` flag is specified, notifications will be created with custom subscriptions.
+    
+    * When archiving is not enabled in the migrated {{site.data.keyword.la_full_notm}} or {{site.data.keyword.at_full_notm}} instance, Terraform files to configure {{site.data.keyword.logs_full_notm}} {{site.data.keyword.cos_full_notm}} buckets are added to the `manual-tf-folder`,
+    
+    * The required `region` parameter is now added to the `logs-router` resource Terraform file.
+    
+    Support for a [new command](/docs/cloud-logs?topic=cloud-logs-migration_cli#logging-migrate-export) to export the {{site.data.keyword.logs_full_notm}} views configuration from one {{site.data.keyword.logs_full_notm}} instance and import it into another {{site.data.keyword.logs_full_notm}} instance. Only views with Lucene queries are supported.
+    {: beta}
 
 
 
