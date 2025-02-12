@@ -401,7 +401,7 @@ toc:
         navtitle: Your responsibilities
       - topic: core/data-portability.md
         navtitle: Data portability
-      - topic: core/ha-dr.md
+      - topic: core/ha-dr-new.md
         navtitle: Understanding high availability and disaster recovery
       - topicgroup:
           label: Extensions
