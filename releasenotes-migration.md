@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-12"
 
 keywords:
 
@@ -51,6 +51,9 @@ The migration tool plug-in v0.1.32 is available.
     
     Support for a [new command](/docs/cloud-logs?topic=cloud-logs-migration_cli#logging-migrate-export) to export the {{site.data.keyword.logs_full_notm}} views configuration from one {{site.data.keyword.logs_full_notm}} instance and import it into another {{site.data.keyword.logs_full_notm}} instance. Only views with Lucene queries are supported.
     {: beta}
+
+    When running the `ibmcloud logging migrate create-resource` command with the `--platform` option, if the {{site.data.keyword.at_full_notm}} instance name includes `logdna` in its name, the {{site.data.keyword.atracker_full_notm}} targets will not be created and the following Terraform error is returned: `undeclared resource on at-routes.tf`.
+    {: restriction}
 
 
 
