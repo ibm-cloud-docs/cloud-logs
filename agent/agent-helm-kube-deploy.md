@@ -305,6 +305,6 @@ Complete the following steps:
 {: #agent-helm-kube-deploy-deploy-step6}
 
 
-{{/_include-segments/kube-config.md}}
+{{../_include-segments/kube-config.md}}
 
 For more information about the `input-kubernetes.conf` file, see [Configuring whether logs are included or excluded](/docs/cloud-logs?topic=cloud-logs-configure-include-exclude).

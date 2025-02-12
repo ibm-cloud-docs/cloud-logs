@@ -45,7 +45,7 @@ To specify included paths, complete the following steps:
     Additional log sources can be specified and separated by commas in the `Path` parameter.
 
     
-    {{/_include-segments/kube-config.md}}
+    {{../_include-segments/kube-config.md}}
 
 3. Restart the agent pods.
 
