@@ -62,7 +62,7 @@ To specify included paths, complete the following steps:
 
 
 {{../_include-segments/kube-config.md}}
-{: note}
+
 
 ## Excluding paths
 {: #exclude-paths}
