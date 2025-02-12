@@ -44,9 +44,6 @@ To specify included paths, complete the following steps:
 
     Additional log sources can be specified and separated by commas in the `Path` parameter.
 
-    
-    {{../_include-segments/kube-config.md}}
-
 3. Restart the agent pods.
 
     For Kubernetes clusters, run:
@@ -64,6 +61,8 @@ To specify included paths, complete the following steps:
     {: pre}
 
 
+{{../_include-segments/kube-config.md}}
+{: note}
 
 ## Excluding paths
 {: #exclude-paths}
