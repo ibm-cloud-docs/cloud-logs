@@ -202,7 +202,6 @@ toc:
               - topic: agent/agent-helm-update.md
                 navtitle: Updating the Logging agent version
               - topic: agent/configure-agent.md
-                navtitle: Filtering logs
               - topic: agent/agent-multiline.md
                 navtitle: Supporting multiline logs
               - topic: agent/agent-helm-remove.md
