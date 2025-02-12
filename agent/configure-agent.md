@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-11"
+  years:  2024, 2025
+lastupdated: "2025-02-12"
 
 keywords:
 
@@ -44,21 +44,24 @@ To specify included paths, complete the following steps:
 
     Additional log sources can be specified and separated by commas in the `Path` parameter.
 
+    
+    {{/_include-segments/kube-config.md}}
+
 3. Restart the agent pods.
 
     For Kubernetes clusters, run:
 
-    ```
+    ```sh
     kubectl -n ibm-observe rollout restart ds/logs-agent
     ```
-    {: codeblock}
+    {: pre}
 
     For OpenShift clusters, run:
 
-    ```
+    ```sh
     oc -n ibm-observe rollout restart ds/logs-agent
     ```
-    {: codeblock}
+    {: pre}
 
 
 
@@ -91,17 +94,17 @@ To specify paths to be excluded, complete the following steps:
 
     For Kubernetes clusters, run:
 
-    ```
+    ```sh
     kubectl -n ibm-observe rollout restart ds/logs-agent
     ```
-    {: codeblock}
+    {: pre}
 
     For OpenShift clusters, run:
 
-    ```
+    ```sh
     oc -n ibm-observe rollout restart ds/logs-agent
     ```
-    {: codeblock}
+    {: pre}
 
 
 
