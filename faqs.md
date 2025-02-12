@@ -49,15 +49,3 @@ If neither one or separate {{site.data.keyword.cos_full_notm}} data and metrics 
 {: faq}
 
 It is recommended that separate {{site.data.keyword.cos_full_notm}} buckets be used for the {{site.data.keyword.logs_full_notm}} data bucket and the metrics bucket and that you do not combine these two buckets into a single {{site.data.keyword.cos_full_notm}} bucket, even though it is technically feasible to do so.
-
-
-
-## How can I send my kube audit logs to {{site.data.keyword.logs_full_notm}}?
-{: #faq_kube_audit}
-{: faq}
-
-
-{{/_include-segments/kube-config.md}}
-
-
-For more information about the `input-kubernetes.conf` file, see [Configuring whether logs are included or excluded](/docs/cloud-logs?topic=cloud-logs-configure-include-exclude).
