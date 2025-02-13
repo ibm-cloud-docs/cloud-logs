@@ -1,0 +1,2 @@
+To find the CRN for the {{site.data.keyword.en_full_notm}} intstance that you want to use, from the main {{site.data.keyword.cloud_notm}} navigation menu click **Resource list** > **Developer tools**. For the {{site.data.keyword.en_full_notm}} instance, click the row of the {{site.data.keyword.en_full_notm}} instance. Do not click the name or the actions icon. A dialog is displayed where you can see the {{site.data.keyword.en_full_notm}} instance CRN.
+{: hint}

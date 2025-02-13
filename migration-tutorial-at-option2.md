@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-13"
 
 keywords:
 
@@ -126,6 +126,9 @@ Complete the following steps:
     {: codeblock}
 
     You can configure the integration with the Event Notifications service with the option `--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN`.
+
+    
+    {{/_include-segments/find-ecrn.md}}
 
     You can change the name of the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
