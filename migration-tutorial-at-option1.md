@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-13"
 
 keywords:
 
@@ -100,6 +100,9 @@ Complete these steps before you begin:
 {{/_include-segments/clean-directory.md}}
 
 
+{{/_include-segments/find-ecrn.md}}
+
+
 {{/_include-segments/verify-queries.md}}
 
 Complete the following steps:
@@ -128,7 +131,7 @@ Complete the following steps:
 
     The `-f` option will run the migration tool without any additional prompts. Run the migration tool with the option `-f` to apply the Terraform files when you run the command. If you just want to generate Terraform files so you can review and modify them, do not include this option. Once reviewed or modified you can apply the Terraform files by running `terraform apply` from the directory containing the Terraform files.
 
-    To migrate an instance using the same instance name, resource group, and bucket names, you just need to run `ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE
+    To migrate an instance using the same instance name, resource group, and bucket names, you just need to run `ibmcloud logging migrate create-resources --scope instance --instance-crn CRN_VALUE`
 
 3. Use the following checklist to verify that the following assets are created in your account when you migrate the instance:
 

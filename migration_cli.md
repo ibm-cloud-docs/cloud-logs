@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-13"
 
 keywords:
 
@@ -283,6 +283,9 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 
 `--force`|`-f`
    :   Runs the command without further prompting of the user.
+
+
+{{/_include-segments/find-ecrn.md}}
 
 ### Examples
 {: #create-resources-tf-example}
