@@ -270,9 +270,6 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 
    : The [CRN](/docs/account?topic=account-crn) of an {{site.data.keyword.en_full_notm}} instance. Migrated alerts will be configured to be sent to this instance.
 
-   
-   {{/_include-segments/find-ecrn.md}}
-
    If `--en-instance-crn` is not specified, Terraform files are created to migrate alerts, however manual configuration will have to be done after migration to configure {{site.data.keyword.en_full_notm}} to receive the alerts. If the `--api` option is used, and the user does not specify yes when prompted to configure alerting to {{site.data.keyword.en_full_notm}}, the user will have to manally configure sending alerts to {{site.data.keyword.en_full_notm}}.
    {: important}
 
@@ -286,6 +283,9 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 
 `--force`|`-f`
    :   Runs the command without further prompting of the user.
+
+
+{{/_include-segments/find-ecrn.md}}
 
 ### Examples
 {: #create-resources-tf-example}

@@ -101,6 +101,9 @@ Complete these steps before you begin:
 {{/_include-segments/clean-directory.md}}
 
 
+{{/_include-segments/find-ecrn.md}}
+
+
 {{/_include-segments/verify-queries.md}}
 
 Complete the following steps:
@@ -120,9 +123,6 @@ Complete the following steps:
     {: codeblock}
 
     You can configure the integration with the Event Notifications service with the option `--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN`.
-
-    
-    {{/_include-segments/find-ecrn.md}}
 
     You can change the name of the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
