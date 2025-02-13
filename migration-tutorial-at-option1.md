@@ -123,9 +123,6 @@ Complete the following steps:
 
     You can configure the integration with the Event Notifications service with the option `--ecrn EVENT_NOTIFICATIONS_INSTANCE_CRN`.
 
-    
-    {{/_include-segments/find-ecrn.md}}
-
     You can change the name of the instance that is created in Cloud Logs by adding the option `--instance-name INSTANCENAME`.
 
     You can change the resource group ID associated with the instance that is created in Cloud Logs by adding the option `--instance-resource-group-id RESOURCEGROUPID`.
