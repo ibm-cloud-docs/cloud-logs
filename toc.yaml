@@ -214,7 +214,7 @@ toc:
               - topic: agent/agent-linux.md
                 navtitle: Deploying the agent
               - topic: agent/agent-rsyslog.md
-                navtitle: Configure the Logging agent to collect and route (r)Syslog messages 
+                navtitle: Configure the Logging agent to collect and route Rsyslog messages 
           - topicgroup:
               label: Logging agent for Windows environments
               topics:

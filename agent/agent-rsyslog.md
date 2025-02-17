@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-08"
+  years:  2024, 2025
+lastupdated: "2025-02-17"
 
 keywords:
 
@@ -13,10 +13,10 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Configuring the {{site.data.keyword.agent}} for (r)Syslog logs
+# Configuring the {{site.data.keyword.agent}} for Rsyslog logs
 {: #agent-rsyslog}
 
-You can deploy a {{site.data.keyword.agent}} to collect and route (r)Syslog messages from a Syslog server to an {{site.data.keyword.logs_full_notm}} instance.
+You can deploy a {{site.data.keyword.agent}} to collect and route Rsyslog messages from a Syslog server to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
 
@@ -31,7 +31,7 @@ For more information, see [Managing the agent Linux environments](/docs/cloud-lo
 ## Step 1. Setting up the {{site.data.keyword.agent}} configuration
 {: #syslog-s1}
 
-You can configure the {{site.data.keyword.agent}} to collect (r)Syslog messages through a Unix socket server (UDP or TCP) or over the network using TCP or UDP.
+You can configure the {{site.data.keyword.agent}} to collect Rsyslog messages through a Unix socket server (UDP or TCP) or over the network using TCP or UDP.
 
 1. Edit the `fluent-bit.conf` file in the `/etc/fluent-bit/` folder.
 
