@@ -206,10 +206,17 @@ Using the API key, endpoint URL, and YAML file, deploy the agent to your cluster
 
 1. Log in to the Helm registry by running the `helm registry login` command:
 
-    ```sh
-    helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
-    ```
-    {: codeblock}
+   - For MacOS, Linux™ and WSL2 on Windows™ run the following command:
+      ```sh
+      helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
+      ```
+      {: codeblock}
+
+   - For Windows™, run the following command in PowerShell as an administrator:
+      ```sh
+      helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
+      ```
+      {: codeblock}
 
     For more information, see [Using Helm charts in Container Registry: Pulling charts from another registry or Helm repository](/docs/Registry?topic=Registry-registry_helm_charts#registry_helm_charts_pull).
 

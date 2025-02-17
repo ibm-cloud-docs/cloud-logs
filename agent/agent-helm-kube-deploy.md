@@ -135,7 +135,7 @@ Complete the following steps:
     Run the following commands:
 
     ```sh
-    ibmcloud region-set global
+    ibmcloud cr region-set global
     ```
     {: codeblock}
 
