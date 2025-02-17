@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-28"
+  years:  2024, 2025
+lastupdated: "2025-02-17"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Monitoring operational logs
 {: #cl-operational-logs}
 
-You can send infrastructure and application logs to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}} or by using the REST API. You can also configure a Linux {{site.data.keyword.agent}} on a Linux server to collect and route (r)Syslog data to an {{site.data.keyword.logs_full_notm}} instance.
+You can send infrastructure and application logs to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}} or by using the REST API. You can also configure a Linux {{site.data.keyword.agent}} on a Linux server to collect and route Rsyslog data to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
 
@@ -45,9 +45,9 @@ You can send logs to an {{site.data.keyword.logs_full_notm}} instance by using t
 ## Using a Linux {{site.data.keyword.agent}} on a Linux server to collect and route rsyslog data
 {: #cl-operational-logs-agent-collector}
 
-You can configure a Linux {{site.data.keyword.agent}} on a Linux server to collect and route (r)Syslog data to an {{site.data.keyword.logs_full_notm}} instance.
+You can configure a Linux {{site.data.keyword.agent}} on a Linux server to collect and route Rsyslog data to an {{site.data.keyword.logs_full_notm}} instance.
 - {{site.data.keyword.logs_full_notm}} does not support a syslog endpoint.
-- For more information, see [Configuring the {{site.data.keyword.agent}} for (r)Syslog logs](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog).
+- For more information, see [Configuring the {{site.data.keyword.agent}} for Rsyslog logs](/docs/cloud-logs?topic=cloud-logs-agent-rsyslog).
 
 
 The following diagram shows the high level view of a source, such as PowerVS, where you can configure rsyslog to send logs to a Linux server:
