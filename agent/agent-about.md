@@ -49,7 +49,7 @@ You can deploy the {{site.data.keyword.agent}} on a {{site.data.keyword.openshif
 
 You can deploy the agent on clusters that you run on-prem, in {{site.data.keyword.cloud_notm}}, or in a different cloud.
 
-The {{site.data.keyword.agent}} is a daemon set that is designed to have one pod running on each node of a cluster. Each pod will collect relevant logs for the node its running on. The {{site.data.keyword.agent}} will then forward those logs to the {{site.data.keyword.logs_full_notm}} service.
+The {{site.data.keyword.agent}} is a daemon set that is designed to have one pod running on each node of a cluster. Each pod will collect relevant logs for the node it is running on. The {{site.data.keyword.agent}} will then forward those logs to the {{site.data.keyword.logs_full_notm}} service.
 
 By default, the {{site.data.keyword.agent}} monitors and collects log data from files matching the specified path pattern in `/var/log/containers/`, excluding logs from files matching the exclusion pattern. The refresh interval is set to 10 seconds. You can change these values and more in the config map `logger-agent-config`. For more information, see [Filtering logs](/docs/cloud-logs?topic=cloud-logs-configure-include-exclude).
 
@@ -68,7 +68,7 @@ The following diagram shows the high level view when the source of logs is a Kub
 ![Flow of logs from cluster](../images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Flow of logs from cluster" caption-side="bottom"}
 
 
-## {{site.data.keyword.agent}} for non-orchestarted environments
+## {{site.data.keyword.agent}} for non-orchestrated environments
 {: #agent-about-std}
 
 You can deploy the {{site.data.keyword.agent}} in Linux and Windows environments.
