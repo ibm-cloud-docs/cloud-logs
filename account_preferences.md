@@ -49,5 +49,4 @@ Change your date format view settings
     * `DD/MM/YYYY`
 
 Alerts
-:   You can enable the creating of a gauge-type metric called `cx_alerts`. If enabled, the metric is generated whenever an alert is triggerred or resolved. You can add this metric to custom dashboards.
-
+:   You can enable the creating of a [gauge-type](/docs/cloud-logs?topic=cloud-logs-widget_gauge) metric called `cx_alerts`. If enabled, the metric is generated whenever an alert is triggerred or resolved. You can add this metric to [custom dashboards](/docs/cloud-logs?topic=cloud-logs-create_dashboards).
