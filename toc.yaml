@@ -179,6 +179,7 @@ toc:
           - topic: cos.md
       - topic: instance-launch.md
         navtitle: Launching the UI
+      - account_preferences.md
       - topicgroup:
           label: Sending data to Cloud Logs
           topics:
