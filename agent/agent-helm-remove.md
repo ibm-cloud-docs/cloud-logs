@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-25"
+  years:  2024, 2025
+lastupdated: "2025-02-18"
 
 keywords:
 
@@ -58,6 +58,13 @@ Complete the following steps to remove a {{site.data.keyword.agent}}:
     ```
     {: codeblock}
 
+    [Windows]{: tag-windows} Windows PowerShell users should use this command instead:
+
+    ```sh
+    helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
+    ```
+    {: codeblock}
+
     For more information, see [Using Helm charts in Container Registry: Pulling charts from another registry or Helm repository](/docs/Registry?topic=Registry-registry_helm_charts#registry_helm_charts_pull)
 
     Option 2:  Log in to the Helm registry in {{site.data.keyword.registryshort}} by running the `ibmcloud cr login` command.
@@ -67,7 +74,7 @@ Complete the following steps to remove a {{site.data.keyword.agent}}:
     Run the following commands:
 
     ```sh
-    ibmcloud region-set global
+    ibmcloud cr region-set global
     ```
     {: codeblock}
 

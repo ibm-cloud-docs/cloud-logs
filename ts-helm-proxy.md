@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-28"
+  years:  2024, 2025
+lastupdated: "2025-02-18"
 
 keywords:
 
@@ -28,6 +28,13 @@ When running a command similar to the following to log in to the helm registry:
 helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
 ```
 {: pre}
+
+[Windows]{: tag-windows} Windows PowerShell users should use this command instead:
+
+```sh
+helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
+```
+{: codeblock}
 
 A message similar to the following is returned:
 

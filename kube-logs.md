@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-18"
 
 keywords:
 
@@ -208,6 +208,13 @@ Using the API key, endpoint URL, and YAML file, deploy the agent to your cluster
 
     ```sh
     helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
+    ```
+    {: codeblock}
+
+    [Windows]{: tag-windows} Windows PowerShell users should use this command instead:
+
+    ```sh
+    helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
     ```
     {: codeblock}
 
