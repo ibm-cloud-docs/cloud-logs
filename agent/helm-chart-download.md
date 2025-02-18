@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-10"
+  years:  2024, 2025
+lastupdated: "2025-02-18"
 
 keywords:
 
@@ -34,6 +34,13 @@ Complete the following steps to download a Helm chart version.
     helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
     ```
     {: codeblock}
+
+    [Windows]{: tag-windows} Windows PowerShell users should use this command instead:
+
+    ```sh
+    helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
+    ```
+    {: codeblock}    
 
 4. Run the following command to download a Helm chart:
 
