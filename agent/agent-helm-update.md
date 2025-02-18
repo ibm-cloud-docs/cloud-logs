@@ -144,7 +144,7 @@ Complete the following steps:
 
     where:
 
-    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
+    - `<install-name>` is the name of the Helm installation (`logging-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID.

@@ -92,4 +92,4 @@ Complete the following steps to remove a {{site.data.keyword.agent}}:
 
     where:
 
-    - `<install-name>` is the name of the helm installation (ie. `logging-agent`)
+    - `<install-name>` is the name of the helm installation (`logging-agent`)

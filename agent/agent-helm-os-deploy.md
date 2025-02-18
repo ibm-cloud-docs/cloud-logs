@@ -102,13 +102,15 @@ Complete the following steps:
 
     | Field Name | Description |
     |------------|-------------|
-    | `image.version` | the version of the agent to be deployed [see Step 1](#agent-helm-os-deploy-step1) |
-    | `clusterName`  | the name of the cluster - this will introduce the tag `kubernetes.cluster_name` into all log lines |
-    | `env.ingestionHost` | the public or private ingress endpoint for the {{site.data.keyword.logs_full_notm}} instance to receive the logs |
-    | `env.ingestionPort` | the ingress endpoint port \nPublic ingress endpoint = `443`\nPrivate ingress endpoint(VPE) = `443`\n Private ingress endpoint(CSE) = `3443` |
-    | `iamMode` | `TrustedProfile` or `IAMAPIKey` based on the authentication method chosen in [Step 1](#agent-helm-os-deploy-step1) |
-    | `trustedProfileID` | If `iamMode` is `TrustedProfile` then provide the Trusted Profile ID, otherwise it's not required (for example: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` ) |
-    | `scc.create` | set to `true` in order to create the Security Constraints in Openshift |
+    | `image.version` | The version of the agent to be deployed [see Step 1](#agent-helm-os-deploy-step1) |
+    | `clusterName`  | The name of the cluster - this will introduce the tag `kubernetes.cluster_name` into all log lines |
+    | `env.ingestionHost` | The public or private ingress endpoint for the {{site.data.keyword.logs_full_notm}} instance to receive the logs |
+    | `env.ingestionPort` | The ingress endpoint port  \n Public ingress endpoint = `443`  \n Private ingress endpoint(VPE) = `443`  \n Private ingress endpoint(CSE) = `3443` |
+    | `env.iamMode` | `TrustedProfile` or `IAMAPIKey` based on the authentication method chosen in [Step 1](#agent-helm-os-deploy-step1) |
+    | `env.trustedProfileID` | If `iamMode` is `TrustedProfile` then provide the Trusted Profile ID, otherwise this is not required (for example: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` ). |
+    | `env.iamEnvironment` | Dictates the correct IAM authentication endpoint. Valid values are `Production`, `PrivateProduction`, or `Custom`. If omitted, the default value is `Production`.|
+    | `env.iamHost` | If `iamEnvironment` is `Custom`, then provide the IAM host (for example: `private.eu-de.iam.cloud.ibm.com`), otherwise this is not required. |
+    | `scc.create` | Set to `true` in order to create the security constraints in Openshift |
     {: caption="Helm chart required parameters" caption-side="bottom"}
 
 ## Step 3. Install the Helm chart
@@ -177,7 +179,7 @@ Complete the following steps:
 
     where:
 
-    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
+    - `<install-name>` is the name of the Helm installation (`logging-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-step1)
@@ -211,7 +213,7 @@ Complete the following steps:
 
     where:
 
-    - `<install-name>` is the name of the Helm installation (ie. `logging-agent`)
+    - `<install-name>` is the name of the Helm installation (`logging-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-step1)

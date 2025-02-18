@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025
-lastupdated: "2025-01-08"
+  years:  2024, 2025
+lastupdated: "2025-02-18"
 
 keywords:
 
@@ -42,8 +42,18 @@ env:
   ingestionPort: "" # required
 
   iamMode: "TrustedProfile"
-  # trustedProfileID - trusted profile id - required for iam trusted profile mode
-  trustedProfileID: "" # required if iamMode is set to TrustedProfile
+  # trustedProfileID - trusted profile id - required if iamMode is set to "TrustedProfile"
+  trustedProfileID: ""
+
+  # Configure this parameter to control the IAM endpoint used by the agent to exchange the tokens.
+  # If omitted, the default value is "Production".
+  # Valid values are :
+  # "Production" to use the iam.cloud.ibm.com default endpoint
+  # "PrivateProduction" to use the private.iam.cloud.ibm.com endpoint
+  # "Custom" to use a custom provided IAM endpoint
+  iamEnvironment: "Production"
+  # iamHost - custom IAM endpoint (for example: private.eu-de.iam.cloud.ibm.com) - required if iamEnvironment is set to "Custom"
+  iamHost: ""
 
 scc:
   # true enables creation of Security Context Constraints in Openshift clusters
@@ -71,13 +81,6 @@ resources:
 additionalLogSourcePaths: "" # adds locations to the default set of logs that will be processed.
 excludeLogSourcePaths: "" # ignores logs in the specified locations.
 selectedLogSourcePaths: ""  # overrides the default path `/var/log/containers/*.log` and ignores the `additionalLogSourcePaths` configurations
-
-# Configure this parameter to control the IAM endpoint used by the agent to exchange the tokens.
-# The default value is `Production`.
-# Valid values are :
-# Set `Production` to use the iam.cloud.ibm.com default endpoint
-# Set PrivateProduction to use the private.iam.cloud.ibm.com endpoint
-iamEnvironment: "Production"
 
 # Configure this parameter to change the setting for the Kubernetes filter to include the annotations from Kubernetes with the log records.
 # The default value for this setting is `false`.
@@ -128,6 +131,16 @@ env:
   # trustedProfileID - trusted profile id - required for iam trusted profile mode
   trustedProfileID: "" # required if iamMode is set to TrustedProfile
 
+  # Configure this parameter to control the IAM endpoint used by the agent to exchange the tokens.
+  # If omitted, the default value is "Production".
+  # Valid values are :
+  # "Production" to use the iam.cloud.ibm.com default endpoint
+  # "PrivateProduction" to use the private.iam.cloud.ibm.com endpoint
+  # "Custom" to use a custom provided IAM endpoint
+  iamEnvironment: "Production"
+  # iamHost - custom IAM endpoint (for example: private.eu-de.iam.cloud.ibm.com) - required if iamEnvironment is set to "Custom"
+  iamHost: ""
+
 scc:
   # true enables creation of Security Context Constraints in Openshift clusters
   # set to false for Kubernetes clusters
@@ -155,13 +168,6 @@ resources:
 additionalLogSourcePaths: "" # adds locations to the default set of logs that will be processed.
 excludeLogSourcePaths: "" # ignores logs in the specified locations.
 selectedLogSourcePaths: ""  # overrides the default path `/var/log/containers/*.log` and ignores the `additionalLogSourcePaths` configurations
-
-# Configure this parameter to control the IAM endpoint used by the agent to exchange the tokens.
-# The default value is `Production`.
-# Valid values are :
-# Set `Production` to use the iam.cloud.ibm.com default endpoint
-# Set PrivateProduction to use the private.iam.cloud.ibm.com endpoint
-iamEnvironment: "Production"
 
 # Configure this parameter to change the setting for the Kubernetes filter to include the annotations from Kubernetes with the log records.
 # The default value for this setting is `false`.
@@ -199,6 +205,8 @@ The following table contains a list of the parameters that you can configure in 
 | `env.ingestionPort` | The {{site.data.keyword.logs_full_notm}} port to send the logs to | Required | No default value |
 | `env.iamMode` | Indicate the IAM authentication mechanism used. Valid values are: `TrustedProfile` or `IAMAPIKey` | Required | `TrustedProfile` |
 | `env.trustedProfileID` | The Trusted profile ID. | This parameter is required when `iamMode=TrustedProfile` | No default value |
+| `env.iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens.  \n For more information, see [iamEnvironment](#agent-helm-template-clusters-chart-options-iam-env). | Required | `Production` |
+| `env.iamHost` | Host name used for custom IAM environment. | Required if `iamEnviroment` is set to `Custom`. | No default value |
 | `secret.iamAPIKey` | The APIKey ID. You only should provide this value via the CLI. For more information, see `env.iamMode`. | This parameter is required when `iamMode=IAMAPIKey`   | No default value |
 | `clusterName` | The name of the kubernetes cluster | Optional | No default value |
 | `scc.create` | Indicates when to create the Secure Context Constraints in Openshift | Required for Openshift cluster deployments only. | `false` |
@@ -212,7 +220,6 @@ The following table contains a list of the parameters that you can configure in 
 | `retryLimit` | Limit the number of retries that will be attempted \n For more information, see [retryLimit](#agent-helm-template-clusters-deploy-chart-options-retrylimit)| Required | False |
 | `loggingLevel` | The type of logs that should be reported by the agent itself. Valid values are: `debug`, `info`, or `error`. | Required | `info` |
 | `additionalMetadata` | A list of key/value pair tags that can be added as metadata to every log line. \n For more information, see [additionalMetadata](#agent-helm-template-clusters-deploy-chart-options-additional-metadata). | Optional | No default value  |
-| `iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens.  \n For more information, see [iamEnvironment](#agent-helm-template-clusters-chart-options-iam-env). | Required | `Production` |
 {: caption="Helm chart parameters" caption-side="bottom"}
 
 ## env.iamMode
@@ -238,7 +245,7 @@ Consider the following information when setting this parameter:
 
 - If `env.iamMode: "IAMAPIKey"` is set, then the configuration expects a secret to be defined that contains an IAM Apikey with permissions.
 
-    If the `secret.iamAPIKey` variable is provided on the helm command (ie. `--set secret.iamAPIKey=<your iamAPIKey>`), then the helm chart will create the Kubernetes secret.
+    If the `secret.iamAPIKey` variable is provided on the helm command (for example `--set secret.iamAPIKey=<your iamAPIKey>`), then the helm chart will create the Kubernetes secret.
 
     Alternatively, you can create the secret ahead of time with the command: (Make sure you are connected to your cluster.)
 
@@ -313,7 +320,7 @@ selectedLogSourcePaths: ""
 ```
 {: codeblock}
 
-## iamEnvironment
+## env.iamEnvironment
 {: #agent-helm-template-clusters-chart-options-iam-env}
 
 This configuration controls the IAM endpoint used by the agent to exchange the tokens.
@@ -323,11 +330,21 @@ The default value is `Production`.
 Valid values are :
 - Set `Production` to use the `iam.cloud.ibm.com` default endpoint
 - Set `PrivateProduction` to use the `private.iam.cloud.ibm.com` endpoint
+- Set `Custom` to use a custom IAM endpoint (for example private.eu-de.iam.cloud.ibm.com)
 
 The entry in the `logs-values.yaml` file looks as follows:
 
 ```yaml
-iamEnvironment: "Production"
+env:
+  iamEnvironment: "Production"
+```
+{: codeblock}
+
+For `Custom` iamEnvironment setting, the `iamHost` must also be provided.
+```yaml
+env:
+  iamEnvironment: "Custom"
+  iamHost: "private.eu-de.iam.cloud.ibm.com"
 ```
 {: codeblock}
 
