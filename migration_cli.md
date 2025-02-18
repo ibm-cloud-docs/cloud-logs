@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-18"
 
 keywords:
 
@@ -326,6 +326,9 @@ ibmcloud logging migrate query --input-query input-query
 
 `-input-query`|`--iq`
 :   The {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} view query to be converted, enclosed in double quotes.
+
+    If your query includes double quotes, the double quotes within the query must be escaped by including a backslash (`\`) before the double quote character within the query. For example, the query `app:ops AND -"establish new stream"` would need to be specified as `-input-query "app:ops AND -\"establish new stream\""`.
+    {: important}
 
 ### Example
 {: #logging-migrate-query-example}
