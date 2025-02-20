@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-20"
 
 keywords:
 
@@ -40,7 +40,7 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 ## ibmcloud logging migrate export
 {: #logging-migrate-export}
 
-Use this command to export the {{site.data.keyword.logs_full_notm}} configuration of views from one instance and import it into another {{site.data.keyword.logs_full_notm}} instance.
+Use this command to export the {{site.data.keyword.logs_full_notm}} configuration of views, alerts, and rulegroups from one instance and import it into another {{site.data.keyword.logs_full_notm}} instance.
 
 This command only supports exporting and importing views configured with Lucene queries.
 {: beta}
