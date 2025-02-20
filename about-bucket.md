@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-28"
+lastupdated: "2025-02-20"
 
 keywords:
 
@@ -22,7 +22,7 @@ Configure a data bucket and a metrics bucket in {{site.data.keyword.cos_full}} t
 You can configure the same bucket for data and metrics. However, notice that the {{site.data.keyword.logs_full_notm}} service needs deletion permission on metrics files. Therefore, if you need to configure your bucket with lifecycle policies to manage log data files in the bucket, you must use different buckets to store your log data and your metrics data.
 {: important}
 
-{{site.data.keyword.logs_full_notm}} does not support {{site.data.keyword.cos_full}} buckets configured with [retention policies](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), [object lock policies](/docs/cloud-object-storage?topic=cloud-object-storage-ol-overview), or with [pubic access enabled](/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access).
+{{site.data.keyword.logs_full_notm}} does not support {{site.data.keyword.cos_full}} buckets configured with [retention policies](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), [object lock policies](/docs/cloud-object-storage?topic=cloud-object-storage-ol-overview), or with [public access enabled](/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access).
 {: restriction}
 
 For production environments, consider using different buckets for data and for metrics.
