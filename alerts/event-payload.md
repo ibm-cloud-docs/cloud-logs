@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-21"
 
 keywords:
 
@@ -118,3 +118,15 @@ Consider the following information:
    `log_example_truncated`: This field will be added to the payload to indicate that an example log entry was truncated.
 
    `meta_labels_truncated`: This field will be added to indicate that metadata labels were truncated.
+
+## Special characters in custom template values
+{: #event-payload-custom}
+
+If you are using a value in a custom template that includes a period (`.`) in the name, you need to enclose the value in square brackets (`[ ]`).
+
+For example, if the value you want to include in your notification `kubernetes.cluster_name`, you need to include the value similar to this:
+
+```text
+"CloudLogs_Shared_Summary": "{{data.log_example.[kubernetes.cluster_name]}}"
+```
+{: codeblock}
