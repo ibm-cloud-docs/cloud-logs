@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-21"
 
 keywords:
 
@@ -487,6 +487,8 @@ Will result in logs of the following form:
 
 When querying with the `groupby` operator, you can apply an [aggregation function](#aggregation_functions) (such `asavg`, `max`, `sum`) to the bucket of results. This feature gives you the power to manipulate an aggregation expression inside the expression itself, allowing you to calculate and manipulate your data simultaneously.
 
+
+
 ### `limit`
 {: #limit}
 
@@ -669,6 +671,9 @@ Examples:
 source logs
 ```
 {: codeblock}
+
+
+
 
 ### `top`
 {: #top}
