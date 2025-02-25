@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-02-25"
 
 keywords:
 
@@ -244,9 +244,13 @@ Complete the following steps:
     ```
     {: codeblock}
 
-3. Save the configuration file.
+3. Modify the *SERVICE* section.
+    
+    Set the **storage.path** to a location in the file system to store streams and data.
 
-4. Restart the agent to apply the changes.
+4. Save the configuration file.
+
+5. Restart the agent to apply the changes.
 
     ```pre
     systemctl daemon-reload && systemctl restart fluent-bit
