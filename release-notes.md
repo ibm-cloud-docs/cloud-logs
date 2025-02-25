@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-25"
 
 keywords:
 
@@ -22,6 +22,31 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
+
+
+
+## 24 February 2025
+{: #cloud-logs-feb2425}
+{: release-note}
+
+Geo enrichment
+:   [Geo enrichment](/docs/cloud-logs?topic=cloud-logs-enriching-data#geo-enrichment) now supports ASN (Autonomous System Number). ASN information will be added to the logs when geo enrichment is used.
+
+[DataPrime] DataPrime enhancements
+:   DataPrime now support the [`join` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#join) types `inner`, `full`, and `left`.
+
+    DataPrime now supports the [`stitch` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#stitch).
+
+[UI] Shared URL
+:   Support added so you can [share the URL](/docs/cloud-logs?topic=cloud-logs-share_url) of the the current view of the logs explore screen.
+
+Fixes implemented
+:   The following issues are resolved.
+    - [UI] Resolved the issue in the custom dashboard where no data was shown in widgets when querying logs from priority insights.
+    - [UI] Resolved the issued where livetail did not display UTF-8 encoded characters.
+    - [UI] Resolve the issue when expanding the info panel hid the contents behind the navigation menu.
+
+
 
 ## 6 February 2025
 {: #cloud-logs-feb0625}

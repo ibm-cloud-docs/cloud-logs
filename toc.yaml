@@ -310,6 +310,8 @@ toc:
             navtitle: Using actions
           - topic: create_dashboard.md
             navtitle: Managing custom dashboards
+          - topic: share_url.md
+            navtitle: Sharing URLs
           - topicgroup:
               label: Creating widgets
               topics:
