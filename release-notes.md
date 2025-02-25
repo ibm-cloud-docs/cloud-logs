@@ -25,8 +25,8 @@ For release notes about the {{site.data.keyword.logs_full_notm}} migration tool,
 
 
 
-## xx February 2025
-{: #cloud-logs-febxx25}
+## 24 February 2025
+{: #cloud-logs-feb2425}
 {: release-note}
 
 Geo enrichment
