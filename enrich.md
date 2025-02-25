@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-02-25"
 
 keywords:
 
@@ -59,7 +59,7 @@ You can create a CSV file with a list of allowlisted domains so each log is enri
 
 Logs can include IP information.
 
-With the geo enrichment, you can automatically add IP-based geographical information to your logs as new fields that can be queried, visualized, and reported.
+With the geo enrichment, you can automatically add IP-based geographical information, including ASN (Autonomous System Number) information, to your logs as new fields that can be queried, visualized, and reported.
 
 For example, you can add the country name, city name, continent name, postal code, and location geo point.
 

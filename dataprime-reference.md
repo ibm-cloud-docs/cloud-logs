@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-21"
+lastupdated: "2025-02-25"
 
 keywords:
 
@@ -489,6 +489,232 @@ When querying with the `groupby` operator, you can apply an [aggregation functio
 
 
 
+### `join`
+{: #join}
+
+`Join` merges the results of the current (left) query with a second (right) query based on a specified condition. It offers multiple forms to control how the data is combined and supports nesting, allowing the right query to include its own `join` command.
+
+`Join` supports three variations:
+
+`join left`|`join`
+:   For each event in the left query, the command selects a matching event from the right query based on the specified condition. If no match is found, rows are included for all events in the left query. Unmatched rows from the right query are set to `null`.
+
+`join full`
+:   Returns a row for every event, including those that may not have a match in either query (left or right), filling missing values with `null`.
+
+`join inner`
+:   Only returns rows where there are non-null results from both queries.
+
+Syntax:
+
+```text
+ <left_side_query> | join (<right_side_query>) on <condition> into <right_side_target>
+ <left_side_query> | join (<right_side_query>) using <join_keypath_1> [, <join_keypath_2>, ...] into <right_side_target>
+```
+{: codeblock}
+
+Where:
+
+* `<right_side_query>` - The `<right_side_query>` denotes the new query to be joined to.
+
+* `<left_side_query>` - The `<left_side_query>` denotes the initial query, for example, in the query `source logs | filter x != null | join ...`, the left hand side query is `source logs | filter x != null`.
+
+* `<condition>` - The condition if results from both queries should be joined.
+
+* `<join_keypath_n>` - `<join_keypath_n>` as a join key means to join results where a given keypath is equal in the results of both the left side query and the right side query.
+
+* `<right_side_target>` - The keypath where the joined data will be added to the current query.
+
+#### `join` example
+{: #join_basic}
+
+You have this [custom enrichment](/docs/cloud-logs?topic=cloud-logs-enriching-data) table named `users` providing information on IDs related to names:
+
+```json
+{ "id": "111", "name": "John" }
+{ "id": "222", "name": "Emily" }
+{ "id": "333", "name": "Alice" }
+```
+{: codeblock}
+
+And this data providing login events and user IDs, but not the user name associated with the user IDs.
+
+```json
+{ "userid": "111", "timestamp": "2022-01-01T12:00:00Z" }
+{ "userid": "111", "timestamp": "2022-01-01T12:30:00Z" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z" }
+```
+{: codeblock}
+
+Using `join` you can use a query to return data including the desired data. 
+
+```text
+source users | join (source logs | countby userid) on id == userid into logins
+```
+{: codeblock}
+
+This query is processed as follows:
+
+* The `source` is the custom enrichment table (`users`).
+
+* In the `join`, a count by the `userid` field is generated. This gives us our `count` statistics.
+
+* The `id` field in the custom enrichment table is compared with the `userid` field in the logs.
+
+* The result is pushed into the `logins` key. If the `logins` key already exists on the left hand query, it will be overwritten.
+
+For example:
+
+```json
+{ "id": "111", "name": "John", "logins": { "userid": "111", "_count": 2 } }
+{ "id": "222", "name": "Emily", "logins": { "userid": "222", "_count": 3 } }
+{ "id": "333", "name": "Alice", "logins": null }
+```
+{: codeblock}
+
+The result of the right side query now is inside the `logins` field. Note that there were no logins for user ID `333` (Alice), so the logins field is `null` because there was no result matched by the `join` condition.
+
+#### `join` example with the `using` keyword
+{: #join_using}
+
+Consider if our login dataset is:
+
+```json
+{ "id": "111", "timestamp": "2022-01-01T12:00:00Z" }
+{ "id": "111", "timestamp": "2022-01-01T12:30:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+```
+{: codeblock}
+
+In this case data on both sides of the join include the field `id`. In this case the `using` keyword can be used to take advantage of the common data:
+
+```text
+source users | join (source logins | countby id) using id into logins
+```
+{: codeblock}
+
+The result will be similar, but instead of `userid`, the field `id` is returned.
+
+```json
+{ "id": "111", "name": "John", "logins": { "id": "111", "_count": 2 } }
+{ "id": "222", "name": "Emily", "logins": { "id": "222", "_count": 3 } }
+{ "id": "333", "name": "Alice", "logins": null }
+```
+{: codeblock}
+
+If you have two fields that are named differently but would simplify your `join` query, you can use [`move`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#move) to move one of the fields so keypaths match on both sides.
+{: tip}
+
+#### `join` example using `left=>` and `right=>` keywords
+{: #join_left_right}
+
+You can use the `left=>` and `right=>` prefixes to refer to the events of the left and right queries. However, it is not required if a keypath exists in only one of the queries.
+
+Using the data from the previous example, consider the query:
+
+```text
+source users | join (source logins | countby id) on left=>id == right=>id into logins
+```
+{: codeblock}
+
+This is required because both data sets contain a field with the same name (`id`). For DataPrime to uniquely identify a field, it must know which side of the query we are referring. This query will result in the same output as the previous that used the `using` keyword.
+
+When using the `==` (equality) operator in your condition, it must compare a keypath from the left query with a keypath from the right query. However, given that the keypaths must be unique or prefixed with `left=>` or `right=>`, the ordering of the operands is not important.
+{: tip}
+
+#### `join full` example
+{: #join_full}
+
+You have this [custom enrichment](/docs/cloud-logs?topic=cloud-logs-enriching-data) table named `users` providing information on IDs related to names:
+
+```json
+{ "id": "111", "name": "John" }
+{ "id": "222", "name": "Emily" }
+{ "id": "333", "name": "Alice" }
+```
+{: codeblock}
+
+And consider this dataset:
+
+```json
+{ "id": "001", "timestamp": "2022-01-01T12:00:00Z" }
+{ "id": "111", "timestamp": "2022-01-01T12:00:00Z" }
+{ "id": "111", "timestamp": "2022-01-01T12:30:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+```
+{: codeblock}
+
+The second set of documents (right query) includes a log entry with `"id": "001"` that does not exist in the first set of documents (left query). If you use a standard join, this entry from the right query will be ignored and will not appear in the result. To ensure that every `id` field is included in the output, whether or not it appears in the left or right query, you can use `join full`:
+
+```text
+source users | join full (source logins | countby id) using id into logins
+```
+{: codeblock}
+
+This query results in:
+
+```json
+{ "id": "001", "name": "null", "logins": { "id": "001", "_count": 1 } }
+{ "id": "111", "name": "John", "logins": { "id": "111", "_count": 2 } }
+{ "id": "222", "name": "Emily", "logins": { "id": "222", "_count": 3 } }
+{ "id": "333", "name": "Alice", "logins": null }
+```
+{: codeblock}
+
+By using `join full`, all `id` fields from both datasets are preserved, and any missing values are set to `null`.
+
+`join full` is particularly useful when the results of both queries include time buckets. For example, if the left query's results are missing a time bucket for a specific hour (for example, `XX:XX:XX`), with `join full` this data point is included. This is especially useful for comparing two time series on a graph.
+{: tip}
+
+#### `join inner` example
+{: #join_inner}
+
+If you want to remove any rows if column results for the left or right queries that produce a null value, use `join inner`.
+
+Using the previous data, this query removes rows with unmatched data from either side:
+
+```text
+source users | join inner (source logins | countby id) using id into logins
+```
+{: codeblock}
+
+* The left query `source users` retrieves the users dataset containing the fields `id` and `name`.
+
+* The right query (`source logins | countby id`) retrieves the logins dataset, grouping by `id` and counting occurrences for each `id`.
+
+* `join inner` matches rows where `id` exists in both datasets and merges the data into a single record.
+
+* Rows with no match in either dataset are excluded from the final results.
+
+In this case, for the two document sets above, results will be as follows:
+
+```json
+{ "id": "111", "name": "John", "logins": { "id": "111", "_count": 2 } }
+{ "id": "222", "name": "Emily", "logins": { "id": "222", "_count": 3 } }
+```
+{: codeblock}
+
+
+#### Limitations and considerations
+{: #join_limitations}
+
+There are limitations and considerations when including `join` in a query:
+
+* The `join` condition only supports keypath equality (`==`). If multiple equality conditions are needed, they can be combined with `&&` (logical and).
+
+* One side of the join (either current query or join query) must be small (< 200MB). You can use [`filter`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#filter) and [`remove`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#remove) to reduce the size of the query.
+
+* Left outer joins require all columns in the condition to be non-null. **Any null columns will not be joined.** To include right hand query null columns, use `join full`. To exclude all null columns produced by the left and right joins, use `join inner`.
+
+
+
+
 ### `limit`
 {: #limit}
 
@@ -671,6 +897,120 @@ Examples:
 source logs
 ```
 {: codeblock}
+
+
+
+### `stitch`
+{: #stitch}
+
+The `stitch` command performs a horizontal union of two datasets, combining them side-by-side. It aligns rows from one dataset with rows from another and concatenates their columns, creating a single, unified dataset.
+
+When using the `stitch` command:
+
+* Datasets must be ordered, since rows are combined in sequence (that is, row 1 of dataset A is stitched with row 1 of dataset B).
+
+* If one dataset has more rows than the other, unmatched rows will have null values in the stitched columns.
+
+* The resulting dataset will contain all columns from both datasets.
+
+
+
+```text
+... | stitch (<subquery>) into <target-keypath>
+```
+{: codeblock}
+
+Example:
+
+You have these [custom enrichment](/docs/cloud-logs?topic=cloud-logs-enriching-data) tables:
+
+`sales` dataset:
+
+```json
+{ "product": "Widget", "sales": 100 }
+{ "product": "Gadget", "sales": 200 }
+{ "product": "Dashboard", "sales": 150 }
+```
+{: codeblock}
+
+`revenue` dataset:
+
+```json
+{ "product": "Widget", "revenue": 5000 }
+{ "product": "Gadget", "revenue": 8000 }
+{ "product": "Dashboard", "revenue": 6000 }
+```
+{: codeblock}
+
+In this query you will combine these datasets side-by-side, ensuring that each row from one dataset aligns with the corresponding row from the other:
+
+```text
+source sales | orderby product
+| stitch (source revenue | orderby product) into combined_data
+```
+{: codeblock}
+
+* `source sales` fetches all rows from the `sales` dataset, which contains products and their corresponding sales figures.
+
+* `orderby product` sorts the `sales` dataset by the `product` field to creae a consistent order for row alignment.
+
+* `stitch (source revenue | orderby product)` fetches rows from the `revenue` dataset and sorts them by the `product` field. The `sales` and `revenue` datasets are combined horizontally, aligning rows based on their order after sorting.
+
+* `into combined_data` stores the combined dataset into a variable called `combined_data`.
+
+The result from the query is:
+
+```json
+{ "product": "Widget", "sales": 100, "combined_data": { "product": "Widget", "revenue": 5000 } }
+{ "product": "Gadget", "sales": 200, "combined_data": { "product": "Gadget", "revenue": 8000 } }
+{ "product": "Dashboard", "sales": 150, "combined_data": { "product": "Dashboard", "revenue": 6000 } }
+```
+{: codeblock}
+
+If the datasets have unequal rows, the `stitch` command fills the missing values with `null`.
+
+For example, consider the following datasets:
+
+`sales` dataset (3 rows):
+
+```json
+{ "product": "Widget", "sales": 100 }
+{ "product": "Gadget", "sales": 200 }
+{ "product": "Dashboard", "sales": 150 }
+```
+{: codeblock}
+
+`revenue` dataset (2 rows):
+
+```json
+{ "product": "Widget", "revenue": 5000 }
+{ "product": "Gadget", "revenue": 8000 }
+```
+{: codeblock}
+
+Running this query:
+
+```text
+source sales | orderby product
+| stitch (source revenue | orderby product) into combined_data
+```
+{: codeblock}
+
+Results in:
+
+```json
+{ "product": "Widget", "sales": 100, "combined_data": { "product": "Widget", "revenue": 5000 } }
+{ "product": "Gadget", "sales": 200, "combined_data": { "product": "Gadget", "revenue": 8000 } }
+{ "product": "Dashboard", "sales": 150, "combined_data": { "product": "Dashboard", "revenue": null } }
+```
+{: codeblock}
+
+#### `stitch` usage notes
+{: #stitch_notes}
+
+* Rows must correlate logically for stitching to produce meaningful results. Make sure that rows from both datasets represent the same entities and are in the same order. For example, if the `product` field in the `sales` dataset does not match the `product` field in the `revenue` dataset for corresponding rows, stitching will not work as expected.
+
+* If datasets differ in row count, the result will include `null` values for missing data in the shorter dataset.
 
 
 
