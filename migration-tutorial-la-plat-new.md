@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-25"
 
 keywords:
 
@@ -95,6 +95,11 @@ Complete these steps before you begin:
 4. Create a service to service (S2S) authorization between the Cloud Logs instance and the metrics bucket.
 5. Configure the buckets with your Cloud Logs instance. For more informations, see [Configuring buckets](/docs/cloud-logs?topic=cloud-logs-about-bucket).
 
+### Configuring permissions using the UI
+{: #at2-perm-cli}
+
+
+{{/_include-segments/atla-permissions.md}}
 
 ## Configure the Event Notifications service for alerting
 {: #migration-tutorial-la-plat-new-step3}
