@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-27"
+  years:  2024, 2025
+lastupdated: "2025-02-25"
 
 keywords:
 
@@ -46,3 +46,10 @@ When you configure your Logging agent to send logs to {{site.data.keyword.logs_f
 
 If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
 {: important}
+
+
+## Configuring {{site.data.keyword.la_full_notm}} and {{site.data.keyword.at_full_notm}} using the CLI
+{: #ata-permissions-cli}
+
+
+{{/_include-segments/atla-permissions.md}}

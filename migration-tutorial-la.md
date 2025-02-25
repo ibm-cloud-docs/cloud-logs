@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-25"
 
 keywords:
 
@@ -87,6 +87,11 @@ Complete these steps before you begin:
 
 4. To send alerts to your destinations, you must provision an instance of the Event Notifications service in the account.
 
+### Configuring permissions using the UI
+{: #la-perm-cli}
+
+
+{{/_include-segments/atla-permissions.md}}
 
 ## Migrating
 {: #migration-tutorial-la-migrate}
