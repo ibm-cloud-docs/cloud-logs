@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-20"
+lastupdated: "2025-02-26"
 
 keywords:
 
@@ -40,13 +40,15 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 ## ibmcloud logging migrate export
 {: #logging-migrate-export}
 
-Use this command to export the {{site.data.keyword.logs_full_notm}} configuration of views, alerts, and rulegroups from one instance and import it into another {{site.data.keyword.logs_full_notm}} instance.
+Use this command to export the {{site.data.keyword.logs_full_notm}} configuration of public views configured with Lucene queries as terraform. You can apply this terraform to recreate the views into another {{site.data.keyword.logs_full_notm}} instance.
 
-This command only supports exporting and importing views configured with Lucene queries.
+
+
+This command only supports exporting and importing public views configured with Lucene queries.
 {: beta}
 
 ```text
-ibmcloud logging migrate export --source-cl-crn SOURCE-CL-CRN --target-cl-crn TARGET-CL-CRN [--api | --terraform] [--force] [--directory DIRECTORY] 
+ibmcloud logging migrate export --source-cl SOURCE-CL-CRN --target-cl TARGET-CL-CRN --terraform [--force] [--directory DIRECTORY]
 ```
 {: pre}
 
@@ -59,9 +61,6 @@ ibmcloud logging migrate export --source-cl-crn SOURCE-CL-CRN --target-cl-crn TA
 `--target-cl`|`--tc`
 :   The CRN of the target {{site.data.keyword.logs_full_notm}} instance.
 
-`--api`|`-a`
-:   Use the API method to export and import the views configuration. If not specified, `--terraform` is the default.
-
 `--terraform`|`-t`
 :   Use the Terraform method to export and import the views configuration. If not specified, `--terraform` is the default.
 
@@ -69,7 +68,7 @@ ibmcloud logging migrate export --source-cl-crn SOURCE-CL-CRN --target-cl-crn TA
    :   The directory on your local computer where migration files are written. If not specified, the directory where the command is run is used.
 
 `--force`|`-f`
-   :   Runs the command without further prompting of the user.
+   :   Runs the command without further prompting of the user to apply the terraform.
 
 ## ibmcloud logging migrate generate-terraform
 {: #logging-migrate-generate-terraform}
@@ -275,7 +274,7 @@ ibmcloud logging migrate create-resources --scope SCOPE [--instance-crn CRN] [--
 
 `--ingestion-key`|`-k`
    :   The [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-ingestion_key&interface=ui) or [{{site.data.keyword.logs_full_notm}}](/docs/log-analysis?topic=log-analysis-ingestion_key&interface=ui) ingestion key. This key is required to migrate {{site.data.keyword.atracker_full_notm}} or {{site.data.keyword.logs_routing_full_notm}} configurations associated with the instance.
-   
+
 
 
 `--directory`|`-d`
@@ -317,7 +316,7 @@ ibmcloud logging migrate create-resources -s platform-logs -i private
 Use this command to convert {{site.data.keyword.at_full_notm}} and {{site.data.keyword.la_full_notm}} view queries to the equivalent Lucene queries that can be used with {{site.data.keyword.logs_full_notm}}.
 
 ```text
-ibmcloud logging migrate query --input-query input-query 
+ibmcloud logging migrate query --input-query input-query
 ```
 {: pre}
 
@@ -336,7 +335,7 @@ ibmcloud logging migrate query --input-query input-query
 For example, running the following command:
 
 ```text
-ibmcloud logging migrate query -input-query "(host:ibm-cloud-databases-prod label.database:postgresql )  -metrics -unknown client:111.11.111.111" 
+ibmcloud logging migrate query -input-query "(host:ibm-cloud-databases-prod label.database:postgresql )  -metrics -unknown client:111.11.111.111"
 ```
 {: pre}
 
@@ -446,6 +445,6 @@ ibmcloud logging migrate update-resources --scope instance --instance-crn CRN --
 In this example the {{site.data.keyword.iamlong}} (IAM) permissions associated with an {{site.data.keyword.at_full_notm}} or {{site.data.keyword.la_full_notm}} instance are migrated to the {{site.data.keyword.logs_full_notm}} instance using Terraform.
 
 ```text
-ibmcloud logging migrate update-resources --scope instance --instance-crn CRN --cl-instance-crn CLCRN --iam -t -f 
+ibmcloud logging migrate update-resources --scope instance --instance-crn CRN --cl-instance-crn CLCRN --iam -t -f
 ```
 {: pre}
