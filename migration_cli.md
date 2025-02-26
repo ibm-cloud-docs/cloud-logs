@@ -48,7 +48,7 @@ This command only supports exporting and importing public views configured with 
 {: beta}
 
 ```text
-ibmcloud logging migrate export --source-cl SOURCE-CL-CRN --target-cl TARGET-CL-CRN --terraform [--force] [--directory DIRECTORY]
+ibmcloud logging migrate export --source-cl SOURCE-CL-CRN --target-cl TARGET-CL-CRN [--api | --terraform] [--force] [--directory DIRECTORY] 
 ```
 {: pre}
 
