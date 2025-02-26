@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-20"
+lastupdated: "2025-02-26"
 
 keywords:
 
@@ -14,7 +14,7 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for the {{site.data.keyword.logs_full_notm}} migration 
+# Release notes for the {{site.data.keyword.logs_full_notm}} migration
 {: #releasenotes-migration}
 
 Use these release notes to learn about the latest updates to the migration tool and other migration updates.
@@ -37,15 +37,13 @@ Only the current plug-in version and two previous versions are available at any 
 The migration tool plug-in v0.1.33 is available.
 :   Updates include:
 
-    * Using the [export command](/docs/cloud-logs?topic=cloud-logs-migration_cli#logging-migrate-export) you can now export {{site.data.keyword.logs_full_notm}} alerts and rulegroups from one {{site.data.keyword.logs_full_notm}} instance and import them into another {{site.data.keyword.logs_full_notm}} instance. This is additional support to the existing export support for views.
-
     * A fix for a problem when duplicate roles were created for IAM user policies.
 
     * A fix for an incorrect Terraform target reference for {{site.data.keyword.at_full_notm}} routes.
 
     * A fix for a panic when a category name is null.
 
-    * Help updates.
+    * Help updates. 
 
 
 ##  10 February 2025

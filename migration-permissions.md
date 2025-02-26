@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords:
 
@@ -22,13 +22,13 @@ The {{site.data.keyword.logs_full}} migration tool requires that you have certai
 
 | Service | Roles |
 |-----------|------|
-| {{site.data.keyword.at_full_notm}} | `viewer`, `reader` |
+| {{site.data.keyword.at_full_notm}} | `viewer`, `manager` |
 | {{site.data.keyword.atracker_full_notm}} | `administrator`, `writer` |
-| {{site.data.keyword.la_full_notm}} | `viewer`, `reader` |
+| {{site.data.keyword.la_full_notm}} | `viewer`, `manager` |
 | {{site.data.keyword.logs_full_notm}} | `manager`, `administrator`, `sender` |
 | {{site.data.keyword.cos_full_notm}} | `writer` `[*]`, `editor`, `service configuration reader`, `manager` `[**]` |
 | {{site.data.keyword.keymanagementservicelong_notm}} | `viewer`, `reader` |
-| {{site.data.keyword.logs_routing_full_notm}} | `manager` |
+| {{site.data.keyword.logs_routing_full_notm}} | `administrator`, `manager` |
 | Event Notifications | `manager`, `Event Source Manager` and `Reader` |
 {: caption="Required permissions to run the migration tool" caption-side="bottom"}
 
