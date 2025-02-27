@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -43,6 +43,9 @@ To specify included paths, complete the following steps:
     {: codeblock}
 
     Additional log sources can be specified and separated by commas in the `Path` parameter.
+
+    
+    {{/_include-segments/logs_collection.md}}
 
 3. Restart the agent pods.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -174,7 +174,13 @@ Complete the following steps:
 
     - [ ] [Deploy the agent for Kubernetes clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy)
 
+      
+      {{/_include-segments/logs_collection_migration.md}}
+
     - [ ] [Deploy the agent for OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy)
+
+      
+      {{/_include-segments/logs_collection_migration.md}}
 
     - [ ] [Deploy the agent for Linux servers](/docs/cloud-logs?topic=cloud-logs-agent-linux)
 
