@@ -44,8 +44,8 @@ To specify included paths, complete the following steps:
 
     Additional log sources can be specified and separated by commas in the `Path` parameter.
 
-    
-    {{/_include-segments/logs_collection.md}}
+    By default the {{site.data.keyword.logs_full_notm}} {{site.data.keyword.agent}} collects logs only from the `/var/log/containers/*.log` directory. If you want to collect logs from all subdirectories under `/var/log`, your need to add `/var/log/**/*.log` to the `Path` parameter.
+
 
 3. Restart the agent pods.
 
