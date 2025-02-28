@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-02-28"
 
 keywords:
 
@@ -97,6 +97,7 @@ The following table outlines keys that you can configure for an `INPUT` section:
 | `Name` | Name of the input plug-in. Determines which input plug-in should be loaded by Fluent Bit. | Required |
 | `Tag` | Tag that is associated to all records coming from this plug-in. | Required for all plug-ins except for the input forward plug-in which provides dynamic tags. |
 | `Log_Level` | Set the logging verbosity level. Valid values are: `off`, `error`, `warn`, `info`, `debug` and `trace`. Notice that values are accumulative. For example, if `debug` is set, it will include `error`, `warning`, `info` and `debug`. If not set, the value defaults to the `SERVICE` section's `Log_Level` value. | Optional |
+| `Path` | Set the location where logs records are read.  \n For Kubernetes logs, by default the {{site.data.keyword.logs_full_notm}} {{site.data.keyword.agent}} collects logs only from the `/var/log/containers/*.log` directory. If you want to collect logs from all subdirectories under `/var/log`, your need to add `/var/log/**/*.log` to the `Path` parameter. | Optional |
 {: caption="Input keys" caption-side="bottom"}
 
 For more information about the `INPUT` plug-ins, see [Input plug-ins](https://docs.fluentbit.io/manual/pipeline/inputs){: external}.
