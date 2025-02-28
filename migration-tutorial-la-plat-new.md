@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -144,7 +144,15 @@ You can use a service ID or a trusted profile as the identity that is used by th
 
 - [ ] [Deploy the agent for Kubernetes clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy)
 
+   The {{site.data.keyword.la_full_notm}} agent collects logs by default from the `/var/log` directory.
+
+   By default the {{site.data.keyword.logs_full_notm}} {{site.data.keyword.agent}} collects logs only from the `/var/log/containers/*.log` directory. If you want to collect logs from all subdirectories under `/var/log`, your need to add `/var/log/**/*.log` to the `Path` parameter.
+
 - [ ] [Deploy the agent for OpenShift clusters](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy)
+
+   The {{site.data.keyword.la_full_notm}} agent collects logs by default from the `/var/log` directory.
+
+   By default the {{site.data.keyword.logs_full_notm}} {{site.data.keyword.agent}} collects logs only from the `/var/log/containers/*.log` directory. If you want to collect logs from all subdirectories under `/var/log`, your need to add `/var/log/**/*.log` to the `Path` parameter.
 
 - [ ] [Deploy the agent for Linux servers](/docs/cloud-logs?topic=cloud-logs-agent-linux)
 
