@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -40,7 +40,7 @@ When searching in {{site.data.keyword.logs_full_notm}}, the `NOT` operator is re
 {: #faq_nobucket}
 {: faq}
 
-If neither one or separate {{site.data.keyword.cos_full_notm}} data and metrics buckets have been configured, {{site.data.keyword.logs_full_notm}} retains data for the [retention plan](/docs/cloud-logs?topic=cloud-logs-service_plans) selected for the instance.
+If neither one or separate {{site.data.keyword.cos_full_notm}} data and metrics buckets have been configured, {{site.data.keyword.logs_full_notm}} retains data for the [retention plan](/docs/cloud-logs?topic=cloud-logs-service_plans) selected for the instance. If no data bucket is  configured, logs will only be viewable through {{site.data.keyword.frequent-search}} for the length of the retention plan.
 
 
 
