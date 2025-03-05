@@ -405,6 +405,8 @@ toc:
         navtitle: Severity mapping
       - topic: shared-responsibilities.md
         navtitle: Your responsibilities
+      - topic: service-dependency.md
+        navtitle: Service dependencies
       - topic: core/data-portability.md
         navtitle: Data portability
       - topic: core/ha-dr-new.md
