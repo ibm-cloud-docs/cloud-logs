@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-03-06"
 
 keywords:
 
@@ -37,7 +37,6 @@ The Data Usage Report includes:
 - DAILY MAX. The day in which the largest amount of data was sent.
 - TOTAL. The sum of all days.
 - MAX SAVED. Total data sent minus the total amount of counted units for a given period – 90 days, 30 days, or the current month.
-
 
 
 ## Next steps
