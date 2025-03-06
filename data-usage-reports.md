@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-04-01"
+  years:  2024, 2025
+lastupdated: "2025-03-06"
 
 keywords:
 
@@ -49,6 +49,7 @@ The Data Usage Report includes the following information:
 
 ## Generating a report
 {: #data-usage-reports-2}
+{: ui}
 
 Complete the following steps to export the Data Usage Report as a CSV file:
 
@@ -61,3 +62,6 @@ Complete the following steps to export the Data Usage Report as a CSV file:
 4. Select the time range.
 
 5. Click **EXPORT**.
+
+
+{{/_include-segments/data-usage-export.md}}
