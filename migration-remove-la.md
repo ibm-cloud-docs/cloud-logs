@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-03-07"
 
 keywords:
 
@@ -58,5 +58,7 @@ Complete the following steps to remove {{site.data.keyword.la_full_notm}} instan
     - [ ] Remove policies from service IDs.
 
     - [ ] Remove policies from trusted profiles.
+
+- [ ] Remove any alert configurations or integrations (for example, PagerDuty) between the {{site.data.keyword.la_full_notm}} instance and the destination service.
 
 - [ ] Delete your {{site.data.keyword.la_full_notm}} instances.
