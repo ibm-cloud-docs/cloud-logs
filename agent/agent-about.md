@@ -68,7 +68,7 @@ The following diagram shows the high level view when the source of logs is a Kub
 ![Flow of logs from cluster](../images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Flow of logs from cluster" caption-side="bottom"}
 
 
-## {{site.data.keyword.agent}} for non-orchestarted environments
+## {{site.data.keyword.agent}} for non-orchestrated  environments
 {: #agent-about-std}
 
 You can deploy the {{site.data.keyword.agent}} in Linux and Windows environments.
@@ -146,6 +146,8 @@ The following table lists the agent versions that are supported and the version 
 
 | {{site.data.keyword.agent}}                         | Based on Fluent Bit Version | Helm chart version |
 |-----------------------------------------------------|-----------------------------|--------------------|
+| v1.5.0                                              | [v3.2.7](https://fluentbit.io/announcements/v3.2.7/){: external} | v1.5.0   |
+| v1.4.2                                              | [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external} | v1.4.2   |
 | v1.4.1                                              | [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external} | v1.4.1   |
 | v1.4.0                                              | [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external} | v1.4.0   |
 | v1.3.2                                              | [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external} | v1.3.2   |
