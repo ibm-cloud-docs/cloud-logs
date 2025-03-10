@@ -68,7 +68,7 @@ The following diagram shows the high level view when the source of logs is a Kub
 ![Flow of logs from cluster](../images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Flow of logs from cluster" caption-side="bottom"}
 
 
-## {{site.data.keyword.agent}} for non-orchestarted environments
+## {{site.data.keyword.agent}} for non-orchestrated  environments
 {: #agent-about-std}
 
 You can deploy the {{site.data.keyword.agent}} in Linux and Windows environments.
