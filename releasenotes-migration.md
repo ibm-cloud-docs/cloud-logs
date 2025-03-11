@@ -31,19 +31,6 @@ Only the current plug-in version and two previous versions are available at any 
 
 
 
-##  11 March 2025
-{: #migration-mar1125}
-
-The migration tool plug-in v0.1.34 is available.
-:   Updates include:
-
-    * Support for exporting parsing rules.
-
-    * A fix for a problem for views with empty categories.
-
-    * A fix for query mapping including double quotes.
-
-    * A fix for an error when running export.
 
 ##  20 February 2025
 {: #migration-feb2025}
