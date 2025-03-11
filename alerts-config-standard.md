@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-03-11"
 
 keywords:
 
@@ -46,7 +46,11 @@ In **Alert When**, you must select whether to trigger the alert immediately, or 
 
 - Choose `Notify Immediately` to be notified immediately, as soon as 1 log record is evaluated to match the filtering criteria.
 
+   For `Notify Immediately` alerts, the alert is triggered as soon as 1 line meets the query criteria. {{site.data.keyword.logs_full_notm}} then waits for 1 minute before an additional `Notify Immediately` alert meeting the same query criteria is triggered. If the alert is not resolved, the `Notify` condition indicates how often you are notified of the same alert with a new event after it is triggered.
+
 - Choose `More Than` to be notified when the count of the entries matching the alert definition is more than the chosen threshold.
+
+   For `More Than` alerts configured for 0 lines within a time period, the alert is triggered as soon as 1 line meets the query criteria. The alert does not wait for the configured time threshold to trigger the alert.
 
 - Choose `Less Than` to be notified when the count of the entries matching the alert definition is less than the chosen threshold.
 
