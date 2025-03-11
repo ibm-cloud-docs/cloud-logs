@@ -80,6 +80,8 @@ toc:
             navtitle: Removing deprecated Log Analysis instances
           - topic: migration-remove-plat.md
             navtitle: Removing deprecated Log Analysis instances with platform logs enabled
+          - topic: migration_postmarch.md
+            navtitle: Considerations after 30 March 2025
       - topicgroup:
           label: Release notes
           topics:
