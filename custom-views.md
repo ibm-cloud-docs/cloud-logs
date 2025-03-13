@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-08-15"
+  years:  2024, 2025
+lastupdated: "2025-03-13"
 
 keywords:
 
@@ -61,7 +61,7 @@ Do the following to create a custom view.
 
    2. If you want to save the query and filter values you configured, check **Save query and filters**.
 
-   3. If you want your view to be the default view, check **Set as default view**.
+   3. If you want your view to be the default view, check **Set as default view**. This sets the view as the default for you as the user. It does not set the view as the default view for the entire account.
 
    4. Set the privacy of your view. Private views can only be seen by you. You can set a view as **Private** or **Shared**.
 
