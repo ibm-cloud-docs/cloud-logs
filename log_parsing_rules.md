@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-05-03"
+  years:  2024, 2025
+lastupdated: "2025-03-17"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: cloud-logs
 # {{site.data.keyword.logs_full_notm}} log parsing rules
 {: #log_parsing_rules}
 
-Rules help you to process, parse, and restructure log data to prepare for monitoring and analysis. You can extract information about importance, structure unstructured logs, discard unnecessary parts of the logs. You can mask fields for compliance reasons and fix misformatted logs. You can block log data from being ingested based on log content and much more.  
+You can use parsing rules to process, parse, and restructure log data to prepare for monitoring and analysis. For example, you can extract selected information, structure unstructured logs, or discard unnecessary parts of the logs. You can mask fields for compliance reasons and fix misformatted logs. You can block log data from being ingested based on log content and much more.   
 {: shortdesc}
 
 In {{site.data.keyword.logs_full}}, you can use parsing rules to control the structure of your data before the data is indexed in OpenSearch.
@@ -104,5 +104,3 @@ Within a rules group:
 
 
 The order of execution of rules groups and rules is important, and define the final log’s structure.
-
-
