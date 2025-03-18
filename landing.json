@@ -47,7 +47,7 @@
       "href": "https://community.ibm.com/community/user/cloud/blogs/sven-lange-last/2024/11/03/daily-index-limit-in-ibm-cloud-logs-prio-insights",
       "type": "blog",
       "recommended": true
-    },
+    }
 ],
   "section_updates": {
     "view_more": "/docs/cloud-logs?topic=cloud-logs-logs-release-notes"
