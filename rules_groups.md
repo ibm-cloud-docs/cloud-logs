@@ -60,7 +60,8 @@ A rule group definition has several sections. Complete the following steps to cr
 
     - Parse JSON Field: Rule to transform escaped or stringified logs to JSON format.
 
-    When you create a rule, you can use the sample log area to verify your rule. Create or paste a log in to this area and it shows you the results of the rule that processes the log.{: tip}
+    When you create a rule, you can use the sample log area to verify your rule. Create or paste a log in to this area and it shows you the results of the rule that processes the log.
+    {: tip}
 
 ## Changing the order of execution of rules groups
 {: #rules_groups_order_change}
