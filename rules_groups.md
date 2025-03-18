@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-03-18"
 
 keywords:
 
@@ -60,7 +60,8 @@ A rule group definition has several sections. Complete the following steps to cr
 
     - Parse JSON Field: Rule to transform escaped or stringified logs to JSON format.
 
-    When you create a rule, you can use the sample log area to verify your rule. Create or paste a log in to this area and it shows you the results of the rule that processes the log.{: tip}
+    When you create a rule, you can use the sample log area to verify your rule. Create or paste a log in to this area and it shows you the results of the rule that processes the log.
+    {: tip}
 
 ## Changing the order of execution of rules groups
 {: #rules_groups_order_change}
@@ -116,13 +117,16 @@ Within a rules group:
 
     Only logs that match the applications, subsystems and severities that are configured continue applying the parsing rules.
 
-2. Rules are applied in order starting from the top until a rule is followed by an `OR` logical operator.
+2. Parsing rules are then are applied top-down as defined in the parsing rules UI. You can drag and drop rules at different positions if you need to apply a rule before others.
 
-    Rules are applied immediately so that the output of one rule becomes the input of the next one.
-    {: note}
+   * The rules within a rule group are applied from the first rule in the list to the final listed rule.
 
-    The `OR` and `AND` operators in the group do not follow the mathematical order of operations.
+   * You can combine rules within a rule group by selecting `AND` or `OR` conditions. When you select `AND`, all rules are tried and applied if the regex applies to that log line. When you select `OR`, as soon as a rule matches the log line, the rest of the rules are not applied.
 
+   The `OR` and `AND` operators in the group do not follow the mathematical order of operations.
+
+   Rules are applied immediately so that the output of one rule becomes the input of the next one.
+   {: note}
 
 The order of execution of rules groups and rules is important and define the final log’s structure.
 

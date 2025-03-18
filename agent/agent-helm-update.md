@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-03-18"
 
 keywords:
 
@@ -53,7 +53,7 @@ Complete the following steps to modify the Helm chart with the agent version tha
     metadata:
       name: "logs-agent"
     image:
-      version: "1.4.0"  # Modify the agent version and enter the version that you want to deploy
+      version: "1.5.0"  # Modify the agent version and enter the version that you want to deploy
 
     clusterName: "ENTER_CLUSTER_NAME"     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
 
@@ -62,7 +62,7 @@ Complete the following steps to modify the Helm chart with the agent version tha
     additionalMetadata: # add additional metadata, for example:
       region: au-syd
       env: production
-      logging-agent-version: 1.4.0     # Enter the agent version that you want to deploy
+      logging-agent-version: 1.5.0     # Enter the agent version that you want to deploy
 
     env:
       # ingestionHost is a required field. For example:
@@ -131,14 +131,14 @@ Complete the following steps:
     If you are using the `iamMode`=`TrustedProfile` then the complete command is:
 
     ```sh
-    helm update <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe
+    helm upgrade <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe
     ```
     {: codeblock}
 
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm update <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
+    helm upgrade <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
     ```
     {: codeblock}
 
@@ -152,22 +152,25 @@ Complete the following steps:
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
     ```sh
-    helm update logging-agent oci://icr.io/ibm/observe/logs-agent-helm --version 1.4.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
+    helm upgrade logging-agent oci://icr.io/ibm/observe/logs-agent-helm --version 1.5.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
     ```
     {: screen}
+
+    To see installed agent name and chart version you can run `helm list -n NAMESPACE`.
+    {: tip}
 
 4. Restart the agent pods.
 
     For Kubernetes clusters, run:
 
-    ```
+    ```sh
     kubectl -n ibm-observe rollout restart ds/logs-agent
     ```
     {: codeblock}
 
     For OpenShift clusters, run:
 
-    ```
+    ```sh
     oc -n ibm-observe rollout restart ds/logs-agent
     ```
     {: codeblock}
