@@ -401,6 +401,8 @@ toc:
       topics:
       - topic: regions.md
         navtitle: Locations
+      - topic: montreal-temp.md
+        navtitle: Considerations for Montreal
       - topic: endpoints_api.md
       - topic: endpoints_ingress.md
       - topic: ips4firewalls.md
