@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-19"
 
 keywords:
 
@@ -48,6 +48,8 @@ Complete the following steps to remove {{site.data.keyword.la_full_notm}} instan
     - [ ] Clean up your rsyslog configuration.
 
     - [ ] Modify your custom apps that send logs directly by using the REST API.
+
+    - [ ] If you were sending logs from a Kubernetes cluster to {{site.data.keyword.la_full_notm}}, [detach the logging agent from the cluster](/docs/log-analysis?topic=log-analysis-detach_agent).
 
 - [ ] In {{site.data.keyword.iamlong}} (IAM), remove the policies that grant permissions to work with {{site.data.keyword.la_full_notm}} instances in the account.
 
