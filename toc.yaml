@@ -2,7 +2,6 @@ toc:
   properties:
     subcollection:  cloud-logs
     service-name: logs
-    version: 2
     category: logging_monitoring
     audience: service
     href: /docs/cloud-logs
@@ -101,6 +100,12 @@ toc:
         navtitle: Restricting access from a network zone
       - topic: iam-cbr-tutorial-integrated-services.md
         navtitle: Restricting access to integrated services
+      - link:
+          label: Migrating your Activity Tracker instances
+          href: https://community.ibm.com/community/user/cloud/blogs/marisa-lopez-de-silanes/2025/03/03/migrating-your-activity-tracker-instances-to-cloud
+      - link:
+          label: Creating new index fields from non-JSON logs
+          href: https://community.ibm.com/community/user/cloud/blogs/marisa-lopez-de-silanes/2025/03/17/creating-indexed-fields-1
   - navgroup:
       id: howto
       topics:
