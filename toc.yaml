@@ -396,13 +396,13 @@ toc:
           topics:
           - topic: core/at_events.md
             navtitle: Auditing events
-          - topic: montreal-temp.md
-            navtitle: Considerations for Montreal
   - navgroup:
       id: reference
       topics:
       - topic: regions.md
         navtitle: Locations
+      - topic: montreal-temp.md
+        navtitle: Considerations for Montreal
       - topic: endpoints_api.md
       - topic: endpoints_ingress.md
       - topic: ips4firewalls.md
