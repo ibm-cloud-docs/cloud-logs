@@ -396,6 +396,8 @@ toc:
           topics:
           - topic: core/at_events.md
             navtitle: Auditing events
+          - topic: montreal-temp.md
+            navtitle: Considerations for Montreal
   - navgroup:
       id: reference
       topics:
