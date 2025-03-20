@@ -19,10 +19,10 @@ subcollection: cloud-logs
 Configure a data bucket and a metrics bucket in {{site.data.keyword.cos_full}} to store your {{site.data.keyword.logs_full_notm}} data for long term storage and search.
 {: shortdesc}
 
-You can configure the same bucket for data and metrics. However, notice that the {{site.data.keyword.logs_full_notm}} service needs deletion permission on metrics files. Therefore, if you need to configure your bucket with lifecycle policies to manage log data files in the bucket, you must use different buckets to store your log data and your metrics data.
+You can configure the same bucket for data and metrics. However, notice that the {{site.data.keyword.cos_full}} service only supports lifecycle policies for all files in a bucket. Therefore, if you want to use different lifecycle periods for metrics and logs data, you must use different buckets to store your log data and your metrics data and configure the lifecycle policies appropriately.
 {: important}
 
-{{site.data.keyword.logs_full_notm}} does not support {{site.data.keyword.cos_full}} buckets configured with [retention policies](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), [object lock policies](/docs/cloud-object-storage?topic=cloud-object-storage-ol-overview), or with [public access enabled](/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access).
+{{site.data.keyword.logs_full_notm}} does not support {{site.data.keyword.cos_full}} buckets configured with [retention policies](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), [object lock policies](/docs/cloud-object-storage?topic=cloud-object-storage-ol-overview), or with [public access enabled](/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access) as it requires deletion permissions on the logs and metrics buckets.
 {: restriction}
 
 For production environments, consider using different buckets for data and for metrics.
