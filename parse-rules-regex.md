@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-05-01"
+  years:  2024, 2025
+lastupdated: "2025-03-21"
 
 keywords:
 
@@ -18,10 +18,10 @@ subcollection: cloud-logs
 In {{site.data.keyword.logs_full}}, you can use parsing rules to control the structure of your data by applying RegEx expressions before the data is indexed for search.
 {: shortdesc}
 
-{{site.data.keyword.logs_full_notm}} uses RegEx Golang flavour.
-{: note}
+{{site.data.keyword.logs_full_notm}} uses the RegEx Golang flavor.
 
-By default, a RegEx pattern is case-sensitive.
+A RegEx pattern is case-sensitive.
+{: important}
 
 ## Quantifiers
 {: #parse-rules-regex-1}
