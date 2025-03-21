@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-21"
 
 keywords:
 
@@ -31,6 +31,20 @@ Only the current plug-in version and two previous versions are available at any 
 
 
 
+
+##  11 March 2025
+{: #migration-mar1125}
+
+The migration tool plug-in v0.1.34 is available.
+:   Updates include:
+
+
+
+    * A fix for a problem for views with empty categories.
+
+    * A fix for query mapping including double quotes.
+
+    * A fix for an error when running export.
 
 ##  20 February 2025
 {: #migration-feb2025}
