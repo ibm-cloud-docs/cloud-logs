@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-03-24"
 
 keywords:
 
@@ -73,7 +73,7 @@ Complete these steps before you begin:
 1. [Provision a Cloud Logs instance](/docs/cloud-logs?topic=cloud-logs-instance-provision).
 2. Configure two IBM Cloud Object Storage buckets for your IBM Cloud Logs instance. One is used for logs, the other is used for metrics. For mroe information, see [Creating buckets](/docs/cloud-logs?topic=cloud-logs-about-bucket&interface=ui#about-bucket-ov).
 
-    [Review the bucket restrictions](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket#cos_databucket_restrictions).
+    [Review the bucket restrictions](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket).
     {: important}
 
 3. Create a service to service (S2S) authorization between the Cloud Logs instance and the data bucket.
