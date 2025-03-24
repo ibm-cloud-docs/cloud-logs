@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-03-24"
 
 keywords:
 
@@ -72,6 +72,8 @@ Complete the following steps:
 6. In the *Service Access* section, select the role to assign access to the source service that accesses the target service.
 
     Select **Reader** to perform read-only actions within a service such as viewing service-specific resources.
+
+    Select **Viewer** to list the {{site.data.keyword.en_full_notm}} service instances.
 
     Select **Event Source Manager** to handle source integration with the event-notifications service.
 
