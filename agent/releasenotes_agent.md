@@ -31,7 +31,7 @@ Release of the {{site.data.keyword.agent}} version 1.5.1
    This version includes the following notable changes:
 
    * Added a notices file to the {{site.data.keyword.agent}} download to provide licensing information.
-   * Changed the agent log line that contained a JSON key with a # sign to avoid an error when querying the log line in {site.data.keyword.logs_full_notm}}.
+   * Changed the agent log line that contained a JSON key with a # sign to avoid an error when querying the log line in {{site.data.keyword.logs_full_notm}}.
    * Fixed vulnerabilities.
 
    The following new {{site.data.keyword.agent}} packages are available.
