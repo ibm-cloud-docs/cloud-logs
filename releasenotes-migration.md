@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-25"
 
 keywords:
 
@@ -30,6 +30,17 @@ Only the current plug-in version and two previous versions are available at any 
 
 
 
+##  25 March 2025
+{: #migration-mar2525}
+
+The migration tool plug-in v0.1.35 is available.
+:   Updates include:
+
+    * Changing the default file name extension from `txt` to `tf` for email subscriptions allowing the migration to proceed without the user having to manually change the file extension.
+
+    * A fix when names included multiple dashes and Terraform resources returned an error.
+
+    * A fix for an error when running an export.
 
 
 ##  11 March 2025
