@@ -32,6 +32,7 @@ Release of the {{site.data.keyword.agent}} version 1.5.1
 
    * Added a notices file to the {{site.data.keyword.agent}} download to provide licensing information.
    * Changed the agent log line that contained a JSON key with a # sign to avoid an error when querying the log line in {{site.data.keyword.logs_full_notm}}.
+   * Use the `openshift.io/required-scc` annotations when configuring the `SecurityContextConstraints` instead of the `priority` configuration in order to avoid conflicts with other OpenShift components.
    * Fixed vulnerabilities.
 
    The following new {{site.data.keyword.agent}} packages are available.
