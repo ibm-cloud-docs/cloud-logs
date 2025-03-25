@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-25"
 
 keywords:
 
@@ -44,6 +44,7 @@ The following table provides the dependency listing of this service following a 
 | IBM Cloud Object Storage | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
 | IBM Cloud Databases - databases-for-postgresql | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Public IP Address Management | Change management, Instance control | No | Both |  Same region  |
 | IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Logs service dependency information - Critical dependencies" caption-side="top"}
@@ -55,6 +56,7 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
+| IBM Cloud Continuous Delivery | Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | IBM Key Protect for IBM Cloud | Access management, Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | IBM Cloud Activity Tracker event routing | Availability, Operations, Security compliance | No | Both |  Same region  |
 | IBM Cloud Event Notifications | Availability | No | Both |  Same region  |
