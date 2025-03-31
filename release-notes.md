@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-03-31"
 
 keywords:
 
@@ -22,6 +22,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 For release notes about the {{site.data.keyword.logs_full_notm}} migration tool, see [Release notes for the {{site.data.keyword.logs_full_notm}} migration tool](/docs/cloud-logs?topic=cloud-logs-releasenotes-migration).
 {: note}
+
+
 
 
 

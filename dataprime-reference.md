@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-03-31"
 
 keywords:
 
@@ -750,6 +750,9 @@ m $d.kubernetes.labels to $d.my_labels
 ```
 {: codeblock}
 
+
+
+
 ### `orderby` / `sortby` / `order by` / `sort by`
 {: #order_sort}
 
@@ -1073,6 +1076,8 @@ Will result in logs of the following form:
 {: codeblock}
 
 You can apply an [aggregation function.](#aggregation_functions)
+
+
 
 ## Text Search Operators
 {: #text_search}

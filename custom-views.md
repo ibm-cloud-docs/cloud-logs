@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-31"
 
 keywords:
 
@@ -32,7 +32,7 @@ subcollection: cloud-logs
 ## Accessing views
 {: #access_view}
 
-In the left-hand navigation, click **Explore logs** > **Logs**.
+In the left navigation, click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
 
 The last view you had opened will be displayed. If no view was previously open, all views will be displayed.
 
