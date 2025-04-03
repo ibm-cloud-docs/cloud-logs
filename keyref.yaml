@@ -9,3 +9,5 @@ keyword:
     TCO Optimizer
   agent:
     Logging agent
+  compact-mode:
+    Compact Mode
