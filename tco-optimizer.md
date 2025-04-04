@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-04-04"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.tco-optimizer}}
+# Configuring the {{site.data.keyword.tco-optimizer}}
 {: #tco-optimizer}
 
 With {{site.data.keyword.logs_full}} data pipelines and the {{site.data.keyword.tco-optimizer}}, you can define the way logs are distributed across 3 distinct use cases. You can balance costs in the environment by using these pipelines.
