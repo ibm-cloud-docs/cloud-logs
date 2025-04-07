@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-26"
+  years:  2024, 2025
+lastupdated: "2025-04-06"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 {: #severities}
 
 Log records can be ingested with severity values that do not match {{site.data.keyword.logs_full_notm}} severities. {{site.data.keyword.logs_full_notm}} maps ingested severity values to {{site.data.keyword.logs_full_notm}} severity values.
-{ shortdesc}
+{: shortdesc}
 
 Mapped value meanings and the equivalent [API severity values](/docs/cloud-logs?topic=cloud-logs-send-logs-api) are shown in the following table.
 

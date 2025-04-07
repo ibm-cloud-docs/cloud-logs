@@ -538,7 +538,6 @@ toc:
                 - ts-fb-error.md
                 - ts-helm-proxy.md
                 - ts-ingestion-failures.md
-
             - topicgroup:
                 label: Troubleshooting migration
                 topics:
