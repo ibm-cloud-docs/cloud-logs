@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-27"
+  years:  2024, 2025
+lastupdated: "2025-04-08"
 
 keywords:
 
@@ -290,6 +290,19 @@ You can add additional metadata fields to the routed logs.
    kubectl rollout restart daemonset logger-agent-ds -n logger-agent
    ```
    {: codeblock}
+
+## Updating the agent
+{: #agent-std-cluster-update}
+
+Complete the following steps to update the agent to the latest agent version.
+
+1. [Access your cluster](/docs/containers?topic=containers-access_cluster).
+
+2. To update the agent, complete the following steps used to initially deploy the agent:
+
+    1. [Step 2](#agent-std-deploy-step2)
+    2. [Step 3](#agent-std-deploy-step3)
+    3. [Step 4](#agent-std-deploy-step4)
 
 ## Uninstalling the agent
 {: #agent-std-remove}

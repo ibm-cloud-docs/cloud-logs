@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-04-08"
 
 keywords:
 
@@ -268,3 +268,24 @@ Complete the following steps:
 2. When your agent is correctly configured, you can see logs through the default dashboard view.
 
     For example, if you set the applicationName to the hostname in your agent, you can set the applicationname filter in a view to the name of your host.
+
+## Updating the agent
+{: #agent-linux-update}
+
+You can update the agent by downloading the desired agent packages and running the appropriate command for your environment. For information about the current {{site.data.keyword.agent}} version, see the [agent release notes.](/docs/logs-router?topic=logs-router-release-notes-agent)
+
+    * For RHEL run:
+
+     ```sh
+     rpm -Uvh <rpm_filename>
+     ```
+     {: pre}
+
+   * For Debian and Ubuntu run:
+
+     ```sh
+     dpkg -i <deb_filename>
+     ```
+     {: pre}
+
+   Where `<rpm_filename>` or `<deb_filename>` is the name of the downloaded `*.rpm` or `*.deb` file.

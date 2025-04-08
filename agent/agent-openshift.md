@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-27"
+  years:  2024, 2025
+lastupdated: "2025-04-08"
 
 keywords:
 
@@ -301,6 +301,26 @@ You can add additional metadata fields to the routed logs.
 
 The cluster name cannot currently be changed. It will always be `default`.
 {: restriction}
+
+## Updating the agent
+{: #agent-openshift-udate}
+
+Complete the following steps to update the agent to the latest agent version.
+
+1. Log in to the cluster.
+
+    {{site.data.keyword.openshiftlong_notm}} is integrated with IBM Cloud Identity and Access Management (IAM). With IAM, you can authenticate users and services by using their IAM identities and authorize actions with access roles and policies. When you authenticate as a user through the Red Hat OpenShift console, your IAM identity is used to generate a Red Hat OpenShift login token that you can use to log in to the command line. You can automate logging in to your cluster by creating an IAM API key or service ID to use for the `oc login` command. For more information, see [Accessing Red Hat OpenShift clusters](/docs/openshift?topic=openshift-access_cluster#access_automation).
+
+    For example, complete the steps in [Using a service ID to log in to clusters](/docs/openshift?topic=openshift-access_cluster#access_service_id) to log in to your cluster.
+
+2. To update the agent, complete the following steps used to initially deploy the agent:
+
+    1. [Step 2](#agent-openshift-deploy-step2)
+    2. [Step 3](#agent-openshift-deploy-step3)
+    3. [Step 4](#agent-openshift-deploy-step4)
+
+
+
 
 ## Uninstalling the agent
 {: #agent-openshift-remove}
