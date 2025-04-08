@@ -272,7 +272,7 @@ Complete the following steps:
 ## Updating the agent
 {: #agent-linux-update}
 
-You can update the agent by downloading the desired agent packages and running the appropriate command for your environment. For information about the current {{site.data.keyword.agent}} version, see the [agent release notes.](/docs/logs-router?topic=logs-router-release-notes-agent)
+You can update the agent by downloading the desired agent packages and running the appropriate command for your environment. For information about the current {{site.data.keyword.agent}} version, see the [agent release notes.](/docs/cloud-logs?topic=cloud-logs-release-notes-agent)
 
     * For RHEL run:
 
