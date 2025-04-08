@@ -396,6 +396,7 @@ toc:
           topics:
           - topic: core/at_events.md
             navtitle: Auditing events
+      - topic: controlling-cost.md
   - navgroup:
       id: reference
       topics:
