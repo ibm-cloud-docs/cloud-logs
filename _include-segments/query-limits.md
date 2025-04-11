@@ -8,7 +8,7 @@
 The maximum number of rows that are returned from a query depends if you are querying from {{site.data.keyword.frequent-search}} or data that is stored in {{site.data.keyword.cos_full_notm}}.
 
 * The maximum number of results that are returned from {{site.data.keyword.frequent-search}} is 12 K.
-* The maximum number of results that are returned from {{site.data.keyword.cos_full_notm}}is 50 K.
+* The maximum number of results that are returned from {{site.data.keyword.cos_full_notm}} (from a query using *All Logs*) is 50 K.
 
 
 ## Bytes scanned
