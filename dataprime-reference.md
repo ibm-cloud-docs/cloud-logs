@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-31"
+lastupdated: "2025-04-15"
 
 keywords:
 
@@ -502,14 +502,18 @@ When querying with the `groupby` operator, you can apply an [aggregation functio
 `join full`
 :   Returns a row for every event, including those that may not have a match in either query (left or right), filling missing values with `null`.
 
+
 `join inner`
 :   Only returns rows where there are non-null results from both queries.
+
+
 
 Syntax:
 
 ```text
- <left_side_query> | join (<right_side_query>) on <condition> into <right_side_target>
- <left_side_query> | join (<right_side_query>) using <join_keypath_1> [, <join_keypath_2>, ...] into <right_side_target>
+<left_side_query> | join [left/inner/full] (<right_side_query>) on <condition> into <right_side_target>
+<left_side_query> | join [left/inner/full] (<right_side_query>) using <join_keypath_1> [, <join_keypath_2>, ...] into <right_side_target>
+<left_side_query> | join cross (<right_side_query>) into <right_side_target>
 ```
 {: codeblock}
 
@@ -520,6 +524,8 @@ Where:
 * `<left_side_query>` - The `<left_side_query>` denotes the initial query, for example, in the query `source logs | filter x != null | join ...`, the left hand side query is `source logs | filter x != null`.
 
 * `<condition>` - The condition if results from both queries should be joined.
+
+
 
 * `<join_keypath_n>` - `<join_keypath_n>` as a join key means to join results where a given keypath is equal in the results of both the left side query and the right side query.
 
@@ -699,6 +705,7 @@ In this case, for the two document sets above, results will be as follows:
 { "id": "222", "name": "Emily", "logins": { "id": "222", "_count": 3 } }
 ```
 {: codeblock}
+
 
 
 #### Limitations and considerations
