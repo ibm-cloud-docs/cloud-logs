@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-04-16"
 
 keywords:
 
@@ -113,12 +113,12 @@ Complete the following steps to get the bucket configuration details through the
 ## Collecting auditing events for a bucket
 {: #cos_bucket_audit_events}
 
-You can use the {{site.data.keyword.at_full_notm}} service to track how users and applications interact with {{site.data.keyword.cos_full_notm}} (COS). For more information about the auditing events that are generated for a bucket and its objects, see [Activity Tracker events](/docs/cloud-object-storage?topic=cloud-object-storage-at-events).
+You can use the {{site.data.keyword.logs_full_notm}} service to track how users and applications interact with {{site.data.keyword.cos_full_notm}} (COS). For more information about the auditing events that are generated for a bucket and its objects, see [Activity tracking events](/docs/cloud-object-storage?topic=cloud-object-storage-at-events).
 
 To collect auditing events for a bucket, consider the following information:
 * Collection of auditing events in your account is optional.
 * You must configure each bucket to enable management events, or management and data events. Notice that you cannot enable data events only for a bucket.
-* To monitor management events, you must configure a bucket and specify the {{site.data.keyword.at_full_notm}} hosted event search instance where those events will be collected and forwarded.
+* To monitor management events, you must configure a bucket and specify the {{site.data.keyword.logs_full_notm}} instance where those events will be collected and forwarded.
 * To monitor data events, you must select the option **Track data events**. Then, select **read**, **write**, or **read & write** to collect events when an object is uploaded or downloaded from a bucket.
 
 Enable collection of auditing events after you have configured Activity Tracking in the region where the bucket is located.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-20"
+  years:  2024, 2025
+lastupdated: "2025-04-16"
 
 keywords:
 
@@ -53,7 +53,7 @@ The following figure shows the high level view of an {{site.data.keyword.logs_fu
 {: #event-notifications-about-alerts-configure}
 
 To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the following steps:
-1. In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. If you do not currently use the service and have alerts configured in your {{site.data.keyword.at_full_notm}} instances or your {{site.data.keyword.la_full_notm}} instances, you must provision an instance of the {{site.data.keyword.at_full_notm}} service. For more information, see [Configuring an outbound integration for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
+1. In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service.  For more information, see [Configuring an outbound integration for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 
 2. In IAM, define a service to service authorization between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance. For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-19"
+  years:  2024, 2025
+lastupdated: "2025-04-16"
 
 keywords: 
 
@@ -238,7 +238,7 @@ data "ibm_resource_group" "group" {
     tags = ["logging", "public"]
   }
 
-  // Create the resource key that is associated with the {{site.data.keyword.la_short}} instance
+  // Create the resource key that is associated with the instance
 
   resource "ibm_resource_key" "resourceKey" {
     name = var.key_name
