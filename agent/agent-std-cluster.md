@@ -287,7 +287,7 @@ You can add additional metadata fields to the routed logs.
 4. Restart the daemon set to apply the changes by running the following:
 
    ```sh
-   kubectl rollout restart daemonset logger-agent-ds -n logger-agent
+   kubectl rollout restart daemonset logger-agent-ds -n ibm-observe
    ```
    {: codeblock}
 
