@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-06"
+  years:  2024, 2025
+lastupdated: "2025-04-16"
 
 keywords:
 
@@ -117,7 +117,6 @@ The {{site.data.keyword.agent}} includes the following Fluent Bit [output plug-i
 | `flowcounter` | output | Count records and sizes | [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/flowcounter){: external} |
 | `forward` | output | Forward records to another Fluent Bit (or Fluentd) instance | [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/forward){: external} |
 | `http` | output | Send logs to an HTTP endpoint | [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/http){: external} |
-| `logdna` | output | Send logs to {{site.data.keyword.la_full_notm}} | [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/logdna){: external} |
 | `null` | output | Discard events entirely | [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/null){: external} |
 | `slack` | output | Send messages to a Slack channel | [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/slack){: external} |
 | `prometheus_exporter` | output | Expose metrics for Prometheus | [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/prometheus-exporter){: external} |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-04-16"
 
 keywords:
 
@@ -47,10 +47,10 @@ Consider the following information when configuring the streaming feature betwee
 
 
 
-## {{site.data.keyword.at_short}} events
+## Activity tracking events
 {: #streaming-at}
 
-The following {{site.data.keyword.atracker_short}} events are generated when you mange your streaming configuration:
+The following activity tracking events are generated when you mange your streaming configuration:
 
 | Action | Required permission |  Description |
 |--------|-------------|-------------|

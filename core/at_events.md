@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-08-29"
+  years:  2024, 2025
+lastupdated: "2025-04-16"
 
 keywords:
 
@@ -23,9 +23,6 @@ Activity tracking events report on activities that change the state of a service
 You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
-
-As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Activity tracking events are the same for both {{site.data.keyword.at_full_notm}} and {{site.data.keyword.logs_full_notm}}. Until {{site.data.keyword.at_full_notm}} is no longer supported, {{site.data.keyword.logs_full_notm}} activity tracking events can be routed to both {{site.data.keyword.at_full_notm}} and {{site.data.keyword.logs_full_notm}} by using {{site.data.keyword.atracker_full_notm}}.
-{: important}
 
 ## Locations where activity tracking events are generated
 {: #at-locations}
