@@ -53,7 +53,6 @@ If you configure a rule group, any application name, subsystem name, and severit
 
 When you define a `block` rule, you can select **View blocked logs in LiveTail and archive to IBM Cloud Object Storage**. Your dropped logs are saved in the {{site.data.keyword.compliance}} pipeline. You can search the logs from archived data. In this way, ingested log data is not lost.
 
-
 Using the `block` rule is a way to move logs to low priority in a more refined way than using TCO policies. For performance reasons, specify `block` rules in a rules group before any other parsing rules.
 {: tip}
 
@@ -62,4 +61,4 @@ Using the `block` rule is a way to move logs to low priority in a more refined w
 
 You can drop parts of ingested logs that you don't need by using the `remove` parsing rule.
 
-By removing log data that you do not need, you can control {{site.data.keyword.logs_full_notm}} costs. However, removed data is still archived to {{site.data.keyword.cos_full_notm}} by the {{site.data.keyword.compliance}} pipeline and is available for search.
+By removing log data that you do not need, you can control {{site.data.keyword.logs_full_notm}} costs.
