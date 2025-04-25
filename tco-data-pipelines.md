@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-04-25"
 
 keywords:
 
@@ -32,8 +32,7 @@ Each pipeline offers different features that you can use to work with the data.
 
 | Feature                    | {{site.data.keyword.frequent-search}} | {{site.data.keyword.monitoring}}      | {{site.data.keyword.compliance}}      |
 |----------------------------|----------------------------|----------------------------|----------------------------|
-| Fast query              | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-| High-speed search using hot storage              | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| High-speed search               | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 | Dashboards and analytics using hot storage              | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 | Dashboards and analytics using {{site.data.keyword.cos_full_notm}}              | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
 | Intelligent log analytics           | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
