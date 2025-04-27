@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Unable to find platfotm logs routed to {{site.data.keyword.la_full_notm}}
+# Unable to find platform logs routed to {{site.data.keyword.la_full_notm}}
 {: #ts_mig_host}
 {: troubleshoot}
 {: support}
