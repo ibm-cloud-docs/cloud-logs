@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-04-28"
 
 keywords:
 
@@ -92,4 +92,4 @@ Complete the following steps to remove a {{site.data.keyword.agent}}:
 
     where:
 
-    - `<install-name>` is the name of the helm installation (`logging-agent`)
+    - `<install-name>` is the name of the helm installation (`logs-agent`)

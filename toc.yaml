@@ -254,6 +254,8 @@ toc:
             navtitle: Streaming auditing data
           - topic: streaming_platform_data_select.md
             navtitle: Streaming platform logs
+          - topic: siem.md
+            navtitle: Streaming to SIEM tools
       - topicgroup:
           label: Working with parsing rules
           topics:

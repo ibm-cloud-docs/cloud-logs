@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-04-28"
 
 keywords:
 
@@ -231,7 +231,7 @@ Using the API key, endpoint URL, and YAML file, deploy the agent to your cluster
 
     where:
 
-    - `<install-name>` is the name of the Helm installation (`logging-agent`)
+    - `<install-name>` is the name of the Helm installation (`logs-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](/docs/cloud-logs?topic=cloud-logs-kube2logs#kube2logs_key)
