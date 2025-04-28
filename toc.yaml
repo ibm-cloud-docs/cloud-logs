@@ -14,6 +14,8 @@ toc:
       id: learn
       topics:
       - getting-started.md
+      - topic: atla.md
+        navtitle: Log Analysis and Activity Tracker users
       - topicgroup:
           label: About
           topics:
