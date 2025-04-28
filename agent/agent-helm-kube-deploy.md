@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-04-28"
 
 keywords:
 
@@ -171,7 +171,7 @@ Complete the following steps:
 
     where:
 
-    - `<install-name>` is the name of the Helm installation (`logging-agent`)
+    - `<install-name>` is the name of the Helm installation (`logs-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1)
@@ -183,7 +183,7 @@ Complete the following steps:
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
     ```sh
-    helm install logging-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.3.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
+    helm install logs-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.3.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
     ```
     {: screen}
 
@@ -205,7 +205,7 @@ Complete the following steps:
 
     where:
 
-    - `<install-name>` is the name of the Helm installation (`logging-agent`)
+    - `<install-name>` is the name of the Helm installation (`logs-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1)
@@ -252,7 +252,7 @@ When the agent is deployed, check the following resources are created:
 - Verify the agents are started:
 
     ```sh
-    kubectl -n ibm-observe get ds logging-agent
+    kubectl -n ibm-observe get ds logs-agent
     ```
     {: codeblock}
 

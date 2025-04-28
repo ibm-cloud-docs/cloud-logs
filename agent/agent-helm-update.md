@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-04-28"
 
 keywords:
 
@@ -62,7 +62,7 @@ Complete the following steps to modify the Helm chart with the agent version tha
     additionalMetadata: # add additional metadata, for example:
       region: au-syd
       env: production
-      logging-agent-version: 1.5.0     # Enter the agent version that you want to deploy
+      logs-agent-version: 1.5.0     # Enter the agent version that you want to deploy
 
     env:
       # ingestionHost is a required field. For example:
@@ -144,7 +144,7 @@ Complete the following steps:
 
     where:
 
-    - `<install-name>` is the name of the Helm installation (`logging-agent`)
+    - `<install-name>` is the name of the Helm installation (`logs-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID.
@@ -152,7 +152,7 @@ Complete the following steps:
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
     ```sh
-    helm upgrade logging-agent oci://icr.io/ibm/observe/logs-agent-helm --version 1.5.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
+    helm upgrade logs-agent oci://icr.io/ibm/observe/logs-agent-helm --version 1.5.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
     ```
     {: screen}
 
