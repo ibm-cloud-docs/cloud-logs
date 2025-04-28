@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-20"
+  years:  2024, 2025
+lastupdated: "2025-04-28"
 
 keywords:
 
@@ -26,7 +26,8 @@ When you update the streaming configuration after it is enabled, the changes are
 
 - An {{site.data.keyword.messagehub_full}} instance is provisioned in the same account as the {{site.data.keyword.logs_full_notm}} instance from where you plan to stream data.
 
-    Check the limitations of the service plans. For more information, see [Limits and quotas](/docs/EventStreams?topic=EventStreams-kafka_quotas).{: important}
+    Check the limitations of the service plans. For more information, see [Limits and quotas](/docs/EventStreams?topic=EventStreams-kafka_quotas).
+    {: important}
 
 - You have permissions to create a topic in the {{site.data.keyword.messagehub_full}} instance.
 
