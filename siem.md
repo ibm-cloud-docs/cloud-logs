@@ -14,7 +14,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 # Streaming data from {{site.data.keyword.logs_full_notm}} to SIEM tools
-{: #share_url}
+{: #siem}
 
 You can stream data from {{site.data.keyword.logs_full_notm}} to other corporate tools such as Security Information and Event Management (SIEM) tools.
 {: shortdesc}
@@ -30,4 +30,3 @@ See [Integrating {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.m
 To [connect to your {{site.data.keyword.messagehub}} instance](/docs/EventStreams?topic=EventStreams-connecting#establishing_connection), you need the endpoint URLs for the APIs and the credentials for authentication.
 
 To establish a connection, clients must be configured to use SASL PLAIN or SASL OAUTHBEARER over TLSv1.2 at a minimum and to require a username, and a list of the bootstrap servers. TLSv1.2 ensures that connections are encrypted and validates the authenticity of the brokers (to prevent man-in-the-middle attacks). SASL enforces authentication on all connections. For more information, see [Configuring your Kafka API client](/docs/EventStreams?topic=EventStreams-kafka_using#kafka_api_client).
-
