@@ -69,7 +69,7 @@ toc:
         navtitle: Restricting access to integrated services
       - link:
           label: Creating new index fields from non-JSON logs
-          href: https://community.ibm.com/community/user/cloud/blogs/marisa-lopez-de-silanes/2025/03/17/creating-indexed-fields-1
+          href: https://community.ibm.com/community/user/blogs/marisa-lopez-de-silanes/2025/03/17/creating-indexed-fields-1
   - navgroup:
       id: howto
       topics:
