@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -33,7 +33,7 @@ Choose 1 of the following options to create a bucket:
 | Action             | More info |
 |--------------------|-----------|
 | Create a bucket through the {{site.data.keyword.cloud_notm}} UI | [Learn more](/docs/atracker?topic=atracker-cos#cos_create_bucket_ui) |
-| Create a bucket through the {{site.data.keyword.cloud_notm}} CLI | [Learn more](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-create-bucket) |
+| Create a bucket through the {{site.data.keyword.cloud_notm}} CLI | [Learn more](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#create-a-new-bucket) |
 | Create a bucket by using cURL | [Learn more](/docs/cloud-object-storage?topic=cloud-object-storage-curl#curl-add-bucket) |
 | Create a bucket by using the REST API | [Learn more](/docs/cloud-object-storage?topic=cloud-object-storage-compatibility-api-bucket-operations#compatibility-api-new-bucket) |
 | Create a bucket with a different storage class by using the REST API| [Learn more](/docs/cloud-object-storage?topic=cloud-object-storage-compatibility-api-bucket-operations#compatibility-api-storage-class) |
@@ -129,7 +129,7 @@ Enable collection of auditing events after you have configured Activity Tracking
 {: #cos_bucket_list_objects}
 
 You can choose any of the following methods to list objects in a bucket:
-- [List objects in a given bucket by using the CLI](/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli#ic-list-objects).
+- [List objects in a given bucket by using the CLI](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#list-objects).
 - [List objects in a given bucket by using the API](/docs/cloud-object-storage?topic=cloud-object-storage-compatibility-api-bucket-operations#compatibility-api-list-objects-v2)
 - List objects in a given bucket through the {{site.data.keyword.cloud_notm}} UI.
 
