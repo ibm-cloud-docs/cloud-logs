@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-15"
+  years:  2024, 2025
+lastupdated: "2025-05-06"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: cloud-logs
 # {{site.data.keyword.logs_full_notm}} extensions
 {: #extensions}
 
-{{site.data.keyword.logs_full_notm}} offers a number of default data extensions. Each extension contains a set of predefined items – alerts, parsing rules, dashboards, saved views, actions, and more.
+{{site.data.keyword.logs_full_notm}} offers a number of data extensions. Each extension contains a set of predefined items – alerts, parsing rules, dashboards, saved views, actions, and more.
 {: shortdesc}
 
 Extension packages provide you with a series of predefined features. Setting up these features manually would require additional time and resources.
@@ -34,6 +34,7 @@ Extensions can include:
 
 The following list outlines extensions that you can deploy to monitor logs:
 - [System Monitoring](/docs/cloud-logs?topic=cloud-logs-extensions-system-monitoring): Use it to get insights into your system's performance and usage of an {{site.data.keyword.logs_full_notm}} instance. 
+
 
 ## Determining available extensions
 {: #determine-extensions}
