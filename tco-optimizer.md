@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-04"
+lastupdated: "2025-05-06"
 
 keywords:
 
@@ -66,7 +66,7 @@ The {{site.data.keyword.tco-optimizer}} page shows the percentage of ingested da
 {: #tco-optimizer-create-policy}
 
 You must have a [{{site.data.keyword.cos_full_notm}} data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket) configured before creating a policy.
-{: important}
+{: attention}
 
 On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to create a new policy:
 
