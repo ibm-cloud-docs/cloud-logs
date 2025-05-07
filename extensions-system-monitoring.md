@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-15"
+  years:  2024, 2025
+lastupdated: "2025-05-07"
 
 keywords:
 
@@ -19,6 +19,7 @@ subcollection: cloud-logs
 
 Use the System Monitoring extension to gain insights into your system's performance and usage within an {{site.data.keyword.logs_full_notm}} instance. This extension includes a set of pre-configured dashboards that help you monitor critical metrics, identify anomalies, and optimize your system's performance.
 {: shortdesc}
+
 
 
 ## Dashboards

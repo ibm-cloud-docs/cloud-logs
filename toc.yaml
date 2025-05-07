@@ -471,6 +471,7 @@ toc:
                 topics:
                 - topic: ts-no-logs.md
                   navtitle: Why can't I see platform logs in the UI?
+
             - topicgroup:
                 label: Troubleshooting the Logging agent
                 topics:
