@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-06"
+lastupdated: "2025-05-08"
 
 keywords:
 
@@ -54,7 +54,7 @@ All data is stored in the [{{site.data.keyword.cos_full_notm}} data bucket](/doc
 ## Accessing the {{site.data.keyword.tco-optimizer}}
 {: #tco-access}
 
-Compete the following steps to access the {{site.data.keyword.tco-optimizer}}:
+Complete the following steps to access the {{site.data.keyword.tco-optimizer}}:
 
 1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
 
