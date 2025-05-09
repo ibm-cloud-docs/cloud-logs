@@ -43,7 +43,7 @@ Sophisticated alert rules can be configured to reduce triage time. Examples incl
 
 You can parse log data to aid processing and increase the value of your data.
 
-{{site.data.keyword.logs_full_notm}} parsing tools help you evaluate if data is essential or redundant. Restructuring data can help you aggregate dissimilar nformation that teams need to quickly find to address incidents.
+{{site.data.keyword.logs_full_notm}} parsing tools help you evaluate if data is essential or redundant. Restructuring data can help you aggregate dissimilar information that teams need to quickly find to address incidents.
 Often a simple sparkline of frequency over time will provide the needed insight to quickly determine the problem.
 
 {{site.data.keyword.logs_full_notm}} is designed to convert log data to summarize what is happening. Using metrics that are generated from log data is a great way to look at vast amounts of data quickly when you search on different data sources.
