@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-05-12"
 
 keywords:
 
@@ -45,6 +45,9 @@ For information on configuring the TCO optimizer, see [Configuring the TCO Optim
 {: #cc-tcop}
 
 How logs are associated to pipelines is determined by [policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-create-policy). Policies are applied on combinations of applications, subsystems, and log severity as logs are ingested. Logs are assigned to the appropriate TCO pipeline based on the policy content.
+
+You must have a [{{site.data.keyword.cos_full_notm}} data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket) configured before creating a policy.
+{: attention}
 
 
 
@@ -108,4 +111,3 @@ When you modify log data, you need to make sure that the data sent to {{site.dat
 * Logs should also include timestamps in UTC format. Alternately the {{site.data.keyword.agent}} can be configure to offset the timestamp before sending the logs. See the information on `Time_Offset` and `Time_System_Timezone` in the [Fluent Bit documentation](https://docs.fluentbit.io/manual/pipeline/parsers/configuring-parser){: external}.
 
 * Fields that will be frequently used in searches (for example, `http_error_code`) should be [extracted into separate keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule&interface=ui), rather than being included in the log line.
-
