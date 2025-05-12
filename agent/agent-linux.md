@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-05-12"
 
 keywords:
 
@@ -274,7 +274,7 @@ Complete the following steps:
 
 You can update the agent by downloading the desired agent packages and running the appropriate command for your environment. For information about the current {{site.data.keyword.agent}} version, see the [agent release notes.](/docs/cloud-logs?topic=cloud-logs-release-notes-agent)
 
-    * For RHEL run:
+   * For RHEL run:
 
      ```sh
      rpm -Uvh <rpm_filename>
