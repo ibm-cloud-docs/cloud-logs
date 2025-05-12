@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-06"
+lastupdated: "2025-05-09"
 
 keywords:
 
@@ -20,6 +20,10 @@ Log records can be ingested with severity values that do not match {{site.data.k
 {: shortdesc}
 
 Mapped value meanings and the equivalent [API severity values](/docs/cloud-logs?topic=cloud-logs-send-logs-api) are shown in the following table.
+
+The table describes the mapping after the logs are ingested by {{site.data.keyword.logs_full_notm}}.
+More information on how the {{site.data.keyword.agent}} parses severities is documented in [Understanding how the {{site.data.keyword.agent}} parses severities](/docs/cloud-logs?topic=cloud-logs-agent-severity).
+{: note}
 
 | Log record severity value | Mapped to | API mapped value |
 |---------------------------|-----------|------------------|
