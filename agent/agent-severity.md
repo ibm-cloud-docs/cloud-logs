@@ -58,4 +58,3 @@ In this case, the search is case-sensitive and will only find the spellings defi
 | `error`, `Error`, `ERROR` | `Error` | 5 |
 | `critical`, `Critical`, `CRITICAL` | `Critical` | 6 |
 {: caption="Mapping of text search severity values to {{site.data.keyword.logs_full_notm}} severity values" caption-side="bottom"}
-

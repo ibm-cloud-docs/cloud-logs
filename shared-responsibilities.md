@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-13"
+lastupdated: "2025-05-14"
 
 keywords:
 
@@ -21,6 +21,7 @@ Learn about the management responsibilities and terms and conditions that you ha
 {: shortdesc}
 
 Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.logs_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
+
 
 
 ## Incident and operations management
