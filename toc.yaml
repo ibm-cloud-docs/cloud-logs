@@ -456,6 +456,8 @@ toc:
                 topics:
                 - ts-mapping-exceptions.md
                 - ts-rules.md
+                - ts-no-all-logs.md
+                - ts-no-tco-data.md
             - topicgroup:
                 label: Troubleshooting alerts
                 topics:
