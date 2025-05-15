@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-14"
+lastupdated: "2025-05-15"
 
 keywords:
 
@@ -21,6 +21,15 @@ Learn about the management responsibilities and terms and conditions that you ha
 {: shortdesc}
 
 Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.logs_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
+
+
+## Configuration
+{: #sr-configuration}
+
+| Task              | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
+|-------------------|-------------------------------------------------|-----------------------|
+| [Configuration of an {{site.data.keyword.logs_full_notm}} data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket) | None | [TCO policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) sending data to the {{site.data.keyword.monitoring}} and {{site.data.keyword.compliance}} pipelines require a data bucket to be configured. If a data bucket is not configured for these policy types, there is a potential for data to be dropped.  \n  \n Without a data bucket, data will not be retained beyond the selected [service plan](/docs/cloud-logs?topic=cloud-logs-service_plans).|
+{: caption="Responsibilities for service configuration" caption-side="top"}
 
 
 
