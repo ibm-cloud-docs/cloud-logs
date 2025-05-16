@@ -38,8 +38,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
     DataPrime now supports passing of query parameter values using [`$p`](/docs/cloud-logs?topic=cloud-logs-query-parameters).
 
-[UI] Fast mode
-:   [Fast Mode](/docs/cloud-logs?topic=cloud-logs-compact-views) provides a simplified and streamlined view, enabling users to focus on active monitoring and querying without additional widgets, filters, or statistics.
+[UI] Compact mode
+:   [Compact mode](/docs/cloud-logs?topic=cloud-logs-compact-views) provides a simplified and streamlined view, enabling users to focus on active monitoring and querying without additional widgets, filters, or statistics.
 
 [UI] Shared URL
 :   Enhancements added to the [share the URL functionality](/docs/cloud-logs?topic=cloud-logs-share_url) so you can share a URL of the the current view of the logs explore screen.
