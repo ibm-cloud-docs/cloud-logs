@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-05-16"
 
 keywords: 
 
@@ -189,3 +189,60 @@ A URL sharing a public view is always permanent and accessible to all of your te
 9. Click Copy URL.
 
 10. For an unsaved public view, choose whether to save the changes before sharing or share the current view without saving.
+
+
+
+## Creating a private view
+{: #share_url_private}
+
+A private view is a saved view whose privacy settings have been set to private. This view is only accessible to the user that created it. If you attempt to share a private view, it acts as an unsaved view with the same attributes and behavior.
+
+## Example of creating a sharable URL
+{: #shared_url_example}
+
+This example creates a customized view of applications with errors (severity `Error`). The apps are grouped alphabetically and aggregated in a descending list, based on data collected over the past hour.
+
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+
+2. Click the **Menu** icon ![Menu icon](/icons/icon_hamburger.svg) &gt; **Observability**.
+
+3. Click **Logging**. By default **Instances** are displayed. 
+
+4. Click the **Cloud Logs** tab.
+
+   The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
+
+   If the instances are not displayed, click **Instances** > **Cloud Logs** to display the list of logging instances.
+
+5. Click **Open dashboard** for your selected instance.
+
+6. In the left navigation, click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
+
+7. Run this DataPrime query.
+
+   ```text
+   source logs 
+   | filter $m.severity == ERROR 
+   | groupby $l.applicationname aggregate count() as error_count
+   ```
+   {: codeblock}
+
+8. In the {{site.data.keyword.logs_full}} UI time picker, select the **Last 1 hour** time range.
+
+9.  Click the ellipsis (…) next to **Unsaved View**.
+
+10. In **Create a New View**:
+
+    * Enter a meaningful view name.
+    * Verify that **Save query and filters** is enabled.
+    * Set **Privacy settings** to **Public**.
+
+11. Click **Create**.
+
+12. Click **Share** on the **Logs** view toolbar.
+
+13. Click **Copy URL**.
+
+    A URL similar to this will be copied to your clipboard: `https://dashboard.au-syd.logs.cloud.ibm.com/#/query-new/logs?viewId=83918&querySyntax=dataprime&time=from:now-1h,to:now&page=0&permalink=true`. It includes filters, your DataPrime query, the selected time range, and the ID of the view.
+
+14. Share the URL with the intended recipients.
