@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-17"
+  years:  2024, 2025
+lastupdated: "2025-05-16"
 
 keywords:
 
@@ -24,8 +24,7 @@ Using the remove fields rule, you can drop specific fields from any JSON log ent
 
 Having a cleaner structure for your logs helps give you better visibility into your data.
 
-10% of the data volume that is removed is counted against the quota, similar to data blocked by a block rule.
-{: note}
+
 
 ## Before you begin
 {: #parse-remove-1}
