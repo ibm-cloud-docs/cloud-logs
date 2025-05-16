@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-05-16"
 
 keywords:
 
@@ -29,7 +29,7 @@ Block rules also have the following options:
 
 - **Block all non-matching logs**: Blocks any log that does not match the rule matcher and block rule.
 
-Selecting **View blocked logs in LiveTail and archive to IBM Cloud Object Storage** archives logs in the *{{site.data.keyword.compliance}}* policy plan. This is a more refined option to give logs a low priority. Only 15% of low priority logs volume is counted against the quota.
+Selecting **View blocked logs in LiveTail and archive to IBM Cloud Object Storage** archives logs in the *{{site.data.keyword.compliance}}* policy plan. This is a more refined option to give logs a low priority.
 {: note}
 
 ## Before you begin
