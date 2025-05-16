@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-05-16"
 
 keywords:
 
@@ -21,6 +21,46 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+
+
+
+## xx April 2025
+{: #cloud-logs-aprxx25}
+{: release-note}
+
+
+[DataPrime] DataPrime enhancements
+:   DataPrime now support the [`multigrouby` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#multigroupby).
+
+    DataPrime now supports the [`union` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#union).
+
+    DataPrime now supports the [`join cross` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#join)
+
+    DataPrime now supports passing of query parameter values using [`$p`](/docs/cloud-logs?topic=cloud-logs-query-parameters).
+
+[UI] Fast mode
+:   [Fast Mode](/docs/cloud-logs?topic=cloud-logs-compact-views) provides a simplified and streamlined view, enabling users to focus on active monitoring and querying without additional widgets, filters, or statistics.
+
+[UI] Shared URL
+:   Enhancements added to the [share the URL functionality](/docs/cloud-logs?topic=cloud-logs-share_url) so you can share a URL of the the current view of the logs explore screen.
+
+[Custom dashboards] Variable support
+:   [Variables](/docs/cloud-logs?topic=cloud-logs-variables) can be configured as a placeholder for a value that is used in queries. When used in custom dashboards, your dashboard's queries update to display data for that value.
+
+Fixes implemented
+:   The following issues are resolved.
+
+    [Alerts] Fixed an issue where the `log_example` field in an alert notification was sometimes including a null value.
+
+    [Custom Dashboards] Fixed an issue where widgets from metrics data were intermittently failing to load.
+
+    [API] Fixed an issue in the alerts list API where the `notification_payload_filters` field contained empty values.
+
+    [Data Usage] Fixed an issue in the data usage graph where usage for some days was displayed as null.
+
+    [UI] Fixed multiple issue where the display of some screens in dark mode was broken.
+
+    [Alerts] Fixed an issue where `condition_timeframe` in notification didn't match the time frame/window defined in the alert configuration.
 
 
 

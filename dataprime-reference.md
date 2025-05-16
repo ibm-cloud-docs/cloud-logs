@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-05-16"
 
 keywords:
 
@@ -507,6 +507,14 @@ When querying with the `groupby` operator, you can apply an [aggregation functio
 :   Only returns rows where there are non-null results from both queries.
 
 
+`join cross`
+:   Pairs each row from the left query with every row from the right query, generating the full Cartesian product. Unlike other `join` types, `join cross` does not support `on` or `using conditions`. It functions similarly to a `join inner` but without any filtering, returning all possible row combinations.
+
+For `left` (default), `inner`, and `full`, you can specify either a `join` condition by using the `on` keyword or a keypath using the by using `keyword`. The Cartesian product is filtered to retain only rows where the condition holds true or where the keypath values match on both sides.
+
+Since all joins, regardless of the modifier, are based on the Cartesian product, duplicate results can occur if the `join` condition matches multiple times. To prevent unintended duplication, consider preprocessing subqueries, such as by using distinct.
+
+
 
 Syntax:
 
@@ -525,6 +533,10 @@ Where:
 
 * `<condition>` - The condition if results from both queries should be joined.
 
+
+   In the condition, you can use the `left=>` and `right=>` prefixes to refer to the events of the left and right queries, respectively. However, it is not required if a keypath exists in only one of the queries.
+
+   When using the `==` (equality) operator in your condition, it must compare a keypath from the left query with a keypath from the right query. However, given that the keypaths must be unique or prefixed with `left=>` or `right=>`, the ordering of the operands is not important.
 
 
 * `<join_keypath_n>` - `<join_keypath_n>` as a join key means to join results where a given keypath is equal in the results of both the left side query and the right side query.
@@ -708,6 +720,64 @@ In this case, for the two document sets above, results will be as follows:
 
 
 
+#### `join cross` example
+{: #join_cross}
+
+`join cross` combines every row from the left query with every row from the right query, producing a Cartesian product of the two sets.
+
+Assume that we have the following documents from a custom enrichment table named `users`.
+
+```json
+{ "id": "111", "name": "John" }
+{ "id": "222", "name": "Emily" }
+{ "id": "333", "name": "Alice" }
+```
+{: codeblock}
+
+Now, consider this set of documents named `logs`.
+
+```json
+{ "id": "111", "timestamp": "2022-01-01T12:00:00Z" }
+{ "id": "111", "timestamp": "2022-01-01T12:30:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+{ "id": "222", "timestamp": "2022-01-01T13:00:00Z" }
+```
+{: codeblock}
+
+The following query will produce a Cartesian product of the `users` and `logs` datasets because `join cross` pairs every row from the left query with every row from the right query, regardless of any matching conditions.
+
+```text
+source users | join cross (source logs) into logins
+```
+{: codeblock}
+
+```json
+{ "id": "111", "name": "John", "logins": { "id": "111", "timestamp": "2022-01-01T12:00:00Z" } }
+{ "id": "111", "name": "John", "logins": { "id": "111", "timestamp": "2022-01-01T12:30:00Z" } }
+{ "id": "111", "name": "John", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+{ "id": "111", "name": "John", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+{ "id": "111", "name": "John", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+{ "id": "222", "name": "Emily", "logins": { "id": "111", "timestamp": "2022-01-01T12:00:00Z" } }
+{ "id": "222", "name": "Emily", "logins": { "id": "111", "timestamp": "2022-01-01T12:30:00Z" } }
+{ "id": "222", "name": "Emily", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+{ "id": "222", "name": "Emily", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+{ "id": "222", "name": "Emily", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+{ "id": "333", "name": "Alice", "logins": { "id": "111", "timestamp": "2022-01-01T12:00:00Z" } }
+{ "id": "333", "name": "Alice", "logins": { "id": "111", "timestamp": "2022-01-01T12:30:00Z" } }
+{ "id": "333", "name": "Alice", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+{ "id": "333", "name": "Alice", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+{ "id": "333", "name": "Alice", "logins": { "id": "222", "timestamp": "2022-01-01T13:00:00Z" } }
+```
+{: codeblock}
+
+The query results in each user being paired with every log entry: 3 rows from `users` multiplied by 5 rows from `logs`, resulting in 15 rows. Each user (`John`, `Emily`, `Alice`) is paired with every log entry.
+
+Using `join cross` is especially useful when you are interested in seeing a complete picture of your data, then adding a `left` or `right` `join` to these results.
+{: tip}
+
+
+
 #### Limitations and considerations
 {: #join_limitations}
 
@@ -757,6 +827,149 @@ m $d.kubernetes.labels to $d.my_labels
 ```
 {: codeblock}
 
+
+
+
+### `multigroupby`
+{: #multigroupby}
+
+
+`multigroupby` concatenates the results from two or more queries incorporating `groupby` into a single dataset.
+
+Use `multigroupby` for:
+
+* Efficiency: Data is scanned only once for multiple queries.
+
+* Synchronization: Results remain coherent, avoiding discrepancies that can arise when running separate queries.
+
+```text
+multigroupby  (<grouping_expression_1> as <alias> [, <grouping_expression_2> as <alias_2>, ...])  [, (<grouping_expression_1> as <alias> [, <grouping_expression_2> as <alias_2>, ...]), ...][aggregate]  <aggregation_expression> [as <result_keypath>] [, <aggregation_expression_2> [as <result_keypath_2], ...]
+```
+{: codeblock}
+
+By using the same alias `app` for both groupings, the same semantic meaning is presented as a unified field. In the next example, different aliases are used and the data is combined, but not merged.
+
+#### Example - `Multigroupby` with the same alias
+{: #multigrouby-same-alias}
+
+In this example we want to group our logs as follows:
+
+* First by `applicationname` (`app`) and then further by `subsystemname` (`ss`), providing detailed counts for each combination.
+
+* Then independently by `applicationname`, giving total counts of logs for each application regardless of `subsystems`.
+
+```text
+source logs 
+| multigroupby ($l.applicationname as app, $l.subsystemname as ss),($l.applicationname as app) agg count() | orderby app,ss
+```
+{: codeblock}
+
+The result will be similar to:
+
+```json
+[
+    {
+        "_count0": 241,
+        "app": "monitoring24",
+        "ss": "NO_SUBSYSTEM_NAME"
+    },
+    {
+        "_count0": 231,
+        "app": "monitoring24",
+        "ss": "logs-opentelemetry-agent"
+    },
+    {
+        "_count0": 15,
+        "app": "monitoring24",
+        "ss": "logs-opentelemetry-collector"
+    },
+    {
+        "_count0": 487,
+        "app": "monitoring24",
+        "ss": null
+    }
+]
+```
+{: codeblock}
+
+The first three rows represent counts for each unique combination of `app` and `ss`. For example, there are 241 logs where the application (`app`) is `monitoring24` and the subsystem (`ss`) is `NO_SUBSYSTEM_NAME`. Similarly, there are 231 logs for the same application but with the subsystem `logs-opentelemetry-agent`, and so on.
+
+The final row provides a total count of logs for the application `monitoring24`, aggregating all subsystems. Here, `_count0` is 487, the sum of all the detailed counts above. The `ss` field is `null` to indicate this is the total for the application as a whole.
+
+By using the same alias `app` for both groupings, the same semantic meaning is presented as a unified field. In the next example, different aliases are used and the data is combined, but not merged.
+{: note}
+
+#### Example - `Multigroupby` with different aliases
+{: #multigrouby-diff-alias}
+
+Now, consider the effects of introducing 2 different aliases for the queries. In this case, the first grouping is labeled as `app1` for `applicationname` combined with `ss`, while the second grouping is labeled as `app2` for `applicationname` `alone`.
+
+```text
+source logs | multigroupby ($l.applicationname as app1, $l.subsystemname as ss),($l.applicationname as app2) agg count()
+```
+{: codebock}
+
+The result will be similar to:
+
+```json
+[
+    {
+        "_count0": 241,
+        "app1": "monitoring24",
+        "app2": null,
+        "ss": "logs-opentelemetry-agent"
+    },
+    {
+        "_count0": 231,
+        "app1": "monitoring24",
+        "app2": null,
+        "ss": "logs-opentelemetry-collector"
+    },
+    {
+        "_count0": 15,
+        "app1": "monitoring24",
+        "app2": null,
+        "ss": "no_subsystem_name"
+    },
+    {
+        "_count0": 487,
+        "app1": null,
+        "app2": "monitoring24",
+        "ss": null
+    }
+]
+```
+{: codeblock}
+
+By introducing separate aliases (`app1` and `app2`), the query maintains the distinction between the two groupings rather than merging the data. Rows where `app1` is populated and `app2` is `null` correspond to the detailed grouping by `applicationname` and `subsystemname`. For instance, 241 logs are associated with `app1 = "monitoring24"` and `ss = "logs-opentelemetry-agent"`. This follows the first grouping logic.
+
+The row where `app2` is populated and `app1` is `null` reflects the total count for the second grouping, where logs are aggregated solely by `applicationname`. For `app2 = "monitoring24"`, the count is 487, and both `app1` and `ss` are `null` to indicate this higher-level aggregation.
+
+By using separate aliases (`app1` and `app2`), the query does not merge the data, but rather makes it clear which group each result belongs to. The overall logic remains the same: detailed counts for specific combinations and aggregate counts for the total.
+
+#### `Multigroupby` limitations
+{: #multigrouby-limitations}
+
+`multigroupby` doesn’t return duplicate rows for duplicate group sets.
+
+If you run `multigroupby` with app and ss, the expected result (if duplicates were allowed) might look like this:
+
+```json
+[
+  {"app": "monitoring24", "ss": "logs-opentelemetry-agent", "_count0": 2},
+  {"app": "monitoring24", "ss": "logs-opentelemetry-collector", "_count0": 2}
+]
+```
+{: codeblock}
+
+Due to the limitation, `multigroupby` will merge these duplicates and return only one row for each unique combination, even if that combination occurs multiple times in the data:
+
+```json
+[
+  {"app": "monitoring24", "ss": "logs-opentelemetry-agent", "_count0": 2}
+]
+```
+{: codeblock}
 
 
 
@@ -924,6 +1137,8 @@ When using the `stitch` command:
 * The resulting dataset will contain all columns from both datasets.
 
 
+`stitch` differs from `union`. `stitch` combines datasets horizontally by appending columns row-by-row. `union` appends rows vertically, stacking datasets on top of each other.
+
 
 ```text
 ... | stitch (<subquery>) into <target-keypath>
@@ -1083,6 +1298,85 @@ Will result in logs of the following form:
 {: codeblock}
 
 You can apply an [aggregation function.](#aggregation_functions)
+
+
+
+### `union`
+{: #union}
+
+The `union` command concatenates the results from two or more datasets into one dataset. This allows users to combine results from multiple queries into one seamless dataset. One dataset can be a result set piped into the `union` command and then concatenated with another dataset.
+
+Use union when you need to append rows from one dataset to another.
+
+When processing large datasets, to optimize performance, consider using `filter` to limit rows from each dataset before using `union`.
+{: tip}
+
+Users are limited to a maximum of 10 `union` commands per query for {{site.data.keyword.frequent-search}} data. There is no limit on other data.
+{: restriction}
+
+#### How `union` differs from `join`
+{: #union-vs-join}
+
+* `union` combines result sets by appending rows from one dataset to another. It does not merge or compare columns from multiple documents.
+
+* `join` matches and combines columns from two tables based on a condition, creating rows that contain data from both tables.
+
+```text
+<query> | union <query>
+```
+{: codeblock}
+
+#### Example combining 2 datasets
+{: #union-combine}
+
+You have these 2 datasets:
+
+Logs for `Team 58942`
+
+```json
+{ "id": "111", "name": "John" , "team.id": "58942" }
+{ "id": "222", "name": "Emily", "team.id": "58942" }
+{ "id": "333", "name": "Alice", "team.id": "58942" }
+```
+{: codeblock}
+
+Logs for `Team 98361`
+
+```json
+{ "userid": "111", "timestamp": "2022-01-01T12:00:00Z", "team.id": "98361" }
+{ "userid": "111", "timestamp": "2022-01-01T12:30:00Z", "team.id": "98361" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z", "team.id": "98361" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z", "team.id": "98361" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z", "team.id": "98361" }
+```
+{: codeblock}
+
+And you want to combine them into 1 dataset. You can do this using `union`.
+
+```text
+source logs(teamId=58942) | union logs(teamId=98361)
+```
+{: codeblock}
+
+The query processes the two datasets:
+
+* `source logs(teamId=58942)`: Retrieves all documents for `Team 58942`
+* `union logs (teamID=98361)`: Appends the `Team 98361` dataset to the `Team 58942` dataset
+
+
+This will result in the following dataset:
+
+```json
+{ "id": "111", "name": "John" , "team.id": "58942" }
+{ "id": "222", "name": "Emily", "team.id": "58942" }
+{ "id": "333", "name": "Alice", "team.id": "58942" }
+{ "userid": "111", "timestamp": "2022-01-01T12:00:00Z", "team.id": "98361" }
+{ "userid": "111", "timestamp": "2022-01-01T12:30:00Z", "team.id": "98361" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z", "team.id": "98361" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z", "team.id": "98361" }
+{ "userid": "222", "timestamp": "2022-01-01T13:00:00Z", "team.id": "98361" }
+```
+{: codeblock}
 
 
 

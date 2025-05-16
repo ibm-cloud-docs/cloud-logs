@@ -279,10 +279,14 @@ toc:
           topics:
           - topic: custom-views.md
             navtitle: Managing custom views
+          - topic: compact-views.md
+            navtitle: Compact views
           - topic: actions.md
             navtitle: Using actions
           - topic: create_dashboard.md
             navtitle: Managing custom dashboards
+          - topic: extensions-mgmt.md
+            navtitle: Managing extensions
           - topic: share_url.md
             navtitle: Sharing URLs
           - topicgroup:
@@ -304,6 +308,8 @@ toc:
                 navtitle: Markdown
               - topic: widget_dataprime.md
                 navtitle: DataPrime creator
+              - topic: widget_query_builder.md
+      - topic: variables.md
       - topic: export-data.md
         navtitle: Exporting data
       - topicgroup:
@@ -392,6 +398,14 @@ toc:
           topics:
           - topic: extensions-system-monitoring.md
             navtitle: System Monitoring 
+          - topic: extensions-activity-tracking.md
+            navtitle: Activity Tracking 
+          - topic: extensions-kubernetes.md
+            navtitle: IBM Cloud Kubernetes Service
+          - topic: extensions-db-mysql.md
+            navtitle: IBM Cloud Databases for MySQL
+          - topic: extensions-db-postgresql.md
+            navtitle: IBM Cloud Databases for PostgreSQL
       - topicgroup:
           label: API Reference
           links:
@@ -435,6 +449,7 @@ toc:
           topics:
           - dataprime-quickstart.md
           - dataprime-reference.md
+          - query-parameters.md
       - dpxl_reference.md
       - cloud_services_msg_prefix.md
   - navgroup:
