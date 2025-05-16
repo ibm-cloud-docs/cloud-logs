@@ -24,8 +24,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
-## xx April 2025
-{: #cloud-logs-aprxx25}
+## 16 May 2025
+{: #cloud-logs-may1625}
 {: release-note}
 
 
@@ -44,8 +44,17 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 [UI] Shared URL
 :   Enhancements added to the [share the URL functionality](/docs/cloud-logs?topic=cloud-logs-share_url) so you can share a URL of the the current view of the logs explore screen.
 
+[UI] New extensions
+:   New [extensions](/docs/cloud-logs?topic=cloud-logs-extensions) are available:
+
+    - [Activity Tracking](/docs/cloud-logs?topic=cloud-logs-extensions-activity-tracking): Use to get insights into your {{site.data.keyword.cloud_notm}} activity tracking data.
+    - [{{site.data.keyword.containerlong_notm}}](/docs/cloud-logs?topic=cloud-logs-extensions-kubernetes):  Use to get insights into your {{site.data.keyword.containerlong_notm}} logs.
+    - [{{site.data.keyword.databases-for-mysql_full}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-mysql):  Use to get insights into your {{site.data.keyword.databases-for-mysql_full}} logs.
+    - [{{site.data.keyword.databases-for-postgresql_full}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-postgresql):  Use to get insights into your {{site.data.keyword.databases-for-postgresql_full}} logs.
+
 [Custom dashboards] Variable support
 :   [Variables](/docs/cloud-logs?topic=cloud-logs-variables) can be configured as a placeholder for a value that is used in queries. When used in custom dashboards, your dashboard's queries update to display data for that value.
+
 
 Fixes implemented
 :   The following issues are resolved.
