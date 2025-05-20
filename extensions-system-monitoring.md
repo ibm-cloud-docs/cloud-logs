@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-16"
+lastupdated: "2025-05-20"
 
 keywords:
 
@@ -23,6 +23,9 @@ Use the System Monitoring extension to gain insights into your system's performa
 
 For more information about deploying the extension, see [Deploying, managing, and removing {{site.data.keyword.logs_full_notm}} extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
 
+
+
+{{/_include-segments/extensions-validate.md}}
 
 ## Dashboards
 {: #extensions-system-monitoring-dashboards}

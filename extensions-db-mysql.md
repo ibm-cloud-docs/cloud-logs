@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-16"
+lastupdated: "2025-05-20"
 
 keywords:
 
@@ -66,6 +66,9 @@ Before deploying this extension, make sure that deploying the extension will not
 You can deploy this extension in any {{site.data.keyword.logs_full_notm}} instance that collects {{site.data.keyword.databases-for-mysql_full}} logs. This extension includes a set of pre-configured resources such as dashboards, views, and alerts that help you monitor critical metrics, identify anomalies, and optimize your system's performance.
 
 For more information about deploying the extension, see [Deploying, managing, and removing {{site.data.keyword.logs_full_notm}} extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
+
+
+{{/_include-segments/extensions-validate.md}}
 
 ## Dashboard
 {: #extensions-db-mysql-dashboards}

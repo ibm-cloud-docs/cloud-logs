@@ -1,0 +1,2 @@
+After deploying, verify that the extension configuration handles data in a way that matches your {{site.data.keyword.logs_full_notm}} instance configuration. For example, if you have [TCO policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) sending data to the {{site.data.keyword.monitoring}} pipeline, you will need to change the dashboard configured by this extension to **All Logs** instead of **{{site.data.keyword.frequent-search}}**.
+{: note}

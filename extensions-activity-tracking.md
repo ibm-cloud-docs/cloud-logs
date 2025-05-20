@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-16"
+lastupdated: "2025-05-20"
 
 keywords:
 
@@ -77,6 +77,9 @@ When you deploy the extension, consider the following information:
 - Parsing rules should be deployed for some of the views and dashboards to report data.
 
 For more information about deploying the extension, see [Deploying, managing, and removing {{site.data.keyword.logs_full_notm}} extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
+
+
+{{/_include-segments/extensions-validate.md}}
 
 ## Parsing rules
 {: #extensions-activity-tracking-rules}
