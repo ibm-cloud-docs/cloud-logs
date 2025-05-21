@@ -247,6 +247,7 @@ toc:
             navtitle: Reduce the amount of indexed fields
           - topic: parse-convert-to-json-object.md
             navtitle: Transform escaped or stringified logs to JSON format
+      - enrich-howto.md
       - topicgroup:
           label: Querying data
           topics:
