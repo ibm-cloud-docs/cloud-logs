@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-24"
+  years:  2024, 2025
+lastupdated: "2025-05-22"
 
 keywords:
 
@@ -58,7 +58,7 @@ Do the following to configure Events to Metrics in your environment.
 
 2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Events to Metrics**.
 
-3. Click **Nwe Events2Metrics**.
+3. Click **New Events2Metrics**.
 
 4. Define the details for your metrics.
 
@@ -160,4 +160,3 @@ You need to use forward slash (`/`) before and after your regex string.
 
 Keywords are not created for fields longer than 256 characters.
 {: restriction}
-
