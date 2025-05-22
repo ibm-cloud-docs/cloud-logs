@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-20"
+  years:  2024, 2025
+lastupdated: "2025-05-22"
 
 keywords:
 
@@ -24,6 +24,9 @@ You can run Cloud Logs without a data bucket or a metrics bucket. However, featu
 
 There are limits for each provisioned instance. For more information, see [Limits per instance](/docs/cloud-logs?topic=cloud-logs-limits&interface=ui#limits-per-instance).
 {: note}
+
+
+{{_include-segments/instance-naming-limits.md}}
 
 ## Provisioning an instance through the Observability dashboard
 {: #instance-provision-ui}

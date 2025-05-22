@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-16"
+  years:  2024, 2025
+lastupdated: "2025-05-22"
 
 keywords:
 
@@ -22,6 +22,9 @@ subcollection: cloud-logs
 {: #unicode}
 
 {{site.data.keyword.logs_full_notm}} does not provide full Unicode support for multibyte characters.
+
+
+{{_include-segments/instance-naming-limits.md}}
 
 ## Limits per instance
 {: #limits-per-instance}
