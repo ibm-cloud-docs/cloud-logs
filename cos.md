@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-05-22"
 
 keywords:
 
@@ -21,7 +21,7 @@ Buckets are a way to organize your data in an {{site.data.keyword.cos_full_notm}
 {: shortdesc}
 
 
-To manage buckets, your user must be granted permissions to work with buckets on the {{site.data.keyword.cos_full_notm}} instance. For more information about roles, see [Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-iam).
+To manage buckets, your user must be granted permissions to work with buckets on the {{site.data.keyword.cos_full_notm}} instance. For more information about roles, see [Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-with-iam&interface=ui).
 
 
 
@@ -162,7 +162,7 @@ To define a policy, first you must set the scope. You can define a policy to gra
 * For all IAM-enabled services in your account
 
 After you define the scope of the access policy, you must assign a role.
-- For more information about what actions are allowed per role within the {{site.data.keyword.cos_short}} service, see [COS Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-iam#iam-roles).
+- For more information about what actions are allowed per role within the {{site.data.keyword.cos_short}} service, see [COS Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-with-iam&interface=ui).
 - For more information about bucket permissions per role, see [Bucket permissions](/docs/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions).
 - For information about assigning roles, see [Managing IAM access](/docs/account?topic=account-assign-access-resources).
 

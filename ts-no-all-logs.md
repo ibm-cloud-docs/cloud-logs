@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-15"
+lastupdated: "2025-05-22"
 
 keywords:
 
@@ -29,7 +29,7 @@ The **All Logs** option is disabled and you cannot select it. You can select onl
 Some issues that can cause data that is received by {{site.data.keyword.logs_full_notm}} to be only available in {{site.data.keyword.frequent-search}} include:
 {: tsCauses}
 
-- No data bucket is configured for the {{site.data.keyword.logs_full_notm}} instance. Data is only maintained for the retention period for the {{site.data.keyword.logs_full_notm}} instance [service plan](docs/cloud-logs?topic=cloud-logs-service_plans). After the retention period, the data is dropped.
+- No data bucket is configured for the {{site.data.keyword.logs_full_notm}} instance. Data is only maintained for the retention period for the {{site.data.keyword.logs_full_notm}} instance [service plan](/docs/cloud-logs?topic=cloud-logs-service_plans). After the retention period, the data is dropped.
 
    A data bucket is required for data to be configured to be sent by TCO policies to the {{site.data.keyword.monitoring}} and {{site.data.keyword.compliance}} pipelines. A data bucket is also required for data that is received by {{site.data.keyword.logs_full_notm}} to be automatically archived and accessible using **All Logs**.
 - Service to service authorization is not configured correctly between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.cos_full_notm}}.
