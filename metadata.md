@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-05-23"
 
 keywords:
 
@@ -35,8 +35,11 @@ The following are samples of application names based on the log source:
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.namespace_name` |
 | Linux server                                     | `${HOSTNAME}` |
 | Windows server                                   | `${COMPUTERNAME}` |
+| {{site.data.keyword.cis_full}} logs `[*]` | `ibm-platform-log` |
 {: caption="Application names" caption-side="bottom"}
 
+
+`[*]` - For information about {{site.data.keyword.cis_full}} logs, see [Creating a Logpush job to send logs to {{site.data.keyword.logs_full_notm}}](/docs/cis?topic=cis-logpush&interface=api#logpush-setup-cloud-logs-api).
 
 
 ## Subsystem name
@@ -56,4 +59,8 @@ The following are samples of subsystem names based on the log source:
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.container_name`  |
 | Linux server                                     |  |
 | Windows server                                   | `ProviderName` |
+| {{site.data.keyword.cis_full}} logs `[*]` | `internet-svcs:instanceID` |
 {: caption="Subsystem names" caption-side="bottom"}
+
+
+`[*]` - For information about {{site.data.keyword.cis_full}} logs, see [Creating a Logpush job to send logs to {{site.data.keyword.logs_full_notm}}](/docs/cis?topic=cis-logpush&interface=api#logpush-setup-cloud-logs-api).
