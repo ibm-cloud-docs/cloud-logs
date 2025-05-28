@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-05-28"
 
 keywords: HA for IBM Cloud Logs, DR for IBM Cloud Logs, IBM Cloud Logs recovery time objective, IBM Cloud Logs recovery point objective
 
@@ -228,7 +228,7 @@ It is recommended that you grant users and processes the IAM roles and actions w
 
 Consider creating a backup using the API before upgrading to a new version of {{site.data.keyword.logs_full_notm}} if you have configurations that do not use Terraform.
 
-## How {{site.data.keyword.IBM}} helps ensure disaster recovery
+## How {{site.data.keyword.IBM}} supports disaster recovery planning
 {: #ibm-disaster-recovery}
 
 
