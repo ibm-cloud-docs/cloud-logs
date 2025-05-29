@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-05-28"
 
 keywords:
 
@@ -56,7 +56,7 @@ When you send data to an {{site.data.keyword.logs_full_notm}} instance:
 For a single ingestion request {{site.data.keyword.logs_full_notm}}, these limitations exist:
 
 * `request_timeout`: 30 seconds
-* `request_body_limit_byte`s: 10 MiB
+* `request_body_limit_bytes`: 10 MiB
 
 
 {{_include-segments/query-limits.md}}
