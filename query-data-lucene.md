@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-05-29"
 
 keywords:
 
@@ -84,6 +84,7 @@ The following are examples of different types of searches and their results.
 | `msg:interesting` | Matches logs containing this term in the msg field. |
 | `msg:“a very interesting log message!”` |	Matches the exact phrase in the msg field. |
 | `msg.keyword:”a very interesting message!”` | Matches logs that contain the phrase (including the !). |
+| `msg.keyword:/.*/ AND NOT msg.keyword:/^$/` | Matches logs where the field has a value and is not an empty string ("") |
 {: caption="Example field searches" caption-side="bottom"}
 
 | Query | Results |
