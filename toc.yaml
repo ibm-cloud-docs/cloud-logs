@@ -174,12 +174,16 @@ toc:
               - topic: agent/agent-helm-update.md
                 navtitle: Updating the Logging agent version
               - topic: agent/configure-agent.md
+              - topic: agent/agent-helm-credential-rotation.md
+                navtitle: Updating the Logging agent IAM APIKey by using a Helm chart
               - topic: agent/agent-multiline.md
                 navtitle: Supporting multiline logs
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
               - topic: agent/agent-helm-template-clusters.md
-                navtitle: Template to deploy the Logging agent using a Helm chart
+                navtitle: Deploying the Logging agent using a Helm chart prior to 1.6.0
+              - topic: agent/agent-helm-template-clusters-1.6.0.md
+                navtitle: Deploy the Logging agent using a 1.6.0 Helm chart
           - topicgroup:
               label: Logging agent for Linux environments
               topics:

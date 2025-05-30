@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-05-30"
 
 keywords:
 
@@ -183,7 +183,7 @@ Complete the following steps:
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
     ```sh
-    helm install logs-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.3.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
+    helm install logs-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.6.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
     ```
     {: screen}
 
