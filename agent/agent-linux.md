@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-12"
+lastupdated: "2025-05-30"
 
 keywords:
 
@@ -146,6 +146,9 @@ Complete the following steps:
 
     `-s <vsi_secure_access_enabled>`
     :   (Optional) Set this to `true` if you have secure access enabled in your VSI. It will be set to `false` by default. For example, `-s true`.
+
+    Run the script to update the configuration with your parameter changes.
+    {: note}
 
 
 ## Add additional metadata fields

@@ -1,6 +1,15 @@
 ## Log query limits for Direct HTTP API Archive Query
 {: #limit-query}
 
+## Keyword types
+{: #limit_keyword}
+
+Keywords represent text that does not pass through the analyzer before indexing. This data type is suitable for regular expressions, aggregation, and sorting.
+
+The syntax to use the keyword data type in your query is: `<fieldName>.keyword`.
+
+{{site.data.keyword.logs_full_notm}} can not create a keyword type when a field is longer than 256 characters.
+
 
 ## Results returned
 {: #limit_returned_results}
