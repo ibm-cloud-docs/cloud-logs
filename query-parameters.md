@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-16"
+lastupdated: "2025-06-04"
 
 keywords:
 
@@ -114,11 +114,11 @@ source logs
 Using dynamic variables, `groupby` lets queries adapt based on user-defined criteria, enabling more flexible data aggregation and analysis. The following query groups data based on the field specified by the `$p.myGroupByVar` variable, then aggregates the results by counting the number of occurrences in each group.
 
 ```text
-groupby $d[$p.myGroupByVar] agg count()
+groupby $d[$p.myGroupByVar] calculate count()
 ```
 {: codeblock}
 
-This differs from `groupby $p.my_group_by_variable agg count()`. Since the variable is a string, running this query would be effectively identical to `groupby 'my_value' agg count()`, which means that it will do a `groupby` on a static string, aggregating all results into a single group called `my_value`.
+This differs from `groupby $p.my_group_by_variable calculate count()`. Since the variable is a string, running this query would be effectively identical to `groupby 'my_value' calculate count()`, which means that it will do a `groupby` on a static string, aggregating all results into a single group called `my_value`.
 {: note}
 
 ## Filtering logs within a specific time range
@@ -150,9 +150,9 @@ Using the `join` command, the following query joins and compares the number of l
 
 ```text
 source logs 
-| groupby $l.subsystemname agg count() as cnt
+| groupby $l.subsystemname calculate count() as cnt
 | join (source logs timeshifted -7d
-        | groupby $l.subsystemname agg count() as cnt) using subsystemname into a_week_before
+        | groupby $l.subsystemname calculate count() as cnt) using subsystemname into a_week_before
 ```
 {: codeblock}
 
@@ -160,8 +160,8 @@ This verbose example provides a way to gain more control over the time range, if
 
 ```text
 source logs 
-| groupby $l.subsystemname agg count() as cnt
+| groupby $l.subsystemname calculate count() as cnt
 | join (source logs between $p.timeRange.startTime-7d and $p.timeRange.endTime-7d
-        | groupby $l.subsystemname agg count() as cnt) using subsystemname into a_week_before
+        | groupby $l.subsystemname calculate count() as cnt) using subsystemname into a_week_before
 ```
 {: codeblock}

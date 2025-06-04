@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-09"
+lastupdated: "2025-06-04"
 
 keywords:
 
@@ -18,6 +18,9 @@ subcollection: cloud-logs
 
 Log records can be ingested with severity values that do not match {{site.data.keyword.logs_full_notm}} severities. {{site.data.keyword.logs_full_notm}} maps ingested severity values to {{site.data.keyword.logs_full_notm}} severity values.
 {: shortdesc}
+
+Mapped values are only supported after logs are ingested by {{site.data.keyword.logs_full_notm}}. Mapped values are supported by parsing rules. Attempting to use mapped values prior to ingestion can cause logs to be dropped since logs with an unrecognized severity value are dropped.
+{: important}
 
 Mapped value meanings and the equivalent [API severity values](/docs/cloud-logs?topic=cloud-logs-send-logs-api) are shown in the following table.
 
