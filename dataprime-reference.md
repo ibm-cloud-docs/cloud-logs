@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-16"
+lastupdated: "2025-06-04"
 
 keywords:
 
@@ -843,7 +843,7 @@ Use `multigroupby` for:
 * Synchronization: Results remain coherent, avoiding discrepancies that can arise when running separate queries.
 
 ```text
-multigroupby  (<grouping_expression_1> as <alias> [, <grouping_expression_2> as <alias_2>, ...])  [, (<grouping_expression_1> as <alias> [, <grouping_expression_2> as <alias_2>, ...]), ...][aggregate]  <aggregation_expression> [as <result_keypath>] [, <aggregation_expression_2> [as <result_keypath_2], ...]
+multigroupby  (<grouping_expression_1> as <alias> [, <grouping_expression_2> as <alias_2>, ...])  [, (<grouping_expression_1> as <alias> [, <grouping_expression_2> as <alias_2>, ...]), ...][calculate]  <aggregation_expression> [as <result_keypath>] [, <aggregation_expression_2> [as <result_keypath_2], ...]
 ```
 {: codeblock}
 
@@ -860,7 +860,7 @@ In this example we want to group our logs as follows:
 
 ```text
 source logs 
-| multigroupby ($l.applicationname as app, $l.subsystemname as ss),($l.applicationname as app) agg count() | orderby app,ss
+| multigroupby ($l.applicationname as app, $l.subsystemname as ss),($l.applicationname as app) calculate count() | orderby app,ss
 ```
 {: codeblock}
 
@@ -905,7 +905,7 @@ By using the same alias `app` for both groupings, the same semantic meaning is p
 Now, consider the effects of introducing 2 different aliases for the queries. In this case, the first grouping is labeled as `app1` for `applicationname` combined with `ss`, while the second grouping is labeled as `app2` for `applicationname` `alone`.
 
 ```text
-source logs | multigroupby ($l.applicationname as app1, $l.subsystemname as ss),($l.applicationname as app2) agg count()
+source logs | multigroupby ($l.applicationname as app1, $l.subsystemname as ss),($l.applicationname as app2) calculate count()
 ```
 {: codebock}
 
@@ -3020,7 +3020,7 @@ This examples takes logs which have some `connect_duration` and `batch_duration`
 ```text
 # Query
 source logs
-  | groupby region aggregate avg(connect_duration) / avg(batch_duration)
+  | groupby region calculate avg(connect_duration) / avg(batch_duration)
 ```
 {: codeblock}
 
@@ -3031,7 +3031,7 @@ This query calculates the percentage of logs which don’t have a `kubernetes_po
 ```text
 # Query
 source logs
-| groupby $l.subsystemname aggregate
+| groupby $l.subsystemname calculate 
   sum(if(kubernetes.pod_name != null,1,0)) / count() as pct_without_pod_name
  ```
 {: codeblock}
@@ -3043,7 +3043,7 @@ This query calculates the ratio between the maximum and minimum salary per depar
 ```text
 # Query
 source logs
-| groupby department_id aggregate
+| groupby department_id calculate
     max(salary) / min(salary) as salary_ratio
     `Based on {count()} Employees`
 ```
@@ -3055,7 +3055,7 @@ This query calculates the ratio between error logs and info logs.
 
 ```text
 source logs
-| groupby $m.timestamp / 1h as hour aggregate
+| groupby $m.timestamp / 1h as hour calculate
     count_if($m.severity == '5') / count_if($m.severity == '3') as error_to_info_ratio
 ```
 {: codeblock}

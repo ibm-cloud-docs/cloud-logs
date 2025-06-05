@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-16"
+lastupdated: "2025-06-04"
 
 keywords: 
 
@@ -223,7 +223,7 @@ This example creates a customized view of applications with errors (severity `Er
    ```text
    source logs 
    | filter $m.severity == ERROR 
-   | groupby $l.applicationname aggregate count() as error_count
+   | groupby $l.applicationname calculate count() as error_count
    ```
    {: codeblock}
 
