@@ -342,6 +342,8 @@ toc:
             navtitle: Alert suppression rules
           - topic: alerts/event-notifications-alerts.md
             navtitle: Configuring routing of events to destinations in Event Notifications 
+          - topic: alerts/event-notifications-slack-template.md
+            navtitle: Customizing Slack messages
           - topic: alerts/incidents.md
             navtitle: Managing triggered alerts in Cloud Logs
           - topic: alerts/cl-events-for-en.md
