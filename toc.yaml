@@ -445,8 +445,6 @@ toc:
             navtitle: Fluent Bit plug-ins supported 
           - topic: agent/agent-severity.md
             navtitle: Understanding how the agent parses severities
-          - topic: agent/agent-proxy.md
-            navtitle: Configuring the agent to use proxies
       - topicgroup:
           label: DataPrime Reference
           topics:
