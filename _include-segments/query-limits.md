@@ -1,5 +1,15 @@
-## Log query limits for Direct HTTP API Archive Query
+## Query limits
 {: #limit-query}
+
+## Characters within a query
+{: #limit_query_characters}
+
+There are limits to the number of characters that can be included in a query.
+
+* A maximum of 3000 characters can be included in a query in the **Logs** view.
+
+* A maxumum of 65,535 characters can be included in an alert query definition. Alert query definitions are also limited to a maximum of 50 `AND` and `OR` statements.
+
 
 ## Keyword types
 {: #limit_keyword}
