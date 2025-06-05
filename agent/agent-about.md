@@ -141,7 +141,6 @@ The following table lists the agent versions that are supported and the version 
 
 | {{site.data.keyword.agent}}                         | Based on Fluent Bit Version | Helm chart version |
 |-----------------------------------------------------|-----------------------------|--------------------|
-| v1.6.0                                              | [v3.2.10](https://fluentbit.io/announcements/v3.2.10/){: external} | v1.6.0   |
 | v1.5.2                                              | [v3.2.7](https://fluentbit.io/announcements/v3.2.7/){: external} | v1.5.2   |
 | v1.5.1                                              | [v3.2.7](https://fluentbit.io/announcements/v3.2.7/){: external} | v1.5.1   |
 | v1.5.0                                              | [v3.2.7](https://fluentbit.io/announcements/v3.2.7/){: external} | v1.5.0   |
