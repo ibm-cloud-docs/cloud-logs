@@ -21,7 +21,53 @@ Use these release notes to learn about updates to the {{site.data.keyword.agent}
 
 
 
+## 5 June 2025
+{: #logs-router-agent-jun0525}
+{: release-note}
 
+Release of the {{site.data.keyword.agent}} version 1.6.0
+:   {{site.data.keyword.agent}} version 1.6.0 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, Debian 11, Debian 12, and Windows.  This release is based on Fluent Bit [v3.2.10](https://fluentbit.io/announcements/v3.2.10/){: external}.
+
+   This version includes the following notable changes:
+
+   * Updated Fluent Bit to version 3.2.10
+   * It is now possible to configure the agent to use [proxies](/docs/cloud-logs?topic=cloud-logs-agent-proxy). 
+   * The helm chart provided for {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}} now use the Fluent Bit yaml-based configuration files.  This replaces the classic configuration which will be deprecated by Fluent Bit at the end of 2025.  The helm `values.yaml` files used with helm versions before 1.6.0 are compatible with 1.6.0.  Users that customize their configurations might need to take actions before applying this version of the helm chart.  If you are editing the config map files after deploying the helm chart then you will need to make changes to your process.  There are additional configuration values introduce with 1.6.0 that give more flexibility in your agent configuration. For more information, see [Template to deploy the {{site.data.keyword.agent}} using a 1.6.x Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-160).
+
+   The following new {{site.data.keyword.agent}} packages are available.
+
+   Both packages are required for the installation.
+   {: important}
+
+   RHEL 8
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.6.0.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.6.0.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.6.0.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.6.0.rpm.sha256){: external}
+
+   RHEL 9
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.0.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.0.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.0.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.0.rpm.sha256){: external}
+
+   Debian 11
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.6.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.6.0.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.6.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.6.0.deb.sha256){: external}
+
+   Ubuntu 20
+
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.6.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.6.0.deb){: external}
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.6.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.6.0.deb.sha256){: external}
+
+   Debian 12 & Ubuntu 22
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.0.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.0.deb.sha256){: external}
+
+   Windows
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.6.0.zip](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.6.0.zip){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.6.0.zip.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.6.0.zip.sha256){: external}
 
 ## 12 May 2025
 {: #logs-router-agent-may1225}
