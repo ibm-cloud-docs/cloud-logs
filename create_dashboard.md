@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-11"
+  years:  2024, 2025
+lastupdated: "2025-06-07"
 
 keywords:
 
@@ -153,7 +153,7 @@ To export a dashboard configuration:
 
 2. Open the dashboard you want to export.
 
-3. Click the **Actions** icon ![Actions icon](/icons/action-menu-icon.svg "Actions") > **Export**.
+3. Click the **Actions** icon ![Actions icon](/icons/action-menu-icon.svg "Actions") > **Export as JSON**.
 
    The name of the exported JSON file is displayed. The date the file was created is included in the name.
 
@@ -177,6 +177,24 @@ To import an exported dashboard configuration:
 
 4. Click **Import**.
 
+## Changing the data source for all widgets defined in a dashboard
+{: #chng_dashb_source}
+
+By default custom dashboards are created with widgets processing data from {{site.data.keyword.frequent-search}}, but you might want the widgets to process data from **All Logs**. You can easily change the data source of all the widgets in a defined dashboard by the following steps.
+
+1. [Export](/docs/cloud-logs?topic=cloud-logs-create_dashboards#db_export) the dashboard to be changed.
+
+2. Edit the exported JSON file and change the value for all `dataModeType` references to the desired data source:
+
+   * `DATA_MODE_TYPE_HIGH_UNSPECIFIED` for {{site.data.keyword.frequent-search}}
+
+   * `DATA_MODE_TYPE_ARCHIVE` for **All Logs**
+
+3. [Import](/docs/cloud-logs?topic=cloud-logs-create_dashboards#db_import) the modified dashboard JSON file.
+
+4. (Optional): You can rename the imported dashboard to help you understand if data is coming from {{site.data.keyword.frequent-search}} or **All Logs**.
+
+5. (Optional): Delete the original custom dashboard that was retrieving data from the data source you no longer need.
 
 ## Creating variables
 {: #create_variable}
