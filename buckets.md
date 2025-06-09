@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-06-09"
 
 keywords:
 
@@ -28,7 +28,7 @@ You should create a bucket with _Cross Region_ resiliency to store and access da
 You must configure two {{site.data.keyword.cos_full_notm}} buckets for your {{site.data.keyword.logs_full_notm}} instance.
 
 Data bucket
-:   The data bucket is used to store all logs that are ingested as well as any logs that are dropped from the [configured data pipelines.](/docs/cloud-logs?topic=cloud-logs-tco-optimizer)
+:   The data bucket is used to store all logs that are ingested, and not dropped during ingestion, as well as any logs that are dropped through a block rule and marked for storage in the data bucket.
 
     For information on configuring the data bucket, see [Configuring the data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket).
 
