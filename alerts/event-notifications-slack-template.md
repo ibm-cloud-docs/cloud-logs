@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-09"
 
 keywords:
 
@@ -62,6 +62,89 @@ The following is an example Slack message template.
 ```
 {: codeblock}
 
+The following is a sample Slack template for Kubernetes logs including an `errorMsg` field.
+
+```json
+{
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Alert name: {{data.alert_definition.name}}",
+				"emoji": true
+			}
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "image",
+					"image_url": "https://image.freepik.com/free-photo/red-drawing-pin_1156-445.jpg",
+					"alt_text": "images"
+				},
+				{
+					"type": "plain_text",
+					"text": "Severity: {{data.alert_definition.severity}}"
+				}
+			]
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Error message:* {{data.log_example.errorMsg}}"
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Cluster name:* {{data.log_example.[kubernetes.cluster_name]}}"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Namespace:*  {{data.log_example.[kubernetes.namespace_name]}} \n \n"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Pod name:* {{data.log_example.[kubernetes.pod_name]}}"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*App label:* {{data.log_example.[kubernetes.labels.app]}}"
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Incident information in Cloud Logs:* <{{data.links.view_alert}}|View> | <{{data.links.edit_alert}}|Edit>"
+			}
+		}
+	]
+}
+```
+{: codeblock}
+
 Before using the template with the API it must be converted to base64. After converting the template to base64 it can be included in the body of the API call. The following example uses the previous template converted to base64.
 
 ```sh
@@ -113,3 +196,4 @@ terraform {
 ```
 {: codeblock}
 
+For more information about implementing Slack templates, see the {{site.data.keyword.en_full_notm}} documentation about [Slack notification templates](/docs/event-notifications?topic=event-notifications-en-slack-notification-template).
