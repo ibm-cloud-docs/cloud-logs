@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-30"
+lastupdated: "2025-06-09"
 
 keywords:
 
@@ -292,3 +292,22 @@ You can update the agent by downloading the desired agent packages and running t
      {: pre}
 
    Where `<rpm_filename>` or `<deb_filename>` is the name of the downloaded `*.rpm` or `*.deb` file.
+
+## Uninstalling the agent
+{: #agent-linux-uninstall}
+
+You can remove an installed agent by running the appropriate command from a terminal as the sudo user.
+
+   * For RHEL, CentOS, and Fedora Linux run:
+
+     ```sh
+     sudo yum erase draios-agent
+     ```
+     {: pre}
+
+   * For Debian and Ubuntu run:
+
+     ```sh
+     sudo apt-get remove draios-agent
+     ```
+     {: pre}
