@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-09"
 
 keywords:
 
@@ -153,7 +153,7 @@ The following table contains a list of the parameters that you can configure in 
 | `env.iamMode` | Indicate the IAM authentication mechanism used - `TrustedProfile` or `IAMAPIKey` | required - no default |TrustedProfile|
 | `env.trustedProfileID` | The trusted profile to use - required when `iamMode=TrustedProfile` | optional |
 | `env.iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens.  \n For more information, see [iamEnvironment](#agent-helm-template-clusters-chart-options-iam-env). | Production |
-| `env.iamHost` | IAM host required for IAM Environment `Custom` setting.  See [iamEnvironment](#enviamenvironment) | required for iamEnvironment `Custom` - no default |
+| `env.iamHost` | IAM host required for IAM Environment `Custom` setting.  See [iamEnvironment](#agent-helm-template-clusters-chart-options-160-iam-env) | required for iamEnvironment `Custom` - no default |
 | `secret.iamAPIKey` | The APIKey used when `iamMode=IAMAPIKey`. Should only be provided when using the CLI | optional |
 | `clusterName` | The name of the Kubernetes cluster | optional |
 | `scc.create` | When to create the Secure Context Constraints in Openshift | false |
