@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-06-09"
 
 keywords:
 
@@ -39,7 +39,7 @@ The following are samples of application names based on the log source:
 {: caption="Application names" caption-side="bottom"}
 
 
-`[*]` - For information about {{site.data.keyword.cis_full}} logs, see [Creating a Logpush job to send logs to {{site.data.keyword.logs_full_notm}}](/docs/cis?topic=cis-logpush&interface=api#logpush-setup-cloud-logs-api).
+`[*]` - For information about configuring {{site.data.keyword.cis_full}} logs, see [Managing Logpush jobs](/docs/cis?topic=cis-logpush&interface=api).
 
 
 ## Subsystem name
@@ -63,4 +63,4 @@ The following are samples of subsystem names based on the log source:
 {: caption="Subsystem names" caption-side="bottom"}
 
 
-`[*]` - For information about {{site.data.keyword.cis_full}} logs, see [Creating a Logpush job to send logs to {{site.data.keyword.logs_full_notm}}](/docs/cis?topic=cis-logpush&interface=api#logpush-setup-cloud-logs-api).
+`[*]` - For information about configuring {{site.data.keyword.cis_full}} logs, see [Managing Logpush jobs](/docs/cis?topic=cis-logpush&interface=api).
