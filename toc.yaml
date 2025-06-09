@@ -188,7 +188,7 @@ toc:
               label: Logging agent for Linux environments
               topics:
               - topic: agent/agent-linux.md
-                navtitle: Deploying the agent
+                navtitle: Deploying and managing the agent
               - topic: agent/agent-rsyslog.md
                 navtitle: Configure the Logging agent to collect and route Rsyslog messages 
           - topicgroup:
