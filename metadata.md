@@ -61,7 +61,7 @@ The following are samples of subsystem names based on the log source:
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.container_name`  |
 | Linux server                                     |  |
 | Windows server                                   | `ProviderName` |
-| {{site.data.keyword.cis_full}} logs `[*]` | `internet-svcs``:instanceID` |
+| {{site.data.keyword.cis_full}} logs `[*]` | `internet-svcs:instanceID` |
 {: caption="Subsystem names" caption-side="bottom"}
 
 
