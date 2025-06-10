@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-06-10"
 
 keywords:
 
@@ -43,3 +43,19 @@ If neither one or separate {{site.data.keyword.cos_full_notm}} data and metrics 
 {: faq}
 
 It is recommended that separate {{site.data.keyword.cos_full_notm}} buckets be used for the {{site.data.keyword.logs_full_notm}} data bucket and the metrics bucket and that you do not combine these two buckets into a single {{site.data.keyword.cos_full_notm}} bucket, even though it is technically feasible to do so.
+
+
+
+
+
+## Are charges related to {{site.data.keyword.cos_full}} use by {{site.data.keyword.logs_full_notm}} separate from {{site.data.keyword.logs_full_notm}} billed charges?
+{: #faq_cos_cost}
+{: faq}
+
+Yes, usage of the {{site.data.keyword.cos_full}} service is a separate cost from {{site.data.keyword.logs_full_notm}}.
+
+In the {{site.data.keyword.cos_full}} pricing model, {{site.data.keyword.logs_full_notm}} requests for data storage are ‘Class A’ requests, and {{site.data.keyword.logs_full_notm}} requests for data retrieval during queries are ‘Class B’ requests. For more information, see [request classes](/docs/cloud-object-storage?topic=cloud-object-storage-billing#billing-request-classes).
+
+The {{site.data.keyword.logs_full_notm}} plan cost applies to the [data pipeline](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) processing the data in {{site.data.keyword.logs_full_notm}}. You can adjust the data pipelines by using the [TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-optimizer).
+
+For more information about {{site.data.keyword.logs_full_notm}} pricing, see [service plans and pricing](/docs/cloud-logs?topic=cloud-logs-service_plans). For more information about {{site.data.keyword.logs_full_notm}} cost management, see [controlling cost](/docs/cloud-logs?topic=cloud-logs-controlling-cost).

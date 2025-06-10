@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-06-10"
 
 keywords:
 
@@ -30,6 +30,9 @@ For production environments, consider using different buckets for data and for m
 
 You should create a bucket with _Cross Region_ resiliency to store and access data across multiple geographical regions to ensure high availability, durability, and disaster recovery capabilities. See [Creating and modifying {{site.data.keyword.cos_full_notm}} buckets](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-geo).
 {: important}
+
+The {{site.data.keyword.cos_full}} service is billed separately from {{site.data.keyword.logs_full_notm}}. {{site.data.keyword.cos_full}} storage costs are determined by the [pricing plan](https://cloud.ibm.com/objectstorage/create#pricing){: external} that you choose for the {{site.data.keyword.cos_full}} instance.
+{: note}
 
 
 ## About buckets
