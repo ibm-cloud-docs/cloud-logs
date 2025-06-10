@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-06-10"
 
 keywords:
 
@@ -35,6 +35,7 @@ The following are samples of application names based on the log source:
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.namespace_name` |
 | Linux server                                     | `${HOSTNAME}` |
 | Windows server                                   | `${COMPUTERNAME}` |
+| PowerVS                                          | `ibm-audit-event` | 
 | {{site.data.keyword.cis_full}} logs `[*]` | `ibm-platform-log` |
 {: caption="Application names" caption-side="bottom"}
 
@@ -52,14 +53,15 @@ The following are samples of subsystem names based on the log source:
 | Source                                           | Subsystem Name |
 |--------------------------------------------------|-------|
 | Activity tracking events                         | `CRNserviceName:instanceID` |
-| VPC Activity tracking events                     | `is:resourceType` |
+| VPC activity tracking events                     | `is:resourceType` |
+| PowerVS activity tracking events          | `power-iass:<workspaceID>` |
 | Platform logs                                    | `CRNserviceName:instanceID`|
-| VPC Platform logs                                | `is:resourceType`|
+| VPC platform logs                                | `is:resourceType`|
 | {{site.data.keyword.openshiftlong_notm}} cluster | `kubernetes.container_name`  |
 | {{site.data.keyword.containerlong_notm}} cluster | `kubernetes.container_name`  |
 | Linux server                                     |  |
 | Windows server                                   | `ProviderName` |
-| {{site.data.keyword.cis_full}} logs `[*]` | `internet-svcs:instanceID` |
+| {{site.data.keyword.cis_full}} logs `[*]` | `internet-svcs``:instanceID` |
 {: caption="Subsystem names" caption-side="bottom"}
 
 
