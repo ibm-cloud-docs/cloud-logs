@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-06-10"
 
 keywords:
 
@@ -42,7 +42,7 @@ If a log record is in JSON format, its JSON members are parsed into named fields
 
 If a log record is not in JSON format, or mixed with non-JSON data such as a timestamp at the beginning of the log record, [parsing rules](/docs/cloud-logs?topic=cloud-logs-log_parsing_rules) can be used in {{site.data.keyword.logs_full_notm}} to transform the log record into JSON format that can be parsed. Parsing rules can also be used to extract portions of the log record into named fields.
 
-When parsing rules are applied, the log record is indexed (stored) in {{site.data.keyword.frequent-search}} as a set of fields and their contents.
+If a log record is in proper JSON format, the log record is parsed into named fields with its contents and the fields are indexed. Parsing rules can be applied to fix improper JSON format or to extract log record content into named fields with its contents. After the parsing rules are applied, the log record is indexed.
 
 When a log record is stored in {{site.data.keyword.frequent-search}}, it is also stored in {{site.data.keyword.compliance}} if a [{{site.data.keyword.logs_full_notm}} COS data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket) is connected. That is, the log record is stored in two places in parallel.
 {: note}
@@ -59,7 +59,7 @@ After unknown fields have been added to the index, field values from the log rec
 
 Log records in {{site.data.keyword.logs_full_notm}} have label and metadata fields:
 
-* `Application` or `Subsystem` are log record label [metadata fields](/docs/cloud-logs?topic=cloud-logs-metadata). In Lucene queries, these fields need to be prefixed with `coralogix.`. In DataPrime queries, these fields need to be prefixed with `$l.`.
+* `Application` or `Subsystem` are log record [metadata fields](/docs/cloud-logs?topic=cloud-logs-metadata). In Lucene queries, these fields need to be prefixed with `coralogix.`. In DataPrime queries, these fields need to be prefixed with `$l.`.
 * `Timestamp`, `Severity`, and `priorityclass` are log record metadata fields. In Lucene queries, these fields need to be prefixed with `coralogix.`. In DataPrime queries, these fields need to be  prefixed with `$m.`.
 
 Label and metadata fields are received by {{site.data.keyword.logs_full_notm}} together with the log record data or are populated by {{site.data.keyword.logs_full_notm}}. All label and metadata fields are known fields in the {{site.data.keyword.frequent-search}} index. {{site.data.keyword.logs_full_notm}} users can not add label and metadata fields to the index or remove them.
@@ -84,7 +84,7 @@ If you don't restrict queries in {{site.data.keyword.frequent-search}} to a sear
 
 * DataPrime queries: Use a query similar to `source logs | filter $d ~~ '<text>'` when searching on indexed log record data fields. Searching log record data, label, and metadata fields at the same time requires a more complex query.
 
-You can use *field-based search* to filter your queries in {{site.data.keyword.frequent-search}} to search only indexed log record fields:
+You can use *field-based search* and filters in {{site.data.keyword.frequent-search}} to search only specified indexed log record fields:
 
 * Filters: On the **Filter** pane, you can select field values from a list of detected values. Only log records that match the selected field values will be returned. By default, the `Application`, `Subsystem`, and `Severity` fields are available for filtering. Other fields detected in log records can be added to define filters.
 * Queries: Lucene and DataPrime queries can be used to search for only specified indexed fields.
@@ -98,7 +98,7 @@ You can use *field-based search* to filter your queries in {{site.data.keyword.f
    * DataPrime: Use field accessors `$d.<data field>`, `$l.<label field>`, or `$m.<metadata field>` to query the specified field. For example:
 
    ```text
-   filter $d.message ~~ 'application unavailable'
+   filter $d.message ~ 'application unavailable'
    ```
    {: codeblock}
 
@@ -139,7 +139,7 @@ For example:
    * Lucene query `known:indexed`.
    * DataPrime query `source logs | filter $d ~~ 'indexed'`.
    * DataPrime query `source logs | filter $d.known ~ 'indexed'`.
-* The following queries will *not* return the log record because field `unknown` has no field mapping in the daily index and value stored is not indexed for field `unknown`:
+* The following queries will *not* return the log record because field `unknown` has no field mapping in the daily index and value `stored` is not indexed for field `unknown`:
    * Lucene query `stored`.
    * Lucene query `unknown:stored`.
    * DataPrime query `source logs | filter $d ~~ 'stored'`.
