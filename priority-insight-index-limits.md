@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-11"
 
 keywords:
 
@@ -59,7 +59,7 @@ After unknown fields have been added to the index, field values from the log rec
 
 Log records in {{site.data.keyword.logs_full_notm}} have label and metadata fields:
 
-* `Application` or `Subsystem` are log record [metadata fields](/docs/cloud-logs?topic=cloud-logs-metadata). In Lucene queries, these fields need to be prefixed with `coralogix.`. In DataPrime queries, these fields need to be prefixed with `$l.`.
+* `Application` or `Subsystem` are log record [label fields](/docs/cloud-logs?topic=cloud-logs-metadata). In Lucene queries, these fields need to be prefixed with `coralogix.`. In DataPrime queries, these fields need to be prefixed with `$l.`.
 * `Timestamp`, `Severity`, and `priorityclass` are log record metadata fields. In Lucene queries, these fields need to be prefixed with `coralogix.`. In DataPrime queries, these fields need to be  prefixed with `$m.`.
 
 Label and metadata fields are received by {{site.data.keyword.logs_full_notm}} together with the log record data or are populated by {{site.data.keyword.logs_full_notm}}. All label and metadata fields are known fields in the {{site.data.keyword.frequent-search}} index. {{site.data.keyword.logs_full_notm}} users can not add label and metadata fields to the index or remove them.
