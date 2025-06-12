@@ -64,7 +64,7 @@ When you delete your {{site.data.keyword.logs_full_notm}} instance, all of the u
 ### Deleting the {{site.data.keyword.logs_full_notm}} instance
 {: #service-delete}
 
-If you no longer need an instance of {{site.data.keyword.logs_full_notm}}, you can delete the instance and any data that is stored. Once the instance is deleted, you will no longer have access to it. The instance will remain in the pending reclamation phase for 7 days. If you choose to reclaim the instance within this period, the reclamation process can be initiated and will complete successfully. See [Removing an instance](/docs/cloud-logs?topic=cloud-logs-instance-remove&interface=cli) topic for the steps to delete an instance.
+If you no longer need an instance of {{site.data.keyword.logs_full_notm}}, you can delete the instance and any data that is stored. Once the instance is deleted, you will no longer have access to it. The instance will remain in the pending reclamation phase for 7 days. If you choose to reclaim the instance within this period, the reclamation process can be initiated and will complete successfully. See [Removing an instance](/docs/cloud-logs?topic=cloud-logs-instance-remove&interface=cli) for the steps to delete an instance.
 
 ### Restoring deleted data for {{site.data.keyword.logs_full_notm}}
 {: #data-restore}
