@@ -81,6 +81,8 @@ toc:
           - topic: core/vpe.md
             navtitle: Using virtual private endpoints
           - core/cse_proxy.md
+          - topic: core/data-security.md
+            navtitle: Data security
           - topic: iam-cbr.md
             navtitle: Protecting resources with context-based restrictions
       - topicgroup:
