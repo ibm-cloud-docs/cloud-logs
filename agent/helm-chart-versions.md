@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-30"
+  years:  2024, 2025
+lastupdated: "2025-06-16"
 
 keywords:
 
@@ -37,13 +37,13 @@ Do the following to check the available {{site.data.keyword.agent}} versions.
 3. Run the following command:
 
     ```text
-    ibmcloud cr image-list --include-ibm | grep ibm/observe/logs-agent-helm
+    ibmcloud cr images --restrict ibm-observe |grep logs-agent
     ```
     {: codeblock}
 
     The following is an example results of the command:
 
     ```screen
-    icr.io/ibm/observe/logs-agent-helm                                                                    1.3.0
+    icr.io/ibm-observe/logs-agent-helm                     1.6.0   1e902c60e82a   ibm-observe   -         18 kB    -
     ```
     {: screen}

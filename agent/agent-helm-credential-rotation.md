@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-16"
 
 keywords:
 
@@ -86,7 +86,7 @@ Complete the following steps to update the agent with new APIKey:
 2. Update the agent.
 
     ```sh
-    helm upgrade <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
+    helm upgrade <install-name> oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
     ```
     {: codeblock}
 
@@ -100,7 +100,7 @@ Complete the following steps to update the agent with new APIKey:
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
     ```sh
-    helm upgrade logging-agent oci://icr.io/ibm/observe/logs-agent-helm --version 1.5.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
+    helm upgrade logging-agent oci://icr.io/ibm-observe/logs-agent-helm --version 1.5.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
     ```
     {: screen}
 
