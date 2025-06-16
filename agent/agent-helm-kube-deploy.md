@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-16"
 
 keywords:
 
@@ -158,14 +158,14 @@ Complete the following steps:
     If you are using the `iamMode`=`TrustedProfile` then the complete command is:
 
     ```sh
-    helm install <install-name> --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace
+    helm install <install-name> --dry-run oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace
     ```
     {: codeblock}
 
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm install <install-name> --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value> --hide-secret
+    helm install <install-name> --dry-run oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value> --hide-secret
     ```
     {: codeblock}
 
@@ -177,13 +177,13 @@ Complete the following steps:
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1)
     - Add `--hide-secret` to hide the API key from showing in the output data after the command runs.
 
-    If you would like to inspect the helm chart contents locally, you can download the helm chart to your computer using the command: `helm pull oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version>`.  The downloaded tgz file contains the chart contents.
+    If you would like to inspect the helm chart contents locally, you can download the helm chart to your computer using the command: `helm pull oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version>`.  The downloaded tgz file contains the chart contents.
     {: tip}
 
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
     ```sh
-    helm install logs-agent --dry-run oci://icr.io/ibm/observe/logs-agent-helm --version 1.6.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
+    helm install logs-agent --dry-run oci://icr.io/ibm-observe/logs-agent-helm --version 1.6.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
     ```
     {: screen}
 
@@ -192,14 +192,14 @@ Complete the following steps:
     If you are using the `iamMode`=`TrustedProfile` then the complete command is:
 
      ```sh
-    helm install <install-name>  oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace
+    helm install <install-name>  oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace
     ```
     {: codeblock}
 
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm install <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
+    helm install <install-name> oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
     ```
     {: codeblock}
 

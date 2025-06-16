@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-06-16"
 
 keywords:
 
@@ -45,13 +45,13 @@ Complete the following steps to download a Helm chart version.
 4. Run the following command to download a Helm chart:
 
     ```text
-    helm pull oci://icr.io/ibm/observe/logs-agent-helm --version CHART_VERSION
+    helm pull oci://icr.io/ibm-observe/logs-agent-helm --version CHART_VERSION
     ```
     {: codeblock}
 
     A file named `logs-agent-helm-{CHART_VERSION}.tgz` is downloaded.
 
-    For example, when you run `helm pull oci://icr.io/ibm/observe/logs-agent-helm --version 1.4.1`, the file *logs-agent-helm-1.4.1.tgz* is downloaded.
+    For example, when you run `helm pull oci://icr.io/ibm-observe/logs-agent-helm --version 1.6.0`, the file *logs-agent-helm-1.6.0.tgz* is downloaded.
 
 5. Run the following command to extract the chart files:
 
