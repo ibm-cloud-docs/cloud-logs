@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-04"
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -42,7 +42,7 @@ Before you can monitor activity tracking events that are generated in an {{site.
 
 - You can configure 1 or more {{site.data.keyword.logs_full_notm}} instances in the account.
 - The {{site.data.keyword.logs_full_notm}} instances can be located in the same account where events are generated or in a different account.
-- You can configure {{site.data.keyword.atracker_full_notm}} to send events to a {{site.data.keyword.logs_full_notm}} instance in another region or account if desired.
+- You can configure {{site.data.keyword.atracker_full_notm}} to send events to an {{site.data.keyword.logs_full_notm}} instance in another region or account if desired.
 - You must define a service to service authorization between {{site.data.keyword.atracker_full_notm}} and {{site.data.keyword.logs_full_notm}} to grant permissions to the {{site.data.keyword.atracker_full_notm}} service to send events to the {{site.data.keyword.logs_full_notm}} service.
 
 For more information, see:
