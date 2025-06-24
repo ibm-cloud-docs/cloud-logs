@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-27"
+  years:  2024, 2025
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -19,7 +19,29 @@ subcollection: cloud-logs
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Access to {{site.data.keyword.logs_full_notm}} instances for users in your account is controlled by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). Different roles allow for different actions.
 {: shortdesc}
 
-## Manager role
+## {{site.data.keyword.cloud_notm}} actions by platform roles
+{: #iam-actions-by-platform-role}
+
+### Service Configuration Reader role
+{: #iam-actions-ServiceConfigurationReader}
+
+| Action | Description |
+|--------|------------|
+| `logs.data-access-rule.read` | 	Read data access rules. |
+| `logs.logs-tco-policy.read` |	View existing TCO policies. |
+| `logs.geo-enrichment.read` |	Read geo-enrichment configuration. |
+| `logs.security-enrichment.read` |	Read security enrichment configuration. |
+| `logs.custom-enrichment.read` |	Read custom enrichment configuration. |
+| `logs.parsing-rule.read` |	Read parsing rules. |
+| `logs.events2metrics.read` |	View Events to Metrics configuration when the source input is logs. |
+| `logs.logs-stream-setup.read` |	View logs stream settings. |
+{: caption="IAM actions available for the Service Configuration Reader role" caption-side="top"}
+
+
+## {{site.data.keyword.cloud_notm}} actions by service roles
+{: #iam-actions-by-service-role}
+
+### Manager role
 {: #iam-actions-manager}
 
 | Action | Description |
@@ -28,8 +50,8 @@ subcollection: cloud-logs
 | `logs.data-usage.manage` |	Manage instance data usage metrics. |
 | `logs.data-usage.export` |	Export data usage. |
 | `logs.team-members.read` |	Read the list of users. |
-| `logs.data-access-restriction-rule.read` |	Read scopes. |
-| `logs.data-access-restriction-rule.manage` |	Manage scopes. |
+| `logs.data-access-rule.read` |	Read data access rules. |
+| `logs.data-access-rule.manage` |	Manage data access rules. |
 | `logs.shared-action.read` |	Read shared actions. |
 | `logs.shared-action.manage` |	Manage shared actions. |
 | `logs.shared-action.execute` |	Run shared actions. |
@@ -50,12 +72,10 @@ subcollection: cloud-logs
 | `logs.private-view.manage` |	Manage private views. |
 | `logs.shared-dashboard.read` |	View custom shared dashboard widgets. |
 | `logs.shared-dashboard.manage` |	Manage custom shared dashboard widgets. |
-| `logs.private-dashboard.read` |	View custom private dashboard widgets. |
-| `logs.private-dashboard.manage` |	Manage custom private dashboard widgets. |
 | `logs.data-map.read` |	Read DataMap configurations. |
 | `logs.data-map.manage` |	Manage DataMap configurations. |
-| `logs.logs-tco-policy.read` |	View existing logs TCO policies. |
-| `logs.logs-tco-policy.manage` |	View and modify existing logs TCO policies and create new ones. |
+| `logs.logs-tco-policy.read` |	View existing TCO policies. |
+| `logs.logs-tco-policy.manage` |	View and modify existing TCO policies and create new ones. |
 | `logs.geo-enrichment.read` |	Read geo-enrichment configuration. |
 | `logs.geo-enrichment.manage` |	Manage geo-enrichment configuration. |
 | `logs.security-enrichment.read` |	Read security enrichment configuration. |
@@ -93,18 +113,21 @@ subcollection: cloud-logs
 | `logs.webhook.read` |	View generic outbound webhooks configuration. |
 | `logs.webhook.manage` |	Create and modify the configuration for outbound webhooks. |
 | `logs.legacy-archive-query.execute` |	Query data from the archive. |
-| `logs.legacy-archive-query.reindex` |	Re-index archive queries. |
+| `logs.logs-stream-setup.read` |	View logs stream settings. |
+| `logs.logs-stream-setup.manage` |	Manage logs stream settings. |
+| `logs.team-alerts-settings.read` | Read alerts toggle in the setting. |
+| `logs.team-alerts-settings.manage` |	Manage alerts toggle in the setting. |
 {: caption="IAM actions available for the Manager role" caption-side="top"}
 
 
-## Writer role
+### Writer role
 {: #iam-actions-writer}
 
 | Action | Description |
 |--------|------------|
 | `logs.data-usage.read` | View instance data usage metrics. |
 | `logs.data-usage.export` |	Export data usage. |
-| `logs.data-access-restriction-rule.read` |	Read scopes. |
+| `logs.data-access-rule.read` |	Read data access rules. |
 | `logs.shared-action.read` |	Read shared actions. |
 | `logs.shared-action.manage` |	Manage shared actions. |
 | `logs.shared-action.execute` |	Run shared actions. |
@@ -125,11 +148,9 @@ subcollection: cloud-logs
 | `logs.private-view.manage` |	Manage private views. |
 | `logs.shared-dashboard.read` |	View custom shared dashboard widgets. |
 | `logs.shared-dashboard.manage` |	Manage custom shared dashboard widgets. |
-| `logs.private-dashboard.read` |	View custom private dashboard widgets. |
-| `logs.private-dashboard.manage` |	Manage custom private dashboard widgets. |
 | `logs.data-map.read` |	Read DataMap configurations. |
 | `logs.data-map.manage` |	Manage DataMap configurations. |
-| `logs.logs-tco-policy.read` |	View existing logs TCO policies. |
+| `logs.logs-tco-policy.read` |	View existing TCO policies. |
 | `logs.geo-enrichment.read` |	Read geo-enrichment configuration. |
 | `logs.security-enrichment.read` |	Read security enrichment configuration. |
 | `logs.custom-enrichment.read` |	Read custom enrichment configuration. |
@@ -163,10 +184,12 @@ subcollection: cloud-logs
 | `logs.webhook.read` |	View generic outbound webhooks configuration. |
 | `logs.webhook.manage` |	Create and modify the configuration for outbound webhooks. |
 | `logs.legacy-archive-query.execute` |	Query data from the archive. |
-| `logs.legacy-archive-query.reindex` |	Re-index archive queries. |
+| `logs.logs-stream-setup.read` |	View logs stream settings. |
+| `logs.team-alerts-settings.read` | Read alerts toggle in the setting. |
+| `logs.team-alerts-settings.manage` |	Manage alerts toggle in the setting. |
 {: caption="IAM actions available for the Writer role" caption-side="top"}
 
-## Reader role
+### Reader role
 {: #iam-actions-reader}
 
 | Action | Description |
@@ -174,11 +197,14 @@ subcollection: cloud-logs
 | `logs.data-usage.read` | View instance data usage metrics. |
 | `logs.shared-action.read` |	Read shared actions. |
 | `logs.shared-action.execute` |	Run shared actions. |
+| `logs.private-action.read` |	Read private actions. |
 | `logs.alert-config.read` |	Read alert definitions. |
 | `logs.logs-alert.read` |	Read logs alerts definitions. |
 | `logs.metrics-alert.read` |	Read metrics alerts definitions. |
 | `logs.alerts-map.read` |	View visualized alerts in alerts map. |
 | `logs.shared-view.read` |	Read shared views. |
+| `logs.private-view.read` |	Read private views. |
+| `logs.private-view.manage` |	Manage private views. |
 | `logs.shared-dashboard.read` |	View custom shared dashboard widgets. |
 | `logs.data-map.read` |	Read DataMap configurations. |
 | `logs.custom-enrichment-data.read` |	Read data for custom enrichment configuration. |
@@ -193,10 +219,11 @@ subcollection: cloud-logs
 | `logs.suppression-rule.read` |	Read suppression rules. |
 | `logs.webhook.read` |	View generic outbound webhooks configuration. |
 | `logs.legacy-archive-query.execute` |	Query data from the archive. |
+| `logs.team-alerts-settings.read` | Read alerts toggle in the setting. |
 {: caption="IAM actions available for the Reader role" caption-side="top"}
 
 
-## Sender role
+### Sender role
 {: #iam-actions-sender}
 
 | Action | Description |
@@ -205,10 +232,10 @@ subcollection: cloud-logs
 {: caption="IAM actions available for the Sender role" caption-side="top"}
 
 
-##  Data Access Reader role
-{: #iam-actions-DataAccessRestrictionReader}
+###  Data Access Reader role
+{: #iam-actions-DataAccessReader}
 
 | Action | Description |
 |--------|------------|
-| `logs.data-access-restriction.read` |	Access the scope. |
-{: caption="IAM actions available for the DataAccessRestrictionReader role" caption-side="top"}
+| `logs.data-access.read` |	Access data defined by specific rules. |
+{: caption="IAM actions available for the DataAccessReader role" caption-side="top"}
