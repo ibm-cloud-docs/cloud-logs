@@ -15,7 +15,7 @@ subcollection: cloud-logs
 # Using Livetail
 {: #livetail}
 
-{{site.data.keyword.logs_full}} provides a Livetail view allowing you to view the data ingested by {{site.data.keyword.logs_full_notm}} as the data is received.
+{{site.data.keyword.logs_full}} provides a Livetail view where you can view the data that is ingested by {{site.data.keyword.logs_full_notm}} as the data is received.
 {: shortdesc}
 
 ## Accessing Livetail
@@ -32,12 +32,12 @@ To access Livetail:
 ## Livetail options
 {: #livetail-options}
 
-The following options are available when interacting with Livetail.
+The following options are available when you are interacting with Livetail.
 
 | Option | Usage |
 |--------|-------|
-| **Start** | Click to start the display of Livetail data. When selected Livetail data starts being displayed the option changes to **Pause** |
-| **Pause** | Pauses running Livetail data. When seected the Livetail data pauses being displayed and the option changes to **Start** |
+| **Start** | Click to start the display of Livetail data. When selected, Livetail data starts being displayed the option changes to **Pause** |
+| **Pause** | Pauses running Livetail data. When selected, the Livetail data pauses being is displayed and the option changes to **Start** |
 | **Clear** | Deletes the displayed data to the point when **Clear** is clicked. If **Clear** is clicked when the Livetail is still running, new data is displayed as it is ingested. |
 | **Prettify** | Structures the displayed data as formatted objects. When selected the option changes to **Unprettify**.|
 | **Unprettify** | Structures the displayed data as raw data lines. When selected the option changes to **Prettify**. |
@@ -49,7 +49,7 @@ The following options are available when interacting with Livetail.
 ## Querying data
 {: #livetail-query}
 
-You can use grep, exact text, or a regex expression to search for specific data within the Livetail.
+You can use grep, exact text, or a regex expressions to search for specific data within the Livetail.
 
 The following example shows how text and regex searches can be combined. First, a case-insensitive regex search of `mydata.io` is done. The search results are then filtered with an exact text search of `schemas`. Finally, a case-insensitive search of `TimE` is applied to the filtered results.
 
@@ -57,4 +57,3 @@ The following example shows how text and regex searches can be combined. First, 
 | grep -i mydata\.io | grep "schemas" | grep -i TimE
 ```
 {: codeblock}
-
