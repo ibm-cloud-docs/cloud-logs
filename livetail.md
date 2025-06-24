@@ -36,7 +36,7 @@ The following options are available when you are interacting with Livetail.
 
 | Option | Usage |
 |--------|-------|
-| **Start** | Click to start the display of Livetail data. When selected, Livetail data starts being displayed the option changes to **Pause** |
+| **Start** | Click to start the display of Livetail data. When selected, Livetail data starts being displayed and the option changes to **Pause** |
 | **Pause** | Pauses running Livetail data. When selected, the Livetail data pauses being is displayed and the option changes to **Start** |
 | **Clear** | Deletes the displayed data to the point when **Clear** is clicked. If **Clear** is clicked when the Livetail is still running, new data is displayed as it is ingested. |
 | **Prettify** | Structures the displayed data as formatted objects. When selected the option changes to **Unprettify**.|
