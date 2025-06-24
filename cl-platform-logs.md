@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-04"
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -30,7 +30,7 @@ Before you can monitor platform logs that are generated in an {{site.data.keywor
 
 - You can configure 1 or more {{site.data.keyword.logs_full_notm}} instances in the account.
 - The {{site.data.keyword.logs_full_notm}} instances must be located in the same account where platform logs are generated.
-- You can configure {{site.data.keyword.logs_routing_full_notm}} to send logs from a region to a {{site.data.keyword.logs_full_notm}} instance in another region if desired.
+- You can configure {{site.data.keyword.logs_routing_full_notm}} to send logs from a region to an {{site.data.keyword.logs_full_notm}} instance in another region if desired.
 - You must define a service to service authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} to grant permissions to the {{site.data.keyword.logs_routing_full_notm}} service to send platform logs to the {{site.data.keyword.logs_full_notm}} service.
 
 For more information, see:

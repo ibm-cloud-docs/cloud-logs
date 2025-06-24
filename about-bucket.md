@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -68,7 +68,7 @@ You must define a service to service (S2S) authorization between {{site.data.key
 ## Data bucket
 {: #about-bucket-data}
 
-You can configure a data bucket for a {{site.data.keyword.logs_full_notm}} instance.
+You can configure a data bucket for an {{site.data.keyword.logs_full_notm}} instance.
 
 - The data bucket stores and retains logs for as long as you need them.
 
@@ -86,7 +86,7 @@ For more information, see [Configuring the data bucket](/docs/cloud-logs?topic=c
 ## Metrics bucket
 {: #about-bucket-metrics}
 
-You can configure a metrics bucket for a {{site.data.keyword.logs_full_notm}} instance.
+You can configure a metrics bucket for an {{site.data.keyword.logs_full_notm}} instance.
 
 - The metrics bucket stores and retains metrics from your events in a long-term index for as long as you need them.
 

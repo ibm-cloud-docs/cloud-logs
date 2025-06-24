@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -134,7 +134,7 @@ Use the following steps to create an authorization by using Terraform:
     The `ibm_iam_authorization_policy` resource requires the source service, target service, and role. The source service is granted access to the target service, and the role is the level of permission that the access allows. Optionally, you can add a description for the authorization and a transaction ID.
     {: note}
 
-    - You can provide a `target_resource_instance_id` to scope a {{site.data.keyword.messagehub_full}} target instance.
+    - You can provide a `target_resource_instance_id` to scope am {{site.data.keyword.messagehub_full}} target instance.
 
     - For more examples, see the [Terraform documentation for authorization resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_authorization_policy){: external}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-07"
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a {{site.data.keyword.logs_full_notm}} custom dashboard
+# Creating an {{site.data.keyword.logs_full_notm}} custom dashboard
 {: #create_dashboards}
 
 You can create custom {{site.data.keyword.logs_full}} dashboards.

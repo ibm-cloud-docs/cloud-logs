@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -61,7 +61,7 @@ scc:
 
 
 
-## Template to deploy the {{site.data.keyword.agent}} using a Helm chart on a {{site.data.keyword.containerlong_notm}} cluster
+## Template to deploy the {{site.data.keyword.agent}} using a Helm chart on an {{site.data.keyword.containerlong_notm}} cluster
 {: #agent-helm-template-kube-clusters-160}
 
 ```yaml

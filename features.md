@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-05-22"
+  years:  2024, 2025
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -60,7 +60,7 @@ You can create unlimited, personalized custom dashboards catered to your specifi
 ## Compliance and security
 {: #features-7}
 
-Data security and compliance is a {{site.data.keyword.logs_full_notm}} priority. {{site.data.keyword.logs_full_notm}} offers encryption at rest and in transit, access controls, and adheres to industry-standard security practices. {{site.data.keyword.logs_full_notm}} helps businesses meet compliance requirements, such as GDPR and HIPAA, by providing features such as data anonymization and audit logs.
+Data security and compliance is an {{site.data.keyword.logs_full_notm}} priority. {{site.data.keyword.logs_full_notm}} offers encryption at rest and in transit, access controls, and adheres to industry-standard security practices. {{site.data.keyword.logs_full_notm}} helps businesses meet compliance requirements, such as GDPR and HIPAA, by providing features such as data anonymization and audit logs.
 
 ## Cost optimization
 {: #features-8}

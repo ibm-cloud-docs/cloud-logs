@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-06"
+  years:  2024, 2025
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Configuring the data bucket for a {{site.data.keyword.logs_full_notm}} instance
+# Configuring the data bucket for an {{site.data.keyword.logs_full_notm}} instance
 {: #configure-data-bucket}
 
 Configure a bucket in {{site.data.keyword.cos_full_notm}} to store your {{site.data.keyword.logs_full_notm}} data for long term storage and search.
@@ -23,7 +23,7 @@ Configure a bucket in {{site.data.keyword.cos_full_notm}} to store your {{site.d
 ## Prereqs
 {: #configure-data-bucket-prereqs}
 
-- You must have a {{site.data.keyword.cos_full_notm}} instance in the same account where your {{site.data.keyword.logs_full_notm}} instance is provisioned.
+- You must have an {{site.data.keyword.cos_full_notm}} instance in the same account where your {{site.data.keyword.logs_full_notm}} instance is provisioned.
 - You must have permissions to create a bucket in the {{site.data.keyword.cos_full_notm}} instance or have the details of an existing bucket.
 
 
@@ -40,7 +40,7 @@ You must define a service to service (S2S) authorization between {{site.data.key
 {: #configure-data-bucket-attach}
 {: step}
 
-Complete the following steps to configure a data bucket for a {{site.data.keyword.logs_full_notm}} instance:
+Complete the following steps to configure a data bucket for an {{site.data.keyword.logs_full_notm}} instance:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 

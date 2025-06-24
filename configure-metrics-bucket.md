@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-06-24"
 
 keywords:
 
@@ -23,7 +23,7 @@ Configure a bucket in {{site.data.keyword.cos_full_notm}} to store metrics from 
 ## Prereqs
 {: #configure-metrics-bucket-prereqs}
 
-- You must have a {{site.data.keyword.cos_full_notm}} instance in the same account where your {{site.data.keyword.logs_full_notm}} instance is provisioned.
+- You must have an {{site.data.keyword.cos_full_notm}} instance in the same account where your {{site.data.keyword.logs_full_notm}} instance is provisioned.
 - You must have permissions to create a bucket in the {{site.data.keyword.cos_full_notm}} instance or have the details of an existing bucket.
 
 
