@@ -288,6 +288,7 @@ toc:
             navtitle: Managing custom views
           - topic: compact-views.md
             navtitle: Compact views
+          - livetail.md
           - topic: actions.md
             navtitle: Using actions
           - topic: create_dashboard.md
