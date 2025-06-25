@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-03"
+  years:  2024, 2025
+lastupdated: "2025-06-25"
 
 keywords:
 
@@ -65,9 +65,10 @@ You can see any of the following values to define the status of an incident:
 The status of an incident can change automatically or a user can change it.
 
 An incident changes status automatically from `TRIGGERED` to `RESOLVED` when:
-- You have activated the **Notify When Resolved** setting in your alert definition.
-- When the alert's condition is no longer triggering events, the event that is trigered initially is marked as resolved.
-after an alert that has triggered
+
+- You have activated the **Resolve automatically** setting in your alert definition.
+
+- When the alert's condition is no longer triggering events, the event that is triggered initially is marked as resolved.
 
 After an incident is marked as `RESOLVED`, an incident is closed and a new incident is created to report that the alert has triggered again after being resolved.
 
