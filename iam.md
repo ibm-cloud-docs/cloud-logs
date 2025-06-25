@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-24"
+lastupdated: "2025-06-25"
 
 keywords:
 
@@ -98,12 +98,12 @@ You can assign access for the following platform actions.
 | `iam.role.read` | View roles. |
 {: caption="IAM platform actions" caption-side="top"}
 
-For information about {{site.data.keyword.logs_full_notm}} actions by platform roles mapping, see [IAM actions by platform roles](/docs/cloud-logs?topic=cloud-logs-iam-actions-by-platform-role).
+For information about {{site.data.keyword.logs_full_notm}} actions by platform roles mapping, see [IAM actions by platform roles](/docs/cloud-logs?topic=cloud-logs-iam-actions#iam-actions-by-platform-role).
 
 ## IAM service actions
 {: #iam-service-actions}
 
-For information about {{site.data.keyword.logs_full_notm}} actions by service roles mapping, see [IAM actions by service roles](/docs/cloud-logs?topic=cloud-logs-iam-actions-by-service-role).
+For information about {{site.data.keyword.logs_full_notm}} actions by service roles mapping, see [IAM actions by service roles](/docs/cloud-logs?topic=cloud-logs-iam-actions#iam-actions-by-service-role).
 
 
 ## Assigning access to {{site.data.keyword.logs_full_notm}}
