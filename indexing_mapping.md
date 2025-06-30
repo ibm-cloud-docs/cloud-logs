@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-02"
+lastupdated: "2025-06-30"
 
 keywords:
 
@@ -86,7 +86,7 @@ Consider the following when querying data:
    * Keyword
    * Numeric
 
-<
+
 
 ## Checking the number of index fields
 {: #indexing_mapping_check}
