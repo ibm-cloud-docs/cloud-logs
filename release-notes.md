@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-26"
+lastupdated: "2025-06-30"
 
 keywords:
 
@@ -27,7 +27,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 Release of the {{site.data.keyword.agent}} version 1.6.1
 :   For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-jun2625)
-
 
 
 ## 5 June 2025

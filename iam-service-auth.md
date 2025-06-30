@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-06-30"
 
 keywords:
 
@@ -29,7 +29,8 @@ In a service to service (S2S) authorization:
 - A source service can be in the same account where the authorization is created or in another account.
 - The target service is always in the account where the authorization is created.
 
-    You can view whether the source service is located in the current account or another account by viewing the Source account column for the specific authorization on the [Authorizations](/iam/authorizations) page in the {{site.data.keyword.cloud}} console.{: tip}
+    You can view whether the source service is located in the current account or another account by viewing the Source account column for the specific authorization on the [Authorizations](/iam/authorizations) page in the {{site.data.keyword.cloud}} console.
+    {: tip}
 
 The following table lists the different S2S authorizations that you might need when you use the {{site.data.keyword.logs_full_notm}} service:
 
