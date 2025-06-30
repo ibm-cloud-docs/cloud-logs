@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-24"
+lastupdated: "2025-06-30"
 
 keywords:
 
@@ -47,27 +47,30 @@ Complete the following steps:
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
 2. Click **Create**.
-3. Select a source account.
+3. Select a source account by doing one of the following.
 
-    If the source service that needs access to the target service is in this account, select **This account**.
+    * If the source service that needs access to the target service is in this account, select **This account**.
 
-    If the source service that needs access to the target service is in a different account, select **Other account**. Then, enter the account ID of the source account.
+    * If the source service that needs access to the target service is in a different account, select **Other account**. Then, enter the account ID of the source account.
 
-4. Select `Cloud Logs` as the source service. Then, set the scope of the access.
+4. Select `Cloud Logs` as the source service. Then, set the scope of the access by doing one of the following.
 
-    Select **All resources** to grant access for all instances in the account.
+    * Select **All resources** to grant access for all instances in the account.
 
-    Select **Source service instance** to grant access to 1 {{site.data.keyword.logs_full_notm}} instance.
+    * Select **Source service instance** to grant access to 1 {{site.data.keyword.logs_full_notm}} instance.
 
-5. Select **Event Streams** as the target service. Then, set the scope of the access.
+5. Select **Event Streams** as the target service. Then, set the scope of the access by doing one of the following.
 
-    To grant access to all {{site.data.keyword.messagehub_full}} instances and resources in the account, select **All resources**.
+    * To grant access to all {{site.data.keyword.messagehub_full}} instances and resources in the account, select **All resources**.
 
-    To grant access to a specific instance, select single instance by configuring **Resources based on selected attributes** &gt; **Service Instance**.
+    * To grant access to a specific instance, select single instance by configuring **Resources based on selected attributes** &gt; **Service Instance**.
 
 6. In the *Service Access* section, select the role to assign access to the source service that accesses the target service.
 
     Select **Writer** to authorize streaming to {{site.data.keyword.messagehub_full}}.
+
+    If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
+    {: important}
 
 7. Click **Authorize**.
 
