@@ -445,21 +445,6 @@ filter $l.applicationname == 'myapp' && $d.msg.contains('failure')
 Comparison with null works only for scalar values and will always return null on JSON subtrees.
 {: note}
 
-Use filter with functions to perform complex searches.
-
-Examples:
-
-```text
-filter in($l.applicationname, 'ibm-audit-event', 'ibm-platform-logs') #
-filter ipInSubnet(ip_address, '155.64.5.20/24')
-```
-{: codeblock}
-
-e - Filter for IP addresses in a given range.
-filter can be coupled with functions to perform complex searches with very little syntax, for example using the ipInSubnet function:
-
-
-filter ipInSubnet(ip_address, '154.67.8.20/24')
 
 
 ### `groupby`
