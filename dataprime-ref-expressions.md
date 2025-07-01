@@ -1,3 +1,17 @@
+---
+
+copyright:
+  years:  2024, 2025
+lastupdated: "2025-07-01"
+
+keywords:
+
+subcollection: cloud-logs
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
 # DataPrime expressions
 {: #dataprime-ref-expressions}
 
