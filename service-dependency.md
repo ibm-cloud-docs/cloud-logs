@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2025-03-25"
+  years: 2024, 2025
+lastupdated: "2025-07-01"
 
 keywords:
 
@@ -38,14 +38,16 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Identity and Access Management | Access management, Availability, Change management, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Virtual Private Cloud | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Internet Services | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Object Storage | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
-| IBM Cloud Databases - databases-for-postgresql | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Public IP Address Management | Change management, Instance control | No | Both |  Same region  |
-| IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
+| IBM Cloud Databases - databases-for-mysql | Availability | No | Both |  Same region  |
+| IBM Cloud Databases - databases-for-postgresql | Availability | No | Both |  Same region  |
+| IBM Cloud Databases - databases-for-redis | Availability | No | Both |  Same region  |
+| IBM Cloud Identity and Access Management | Access management, Availability, Instance control, Security compliance | No | Both |  Same region  |
+| IBM Cloud Object Storage - cloud-object-storage | Availability | No | Both |  Same region  |
+| IBM Cloud Object Storage - cloud-object-storage | Availability | Yes | Both |  customer-selected  |
+| IBM Cloud Event Notifications - event-notifications | Availability | Yes | Both |  Same region  |
+| IBM Event Streams for IBM Cloud - messagehub | Availability | Yes | Both |  customer-selected  |
+| IBM Cloud Container Registry - container-registry | Availability | No | Both |  Same region  |
+| IBM Cloud Internet Services - internet-svcs | Availability, Instance control | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 {: row-headers}
 {: caption="IBM Cloud Logs service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
@@ -56,13 +58,9 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Continuous Delivery | Change management, Disaster recovery, Instance control | No | Both |  Same region  |
-| IBM Key Protect for IBM Cloud | Access management, Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Activity Tracker event routing | Availability, Operations, Security compliance | No | Both |  Same region  |
-| IBM Cloud Event Notifications | Availability | No | Both |  Same region  |
-| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Secrets Manager | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Container Registry | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
+| IBM Cloud Business Support Services | Availability | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Monitoring - sysdig-monitor | Availability, Operations | No | Both |  Same region  |
+| IBM Cloud Secrets Manager - secrets-manager | Availability, Security compliance | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Logs service dependency information - Significant dependencies" caption-side="top"}
 {: tab-title="Significant dependencies"}

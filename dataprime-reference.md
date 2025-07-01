@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-04"
+lastupdated: "2025-07-01"
 
 keywords:
 
@@ -445,6 +445,8 @@ filter $l.applicationname == 'myapp' && $d.msg.contains('failure')
 Comparison with null works only for scalar values and will always return null on JSON subtrees.
 {: note}
 
+
+
 ### `groupby`
 {: #groupby}
 
@@ -566,7 +568,7 @@ And this data providing login events and user IDs, but not the user name associa
 ```
 {: codeblock}
 
-Using `join` you can use a query to return data including the desired data. 
+Using `join` you can use a query to return data including the desired data.
 
 ```text
 source users | join (source logs | countby userid) on id == userid into logins
@@ -859,7 +861,7 @@ In this example we want to group our logs as follows:
 * Then independently by `applicationname`, giving total counts of logs for each application regardless of `subsystems`.
 
 ```text
-source logs 
+source logs
 | multigroupby ($l.applicationname as app, $l.subsystemname as ss),($l.applicationname as app) calculate count() | orderby app,ss
 ```
 {: codeblock}
@@ -3031,7 +3033,7 @@ This query calculates the percentage of logs which don’t have a `kubernetes_po
 ```text
 # Query
 source logs
-| groupby $l.subsystemname calculate 
+| groupby $l.subsystemname calculate
   sum(if(kubernetes.pod_name != null,1,0)) / count() as pct_without_pod_name
  ```
 {: codeblock}

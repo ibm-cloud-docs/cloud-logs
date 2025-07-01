@@ -382,40 +382,6 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - topic: regions.md
-        navtitle: Locations
-      - topic: montreal-temp.md
-        navtitle: Considerations for Montreal
-      - topic: endpoints_api.md
-      - topic: endpoints_ingress.md
-      - topic: ips4firewalls.md
-        navtitle: IP addresses for firewalls
-      - service_plans.md
-      - topic: limits.md
-        navtitle: Limits
-      - topic: severities.md
-        navtitle: Severity mapping
-      - topic: shared-responsibilities.md
-        navtitle: Your responsibilities
-      - topic: service-dependency.md
-        navtitle: Service dependencies
-      - topic: core/data-portability.md
-        navtitle: Data portability
-      - topic: core/ha-dr-new.md
-        navtitle: Understanding high availability and disaster recovery
-      - topicgroup:
-          label: Extensions
-          topics:
-          - topic: extensions-system-monitoring.md
-            navtitle: System Monitoring 
-          - topic: extensions-activity-tracking.md
-            navtitle: Activity Tracking 
-          - topic: extensions-kubernetes.md
-            navtitle: IBM Cloud Kubernetes Service
-          - topic: extensions-db-mysql.md
-            navtitle: IBM Cloud Databases for MySQL
-          - topic: extensions-db-postgresql.md
-            navtitle: IBM Cloud Databases for PostgreSQL
       - topicgroup:
           label: API Reference
           links:
@@ -427,12 +393,31 @@ toc:
           topics:
           - topic: cloud-logs-cli-temp.md
             navtitle: CLI Reference
+      - topic: core/data-portability.md
+        navtitle: Data portability
       - topicgroup:
-          label: Terraform Reference
-          links:
-            - link:
-                label: Terraform reference
-                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
+          label: DataPrime Reference
+          topics:
+          - dataprime-quickstart.md
+          - dataprime-reference.md
+          - query-parameters.md
+      - topic: endpoints_api.md
+      - topic: endpoints_ingress.md
+      - topic: ips4firewalls.md
+        navtitle: IP addresses for firewalls
+      - topicgroup:
+          label: Extensions
+          topics:
+          - topic: extensions-system-monitoring.md
+            navtitle: System Monitoring 
+          - topic: extensions-activity-tracking.md
+            navtitle: Activity Tracking
+          - topic: extensions-kubernetes.md
+            navtitle: IBM Cloud Kubernetes Service
+          - topic: extensions-db-mysql.md
+            navtitle: IBM Cloud Databases for MySQL
+          - topic: extensions-db-postgresql.md
+            navtitle: IBM Cloud Databases for PostgreSQL
       - topic: limits-sending-data.md
         navtitle: Considerations and limitations sending data
       - topicgroup:
@@ -456,12 +441,27 @@ toc:
             navtitle: Understanding how the agent parses severities
           - topic: agent/agent-proxy.md
             navtitle: Configuring the agent to use proxies
+      - topic: regions.md
+        navtitle: Locations
+      - topic: montreal-temp.md
+        navtitle: Considerations for Montreal
+      - service_plans.md
+      - topic: limits.md
+        navtitle: Limits
+      - topic: severities.md
+        navtitle: Severity mapping
+      - topic: shared-responsibilities.md
+        navtitle: Your responsibilities
+      - topic: service-dependency.md
+        navtitle: Service dependencies
       - topicgroup:
-          label: DataPrime Reference
-          topics:
-          - dataprime-quickstart.md
-          - dataprime-reference.md
-          - query-parameters.md
+          label: Terraform Reference
+          links:
+            - link:
+                label: Terraform reference
+                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
+      - topic: core/ha-dr-new.md
+        navtitle: Understanding high availability and disaster recovery
       - dpxl_reference.md
       - cloud_services_msg_prefix.md
   - navgroup:
