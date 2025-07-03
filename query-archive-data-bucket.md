@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-06"
+  years:  2024, 2025
+lastupdated: "2025-07-03"
 
 keywords:
 
@@ -91,10 +91,10 @@ The following is an example of `src_obj__user_data`:
 
 
 
-## Archive Query with SQL and parsing
-{: #query_archive_sql}
+## Archive queries and parsing
+{: #query_archive}
 
 
-{{site.data.keyword.logs_full_notm}}’s Archive Query feature lets you query logs directly from your  archive using SQL query syntax without counting against your daily quota, even if the data was never indexed. This lets you store more of your data in the [{{site.data.keyword.monitoring}} and {{site.data.keyword.compliance}} pipelines](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) and take advantage of {{site.data.keyword.logs_full_notm}}’s real-time analysis and remote storage search capabilities. This means you can use a shorter retention period and still be able to query all your data in a short period of time.
+With the {{site.data.keyword.logs_full_notm}} Archive Query feature you can query logs directly from your archive using Lucene, DataPrime, and regex query syntax without counting against your daily quota, even if the data was never indexed. Yoou can store more of your data in the [{{site.data.keyword.monitoring}} and {{site.data.keyword.compliance}} pipelines](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) and take advantage of {{site.data.keyword.logs_full_notm}} real-time analysis and remote storage search capabilities. This means you can use a shorter retention period and still be able to quickly query all your data.
 
-Archive queries run on the archive that you set in {{site.data.keyword.logs_full_notm}} and are available for all TCO logging levels. For example, prioritizing logs for the {{site.data.keyword.monitoring}} pipeline still allows you to query them without indexing the data as well You can also view and query them in the LiveTail, receive real-time alerts and notification of anomalies, use parsing rules, log aggregation, and events to metrics at a lesser cost than data sent to the Frequest Search pipeline.
+Archive queries run on the archive that you set in {{site.data.keyword.logs_full_notm}} and are available for all TCO logging levels. For example, if you prioritize logs for the {{site.data.keyword.monitoring}} pipeline you can still query them without indexing the data. You can also view and query them in the LiveTail, receive real-time alerts and notification of anomalies, use parsing rules, log aggregation, and events to metrics at a lesser cost than data sent to the {{site.data.keyword.frequent-search}} pipeline.
