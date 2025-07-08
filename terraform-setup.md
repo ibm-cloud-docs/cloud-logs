@@ -58,7 +58,7 @@ Complete the following steps to install the Terraform CLI:
 ## Step 2. Set up the directory
 {: #terraform-setup-ibm-plugin}
 
- Create a folder and navigate into the folder. This folder is used to store all configuration files and variable definitions that are needed to create the {{site.data.keyword.logs_full_notm}} instance.
+Create a folder and navigate into the folder. This folder is used to store all configuration files and variable definitions that are needed to create the {{site.data.keyword.logs_full_notm}} instance.
 
 For example, in your Terraform installation directory `<terraform-directory>/terraform`, create the directory `myproject`.
 
@@ -74,7 +74,7 @@ After the Terraform CLI installation is complete, you must set up the {{site.dat
 
 For a list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
-Make sure you use the latest {{site.data.keyword.cloud_notm}} Provider plug-in release.
+Make sure that you use the latest {{site.data.keyword.cloud_notm}} Provider plug-in release.
 {: tip}
 
 Create a `versions.tf` file and specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter.
@@ -125,34 +125,34 @@ The following table lists input parameters that you can set in the `provider` bl
 |`resource_group`| Optional | The ID of the resource group that you want to use for your {{site.data.keyword.cloud_notm}} resources. To retrieve the ID, run `ibmcloud resource groups`. You can specify the resource group in the `provider` block or retrieve the value from the `IC_RESOURCE_GROUP` or `IBMCLOUD_RESOURCE_GROUP` environment variables. If both environment variables are defined, `IC_RESOURCE_GROUP` takes precedence. |
 {: caption="List of input parameters that you can set in the provider block of your Terraform" caption-side="top"}
 
-For more information on how to use environment variables, see [Using environment variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
+For more information about how to use environment variables, see [Using environment variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
 
 
 ### Configure input variables in the terraform.tfvars file
 {: #terraform-config-ibm-plugin-tfvars}
 
-You can store information in a local `terraform.tfvars` file and reference these data in your `provider` block.
+You can store information in a local `terraform.tfvars` file and reference this data in your `provider` block.
 
 Do not commit the `terraform.tfvars` into a public source repository. This file is meant to only be stored on your local machine.
 {: important}
 
 In your project directory `<terraform-directory>/terraform/myproject`, create a `terraform.tfvars` file on your local machine and add the input parameters that are required for your resource or data source.
 
-    ```terraform
-    ibmcloud_api_key = "<ibmcloud_api_key>"
-    region = "region"
-    account_id = "<Account ID>"
-    rg_id = "d7c0e937c529461f90a19e1421f9746d"
-    plan = "standard"
-    cos_instance_crn = "crn:v1:bluemix:public:cloud-object-storage:global:a/<Account ID>:<COS instance ID>::"
-    cos_storage_class = "standard"
-    cos_bucket_data_name = "cloud-logs-tf-data"
-    cos_bucket_metrics_name = "cloud-logs-tf-metrics"
-    event_notifications_crn = "crn:v1:bluemix:public:event-notifications:eu-gb:a/<Account ID>:<Event Notifications instance ID>::"
-    event_notifications_instance_id = "<Event Notifications instance ID>"
-    event_notifications_region = "eu-gb"
-    ```
-    {: codeblock}
+```terraform
+ibmcloud_api_key = "<ibmcloud_api_key>"
+region = "region"
+account_id = "<Account ID>"
+rg_id = "d7c0e937c529461f90a19e1421f9746d"
+plan = "standard"
+cos_instance_crn = "crn:v1:bluemix:public:cloud-object-storage:global:a/<Account ID>:<COS instance ID>::"
+cos_storage_class = "standard"
+cos_bucket_data_name = "cloud-logs-tf-data"
+cos_bucket_metrics_name = "cloud-logs-tf-metrics"
+event_notifications_crn = "crn:v1:bluemix:public:event-notifications:eu-gb:a/<Account ID>:<Event Notifications instance ID>::"
+event_notifications_instance_id = "<Event Notifications instance ID>"
+event_notifications_region = "eu-gb"
+```
+{: codeblock}
 
 
 ### Declare variables in the variables.tf file
@@ -160,11 +160,11 @@ In your project directory `<terraform-directory>/terraform/myproject`, create a 
 
 In your project directory `<terraform-directory>/terraform/myproject`, create a variables file that is named `variables.tf` to include default values.
 
-The following sample lists variables that you can use when you provision an instance:
+The following sample lists variables that you can use when you provision an {{site.data.keyword.logs_full_notm}} instance:
 
 ```terraform
 variable "ibm_region" {
-  description = "Region to create resources. To see the list of valid regions, see [Locations](/docs/cloud-logs?topic=cloud-logs-regions)."
+  description = "Region to create resources. To see the list of valid regions, see https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-regions."
   type        = string
   default     = "eu-gb"
 }
