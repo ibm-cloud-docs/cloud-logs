@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-07-08"
 
 keywords:
 
@@ -29,7 +29,9 @@ If you have an {{site.data.keyword.atracker_full_notm}} [route](/docs/atracker?t
 
 Platform metrics from Montreal can be configured in {{site.data.keyword.metrics_router_full_notm}} to be sent to any region.
 
-If you have an {{site.data.keyword.metrics_router_full_notm}} [route](/docs/metrics-router?topic=metrics-router-route-manage&interface=ui) defined that contains a wildcard rule, then your Montreal metrics will be found in the [target](/docs/metrics-router?topic=metrics-router-target-manage&interface=ui) associated with the route. If you have a default target specified in the [{{site.data.keyword.metrics_router_full_notm}} settings](/docs/metrics-router?topic=metrics-router-settings&interface=ui), then your Montreal data will be located in that default target unless another routing rule directs the metrics to another target destination. A rule of some type must be configured to route `us-east` data to handle metrics sent by Montreal.
+If you have an {{site.data.keyword.metrics_router_full_notm}} [route](/docs/metrics-router?topic=metrics-router-route-manage&interface=ui) defined that contains a wildcard rule, then your Montreal metrics will be found in the [target](/docs/metrics-router?topic=metrics-router-target-manage&interface=ui) associated with the route. You can also define a route rule with a `ca-mon` location [inclusion filter](/docs/metrics-router?topic=metrics-router-route_rules_definitions&interface=ui#route_rules_definitions_filters). If you have a default target specified in the [{{site.data.keyword.metrics_router_full_notm}} settings](/docs/metrics-router?topic=metrics-router-settings&interface=ui), then your Montreal data will be located in that default target unless you have a route that overrides it.
+
+If [platform metrics are configured](/docs/monitoring?topic=monitoring-platform_metrics_enabling) to route your Montreal platform metrics by a `us-east` {{site.data.keyword.mon_full_notm}} instance, create an {{site.data.keyword.mon_full_notm}} support ticket with title `"Enable Monitoring Provisioning in Montreal"` before 14 July 2025 22:00 UTC to enable the provisioning of an {{site.data.keyword.mon_full_notm}} instance in `ca-mon` . After you provision your {{site.data.keyword.mon_full_notm}} instance in `ca-mon`, [configure platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling) with your new {{site.data.keyword.mon_full_notm}} `ca-mon` instance to avoid the loss of Montreal metrics.
 
 You need to have one or more {{site.data.keyword.logs_full_notm}} instances to work with platform logs and activity tracking events from Montreal. You also need an {{site.data.keyword.mon_full_notm}} instance in the region where you route platform metrics.
 

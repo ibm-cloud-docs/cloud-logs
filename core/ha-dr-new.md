@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-05-28"
+lastupdated: "2025-07-08"
 
 keywords: HA for IBM Cloud Logs, DR for IBM Cloud Logs, IBM Cloud Logs recovery time objective, IBM Cloud Logs recovery point objective
 
@@ -252,9 +252,9 @@ The following table lists the high-availability (HA) status for the regions (loc
 | Asia Pacific        | Osaka (`jp-osa`)         | Not applicable        | `MZR`     |
 | Asia Pacific        | Sydney (`au-syd`)        | Not applicable       | `MZR`     |
 | Asia Pacific        | Tokyo (`jp-tok`)         | Not applicable        | `MZR`     |
-| Europe              | Frankfurt (`eu-de`) `(*)`  | YES        | `MZR`     |
+| Europe              | Frankfurt (`eu-de`)   | YES        | `MZR`     |
 | Europe              | London (`eu-gb`)      | NO        | `MZR`     |
-| Europe              | Madrid (`eu-es`) `(*)`     | YES        | `MZR`     |
+| Europe              | Madrid (`eu-es`)      | YES        | `MZR`     |
 | North America       | Toronto (`ca-tor`)       | Not applicable        | `MZR`     |
 | North America       | Dallas (`us-south`)      | Not applicable        | `MZR`     |
 | North America       | Washington (`us-east`)      | Not applicable        | `MZR`     |
@@ -267,7 +267,6 @@ Where
 * A _region_ is a defined geographic territory.
 * A region might be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
 * A region contains [multiple availability zones](https://www.ibm.com/cloud/data-centers/) to meet local access, low latency, and security requirements for the region.
-* `N/A` means feature that is not applicable to that geography.
 * `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#table-mzr).
 
 For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).

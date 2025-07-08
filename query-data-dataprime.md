@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-07-08"
 
 keywords:
 
@@ -17,8 +17,12 @@ subcollection: cloud-logs
 # Querying data by using DataPrime
 {: #query-data-dataprime}
 
-{{site.data.keyword.logs_full_notm}} log data can be searched using DataPrime or Lucene. For information on querying with Lucene, see [Querying data by using Lucene](/docs/cloud-logs?topic=cloud-logs-query-data-lucene).
+In {{site.data.keyword.logs_full_notm}}, you can search log data by using DataPrime.
 {: shortdesc}
+
+Dataprime is an advanced query language that filters, transforms, and aggregates data by using commands that are combined by using the pipe (`|`) operator and applied sequentially.
+
+Use Dataprime queries to filter, transform, and aggregate data by using commands that help you manipulate log records with a language that offers full expression support similar to programming languages.
 
 Searching can be used in conjunction with [filtering](/docs/cloud-logs?topic=cloud-logs-query-data-filter) and [limiting by time](/docs/cloud-logs?topic=cloud-logs-query-data-time).
 {: tip}
