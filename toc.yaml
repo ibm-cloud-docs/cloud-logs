@@ -31,6 +31,8 @@ toc:
             navtitle: Parsing rules
           - topic: enrich.md
             navtitle: Enriching data
+          - topic: query-data.md
+            navtitle: Querying data
           - topic: alerts.md
             navtitle: Alerting
           - topic: extensions.md
@@ -267,20 +269,25 @@ toc:
             navtitle: Managing data mapping exceptions
           - topic: benchmarks.md
             navtitle: Using benchmark tags
-          - topic: query-data.md
-            navtitle: Querying data
           - topic: query-regex.md
             navtitle: Querying data by using regex
           - topic: query-data-lucene.md
             navtitle: Querying data by using Lucene
-          - topic: query-data-dataprime.md
-            navtitle: Querying data by using DataPrime
           - topic: query-archive-data-bucket.md
             navtitle: Querying data directly from the archive
           - topic: query-data-time.md
             navtitle: Specifying a time interval
           - topic: query-limitations.md
             navtitle: Limitations when querying data through the Logs page
+          - topicgroup:
+              label: Dataprime
+              topics:
+              - topic: query-data-dataprime.md
+                navtitle: Querying data using Dataprime
+              - topic: dataprime-quickstart.md
+                navtitle: DataPrime examples
+              - dataprime-reference.md
+              - query-parameters.md
       - topicgroup:
           label: Viewing data
           topics:
@@ -395,12 +402,6 @@ toc:
             navtitle: CLI Reference
       - topic: core/data-portability.md
         navtitle: Data portability
-      - topicgroup:
-          label: DataPrime Reference
-          topics:
-          - dataprime-quickstart.md
-          - dataprime-reference.md
-          - query-parameters.md
       - topic: endpoints_api.md
       - topic: endpoints_ingress.md
       - topic: ips4firewalls.md
