@@ -88,8 +88,8 @@ required_providers {
         }
     }
   }
-  ```
-  {: codeblock}
+```
+{: codeblock}
 
 For example:
 
