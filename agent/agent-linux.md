@@ -153,6 +153,7 @@ Complete the following steps:
     {: note}
 
 ## {{site.data.keyword.agent}} default configuration
+{: #agent-linux-default-config}
 
 {{site.data.keyword.agent}} comes with a default configuration that includes a predefined input source and filters. This default setup is configured to collect logs from common locations and enrich them with basic metadata.
 
@@ -162,53 +163,54 @@ Complete the following steps:
 {{site.data.keyword.agent}} is pre-configured to monitor log files in the `/var/log/` directory and its subdirectories.
 The following is an example of the default `inputs.conf`:
 
-    ```yaml
-    [INPUT]
-      Name              tail
-      Tag               host.*
-      Path              /var/log/**/*.log
-      Path_Key          file
-      Exclude_Path      /var/log/at/**
-      DB                /var/lib/fluent-bit/fluent-bit.DB
-      Buffer_Chunk_Size 32KB
-      Buffer_Max_Size   256KB
-      Mem_Buf_Limit     30MB
-      Skip_Long_Lines   On
-      Refresh_Interval  10
-      storage.type      filesystem
-      storage.pause_on_chunks_overlimit on
-    ```
-    {: codeblock}
+```yaml
+[INPUT]
+  Name              tail
+  Tag               host.*
+  Path              /var/log/**/*.log
+  Path_Key          file
+  Exclude_Path      /var/log/at/**
+  DB                /var/lib/fluent-bit/fluent-bit.DB
+  Buffer_Chunk_Size 32KB
+  Buffer_Max_Size   256KB
+  Mem_Buf_Limit     30MB
+  Skip_Long_Lines   On
+  Refresh_Interval  10
+  storage.type      filesystem
+  storage.pause_on_chunks_overlimit on
+ ```
+{: codeblock}
 
 ### Default Filters
 {: #agent-linux-config-default-filters}
 
 The default configuration includes two filters that enhance log records with metadata and organize it for easier processing:
-  - **Modify Filter**: Adds metadata fields such as subsystem name, application name, hostname, and platform.
-  - **Nest Filter**: Groups metadata fields under a single `meta` key.
+
+- **Modify Filter**: Adds metadata fields such as subsystem name, application name, hostname, and platform.
+
+- **Nest Filter**: Groups metadata fields under a single `meta` key.
 
 The following is an example of the default `filters.conf`:
 
+```yaml
+[FILTER]
+  Name modify
+  Match *
+  Add subsystemName    ${SUBSYSTEM_NAME}
+  Add applicationName  ${APPLICATION_NAME}
+  Add meta.hostname    ${HOSTNAME}
+  Add meta.environment prod   # Sample values: prod, staging, dev, qa
+  Add meta.platform    linux
 
-    ```yaml
-    [FILTER]
-      Name modify
-      Match *
-      Add subsystemName    ${SUBSYSTEM_NAME}
-      Add applicationName  ${APPLICATION_NAME}
-      Add meta.hostname    ${HOSTNAME}
-      Add meta.environment prod   # Sample values: prod, staging, dev, qa
-      Add meta.platform    linux
-
-    [FILTER]
-      Name nest
-      Match *
-      Operation nest
-      Wildcard meta.*
-      Nest_under meta
-      Remove_prefix meta.
-    ```
-    {: codeblock}
+[FILTER]
+  Name nest
+  Match *
+  Operation nest
+  Wildcard meta.*
+  Nest_under meta
+  Remove_prefix meta.
+```
+{: codeblock}
 
 ## {{site.data.keyword.agent}} configuration customization
 {: #agent-linux-config-customization}
@@ -352,12 +354,12 @@ You can update the agent by downloading the desired agent packages and running t
 When reinstalling or upgrading the agent, your existing configuration files are unchanged.
 {: note}
 
-  Restart the service after updating:
+Restart the service after updating:
 
-    ```pre
-    systemctl daemon-reload && systemctl restart fluent-bit
-    ```
-    {: codeblock}
+ ```sh
+ systemctl daemon-reload && systemctl restart fluent-bit
+ ```
+ {: pre}
 
 ## Uninstalling the agent
 {: #agent-linux-uninstall}
