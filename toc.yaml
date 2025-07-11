@@ -348,6 +348,18 @@ toc:
                 navtitle: Configuring alerts in Cloud Logs
               - topic: alerts-config-standard.md
                 navtitle: Standard alerts
+              - topic: alerts-config-time-relative.md
+                navtitle: Time relative alerts
+              - topic: alerts-config-unique-count.md
+                navtitle: Unique count alerts
+              - topic: alerts-config-ratio.md
+                navtitle: Ratio alerts
+              - topic: alerts-config-new-value.md
+                navtitle: New value alerts
+              - topic: alerts-config-metric.md
+                navtitle: Metric alert
+              - topic: alerts-config-flow.md
+                navtitle: Flow alerts
           - topic: suppression_rules.md
             navtitle: Alert suppression rules
           - topic: alerts/event-notifications-alerts.md

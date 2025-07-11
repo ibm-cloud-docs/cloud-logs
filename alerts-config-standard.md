@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-07-11"
 
 keywords:
 
@@ -66,21 +66,7 @@ The following table lists the options that you get to configure this type of ale
 | `More Than Usual`    | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours |
 {: caption="Standard alert conditions" caption-side="bottom"}
 
-`[*]`When the alert is set to `More than`, you can select an Evaluation Window type that defines the frequency to evaluate the filtering criteria. Choose one of the following options:
 
-- `Rolling Window`:  The Rolling Window defines a fixed period of time such as 5 minutes, regardless of matching data and any alerts triggered as a result of the query.
-
-    For example, if you choose a rolling window with a time window of 5 minutes, the filtering criteria is evaluated each passing 5 minute interval, so from the moment it is enabled, the alert is evaluated every minute.
-
-    By default, this option is set for new alerts.
-
-    If you choose a small time window, like 5 minutes, and you continue to get logs that match the filtering criteria, you will get events generated every minute and the data evaluated might alredy be included to trigger the previous event.
-
-- `Dynamic Duration`: The Dynamic Duration evaluation window changes the queried period when data matching the query triggers an alert.
-
-    For example, if any event matches the conditions and is triggered, the alert's window will start once more from the time of the event going fwd
-
-    With this option, the alert does not retrigger on already matched logs. However, there might be edge cases where an alert is not triggered while waiting to be reactivated after being triggered.
 
 
 {{/_include-segments/alerts-group-by.md}}
