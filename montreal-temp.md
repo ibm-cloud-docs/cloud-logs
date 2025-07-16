@@ -58,14 +58,14 @@ In order to avoid missing platform logs during the transition to Montreal, confi
 ### Platform metrics preparation actions
 {: #montreal-temp-transition-metrics}
 
-If platform metrics in your account are managed by the {{site.data.keyword.metrics_router_full_notm}} and you have a route defined as described in [Platform metrics](/docs/logs?topic=montreal-temp&interface=ui#montreal-temp-before-metrics), no further action is required.
+If platform metrics in your account are managed by the {{site.data.keyword.metrics_router_full_notm}} and you have a route defined as described in [Platform metrics](/docs/cloud-logs?topic=cloud-logs-montreal-temp#montreal-temp-before-metrics), no further action is required.
 
 If [platform metrics are configured](/docs/monitoring?topic=monitoring-platform_metrics_enabling) to route your Montreal platform metrics by a `us-east` {{site.data.keyword.mon_full_notm}} instance, create an {{site.data.keyword.mon_full_notm}} support ticket with title `"Enable Monitoring Provisioning in Montreal"` to enable the provisioning of an {{site.data.keyword.mon_full_notm}} instance in `ca-mon` . After you provision your {{site.data.keyword.mon_full_notm}} instance in `ca-mon`, [configure platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling) with your new {{site.data.keyword.mon_full_notm}} `ca-mon` instance to avoid the loss of Montreal metrics.
 
 ### Activity tracking events preparation actions
 {: #montreal-temp-transition-at-events}
 
-If {{site.data.keyword.atracker_full_notm}} in your account has been configured as described in [Activity tracking events](/docs/logs?topic=montreal-temp&interface=ui#montreal-temp-before-events), then no further actions are required during the transition period.
+If {{site.data.keyword.atracker_full_notm}} in your account has been configured as described in [Activity tracking events](/docs/cloud-logs?topic=cloud-logs-montreal-temp#montreal-temp-before-events), then no further actions are required during the transition period.
 
 ## Actions after observability services are available in Montreal
 {: #montreal-temp-after}
