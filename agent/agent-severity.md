@@ -15,7 +15,7 @@ subcollection: cloud-logs
 # Understanding how the {{site.data.keyword.agent}} parses severities
 {: #agent-severity}
 
-The {{site.data.keyword.logs_full_notm}} {{site.data.keyword.agent}} will attempt to determin the severity value of a routed log record. If the {{site.data.keyword.agent}} cannot determine the severity of a log record, it sets the severity to `info`.
+The {{site.data.keyword.logs_full_notm}} {{site.data.keyword.agent}} will attempt to determine the severity value of a routed log record. If the {{site.data.keyword.agent}} cannot determine the severity of a log record, it sets the severity to `info`.
 {: shortdesc}
 
 The severity of a log record is extracted after the log was picked up and modified by the {{site.data.keyword.agent}}.
