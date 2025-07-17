@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-16"
+lastupdated: "2025-07-17"
 
 keywords:
 
@@ -11,7 +11,6 @@ subcollection: cloud-logs
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Deploying the {{site.data.keyword.agent}} for Linux
 {: #agent-linux}
@@ -92,17 +91,12 @@ Complete the following steps:
 
    Where `<rpm_filename>` or `<deb_filename>` is the name of the downloaded `*.rpm` or `*.deb` file.
 
-6. Download the configuration file.
 
-   ```text
-   https://logs-router-agent-config.s3.us.cloud-object-storage.appdomain.cloud/post-config.sh
-   ```
-   {: codeblock}
 
 7. Run the configuration script.
 
    ```sh
-   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> [--send-directly-to-icl] [-s <vsi_secure_access_enabled>] [-i <IAM_environment>]
+   /opt/fluent-bit/bin/post-config.sh -h <target_host> -p <target_port> [-t <target_path>] -a <auth_mode> -k <iam_api_key> [-s <vsi_secure_access_enabled>] [-i <IAM_environment>] [--subsystem-name <name>] [--application-name <name>]
    ```
    {: pre}
 
@@ -111,7 +105,7 @@ Complete the following steps:
    Where
 
     `-t <target_path>`
-    :   Specify `/logs/v1/singles` to send data to an {{site.data.keyword.logs_full_notm}} instance. 
+    :   Specify the path to send data to an {{site.data.keyword.logs_full_notm}} instance. If not provided, the value defaults to `/logs/v1/singles`. 
 
     `-a <auth_mode>`
     :   Specify `IAMAPIKey` or `VSITrustedProfile`.
@@ -128,7 +122,8 @@ Complete the following steps:
         For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
         {: tip}
 
-    `--send-directly-to-icl`
+   
+    `--send-directly-to-icl` [Deprecated]{: tag-deprecated}
     :   Set this parameter to send logs directly to {{site.data.keyword.logs_full_notm}}.
 
     `-h <target_host>`
@@ -147,9 +142,79 @@ Complete the following steps:
     `-s <vsi_secure_access_enabled>`
     :   (Optional) Set this to `true` if you have secure access enabled in your VSI. It will be set to `false` by default. For example, `-s true`.
 
+    `--application-name <name>`
+    : The application name defines the environment that produces and sends logs to {{site.data.keyword.logs_full_notm}}. If not provided, the value defaults to `${HOSTNAME}`.
+
+    `--subsystem-name <name>`
+    : The subsystem name is the service or application that produces and sends logs to {{site.data.keyword.logs_full_notm}}. If not provided, the value defaults to `not-found`.
+
     Run the script to update the configuration with your parameter changes.
     {: note}
 
+## {{site.data.keyword.agent}} default configuration
+{: #agent-linux-default-config}
+
+{{site.data.keyword.agent}} comes with a default configuration that includes a predefined input source and filters. This default setup is configured to collect logs from common locations and enrich them with basic metadata.
+
+### Default Input Source
+{: #agent-linux-config-default-input-source}
+
+{{site.data.keyword.agent}} is pre-configured to monitor log files in the `/var/log/` directory and its subdirectories.
+The following is an example of the default `inputs.conf`:
+
+```yaml
+[INPUT]
+  Name              tail
+  Tag               host.*
+  Path              /var/log/**/*.log
+  Path_Key          file
+  Exclude_Path      /var/log/at/**
+  DB                /var/lib/fluent-bit/fluent-bit.DB
+  Buffer_Chunk_Size 32KB
+  Buffer_Max_Size   256KB
+  Mem_Buf_Limit     30MB
+  Skip_Long_Lines   On
+  Refresh_Interval  10
+  storage.type      filesystem
+  storage.pause_on_chunks_overlimit on
+ ```
+{: codeblock}
+
+### Default Filters
+{: #agent-linux-config-default-filters}
+
+The default configuration includes two filters that enhance log records with metadata and organize it for easier processing:
+
+- **Modify Filter**: Adds metadata fields such as subsystem name, application name, hostname, and platform.
+
+- **Nest Filter**: Groups metadata fields under a single `meta` key.
+
+The following is an example of the default `filters.conf`:
+
+```yaml
+[FILTER]
+  Name modify
+  Match *
+  Add subsystemName    ${SUBSYSTEM_NAME}
+  Add applicationName  ${APPLICATION_NAME}
+  Add meta.hostname    ${HOSTNAME}
+  Add meta.environment prod   # Sample values: prod, staging, dev, qa
+  Add meta.platform    linux
+
+[FILTER]
+  Name nest
+  Match *
+  Operation nest
+  Wildcard meta.*
+  Nest_under meta
+  Remove_prefix meta.
+```
+{: codeblock}
+
+## {{site.data.keyword.agent}} configuration customization
+{: #agent-linux-config-customization}
+
+These defaults provide a foundation for log collection and enrichment. To configure the agent to your needs, you can modify the `inputs.conf`, `filters.conf`, and `outputs.conf` files located in the `/etc/fluent-bit/` directory.
 
 ## Add additional metadata fields
 {: #agent-linux-deploy-step4}
@@ -167,39 +232,31 @@ Complete the following steps:
     [FILTER]
       Name modify
       Match *
-      Add subsystemName subsystemName
-      Add applicationName applicationName
-      Add meta.hostname ${HOSTNAME}
-      Add meta.environment prod   # Sample values: prod, staging, dev, qa
-      Add meta.platform linux
-
-    [FILTER]
-      Name nest
-      Match *
-      Operation nest
-      Wildcard meta.*
-      Nest_under meta
-      Remove_prefix meta.
+      Add subsystemName    ${SUBSYSTEM_NAME}
+      Add applicationName  ${APPLICATION_NAME}
+      Add meta.hostname    ${HOSTNAME}
+      Add meta.env         prod   # Sample values: prod, staging, dev, qa
+      Add meta.platform    linux
     ```
     {: codeblock}
 
     Where
 
-    - `applicationName`: The application name defines the environment that produces and sends logs to {{site.data.keyword.logs_full_notm}}. You must add an applicationName, for example, you can set it to `${HOSTNAME}`.
-    - `subsystemName`: The subsystem name is the service or application that produces and sends logs to {{site.data.keyword.logs_full_notm}}. You must add a subsystemName.
     - `<meta.key_name>` is the name of the metadata field to be added (for example, `meta.env`) and `<your_custom_value>` is the value to be assigned to the field (for example, the name of your environment).
 
-    For example, if you want to add the agent version and the region as metadata, the configuration would be similar to this:
+    For example, if you want to add the `region` as metadata, or version as new field, the configuration would be similar to this:
 
     ```yaml
     [FILTER]
       Name modify
       Match *
-      Add subsystemName subsystemName
-      Add applicationName ${HOSTNAME}
-      Add meta.environment prod
-      Add meta.platform linux
-      Add region us-east
+      Add subsystemName    ${SUBSYSTEM_NAME}
+      Add applicationName  ${APPLICATION_NAME}
+      Add meta.hostname    ${HOSTNAME}
+      Add meta.env         prod
+      Add meta.platform    linux
+      Add meta.region      us-east
+      Add version          my-version
     ```
     {: codeblock}
 
@@ -237,7 +294,7 @@ Complete the following steps:
       Path              /var/log/*.log
       Path_Key          file
       Exclude_Path      /var/log/audit.log
-      DB                /var/log/fluent-bit.DB
+      DB                /var/lib/fluent-bit/fluent-bit.DB
       Buffer_Chunk_Size 32KB
       Buffer_Max_Size   256KB
       Skip_Long_Lines   On
@@ -292,6 +349,16 @@ You can update the agent by downloading the desired agent packages and running t
      {: pre}
 
    Where `<rpm_filename>` or `<deb_filename>` is the name of the downloaded `*.rpm` or `*.deb` file.
+
+When reinstalling or upgrading the agent, your existing configuration files are unchanged.
+{: note}
+
+Restart the service after updating:
+
+ ```sh
+ systemctl daemon-reload && systemctl restart fluent-bit
+ ```
+ {: pre}
 
 ## Uninstalling the agent
 {: #agent-linux-uninstall}
