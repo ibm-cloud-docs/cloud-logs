@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-07-22"
 
 keywords:
 
@@ -59,6 +59,8 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 | South America  | Sao Paulo (`br-sao`) | `<service-instance-guid>.ingress.private.br-sao.logs.cloud.ibm.com` |
 {: caption="List of {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
 
+A private ingress endpoint is not supported in Montreal (`ca-mon`).
+{: note}
 
 When connecting to a private endpoint using a [VPE](/docs/cloud-logs?topic=cloud-logs-vpe-connection&interface=cli), use port 443. When connecting to a private endpoint using a [CSE](/docs/account?topic=account-service-endpoints-overview), use port 3443.
 {: important}
