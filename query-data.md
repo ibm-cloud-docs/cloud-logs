@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-25"
+  years:  2024, 2025
+lastupdated: "2025-07-18"
 
 keywords:
 
@@ -22,6 +22,7 @@ In {{site.data.keyword.logs_full_notm}}, you can query your log data by using Lu
 
 ## Query data from the UI
 {: #query-data-ui}
+{: ui}
 
 In the Explore **Logs** page, you can:
 
@@ -73,6 +74,7 @@ There are considerations when querying log data from the data bucket:
 
 ## Limitations querying data through the Explorer
 {: #query-data-limitations}
+{: ui}
 
 Limits exist when querying data in {{site.data.keyword.logs_full}}.
 
