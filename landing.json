@@ -2,7 +2,7 @@
   "version": 2,
   "title": "IBM Cloud Logs",
   "introduction": "IBM Cloud Logs is a scalable logging service that persists logs and provides users with capabilities for querying, tailing, and visualizing logs.",
-  "product_page": "https://www.ibm.com/products/blog/ibm-cloud-logs-observability",
+  "product_page": "https://www.ibm.com/products/cloud-logs",
   "console_page": "/observability/logging",
   "section_topics": {
     "links": [
