@@ -6,7 +6,7 @@ toc:
     audience: service
     href: /docs/cloud-logs
     console-page: /observe/logging
-    product-page: https://www.ibm.com/cloud/
+    product-page: https://www.ibm.com/products/cloud-logs
     path: cloud-logs
     label: Cloud Logs
   entries:

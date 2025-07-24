@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-16"
+lastupdated: "2025-07-24"
 
 keywords:
 
@@ -96,7 +96,7 @@ The {{site.data.keyword.agent}} includes the following Fluent Bit [filter plug-i
 | `parser` | filter | Parse individual fields in event records | [documentation](https://docs.fluentbit.io/manual/pipeline/filters/parser){: external} |
 | `record_modifier` | filter | Add/remove specific fields | [documentation](https://docs.fluentbit.io/manual/pipeline/filters/record-modifier){: external} |
 | `modify` | filter | Modify records based on rules and conditions | [documentation](https://docs.fluentbit.io/manual/pipeline/filters/modify){: external} |
-| `multiline` | filter | Concatenate multiple lines into a single event | [documentation](https://docs.fluentbit.io/manual/pipeline/filters/multiline){: external} |
+| `multiline` | filter | Concatenate multiple lines into a single event | [documentation](https://docs.fluentbit.io/manual/pipeline/filters/multiline-stacktrace){: external} |
 | `nest` | filter | Nest/elevate fields within a record | [documentation](https://docs.fluentbit.io/manual/pipeline/filters/nest){: external} |
 | `nightfall` | filter | Redact sensitive data within records | [documentation](https://docs.fluentbit.io/manual/pipeline/filters/nightfall){: external} |
 | `rewrite_tag` | filter | Modify record tags for routing | [documentation](https://docs.fluentbit.io/manual/pipeline/filters/rewrite-tag){: external} |
