@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-07-25"
 
 keywords:
 
@@ -27,6 +27,17 @@ For example:
 Security: An alert might be triggered by a new domain connection.
 
 Monitoring: An alert might be triggered by a new application error code. Many applications send an `error_code` field. A new value for this field indicates a new issue with the application.
+
+## Considerations for new value alerts
+{: #alerts-config-nv-considerations}
+
+* A new or updated alert will become active after the shorter of the configured alert time window or 7 days. This is so {{site.data.keyword.logs_full_notm}} can train on the set of different values, capture a baseline, and try to prevent false notifications.
+
+* The alert can track up to 50K unique values in the defined time window. When the captured values list gets to 50K, the alert will not be triggered until values are cleared from the list. A value will be cleared from the list when its age in the list is equal to the alert time window. The first detection of this value after it is deleted will trigger an alert.
+
+* The first 255 characters will be used as the value. For example, if there are 2 values that have the same first 255 characters, they will be considered to be the same value.
+
+* There is a 5 minute "silence" period after the alert is triggered. During this time, new values will be added to the list, but the alert will not be triggered.
 
 
 {{/_include-segments/alerts-prereq.md}}
@@ -70,4 +81,3 @@ If there is a new value detected for the key within the selected time period, th
 
 
 {{/_include-segments/alerts-next-steps.md}}
-
