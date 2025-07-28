@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-07-28"
 
 keywords:
 
@@ -85,6 +85,7 @@ These are private ingress endpoints IP addresses for {{site.data.keyword.logs_fu
 | Toronto (`ca-tor`) | 166.9.209.7  \n 166.9.247.184  \n 166.9.247.221 |
 | Washington, DC (`us-east`) | 166.9.231.251  \n 166.9.251.88  \n 166.9.233.27 |
 {: caption="IP addresses for {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
+
 
 
 ### Private API endpoints for {{site.data.keyword.logs_full_notm}}
