@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-17"
+lastupdated: "2025-07-28"
 
 keywords:
 
@@ -92,8 +92,18 @@ Complete the following steps:
    Where `<rpm_filename>` or `<deb_filename>` is the name of the downloaded `*.rpm` or `*.deb` file.
 
 
+3. Download the configuration file and mark it as executable.
 
-7. Run the configuration script.
+   ```sh
+   wget https://logs-router-agent-config.s3.us.cloud-object-storage.appdomain.cloud/post-config.sh
+
+   chmod +x post-config.sh
+   ```
+   {: codeblock}
+
+
+
+4. Run the configuration script.
 
    ```sh
    /opt/fluent-bit/bin/post-config.sh -h <target_host> -p <target_port> [-t <target_path>] -a <auth_mode> -k <iam_api_key> [-s <vsi_secure_access_enabled>] [-i <IAM_environment>] [--subsystem-name <name>] [--application-name <name>]
