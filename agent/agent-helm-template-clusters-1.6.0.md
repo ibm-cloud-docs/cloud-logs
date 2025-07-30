@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-06-24"
+lastupdated: "2025-07-30"
 
 keywords:
 
@@ -99,22 +99,24 @@ env:
 Each of the service, parsers and pipeline (inputs, processors, filters and outputs) can optionally be configured with additional settings that are not necessarily exposed with the default configurations.
 
 The following configurations can be used for more advanced configurations if necessary:
-    - `additionalServiceOptions`
-    - `additionalKubeLogInputProcessors`
-    - `additionalInputs`
-    - `additionalFilters` (use `additionalKubeLogInputProcessors` if possible)
-    - `additionalOutputs`
-    - `additionalParsers`
+
+- `additionalServiceOptions`
+- `additionalKubeLogInputProcessors`
+- `additionalInputs`
+- `additionalFilters` (use `additionalKubeLogInputProcessors` if possible)
+- `additionalOutputs`
+- `additionalParsers`
 
 ### Enhanced system file processing of `/var/log` (for example, `syslog`, `messages`, `kubelet.log`)
 {: #helm-160-feature2}
 
-Use the `systemFiles` configuration to replace the `additionalLogSourcePaths` configuration to get better details for your host files:
-    - Timestamps are parsed according to the format of the syslog files.
-    - The Kubernetes filter is skipped which will reduce warnings in the logs and improve performance.
-    - In {{site.data.keyword.logs_full_notm}} the `subsystemName` is the name of the host filename without the path.
-    - In {{site.data.keyword.logs_full_notm}} the `applicationName` is the hostname of the node.
-    - The cluster name is still recorded in `kubernetes.cluster_name` to be consistent with the container logs for filtering.
+Use the `systemLogs` configuration to replace the `additionalLogSourcePaths` configuration to get better details for your host files:
+
+- Timestamps are parsed according to the format of the syslog files.
+- The Kubernetes filter is skipped which will reduce warnings in the logs and improve performance.
+- In {{site.data.keyword.logs_full_notm}} the `subsystemName` is the name of the host filename without the path.
+- In {{site.data.keyword.logs_full_notm}} the `applicationName` is the hostname of the node.
+- The cluster name is still recorded in `kubernetes.cluster_name` to be consistent with the container logs for filtering.
 
 ### Multiline patterns are easier to configure
 {: #helm-160-feature3}
@@ -129,7 +131,7 @@ The `enableKubernetesFilter: false` option can be used to bypass the Kubernetes 
 ## `additionalLogSourcePaths`
 {: #helm-160-deprecated}
 
-[Deprecated]{: tag-deprecated} 
+[Deprecated]{: tag-deprecated}
 
 The `additionalLogSourcePaths` option will be removed in an upcoming Helm release.  It was originally intended to be used for processing host files or application log files in non-container locations.  These files were either inappropriately processed by the Kubernetes plug-in, or ignored with a warning - neither being efficient.
 
@@ -180,6 +182,7 @@ The following table contains a list of the parameters that you can configure in 
 | `additionalOutputs` | Additional output definitions | optional - not set |
 | `additionalParsers` | Additional parsers | optional - not set |
 | `additionalMultilineParsers` | Additional multiline parsers | optional - not set |
+| `kubernetesFields` | List of Kubernetes metadata fields to keep in log records | pod_name, namespace_name, container_name |
 {: caption="Helm configuration options" caption-side="bottom"}
 
 ## `env.iamMode`
@@ -222,8 +225,8 @@ Consider the following information when setting this parameter:
 This section allows the user to override the default `subsystemName` and `applicationName` that are used in the environment.
 By default, the values are not set and the output plug-in will dynamically set the values to:
 
-- `subsystemName`: the Kubernetes namespace that generated the log
-- `applicationName`: the container name that generated the log
+- `applicationName`: the Kubernetes namespace that generated the log
+- `subsystemName`: the container name that generated the log
 
 The entry in the `logs-values.yaml` file looks as follows:
 
@@ -455,10 +458,10 @@ enableKubernetesFilter: false
 ```
 {: codeblock}
 
-## `systemFiles`
-{: #systemFiles}
+## `systemLogs`
+{: #systemLogs}
 
-If you want to process files from a path other than `/var/log/containers` (for example, `/var/log/syslog` or `/var/log/kubelet.log`), then use the `systemFiles` setting to enable the processing for these files.
+If you want to process files from a path other than `/var/log/containers` (for example, `/var/log/syslog` or `/var/log/kubelet.log`), then use the `systemLogs` setting to enable the processing for these files.
 
 You can use the `systemLogsParser` option in order to consider a different parser - by default the `kube_syslog` parser is used which is appropriate for newer VPC-based systems.  Some of the classic Kubernetes clusters may require the `systemLogsParser` to be set to `kube_syslog_classic` in order to match the timestamp format on those systems.
 
@@ -496,6 +499,29 @@ additionalKubeLogInputProcessors:
 
 ## `additionalInputs`
 {: #additionalInputs}
+
+This option allows the user to introduce additional Fluent Bit input plug-in definitions to the current pipeline. This could be, for example, another file with special parsing requirements or other input plug-ins.
+
+```yaml
+additionalInputs:
+  - name: tail
+    tag: var.log.myapp
+    path: /var/log/myapp/myapp.log
+    processors:
+      logs:
+        - name: content_modifier
+          action: insert
+          key: applicationName
+          value: my-application
+        - name: content_modifier
+          action: insert
+          key: subsystemName
+          value: my-subsystem
+```
+{: codeblock}
+
+### `additionalFilters`
+{: #additionalFilters}
 
 There might be some filters that should be applied to both containers and host logs - rather than including in the `additionalKubeLogInputProcessors` and `additionalSystemLogsInputProcessors`. This will add entries to the [pipeline.filters](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml/pipeline-section) section of the Fluent Bit yaml configuration.
 
@@ -560,3 +586,47 @@ additionalMultilineParsers:
         next_state: cont
 ```
 {: screen}
+
+## `kubernetesFields`
+{: #kubernetesFields}
+
+This configuration allows controlling which Kubernetes metadata fields are included with each log record. By default, only essential fields such as `pod_name`, `namespace_name`, and `container_name` are kept. This helps reduce the amount of metadata stored with each log and reduces storage costs.
+
+The following fields can be included by uncommenting them or adding them to the list:
+- `pod_name`
+- `namespace_name`
+- `container_name`
+- `pod_ip`
+- `pod_id`
+- `container_hash`
+- `container_image`
+- `docker_id`
+- `host`
+
+**Note:** The following fields are included in the Kubernetes metadata based on other settings:
+- `cluster_name` - Included when the `clusterName` is provided.
+- `labels` - Included by default unless `includeLabels` is set to `false`.
+- `annotations` - Included when `includeAnnotations` is set to `true`.
+
+Example configuration to keep only the essential fields:
+
+```yaml
+kubernetesFields:
+  - pod_name
+  - namespace_name
+  - container_name
+```
+{: codeblock}
+
+Example configuration for including additional fields for more detailed metadata:
+
+```yaml
+kubernetesFields:
+  - pod_name
+  - namespace_name
+  - container_name
+  - pod_ip
+  - container_image
+  - host
+```
+{: codeblock}
