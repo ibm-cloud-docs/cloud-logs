@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-22"
+lastupdated: "2025-07-31"
 
 keywords:
 
@@ -22,6 +22,12 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
+
+## 31 July 2025
+{: #cloud-logs-jul3125}
+
+Montreal support
+:   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Montreal (`ca-mon`) region.
 
 
 ## 9 July 2025
