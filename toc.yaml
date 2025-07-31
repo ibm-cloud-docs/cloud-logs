@@ -456,8 +456,6 @@ toc:
             navtitle: Configuring the agent to use proxies
       - topic: regions.md
         navtitle: Locations
-      - topic: montreal-temp.md
-        navtitle: Considerations for Montreal
       - service_plans.md
       - topic: limits.md
         navtitle: Limits

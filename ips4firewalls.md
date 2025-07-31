@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-07-31"
 
 keywords:
 
@@ -35,6 +35,7 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Frankfurt (`eu-de`) | 10.16.206.126  \n 10.16.212.60  \n 10.223.57.126 |
 | London (`eu-gb`) | 10.249.102.93  \n 10.249.105.135  \n 10.223.22.101 |
 | Madrid (`eu-es`) | 10.22.182.15  \n 10.22.189.164  \n 10.22.211.255 |
+| Montreal (`ca-mon`) | 10.46.72.114. \n 10.46.76.114. \n 10.46.80.114 |
 | Osaka (`jp-osa`) | 10.12.22.161  \n 10.12.30.38  \n 10.12.46.24  |
 | Sao Paulo (`br-sao`) | 10.12.178.24  \n 10.12.79.160  \n 10.51.193.140 |
 | Sydney (`au-syd`) | 10.223.237.71  \n 10.223.243.160  \n 10.223.254.90 |
@@ -54,6 +55,7 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 | Frankfurt (`eu-de`) | 149.81.7.29  \n 161.156.82.254  \n 149.81.165.38 |
 | London (`eu-gb`) | 161.156.199.245  \n 141.125.111.204  \n 158.176.189.154 |
 | Madrid (`eu-es`) | 13.120.86.96  \n 13.121.81.233  \n 13.122.90.134 |
+| Montreal (`ca-mon`) | 64.5.41.138 \n 64.5.44.22. \n 64.5.48.227 |
 | Osaka (`jp-osa`) | 163.68.90.193  \n 163.69.93.0  \n 163.73.83.233 |
 | Sao Paulo (`br-sao`) | 13.116.82.31  \n 163.107.85.232  \n 163.109.87.9 |
 | Sydney (`au-syd`) | 159.23.94.217  \n 130.198.9.241  \n 135.90.138.121 |
@@ -87,6 +89,9 @@ These are private ingress endpoints IP addresses for {{site.data.keyword.logs_fu
 {: caption="IP addresses for {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
 
 
+There are no private ingress endpoints for Montreal (`ca-mon`).
+{: note}
+
 
 ### Private API endpoints for {{site.data.keyword.logs_full_notm}}
 {: #ip_api}
@@ -106,3 +111,7 @@ These are the private API IP addresses used for {{site.data.keyword.logs_full_no
 | Toronto (`ca-tor`) | 166.9.209.6  \n 166.9.209.34  \n 166.9.247.202 |
 | Washington, DC (`us-east`) | 166.9.231.250  \n 166.9.251.87  \n 166.9.233.26 |
 {: caption="{{site.data.keyword.logs_full_notm}} private API IP addresses" caption-side="top"}
+
+
+There are no private API endpoints for Montreal (`ca-mon`).
+{: note}
