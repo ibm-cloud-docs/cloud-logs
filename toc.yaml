@@ -180,6 +180,8 @@ toc:
               - topic: agent/configure-agent.md
               - topic: agent/agent-helm-credential-rotation.md
                 navtitle: Updating the Logging agent IAM APIKey by using a Helm chart
+              - topic: agent/agent-multiline.md
+                navtitle: Supporting multiline logs
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
               - topic: agent/agent-helm-template-clusters.md
