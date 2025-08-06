@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-16"
+lastupdated: "2025-08-06"
 
 keywords:
 
@@ -127,6 +127,9 @@ Complete the following steps:
     {: codeblock}
 
 3. Update the agent.
+
+   If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
+    {: attention}
 
     If you are using the `iamMode`=`TrustedProfile` then the complete command is:
 
