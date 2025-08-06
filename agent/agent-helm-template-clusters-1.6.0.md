@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-06"
 
 keywords:
 
@@ -135,7 +135,7 @@ The `enableKubernetesFilter: false` option can be used to bypass the Kubernetes 
 
 The `additionalLogSourcePaths` option will be removed in an upcoming Helm release.  It was originally intended to be used for processing host files or application log files in non-container locations.  These files were either inappropriately processed by the Kubernetes plug-in, or ignored with a warning - neither being efficient.
 
-To improve parsing of the system files, a new configuration named `systemLogs` has been implemented to provide a better parsing experience for these host system files.  See the new `systemLogs` configuration for details.
+To improve parsing of the system files, a new configuration named `systemLogs` has been implemented to provide a better parsing experience for these host system files.  See the new [`systemLogs` configuration](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-160#systemLogs) for details.
 
 For non-system or non-container logs the `additionalInputs` section can provide a customized input section within the pipeline, giving full control over the input and processors for your files.
 
