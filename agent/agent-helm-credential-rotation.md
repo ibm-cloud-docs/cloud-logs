@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-16"
+lastupdated: "2025-08-06"
 
 keywords:
 
@@ -39,7 +39,7 @@ Before you begin, complete the prerequisite tasks.
 
 
 ## Update the agent with a new API key
-{: #aagent-helm-credential-rotation-step2}
+{: #agent-helm-credential-rotation-step2}
 {: step}
 
 If the secret has been created manually or if you are using `iamMode=TrustedProfile` then do not refer to this document for updating the IAM APIKey.
@@ -84,6 +84,9 @@ Complete the following steps to update the agent with new APIKey:
     {: codeblock}
 
 2. Update the agent.
+
+    If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
+    {: attention}
 
     ```sh
     helm upgrade <install-name> oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
