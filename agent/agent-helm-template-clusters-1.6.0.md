@@ -163,7 +163,7 @@ The following table contains a list of the parameters that you can configure in 
 | `defaultMetadata.applicationName` | Static string to override the `applicationName` in {{site.data.keyword.logs_full_notm}} | Namespace name that generated the log |
 | `resources` | Override the Kubernetes resources allocated to the logs-agent | Optional | See [Resources](#agent-helm-template-clusters-chart-options-resources) to see the default values|
 | `additionalLogSourcePaths` [Deprecated]{: tag-deprecated} | The path of additional logs beyond the default `/var/log/containers/*.log`.  \n For more information, see [Log Source Paths configurations](#agent-helm-template-clusters-chart-options-log-source-paths). | optional - not set |
-| `excludeLogSourcePaths` | Additional logs that should not be collected by the agent.  \n For more information, see [Log Source Paths configurations](#agent-helm-template-clusters-chart-options-160-log-source-paths). | optional - not set |
+| `excludeLogSourcePaths` | Additional logs that should not be collected by the agent.  \n For more information, see [Log Source Paths configurations](#agent-helm-template-clusters-chart-options-160-log-source-paths). | `/var/log/at/*` |
 | `selectedLogSourcePaths` | Override `/var/log/containers/*.log` and only collect logs in these paths. \n For more information, see [Log Source Paths configurations](#agent-helm-template-clusters-chart-options-160-log-source-paths). | optional - not set |
 | `includeAnnotations` | Instruct the Kubernetes plug-in to include the container annotations with the log messages.  \n For more information, see [includeAnnotations]#agent-helm-template-clusters-chart-options-include-annotations). | false |
 | `retryLimit` | Limit the number of retries that will be attempted | False - no retry limits |
@@ -268,7 +268,7 @@ By default the agent will collect the logs from `/var/log/containers/*.log`.
 
 The following additional variables can be provided to include, exclude or restrict the set of logs to be processed:
 - `additionalLogSourcePaths` adds locations to the default set of logs that will be processed.
-- `excludeLogSourcePaths` ignores logs in the specified locations.
+- `excludeLogSourcePaths` overrides the default path of `/var/log/at/*` and ignores logs in the specified locations.
 - `selectedLogSourcePaths` overrides the default path `/var/log/containers/*.log` and ignores the `additionalLogSourcePaths` configurations. Only the files that are set through this parameter are collected by the agent.
 
 You can define multiple paths by using a comma separated list, for example `/var/log/abc/*.log,/var/log/xyz/*.log`.
