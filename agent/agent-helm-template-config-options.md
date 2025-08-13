@@ -13,8 +13,8 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Helm Chart configuration options
-{: #agent-helm-template-config-options}
+# Helm Chart required configuration options
+{: #agent-helm-template-config-options-required}
 
 Starting with Helm chart version 1.6.0, the Fluent Bit log pipeline configuration has transitioned to using the official [Fluent Bit YAML configuration](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml) format. This change brings enhanced flexibility and clarity to configuration management.
 
@@ -22,12 +22,12 @@ Starting with Helm chart version 1.6.0, the Fluent Bit log pipeline configuratio
 | Parameter | Description | Required | Default value |
 |-----------|-------------|---------|----------------|
 | `metadata.name` | The name used for all of the Kubernetes resources | Yes | `logs-agent` |
-| `image.version` | The version of the agent container image | Yes | No default. Sample value: `1.6.1` |
+| `image.version` | The version of the agent container image | Yes | No default. \n Sample value: `1.6.1` |
 | `env.ingestionHost` | The {{site.data.keyword.logs_full_notm}} host where logs are sent | Yes | No default |
 | `env.ingestionPort` | The {{site.data.keyword.logs_full_notm}} port where logs are sent | Yes | No default |
 | `env.iamMode` | Indicate the IAM authentication mechanism used | Yes | No default. Valid values: `TrustedProfile`, `IAMAPIKey` |
-| `env.trustedProfileID` | The trusted profile to use | Required when `iamMode=TrustedProfile` | No default. Sample value: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
-| `env.iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens.  \n For more information, see [iamEnvironment](#agent-helm-template-clusters-chart-options-iam-env). | Production |
+| `env.trustedProfileID` | The trusted profile to use | Required when `iamMode=TrustedProfile` | No default. \n Sample value: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
+| `env.iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens.  \n For more information, see [iamEnvironment](#agent-helm-template-clusters-chart-options-iam-env). | Yes | Production |
 | `env.iamHost` | IAM host required for IAM Environment `Custom` setting.  See [iamEnvironment](#agent-helm-template-clusters-chart-options-160-iam-env) | required for iamEnvironment `Custom` - no default |
 | `secret.iamAPIKey` | The APIKey used when `iamMode=IAMAPIKey`. Should only be provided when using the CLI | optional |
 | `clusterName` | The name of the Kubernetes cluster | optional |
@@ -102,7 +102,12 @@ The following table contains a list of the parameters that you can configure in 
 | `kubernetesFields` | List of Kubernetes metadata fields to keep in log records | pod_name, namespace_name, container_name |
 {: caption="Helm configuration options" caption-side="bottom"}
 
-## `env.iamMode`
+
+
+## Configure the authentication method
+{: #agent-helm-template-clusters-chart-options-160-iammode}
+
+### `env.iamMode`
 {: #agent-helm-template-clusters-chart-options-160-iammode}
 
 Configure this parameter to choose the authentication method to use by the agent when sending logs to an {{site.data.keyword.logs_full_notm}} instance.
@@ -135,6 +140,8 @@ Consider the following information when setting this parameter:
     {: codeblock}
 
 
+## Configure custom values for applicationName and subsystemName
+{: #agent-helm-template-clusters-chart-options-160-iammode}
 
 ## `defaultMetadata`
 {: #agent-helm-template-clusters-chart-options-160-defaultmetadata}
@@ -153,6 +160,13 @@ defaultMetadata:
   applicationName: ""
 ```
 {: codeblock}
+
+
+## Change the resources that are assigned to the {{site.data.keyword.agent}} container
+{: #agent-helm-template-clusters-chart-options-160-iammode}
+
+If you need to update any of the values, the entire configuration must be provided even if you don't update all of the values.
+{: important}
 
 ## `resources`
 {: #agent-helm-template-clusters-chart-options-160-resources}
@@ -174,8 +188,6 @@ resources:
 ```
 {: codeblock}
 
-If you need to update any of the values, the entire configuration must be provided even if you don't update all of the values.
-{: important}
 
 ## Log source paths configurations
 {: #agent-helm-template-clusters-chart-options-160-log-source-paths}
@@ -184,7 +196,6 @@ By default the agent will collect the logs from `/var/log/containers/*.log`.
 {: note}
 
 The following additional variables can be provided to include, exclude or restrict the set of logs to be processed:
-- `additionalLogSourcePaths` adds locations to the default set of logs that will be processed.
 - `excludeLogSourcePaths` overrides the default path of `/var/log/at/*` and ignores logs in the specified locations.
 - `selectedLogSourcePaths` overrides the default path `/var/log/containers/*.log` and ignores the `additionalLogSourcePaths` configurations. Only the files that are set through this parameter are collected by the agent.
 
@@ -194,7 +205,6 @@ The entry in the `logs-values.yaml` file looks as follows:
 
 ```yaml
 # comma separated list, for example “/var/log/abc/*.log,/var/log/xyz/*.log”
-additionalLogSourcePaths: ""
 excludeLogSourcePaths: ""
 selectedLogSourcePaths: ""
 ```

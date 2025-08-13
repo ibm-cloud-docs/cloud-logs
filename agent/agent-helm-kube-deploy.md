@@ -77,8 +77,6 @@ Complete the following steps:
 
     clusterName: "ENTER_CLUSTER_NAME"     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
 
-    # enableMultiline: false   # Set to true to enable multiline support for applications, like Java or Python, where errors and stack traces can span several lines, and each line is sent as a separate log entry. You must add a multilineparser.
-
     env:
       # ingestionHost is a required field. For example:
       # ingestionHost: "<logs instance>.ingress.us-east.logs.cloud.ibm.com"
