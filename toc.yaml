@@ -211,26 +211,6 @@ toc:
           - agent/agent-multiple-icl-targets.md
           - topic: verify-key.md
             navtitle: Verifying your API key
-      - topicgroup:
-          label: Sending data using the Logging agent prior to v1.6.x
-          topics:
-          - topicgroup:
-              label: Logging agent for orchestrated environments
-              topics:
-              - topic: agent/helm-chart-versions-1.md
-                navtitle: Checking the available Helm chart versions
-              - topic: agent/helm-chart-download-1.md
-                navtitle: Downloading a Helm chart
-              - topic: agent/agent-helm-template-clusters-1.6.0.md
-                navtitle: Deploy the Logging agent using a 1.6.0 Helm chart
-              - topic: agent/agent-helm-os-deploy-1.md
-                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
-              - topic: agent/agent-helm-kube-deploy-1.md
-                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
-              - topic: agent/agent-helm-template-clusters.md
-                navtitle: Deploying the Logging agent using a Helm chart
-              - topic: agent/agent-multiline.md
-                navtitle: Supporting multiline logs
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
@@ -453,6 +433,26 @@ toc:
             navtitle: IBM Cloud Databases for PostgreSQL
       - topic: limits-sending-data.md
         navtitle: Considerations and limitations sending data
+      - topicgroup:
+          label: Sending data using the Logging agent prior to v1.6.x
+          topics:
+          - topicgroup:
+              label: Logging agent for orchestrated environments
+              topics:
+              - topic: agent/helm-chart-versions-1.md
+                navtitle: Checking the available Helm chart versions
+              - topic: agent/helm-chart-download-1.md
+                navtitle: Downloading a Helm chart
+              - topic: agent/agent-helm-template-clusters-1.6.0.md
+                navtitle: Helm chart template to deploy the Logging agent prior to v1.6.x
+              - topic: agent/agent-helm-os-deploy-1.md
+                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
+              - topic: agent/agent-helm-kube-deploy-1.md
+                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
+              - topic: agent/agent-helm-template-clusters.md
+                navtitle: Deploying the Logging agent using a Helm chart
+              - topic: agent/agent-multiline.md
+                navtitle: Supporting multiline logs
       - topicgroup:
           label: Logging agent
           topics:

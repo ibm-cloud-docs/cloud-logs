@@ -258,7 +258,12 @@ When the agent is deployed, check the following resources are created:
 
     If your nodes are not named by their IP, you can append the `-o wide` option and compare the values in the `INTERNAL-IP` column instead.
 
-    To view the logs of a pod, run `kubectl logs <POD_NAME>> -n ibm-observe`{: tip}
+    To view the logs of a pod, run `kubectl logs <POD_NAME>> -n ibm-observe`
+    {: tip}
+
+    To check the helm chart deployed, run `helm list -n ibm-observe`
+    {: tip}
+
 
 ## Step 5. Verify logs are being delivered to your target destination
 {: #agent-helm-kube-deploy-deploy-step5}
