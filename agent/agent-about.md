@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2024-10-28"
+lastupdated: "2025-08-13"
 
 keywords:
 
@@ -133,34 +133,3 @@ The agent supports the following input formats:
 * docker (JSON with the docker-specific timestamp format)
 * cri
 * syslog
-
-## Supported agent versions
-{: #agent-about-versions}
-
-The following table lists the agent versions that are supported and the version of Fluent Bit the agent is based on:
-
-| {{site.data.keyword.agent}}                         | Based on Fluent Bit Version | Helm chart version |
-|-----------------------------------------------------|-----------------------------|--------------------|
-| v1.6.1                                              | [v3.2.10](https://fluentbit.io/announcements/v3.2.10/){: external} | v1.6.1   |
-| v1.6.0                                              | [v3.2.10](https://fluentbit.io/announcements/v3.2.10/){: external} | v1.6.0   |
-| v1.5.2                                              | [v3.2.7](https://fluentbit.io/announcements/v3.2.7/){: external} | v1.5.2   |
-| v1.5.1                                              | [v3.2.7](https://fluentbit.io/announcements/v3.2.7/){: external} | v1.5.1   |
-| v1.5.0                                              | [v3.2.7](https://fluentbit.io/announcements/v3.2.7/){: external} | v1.5.0   |
-| v1.4.2                                              | [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external} | v1.4.2   |
-| v1.4.1                                              | [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external} | v1.4.1   |
-| v1.4.0                                              | [v3.1.9](https://fluentbit.io/announcements/v3.1.9/){: external} | v1.4.0   |
-{: caption="Supported agent versions" caption-side="bottom"}
-
-For information on recommended and supported Fluent Bit plug-ins see [Fluent Bit support](/docs/cloud-logs?topic=cloud-logs-agent-plugin-support)
-{: tip}
-
-## Agent support policy
-{: #agent-support-policy}
-
-Release agent updates are planned on a quarterly basis. Support will continue to provide assistance for two releases prior to the latest release.
-
-For example, if agent version `1.3.x` is the most currently release, then questions related to agents `1.2.x` and `1.1.x` will be answered.
-
-However, new functions and security fixes will only be made available as the most current release and modification level.
-
-For example, if a security vulnerability is found in the agent, and the current agent version is `1.3.3`, the security vulnerability will be fixed and released as `1.3.4`. Even though `1.2.x` and `1.1.x` are still supported for technical questions, patches to these releases will not be made available.

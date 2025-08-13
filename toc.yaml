@@ -48,10 +48,14 @@ toc:
           topics:
           - topic: agent/agent-about.md
             navtitle: About the Logging agent
+          - topic: agent/agent-severity.md
+            navtitle: Understanding how the agent parses severities
           - topic: agent/supported-versions.md
             navtitle: Supported agent versions
           - topic: agent/agent-support-policy.md
             navtitle: Agent support policy
+          - topic: agent/agent-plugin-support.md
+            navtitle: Fluent Bit plug-ins supported
       - topicgroup:
           label: Sending telemetry data
           topics:
@@ -108,7 +112,9 @@ toc:
           - topic: iam-ingestion-trusted-profile.md
             navtitle: Generating a Trusted Profile for ingestion
           - topic: iam-ingestion-serviceid-api-key.md
-            navtitle: Generating a service ID API Key for ingestion 
+            navtitle: Generating a service ID API Key for ingestion
+          - topic: verify-key.md
+            navtitle: Verifying the service ID API Key for ingestion 
           - topic: iam-actions.md
             navtitle: IAM actions by role
           - topic: iam-views.md
@@ -174,8 +180,10 @@ toc:
               topics:
               - topic: agent/agent-version.md
                 navtitle: Checking the available agent versions
-              - topic: agent/agent-helm-template-clusters-1.6.0.md
+              - topic: agent/agent-helm-template-clusters-latest.md
                 navtitle: Helm chart template
+              - topic: agent/agent-helm-template-config-options.md
+                navtitle: Helm Chart configuration options
               - topic: agent/helm-chart-versions.md
                 navtitle: Checking the available Helm chart versions
               - topic: agent/helm-chart-download.md
@@ -186,12 +194,12 @@ toc:
                 navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
               - topic: agent/agent-helm-update.md
                 navtitle: Upgrading the Logging agent version using a Helm chart
+              - topic: agent/agent-helm-credential-rotation.md
+                navtitle: Rotating the Logging agent IAM APIKey for ingestion using a Helm chart
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
               - topic: agent/configure-agent.md
                 navtitle: Updating the Logging agent path files
-              - topic: agent/agent-helm-credential-rotation.md
-                navtitle: Updating the Logging agent IAM APIKey by using a Helm chart
           - topicgroup:
               label: Logging agent for Linux environments
               topics:
@@ -212,9 +220,16 @@ toc:
                 navtitle: Adding metadata
               - topic: agent/agent-windows-manage.md
                 navtitle: Managing the agent 
-          - agent/agent-multiple-icl-targets.md
-          - topic: verify-key.md
-            navtitle: Verifying your API key
+          - topic: agent/agent-plugin-parameters.md
+            navtitle: Output plug-in parameters to send data to Cloud Logs
+          - topic: agent/agent-multiple-icl-targets.md
+            navtitle: Configuring multiple Cloud Logs destinations
+          - topic: agent/agent-proxy.md
+            navtitle: Configuring the agent to use proxies
+          - topic: agent/agent-fluentbit.md
+            navtitle: Understanding the agent configuration file
+          - topic: agent/agent-set-appsubname.md
+            navtitle: Configuring custom metadata fields 
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
@@ -455,31 +470,12 @@ toc:
                 navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
               - topic: agent/agent-helm-template-clusters.md
                 navtitle: Deploying the Logging agent using a Helm chart
+              - topic: agent/agent-helm-credential-rotation-1.md
+                navtitle: Rotating the Logging agent IAM APIKey by using a Helm chart
               - topic: agent/agent-helm-remove-1.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
               - topic: agent/agent-multiline.md
                 navtitle: Supporting multiline logs
-      - topicgroup:
-          label: Logging agent
-          topics:
-          - topic: agent/agent-fluentbit.md
-            navtitle: Understanding the agent configuration file
-          - topic: agent/download-agent-yaml.md
-            navtitle: Downloading the agent YAML file
-          - topic: agent/agent-openshift.md
-            navtitle: Managing the agent for Openshift clusters
-          - topic: agent/agent-std-cluster.md
-            navtitle: Managing the agent for Kubernetes clusters
-          - topic: agent/agent-set-appsubname.md
-            navtitle: Configuring custom metadata fields
-          - topic: agent/agent-plugin-parameters.md
-            navtitle: Output plug-in parameters to send data to Cloud Logs
-          - topic: agent/agent-plugin-support.md
-            navtitle: Fluent Bit plug-ins supported 
-          - topic: agent/agent-severity.md
-            navtitle: Understanding how the agent parses severities
-          - topic: agent/agent-proxy.md
-            navtitle: Configuring the agent to use proxies
       - topic: regions.md
         navtitle: Locations
       - service_plans.md

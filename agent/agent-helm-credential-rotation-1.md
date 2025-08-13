@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 # Rotating the {{site.data.keyword.agent}} IAM APIKey for ingestion by using a Helm chart
-{: #agent-helm-credential-rotation}
+{: #agent-helm-credential-rotation-1}
 
 You can use Helm to update the {{site.data.keyword.agent}} IAM APIKey that is deployed in the cluster. Updating the IAM APIKey might be required if you need to rotate the IAM APIKey or update the IAM APIKey for other reasons.
 {: shortdesc}
@@ -22,7 +22,7 @@ You can use Helm to update the {{site.data.keyword.agent}} IAM APIKey that is de
 Complete the following steps to update the agent version that is deployed in the cluster:
 
 ## Before you begin
-{: #agent-helm-credential-rotation-prereqs}
+{: #agent-helm-credential-rotation-1-prereqs}
 
 Before you begin, complete the prerequisite tasks.
 
@@ -39,7 +39,7 @@ Before you begin, complete the prerequisite tasks.
 
 
 ## Update the agent with a new API key
-{: #agent-helm-credential-rotation-step2}
+{: #agent-helm-credential-rotation-1-step2}
 {: step}
 
 If the secret has been created manually or if you are using `iamMode=TrustedProfile` then do not refer to this document for updating the IAM APIKey.
@@ -49,13 +49,47 @@ Complete the following steps to update the agent with new APIKey:
 
 1. Log in to the cluster. For more information, see [Access your cluster](/docs/containers?topic=containers-access_cluster).
 
+2. Log in to the Helm registry. Choose one of the following options:
+
+    Option 1: Login to the Helm registry by running the `helm registry login` command:
+
+    ```sh
+    helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
+    ```
+    {: codeblock}
+
+    [Windows]{: tag-windows} Windows PowerShell users should use this command instead:
+
+    ```sh
+    helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
+    ```
+    {: codeblock}
+
+    For more information, see [Using Helm charts in Container Registry: Pulling charts from another registry or Helm repository](/docs/Registry?topic=Registry-registry_helm_charts#registry_helm_charts_pull)
+
+    Option 2:  Log in to the Helm registry in {{site.data.keyword.registryshort}} by running the `ibmcloud cr login` command.
+
+    You can use the `[ibmcloud cr login](/docs/Registry?topic=Registry-containerregcli#bx_cr_login)` command before you perform a Helm dry run or install. For more information, see [Accessing {{site.data.keyword.registryshort}}](/docs/Registry?topic=Registry-registry_access).
+
+    Run the following commands:
+
+    ```sh
+    ibmcloud cr region-set global
+    ```
+    {: codeblock}
+
+    ```sh
+    ibmcloud cr login [--client CLIENT]
+    ```
+    {: codeblock}
+
 2. Update the agent.
 
     If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
     {: attention}
 
     ```sh
-    helm upgrade <install-name> oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<APIKey-value>
+    helm upgrade <install-name> oci://icr.io/ibm/observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<APIKey-value>
     ```
     {: codeblock}
 
@@ -69,7 +103,7 @@ Complete the following steps to update the agent with new APIKey:
     For example, you can run the following command from the directory where the `logs-values.yaml` file is available:
 
     ```sh
-    helm upgrade logging-agent oci://icr.io/ibm-observe/logs-agent-helm --version 1.5.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
+    helm upgrade logging-agent oci://icr.io/ibm/observe/logs-agent-helm --version 1.5.0 --values ./logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<secret>
     ```
     {: screen}
 
@@ -94,7 +128,7 @@ Complete the following steps to update the agent with new APIKey:
 
 
 ## Verify that logs are being delivered to your target destination
-{: #aagent-helm-credential-rotation-step3}
+{: #agent-helm-credential-rotation-1-step3}
 {: step}
 
 Complete the following steps:
