@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-06"
+lastupdated: "2025-08-13"
 
 keywords:
 
@@ -19,13 +19,16 @@ subcollection: cloud-logs
 You can use Helm to update the {{site.data.keyword.agent}} version.
 {: shortdesc}
 
+If you deployed the logging agent by using a Helm chart, and later on made manual updates to the config map configuration, when you do the upgrade, manual updates are lost. Check that the logs-values.yaml file that contains the information for the upgrade includes the configuration for manual updates.
+
 Complete the following steps to update the agent version that is deployed in the cluster:
 
 ## Before you begin
 {: #agent-helm-update-prereqs}
 
-
 - Make sure you have access to Kubernetes cluster with permissions to create namespaces and deploy the agent.
+
+- Take a copy of the current config map for the logging agent. Run: `kubectl get cm logs-agent -n ibm-observe -o yaml > logging-agent-backup-cm.yaml`
 
 - Install the following CLIs:
 

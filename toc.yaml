@@ -48,6 +48,10 @@ toc:
           topics:
           - topic: agent/agent-about.md
             navtitle: About the Logging agent
+          - topic: agent/supported-versions.md
+            navtitle: Supported agent versions
+          - topic: agent/agent-support-policy.md
+            navtitle: Agent support policy
       - topicgroup:
           label: Sending telemetry data
           topics:
@@ -163,7 +167,7 @@ toc:
       - topic: send-logs-api.md
         navtitle: Sending data using the REST API
       - topicgroup:
-          label: Sending data using the Logging agent v1.6.x
+          label: Sending data using the Logging agent
           topics:
           - topicgroup:
               label: Logging agent for orchestrated environments
@@ -171,15 +175,15 @@ toc:
               - topic: agent/agent-version.md
                 navtitle: Checking the available agent versions
               - topic: agent/agent-helm-template-clusters-1.6.0.md
-                navtitle: Helm chart template to deploy the Logging agent v1.6.x
+                navtitle: Helm chart template to deploy the Logging agent
               - topic: agent/helm-chart-versions.md
                 navtitle: Checking the available Helm chart versions
               - topic: agent/helm-chart-download.md
                 navtitle: Downloading a Helm chart
               - topic: agent/agent-helm-os-deploy.md
-                navtitle: Deploying the Logging agent v1.6.x on OpenShift using a Helm chart
+                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
               - topic: agent/agent-helm-kube-deploy.md
-                navtitle: Deploying the Logging agent v1.6.x on a Kubernetes cluster using a Helm chart
+                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
               - topic: agent/agent-helm-update.md
                 navtitle: Upgrading the Logging agent version using a Helm chart
               - topic: agent/agent-helm-remove.md
