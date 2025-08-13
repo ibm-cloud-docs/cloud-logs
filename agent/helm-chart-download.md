@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-16"
+lastupdated: "2025-08-13"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-# Downloading a Helm chart version
+# Downloading a Helm chart version for agents v1.6.x
 {: #helm-chart-download}
 
 Complete the following steps to download a Helm chart version.
@@ -28,21 +28,7 @@ Complete the following steps to download a Helm chart version.
 
 2. Check the Helm chart versions that are available. For more information, see [Checking the available Helm chart versions](/docs/cloud-logs?topic=cloud-logs-helm-chart-versions).
 
-3. Login to the Helm registry by running the helm registry login command:
-
-    ```text
-    helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
-    ```
-    {: codeblock}
-
-    [Windows]{: tag-windows} Windows PowerShell users should use this command instead:
-
-    ```sh
-    helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
-    ```
-    {: codeblock}    
-
-4. Run the following command to download a Helm chart:
+3. Run the following command to download a Helm chart:
 
     ```text
     helm pull oci://icr.io/ibm-observe/logs-agent-helm --version CHART_VERSION
@@ -53,7 +39,7 @@ Complete the following steps to download a Helm chart version.
 
     For example, when you run `helm pull oci://icr.io/ibm-observe/logs-agent-helm --version 1.6.0`, the file *logs-agent-helm-1.6.0.tgz* is downloaded.
 
-5. Run the following command to extract the chart files:
+4. Run the following command to extract the chart files:
 
     ```text
     tar -xvf logs-agent-helm-{CHART_VERSION}.tgz

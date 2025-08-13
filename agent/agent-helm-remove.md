@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-08-13"
 
 keywords:
 
@@ -23,7 +23,7 @@ You can use Helm to uninstall the {{site.data.keyword.agent}} from a cluster.
 ## Before you begin
 {: #agent-helm-remove-prereqs}
 
-- Make sure you have access to an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) cluster with permissions to create namespaces and deploy the agent.
+- Make sure you have access to the cluster with permissions to remove the agent.
 
 - Install the following CLIs:
 

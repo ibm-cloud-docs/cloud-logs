@@ -13,54 +13,55 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Deploying the {{site.data.keyword.agent}} v1.6.x for OpenShift clusters
-{: #agent-helm-os-deploy}
+# Deploying the {{site.data.keyword.agent}} for Kubernetes clusters using a Helm chart
+{: #agent-helm-kube-deploy-1}
 
-You can use a Helm chart to deploy the {{site.data.keyword.agent}} v1.6.x to collect and route infrastructure and application logs from an OpenShift cluster to an {{site.data.keyword.logs_full_notm}} instance.
+You can use a Helm chart to deploy the {{site.data.keyword.agent}} to collect and route infrastructure and application logs from a Kubernetes cluster to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
-Complete the following steps to deploy an agent on an OpenShift cluster:
+Complete the following steps to deploy an agent on an Kubernetes cluster:
 
 ## Before you begin
-{: #agent-helm-os-deploy-prereqs}
+{: #agent-helm-kube-deploy-1-prereqs}
 
-- Make sure you have access to an {{site.data.keyword.openshiftlong_notm}} (`OpenShift`) cluster with permissions to create namespaces and deploy the agent.
+
+- Make sure you have access to Kubernetes cluster with permissions to create namespaces and deploy the agent.
 
 - Install the following CLIs:
 
     - The {{site.data.keyword.cloud_notm}} CLI to log in to the {{site.data.keyword.cloud_notm}} and manage {{site.data.keyword.cloud_notm}} services such as creating an API key.
 
-    - The Openshift CLI to manage the cluster from the command line. [Learn more](/docs/openshift?topic=openshift-cli-install).
-
-    - The latest release of the version 3 [Helm CLI](https://github.com/helm/helm/releases)
+    - The Kubernetes CLI to manage the cluster by using `kubectl` commands. [Learn more](/docs/containers?topic=containers-cli-install).
 
 - Read about [the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about).
 
 - Check the agent versions that are available. For more information, see [Checking the available agent versions](/docs/cloud-logs?topic=cloud-logs-check-agent-versions).  Note that the version of the Helm chart will match the version of the agent - for example, if you are using version 1.3.0 of the agent there's a Helm chart with version 1.3.0 that accompanies that version.
 
 
+
 ## Step 1. Define the authentication method for the agent
-{: #agent-helm-os-deploy-step1}
+{: #agent-helm-kube-deploy-1-step1}
 
 Choose the type of identity and the authentication method for the agent. Then, create a trusted profile or an API key. The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
 You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full}} service. For more information, see [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
+
 Choose one of the following options:
 
 ### Option 1: Authentication using a trusted profile
-{: #agent-helm-os-deploy-step1-tp}
+{: #agent-helm-kube-deploy-1-step1-tp}
 
 Create a Trusted Profile. For more information, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
 
 ### Option 2: Authentication using a service ID API key
-{: #agent-helm-os-deploy-step1-key}
+{: #agent-helm-kube-deploy-1-step1-key}
 
 Generate an API Key for service ID authentication. For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
 
 ## Step 2. Configuring the Helm chart values file for the {{site.data.keyword.agent}}
-{: #agent-helm-os-deploy-step2}
+{: #agent-helm-kube-deploy-1-step2}
 
 Complete the following steps:
 
@@ -72,11 +73,11 @@ Complete the following steps:
     metadata:
       name: "logs-agent"
     image:
-      version: "1.6.1"  # required
+      version: "1.5.1"  # required
 
     clusterName: "ENTER_CLUSTER_NAME"     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
 
-    # enableMultiline: false   # Set to true to add custom multiline support for applications, like Java or Python, where errors and stack traces can span several lines, and each line is sent as a separate log entry.
+    # enableMultiline: true   # Set to true to enable multiline support for applications, like Java or Python, where errors and stack traces can span several lines, and each line is sent as a separate log entry.
 
     env:
       # ingestionHost is a required field. For example:
@@ -91,10 +92,6 @@ Complete the following steps:
       iamMode: "TrustedProfile"
       # trustedProfileID - trusted profile id - required for iam trusted profile mode
       trustedProfileID: "Profile-yyyyyyyy-xxxx-xxxx-yyyy-zzzzzzzzzzzz" # required if iamMode is set to TrustedProfile
-
-    scc:
-      # true here enables creation of Security Context Constraints in Openshift
-      create: true
     ```
     {: codeblock}
 
@@ -102,32 +99,61 @@ Complete the following steps:
 
     | Field Name | Description |
     |------------|-------------|
-    | `image.version` | The version of the agent to be deployed [see Step 1](#agent-helm-os-deploy-step1) |
+    | `image.version` | The version of the agent to be deployed [see Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1) |
     | `clusterName`  | The name of the cluster - this will introduce the tag `kubernetes.cluster_name` into all log lines |
     | `env.ingestionHost` | The public or private ingress endpoint for the {{site.data.keyword.logs_full_notm}} instance to receive the logs |
     | `env.ingestionPort` | The ingress endpoint port  \n Public ingress endpoint = `443`  \n Private ingress endpoint(VPE) = `443`  \n Private ingress endpoint(CSE) = `3443` |
-    | `env.iamMode` | `TrustedProfile` or `IAMAPIKey` based on the authentication method chosen in [Step 1](#agent-helm-os-deploy-step1) |
-    | `env.trustedProfileID` | If `iamMode` is `TrustedProfile` then provide the Trusted Profile ID, otherwise this is not required (for example: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` ). |
+    | `env.iamMode` | `TrustedProfile` or `IAMAPIKey` based on the authentication method chosen in [Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1) |
+    | `env.trustedProfileID` | If `iamMode` is `TrustedProfile` then provide the Trusted Profile ID, otherwise this is not required (for example: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` ).|
     | `env.iamEnvironment` | Dictates the correct IAM authentication endpoint. Valid values are `Production`, `PrivateProduction`, or `Custom`. If omitted, the default value is `Production`.|
     | `env.iamHost` | If `iamEnvironment` is `Custom`, then provide the IAM host (for example: `private.eu-de.iam.cloud.ibm.com`), otherwise this is not required. |
-    | `scc.create` | Set to `true` in order to create the security constraints in Openshift |
     {: caption="Helm chart required parameters" caption-side="bottom"}
 
 ## Step 3. Install the Helm chart
-{: #agent-helm-os-deploy-deploy-step3a}
+{: #agent-helm-kube-deploy-1-step3}
 
 If you are using the `iamMode` as `IAMAPIKey` then the apikey needs to be present in a Kubernetes secret named `logs-agent` with the key name `IAM_API_KEY`.  The secret can be created using the Helm chart by including the `--set secret.iamAPIKey=<your iamAPIKey>` option when running the helm install.  If the secret has been created manually or if you are using `iamMode=TrustedProfile` then do not include this option.
 {: important}
 
 Complete the following steps:
 
-1. Log in to the cluster.
+1. Log in to the cluster. For more information, see [Access your cluster](/docs/containers?topic=containers-access_cluster).
 
-    {{site.data.keyword.openshiftlong_notm}} is integrated with IBM Cloud Identity and Access Management (IAM). With IAM, you can authenticate users and services by using their IAM identities and authorize actions with access roles and policies. When you authenticate as a user through the Red Hat OpenShift console, your IAM identity is used to generate a Red Hat OpenShift login token that you can use to log in to the command line. You can automate logging in to your cluster by creating an IAM API key or service ID to use for the `oc login` command. For more information, see [Accessing Red Hat OpenShift clusters](/docs/openshift?topic=openshift-access_cluster#access_automation).
+2. Log in to the Helm registry. Choose one of the following options:
 
-    For example, complete the steps in [Using a service ID to log in to clusters](/docs/openshift?topic=openshift-access_cluster#access_service_id) to log in to your cluster.
+    Option 1: Login to the Helm registry by running the `helm registry login` command:
 
-2. Perform a Helm dry run to see the resources that will be created by the Helm chart.
+    ```sh
+    helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
+    ```
+    {: codeblock}
+
+    [Windows]{: tag-windows} Windows PowerShell users should use this command instead:
+
+    ```sh
+    helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
+    ```
+    {: codeblock}
+
+    For more information, see [Using Helm charts in Container Registry: Pulling charts from another registry or Helm repository](/docs/Registry?topic=Registry-registry_helm_charts#registry_helm_charts_pull)
+
+    Option 2:  Log in to the Helm registry in {{site.data.keyword.registryshort}} by running the `ibmcloud cr login` command.
+
+    You can use the `ibmcloud cr login` command before you perform a Helm dry run or install. For more information, see [Accessing {{site.data.keyword.registryshort}}](/docs/Registry?topic=Registry-registry_access) and [ibmcloud cr login](/docs/Registry?topic=Registry-containerregcli#bx_cr_login).
+
+    Run the following commands:
+
+    ```sh
+    ibmcloud cr region-set global
+    ```
+    {: codeblock}
+
+    ```sh
+    ibmcloud cr login [--client CLIENT]
+    ```
+    {: codeblock}
+
+3. Perform a Helm dry run to see the resources that will be created by the Helm chart.
 
     If you are using the `iamMode`=`TrustedProfile` then the complete command is:
 
@@ -148,7 +174,7 @@ Complete the following steps:
     - `<install-name>` is the name of the Helm installation (`logs-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
-    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-step1)
+    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1)
     - Add `--hide-secret` to hide the API key from showing in the output data after the command runs.
 
     If you would like to inspect the helm chart contents locally, you can download the helm chart to your computer using the command: `helm pull oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version>`.  The downloaded tgz file contains the chart contents.
@@ -159,11 +185,11 @@ Complete the following steps:
     ```sh
     helm install logs-agent --dry-run oci://icr.io/ibm-observe/logs-agent-helm --version 1.6.0 --values ./logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<secret> --hide-secret
     ```
-    {: codeblock}
+    {: screen}
 
 4. Once the resources to be created are verified, then run the Helm install without the `--dry-run` option
 
-     If you are using the `iamMode`=`TrustedProfile` then the complete command is:
+    If you are using the `iamMode`=`TrustedProfile` then the complete command is:
 
      ```sh
     helm install <install-name>  oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace
@@ -182,26 +208,19 @@ Complete the following steps:
     - `<install-name>` is the name of the Helm installation (`logs-agent`)
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
-    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](#agent-helm-os-deploy-step1)
+    - `<APIKey-value>` is the IAM apikey associated with the ServiceID [setup in Step 1](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy#agent-helm-kube-deploy-step1)
 
 
 ## Step 4. Verify the agent is successfully deployed
-{: #agent-helm-os-deploy-deploy-step4}
+{: #agent-helm-kube-deploy-1-step4}
 
 When the agent is deployed, check the following resources are created:
 - The `ibm-observe` namespace.
 
-    To list the namespaces in the cluster, run the following command:
+    Run the following command to list the namespaces in the cluster and check that the `logger-agent` shows with status active.
 
     ```sh
-    oc get namespace
-    ```
-    {: codeblock}
-
-    You can also run the following command to search for the `ibm-observe` namespace:
-
-    ```sh
-    oc get namespace | grep ibm-observe
+    kubectl get namespace
     ```
     {: codeblock}
 
@@ -210,32 +229,39 @@ When the agent is deployed, check the following resources are created:
     Run the following command to view the agent config details.
 
     ```sh
-    oc get configmap logs-agent -n ibm-observe
+    kubectl get configmap logs-agent -n ibm-observe
     ```
     {: codeblock}
 
-    You can also use the following command:
+    You can also use:
 
     ```sh
-    oc describe configmaps logs-agent -n ibm-observe
+    kubectl describe configmaps logs-agent -n ibm-observe
     ```
     {: codeblock}
 
 - A daemonset `logs-agent` in the namespace `ibm-observe`.
 
-    Run the following command to view the daemonset:
+    Run the following command to view the daemonset.
 
     ```sh
-    oc get ds -n ibm-observe
+    kubectl get ds -n ibm-observe
+    ```
+    {: codeblock}
+
+- Verify the agents are started:
+
+    ```sh
+    kubectl -n ibm-observe get ds logs-agent
     ```
     {: codeblock}
 
 - Retrieve the list of agent pods by using the following command:
 
     ```sh
-    oc get pods -n ibm-observe -o wide
+    kubectl get pods -n ibm-observe -o wide
     ```
-    {: pre}
+    {: codeblock}
 
     ```text
     NAME                  READY   STATUS    RESTARTS   AGE    IP              NODE           NOMINATED NODE   READINESS GATES
@@ -250,7 +276,7 @@ When the agent is deployed, check the following resources are created:
     To check how many workers are available in your cluster, you can run the following command:
 
     ```sh
-    oc get nodes
+    kubectl get nodes
     ```
     {: codeblock}
 
@@ -266,10 +292,10 @@ When the agent is deployed, check the following resources are created:
 
     If your nodes are not named by their IP, you can append the `-o wide` option and compare the values in the `INTERNAL-IP` column instead.
 
-    To view the logs of a pod, run `oc logs <POD_NAME>> -n ibm-observe`{: tip}
+    To view the logs of a pod, run `kubectl logs <POD_NAME>> -n ibm-observe`{: tip}
 
 ## Step 5. Verify logs are being delivered to your target destination
-{: #agent-helm-os-deploy-deploy-step5}
+{: #agent-helm-kube-deploy-1-step5}
 
 Complete the following steps:
 

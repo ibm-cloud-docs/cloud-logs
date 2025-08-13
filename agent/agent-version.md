@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-02"
+  years:  2024, 2025
+lastupdated: "2025-08-13"
 
 keywords:
 
@@ -45,13 +45,9 @@ Do the following to check the available {{site.data.keyword.agent}} versions.
 
     ```screen
     Repository                               Tag      Digest         Namespace   Created        Size     Security status
-    icr.io/ibm/observe/logger-agent-plugin   1.0.0    e37324ab54e0   ibm         3 months ago   77 MB    -
-    icr.io/ibm/observe/logger-agent-plugin   1.0.1    ac53710f048e   ibm         3 months ago   77 MB    -
-    icr.io/ibm/observe/logger-agent-plugin   1.0.2    9d7eeb343eac   ibm         3 months ago   94 MB    -
-    icr.io/ibm/observe/logger-agent-plugin   1.0.3    801f6a859e7a   ibm         1 month ago    94 MB    -
-    icr.io/ibm/observe/logger-agent-plugin   1.0.4    56a53b9a3f9b   ibm         4 weeks ago    98 MB    -
-    icr.io/ibm/observe/logger-agent-plugin   1.0.5    504d0ba2fbac   ibm         21 hours ago   104 MB   -
+    icr.io/ibm/observe/logger-agent-plugin   1.6.0   6a34ea510a4f   ibm         2 months ago    102 MB   -
+    icr.io/ibm/observe/logger-agent-plugin   1.6.1   0265b85c698e   ibm         1 month ago     109 MB   -
     ```
     {: screen}
 
-    Choose the desired version (for example 1.0.2 or 1.0.1) when running the installation command with the `-v` flag.
+    Choose the desired version (for example 1.6.1) when running the installation command with the `-v` flag.

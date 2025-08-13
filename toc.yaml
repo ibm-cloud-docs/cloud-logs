@@ -17,7 +17,7 @@ toc:
       - topic: atla.md
         navtitle: Log Analysis and Activity Tracker users
       - topicgroup:
-          label: About
+          label: About IBM Cloud Logs
           topics:
           - topic: about-cl.md
             navtitle: About IBM Cloud Logs
@@ -43,6 +43,11 @@ toc:
             navtitle: Metadata fields
           - topic: control-data.md
             navtitle: Controlling ingested data for search
+      - topicgroup:
+          label: About the Logging agent
+          topics:
+          - topic: agent/agent-about.md
+            navtitle: About the Logging agent
       - topicgroup:
           label: Sending telemetry data
           topics:
@@ -155,39 +160,34 @@ toc:
       - topic: instance-launch.md
         navtitle: Launching the UI
       - account_preferences.md
+      - topic: send-logs-api.md
+        navtitle: Sending data using the REST API
       - topicgroup:
-          label: Sending data to Cloud Logs
+          label: Sending data using the Logging agent v1.6.x
           topics:
-          - topic: agent/agent-about.md
-            navtitle: About the Logging agent
-          - topic: send-logs-api.md
-            navtitle: Using the REST API
           - topicgroup:
               label: Logging agent for orchestrated environments
               topics:
               - topic: agent/agent-version.md
                 navtitle: Checking the available agent versions
+              - topic: agent/agent-helm-template-clusters-1.6.0.md
+                navtitle: Helm chart template to deploy the Logging agent v1.6.x
               - topic: agent/helm-chart-versions.md
                 navtitle: Checking the available Helm chart versions
               - topic: agent/helm-chart-download.md
                 navtitle: Downloading a Helm chart
               - topic: agent/agent-helm-os-deploy.md
-                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
+                navtitle: Deploying the Logging agent v1.6.x on OpenShift using a Helm chart
               - topic: agent/agent-helm-kube-deploy.md
-                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
+                navtitle: Deploying the Logging agent v1.6.x on a Kubernetes cluster using a Helm chart
               - topic: agent/agent-helm-update.md
-                navtitle: Updating the Logging agent version
-              - topic: agent/configure-agent.md
-              - topic: agent/agent-helm-credential-rotation.md
-                navtitle: Updating the Logging agent IAM APIKey by using a Helm chart
-              - topic: agent/agent-multiline.md
-                navtitle: Supporting multiline logs
+                navtitle: Upgrading the Logging agent version using a Helm chart
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
-              - topic: agent/agent-helm-template-clusters.md
-                navtitle: Deploying the Logging agent using a Helm chart prior to 1.6.0
-              - topic: agent/agent-helm-template-clusters-1.6.0.md
-                navtitle: Deploy the Logging agent using a 1.6.0 Helm chart
+              - topic: agent/configure-agent.md
+                navtitle: Updating the Logging agent path files
+              - topic: agent/agent-helm-credential-rotation.md
+                navtitle: Updating the Logging agent IAM APIKey by using a Helm chart
           - topicgroup:
               label: Logging agent for Linux environments
               topics:
@@ -211,6 +211,26 @@ toc:
           - agent/agent-multiple-icl-targets.md
           - topic: verify-key.md
             navtitle: Verifying your API key
+      - topicgroup:
+          label: Sending data using the Logging agent prior to v1.6.x
+          topics:
+          - topicgroup:
+              label: Logging agent for orchestrated environments
+              topics:
+              - topic: agent/helm-chart-versions-1.md
+                navtitle: Checking the available Helm chart versions
+              - topic: agent/helm-chart-download-1.md
+                navtitle: Downloading a Helm chart
+              - topic: agent/agent-helm-template-clusters-1.6.0.md
+                navtitle: Deploy the Logging agent using a 1.6.0 Helm chart
+              - topic: agent/agent-helm-os-deploy-1.md
+                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
+              - topic: agent/agent-helm-kube-deploy-1.md
+                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
+              - topic: agent/agent-helm-template-clusters.md
+                navtitle: Deploying the Logging agent using a Helm chart
+              - topic: agent/agent-multiline.md
+                navtitle: Supporting multiline logs
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
