@@ -182,7 +182,7 @@ toc:
                 navtitle: Checking the available agent versions
               - topic: agent/agent-helm-template-clusters-latest.md
                 navtitle: Helm chart template
-              - topic: agent/agent-helm-template-config-options.md
+              - topic: agent/agent-helm-template-config-options-required.md
                 navtitle: Helm Chart configuration options
               - topic: agent/helm-chart-versions.md
                 navtitle: Checking the available Helm chart versions
@@ -198,8 +198,6 @@ toc:
                 navtitle: Rotating the Logging agent IAM APIKey for ingestion using a Helm chart
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
-              - topic: agent/configure-agent.md
-                navtitle: Updating the Logging agent path files
           - topicgroup:
               label: Logging agent for Linux environments
               topics:
@@ -228,6 +226,8 @@ toc:
             navtitle: Configuring the agent to use proxies
           - topic: agent/agent-fluentbit.md
             navtitle: Understanding the agent configuration file
+          - topic: agent/configure-agent.md
+            navtitle: Updating the Logging agent path files
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields 
       - topic: tco-optimizer.md
