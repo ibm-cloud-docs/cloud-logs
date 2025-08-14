@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-26"
+lastupdated: "2025-08-14"
 
 keywords:
 
@@ -31,6 +31,38 @@ Release of the {{site.data.keyword.agent}} version 1.6.1
    This version includes the following notable changes:
 
    * You can configure the Kubernetes metadata fields included with each log record. By default, only essential fields such as `pod_name`, `namespace_name`, and `container_name` are kept. This helps reduce the amount of metadata stored with each log and reduces storage costs.
+
+   * The ability to add custom configurations to all sections.
+
+     Each of the service, parsers and pipeline (inputs, processors, filters and outputs) can optionally be configured with additional settings that are not necessarily exposed with the default configurations.
+
+     The following configurations can be used for more advanced configurations if necessary:
+
+     - `additionalServiceOptions`
+     - `additionalKubeLogInputProcessors`
+     - `additionalInputs`
+     - `additionalFilters` (use `additionalKubeLogInputProcessors` if possible)
+     - `additionalOutputs`
+     - `additionalParsers`
+
+   * Enhanced system file processing of `/var/log` (for example, `syslog`, `messages`, `kubelet.log`).
+
+     Use the `systemLogs` configuration to replace the `additionalLogSourcePaths` configuration to get better details for your host files:
+
+     - Timestamps are parsed according to the format of the syslog files.
+     - The Kubernetes filter is skipped which will reduce warnings in the logs and improve performance.
+     - In {{site.data.keyword.logs_full_notm}} the `subsystemName` is the name of the host filename without the path.
+     - In {{site.data.keyword.logs_full_notm}} the `applicationName` is the hostname of the node.
+     - The cluster name is still recorded in `kubernetes.cluster_name` to be consistent with the container logs for filtering.
+
+   * Multiline patterns are easier to configure.
+ 
+     The `enableMultiline: true` option can be used in conjunction with the `multilinePreprocessor` to override the default multiline processor to better fit your situation.
+
+   * Option to skip the Kubernetes filter
+
+     The `enableKubernetesFilter: false` option can be used to bypass the Kubernetes plug-in.  This will mean that some of the Kubernetes metadata will be unavailable and some of the advanced parsing features provided by the Kubernetes filter, such as using container annotations to control the parser, will be unavailable.
+
    * After an initial successful test of the connection between the {{site.data.keyword.agent}} and {{site.data.keyword.logs_full_notm}}, all failed log transmissions are retried, regardless of the error received.
    * Fixed a bug when `defaultMetadata` is set in the `values.yaml` file that resulted in an invalid configuration.
 
@@ -81,6 +113,10 @@ Release of the {{site.data.keyword.agent}} version 1.6.0
    * Updated Fluent Bit to version 3.2.10
    * It is now possible to configure the agent to use [proxies](/docs/cloud-logs?topic=cloud-logs-agent-proxy). 
    * The helm chart provided for {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}} now use the Fluent Bit yaml-based configuration files.  This replaces the classic configuration which will be deprecated by Fluent Bit at the end of 2025.  The helm `values.yaml` files used with helm versions before 1.6.0 are compatible with 1.6.0.  Users that customize their configurations might need to take actions before applying this version of the helm chart.  If you are editing the config map files after deploying the helm chart then you will need to make changes to your process.  There are additional configuration values introduce with 1.6.0 that give more flexibility in your agent configuration. For more information, see [Template to deploy the {{site.data.keyword.agent}} using a 1.6.x Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-160).
+
+   Backward compatibility: You can still use your existing `logs-values.yaml` file from version 1.5.x with version 1.6.0. The transition is designed to be non-disruptive.
+
+   [Deprecated]{: tag-deprecated} The classic configuration mode will be officially unsupported by Fluent Bit by the end of 2025. We recommend migrating to the YAML format as soon as possible to stay aligned with future updates. You can continue to use the previous versions of the Helm charts that were based on the classic configuration mode with newer versions of the Fluent Bit agent, but by the end of 2025 the classic configuration mode will be unsupported by Fluent Bit.
 
    The following new {{site.data.keyword.agent}} packages are available.
 
