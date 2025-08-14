@@ -180,14 +180,32 @@ toc:
               topics:
               - topic: agent/agent-version.md
                 navtitle: Checking the available agent versions
-              - topic: agent/agent-helm-template-clusters-latest.md
-                navtitle: Helm chart template
-              - topic: agent/agent-helm-template-config-options-required.md
-                navtitle: Helm Chart configuration options
               - topic: agent/helm-chart-versions.md
                 navtitle: Checking the available Helm chart versions
               - topic: agent/helm-chart-download.md
                 navtitle: Downloading a Helm chart
+              - topic: agent/agent-helm-template-config-options-required.md
+                navtitle: Helm Chart required configuration options
+              - topic: agent/agent-helm-iam-endpoint.md
+                navtitle: Configuring the IAM endpoint
+              - topic: agent/agent-helm-iam-authentication.md
+                navtitle: Configuring the IAM authentication method
+              - topic: agent/agent-helm-metadata.md
+                navtitle: Configuring custom metadata values
+              - topic: agent/agent-helm-retry-sending-data.md
+                navtitle: Configuring the number of retries sending data if an error occurs
+              - topic: agent/agent-helm-resources.md
+                navtitle: Changing the resources that are assigned to run the agent
+              - topic: agent/agent-helm-parallel-processing.md
+                navtitle: Configuring the output plugin to enable parallel processing of log data
+              - topic: agent/agent-helm-severity.md
+                navtitle: Overriding the default severity field
+              - topic: agent/agent-helm-tainted.md
+                navtitle: Ensuring tainted nodes are updated
+              - topic: agent/agent-helm-log-files.md
+                navtitle: Configuring the log files that are collected by the agent
+              - topic: agent/agent-helm-raw-log.md
+                navtitle: Keeping a copy of the original log
               - topic: agent/agent-helm-os-deploy.md
                 navtitle: Deploying the Logging agent on OpenShift using a Helm chart
               - topic: agent/agent-helm-kube-deploy.md
