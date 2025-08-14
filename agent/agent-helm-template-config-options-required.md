@@ -71,8 +71,7 @@ outputWorkers: 4
 #  subsystemName: ""
 #  applicationName: ""
 
-# Add additional metadata
-#additionalMetadata:
+#additionalMetadata:        # Add additional metadata
 #  region: us-south
 #  env: prod
 
@@ -311,7 +310,7 @@ resources:
 ```
 {: codeblock}
 
-## `outputWorkers`
+## Configure the output plugin to enable parallel processing of log data
 {: #agent-helm-template-config-options-required-7}
 
 This setting defines the number of worker threads used by the output plug-in to enable parallel processing of log data.
@@ -327,10 +326,12 @@ outputWorkers: 2
 ```
 {: codeblock}
 
-## `severityFieldName`
+
+## Override the default severity field
 {: #agent-helm-template-config-options-required-8}
 
-This is an optional setting that allows you to override the default severity field sent to {{site.data.keyword.logs_full_notm}}.
+Set `severityFieldName` to override the default severity field that is sent to {{site.data.keyword.logs_full_notm}}.
+
 Use this option if your log messages use a non-standard field name (for example, `Log_Level`, `logSeverity`, and so on) to indicate severity.
 
 When configured:
@@ -343,17 +344,16 @@ severityFieldName: Log_Level
 ```
 {: codeblock}
 
-## `tolerations`
+## Ensure tainted nodes are updated
 {: #agent-helm-template-config-options-required-9}
 
-In some Kubernetes environments, nodes may have taints that prevent the Fluent Bit agent from being scheduled. To ensure the agent can run on these nodes, you must define appropriate tolerations in your Helm chart configuration.
-Refer to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/){: external} about taints and tolerations for more information.
+In some Kubernetes environments, nodes may have taints that prevent the Fluent Bit agent from being scheduled. To ensure the agent can run on these nodes, you must define appropriate tolerations in your Helm chart configuration. Refer to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/){: external} about taints and tolerations for more information.
 
 For example, if you have a taint on a node:
 
 `kubectl taint nodes 10.1.2.3 myNodeType=ingress:NoSchedule`
 
-You can allow the agent to be scheduled on that node by adding this configuration to your `values.yaml` file:
+You can allow the agent to be scheduled on that node by adding the `tolerations` configuration to your `log-values.yaml` file:
 
 ```yaml
 tolerations:
@@ -421,13 +421,14 @@ systemLogs:
 
 
 
-
-## `keepParsedLog`
+## Keep a copy of the original log
 {: #agent-helm-template-config-options-required-12}
 
-This is a boolean flag that determines whether to retain the original log field after it has been successfully processed by the Kubernetes plug-in.
+You can set `keepParsedLog` to `true` to retain a copy of the original log field after it has been successfully processed by the Kubernetes plug-in and the parser extracts the fields successfully.
 
 The default is `false`.
+
+Valid values are: `true`, `false`
 
 Enabling this will result in duplicate log data, which may increase storage usage.
 {: note}
@@ -435,19 +436,22 @@ Enabling this will result in duplicate log data, which may increase storage usag
 Example configuration:
 
 ```yaml
-keepParsedLog: true
+keepParsedLog: false
 ```
 {: codeblock}
 
 
-## `enableKubernetesFilter`
-{: #agent-helm-template-config-options-required-13}
+## Enable the Kubernetes filter to enrich logs with Kubernetes metadata
+{: #agent-helm-template-config-options-required-14}
 
-By default, the Helm chart enables the Kubernetes filter for processing the container logs.  This provides capabilities such as:
+By default, the Helm chart enables the Kubernetes filter, `enableKubernetesFilter`, for processing the container logs.  This provides capabilities such as:
 
 - Enriching the log lines with metadata about the running container.
 - Invoking another parser after the CRI parser to further process the log data.
 - Using annotations to choose a secondary parser.
+
+For more information, see [Kubernetes](https://docs.fluentbit.io/manual/data-pipeline/filters/kubernetes){: external}.
+
 
 If you do not wish to use these features, then they can be disabled with this option.
 
@@ -457,8 +461,8 @@ enableKubernetesFilter: false
 {: codeblock}
 
 
-## Customize the Kubernetes metadata fields nincluded with each log record
-{: #kubernetesFields}
+### Include metadata fields
+{: #agent-helm-template-config-options-required-14-1}
 
 Youc an configure `kubernetesFields`This configuration allows controlling which Kubernetes metadata fields are included with each log record. By default, only essential fields such as `pod_name`, `namespace_name`, and `container_name` are kept. This helps reduce the amount of metadata stored with each log and reduces storage costs.
 
@@ -495,8 +499,8 @@ kubernetesFields:
 {: codeblock}
 
 
-## `includeAnnotations`
-{: #agent-helm-template-clusters-chart-options-160-include-annotations}
+### Include annotations
+{: #agent-helm-template-config-options-required-14-2}
 
 This configuration changes the setting for the Kubernetes filter to include the annotations from Kubernetes with the log records.
 
@@ -508,6 +512,23 @@ The entry in the `logs-values.yaml` file looks as follows:
 includeAnnotations: true
 ```
 {: codeblock}
+
+
+### Include labels
+{: #agent-helm-template-config-options-required-14-3}
+
+This configuration changes the setting for the Kubernetes filter to include labels from Kubernetes with the log records.
+
+The default value for this setting is `false`.
+
+The entry in the `logs-values.yaml` file looks as follows:
+
+```yaml
+includeLabels: false
+```
+{: codeblock}
+
+
 
 ## `additionalServiceOptions`
 {: #additionalServiceOptioners}

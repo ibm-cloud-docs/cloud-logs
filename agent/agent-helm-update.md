@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-14"
 
 keywords:
 
@@ -13,13 +13,13 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Updating the {{site.data.keyword.agent}} version by using a Helm chart
+# Upgrade the {{site.data.keyword.agent}} version by using a Helm chart
 {: #agent-helm-update}
 
 You can use Helm to update the {{site.data.keyword.agent}} version.
 {: shortdesc}
 
-Complete the following steps to update the agent version that is deployed in the cluster:
+Complete the following steps to upgrade the agent version that is deployed in the cluster:
 
 If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
 {: attention}
