@@ -50,7 +50,7 @@ toc:
             navtitle: About the Logging agent
           - topic: agent/agent-severity.md
             navtitle: Understanding how the agent parses severities
-          - topic: agent/supported-versions.md
+          - topic: agent/agent-supported-versions.md
             navtitle: Supported agent versions
           - topic: agent/agent-support-policy.md
             navtitle: Agent support policy

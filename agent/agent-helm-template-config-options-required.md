@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-14"
 
 keywords:
 
@@ -117,7 +117,7 @@ scc:
 
 
 ## Configure the IAM endpoint
-{: #agent-helm-template-config-options-required-0}
+{: #agent-helm-template-config-options-required-1}
 
 Set `env.iamEnvironment` to control the IAM endpoint that is used by the agent to exchange the tokens.
 
@@ -158,7 +158,7 @@ Valid values are:
 
 
 ## Configure the authenticaion method
-{: #agent-helm-template-config-options-required-1}
+{: #agent-helm-template-config-options-required-2}
 
 Configure `env.iamMode` to choose the authentication method to use by the agent when sending logs to an {{site.data.keyword.logs_full_notm}} instance.
 
@@ -204,7 +204,7 @@ Consider the following information when setting this parameter:
 
 
 ## Configure custom values for applicationName and subsystemName
-{: #agent-helm-template-config-options-required-2}
+{: #agent-helm-template-config-options-required-3}
 
 You can configure the `defaultMetadata` section to override the default `subsystemName` and `applicationName` that are used in the environment.
 
@@ -223,7 +223,7 @@ defaultMetadata:
 {: codeblock}
 
 ## Configure custom tags
-{: #agent-helm-template-config-options-required-2a}
+{: #agent-helm-template-config-options-required-4}
 
 You can configure the `additionalMetadata` section to add additional tags.
 
@@ -250,9 +250,46 @@ The previous example will result in the following additional fields added to eac
 ```
 {: codeblock}
 
+## Configure the number of retries sending data if an error occurs
+{: #agent-helm-template-config-options-required-5}
+
+In FluentBit, the scheduler provides a configuration option called `Retry_Limit`. It is set independently for each output section.
+The `retryLimit` configuration places a limit on the number of times the agent will retry sending data if an error occurs that is considered to be retryable.
+
+You can set `retryLimit` to:
+- `false` to indicate that there is no limit for the number of retries that the scheduler can do. This is the default value.
+
+    The entry in the `logs-values.yaml` file looks as follows:
+
+    ```yaml
+    retryLimit: false
+    ```
+    {: codeblock}
+
+- An integer N value greater or equal to 1.
+
+    The entry in the `logs-values.yaml` file looks as follows:
+
+    ```yaml
+    retryLimit: 8
+    ```
+    {: codeblock}
+
+- *no_retries* to indicate that data is not sent to the destination if it failed the first time.
+
+    The entry in the `logs-values.yaml` file looks as follows:
+
+    ```yaml
+    retryLimit: "no_retries"
+    ```
+    {: codeblock}
+
+For more information, see the [Fluentbit documentation about retries](https://docs.fluentbit.io/manual/administration/scheduling-and-retries) to understand the implications of setting this value.
+
+In some situations, this setting could lead to log data being discarded by the agent due to the inability to send.
 
 ## Change the resources that are assigned to the {{site.data.keyword.agent}} container
-{: #agent-helm-template-config-options-required-3}
+{: #agent-helm-template-config-options-required-6}
 
 If you need to update any of the values, the entire configuration must be provided even if you don't update all of the values.
 {: important}
@@ -274,96 +311,8 @@ resources:
 ```
 {: codeblock}
 
-
-## Configure the logs collected by the agent
-{: #agent-helm-template-config-options-required-4}
-
-By default the agent will collect the logs from `/var/log/containers/*.log` and ignore `/var/log/at/*`.
-{: note}
-
-The following additional variables can be provided to include and exclude the set of logs to be processed by the agent:
-- `excludeLogSourcePaths`: List of files that the agent is configured to ignore. The defailt value is set to ignore `/var/log/at/*`
-- `selectedLogSourcePaths`: List of files that the agent collects and sends to {{site.data.keyword.logs_full_notm}}. The default value is set to `/var/log/containers/*.log`. You can define multiple paths by using a comma separated list, for example `/var/log/abc/*.log,/var/log/xyz/*.log`.
-
-The entry in the `logs-values.yaml` file looks as follows:
-
-```yaml
-# comma separated list, for example “/var/log/abc/*.log,/var/log/xyz/*.log”
-excludeLogSourcePaths: ""
-selectedLogSourcePaths: ""
-```
-{: codeblock}
-
-
-## `systemLogs`
-{: #systemLogs}
-
-If you want to process files from a path other than `/var/log/containers` (for example, `/var/log/syslog` or `/var/log/kubelet.log`), then use the `systemLogs` setting to enable the processing for these files.
-
-You can use the `systemLogsParser` option in order to consider a different parser - by default the `kube_syslog` parser is used which is appropriate for newer VPC-based systems.  Some of the classic Kubernetes clusters may require the `systemLogsParser` to be set to `kube_syslog_classic` in order to match the timestamp format on those systems.
-
-```yaml
-systemLogs:
-  - /var/log/kube-proxy.log
-  - /var/log/kubelet.log
-  - /var/log/syslog
-```
-{: codeblock}
-
-## `enableKubernetesFilter`
-{: #enableKubernetesFilter}
-
-By default the Helm chart enables the Kubernetes filter for processing the container logs.  This provides capabilities such as:
-
-- Enriching the log lines with metadata about the running container.
-- Invoking another parser after the CRI parser to further process the log data.
-- Using annotations to choose a secondary parser.
-
-If you do not wish to use these features, then they can be disabled with this option.
-
-```yaml
-enableKubernetesFilter: false
-```
-{: codeblock}
-
-## `retryLimit`
-{: #agent-helm-template-clusters-chart-options-160-retrylimit}
-
-This configuration places a limit on the number of times the agent will retry sending data if an error occurs that is considered to be retryable.
-
-The default is `False`.
-
-For more information, see the [Fluentbit documentation about retries](https://docs.fluentbit.io/manual/administration/scheduling-and-retries) to understand the implications of setting this value.
-
-In some situations this setting could lead to log data being discarded by the agent due to the inability to send.
-
-The entry in the `logs-values.yaml` file looks as follows:
-
-```yaml
-retryLimit: 8
-```
-{: codeblock}
-
-
-## `keepParsedLog`
-{: #keepParsedLogs}
-
-This is a boolean flag that determines whether to retain the original log field after it has been successfully processed by the Kubernetes plug-in.
-
-The default is `false`.
-
-Enabling this will result in duplicate log data, which may increase storage usage.
-{: note}
-
-Example configuration:
-
-```yaml
-keepParsedLog: true
-```
-{: codeblock}
-
 ## `outputWorkers`
-{: #outputWorkers}
+{: #agent-helm-template-config-options-required-7}
 
 This setting defines the number of worker threads used by the output plug-in to enable parallel processing of log data.
 
@@ -379,7 +328,7 @@ outputWorkers: 2
 {: codeblock}
 
 ## `severityFieldName`
-{: #severityFieldName}
+{: #agent-helm-template-config-options-required-8}
 
 This is an optional setting that allows you to override the default severity field sent to {{site.data.keyword.logs_full_notm}}.
 Use this option if your log messages use a non-standard field name (for example, `Log_Level`, `logSeverity`, and so on) to indicate severity.
@@ -395,7 +344,7 @@ severityFieldName: Log_Level
 {: codeblock}
 
 ## `tolerations`
-{: #tolerations}
+{: #agent-helm-template-config-options-required-9}
 
 In some Kubernetes environments, nodes may have taints that prevent the Fluent Bit agent from being scheduled. To ensure the agent can run on these nodes, you must define appropriate tolerations in your Helm chart configuration.
 Refer to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/){: external} about taints and tolerations for more information.
@@ -418,12 +367,100 @@ tolerations:
 - These fields are directly added to the DaemonSet's tolerations section.
 - This ensures the agent respects the taint rules and can be scheduled accordingly.
 
+## Configure the log files that are collected by the agent
+{: #agent-helm-template-config-options-required-10}
+
+By default the agent will collect the logs from `/var/log/containers/*.log` and ignore `/var/log/at/*`.
+{: note}
+
+The following additional variables can be provided to include and exclude the set of logs to be processed by the agent:
+- `excludeLogSourcePaths`: List of files that the agent is configured to ignore. The defailt value is set to ignore `/var/log/at/*`
+- `selectedLogSourcePaths`: List of files that the agent collects and sends to {{site.data.keyword.logs_full_notm}}. The default value is set to `/var/log/containers/*.log`. You can define multiple paths by using a comma separated list, for example `/var/log/abc/*.log,/var/log/xyz/*.log`.
+
+The entry in the `logs-values.yaml` file looks as follows:
+
+```yaml
+# comma separated list, for example “/var/log/abc/*.log,/var/log/xyz/*.log”
+excludeLogSourcePaths: ""
+selectedLogSourcePaths: ""
+```
+{: codeblock}
 
 
-## `kubernetesFields`
+## Configure the system component logs that are collected by the agent
+{: #agent-helm-template-config-options-required-11}
+
+System component logs record events that happen in the cluster. There are two types of system components: system components that run in a container and system components directly involved in running containers. For example, the kubelet and container runtime do not run in containers. The Kubernetes scheduler, controller manager, and API server run within pods. If your cluster uses kube-proxy, you typically run this as a DaemonSet.
+
+Use the `systemLogs` setting to enable the processing of system component logs that are located in the `/var/log` directory. System logs in `/var/log/containers/` are collected automatically unless you exclude them in the `excludeLogSourcePaths` section.
+
+The entry in the `logs-values.yaml` file looks as follows:
+
+```yaml
+systemLogs:
+  - /var/log/kube-apiserver.log. # Logs generated by the API server.
+  - /var/log/kube-scheduler.log # Logs generated by the scheduler. This component is responsible for making scheduling decisions.
+  - /var/log/kube-controller-manager.log # Logs generated by the Kube controller manager that runs most Kubernetes built-in controllers.
+  - /var/log/kube-proxy.log  # Logs generated by the kube-proxy. This component is responsible for directing traffic to Service endpoints.
+  - /var/log/kubelet.log  # Logs generated by the kubelet. This component is responsible for running containers on the node.
+  - /var/log/syslog
+```
+{: codeblock}
+
+
+By default, the `kube_syslog` parser is used which is appropriate for newer VPC-based systems.
+
+Some of the classic Kubernetes clusters may require the `systemLogsParser` to be set to `kube_syslog_classic` in order to match the timestamp format on those systems. You can use the `systemLogsParser` option in order to consider a different parser.  The entry in the `logs-values.yaml` file looks as follows:
+
+```yaml
+systemLogsParser: "kube_syslog_classic"
+systemLogs:
+  - /var/log/syslog
+```
+{: codeblock}
+
+
+
+
+## `keepParsedLog`
+{: #agent-helm-template-config-options-required-12}
+
+This is a boolean flag that determines whether to retain the original log field after it has been successfully processed by the Kubernetes plug-in.
+
+The default is `false`.
+
+Enabling this will result in duplicate log data, which may increase storage usage.
+{: note}
+
+Example configuration:
+
+```yaml
+keepParsedLog: true
+```
+{: codeblock}
+
+
+## `enableKubernetesFilter`
+{: #agent-helm-template-config-options-required-13}
+
+By default, the Helm chart enables the Kubernetes filter for processing the container logs.  This provides capabilities such as:
+
+- Enriching the log lines with metadata about the running container.
+- Invoking another parser after the CRI parser to further process the log data.
+- Using annotations to choose a secondary parser.
+
+If you do not wish to use these features, then they can be disabled with this option.
+
+```yaml
+enableKubernetesFilter: false
+```
+{: codeblock}
+
+
+## Customize the Kubernetes metadata fields nincluded with each log record
 {: #kubernetesFields}
 
-This configuration allows controlling which Kubernetes metadata fields are included with each log record. By default, only essential fields such as `pod_name`, `namespace_name`, and `container_name` are kept. This helps reduce the amount of metadata stored with each log and reduces storage costs.
+Youc an configure `kubernetesFields`This configuration allows controlling which Kubernetes metadata fields are included with each log record. By default, only essential fields such as `pod_name`, `namespace_name`, and `container_name` are kept. This helps reduce the amount of metadata stored with each log and reduces storage costs.
 
 The following fields can be included by uncommenting them or adding them to the list:
 - `pod_name`
