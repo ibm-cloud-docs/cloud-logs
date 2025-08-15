@@ -235,7 +235,7 @@ toc:
                 navtitle: Uninstalling the Logging agent using a Helm chart
               - topic: agent/configure-agent.md
                 navtitle: Configuring the log files that are collected
-              - topic: agent/agent-multiline-new.md
+              - topic: agent/agent-multiline.md
                 navtitle: Multiline support for orchestrated environments
           - topicgroup:
               label: Managing the Logging agent for Linux environments
