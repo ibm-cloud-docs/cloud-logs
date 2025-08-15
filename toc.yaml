@@ -17,7 +17,7 @@ toc:
       - topic: atla.md
         navtitle: Log Analysis and Activity Tracker users
       - topicgroup:
-          label: About
+          label: About IBM Cloud Logs
           topics:
           - topic: about-cl.md
             navtitle: About IBM Cloud Logs
@@ -43,6 +43,19 @@ toc:
             navtitle: Metadata fields
           - topic: control-data.md
             navtitle: Controlling ingested data for search
+      - topicgroup:
+          label: About the Logging agent
+          topics:
+          - topic: agent/agent-about.md
+            navtitle: About the Logging agent
+          - topic: agent/agent-severity.md
+            navtitle: Understanding how the agent parses severities
+          - topic: agent/agent-supported-versions.md
+            navtitle: Supported agent versions
+          - topic: agent/agent-support-policy.md
+            navtitle: Agent support policy
+          - topic: agent/agent-plugin-support.md
+            navtitle: Fluent Bit plug-ins supported
       - topicgroup:
           label: Sending telemetry data
           topics:
@@ -99,7 +112,9 @@ toc:
           - topic: iam-ingestion-trusted-profile.md
             navtitle: Generating a Trusted Profile for ingestion
           - topic: iam-ingestion-serviceid-api-key.md
-            navtitle: Generating a service ID API Key for ingestion 
+            navtitle: Generating a service ID API Key for ingestion
+          - topic: verify-key.md
+            navtitle: Verifying the service ID API Key for ingestion 
           - topic: iam-actions.md
             navtitle: IAM actions by role
           - topic: iam-views.md
@@ -156,47 +171,81 @@ toc:
         navtitle: Launching the UI
       - account_preferences.md
       - topicgroup:
-          label: Sending data to Cloud Logs
+          label: Sending data to a Cloud Logs instance
           topics:
-          - topic: agent/agent-about.md
-            navtitle: About the Logging agent
           - topic: send-logs-api.md
-            navtitle: Using the REST API
+            navtitle: Sending data using the REST API
           - topicgroup:
-              label: Logging agent for orchestrated environments
+              label: Customizing the Helm Chart used to deploy orchestrated environments
               topics:
-              - topic: agent/agent-version.md
-                navtitle: Checking the available agent versions
               - topic: agent/helm-chart-versions.md
                 navtitle: Checking the available Helm chart versions
               - topic: agent/helm-chart-download.md
                 navtitle: Downloading a Helm chart
+              - topic: agent/agent-helm-template-config-options-required.md
+                navtitle: Helm Chart required configuration options
+              - topic: agent/agent-helm-iam-endpoint.md
+                navtitle: Configuring the IAM endpoint
+              - topic: agent/agent-helm-iam-authentication.md
+                navtitle: Configuring the IAM authentication method
+              - topic: agent/agent-helm-metadata.md
+                navtitle: Configuring custom metadata values
+              - topic: agent/agent-helm-kubernetes-filter.md
+                navtitle: Enabling the Kubernetes filter to enrich logs with Kubernetes metadata
+              - topic: agent/agent-helm-retry-sending-data.md
+                navtitle: Configuring the number of retries sending data if an error occurs
+              - topic: agent/agent-helm-resources.md
+                navtitle: Changing the resources that are assigned to run the agent
+              - topic: agent/agent-helm-parallel-processing.md
+                navtitle: Configuring the output plugin to enable parallel processing of log data
+              - topic: agent/agent-helm-severity.md
+                navtitle: Overriding the default severity field
+              - topic: agent/agent-helm-tainted.md
+                navtitle: Ensuring tainted nodes are updated
+              - topic: agent/agent-helm-log-files.md
+                navtitle: Configuring the log files that are collected by the agent
+              - topic: agent/agent-helm-raw-log.md
+                navtitle: Keeping a copy of the original log
+              - topic: agent/agent-helm-additionalInputs.md
+                navtitle: Configuring multiple input plugins
+              - topic: agent/agent-helm-additionalParsers.md
+                navtitle: Configuring multiple parsers
+              - topic: agent/agent-helm-additionalFilters.md
+                navtitle: Configuring multiple filters
+              - topic: agent/agent-helm-additionalMultilineParsers.md
+                navtitle: Configuring custom multiline parsers
+              - topic: agent/agent-helm-additionalServiceOptions.md
+                navtitle: Configuring additional service options
+              - topic: agent/agent-helm-additionalOutputs.md
+                navtitle: Configuring multiple outputs
+          - topicgroup:
+              label: Managing the Logging agent for orchestrated environments
+              topics:
+              - topic: agent/agent-version.md
+                navtitle: Checking the available agent versions
               - topic: agent/agent-helm-os-deploy.md
                 navtitle: Deploying the Logging agent on OpenShift using a Helm chart
               - topic: agent/agent-helm-kube-deploy.md
                 navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
               - topic: agent/agent-helm-update.md
-                navtitle: Updating the Logging agent version
-              - topic: agent/configure-agent.md
+                navtitle: Upgrading the Logging agent version using a Helm chart
               - topic: agent/agent-helm-credential-rotation.md
-                navtitle: Updating the Logging agent IAM APIKey by using a Helm chart
-              - topic: agent/agent-multiline.md
-                navtitle: Supporting multiline logs
+                navtitle: Rotating the Logging agent IAM APIKey for ingestion using a Helm chart
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
-              - topic: agent/agent-helm-template-clusters.md
-                navtitle: Deploying the Logging agent using a Helm chart prior to 1.6.0
-              - topic: agent/agent-helm-template-clusters-1.6.0.md
-                navtitle: Deploy the Logging agent using a 1.6.0 Helm chart
+              - topic: agent/configure-agent.md
+                navtitle: Configuring the log files that are collected
+              - topic: agent/agent-multiline.md
+                navtitle: Multiline support for orchestrated environments
           - topicgroup:
-              label: Logging agent for Linux environments
+              label: Managing the Logging agent for Linux environments
               topics:
               - topic: agent/agent-linux.md
                 navtitle: Deploying and managing the agent
               - topic: agent/agent-rsyslog.md
                 navtitle: Configure the Logging agent to collect and route Rsyslog messages 
           - topicgroup:
-              label: Logging agent for Windows environments
+              label: Managing the Logging agent for Windows environments
               topics:
               - topic: agent/agent-windows.md
                 navtitle: Deploying the agent
@@ -208,9 +257,16 @@ toc:
                 navtitle: Adding metadata
               - topic: agent/agent-windows-manage.md
                 navtitle: Managing the agent 
-          - agent/agent-multiple-icl-targets.md
-          - topic: verify-key.md
-            navtitle: Verifying your API key
+          - topic: agent/agent-plugin-parameters.md
+            navtitle: Output plug-in parameters to send data to Cloud Logs
+          - topic: agent/agent-multiple-icl-targets.md
+            navtitle: Configuring multiple Cloud Logs destinations
+          - topic: agent/agent-proxy.md
+            navtitle: Configuring the agent to use proxies
+          - topic: agent/agent-fluentbit.md
+            navtitle: Understanding the agent configuration file
+          - topic: agent/agent-set-appsubname.md
+            navtitle: Configuring custom metadata fields 
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:
@@ -434,26 +490,29 @@ toc:
       - topic: limits-sending-data.md
         navtitle: Considerations and limitations sending data
       - topicgroup:
-          label: Logging agent
+          label: Sending data using the Logging agent prior to v1.6.x
           topics:
-          - topic: agent/agent-fluentbit.md
-            navtitle: Understanding the agent configuration file
-          - topic: agent/download-agent-yaml.md
-            navtitle: Downloading the agent YAML file
-          - topic: agent/agent-openshift.md
-            navtitle: Managing the agent for Openshift clusters
-          - topic: agent/agent-std-cluster.md
-            navtitle: Managing the agent for Kubernetes clusters
-          - topic: agent/agent-set-appsubname.md
-            navtitle: Configuring custom metadata fields
-          - topic: agent/agent-plugin-parameters.md
-            navtitle: Output plug-in parameters to send data to Cloud Logs
-          - topic: agent/agent-plugin-support.md
-            navtitle: Fluent Bit plug-ins supported 
-          - topic: agent/agent-severity.md
-            navtitle: Understanding how the agent parses severities
-          - topic: agent/agent-proxy.md
-            navtitle: Configuring the agent to use proxies
+          - topicgroup:
+              label: Logging agent for orchestrated environments
+              topics:
+              - topic: agent/helm-chart-versions-1.md
+                navtitle: Checking the available Helm chart versions
+              - topic: agent/helm-chart-download-1.md
+                navtitle: Downloading a Helm chart
+              - topic: agent/agent-helm-template-clusters-1.6.0.md
+                navtitle: Helm chart template to deploy the Logging agent prior to v1.6.x
+              - topic: agent/agent-helm-os-deploy-1.md
+                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
+              - topic: agent/agent-helm-kube-deploy-1.md
+                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
+              - topic: agent/agent-helm-template-clusters.md
+                navtitle: Deploying the Logging agent using a Helm chart
+              - topic: agent/agent-helm-credential-rotation-1.md
+                navtitle: Rotating the Logging agent IAM APIKey by using a Helm chart
+              - topic: agent/agent-helm-remove-1.md
+                navtitle: Uninstalling the Logging agent using a Helm chart
+              - topic: agent/agent-multiline-new.md
+                navtitle: Supporting multiline logs
       - topic: regions.md
         navtitle: Locations
       - service_plans.md
@@ -513,7 +572,6 @@ toc:
                 topics:
                 - topic: ts-no-logs.md
                   navtitle: Why can't I see platform logs in the UI?
-
             - topicgroup:
                 label: Troubleshooting the Logging agent
                 topics:

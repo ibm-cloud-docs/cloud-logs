@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-06"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -13,19 +13,24 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Updating the {{site.data.keyword.agent}} version by using a Helm chart
+# Upgrading the {{site.data.keyword.agent}} version by using a Helm chart
 {: #agent-helm-update}
 
-You can use Helm to update the {{site.data.keyword.agent}} version.
+You can upgrade the {{site.data.keyword.agent}} version by using a Helm chart.
 {: shortdesc}
 
-Complete the following steps to update the agent version that is deployed in the cluster:
+Complete the following steps to upgrade the agent version that is deployed in the cluster:
+
+If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
+{: attention}
+
 
 ## Before you begin
 {: #agent-helm-update-prereqs}
 
-
 - Make sure you have access to Kubernetes cluster with permissions to create namespaces and deploy the agent.
+
+- Take a copy of the current config map for the logging agent. Run: `kubectl get cm logs-agent -n ibm-observe -o yaml > logging-agent-backup-cm.yaml`
 
 - Install the following CLIs:
 
@@ -45,24 +50,24 @@ Complete the following steps to update the agent version that is deployed in the
 
 Complete the following steps to modify the Helm chart with the agent version that you plan to deploy:
 
-1. Update the file named `logs-values.yaml` with the following content:
+1. Update the file named `logs-values.yaml` that you used to deploy the agent with the following content:
 
-    This file contains the configurations that are specific to your deployment.{: note}
+    The `logs-values.yaml` file contains the configurations that are specific to your deployment.{: note}
+
+    If you do not have the `logs-values.yaml` file that you used to deploy the agent, create one based on the current configmap configuration of the agent.{: tip}
 
     ```yaml
     metadata:
       name: "logs-agent"
     image:
-      version: "1.5.0"  # Modify the agent version and enter the version that you want to deploy
+      version: "1.6.1"  # Modify the agent version and enter the version that you want to deploy
 
     clusterName: "ENTER_CLUSTER_NAME"     # Enter the name of your cluster. This information is used to improve the metadata and help with your filtering.
-
-    # enableMultiline: true   # Set to true to enable multiline support for applications, like Java or Python, where errors and stack traces can span several lines, and each line is sent as a separate log entry.
 
     additionalMetadata: # add additional metadata, for example:
       region: au-syd
       env: production
-      logs-agent-version: 1.5.0     # Enter the agent version that you want to deploy
+      logs-agent-version: 1.6.1     # Enter the agent version that you want to deploy
 
     env:
       # ingestionHost is a required field. For example:
@@ -92,43 +97,9 @@ Complete the following steps:
 
 1. Log in to the cluster. For more information, see [Access your cluster](/docs/containers?topic=containers-access_cluster).
 
-2. Log in to the Helm registry. Choose one of the following options:
+2. Update the agent.
 
-    Option 1: Login to the Helm registry by running the `helm registry login` command:
-
-    ```sh
-    helm registry login -u iambearer -p $(ibmcloud iam oauth-tokens --output json | jq -r .iam_token | cut -d " " -f2) icr.io
-    ```
-    {: codeblock}
-
-    [Windows]{: tag-windows} Windows PowerShell users should use this command instead:
-
-    ```sh
-    helm registry login -u iambearer -p ((ibmcloud iam oauth-tokens --output json | ConvertFrom-Json).iam_token -replace 'Bearer ', '') icr.io
-    ```
-    {: codeblock}
-
-    For more information, see [Using Helm charts in Container Registry: Pulling charts from another registry or Helm repository](/docs/Registry?topic=Registry-registry_helm_charts#registry_helm_charts_pull)
-
-    Option 2:  Log in to the Helm registry in {{site.data.keyword.registryshort}} by running the `ibmcloud cr login` command.
-
-    You can use the `ibmcloud cr login` command before you perform a Helm dry run or install. For more information, see [Accessing {{site.data.keyword.registryshort}}](/docs/Registry?topic=Registry-registry_access) and [ibmcloud cr login](/docs/Registry?topic=Registry-containerregcli#bx_cr_login).
-
-    Run the following commands:
-
-    ```sh
-    ibmcloud cr region-set global
-    ```
-    {: codeblock}
-
-    ```sh
-    ibmcloud cr login [--client CLIENT]
-    ```
-    {: codeblock}
-
-3. Update the agent.
-
-   If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
+    If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
     {: attention}
 
     If you are using the `iamMode`=`TrustedProfile` then the complete command is:
@@ -141,13 +112,13 @@ Complete the following steps:
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm upgrade <install-name> oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
+    helm upgrade <install-name> oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<APIKey-value>
     ```
     {: codeblock}
 
     where:
 
-    - `<install-name>` is the name of the Helm installation (`logs-agent`)
+    - `<install-name>` is the name of the Helm installation (`logs-agent`). You can run the following command to get the install name: `helm list -n ibm-observe`
     - `<chart-version>` is the version of the helm chart. The Helm chart version should match the agent image version. For more information, see [Helm chart versions](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
     - `<PATH>` is the directory path where the `logs-values.yaml` file is located.
     - `<APIKey-value>` is the IAM apikey associated with the ServiceID.
@@ -178,6 +149,21 @@ Complete the following steps:
     ```
     {: codeblock}
 
+5. Check that all pods have restarted, in `running` status, and not reporting errors.
+
+    For Kubernetes clusters, run:
+
+    ```sh
+    kubectl get pods -n ibm-observe
+    ```
+    {: codeblock}
+
+    For OpenShift clusters, run:
+
+    ```sh
+    oc get pods -n ibm-observe
+    ```
+    {: codeblock}
 
 ## Step 3. Verify logs are being delivered to your target destination
 {: #agent-helm-update-step3}

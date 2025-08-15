@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-16"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Checking the available Helm chart versions
 {: #helm-chart-versions}
 
-Before specifying a version, you can check the available Helm chart versions.
+You can use a Helm chart to deploy, upgrade, and remove the {{site.data.keyword.agent}} from a Kubernetes cluster or an Openshift cluster. Before specifying a version, you can check the available Helm chart versions.
 {: shortdesc}
 
 Do the following to check the available {{site.data.keyword.agent}} versions.
@@ -37,13 +37,14 @@ Do the following to check the available {{site.data.keyword.agent}} versions.
 3. Run the following command:
 
     ```text
-    ibmcloud cr images --restrict ibm-observe |grep logs-agent
+    ibmcloud cr images --restrict ibm-observe | grep logs-agent
     ```
     {: codeblock}
 
     The following is an example results of the command:
 
     ```screen
-    icr.io/ibm-observe/logs-agent-helm                     1.6.0   1e902c60e82a   ibm-observe   -         18 kB    -
+    icr.io/ibm/observe/logs-agent-helm             1.6.0            d8d033ed0b23   ibm         -               18 kB    -
+    icr.io/ibm/observe/logs-agent-helm             1.6.1            e8f973d5f42e   ibm         -               20 kB    -
     ```
     {: screen}
