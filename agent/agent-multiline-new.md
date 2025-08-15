@@ -14,14 +14,14 @@ subcollection: cloud-logs
 
 
 # Supporting multiline logs for the {{site.data.keyword.agent}} in orchestrated environments
-{: #agent-multiline}
+{: #agent-multiline-new}
 
 Errors and stack traces can span several lines with each line being sent as a separate log entry. To support the ingestion of multiline logs by {{site.data.keyword.logs_full}} from applications, such as Java or Python, running in orchestrated environments, such as {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containers_notm}}, you must make changes to the {{site.data.keyword.agent}} configuration. The changes include the parsing required to group log lines that are supposed to be together as a single log record.
 {: shortdesc}
 
 
 ## About multiline
-{: #agent-multiline-about}
+{: #agent-multiline-new-about}
 
 In OpenShift and Kubernetes clusters, the logging system captures logs from application `stdout` and `stderr` streams. It then adds a prefix to each log line with metadata before storing the logs in files, following the Container Runtime Interface (CRI) logging format.
 
@@ -51,7 +51,7 @@ You might also have applications, such as Java or Python, where errors and stack
 
 
 ## Default multiline configuration
-{: #agent-multiline-default}
+{: #agent-multiline-new-default}
 
 The default multiline configuration for CRI logs is configured and enabled when you deploy the {{site.data.keyword.agent}}.
 {: note}
@@ -79,7 +79,7 @@ For example, the {{site.data.keyword.agent}} has this default configuration for 
 
 
 ## Configuring additional multiline support for applications
-{: #agent-multiline-config-parser}
+{: #agent-multiline-new-config-parser}
 
 If you have applications, such as Java or Python, where errors and stack traces can span several lines, and each line is sent as a separate log entry, you must configure the Multiline parser in the {{site.data.keyword.agent}}.
 
@@ -107,7 +107,7 @@ filter-multiline.conf: |
 {: codeblock}
 
 ## Adding multiline support for apps
-{: #agent-multiline-parser-for-apps}
+{: #agent-multiline-new-parser-for-apps}
 
 If you have the {{site.data.keyword.agent}} deployed and you have apps such as Java or Python, where errors and stack traces can span several lines, and each line is sent as a separate log entry, you can update your agent configuration and configure the Multiline parser.
 
@@ -188,7 +188,7 @@ Complete the following steps to add multiline support in the {{site.data.keyword
 
 
 ## More information and examples
-{: #agent-multiline-moreinfo}
+{: #agent-multiline-new-moreinfo}
 
 For more information and tutorials with example scenarios for configuring multiline processing, see the following topics.
 
@@ -201,4 +201,3 @@ For more information and tutorials with example scenarios for configuring multil
 | Multiline parsing for Node.js applications using Winston | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-winston) |
 | Multiline parsing using Helm for Node.js applications using Winston | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-winston-helm) |
 {: caption="Additional resources for the {{site.data.keyword.agent}} multiline processing" caption-side="bottom"}
-
