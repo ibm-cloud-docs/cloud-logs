@@ -511,7 +511,7 @@ toc:
                 navtitle: Rotating the Logging agent IAM APIKey by using a Helm chart
               - topic: agent/agent-helm-remove-1.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
-              - topic: agent/agent-multiline.md
+              - topic: agent/agent-multiline-new.md
                 navtitle: Supporting multiline logs
       - topic: regions.md
         navtitle: Locations
