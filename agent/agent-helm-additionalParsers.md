@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Configuring multiple parsers by using Helm
 {: #agent-helm-additionalParsers}
 
-You can configure the `additionalParsers` section in the `logs-values.yaml` file to introduce a new parser and introduce your own parsers. This will add entries to the [parsers](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml/parsers-section] section of the Fluent Bit yaml configuration.
+You can configure the `additionalParsers` section in the `logs-values.yaml` file to introduce a new parser and introduce your own parsers. This will add entries to the [parsers](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml/parsers-section) section of the Fluent Bit yaml configuration.
 
 
 For example, you can add a parser in the `logs-values.yaml` file as follows:

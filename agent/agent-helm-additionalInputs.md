@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Configuring input plugins by using Helm
 {: #agent-helm-additionalInputs}
 
-You can set the `additionalInputs` option to introduce additional Fluent Bit input plug-in definitions. For each input plugin, you must configure the `processors` section that define how to modify or enrich the data before it reaches the filtering or output destinations.
+You can set the `additionalInputs` option to introduce additional Fluent Bit input plug-in definitions. For each input plugin, you must configure the `processors` section that define how to modify or enrich the data before it reaches the filtering or output destinations. After you modify the `logs-values.yaml` file, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.
 
 For example, you might need to add a new input plugin if you have a file with special parsing requirements.
 
@@ -77,8 +77,6 @@ additionalInputs:
 
 Each log record must have an applicationName and a subsystemName, metadata that is required when sent to an {{site.data.keyword.logs_full_notm}} instance.
 {: important}
-
-After you modify the `logs-values.yaml` file, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.
 
 
 

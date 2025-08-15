@@ -60,7 +60,7 @@ systemLogs:
 {: codeblock}
 
 
-By default, the `kube_syslog` parser is used which is appropriate for newer VPC-based systems.
+By default, the `kube_syslog` parser is used.
 
 Some of the classic Kubernetes clusters may require the `systemLogsParser` to be set to `kube_syslog_classic` in order to match the timestamp format on those systems. You can use the `systemLogsParser` option in order to consider a different parser.  The entry in the `logs-values.yaml` file looks as follows:
 

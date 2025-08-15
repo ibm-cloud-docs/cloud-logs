@@ -190,6 +190,8 @@ toc:
                 navtitle: Configuring the IAM authentication method
               - topic: agent/agent-helm-metadata.md
                 navtitle: Configuring custom metadata values
+              - topic: agent/agent-helm-kubernetes-filter.md
+                navtitle: Enabling the Kubernetes filter to enrich logs with Kubernetes metadata
               - topic: agent/agent-helm-retry-sending-data.md
                 navtitle: Configuring the number of retries sending data if an error occurs
               - topic: agent/agent-helm-resources.md
