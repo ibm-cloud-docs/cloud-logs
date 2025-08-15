@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-14"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -32,3 +32,6 @@ Example configuration:
 keepParsedLog: false
 ```
 {: codeblock}
+
+
+After you modify the `logs-values.yaml`, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.

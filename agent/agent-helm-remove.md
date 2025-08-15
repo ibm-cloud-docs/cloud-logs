@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Uninstalling the {{site.data.keyword.agent}} using a Helm chart
 {: #agent-helm-remove}
 
-You can use Helm to uninstall the {{site.data.keyword.agent}} from a cluster.
+You can use Helm chart to uninstall the {{site.data.keyword.agent}} from a cluster.
 {: shortdesc}
 
 
@@ -24,6 +24,8 @@ You can use Helm to uninstall the {{site.data.keyword.agent}} from a cluster.
 {: #agent-helm-remove-prereqs}
 
 - Make sure you have access to the cluster with permissions to remove the agent.
+
+- Take a copy of the current config map for the logging agent. Run: `kubectl get cm logs-agent -n ibm-observe -o yaml > logging-agent-backup-cm.yaml`
 
 - Install the following CLIs:
 

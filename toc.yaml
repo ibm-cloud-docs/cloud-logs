@@ -170,16 +170,14 @@ toc:
       - topic: instance-launch.md
         navtitle: Launching the UI
       - account_preferences.md
-      - topic: send-logs-api.md
-        navtitle: Sending data using the REST API
       - topicgroup:
-          label: Sending data using the Logging agent
+          label: Sending data to a Cloud Logs instance
           topics:
+          - topic: send-logs-api.md
+            navtitle: Sending data using the REST API
           - topicgroup:
-              label: Logging agent for orchestrated environments
+              label: Customizing the Helm Chart used to deploy orchestrated environments
               topics:
-              - topic: agent/agent-version.md
-                navtitle: Checking the available agent versions
               - topic: agent/helm-chart-versions.md
                 navtitle: Checking the available Helm chart versions
               - topic: agent/helm-chart-download.md
@@ -206,6 +204,23 @@ toc:
                 navtitle: Configuring the log files that are collected by the agent
               - topic: agent/agent-helm-raw-log.md
                 navtitle: Keeping a copy of the original log
+              - topic: agent/agent-helm-additionalInputs.md
+                navtitle: Configuring multiple input plugins
+              - topic: agent/agent-helm-additionalParsers.md
+                navtitle: Configuring multiple parsers
+              - topic: agent/agent-helm-additionalFilters.md
+                navtitle: Configuring multiple filters
+              - topic: agent/agent-helm-additionalMultilineParsers.md
+                navtitle: Configuring custom multiline parsers
+              - topic: agent/agent-helm-additionalServiceOptions.md
+                navtitle: Configuring additional service options
+              - topic: agent/agent-helm-additionalOutputs.md
+                navtitle: Configuring multiple outputs
+          - topicgroup:
+              label: Managing the Logging agent for orchestrated environments
+              topics:
+              - topic: agent/agent-version.md
+                navtitle: Checking the available agent versions
               - topic: agent/agent-helm-os-deploy.md
                 navtitle: Deploying the Logging agent on OpenShift using a Helm chart
               - topic: agent/agent-helm-kube-deploy.md
@@ -217,14 +232,14 @@ toc:
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
           - topicgroup:
-              label: Logging agent for Linux environments
+              label: Managing the Logging agent for Linux environments
               topics:
               - topic: agent/agent-linux.md
                 navtitle: Deploying and managing the agent
               - topic: agent/agent-rsyslog.md
                 navtitle: Configure the Logging agent to collect and route Rsyslog messages 
           - topicgroup:
-              label: Logging agent for Windows environments
+              label: Managing the Logging agent for Windows environments
               topics:
               - topic: agent/agent-windows.md
                 navtitle: Deploying the agent

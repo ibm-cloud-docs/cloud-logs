@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-14"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -21,6 +21,8 @@ When you deploy or upgrade the Logging agent, you can configure the `logs-values
 The default value is `Production`.
 
 Valid values are: `Production`, `PrivateProduction` and `Custom`.
+
+Update the file named `logs-values.yaml` that you use to deploy or upgrade the agent with the following content:
 
 - Set `Production` to use the `iam.cloud.ibm.com` default endpoint
 
@@ -52,3 +54,6 @@ Valid values are: `Production`, `PrivateProduction` and `Custom`.
       iamHost: "private.eu-de.iam.cloud.ibm.com"
     ```
     {: codeblock}
+
+
+After you modify the `logs-values.yaml`, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.

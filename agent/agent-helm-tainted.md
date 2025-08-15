@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-14"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -31,3 +31,5 @@ tolerations:
 
 - These fields are directly added to the DaemonSet's tolerations section.
 - This ensures the agent respects the taint rules and can be scheduled accordingly.
+
+After you modify the `logs-values.yaml`, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.

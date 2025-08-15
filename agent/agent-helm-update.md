@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-14"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -13,10 +13,10 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Upgrade the {{site.data.keyword.agent}} version by using a Helm chart
+# Upgrading the {{site.data.keyword.agent}} version by using a Helm chart
 {: #agent-helm-update}
 
-You can use Helm to update the {{site.data.keyword.agent}} version.
+You can upgrade the {{site.data.keyword.agent}} version by using a Helm chart.
 {: shortdesc}
 
 Complete the following steps to upgrade the agent version that is deployed in the cluster:
@@ -50,9 +50,11 @@ If you have installed a previous version of the {{site.data.keyword.agent}} and 
 
 Complete the following steps to modify the Helm chart with the agent version that you plan to deploy:
 
-1. Update the file named `logs-values.yaml` with the following content:
+1. Update the file named `logs-values.yaml` that you used to deploy the agent with the following content:
 
-    This file contains the configurations that are specific to your deployment.{: note}
+    The `logs-values.yaml` file contains the configurations that are specific to your deployment.{: note}
+
+    If you do not have the `logs-values.yaml` file that you used to deploy the agent, create one based on the current configmap configuration of the agent.{: tip}
 
     ```yaml
     metadata:
@@ -110,7 +112,7 @@ Complete the following steps:
     If you are using the `iamMode`=`IAMAPIKey` then the complete command is:
 
     ```sh
-    helm upgrade <install-name> oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --create-namespace --set secret.iamAPIKey=<APIKey-value>
+    helm upgrade <install-name> oci://icr.io/ibm-observe/logs-agent-helm --version <chart-version> --values <PATH>/logs-values.yaml -n ibm-observe --set secret.iamAPIKey=<APIKey-value>
     ```
     {: codeblock}
 
@@ -147,6 +149,21 @@ Complete the following steps:
     ```
     {: codeblock}
 
+5. Check that all pods have restarted, in `running` status, and not reporting errors.
+
+    For Kubernetes clusters, run:
+
+    ```sh
+    kubectl get pods -n ibm-observe
+    ```
+    {: codeblock}
+
+    For OpenShift clusters, run:
+
+    ```sh
+    oc get pods -n ibm-observe
+    ```
+    {: codeblock}
 
 ## Step 3. Verify logs are being delivered to your target destination
 {: #agent-helm-update-step3}

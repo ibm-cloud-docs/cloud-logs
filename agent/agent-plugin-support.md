@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-24"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -122,7 +122,7 @@ The {{site.data.keyword.agent}} includes the following Fluent Bit [output plug-i
 | `prometheus_exporter` | output | Expose metrics for Prometheus | [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/prometheus-exporter){: external} |
 | `prometheus_remote_write` | output | Submit metrics using Prometheus remote write protocol| [documentation](https://docs.fluentbit.io/manual/pipeline/outputs/prometheus-remote-write){: external} |
 
-## Plug-ins unavailable in {{site.data.keyword.logs_routing_full_notm}}
+## Plug-ins unavailable
 {: #plugins-unavailable}
 
 This section lists plug-ins which, while part of the open source Fluent Bit project, are not available for use with the {{site.data.keyword.agent}}.

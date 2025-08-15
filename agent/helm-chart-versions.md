@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Checking the available Helm chart versions
 {: #helm-chart-versions}
 
-Before specifying a version, you can check the available Helm chart versions.
+You can use a Helm chart to deploy, upgrade, and remove the {{site.data.keyword.agent}} from a Kubernetes cluster or an Openshift cluster. Before specifying a version, you can check the available Helm chart versions.
 {: shortdesc}
 
 Do the following to check the available {{site.data.keyword.agent}} versions.

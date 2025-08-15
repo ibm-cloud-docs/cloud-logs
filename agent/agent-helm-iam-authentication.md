@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-14"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -22,22 +22,6 @@ You can choose an IAM APIKey or a Trusted Profile configuration.
 
 Valid values are: `TrustedProfile` and `IAMAPIKey`.
 
-- `TrustedProfile`: Sample `logs-values.yaml` file looks as follows:
-
-    ```yaml
-    env:
-      iamMode: "TrustedProfile"
-      trustedProfileID: "Profile-yyyyyyyy-xxxx-xxxx-yyyy-zzzzzzzzzzzz"
-    ```
-    {: codeblock}
-
-- `IAMAPIKey`: Sample `logs-values.yaml` file looks as follows:
-
-    ```yaml
-    env:
-      iamMode: "IAMAPIKey"
-    ```
-    {: codeblock}
 
 Consider the following information when setting this parameter:
 
@@ -53,3 +37,26 @@ Consider the following information when setting this parameter:
     kubectl create secret generic <helm install-name> -n ibm-observe --from-literal=IAM_API_KEY=<apikey>
     ```
     {: codeblock}
+
+
+Update the file named `logs-values.yaml` that you use to deploy or upgrade the agent with the following content:
+
+- For the value `TrustedProfile`, enter:
+
+    ```yaml
+    env:
+      iamMode: "TrustedProfile"
+      trustedProfileID: "Profile-yyyyyyyy-xxxx-xxxx-yyyy-zzzzzzzzzzzz"
+    ```
+    {: codeblock}
+
+- For the value `IAMAPIKey`, enter:
+
+    ```yaml
+    env:
+      iamMode: "IAMAPIKey"
+    ```
+    {: codeblock}
+
+
+After you modify the `logs-values.yaml` file, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.

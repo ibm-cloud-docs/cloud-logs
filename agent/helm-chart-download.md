@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -14,12 +14,13 @@ subcollection: cloud-logs
 
 
 
-# Downloading a Helm chart version for agents v1.6.x
+# Downloading a Helm chart version
 {: #helm-chart-download}
 
-Complete the following steps to download a Helm chart version.
+You can use a Helm chart to deploy, upgrade, and remove the {{site.data.keyword.agent}} from a Kubernetes cluster or an Openshift cluster.
 {: shortdesc}
 
+Complete the following steps to download a Helm chart version:
 
 1. Login to IBM Cloud using the CLI.
 

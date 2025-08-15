@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-14"
+lastupdated: "2025-08-15"
 
 keywords:
 
@@ -19,6 +19,7 @@ subcollection: cloud-logs
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to include and exclude the set of logs to be processed by the agent. By default the agent will collect the logs from `/var/log/containers/*.log` and ignore `/var/log/at/*`.
 {: note}
 
+After you modify the `logs-values.yaml`, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.
 
 ## Configuring custom log files
 {: #agent-helm-log-files-1}
