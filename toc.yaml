@@ -233,6 +233,10 @@ toc:
                 navtitle: Rotating the Logging agent IAM APIKey for ingestion using a Helm chart
               - topic: agent/agent-helm-remove.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
+              - topic: agent/configure-agent.md
+                navtitle: Configuring the log files that are collected
+              - topic: agent/agent-multiline-new.md
+                navtitle: Multiine support for orchestrated environments
           - topicgroup:
               label: Managing the Logging agent for Linux environments
               topics:
@@ -261,8 +265,6 @@ toc:
             navtitle: Configuring the agent to use proxies
           - topic: agent/agent-fluentbit.md
             navtitle: Understanding the agent configuration file
-          - topic: agent/configure-agent.md
-            navtitle: Updating the Logging agent path files
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields 
       - topic: tco-optimizer.md

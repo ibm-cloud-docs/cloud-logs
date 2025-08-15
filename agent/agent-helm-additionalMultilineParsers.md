@@ -18,9 +18,13 @@ subcollection: cloud-logs
 
 If you need to introduce a new multiline parser, the `additionalMultilineParsers` option allows you to introduce your own multiline parsers. This will add entries to the [multiline_parsers](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml/multiline-parsers-section) section of the Fluent Bit yaml configuration.
 
+You must set `enableMultiline` to `true`.
+
 For example:
 
 ```yaml
+enableMultiline: true
+
 additionalMultilineParsers:
   - name: multiline_sample
     type: regex
