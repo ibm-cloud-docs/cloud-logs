@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-19"
 
 keywords:
 
@@ -67,7 +67,8 @@ Complete the following steps:
 
 1. Create a file named `logs-values.yaml` with the following content:
 
-    This file contains the configurations that are specific to your deployment.{: note}
+    This file contains the configurations that are specific to your deployment
+    {: note}
 
     ```yaml
     metadata:
@@ -292,14 +293,15 @@ When the agent is deployed, check the following resources are created:
 
     If your nodes are not named by their IP, you can append the `-o wide` option and compare the values in the `INTERNAL-IP` column instead.
 
-    To view the logs of a pod, run `kubectl logs <POD_NAME>> -n ibm-observe`{: tip}
+    To view the logs of a pod, run `kubectl logs <POD_NAME>> -n ibm-observe`
+    {: tip}
 
 ## Step 5. Verify logs are being delivered to your target destination
 {: #agent-helm-kube-deploy-1-step5}
 
 Complete the following steps:
 
-1. [Go to the web UI for your {{site.data.keyword.logs_full_notm}} instance.](/docs/cloud-logs?topic=cloud-logs-instance-launch).
+1. [Go to the web UI for your {{site.data.keyword.logs_full_notm}} instance.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
 
 2. When your agent is correctly configured, you can see logs through the default dashboard view. The {{site.data.keyword.agent}} tags log records with a kubernetes object that includes the cluster name.
 
