@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-15"
+lastupdated: "2025-08-19"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Supporting multiline logs for the {{site.data.keyword.agent}} in orchestrated environments
 {: #agent-multiline-new}
 
-Errors and stack traces can span several lines with each line being sent as a separate log entry. To support the ingestion of multiline logs by {{site.data.keyword.logs_full}} from applications, such as Java or Python, running in orchestrated environments, such as {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containers_notm}}, you must make changes to the {{site.data.keyword.agent}} configuration. The changes include the parsing required to group log lines that are supposed to be together as a single log record.
+Errors and stack traces can span several lines with each line being sent as a separate log entry. To support the ingestion of multiline logs by {{site.data.keyword.logs_full}} from applications, such as Java or Python, running in orchestrated environments, such as {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerslong_notm}}, you must make changes to the {{site.data.keyword.agent}} configuration. The changes include the parsing required to group log lines that are supposed to be together as a single log record.
 {: shortdesc}
 
 

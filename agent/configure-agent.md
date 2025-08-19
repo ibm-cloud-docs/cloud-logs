@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-08-19"
 
 keywords:
 
@@ -63,8 +63,6 @@ To specify included paths, complete the following steps:
     ```
     {: pre}
 
-
-{{../_include-segments/kube-config.md}}
 
 
 ## Excluding paths
