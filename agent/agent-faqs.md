@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-08-19"
 
 keywords:
 
@@ -46,13 +46,3 @@ The message `[input] pausing tail` is an indication that the buffers managed by 
 - If the `[input] resume tail` and `[input] pausing tail` messages occur more than 30 times within 5 minutes, this is typically an indication that the agent is not configured appropriately to handle the log volume that the agent is processing.  This can usually be corrected by increasing the `Workers` configuration in the output plug-in, increasing the CPU limit assigned to the agent process or both actions.  See the [agent workers configuration considerations](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-worker-configuration-considerations) for more details.
 
 - Consider reviewing the logs that are being collected and determine whether all of the logs are required.  See the [Filtering logs](/docs/cloud-logs?topic=cloud-logs-configure-include-exclude) topic for ways that you can reduce the volume of logs sent from the {{site.data.keyword.agent}} to {{site.data.keyword.logs_full_notm}}.
-
-## How can I send my kube audit logs to {{site.data.keyword.logs_full_notm}}?
-{: #faq_kube_audit}
-{: faq}
-
-
-{{../_include-segments/kube-config.md}}
-
-
-For more information about the `input-kubernetes.conf` file, see [Configuring whether logs are included or excluded](/docs/cloud-logs?topic=cloud-logs-configure-include-exclude).
