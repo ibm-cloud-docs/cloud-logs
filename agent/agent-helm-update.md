@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-15"
+lastupdated: "2025-08-19"
 
 keywords:
 
@@ -54,7 +54,8 @@ Complete the following steps to modify the Helm chart with the agent version tha
 
     The `logs-values.yaml` file contains the configurations that are specific to your deployment.{: note}
 
-    If you do not have the `logs-values.yaml` file that you used to deploy the agent, create one based on the current configmap configuration of the agent.{: tip}
+    If you do not have the `logs-values.yaml` file that you used to deploy the agent, create one based on the current configmap configuration of the agent.
+    {: tip}
 
     ```yaml
     metadata:

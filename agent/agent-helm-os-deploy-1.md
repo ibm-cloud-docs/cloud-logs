@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-19"
 
 keywords:
 
@@ -69,7 +69,8 @@ Complete the following steps:
 
 1. Create a file named `logs-values.yaml` with the following content:
 
-    This file contains the configurations that are specific to your deployment.{: note}
+    This file contains the configurations that are specific to your deployment.
+    {: note}
 
     ```yaml
     metadata:
