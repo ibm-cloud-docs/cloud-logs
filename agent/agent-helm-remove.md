@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-15"
+lastupdated: "2025-08-20"
 
 keywords:
 
@@ -41,7 +41,7 @@ You can use Helm chart to uninstall the {{site.data.keyword.agent}} from a clust
 
 
 ## Uninstall the {{site.data.keyword.agent}}
-{: #agent-helm-remove-1}
+{: #agent-helm-remove-0}
 
 Complete the following steps to remove a {{site.data.keyword.agent}}:
 
