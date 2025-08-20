@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Supporting multiline logs for the {{site.data.keyword.agent}} in orchestrated environments
 {: #agent-multiline-new}
 
-Errors and stack traces can span several lines with each line being sent as a separate log entry. To support the ingestion of multiline logs by {{site.data.keyword.logs_full}} from applications, such as Java or Python, running in orchestrated environments, such as {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerslong_notm}}, you must make changes to the {{site.data.keyword.agent}} configuration. The changes include the parsing required to group log lines that are supposed to be together as a single log record.
+Errors and stack traces can span several lines with each line being sent as a separate log entry. To support the ingestion of multiline logs by {{site.data.keyword.logs_full}} from applications, such as Java or Python, running in orchestrated environments, such as {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerlong_notm}}, you must make changes to the {{site.data.keyword.agent}} configuration. The changes include the parsing required to group log lines that are supposed to be together as a single log record.
 {: shortdesc}
 
 
@@ -90,7 +90,7 @@ Choose one of the following options to configure the {{site.data.keyword.agent}}
 - Update the {{site.data.keyword.agent}} to version 1.4.1 or above. You must update the Helm chart `logs-values.yaml` file with the agent version and set `enableMultiline` to `true` to enable multiline support. For more information, see [Update the Helm chart values file for the Logging agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update#agent-helm-update-step1).
 
 ## Adding a custom multiline parser
-{: #agent-multiline-new-parser}
+{: #agent-multiline-new-parser-0}
 
 To create a custom multiline parser for use with the {{site.data.keyword.agent}}, follow the instructions in [Configurable Multiline Parsers](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/multiline-parsing#configurable-multiline-parsers){: external}. You will define a custom regex to determine the multiline pattern.
 

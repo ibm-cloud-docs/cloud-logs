@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-12"
+lastupdated: "2025-08-20"
 
 keywords:
 
@@ -73,7 +73,7 @@ A log is considered to be ingested for the purposes of billing once the parsing 
 {: important}
 
 ## Controlling ingested data
-{: #cc-ingest}
+{: #cc-ingest-control}
 
 In addition to controlling the data pipelines where your data is kept within {{site.data.keyword.logs_full_notm}}, you can control the data that is ingested by {{site.data.keyword.logs_full_notm}}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-08"
+lastupdated: "2025-08-20"
 
 keywords:
 
@@ -56,7 +56,7 @@ Complete the following steps to install the Terraform CLI:
     {: pre}
 
 ## Step 2. Set up the directory
-{: #terraform-setup-ibm-plugin}
+{: #terraform-setup-ibm-plugin-dir}
 
 Create a folder and navigate into the folder. This folder is used to store all configuration files and variable definitions that are needed to create the {{site.data.keyword.logs_full_notm}} instance.
 
@@ -240,7 +240,7 @@ variable "event_notifications_region" {
 
 
 ### Reference variables in the provider.tf file
-{: #terraform-config-ibm-plugin-tfvars}
+{: #terraform-config-ibm-plugin-tfvars-ref}
 
 In your project directory `<terraform-directory>/terraform/myproject`, create a `provider.tf` file and use Terraform interpolation syntax to reference the variables from the `terraform.tfvars`.
 

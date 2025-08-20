@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-31"
+lastupdated: "2025-08-20"
 
 keywords: HA for IBM Cloud Logs, DR for IBM Cloud Logs, IBM Cloud Logs recovery time objective, IBM Cloud Logs recovery point objective
 
@@ -217,7 +217,7 @@ To find out more about ownership responsibility between you and {{site.data.keyw
 {: caption="RPO and RTO for {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 ## Change management
-{: #change-management}
+{: #hadr-change-management}
 
 
 
