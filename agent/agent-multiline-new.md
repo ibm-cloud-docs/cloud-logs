@@ -185,7 +185,32 @@ Complete the following steps to add multiline support in the {{site.data.keyword
     ```
     {: pre}
 
+## Configuring multiline support for clusters with multiple runtimes and parsing requirements
+{: #agent-multiline-multi-runtime}
 
+If you have clusters running applications with multiple different languages or runtimes (for example, Java, Go, and Python), you might need to handle multiline logs from various sources. If you already have a custom multiline parser for Java, you can combine it with built-in parsers for other runtimes such as Go and Python. This ensures all logs are parsed correctly and forwarded as correctly grouped entries to {{site.data.keyword.logs_full}}.
+
+By specifying multiple parsers (built-in and custom) in a comma-separated list, the {{site.data.keyword.agent}} will try each parser in sequence until a match is found.
+
+### Configuring multiple parsers using Helm
+{: #agent-multiline-mult-run-helm}
+
+If you are using Helm to configure your orchestrated environment, update the `multilinePreprocessor` section to reference both built-in parsers (for example, `go`, `python`) with your custom parsers in a comma-separated list.
+
+For example:
+
+```yaml
+multilinePreprocessor:
+  - name: multiline
+    multiline.parser: go, python, nodejs, ruby, multiline-java-example, multiline-nodejs-winston
+    multiline.key_content: log
+```
+{: codeblock}
+
+If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
+{: attention}
+
+After updating the `values.yaml` file, run `helm upgrade` to apply the changes. Verify your configuration by checking logs from different runtimes in {{site.data.keyword.logs_full_notm}} to ensure multiline grouping works across all configurations.
 
 ## More information and examples
 {: #agent-multiline-new-moreinfo}
