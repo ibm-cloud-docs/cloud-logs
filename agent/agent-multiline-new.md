@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-19"
+lastupdated: "2025-08-20"
 
 keywords:
 
@@ -194,8 +194,8 @@ For more information and tutorials with example scenarios for configuring multil
 
 | For information about | See |
 |-----------------------|-----|
-| Configuring multiline support for clusters with multiple runtimes and parsing requirements | [Link](/docs/cloud-logs?topic=cloud-logs-agent-multiline-multi-runtime) |
-| Configuring multiline support for the {{site.data.keyword.agent}} in non-orchestrated environments | [Link](/docs/cloud-logs?topic=cloud-logs-agent-multiline-nonnorchestrated) |
+| Configuring multiline support for clusters with multiple runtimes and parsing requirements | [Topic](/docs/cloud-logs?topic=cloud-logs-agent-multiline-multi-runtime) |
+| Configuring multiline support for the {{site.data.keyword.agent}} in non-orchestrated environments | [Topic](/docs/cloud-logs?topic=cloud-logs-agent-multiline-nonnorchestrated) |
 | Multiline parsing for Java applications with Log4j | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-log4j) |
 | Multiline parsing using Helm for Java applications with Log4j | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-log4j-helm) |
 | Multiline parsing for Node.js applications using Winston | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-winston) |
