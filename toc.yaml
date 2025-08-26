@@ -226,6 +226,8 @@ toc:
                 navtitle: Configuring additional service options
               - topic: agent/agent-helm-additionalOutputs.md
                 navtitle: Configuring multiple outputs
+              - topic: agent/agent-helm-maxloglength.md
+                navtitle: Configure the maximum length of the log
           - topicgroup:
               label: Managing the Logging agent for orchestrated environments
               topics:
@@ -235,8 +237,6 @@ toc:
                 navtitle: Deploying the Logging agent on OpenShift using a Helm chart
               - topic: agent/agent-helm-kube-deploy.md
                 navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
-              - topic: agent/agent-helm-template-clusters-latest.md
-                navtitle: Template to deploy using a Helm chart
               - topic: agent/agent-helm-update.md
                 navtitle: Upgrading the Logging agent version using a Helm chart
               - topic: agent/agent-helm-credential-rotation.md
