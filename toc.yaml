@@ -82,6 +82,14 @@ toc:
         navtitle: Restricting access from a network zone
       - topic: iam-cbr-tutorial-integrated-services.md
         navtitle: Restricting access to integrated services
+      - topic: tutorials/multiline-log4j-helm.md
+        navtitle: Multiline parsing for Log4j (orchestrated)
+      - topic: tutorials/multiline-log4j.md
+        navtitle: Multiline parsing for Log4j (non-orchestrated)
+      - topic: tutorials/multiline-winston-helm.md
+        navtitle: Multiline parsing for Winston (orchestrated)
+      - topic: tutorials/multiline-winston.md
+        navtitle: Multiline parsing for Winston (non-orchestrated)
       - link:
           label: Creating new index fields from non-JSON logs
           href: https://community.ibm.com/community/user/blogs/marisa-lopez-de-silanes/2025/03/17/creating-indexed-fields-1
@@ -235,8 +243,8 @@ toc:
                 navtitle: Uninstalling the Logging agent using a Helm chart
               - topic: agent/configure-agent.md
                 navtitle: Configuring the log files that are collected
-              - topic: agent/agent-multiline.md
-                navtitle: Multiline support for orchestrated environments
+              - topic: agent/agent-multiline-new.md
+                navtitle: Multiline support 
           - topicgroup:
               label: Managing the Logging agent for Linux environments
               topics:
@@ -244,6 +252,8 @@ toc:
                 navtitle: Deploying and managing the agent
               - topic: agent/agent-rsyslog.md
                 navtitle: Configure the Logging agent to collect and route Rsyslog messages
+              - topic: agent/agent-multiline-linux.md
+                navtitle: Multiline support
           - topicgroup:
               label: Managing the Logging agent for Windows environments
               topics:
@@ -257,6 +267,8 @@ toc:
                 navtitle: Adding metadata
               - topic: agent/agent-windows-manage.md
                 navtitle: Managing the agent
+              - topic: agent/agent-multiline-windows.md
+                navtitle: Multiline support
           - topic: agent/agent-plugin-parameters.md
             navtitle: Output plug-in parameters to send data to Cloud Logs
           - topic: agent/agent-multiple-icl-targets.md
