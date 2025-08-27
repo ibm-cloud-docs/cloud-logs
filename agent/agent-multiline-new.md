@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-08-27"
 
 keywords:
 
@@ -211,3 +211,19 @@ If you have installed a previous version of the {{site.data.keyword.agent}} and 
 {: attention}
 
 After updating the `values.yaml` file, run `helm upgrade` to apply the changes. Verify your configuration by checking logs from different runtimes in {{site.data.keyword.logs_full_notm}} to ensure multiline grouping works across all configurations.
+
+
+## More information and examples
+{: #agent-multiline-new-moreinfo}
+
+For more information and tutorials with example scenarios for configuring multiline processing, see the following topics.
+
+| For information about | See |
+|-----------------------|-----|
+| Configuring multiline support for the {{site.data.keyword.agent}} in Linux | [Topic](/docs/cloud-logs?topic=cloud-logs-agent-multiline-linux) |
+| Configuring multiline support for the {{site.data.keyword.agent}} in Windows | [Topic](/docs/cloud-logs?topic=cloud-logs-agent-multiline-windows) |
+| Multiline parsing for Java applications with Log4j | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-log4j) |
+| Multiline parsing using Helm for Java applications with Log4j | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-log4j-helm) |
+| Multiline parsing for Node.js applications using Winston | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-winston) |
+| Multiline parsing using Helm for Node.js applications using Winston | [Tutorial](/docs/cloud-logs?topic=cloud-logs-multiline-winston-helm) |
+{: caption="Additional resources for the {{site.data.keyword.agent}} multiline processing" caption-side="bottom"}
