@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-severity}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to set `severityFieldName` to override the default severity field that is sent to {{site.data.keyword.logs_full_notm}}.
+{: shortdesc}
 
 Use this option if your log messages use a non-standard field name (for example, `Log_Level`, `logSeverity`, and so on) to indicate severity.
 

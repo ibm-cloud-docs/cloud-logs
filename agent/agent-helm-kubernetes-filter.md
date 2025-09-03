@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-kubernetes-filter}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to enrich logs with Kubernetes metadata. After you modify the `logs-values.yaml` file, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.
-
+{: shortdesc}
 
 By default, the Helm chart enables the Kubernetes filter, `enableKubernetesFilter`, for processing the container logs.  This provides capabilities such as:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -100,7 +100,7 @@ The following table outlines keys that you can configure for an `INPUT` section:
 | `Path` | Set the location where logs records are read.  \n  \n For Kubernetes logs, by default the {{site.data.keyword.logs_full_notm}} {{site.data.keyword.agent}} collects logs only from the `/var/log/containers/*.log` directory. If you want to collect logs from all subdirectories under `/var/log`, your need to add `/var/log/**/*.log` to the `Path` parameter. | Optional |
 {: caption="Input keys" caption-side="bottom"}
 
-For more information about the `INPUT` plug-ins, see [Input plug-ins](https://docs.fluentbit.io/manual/pipeline/inputs){: external}.
+For more information about the `INPUT` plug-ins, see [Input plug-ins](https://docs.fluentbit.io/manual/data-pipeline/inputs){: external}.
 
 Each `INPUT` plug-in has its own configuration keys in addition to the ones outlined in the table.
 {: note}

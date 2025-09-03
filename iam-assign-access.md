@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-30"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -47,7 +47,7 @@ There are two common ways to assign access to {{site.data.keyword.logs_full_notm
 
 * Access groups. You can manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
-* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources](https://cloud.ibm.com/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
+* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
 
 
 

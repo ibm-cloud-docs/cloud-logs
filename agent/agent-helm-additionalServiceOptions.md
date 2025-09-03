@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-additionalServiceOptions}
 
 You can set the `additionalServiceOptions` to add configuration options to the `service` section of the Fluent Bit configuration. This will add entries to the [service](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml/service-section) section of the Fluent Bit yaml configuration.
+{: shortdesc}
 
 For example:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -171,7 +171,7 @@ Release of the {{site.data.keyword.agent}} version 1.6.0
 
    * Updated Fluent Bit to version 3.2.10
    * It is now possible to configure the agent to use [proxies](/docs/cloud-logs?topic=cloud-logs-agent-proxy). 
-   * The helm chart provided for {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}} now use the Fluent Bit yaml-based configuration files.  This replaces the classic configuration which will be deprecated by Fluent Bit at the end of 2025.  The helm `values.yaml` files used with helm versions before 1.6.0 are compatible with 1.6.0.  Users that customize their configurations might need to take actions before applying this version of the helm chart.  If you are editing the config map files after deploying the helm chart then you will need to make changes to your process.  There are additional configuration values introduce with 1.6.0 that give more flexibility in your agent configuration. For more information, see [Template to deploy the {{site.data.keyword.agent}} using a 1.6.x Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-160).
+   * The helm chart provided for {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}} now use the Fluent Bit yaml-based configuration files.  This replaces the classic configuration which will be deprecated by Fluent Bit at the end of 2025.  The helm `values.yaml` files used with helm versions before 1.6.0 are compatible with 1.6.0.  Users that customize their configurations might need to take actions before applying this version of the helm chart.  If you are editing the config map files after deploying the helm chart then you will need to make changes to your process.  There are additional configuration values introduce with 1.6.0 that give more flexibility in your agent configuration. For more information, see [Template to deploy the {{site.data.keyword.agent}} using a 1.6.x Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
 
    Backward compatibility: You can still use your existing `logs-values.yaml` file from version 1.5.x with version 1.6.0. The transition is designed to be non-disruptive.
 
@@ -414,7 +414,7 @@ Release of the {{site.data.keyword.agent}} version 1.4.1
    This version includes the following notable changes:
 
    * Windows Agent support. For more information, see [Deploying the {{site.data.keyword.agent}} for Windows](/docs/cloud-logs?topic=cloud-logs-agent-windows)
-   * Multiline support with helm. For more information, see [Supporting multiline logs](/docs/cloud-logs?topic=cloud-logs-agent-multiline)
+   * Multiline support with helm. For more information, see [Supporting multiline logs](/docs/cloud-logs?topic=cloud-logs-agent-multiline-new)
 
    The following new {{site.data.keyword.agent}} packages are available.
 

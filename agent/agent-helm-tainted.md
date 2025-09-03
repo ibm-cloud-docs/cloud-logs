@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-tainted}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to include information on what to do when you have tainted nodes.
+{: shortdesc}
 
 For example, if you have a taint on a node: `kubectl taint nodes 10.1.2.3 myNodeType=ingress:NoSchedule`, you can configure the agent to be scheduled on that node by adding the `tolerations` configuration to your `log-values.yaml` file:
 

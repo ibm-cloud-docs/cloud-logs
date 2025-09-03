@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -18,6 +18,7 @@ subcollection: cloud-logs
 {: #agent-helm-parallel-processing}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to define the number of worker threads used by the output plug-in to enable parallel processing of log data.
+{: shortdesc}
 
 The `outputWorkers` setting defines the number of worker threads used by the output plug-in to enable parallel processing of log data.
 

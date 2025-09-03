@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-27"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -186,7 +186,7 @@ Complete the following steps to add multiline support in the {{site.data.keyword
     {: pre}
 
 ## Configuring multiline support for clusters with multiple runtimes and parsing requirements
-{: #agent-multiline-multi-runtime}
+{: #agent-multiline-multi-multi-runtime}
 
 If you have clusters running applications with multiple different languages or runtimes (for example, Java, Go, and Python), you might need to handle multiline logs from various sources. If you already have a custom multiline parser for Java, you can combine it with built-in parsers for other runtimes such as Go and Python. This ensures all logs are parsed correctly and forwarded as correctly grouped entries to {{site.data.keyword.logs_full}}.
 

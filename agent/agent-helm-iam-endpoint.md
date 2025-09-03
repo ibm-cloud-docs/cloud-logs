@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-iam-endpoint}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to set `env.iamEnvironment` to control the IAM endpoint that is used by the agent to exchange the tokens.
+{: shortdesc}
 
 The default value is `Production`.
 

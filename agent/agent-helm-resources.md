@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-resources}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to define changes to the resources that are assigned to the {{site.data.keyword.agent}} container.
+{: shortdesc}
 
 If you need to update any of the values, the entire configuration must be provided even if you don't update all of the values.
 {: important}

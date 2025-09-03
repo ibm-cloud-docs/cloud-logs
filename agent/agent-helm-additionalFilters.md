@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -18,6 +18,7 @@ subcollection: cloud-logs
 
 
 You can configure multiple filters, such as modify, grep, and nest, to modify the data that is collected before it is delivered to a destination. You can use a filter to match, exclude, or enrich your log records with specific metadata.
+{: shortdesc}
 
 When you add a filter, the configuration is added to the [pipeline.filters](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml/pipeline-section) section of the Fluent Bit yaml configuration.
 

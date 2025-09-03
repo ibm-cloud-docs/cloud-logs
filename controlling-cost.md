@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-20"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -89,13 +89,13 @@ You aren't limited to blocking full log lines. Fields in log lines that you don'
 
 If you are sending operational logs to {{site.data.keyword.logs_full_notm}} by using the {{site.data.keyword.agent}}, you can parse and restructure the log data for consistency and to remove data that you might not require in {{site.data.keyword.logs_full_notm}}.
 
-* You can use the Fluent Bit [grep filter with the exclude option](https://docs.fluentbit.io/manual/pipeline/filters/grep){: external}.
+* You can use the Fluent Bit [grep filter with the exclude option](https://docs.fluentbit.io/manual/data-pipeline/filters/grep){: external}.
 
 * You can use the Fluent Bit [modify filter](https://docs.fluentbit.io/manual/3.2/pipeline/filters/modify){: external} to drop fields that you don't need.
 
 * When installing the {{site.data.keyword.agent}}, make use of the [`excludeLogSourcePaths`](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters#agent-helm-template-clusters-chart-options-log-source-paths) option when installing with the helm chart or the [`Exclude_Path`](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters#agent-helm-template-clusters-chart-options-log-source-paths) option on the `tail` plug-in (Linux and Windows installations) to not send logs from specific locations.
 
-* You can use [Lua scripts](https://docs.fluentbit.io/manual/pipeline/filters/lua){: external} to filter and modify data that is being sent to {{site.data.keyword.logs_full_notm}} prior to ingestion.
+* You can use [Lua scripts](https://docs.fluentbit.io/manual/data-pipeline/filters/lua){: external} to filter and modify data that is being sent to {{site.data.keyword.logs_full_notm}} prior to ingestion.
 
 #### Making sure logging data is well structured
 {: #cc-structure}
@@ -108,6 +108,6 @@ When you modify log data, you need to make sure that the data sent to {{site.dat
 
 * For logs originating from non-Kubernetes sources, log lines need to have [`application` and `subsystemName` fields](/docs/cloud-logs?topic=cloud-logs-metadata) included. These fields are also used by TCO processing.
 
-* Logs should also include timestamps in UTC format. Alternately the {{site.data.keyword.agent}} can be configure to offset the timestamp before sending the logs. See the information on `Time_Offset` and `Time_System_Timezone` in the [Fluent Bit documentation](https://docs.fluentbit.io/manual/pipeline/parsers/configuring-parser){: external}.
+* Logs should also include timestamps in UTC format. Alternately the {{site.data.keyword.agent}} can be configure to offset the timestamp before sending the logs. See the information on `Time_Offset` and `Time_System_Timezone` in the [Fluent Bit documentation](https://docs.fluentbit.io/manual/data-pipeline/parsers/configuring-parser){: external}.
 
 * Fields that will be frequently used in searches (for example, `http_error_code`) should be [extracted into separate keys](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule&interface=ui), rather than being included in the log line.
