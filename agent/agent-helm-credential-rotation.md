@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -28,7 +28,7 @@ Before you begin, complete the prerequisite tasks.
 
 - Install the following CLIs:
 
-    - The {{site.data.keyword.cloud_notm}} CLI to log in to the {{site.data.keyword.cloud_notm}} and manage {{site.data.keyword.cloud_notm}} services such as creating an API key. For more information, see [Getting started with the IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started).
+    - The {{site.data.keyword.cloud_notm}} CLI to log in to the {{site.data.keyword.cloud_notm}} and manage {{site.data.keyword.cloud_notm}} services such as creating an API key. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started).
 
     - The [Kubernetes CLI](/docs/containers?topic=containers-cli-install) to manage Kubernetes clusters by using `kubectl` commands.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-15"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-template-config-options-required}
 
 Starting with Helm chart version 1.6.0, the Fluent Bit log pipeline configuration has transitioned to using the official [Fluent Bit YAML configuration](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml) format. This change brings enhanced flexibility and clarity to configuration management.
-{: note}
+{: shortdesc}
 
 
 ## List of required parameters
@@ -39,7 +39,7 @@ The following table contains a list of the parameters that are required and you 
 | `env.trustedProfileID` | The trusted profile used \n Required when `iamMode=TrustedProfile` | No default. \n Sample value: `Profile-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
 | `secret.iamAPIKey` | The APIKey used \n Required when `iamMode=IAMAPIKey`. \n Should only be provided when using the CLI | No default |
 | `env.iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens. \n Valid values are: `Production`, `Custom`, `PrivateProduction` | `Production` |
-| `env.iamHost` | IAM host required for IAM Environment `Custom` setting.  See [iamEnvironment](#agent-helm-template-clusters-chart-options-160-iam-env) | No default |
+| `env.iamHost` | IAM host required for IAM Environment `Custom` setting.  See [iamEnvironment](/docs/cloud-logs?topic=cloud-logs-agent-helm-iam-endpoint) | No default |
 | `scc.create` | Required to create the Secure Context Constraints in Openshift \n Set to `true` for Openshift clusters. | `false` |
 | `defaultMetadata.subsystemName` | Static string to override the `subsystemName` `in {{site.data.keyword.logs_full_notm}} | Set to the container that generated the log |
 | `defaultMetadata.applicationName` | Static string to override the `applicationName` in {{site.data.keyword.logs_full_notm}} | Set to the namespace name that generated the log |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-additionalInputs}
 
 You can set the `additionalInputs` option to introduce additional Fluent Bit input plug-in definitions. For each input plugin, you must configure the `processors` section that define how to modify or enrich the data before it reaches the filtering or output destinations. After you modify the `logs-values.yaml` file, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.
+{: shortdesc}
 
 For example, you might need to add a new input plugin if you have a file with special parsing requirements.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-02"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -42,13 +42,13 @@ You can configure the {{site.data.keyword.agent}} with custom values for the `ap
 
 - Use `-a` to specify the `applicationName` that you want to use.
 
-    By default, the `applicationName` defaults to the namespace name `kubernetes.namespace_name ` in the {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerlong_notm}} cluster.
+    By default, the `applicationName` defaults to the namespace name `kubernetes.namespace_name` in the {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerlong_notm}} cluster.
 
     You can also use variables from the environment to set custom values, for example `'${POD_NAMESPACE}'`.
 
 - Use `-s` to specify the `susbsystemName` that you want to use.
 
-    By default, the `subsystemName` defaults to the container name `kubernetes.container_name ` in {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerlong_notm}} clusters.
+    By default, the `subsystemName` defaults to the container name `kubernetes.container_name` in {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerlong_notm}} clusters.
 
     You can also use variables from the environment, for example `'${POD_NAME}'`.
 
@@ -105,7 +105,7 @@ The following example shows how to configure an agent for a Kubernetes cluster t
 
     For example, your log line looks as follows: `{"level":"info", "msg":"Test message", "applicationName":"my-application"}`
 
-2. Add the JSON PARSER plugin to the `logger-agent-iks.yaml` file to convert a stingify JSON into a JSON object.  For more information, see [JSON](https://docs.fluentbit.io/manual/pipeline/parsers/json){: external}.
+2. Add the JSON PARSER plugin to the `logger-agent-iks.yaml` file to convert a stingify JSON into a JSON object.  For more information, see [JSON](https://docs.fluentbit.io/manual/data-pipeline/parsers/json){: external}.
 
     ```yaml
     [PARSER]
@@ -120,7 +120,7 @@ The following example shows how to configure an agent for a Kubernetes cluster t
     ```
     {: codeblock}
 
-3. Add the PARSER plugin to the `logger-agent-iks.yaml` file to extract fields from logs. For more information, see [Parser](https://docs.fluentbit.io/manual/pipeline/filters/parser){: external}.
+3. Add the PARSER plugin to the `logger-agent-iks.yaml` file to extract fields from logs. For more information, see [Parser](https://docs.fluentbit.io/manual/data-pipeline/filters/parser){: external}.
 
     By default, the parser plugin only keeps the parsed fields in its output.
     {: note}
@@ -144,7 +144,7 @@ The following example shows how to configure an agent for a Kubernetes cluster t
 
 4. Extract the application name by using the Nest filter plugin
 
-    The Nest Filter plugin allows you to operate on or with nested data. Its modes of operation are: `nest` where it takes a set of records and puts them in a map, and `lift` where it takes a map by key and lifts its records up. For more information, see [Nest](https://docs.fluentbit.io/manual/pipeline/filters/nest#configuration-file){: external}.
+    The Nest Filter plugin allows you to operate on or with nested data. Its modes of operation are: `nest` where it takes a set of records and puts them in a map, and `lift` where it takes a map by key and lifts its records up. For more information, see [Nest](https://docs.fluentbit.io/manual/data-pipeline/filters/nest#configuration-file){: external}.
 
     applicationName must be at the top level, therefore, you must use the `lift` operation.
 

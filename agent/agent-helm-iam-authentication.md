@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-iam-authentication}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to include the `env.iamMode` so you choose the authentication method to use by the agent when sending logs to an {{site.data.keyword.logs_full_notm}} instance.
+{: shortdesc}
 
 You can choose an IAM APIKey or a Trusted Profile configuration.
 

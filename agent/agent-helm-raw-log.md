@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-15"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -18,6 +18,7 @@ subcollection: cloud-logs
 
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to set `keepParsedLog` to `true` to retain a copy of the original log field after it has been successfully processed by the Kubernetes plug-in and the parser extracts the fields successfully.
+{: shortdesc}
 
 The default is `false`.
 

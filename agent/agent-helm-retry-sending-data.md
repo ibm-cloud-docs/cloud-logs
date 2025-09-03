@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-retry-sending-data}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to set `retryLimit` and indicate whether the agent should retry sending the data to an {{site.data.keyword.logs_full_notm}} instance.
+{: shortdesc}
 
 After you modify the `logs-values.yaml`, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.
 

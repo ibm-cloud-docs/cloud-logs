@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-08-15"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 {: #agent-helm-metadata}
 
 When you deploy or upgrade the Logging agent, you can configure the `logs-values.yaml` file to include custom values for applicationName and subsystemName, and also add custom tags to your log records.
+{: shortdesc}
 
 After you modify the `logs-values.yaml`, you can [Upgrade the agent](/docs/cloud-logs?topic=cloud-logs-agent-helm-update) or continue modifying the file before applying all the changes.
 

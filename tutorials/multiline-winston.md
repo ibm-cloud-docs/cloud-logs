@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -31,13 +31,17 @@ This tutorial requires the {{site.data.keyword.logs_full_notm}} {{site.data.keyw
 {: requirement}
 
 ## Before you begin
-{: #multiline-log4j-prereq}
+{: #multiline-winston-prereq}
 
 Before you begin using this tutorial, review the following information to understand {{site.data.keyword.agent}} and multiline concepts.
 
 * [Learn about the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about)
 
-* [Learn about multiline support in non-orchestrated environments](/docs/cloud-logs?topic=cloud-logs-agent-multiline-nonnorchestrated)
+* Learn about multiline support in non-orchestrated environments.
+
+    * [Linux]{: tag-linux} [Linux](/docs/cloud-logs?topic=cloud-logs-agent-multiline-linux)
+
+    * [Windows]{: tag-windows} [Windows](/docs/cloud-logs?topic=cloud-logs-agent-multiline-windows)
 
 This tutorial also assumes you have:
 
@@ -164,6 +168,3 @@ Access your {{site.data.keyword.logs_full_notm}} instance and confirm your multi
 
    The grouped log data is included in the `log` field.
    {: note}
-
-
-

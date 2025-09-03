@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-06"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -30,8 +30,8 @@ Be sure that you have completed the following steps:
 1. Have already created two {{site.data.keyword.logs_full_notm}} destination instances.
 2. Have authentication, either using an API key or trusted profile, for both your {{site.data.keyword.logs_full_notm}} instances.
 3. Have already deployed the {{site.data.keyword.agent}} and are ready to modify its configuration.
-   - For more information, see [managing the agent for Openshift](/docs/cloud-logs?topic=cloud-logs-agent-openshift) for deploying to Openshift clusters.
-   - For more information, see [managing the agent for Kubernetes](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster) for deploying to Kubernetes clusters.
+   - For more information, see [deploying the agent for Openshift](/docs/cloud-logs?topic=cloud-logs-agent-helm-os-deploy) for deploying to Openshift clusters.
+   - For more information, see [deploying the agent for Kubernetes](/docs/cloud-logs?topic=cloud-logs-agent-helm-kube-deploy) for deploying to Kubernetes clusters.
    - For more information, see [managing the agent for Linux](/docs/cloud-logs?topic=cloud-logs-agent-linux) for deploying on Linux.
    - For more information, see [managing the agent for Windows](/docs/cloud-logs?topic=cloud-logs-agent-windows) for deploying on Windows systems.
 

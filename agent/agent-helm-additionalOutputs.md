@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-08-15"
+  years:  2024, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -16,6 +16,7 @@ subcollection: cloud-logs
 {: #agent-helm-additionalOutputs}
 
 You can set the `additionalOutputs` option to introduce additional Fluent Bit output plug-in definitions to the current pipeline. For example, you might need to send logs to multiple {{site.data.keyword.logs_full_notm}} instances.
+{: shortdesc}
 
 Additional outputs that you configure add entries to the [pipeline.outputs](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/yaml/pipeline-section) section of the Fluent Bit yaml configuration.
 

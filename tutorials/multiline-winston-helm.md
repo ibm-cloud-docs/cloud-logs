@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -31,7 +31,7 @@ This tutorial requires the {{site.data.keyword.logs_full_notm}} {{site.data.keyw
 {: requirement}
 
 ## Before you begin
-{: #multiline-log4j-prereq}
+{: #multiline-winston-prereq-helm}
 
 Before you begin using this tutorial, review the following information to understand {{site.data.keyword.agent}} and multiline concepts.
 
@@ -154,7 +154,7 @@ multilinePreprocessor:
 
 
 ## Apply the changes.
-{: #multiline-log4j-helm-s4}
+{: #multiline-winston-helm-s4}
 {: step}
 
 If you have installed a previous version of the {{site.data.keyword.agent}} and have updated the agent configuration by modifying the config map directly in the cluster, make a copy of your config map from the cluster before running the `helm upgrade` command. When the {{site.data.keyword.agent}} is updated, any changes made to the config map will be overwritten.
@@ -177,4 +177,3 @@ Access your {{site.data.keyword.logs_full_notm}} instance and confirm your multi
 1. [Access your {{site.data.keyword.logs_full_notm}} instance.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
 
 2. Using the **Logs** ![Explore logs icon](../icons/explore.svg "Explore logs") view, verify that your multiline entries are grouped correctly.
-

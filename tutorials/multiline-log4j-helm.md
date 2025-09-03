@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -31,13 +31,13 @@ This tutorial requires the {{site.data.keyword.logs_full_notm}} {{site.data.keyw
 {: requirement}
 
 ## Before you begin
-{: #multiline-log4j-prereq}
+{: #multiline-log4j-prereq-helm}
 
 Before you begin using this tutorial, review the following information to understand {{site.data.keyword.agent}} and multiline concepts.
 
 * [Learn about the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about)
 
-* [Learn about multiline support in orchestrated environments](/docs/cloud-logs?topic=cloud-logs-agent-multiline)
+* [Learn about multiline support in orchestrated environments](docs/cloud-logs?topic=cloud-logs-agent-multiline-new)
 
 This tutorial also assumes you have:
 
@@ -51,7 +51,7 @@ This tutorial also assumes you have:
 
 
 ## Sample Log4j configuration
-{: #multiline-log4j-config}
+{: #multiline-log4j-config-helm}
 
 Let's assume that your Java application's Log4j to log to the console (`stdout`) is similar to the following:
 
@@ -189,5 +189,3 @@ Access your {{site.data.keyword.logs_full_notm}} instance and confirm your multi
 1. [Access your {{site.data.keyword.logs_full_notm}} instance.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
 
 2. Using the **Logs** ![Explore logs icon](../icons/explore.svg "Explore logs") view, verify that your multiline entries are grouped correctly.
-
-
