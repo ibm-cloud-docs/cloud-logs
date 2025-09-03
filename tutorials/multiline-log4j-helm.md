@@ -37,7 +37,7 @@ Before you begin using this tutorial, review the following information to unders
 
 * [Learn about the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about)
 
-* [Learn about multiline support in orchestrated environments](docs/cloud-logs?topic=cloud-logs-agent-multiline-new)
+* [Learn about multiline support in orchestrated environments](/docs/cloud-logs?topic=cloud-logs-agent-multiline-new)
 
 This tutorial also assumes you have:
 
