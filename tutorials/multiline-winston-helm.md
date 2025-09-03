@@ -37,7 +37,7 @@ Before you begin using this tutorial, review the following information to unders
 
 * [Learn about the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-about)
 
-* [Learn about multiline support in orchestrated environments](/docs/cloud-logs?topic=cloud-logs-agent-multiline)
+* [Learn about multiline support in orchestrated environments](/docs/cloud-logs?topic=cloud-logs-agent-multiline-new)
 
 This tutorial also assumes you have:
 
@@ -169,7 +169,7 @@ helm upgrade
 
 
 ## Verify your multiline logs
-{: #multiline-winston-s4}
+{: #multiline-winston-s4-helm}
 {: step}
 
 Access your {{site.data.keyword.logs_full_notm}} instance and confirm your multiline entries (for example, stack traces) are grouped correctly.
