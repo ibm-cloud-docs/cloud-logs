@@ -57,7 +57,7 @@ toc:
           - topic: agent/agent-plugin-support.md
             navtitle: Fluent Bit plug-ins supported
       - topicgroup:
-          label: Sending telemetry data
+          label: Observability telemetry
           topics:
           - topic: cl-at-events.md
             navtitle: Activity tracking events
