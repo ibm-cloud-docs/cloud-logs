@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-09-03"
+lastupdated: "2025-09-05"
 
 keywords:
 
@@ -89,7 +89,7 @@ Release of the {{site.data.keyword.agent}} version 1.6.1
 
    This version includes the following notable changes:
 
-   * You can configure the Kubernetes metadata fields included with each log record. By default, only essential fields such as `pod_name`, `namespace_name`, and `container_name` are kept. This helps reduce the amount of metadata stored with each log and reduces storage costs.
+   * You can configure the Kubernetes metadata fields included with each log record. By default, only essential fields such as `pod_name`, `namespace_name`, and `container_name` are kept. This helps reduce the amount of metadata stored with each log and reduces storage costs. For more information see [Enabling the Kubernetes filter to enrich logs with Kubernetes metadata](/docs/cloud-logs?topic=cloud-logs-agent-helm-kubernetes-filter).
 
    * The ability to add custom configurations to all sections.
 
