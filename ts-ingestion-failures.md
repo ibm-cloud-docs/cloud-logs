@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-26"
+lastupdated: "2025-09-08"
 
 keywords: 
 
@@ -49,6 +49,8 @@ The {{site.data.keyword.agent}} retries sending data to {{site.data.keyword.logs
 However, sometimes {{site.data.keyword.logs_full_notm}} sends a `200 OK` and writes a message in the response body that not all logs were accepted.
 
 For example, logs can be dropped if they are older than a specific threshold.
+
+
 
 The message from the {{site.data.keyword.agent}} contains the reason why the logs were dropped.
 
