@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-09-08"
 
 keywords:
 
@@ -93,6 +93,9 @@ Complete the following steps:
 
 
 3. Download the configuration file and mark it as executable.
+
+   This step is only required when using the {{site.data.keyword.agent}} 1.6.1 or earlier. It does not apply to the {{site.data.keyword.agent}} 1.6.2 or subsequent releases.
+   {: important}
 
    ```sh
    wget https://logs-router-agent-config.s3.us.cloud-object-storage.appdomain.cloud/post-config.sh
