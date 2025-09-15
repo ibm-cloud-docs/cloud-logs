@@ -226,6 +226,8 @@ toc:
                 navtitle: Configuring additional service options
               - topic: agent/agent-helm-additionalOutputs.md
                 navtitle: Configuring multiple outputs
+              - topic: agent/agent-helm-configure-maxunavailable.md
+                navtitle: Configuring the number of unavailable pods
               - topic: agent/agent-helm-maxloglength.md
                 navtitle: Configure the maximum length of the log
           - topicgroup:
