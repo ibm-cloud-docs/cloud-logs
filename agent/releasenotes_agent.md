@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-09-05"
+lastupdated: "2025-09-15"
 
 keywords:
 
@@ -21,6 +21,61 @@ Use these release notes to learn about updates to the {{site.data.keyword.agent}
 
 
 
+## 12 September 2025
+{: #logs-router-agent-sep1225}
+{: release-note}
+
+Release of the {{site.data.keyword.agent}} version 1.6.3
+:   {{site.data.keyword.agent}} version 1.6.3 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, Debian 11, Debian 12, and Windows.  This release is based on Fluent Bit [v3.2.10](https://fluentbit.io/announcements/v3.2.10/){: external}.
+
+   This version includes the following notable changes:
+
+   * Improved caching of access tokens in VSIs when using Trusted Profiles to reduce calls to IAM.
+   * Added [parameter](/docs/cloud-logs?topic=cloud-logs-agent-helm-configure-maxunavailable) in Helm to specify the max number of pods that can be unavailable during the rolling update process.
+   * Added multi-line support for non-orchestrated environments:
+      * [Linux](/docs/cloud-logs?topic=cloud-logs-agent-multiline-linux)
+      * [Windows](/docs/cloud-logs?topic=cloud-logs-agent-multiline-windows)
+   * Added tutorials for multiline support:
+      * [Multiline parsing for Log4j (orchestrated)](/docs/cloud-logs?topic=cloud-logs-multiline-log4j-helm)
+      * [Multiline parsing for Log4j (non-orchestrated)](/docs/cloud-logs?topic=cloud-logs-multiline-log4j)
+      * [Multiline parsing for Winston (orchestrated)](/docs/cloud-logs?topic=cloud-logs-multiline-winston-helm)
+      * [Multiline parsing for Winston (non-orchestrated)](/docs/cloud-logs?topic=cloud-logs-multiline-winston)
+
+   The following new {{site.data.keyword.agent}} packages are available.
+
+   Both packages are required for the installation.
+   {: important}
+
+   RHEL 8
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.6.3.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.6.3.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.6.3.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.6.3.rpm.sha256){: external}
+
+   RHEL 9
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.3.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.3.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.3.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.3.rpm.sha256){: external}
+
+   Debian 11
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.6.3.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.6.3.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.6.3.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.6.3.deb.sha256){: external}
+
+   Ubuntu 20
+
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.6.3.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.6.3.deb){: external}
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.6.3.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.6.3.deb.sha256){: external}
+
+   Debian 12 & Ubuntu 22
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.3.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.3.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.3.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.6.3.deb.sha256){: external}
+
+   Windows
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.6.3.zip](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.6.3.zip){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.6.3.zip.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.6.3.zip.sha256){: external}
+
 ## 26 August 2025
 {: #logs-router-agent-aug2625}
 {: release-note}
@@ -32,14 +87,6 @@ Release of the {{site.data.keyword.agent}} version 1.6.2
 
    * [Added `systemLogsParser` to helm for the ability to use a parser specific for system logs.](/docs/cloud-logs?topic=cloud-logs-agent-helm-log-files)
    * [Provided an optional parameter in helm (`maxLogLength`) to truncate logs after a specified length.](/docs/cloud-logs?topic=cloud-logs-agent-helm-maxloglength)
-   * Added multi-line support for non-orchestrated environments:
-      * [Linux](/docs/cloud-logs?topic=cloud-logs-agent-multiline-linux)
-      * [Window](/docs/cloud-logs?topic=cloud-logs-agent-multiline-windows)
-   * Added tutorials for multiline support:
-      * [Multiline parsing for Log4j (orchestrated)](/docs/cloud-logs?topic=cloud-logs-multiline-log4j-helm)
-      * [Multiline parsing for Log4j (non-orchestrated)](/docs/cloud-logs?topic=cloud-logs-multiline-log4j)
-      * [Multiline parsing for Winston (orchestrated)](/docs/cloud-logs?topic=cloud-logs-multiline-winston-helm)
-      * [Multiline parsing for Winston (non-orchestrated)](/docs/cloud-logs?topic=cloud-logs-multiline-winston)
    * Fixed an error that was logging dropped messages even though the messages were still being processed.
    * Ensure custom configurations are preserved during upgrades.
 
