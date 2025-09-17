@@ -230,6 +230,8 @@ toc:
                 navtitle: Configuring the number of unavailable pods
               - topic: agent/agent-helm-maxloglength.md
                 navtitle: Configure the maximum length of the log
+          - topic: agent/agent-configuration-considerations.md
+            navtitle: Agent configuration considerations
           - topicgroup:
               label: Managing the Logging agent for orchestrated environments
               topics:
