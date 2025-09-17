@@ -248,7 +248,7 @@ toc:
               - topic: agent/configure-agent.md
                 navtitle: Configuring the log files that are collected
               - topic: agent/agent-multiline-new.md
-                navtitle: Multiline support 
+                navtitle: Multiline support
           - topicgroup:
               label: Managing the Logging agent for Linux environments
               topics:
@@ -282,7 +282,7 @@ toc:
           - topic: agent/agent-fluentbit.md
             navtitle: Understanding the agent configuration file
           - topic: agent/agent-set-appsubname.md
-            navtitle: Configuring custom metadata fields 
+            navtitle: Configuring custom metadata fields
       - topic: tco-optimizer.md
         navtitle: Configuring the TCO Optimizer
       - topicgroup:

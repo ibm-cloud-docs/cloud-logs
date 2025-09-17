@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2025
-lastupdated: "2025-09-03"
+lastupdated: "2025-09-17"
 
 keywords:
 
@@ -41,7 +41,7 @@ The following table contains a list of the parameters that are required and you 
 | `env.iamEnvironment` | Controls the IAM endpoint used by the agent to exchange the tokens. \n Valid values are: `Production`, `Custom`, `PrivateProduction` | `Production` |
 | `env.iamHost` | IAM host required for IAM Environment `Custom` setting.  See [iamEnvironment](/docs/cloud-logs?topic=cloud-logs-agent-helm-iam-endpoint) | No default |
 | `scc.create` | Required to create the Secure Context Constraints in Openshift \n Set to `true` for Openshift clusters. | `false` |
-| `defaultMetadata.subsystemName` | Static string to override the `subsystemName` `in {{site.data.keyword.logs_full_notm}} | Set to the container that generated the log |
+| `defaultMetadata.subsystemName` | Static string to override the `subsystemName` in {{site.data.keyword.logs_full_notm}} | Set to the container that generated the log |
 | `defaultMetadata.applicationName` | Static string to override the `applicationName` in {{site.data.keyword.logs_full_notm}} | Set to the namespace name that generated the log |
 | `selectedLogSourcePaths` | Logs that should be collected by the agent. | `/var/log/containers/*.log` |
 | `excludeLogSourcePaths` | Logs that should NOT be collected by the agent. | `/var/log/at/*` |
