@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-15"
+lastupdated: "2025-09-17"
 
 keywords:
 
@@ -29,6 +29,7 @@ Review the following sections for the specific responsibilities for you and for 
 | Task              | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-------------------|-------------------------------------------------|-----------------------|
 | [Configuration of an {{site.data.keyword.logs_full_notm}} data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket) | None | [TCO policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) sending data to the {{site.data.keyword.monitoring}} and {{site.data.keyword.compliance}} pipelines require a data bucket to be configured. If a data bucket is not configured for these policy types, there is a potential for data to be dropped.  \n  \n Without a data bucket, data will not be retained beyond the selected [service plan](/docs/cloud-logs?topic=cloud-logs-service_plans).|
+| Configuration of the {{site.data.keyword.agent}} | Provides the ability to configure the {{site.data.keyword.agent}}. | [Configure the {{site.data.keyword.agent}} for your environment to meet your needs.](/docs/cloud-logs?group=sending-data-to-a-cloud-logs-instance)  \n  \n Prior to configuring the {{site.data.keyword.agent}}, review  [Considerations when you configure the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-agent-configuration-considerations) to understand how the {{site.data.keyword.agent}} configuration affects processing of log data. |
 {: caption="Responsibilities for service configuration" caption-side="top"}
 
 
