@@ -594,3 +594,4 @@ toc:
                 - ts-fb-error.md
                 - ts-helm-proxy.md
                 - ts-ingestion-failures.md
+                - ts-agent-logs.md
