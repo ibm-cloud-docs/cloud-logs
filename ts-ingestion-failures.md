@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-09-17"
+lastupdated: "2025-09-19"
 
 keywords: 
 
@@ -32,7 +32,7 @@ The following issues can cause data ingestion problems in your {{site.data.keywo
 
 **Retry limit is exceeded.**
 
-Check for logs in the {{site.data.keyword.logs_full_notm}} UI with the string `could not send data - this batch will not be retried`. Also check the {{site.data.keyword.agent}} logs for any errors.
+Check for logs in the {{site.data.keyword.logs_full_notm}} UI with the string `could not send data - this batch will not be retried`. Also [check the {{site.data.keyword.agent}} logs](/docs/cloud-logs?topic=cloud-logs-ts-agent-logs) for any errors.
 
 The problem can be due to exceeding the configured retry limit or due to permission issues.
 
@@ -42,7 +42,7 @@ If the ingestion permissions are properly configured, you might need to change t
 
 **Logs are dropped.**
 
-Check for logs in the {{site.data.keyword.logs_full_notm}} UI starting with the string `ICL dropped logs`. Also check the {{site.data.keyword.agent}} logs for any errors, especially errors related to attempts to retry sending the logs.
+Check for logs in the {{site.data.keyword.logs_full_notm}} UI starting with the string `ICL dropped logs`. Also [check the {{site.data.keyword.agent}} logs for any errors](/docs/cloud-logs?topic=cloud-logs-ts-agent-logs), especially errors related to attempts to retry sending the logs.
 
 The {{site.data.keyword.agent}} retries sending data to {{site.data.keyword.logs_full_notm}} if the {{site.data.keyword.agent}} does not receive a `200 OK` response.
 
