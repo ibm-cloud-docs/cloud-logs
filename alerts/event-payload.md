@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-21"
+lastupdated: "2025-09-24"
 
 keywords:
 
@@ -24,6 +24,7 @@ The properties that are sent to {{site.data.keyword.en_short}} vary depending on
 
 ## Payload
 {: #event-payload-1}
+
 
 ```json
 {
@@ -68,6 +69,11 @@ The properties that are sent to {{site.data.keyword.en_short}} vary depending on
    "type": "com.ibm.cloud.logs.<event_type>:<event_subtype>"
 }
 ```
+{: codeblock}
+
+
+
+
 
 Review following table for more information about event notification properties.
 

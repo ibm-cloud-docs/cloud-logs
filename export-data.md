@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-03"
+  years:  2024, 2025
+lastupdated: "2025-09-24"
 
 keywords:
 
@@ -39,7 +39,7 @@ In the Explore **Logs** page, complete the following steps to export data for a 
 
 7. Select the number of pages that you want to export.
 
-    You can export up to the first 20 pages, that is, aproximately 2000 logs records.
+    You can export up to the first 20 pages, that is, approximately 2000 logs records.
     {: note}
 
 8. Select the filter applied to the export.

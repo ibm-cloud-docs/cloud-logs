@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-09-24"
 
 keywords:
 
@@ -26,6 +26,10 @@ The following table lists the severities that {{site.data.keyword.logs_full_notm
 | `CRITICAL`           | `P1`           | Use to report critical situations. |
 | `ERROR`              | `P2`           | Use to report errors detected. |
 {: caption="Event severities" caption-side="bottom"}
+
+
+
+
 
 
 The alert priority value is used to classify alerts that are triggered in the *Incidents* page.
