@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-09-24"
 
 keywords:
 
@@ -22,11 +22,14 @@ The following table lists the severities that {{site.data.keyword.logs_full_notm
 | Event severity       | Alert Priority | Description |
 |----------------------|----------------|-------------|
 | `INFO`               | `P5`           | Use for information purposes. |
-| `LOW`                | `p4`           | Use for information purposes.
 | `WARNING`            | `P3`           | Use to issue a warning. |
-| `ERROR`              | `P2`           | Use to report errors detected. |
 | `CRITICAL`           | `P1`           | Use to report critical situations. |
+| `ERROR`              | `P2`           | Use to report errors detected. |
 {: caption="Event severities" caption-side="bottom"}
+
+
+
+
 
 
 The alert priority value is used to classify alerts that are triggered in the *Incidents* page.
