@@ -18,6 +18,8 @@ subcollection: cloud-logs
 You can use a service ID API key to send logs by using the {{site.data.keyword.agent}}.
 {: shortdesc}
 
+An individual user ID API key should only be used for non-production environments. If the user creating the API key is no longer an authorized IBM Cloud user, individual user ID API keys associated with that user will no longer be authorized and ingestion will be stopped. Production environments should be configured using [Service ID API keys](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key) or [Trusted Profiles](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
+{: important}
 
 
 The API key is used to open a secure web socket to the {{site.data.keyword.logs_full_notm}} ingestion endpoint to authenticate the {{site.data.keyword.agent}}.
