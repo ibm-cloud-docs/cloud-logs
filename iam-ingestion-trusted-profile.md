@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-27"
+  years:  2024, 2025
+lastupdated: "2025-09-25"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 
 You can use a Trusted Profile (TP) to send logs from a compute resource in {{site.data.keyword.cloud_notm}} to an {{site.data.keyword.logs_full_notm}} instance by using the {{site.data.keyword.agent}}.
 {: shortdesc}
+
 
 
 ## Creating a Trusted Profile for ingestion

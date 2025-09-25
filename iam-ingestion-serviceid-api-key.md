@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-26"
+  years:  2024, 2025
+lastupdated: "2025-09-25"
 
 keywords:
 
@@ -17,6 +17,8 @@ subcollection: cloud-logs
 
 You can use a service ID API key to send logs by using the {{site.data.keyword.agent}}.
 {: shortdesc}
+
+
 
 The API key is used to open a secure web socket to the {{site.data.keyword.logs_full_notm}} ingestion endpoint to authenticate the {{site.data.keyword.agent}}.
 
