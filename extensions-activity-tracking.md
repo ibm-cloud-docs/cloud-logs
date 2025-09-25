@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-20"
+lastupdated: "2025-09-25"
 
 keywords:
 
@@ -60,7 +60,7 @@ This extension includes one or more items.
 | [Enrichments](/docs/cloud-logs?topic=cloud-logs-enriching-data) | 0 |
 | [Events to metrics](/docs/cloud-logs?topic=cloud-logs-configure-event2metrics) | 0 |
 | [Rules](/docs/cloud-logs?topic=cloud-logs-log_parsing_rules) | 1 |
-| [Views](/docs/cloud-logs?topic=cloud-logs-custom_views) | 3  |
+| [Views](/docs/cloud-logs?topic=cloud-logs-custom_views) | 0  |
 {: caption="Items included when extension is deployed" caption-side="bottom"}
 
 Before deploying this extension, make sure that deploying the extension will not cause you to exceed [limits for your {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-limits). If deploying the extension results in limits being exceeded, the deployment will fail.
@@ -124,14 +124,7 @@ You can deploy any of the following predefined dashboards:
 If you decide to remove dashboard widgets for specific regions or locations where you are not currently operating, and then add operations in those regions, the deleted widgets will not be automatically added back into your dashboard. You can clone a widget and change the location to add it back.
 {: note}
 
-## Views
-{: #extensions-activity-tracking-views}
 
-You can deploy any of the following views:
-- `Actions by service table`: Use this view to see the number of events by service name and action.
-- `All logs`: Use this view to see events in a customized view that shows timestamp, severity, service name and message.
-- `Instances created by service`: Use this view to see events that report provisioning of instances in the account ordered by `eventTime`.
-- `Events by service in EU-GB`: Use this view as a sample to view the list of services that generate events in a region. You can use this view to create views for other regions.
 
 ## Alerts
 {: #extensions-activity-tracking-alerts}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-16"
+lastupdated: "2025-09-25"
 
 keywords:
 
@@ -52,3 +52,8 @@ You can determine the available extensions through the {{site.data.keyword.logs_
 2. Click the **Integrations** icon ![Integrations icon](/icons/integrations.svg "Integrations") > **Extensions**.
 
 The list of available extensions is displayed. You can also deploy an extension from the list.
+
+## Managing extensions
+{: #managing-extensions}
+
+For more information, see [Deploying, managing, and removing {{site.data.keyword.logs_full_notm}} extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
