@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-09"
+  years:  2024, 2025
+lastupdated: "2025-09-29"
 
 keywords:
 
@@ -36,9 +36,9 @@ The following table lists the event types that {{site.data.keyword.logs_full_not
 | `com.ibm.cloud.logs.UniqueCountAlertEvent` | Unique Count Alert |
 | `com.ibm.cloud.logs.TimeRelativeLessThanAlertEvent` | Time Relative Less Than Alert |
 | `com.ibm.cloud.logs.TimeRelativeMoreThanAlertEvent` | Time Relative More Than Alert |
-| `com.ibm.cloud.logs.MetricLessThanAlertEvent` | Metric Less Than Alert |
 | `com.ibm.cloud.logs.MetricMoreThanAlertEvent` | Metric More Than Alert |
 | `com.ibm.cloud.logs.MetricMoreThanUsualAlertEvent` | Metric More Than Usual Alert |
+| `com.ibm.cloud.logs.MetricLessThanAlertEvent` | Metric Less Than Alert |
 | `com.ibm.cloud.logs.TracingImmediateAlertEvent` | Tracing Immediate Alert |
 | `com.ibm.cloud.logs.TracingMoreThanAlertEvent` | Tracing More Than Alert |
 | `com.ibm.cloud.logs.FlowAlertEvent` | Flow Alert Alert |
