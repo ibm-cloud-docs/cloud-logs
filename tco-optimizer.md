@@ -24,6 +24,8 @@ How logs are associated to pipelines is determined by policies. Policies are app
 
 Policies simplify assigning TCO pipelines and capture applicable logs on ingestion. Each policy creates new default values for the logs for the applicable policy. If policies conflict, the first policy that is listed on the {{site.data.keyword.tco-optimizer}} page takes precedence.
 
+Policies are processed in the order configured and displayed on the UI. The first policy that is matched is the policy that is applied. Remaining policies are ignored. Policies that block data should be defined last.
+
 The three TCO pipelines are:
 
 {{site.data.keyword.frequent-search}}
@@ -116,6 +118,9 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 ## Creating an application and policy override
 {: #tco-optimizer-override}
 
+Configuring application and policy overrides is only available through the UI.
+{: note}
+
 The **Application and policy overrides** section displays the usage of all applications and subsystems producing logs, sorted by the top producers. You can use the filters to easily search and filter the list.
 
 By clicking a row, you will see a detailed view of the application-subsystem pair usage organized by severity level and the TCO pipeline priority assigned.
@@ -134,4 +139,5 @@ To override the priority for a speciic application-subsystem pair, do the follow
 
 3. Click **Apply** to save the changes.
 
-If you want to reset all overrides for all application-subsystem pairs to the default behavior, click **Reset All Overrides**.
+If you want to reset all overrides for all application-subsystem pairs to the default behavior, click **Reset All Overrides**. Be aware this will reset all overrides.
+{: attention}
