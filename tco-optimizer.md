@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-09-30"
 
 keywords:
 
@@ -112,3 +112,26 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 2. Click **DELETE**.
 
 3. Confirm that you want to delete the policy.
+
+## Creating an application and policy override
+{: #tco-optimizer-override}
+
+The **Application and policy overrides** section displays the usage of all applications and subsystems producing logs, sorted by the top producers. You can use the filters to easily search and filter the list.
+
+By clicking a row, you will see a detailed view of the application-subsystem pair usage organized by severity level and the TCO pipeline priority assigned.
+
+In this view, you are able to change the priority for an entire application-subsystem pair, or change the priority for specific log severities within any application-subsystem pair. The priority will determine the TCO data pipeline where the data for the pair will be sent. If there are different priorities for different severities, the policy status displayed in the **Application and policy overrides**  table will be *Multiple*.
+
+To override the priority for a speciic application-subsystem pair, do the following:
+
+1. In **Application and policy overrides** click the application-subsystem pair you want to modify.
+
+2. Update the priority as needed.
+
+   * To update the priority used for the entire application-sybsystem pair, change **Set priority to** to the preferred priority.
+
+   * To update the priority based on the log severity, in **Tune severity** change the priority for the specific severity to the preferred priority.
+
+3. Click **Apply** to save the changes.
+
+If you want to reset all overrides for all application-subsystem pairs to the default behavior, click **Reset All Overrides**.
