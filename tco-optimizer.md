@@ -70,7 +70,7 @@ You must have a [{{site.data.keyword.cos_full_notm}} data bucket](/docs/cloud-lo
 
 On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to create a new policy:
 
-1. Click **ADD NEW POLICY**.
+1. Click **Add new policy**.
 
 2. Enter a policy name.
 
@@ -86,7 +86,7 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 
 4. Set the priority for the policy. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
 
-5. Click **APPLY**.
+5. Click **Apply**.
 
 ## Modifying a policy
 {: #tco-optimizer-modify-policy}
@@ -97,9 +97,9 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 
 2. Modify the criteria.
 
-3. Click **APPLY**.
+3. Click **Apply**.
 
-If you want to change the policy priority value, you can also change the priority in the **PRIORITY** drop-down list for the policy in the policy list. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
+If you want to change the policy priority value, you can also change the priority in the **Priority** drop-down list for the policy in the policy list. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
 {: tip}
 
 ## Deleting a policy
@@ -109,7 +109,7 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 
 1. Click the policy that you want to delete.
 
-2. Click **DELETE**.
+2. Click **Delete**.
 
 3. Confirm that you want to delete the policy.
 
