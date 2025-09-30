@@ -63,7 +63,7 @@ Complete the following steps:
 
     Where `<sha256_filename>` is the filename of the download `*.sha256` file.
 
-3. If you are installing the latest version of the agent, the `post-config.sh` file is part of the RPM or DEB package and it can be found at `/opt/fluent-bit/bin/post-config.sh`. If you are using version prior to 1.6.1, you need to download the `post-config.sh` file using this step.
+3. If you are installing the latest version of the agent, the `post-config.sh` file is part of the RPM or DEB package and it can be found at `/opt/fluent-bit/bin/post-config.sh`. If you are using version prior to 1.6.2, you need to download the `post-config.sh` file using this step.
 
    This step is only required when using the {{site.data.keyword.agent}} 1.6.1 or earlier. It does not apply to the {{site.data.keyword.agent}} 1.6.2 or subsequent releases.
    {: important}
