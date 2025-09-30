@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-09-08"
+lastupdated: "2025-09-30"
 
 keywords:
 
@@ -63,7 +63,17 @@ Complete the following steps:
 
     Where `<sha256_filename>` is the filename of the download `*.sha256` file.
 
+3. If you are installing the latest version of the agent, the `post-config.sh` file is part of the RPM or DEB package and it can be found at `/opt/fluent-bit/bin/post-config.sh`. If you are using version prior to 1.6.2, you need to download the `post-config.sh` file using this step.
 
+   This step is only required when using the {{site.data.keyword.agent}} 1.6.1 or earlier. It does not apply to the {{site.data.keyword.agent}} 1.6.2 or subsequent releases.
+   {: important}
+
+   ```sh
+   wget https://logs-router-agent-config.s3.us.cloud-object-storage.appdomain.cloud/post-config.sh
+
+   chmod +x post-config.sh
+   ```
+   {: codeblock}
 
 ## Set up and deploy the {{site.data.keyword.agent}} configuration
 {: #agent-linux-deploy-step3}
@@ -92,21 +102,7 @@ Complete the following steps:
    Where `<rpm_filename>` or `<deb_filename>` is the name of the downloaded `*.rpm` or `*.deb` file.
 
 
-3. Download the configuration file and mark it as executable.
-
-   This step is only required when using the {{site.data.keyword.agent}} 1.6.1 or earlier. It does not apply to the {{site.data.keyword.agent}} 1.6.2 or subsequent releases.
-   {: important}
-
-   ```sh
-   wget https://logs-router-agent-config.s3.us.cloud-object-storage.appdomain.cloud/post-config.sh
-
-   chmod +x post-config.sh
-   ```
-   {: codeblock}
-
-
-
-4. Run the configuration script.
+3. Run the configuration script.
 
    ```sh
    /opt/fluent-bit/bin/post-config.sh -h <target_host> -p <target_port> [-t <target_path>] -a <auth_mode> -k <iam_api_key> [-s <vsi_secure_access_enabled>] [-i <IAM_environment>] [--subsystem-name <name>] [--application-name <name>]
