@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-10-02"
 
 keywords:
 
@@ -39,7 +39,6 @@ The parse rule uses RegEx named capture groups to define new fields.
 
 ## Configuring a Parse rule
 {: #parse-rule-3-ui}
-{: ui}
 
 Complete the following steps to create a rules group with 1 Parse rule:
 
@@ -66,13 +65,6 @@ Complete the following steps to create a rules group with 1 Parse rule:
 5. Add additional rule groups by clicking **Add Rule** and selecting the desired rule type. Toggle **AND**/**OR** to select how you would like the additional rules processed.
 
 6. Click **Create Rule Group**.
-
-
-## Configuring a Parse rule using the API
-{: #parse-rule-3-api}
-{: api}
-
-Complete the following steps to create a rules group with 1 Parse rule:
 
 
 
