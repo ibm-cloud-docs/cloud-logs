@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-23"
+  years:  2024, 2025
+lastupdated: "2025-10-02"
 
 keywords: 
 
@@ -13,12 +13,12 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why am I not seeing results from my searches?
+# Why am I not seeing results from my {{site.data.keyword.frequent-search}} searches?
 {: #ts-mapping-exceptions}
 {: troubleshoot}
 {: support}
 
-When searching in {{site.data.keyword.logs_full}} I am not seeing the expected results returned. I know the fields I am searching for in my logs exist, but {{site.data.keyword.logs_full_notm}} doesn't seem to find them with my searches.
+When searching in {{site.data.keyword.logs_full}} using {{site.data.keyword.frequent-search}} I am not seeing the expected results returned. I know the fields I am searching for in my logs exist, but {{site.data.keyword.logs_full_notm}} doesn't seem to find them with my searches.
 {: shortdesc}
 
 Searching for field values does not return expected results.
