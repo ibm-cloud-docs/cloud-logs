@@ -2,23 +2,23 @@ To identify mapping exceptions, complete the following steps:
 
 1. Check the {{site.data.keyword.logs_full_notm}} UI for an icon next to the logs count:
 
-   ![Mapping exceptions icon](../images/me_01.png){: caption="Mapping exceptions icon" caption-side="bottom"}
+   ![Mapping exceptions icon](../images/me_01a.png){: caption="Mapping exceptions icon" caption-side="bottom"}
 
    Hovering over the icon will display the number of logs with mapping exceptions within the query results in the selected timeframe.
 
 2. To identify the specific logs that were not properly indexed, enable the `Show Mapping Exception` option:
 
-   ![Selecting how to show mapping errors. Click Settings and then click Show mapping errors.](../images/me_02.png){: caption="Selecting how to show mapping errors" caption-side="bottom"}
+   ![Selecting how to show mapping errors. Click Settings and then click Show mapping errors.](../images/me_02a.png){: caption="Selecting how to show mapping errors" caption-side="bottom"}
 
 3. After enabling this option, refresh your browser.
 
    An exclamation mark will be displayed on the fields that have mapping exceptions and were not indexed.
 
-   ![Flagging of fields with mapping exceptions](../images/me_03.png){: caption="Flagging of fields with mapping exceptions" caption-side="bottom"}
+   ![Flagging of fields with mapping exceptions](../images/me_03a.png){: caption="Flagging of fields with mapping exceptions" caption-side="bottom"}
 
    Another way to quickly identify which fields have a mapping exception is to run the query: `_exists_: coralogix.failed_reason`
 
-   ![Results of a query to show mapping exceptions](../images/me_04.png){: caption="Results of a query to show mapping exceptions." caption-side="bottom"}
+   ![Results of a query to show mapping exceptions](../images/me_04a.png){: caption="Results of a query to show mapping exceptions." caption-side="bottom"}
 
    This query will return only the log lines that have a mapping exception for the selected timeframe.
 

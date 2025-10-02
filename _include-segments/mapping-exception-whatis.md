@@ -22,6 +22,6 @@ If later on a new log is ingested that also has a field named “user” that is
 ```
 {: codeblock}
 
-A mapping exception is created in {{site.data.keyword.logs_full_notm}}. Any searches looking for a field named `user` would be expected to have a `string` value based on the first log ingested with a `user` field.
+A mapping exception is created in {{site.data.keyword.logs_full_notm}}. Any {{site.data.keyword.frequent-search}} searches looking for a field named `user` would be expected to have a `string` value based on the first log ingested with a `user` field.
 
-Any searches looking for a `user` with the `array` type (`user.email` or `user.login`) will not return any results due to the mapping exception.
+Any {{site.data.keyword.frequent-search}} searches looking for a `user` with the `array` type (`user.email` or `user.login`) will not return any results due to the mapping exception.
