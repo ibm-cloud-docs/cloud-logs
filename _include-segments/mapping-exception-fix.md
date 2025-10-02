@@ -18,7 +18,7 @@ To identify mapping exceptions, complete the following steps:
 
    Another way to quickly identify which fields have a mapping exception is to run the query: `_exists_: coralogix.failed_reason`
 
-   ![Results of a query to show mapping exceptions](../images/me_04a.png){: caption="Results of a query to show mapping exceptions." caption-side="bottom"}
+   ![Query to show mapping exceptions](../images/me_04a.png){: caption="Query to show mapping exceptions." caption-side="bottom"}
 
    This query will return only the log lines that have a mapping exception for the selected timeframe.
 
