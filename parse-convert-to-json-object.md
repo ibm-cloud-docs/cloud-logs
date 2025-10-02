@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2025
+lastupdated: "2025-10-02"
 
 keywords:
 
@@ -35,7 +35,6 @@ Parsing rules are organized inside *Rule Groups*. Each group has a name and a se
 
 ## Configuring a Parse JSON field rule
 {: #parse-convert-to-json-object-3-ui}
-{: ui}
 
 Complete the following steps:
 
@@ -72,13 +71,6 @@ Complete the following steps:
 5. Add additional rule groups by clicking **Add Rule** and selecting the desired rule type. Toggle **AND**/**OR** to select how you would like the additional rules processed.
 
 6. Click **Create Rule Group**.
-
-
-## Configuring a Parse JSON field rule using the API
-{: #parse-convert-to-json-object-3-api}
-{: api}
-
-Complete the following steps:
 
 
 
