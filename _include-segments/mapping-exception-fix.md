@@ -6,7 +6,7 @@ To identify mapping exceptions, complete the following steps:
 
    Hovering over the icon will display the number of logs with mapping exceptions within the query results in the selected timeframe.
 
-2. To identify the specific logs that were not properly indexed, enable the `Show Mapping Exception` option:
+2. To identify the specific logs that were not properly indexed, enable the `Show Mapping errors` option:
 
    ![Selecting how to show mapping errors. Click Settings and then click Show mapping errors.](../images/me_02a.png){: caption="Selecting how to show mapping errors" caption-side="bottom"}
 
