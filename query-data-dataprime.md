@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-08"
+lastupdated: "2025-10-03"
 
 keywords:
 
@@ -40,6 +40,9 @@ Searching can be used in conjunction with [filtering](/docs/cloud-logs?topic=clo
    See the [DataPrime reference](/docs/cloud-logs?topic=cloud-logs-dataprime-ref) for operators and expressions that can be used when querying logs.
 
 3. Click the arrow at the end of the field run your query.
+
+If you are searching in {{site.data.keyword.frequent-search}} and you are not seeing the data you expect, see [Why am I not seeing results from my Priority insights searches?](/docs/cloud-logs?topic=cloud-logs-ts-mapping-exceptions).
+{: tip}
 
 
 {{site.data.content.query-reset}}

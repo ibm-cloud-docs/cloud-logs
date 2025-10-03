@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-29"
+lastupdated: "2025-10-03"
 
 keywords:
 
@@ -34,6 +34,10 @@ Searching can be used in conjunction with [filtering](/docs/cloud-logs?topic=clo
 2. In the search field specify your search in [Lucene format.](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html){: external}
 
 3. Click the arrow at the end of the field run your query.
+
+If you are searching in {{site.data.keyword.frequent-search}} and you are not seeing the data you expect, see [Why am I not seeing results from my Priority insights searches?](/docs/cloud-logs?topic=cloud-logs-ts-mapping-exceptions).
+{: tip}
+
 
 ## Lucene queries
 {: #lucene-query}
