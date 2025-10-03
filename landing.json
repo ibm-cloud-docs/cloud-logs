@@ -28,7 +28,7 @@
       }
     ]
   },
-    "section_devtools": {
+  "section_devtools": {
     "api": "/apidocs/logs-service-api",
     "cli": "/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-temp",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard"
@@ -41,7 +41,7 @@
       "type": "blog",
       "recommended": true
     }
-],
+  ],
   "section_updates": {
     "view_more": "/docs/cloud-logs?topic=cloud-logs-logs-release-notes"
   }

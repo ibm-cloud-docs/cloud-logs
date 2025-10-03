@@ -1,13 +1,7 @@
 keyword:
-  frequent-search:
-    Priority insights
-  monitoring:
-    Analyze and alert
-  compliance:
-    Store and search
-  tco-optimizer:
-    TCO Optimizer
-  agent:
-    Logging agent
-  compact-mode:
-    Compact Mode
+  frequent-search: Priority insights
+  monitoring: Analyze and alert
+  compliance: Store and search
+  tco-optimizer: TCO Optimizer
+  agent: Logging agent
+  compact-mode: Compact Mode
