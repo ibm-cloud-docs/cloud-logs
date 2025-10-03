@@ -1,6 +1,6 @@
 toc:
   properties:
-    subcollection:  cloud-logs
+    subcollection: cloud-logs
     service-name: logs
     category: logging_monitoring
     audience: service
@@ -122,7 +122,7 @@ toc:
           - topic: iam-ingestion-serviceid-api-key.md
             navtitle: Generating a service ID API Key for ingestion
           - topic: verify-key.md
-            navtitle: Verifying the service ID API Key for ingestion 
+            navtitle: Verifying the service ID API Key for ingestion
           - topic: iam-actions.md
             navtitle: IAM actions by role
           - topic: iam-views.md
@@ -437,7 +437,7 @@ toc:
           - topic: suppression_rules.md
             navtitle: Alert suppression rules
           - topic: alerts/event-notifications-alerts.md
-            navtitle: Configuring routing of events to destinations in Event Notifications 
+            navtitle: Configuring routing of events to destinations in Event Notifications
           - topic: alerts/event-notifications-slack-template.md
             navtitle: Customizing Slack messages
           - topic: alerts/incidents.md
@@ -478,9 +478,9 @@ toc:
       - topicgroup:
           label: API Reference
           links:
-            - link:
-                label: Logs API
-                href: https://{DomainName}/apidocs/logs-service-api
+          - link:
+              label: Logs API
+              href: https://{DomainName}/apidocs/logs-service-api
       - topicgroup:
           label: CLI Reference
           topics:
@@ -496,7 +496,7 @@ toc:
           label: Extensions
           topics:
           - topic: extensions-system-monitoring.md
-            navtitle: System Monitoring 
+            navtitle: System Monitoring
           - topic: extensions-activity-tracking.md
             navtitle: Activity Tracking
           - topic: extensions-kubernetes.md
@@ -541,57 +541,57 @@ toc:
       - topicgroup:
           label: Terraform Reference
           links:
-            - link:
-                label: Terraform reference
-                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
+          - link:
+              label: Terraform reference
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
       - topic: core/ha-dr-new.md
         navtitle: Understanding high availability and disaster recovery
       - dpxl_reference.md
       - cloud_services_msg_prefix.md
   - navgroup:
-        id: help
-        topics:
-        - getting-help.md
-        - topicgroup:
-            label: FAQ
-            topics:
-              - topic: faqs.md
-                navtitle: FAQ
-              - topic: agent/agent-faqs.md
-                navtitle: Agent FAQ
-        - topicgroup:
-            label: Troubleshooting
-            topics:
-            - topicgroup:
-                label: Troubleshooting Cloud Logs
-                topics:
-                - ts-mapping-exceptions.md
-                - ts-rules.md
-                - ts-no-all-logs.md
-                - ts-no-tco-data.md
-            - topicgroup:
-                label: Troubleshooting alerts
-                topics:
-                - ts-alerts.md
-                - ts-en-500.md
-            - topicgroup:
-                label: Troubleshooting Cloud Object Storage
-                topics:
-                - ts-no-metrics-bucket.md
-                - ts-cos-config.md
-                - ts-no-data.md
-                - ts-cos-events.md
-            - topicgroup:
-                label: Troubleshooting platform data
-                topics:
-                - topic: ts-no-logs.md
-                  navtitle: Why can't I see platform logs in the UI?
-            - topicgroup:
-                label: Troubleshooting the Logging agent
-                topics:
-                - ts-no-public.md
-                - ts-input-error.md
-                - ts-fb-error.md
-                - ts-helm-proxy.md
-                - ts-ingestion-failures.md
-                - ts-agent-logs.md
+      id: help
+      topics:
+      - getting-help.md
+      - topicgroup:
+          label: FAQ
+          topics:
+          - topic: faqs.md
+            navtitle: FAQ
+          - topic: agent/agent-faqs.md
+            navtitle: Agent FAQ
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - topicgroup:
+              label: Troubleshooting Cloud Logs
+              topics:
+              - ts-mapping-exceptions.md
+              - ts-rules.md
+              - ts-no-all-logs.md
+              - ts-no-tco-data.md
+          - topicgroup:
+              label: Troubleshooting alerts
+              topics:
+              - ts-alerts.md
+              - ts-en-500.md
+          - topicgroup:
+              label: Troubleshooting Cloud Object Storage
+              topics:
+              - ts-no-metrics-bucket.md
+              - ts-cos-config.md
+              - ts-no-data.md
+              - ts-cos-events.md
+          - topicgroup:
+              label: Troubleshooting platform data
+              topics:
+              - topic: ts-no-logs.md
+                navtitle: Why can't I see platform logs in the UI?
+          - topicgroup:
+              label: Troubleshooting the Logging agent
+              topics:
+              - ts-no-public.md
+              - ts-input-error.md
+              - ts-fb-error.md
+              - ts-helm-proxy.md
+              - ts-ingestion-failures.md
+              - ts-agent-logs.md

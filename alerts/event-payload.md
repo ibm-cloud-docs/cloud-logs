@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-09-24"
+lastupdated: "2025-10-03"
 
 keywords:
 
@@ -122,6 +122,9 @@ Consider the following information:
 - The following additional fields are added to the data to indicate when a sample or labels are truncated:
 
    `log_example_truncated`: This field will be added to the payload to indicate that an example log entry was truncated.
+
+   If `log_example_truncated` is `true`, truncated JSON is sent to {{site.data.keyword.en_full_notm}} as stringified JSON.
+   {: note}
 
    `meta_labels_truncated`: This field will be added to indicate that metadata labels were truncated.
 
