@@ -286,7 +286,7 @@ toc:
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields
       - topic: tco-optimizer.md
-        navtitle: Configuring the TCO Optimizer[]
+        navtitle: Configuring the TCO Optimizer
       - topicgroup:
           label: Streaming data
           topics:
