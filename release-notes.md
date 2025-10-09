@@ -22,50 +22,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
-## 15 October 2025
-{: #cloud-logs-oct1525}
-{: release-note}
 
-Features:
-
-Additional capabilities are now supported in Alerts along with introduction of new API to manage them. See https://test.cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-new-version-considerations
-
-Datamap feature is removed and is no longer supported.
-
-A new feature, Reserved Fields is introduced using which you can make sure important fields are always indexed and available for search. See <doc link>
-
-[UI] A new feature, Visual Explorer is now supported in `Explore Logs`. It is a powerful tool that integrates a multifunctional Explore display with customizable dashboard widgets, enhancing your log exploration. See <doc link>
-
-[UI] Logs Info panel is enhanced to support detailed view of individual log record. See <doc link>
-
-[Query] API support is now available for Async Archive Query a.k.a Background Query API. See <doc link>
-
-[Incidents] Watch Data screen now presents undetected values that triggered an alert. This gives visibility into undetected values that contributed to the alerts, making it easier to understand the full context of an incident.
-
-Fixes implemented
-:   The following issues are resolved.
-
-    [Query] Fixed a bug where downloading of large files were failing in Async Archive Queries
-
-    [Alert] Fixes an issue with Verify Alert where results were not consistent
-
-    [UI]\[Views] Fixed a bug where managing Text column fields was not working with saved views
-
-    [UI] Fixed a bug where layout settings were not restored when switching between views
-
-    [UI]\[CustomDashboards] Fixes a bug where Dataprime query when used with groupby aggregration showed inconsistent results
-
-    [UI] Fixed a bug where switching between two saved views keeps the filters from the previous unsaved view
-
-    [All logs] Fixed a bug where `segment.manifests` files were stored under wrong path in COS
-
-    [Query] Warning message displayed while quering from `All logs` is now improved to handle cases where the data might be deleted from the bucket because of a lifecycle policy
-
-    [Query] Fixed a bug where executing dataprime query in Priority Insights was failing
-
-    [UI][CustomDashboards] Fixed a bug where `open in explore` was not redirecting correctly to logs explore page
-
-    [Streams] Fixed a bug where filtering query was producing unexpected results in few scenarios.
 
 ## 12 September 2025
 {: #cloud-logs-sep1225}
