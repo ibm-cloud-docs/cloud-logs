@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-10-10"
 
 keywords:
 
@@ -87,6 +87,12 @@ In **Alert if: Query 1 / Query 2 equals**, you must select whether the alert is 
 
 - Choose `Less than threshold` to be notified when the ratio between the query results is less than the chosen threshold.
 
+If you are using the *Less than threshold* condition, you will have the option to manage undetected values.
+
+Undetected values occur when a permutation of a *Less than threshold* alert stops being sent causing multiple triggers of the alert (for every timeframe in which it was not sent).
+
+When you view an alert with undetected values, you have the option to retire these values manually, or select a time period after which undetected values will automatically be retired. You can also disable triggering on undetected values to immediately stop sending alerts when an undetected value occurs.
+
 ### Triggering alerts on infinity
 {: #alerts-config-4a-tr}
 
@@ -108,4 +114,3 @@ You can specify whether or not to trigger the alert on this condition by selecti
 
 
 {{/_include-segments/alerts-next-steps.md}}
-
