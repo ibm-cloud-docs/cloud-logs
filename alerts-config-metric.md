@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-10-10"
 
 keywords:
 
@@ -82,7 +82,7 @@ You can adjust the sensitivity of the alert triggering by adjusting the percenta
 The percentage value setting is not displayed when **Replace missing values with zeros** is selected. Once missing values are replaced with zero, then there is a guarantee that 100% of the data exists.
 {: note}
 
-If you are using the *Less than* condition, you will have the option to manage undetected values.
+If you are using the *Less than threshold* condition, you will have the option to manage undetected values.
 
 Undetected values occur when a permutation of a *Less than* alert stops being sent causing multiple triggers of the alert (for every timeframe in which it was not sent).
 
@@ -113,4 +113,3 @@ For example, you determine that over 50% of my 10-minute timeframe needs to have
 
 
 {{/_include-segments/alerts-next-steps.md}}
-
