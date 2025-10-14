@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-21"
+lastupdated: "2025-10-14"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Configuring custom enrichments
 {: #enrich-howto}
 
-You can enhance log data with additional business, operational, or security context to improve log analysis and understandability.
+You can enhance {{site.data.keyword.logs_full}} log data with additional business, operational, or security context to improve log analysis and understandability.
 {: shortdesc}
 
 Custom enrichment lets you enhance your logs by adding critical contextual data that might not be available at runtime. This enrichment is done by appending fields to your JSON logs based on specific matches using a custom data source that you define.
@@ -206,5 +206,3 @@ You can also configure custom enrichments using the API. For more information, s
 * CSV files are limited to 150,000 rows.
 
 * Files exceeding 10,000 rows can only be used for [DataPrime query enrichment](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#enrich), not [automatic ingestion enrichment](#enrich-howto-auto).
-
-
