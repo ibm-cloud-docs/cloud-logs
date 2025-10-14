@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-10"
+lastupdated: "2025-10-14"
 
 keywords:
 
@@ -87,6 +87,8 @@ If you are using the *Less than threshold* condition, you will have the option t
 Undetected values occur when a permutation of a *Less than* alert stops being sent causing multiple triggers of the alert (for every timeframe in which it was not sent).
 
 When you view an alert with undetected values, you have the option to retire these values manually, or select a time period after which undetected values will automatically be retired. You can also disable triggering on undetected values to immediately stop sending alerts when an undetected value occurs.
+
+
 
 ### Examples
 {: #alerts-config-4b-metric-examples}
