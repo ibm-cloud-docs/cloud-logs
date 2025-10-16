@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-14"
+lastupdated: "2025-10-16"
 
 keywords:
 
@@ -115,3 +115,6 @@ For example, you determine that over 50% of my 10-minute timeframe needs to have
 
 
 {{/_include-segments/alerts-next-steps.md}}
+
+
+{{/_include-segments/dynamic-alerts-limits.md}}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-10"
+lastupdated: "2025-10-16"
 
 keywords:
 
@@ -88,3 +88,6 @@ When you view an alert with undetected values, you have the option to retire the
 
 
 {{/_include-segments/alerts-next-steps.md}}
+
+
+{{/_include-segments/dynamic-alerts-limits.md}}
