@@ -57,7 +57,7 @@ Functional updates and fixes are available in the Montreal (`ca-mon`) region onl
       * [arrayContains](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-array#arrayContains)
       * [inArray](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-array#inArray)
 
-   * [Incidents] [**Watch data** now presents undetected values that triggered an alert.](/docs/cloud-logs?topic=cloud-logs-incidents#incidents-page) This gives visibility into undetected values that contributed to the alerts, making it easier to understand the full context of an incident.
+   * [Incidents] [**Watch data** now presents undetected values that triggered an alert.](/docs/cloud-logs?topic=cloud-logs-incidents#incidents-history) This gives visibility into undetected values that contributed to the alerts, making it easier to understand the full context of an incident.
 
     Features that have been removed
 
