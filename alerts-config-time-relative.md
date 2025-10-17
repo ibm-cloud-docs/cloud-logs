@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-10"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -63,11 +63,7 @@ Timeframe comparisons are made every 5 minutes for hourly comparisons (`Previous
 
 For example, if in the last hour a query returns 180 error logs. The query in the previous hour returned 60 error logs. In this case the ratio between the two hours is 3. If the alert is configured for a ratio of more than 1 compared to the previous hour the alert will be triggered.
 
-If you are using the *Less than threshold* condition, you will have the option to manage undetected values.
 
-Undetected values occur when a permutation of a *Less than threshold* alert stops being sent causing multiple triggers of the alert (for every timeframe in which it was not sent).
-
-When you view an alert with undetected values, you have the option to retire these values manually, or select a time period after which undetected values will automatically be retired. You can also disable triggering on undetected values to immediately stop sending alerts when an undetected value occurs.
 
 ### Triggering alerts on infinity
 {: #alerts-config-4a-tr}
