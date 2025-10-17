@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-10"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -80,3 +80,18 @@ To change the status of an incident manually, click on the status `TRIGGERED`. A
 If you click on an incident, the detail page opens where you can get information about when the alert was triggered, the alert configuration and the log lines that were evaluated and matched the condition.
 
 You can also click **Incident history** to get a full report about when this alert was triggered in your environment.
+
+
+
+The incident history includes values that triggered the alert in a chart and tabular format.
+
+For alerts triggered by values and undetected values, both the values and undetected values are displayed. If the alert is triggered only by undetected values, the table displays the undetected values, but the chart will be blank. If the alert is triggered by data with values, the chart is displayed and no table is displayed.
+
+For undetected values you can manually retire undetected values or adjust the auto-retire settings for the alert.
+
+Undetected values can only occur when these alert types are configured with a *Less than threshold* condition.
+
+* Standard
+* Ratio
+* Time relative
+* Metric

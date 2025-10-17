@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-16"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -87,6 +87,18 @@ If you are using the *Less than threshold* condition, you will have the option t
 Undetected values occur when a permutation of a *Less than* alert stops being sent causing multiple triggers of the alert (for every timeframe in which it was not sent).
 
 When you view an alert with undetected values, you have the option to retire these values manually, or select a time period after which undetected values will automatically be retired. You can also disable triggering on undetected values to immediately stop sending alerts when an undetected value occurs.
+
+
+
+### Customizing anomaly detection
+{: #alerts-config-metric-anomaly}
+
+Anomaly detection analyzes incoming metrics. Using data from the previous 24 hours, {{site.data.keyword.logs_full_notm}} forecasts expected behavior for the next 24 hours. The predictive model establishes upper and lower thresholds of expected behavior, setting those thresholds as boundaries. When data crosses these thresholds, an alert is triggered. A baseline is calculated between the average behavior and each threshold. You can specify a deviation percentage relative to this baseline to adjust the sensitivity of the alert triggering.
+
+When setting a **More than usual** or **Less than usual** condition you can configure an advanced setting to alert only when the **Percentage deviation** is exceeded by that percentage amount.
+
+For example, if the baseline is 50 and the upper threshold is 150 and the **Percentage deviation** is 10%, the alert will only be triggered if the value exceeds 155.
+
 
 
 

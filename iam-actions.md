@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-24"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -117,6 +117,8 @@ subcollection: cloud-logs
 | `logs.logs-stream-setup.manage` |	Manage logs stream settings. |
 | `logs.team-alerts-settings.read` | Read alerts toggle in the setting. |
 | `logs.team-alerts-settings.manage` |	Manage alerts toggle in the setting. |
+| `logs.reserved-field.read` | View reserved fields. |
+| `logs.reserved-field.manage` | Update, delete or create reserved fields. |
 {: caption="IAM actions available for the Manager role" caption-side="top"}
 
 
@@ -187,6 +189,8 @@ subcollection: cloud-logs
 | `logs.logs-stream-setup.read` |	View logs stream settings. |
 | `logs.team-alerts-settings.read` | Read alerts toggle in the setting. |
 | `logs.team-alerts-settings.manage` |	Manage alerts toggle in the setting. |
+| `logs.reserved-field.read` | View reserved fields. |
+| `logs.reserved-field.manage` | Update, delete or create reserved fields. |
 {: caption="IAM actions available for the Writer role" caption-side="top"}
 
 ### Reader role
@@ -220,6 +224,7 @@ subcollection: cloud-logs
 | `logs.webhook.read` |	View generic outbound webhooks configuration. |
 | `logs.legacy-archive-query.execute` |	Query data from the archive. |
 | `logs.team-alerts-settings.read` | Read alerts toggle in the setting. |
+| `logs.reserved-field.read` | View reserved fields. |
 {: caption="IAM actions available for the Reader role" caption-side="top"}
 
 

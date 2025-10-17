@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-03"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -26,6 +26,8 @@ The properties that are sent to {{site.data.keyword.en_short}} vary depending on
 {: #event-payload-1}
 
 
+
+
 ```json
 {
    "data": {
@@ -38,22 +40,24 @@ The properties that are sent to {{site.data.keyword.en_short}} vary depending on
             }
          },
          "description": "",
-         "id": "<alert_id>",
+         "id": "<alert_unique_id>",
          "meta_labels": {
-                "env": "prod"
-            },
+            "env": "prod"
+         },
          "name": "<alert_name>",
          "query_statement": "_exists_:level",
-         "severity": "ERROR"
+         "severity": "ERROR",
+         "versioned_id": "<alert_versioned_id>",
       },
       "latest_event_timestamp": 0000000000000,
       "links": {
-         "edit_alert": "https://dashboard.eu-gb.logs.cloud.ibm.com/<instance_id>/#/alerts/<alert_id>",
+         "edit_alert": "https://dashboard.eu-gb.logs.cloud.ibm.com/<instance_id>/#/alerts/<alert_versioned_id>",
          "view_alert": "https://dashboard.eu-gb.logs.cloud.ibm.com/<instance_id>/#/insights?id=c9fe7539-e901-4745-b3ad-29ca0ae987a0"
       },
       "log_example": {"msg":"Test Log"},
       "log_example_truncated": true,
       "meta_labels_truncated": false,
+      "priority": "<alert_priority>",
       "status": "triggered"
    },
    "datacontenttype": "application/json",
@@ -73,15 +77,14 @@ The properties that are sent to {{site.data.keyword.en_short}} vary depending on
 
 
 
-
-
 Review following table for more information about event notification properties.
 
 | Property | Description |
 | ---- | ---- |
-| `alert_definition` |  - `alert_type`: The [type of alert](/docs/cloud-logs?topic=cloud-logs-cl-events-for-en#cl-events-for-en-types) that triggered a notification.  \n - `condition`: Alerts configuration about when alerts can be triggered.  \n - `description`: The description of the alert.  \n - `id`: The id of the triggered alert.  \n - `name`: The name of the given alert.  \n - `query_statement`: The search query of the given alert.  \n - `severity`: The severity level of the given alert. |
+| `alert_definition` |  - `alert_type`: The [type of alert](/docs/cloud-logs?topic=cloud-logs-cl-events-for-en#cl-events-for-en-types) that triggered a notification.  \n - `condition`: Alerts configuration when alerts can be triggered.  \n - `description`: The description of the alert.  \n - `id`: The unique identifier of the triggered alert. This is the same ID that can be used in API calls.  \n - `name`: The name of the given alert.  \n - `query_statement`: The Lucene search query of the given alert.  \n - `severity`: The [severity](/docs/cloud-logs?topic=cloud-logs-event-severities) level of the given alert.  \n - `versioned_id`: The versioned ID of the triggered alert. This is the ID generated when the alert definition is updated. |
 | `latest_event_timestamp` | The date and time the event was generated. |
 | `links` |  - `edit_alert`: Link to the page to modify configurations of the alert.  \n - `view_alert`: Link to the page to check alert details. |
+| `priority` | The [priority](/docs/cloud-logs?topic=cloud-logs-priorities) of the condition which triggered the alert. |
 | `status` | The status of the given alert. |
 | `ibmendefaultshort` | The name of the given alert. |
 | `ibmendefaultlong` | The combination of the action, triggerered or resolved, and the name of the alert. |

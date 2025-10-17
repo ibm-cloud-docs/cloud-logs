@@ -285,8 +285,13 @@ toc:
             navtitle: Understanding the agent configuration file
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields
-      - topic: tco-optimizer.md
-        navtitle: Configuring the TCO Optimizer
+      - topicgroup:
+          label: TCO Optimizer
+          topics:
+          - topic: tco-optimizer.md
+            navtitle: Configuring the TCO Optimizer
+          - topic: tco-policy-order.md
+            navtitle: Policy processing order
       - topicgroup:
           label: Streaming data
           topics:
@@ -341,6 +346,8 @@ toc:
             navtitle: Daily index limit considerations
           - topic: query-mapping-exceptions.md
             navtitle: Managing data mapping exceptions
+          - topic: reserved-fields.md
+            navtitle: Reserving fieds
           - topic: benchmarks.md
             navtitle: Using benchmark tags
           - topic: query-regex.md
@@ -360,8 +367,22 @@ toc:
                 navtitle: Querying data using Dataprime
               - topic: dataprime-quickstart.md
                 navtitle: DataPrime examples
-              - dataprime-reference.md
               - query-parameters.md
+              - dataprime-ref-expressions.md
+              - dataprime-ref-operators.md
+              - dataprime-ref-operators-text-search.md
+              - dataprime-ref-expressions-agg.md
+              - dataprime-ref-expressions-case.md
+              - dataprime-ref-expressions-gral-func.md
+              - dataprime-ref-expressions-number-func.md
+              - dataprime-ref-expressions-url-func.md
+              - dataprime-ref-functions
+              - dataprime-ref-str-func.md
+              - dataprime-ref-array.md
+              - dataprime-ref-ip-func.md
+              - dataprime-ref-uuid-func.md
+              - dataprime-ref-date-time-func.md
+              - dataprime-ref-encode-func.md
       - topicgroup:
           label: Viewing data
           topics:
@@ -369,6 +390,8 @@ toc:
             navtitle: Managing custom views
           - topic: compact-views.md
             navtitle: Compact views
+          - topic: log-details.md
+            navtitle: Log details
           - livetail.md
           - topic: actions.md
             navtitle: Using actions
@@ -378,6 +401,8 @@ toc:
             navtitle: Managing extensions
           - topic: share_url.md
             navtitle: Sharing URLs
+          - topic: visual-explorer.md
+            navtitle: Visual Explorer
           - topicgroup:
               label: Creating widgets
               topics:
@@ -413,6 +438,10 @@ toc:
           topics:
           - topic: alerts/event-notifications-about.md
             navtitle: Working with alerts
+          - topic: alerts/priorities.md
+            navtitle: Alert priorities
+          - topic: migrate-from-alerts-to-alert-definitions.md
+            navtitle: Terraform changes required to convert alerts
           - topic: alerts/event-notifications-configure.md
             navtitle: Configuring the integration with the Event Notifications service
           - topicgroup:
@@ -420,6 +449,10 @@ toc:
               topics:
               - topic: alerts-config.md
                 navtitle: Configuring alerts in Cloud Logs
+              - topic: alerts/multi-condition.md
+                navtitle: Multi-condition alerts
+              - topic: alerts/eval-window.md
+                navtitle: Evaluation window
               - topic: alerts-config-standard.md
                 navtitle: Standard alerts
               - topic: alerts-config-time-relative.md
@@ -486,6 +519,8 @@ toc:
           topics:
           - topic: cloud-logs-cli-temp.md
             navtitle: CLI Reference
+      - topic: v3considerations.md
+        navtitle: Considerations for recent release
       - topic: core/data-portability.md
         navtitle: Data portability
       - topic: endpoints_api.md
