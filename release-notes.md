@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-14"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -21,6 +21,71 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+
+
+
+## 17 October 2025
+{: #cloud-logs-oct1725}
+{: release-note}
+
+Functional updates and fixes are available in the Montreal (`ca-mon`) region only.
+
+:   New features included in this release.
+
+    * Additional capabilities are now supported for alerts with the introduction of a new `alert_definition` API method. Changes are also made as a result to the {{site.data.keyword.en_full_notm}} payload.  See the following documentation topics for information about the alerts API changes and actions you might need to take as a result.
+    
+       * [Considerations for new alert and priority configuration](/docs/cloud-logs?topic=cloud-logs-new-version-considerations)
+       * [Alert priorities](/docs/cloud-logs?topic=cloud-logs-priorities)
+       * [Terraform changes required to convert alerts](/docs/cloud-logs?topic=cloud-logs-migrate_alert_definitions)
+
+   * [Alert] New support for [multi-condition alerts](/docs/cloud-logs?topic=cloud-logs-multi-condition).
+
+   * [Alert] New support for [anomaly detection](/docs/cloud-logs?topic=cloud-logs-alerts-config-metric&interface=ui#alerts-config-metric-anomaly) in metric alerts.
+
+   * [Reserved Fields](/docs/cloud-logs?topic=cloud-logs-reserved-fields) is a new function letting you make sure that important fields are always indexed and available for search in {{site.data.keyword.frequent-search}}.
+
+   * [Custom Enrichments] You can now [view](/docs/cloud-logs?topic=cloud-logs-enrich-howto&interface=ui#enrich-howto-view) a custom enrichment in the UI and [download](/docs/cloud-logs?topic=cloud-logs-enrich-howto&interface=ui#enrich-howto-download) a custom enrichment CSV file to your local system.
+
+   * [UI] [Visual Explorer](/docs/cloud-logs?topic=cloud-logs-visual-explorer) is a powerful new tool that integrates a multifunctional Explore display with customizable dashboard widgets, enhancing your ability to explore logs.
+
+   * [UI] The **Logs** view is enhanced to support [a detailed view of an individual log record](/docs/cloud-logs?topic=cloud-logs-log-details).
+
+   * [Query] [CLI](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) and [API](/apidocs/logs-service-api/CloudLogs#submit-background-query) support is available for background archive queries (asynchronous archive queries).
+
+   * [DataPrime] Support is available for the following functions:
+
+      * [arrayContains](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-array#arrayContains)
+      * [inArray](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-array#inArray)
+
+   * [Incidents] [**Watch data** now presents undetected values that triggered an alert.](/docs/cloud-logs?topic=cloud-logs-incidents#incidents-page) This gives visibility into undetected values that contributed to the alerts, making it easier to understand the full context of an incident.
+
+    Features that have been removed
+
+    * The Datamap feature is removed and is no longer supported.
+
+    Issues that have been resolved:
+
+    * [Query] Fixed a bug where downloading large files in [Asynchronous Archive Queries](/docs/cloud-logs?topic=cloud-logs-query-archive-data-bucket#query_archive) was failing.
+
+    * [Alert] Fixes an issue with **Verify Alert** where results were inconsistent.
+
+    * [UI]/[Views] Fixed a bug when managing text column fields in saved views was not working.
+
+    * [UI] Fixed a bug where layout settings were not restored when switching between views.
+
+    * [UI]/[CustomDashboards] Fixed a bug when a DataPrime query including `groupby` aggregation returned inconsistent results.
+
+    * [UI] Fixed a bug when switching between two saved views keeps the filters from the previous unsaved view.
+
+    * [All logs] Fixed a bug where `segment.manifests` files were stored under wrong path in {{site.data.keyword.cos_full_notm}}.
+
+    * [Query] Improved a warning message displayed when querying from **All logs** to handle cases where the data might be deleted from the bucket because of a lifecycle policy.
+
+    * [Query] Fixed a bug where running a DataPrime query in {{site.data.keyword.frequent-search}} was failing.
+
+    * [UI]/[CustomDashboards] Fixed a bug where `open in explore` was not redirecting correctly to the **Logs** page.
+
+    * [Streams] Fixed a bug where the filtering query was producing unexpected results in some scenarios.
 
 
 
