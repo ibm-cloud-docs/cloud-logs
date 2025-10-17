@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-25"
+lastupdated: "2025-10-10"
 
 keywords:
 
@@ -77,6 +77,6 @@ To change the status of an incident manually, click on the status `TRIGGERED`. A
 ## Incident history and data
 {: #incidents-history}
 
-If you click on an incident, the detail page opens where you can get information on when the alert was triggered, the alert configuration and the log lines that were evaluated and matched the condition.
+If you click on an incident, the detail page opens where you can get information about when the alert was triggered, the alert configuration and the log lines that were evaluated and matched the condition.
 
-You can also click **Incident history** to get a full report on when this alert has been triggered in your environment.
+You can also click **Incident history** to get a full report about when this alert was triggered in your environment.

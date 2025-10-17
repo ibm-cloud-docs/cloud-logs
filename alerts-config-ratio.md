@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -87,6 +87,8 @@ In **Alert if: Query 1 / Query 2 equals**, you must select whether the alert is 
 
 - Choose `Less than threshold` to be notified when the ratio between the query results is less than the chosen threshold.
 
+
+
 ### Triggering alerts on infinity
 {: #alerts-config-4a-tr}
 
@@ -108,4 +110,3 @@ You can specify whether or not to trigger the alert on this condition by selecti
 
 
 {{/_include-segments/alerts-next-steps.md}}
-

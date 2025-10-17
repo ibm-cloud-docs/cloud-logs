@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -63,6 +63,8 @@ Timeframe comparisons are made every 5 minutes for hourly comparisons (`Previous
 
 For example, if in the last hour a query returns 180 error logs. The query in the previous hour returned 60 error logs. In this case the ratio between the two hours is 3. If the alert is configured for a ratio of more than 1 compared to the previous hour the alert will be triggered.
 
+
+
 ### Triggering alerts on infinity
 {: #alerts-config-4a-tr}
 
@@ -84,4 +86,3 @@ You can specify whether or not to trigger the alert on this condition by selecti
 
 
 {{/_include-segments/alerts-next-steps.md}}
-

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-09-15"
+lastupdated: "2025-10-14"
 
 keywords:
 
@@ -22,6 +22,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
+
+
 ## 12 September 2025
 {: #cloud-logs-sep1225}
 
@@ -35,11 +37,13 @@ Release of the {{site.data.keyword.agent}} version 1.6.2
 :   For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-aug2625)
 
 
+
 ## 31 July 2025
 {: #cloud-logs-jul3125}
 
 Montreal support
 :   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Montreal (`ca-mon`) region.
+
 
 
 ## 9 July 2025

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-05-28"
+lastupdated: "2025-10-16"
 
 keywords:
 
@@ -43,6 +43,9 @@ subcollection: cloud-logs
 | Query time range | 8 days |
 | Maximum number of fields | 3000 |
 {: caption="Limits per instance" caption-side="bottom"}
+
+
+{{/_include-segments/dynamic-alerts-limits.md}}
 
 ## Log ingestion limits
 {: #limit-ingestion}

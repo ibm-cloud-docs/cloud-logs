@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-10-17"
 
 keywords:
 
@@ -61,10 +61,12 @@ The following table lists the options that you get to configure this type of ale
 | Alert when           | Occurrences | Time window |
 |----------------------|-------------|-------------|
 | `Notify Immediately` | Option not available | Option not available |
-| `More Than`  `[*]`   | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours, 36 hours |
-| `Less Than`          | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours, 36 hours |
+| `More than threshold`  `[*]`   | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours, 36 hours |
+| `Less than threshold`          | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours, 36 hours |
 | `More Than Usual`    | Set a number | Valid options are: 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, 6 hours, 12 hours, 24 hours |
 {: caption="Standard alert conditions" caption-side="bottom"}
+
+
 
 
 
@@ -82,3 +84,6 @@ The following table lists the options that you get to configure this type of ale
 
 
 {{/_include-segments/alerts-next-steps.md}}
+
+
+{{/_include-segments/dynamic-alerts-limits.md}}
