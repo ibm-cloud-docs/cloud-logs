@@ -20,8 +20,6 @@ toc:
           label: About IBM Cloud Logs
           topics:
           - topic: about-cl.md
-            navtitle: About IBM Cloud Logs
-          - topic: features.md
             navtitle: Features
           - topic: tco-data-pipelines.md
             navtitle: TCO Data pipelines
@@ -354,8 +352,6 @@ toc:
             navtitle: Querying data by using regex
           - topic: query-data-lucene.md
             navtitle: Querying data by using Lucene
-          - topic: query-archive-data-bucket.md
-            navtitle: Querying data directly from the archive
           - topic: query-data-time.md
             navtitle: Specifying a time interval
           - topic: query-limitations.md
@@ -424,8 +420,13 @@ toc:
                 navtitle: DataPrime creator
               - topic: widget_query_builder.md
       - topic: variables.md
-      - topic: export-data.md
-        navtitle: Exporting data
+      - topicgroup:
+          label: Downloading data
+          topics:
+          - topic: export-data.md
+            navtitle: Exporting data from the Logs page
+          - topic: query-archive-data-bucket.md
+            navtitle: Exporting data directly from the bucket
       - topicgroup:
           label: Working with templates
           topics:
