@@ -45,7 +45,7 @@ When you review your observability needs and budget, you can select from three t
 
 In the TCO optimizer, you define policies to configure policies that define which data pipeline handles data after ingestion.
 
-For more information, see [TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) and [Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage).
+For more information, see [Controlling costs](/docs/cloud-logs?topic=cloud-logs-controlling-cost), [TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) and [Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage).
 
 ## Detecting abnormal behaviour
 {: #about-cl-anomaly}

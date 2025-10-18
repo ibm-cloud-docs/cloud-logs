@@ -383,21 +383,19 @@ toc:
           - livetail.md
           - topic: actions.md
             navtitle: Using actions
+          - topic: share_url.md
+            navtitle: Sharing URLs
+          - topic: visual-explorer.md
+            navtitle: Visual Explorer
       - topicgroup:
           label: Managing dashboards
           topics:
           - topic: about_dashboards.md
             navtitle: Dashboards
-          - topic: extensions.md
-            navtitle: Extensions
           - topic: create_dashboard.md
             navtitle: Managing custom dashboards
           - topic: extensions-mgmt.md
             navtitle: Managing extensions
-          - topic: share_url.md
-            navtitle: Sharing URLs
-          - topic: visual-explorer.md
-            navtitle: Visual Explorer
           - topicgroup:
               label: Creating widgets
               topics:
@@ -419,6 +417,21 @@ toc:
                 navtitle: DataPrime creator
               - topic: widget_query_builder.md
           - topic: variables.md
+      - topicgroup:
+          label: Managing extensions
+          topics:
+          - topic: extensions.md
+            navtitle: Extensions
+          - topic: extensions-system-monitoring.md
+            navtitle: System Monitoring
+          - topic: extensions-activity-tracking.md
+            navtitle: Activity Tracking
+          - topic: extensions-kubernetes.md
+            navtitle: IBM Cloud Kubernetes Service
+          - topic: extensions-db-mysql.md
+            navtitle: IBM Cloud Databases for MySQL
+          - topic: extensions-db-postgresql.md
+            navtitle: IBM Cloud Databases for PostgreSQL
       - topicgroup:
           label: Downloading data
           topics:
@@ -537,19 +550,6 @@ toc:
       - topic: endpoints_ingress.md
       - topic: ips4firewalls.md
         navtitle: IP addresses for firewalls
-      - topicgroup:
-          label: Extensions
-          topics:
-          - topic: extensions-system-monitoring.md
-            navtitle: System Monitoring
-          - topic: extensions-activity-tracking.md
-            navtitle: Activity Tracking
-          - topic: extensions-kubernetes.md
-            navtitle: IBM Cloud Kubernetes Service
-          - topic: extensions-db-mysql.md
-            navtitle: IBM Cloud Databases for MySQL
-          - topic: extensions-db-postgresql.md
-            navtitle: IBM Cloud Databases for PostgreSQL
       - topic: limits-sending-data.md
         navtitle: Considerations and limitations sending data
       - topicgroup:
