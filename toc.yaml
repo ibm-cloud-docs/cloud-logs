@@ -21,26 +21,8 @@ toc:
           topics:
           - topic: about-cl.md
             navtitle: Features
-          - topic: tco-data-pipelines.md
-            navtitle: TCO Data pipelines
-          - topic: about_dashboards.md
-            navtitle: Dashboards
-          - topic: log_parsing_rules.md
-            navtitle: Parsing rules
-          - topic: enrich.md
-            navtitle: Enriching data
-          - topic: query-data.md
-            navtitle: Querying data
-          - topic: alerts.md
-            navtitle: Alerting
-          - topic: extensions.md
-            navtitle: Extensions
-          - topic: data-usage.md
-            navtitle: Data usage
           - topic: metadata.md
             navtitle: Metadata fields
-          - topic: control-data.md
-            navtitle: Controlling ingested data for search
       - topicgroup:
           label: About the Logging agent
           topics:
@@ -286,6 +268,8 @@ toc:
       - topicgroup:
           label: TCO Optimizer
           topics:
+          - topic: tco-data-pipelines.md
+            navtitle: TCO Data pipelines
           - topic: tco-optimizer.md
             navtitle: Configuring the TCO Optimizer
           - topic: tco-policy-order.md
@@ -332,10 +316,18 @@ toc:
             navtitle: Reduce the amount of indexed fields
           - topic: parse-convert-to-json-object.md
             navtitle: Transform escaped or stringified logs to JSON format
-      - enrich-howto.md
+      - topicgroup:
+          label: Enriching data
+          topics:
+          - topic: enrich.md
+            navtitle: Enriching data
+          - topic: enrich-howto.md
+            navtitle: Configuring custom enrichments
       - topicgroup:
           label: Querying data
           topics:
+          - topic: query-data.md
+            navtitle: Querying data
           - topic: query-data-filters.md
             navtitle: Filtering data
           - topic: indexing_mapping.md
@@ -391,6 +383,13 @@ toc:
           - livetail.md
           - topic: actions.md
             navtitle: Using actions
+      - topicgroup:
+          label: Managing dashboards
+          topics:
+          - topic: about_dashboards.md
+            navtitle: Dashboards
+          - topic: extensions.md
+            navtitle: Extensions
           - topic: create_dashboard.md
             navtitle: Managing custom dashboards
           - topic: extensions-mgmt.md
@@ -419,7 +418,7 @@ toc:
               - topic: widget_dataprime.md
                 navtitle: DataPrime creator
               - topic: widget_query_builder.md
-      - topic: variables.md
+          - topic: variables.md
       - topicgroup:
           label: Downloading data
           topics:
@@ -437,6 +436,8 @@ toc:
       - topicgroup:
           label: Managing alerts
           topics:
+          - topic: alerts.md
+            navtitle: Alerting
           - topic: alerts/event-notifications-about.md
             navtitle: Working with alerts
           - topic: alerts/priorities.md
@@ -492,6 +493,8 @@ toc:
       - topicgroup:
           label: Data and metrics usage
           topics:
+          - topic: data-usage.md
+            navtitle: Data usage
           - topic: data-usage-metrics.md
             navtitle: Enabling data usage metrics
           - topic: data-usage-reports.md
@@ -505,7 +508,13 @@ toc:
           topics:
           - topic: core/at_events.md
             navtitle: Auditing events
-      - topic: controlling-cost.md
+      - topicgroup:
+          label: Optimizing logs and costs
+          topics:
+          - topic: controlling-cost.md
+            navtitle: Controlling cost
+          - topic: control-data.md
+            navtitle: Controlling ingested data for search
   - navgroup:
       id: reference
       topics:
