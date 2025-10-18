@@ -328,6 +328,8 @@ toc:
           topics:
           - topic: query-data.md
             navtitle: Querying data
+          - topic: livetail.md
+            navtitle: Using Livetail
           - topic: query-data-filters.md
             navtitle: Filtering data
           - topic: indexing_mapping.md
@@ -372,7 +374,7 @@ toc:
               - dataprime-ref-date-time-func.md
               - dataprime-ref-encode-func.md
       - topicgroup:
-          label: Viewing data
+          label: Managing custom views
           topics:
           - topic: custom-views.md
             navtitle: Managing custom views
@@ -380,13 +382,10 @@ toc:
             navtitle: Compact views
           - topic: log-details.md
             navtitle: Log details
-          - livetail.md
           - topic: actions.md
             navtitle: Using actions
           - topic: share_url.md
             navtitle: Sharing URLs
-          - topic: visual-explorer.md
-            navtitle: Visual Explorer
       - topicgroup:
           label: Managing dashboards
           topics:
@@ -394,8 +393,10 @@ toc:
             navtitle: Dashboards
           - topic: create_dashboard.md
             navtitle: Managing custom dashboards
-          - topic: extensions-mgmt.md
-            navtitle: Managing extensions
+          - topic: widget_query_builder.md
+          - topic: variables.md
+          - topic: visual-explorer.md
+            navtitle: Using Visual Explorer
           - topicgroup:
               label: Creating widgets
               topics:
@@ -415,13 +416,13 @@ toc:
                 navtitle: Markdown
               - topic: widget_dataprime.md
                 navtitle: DataPrime creator
-              - topic: widget_query_builder.md
-          - topic: variables.md
       - topicgroup:
           label: Managing extensions
           topics:
           - topic: extensions.md
             navtitle: Extensions
+          - topic: extensions-mgmt.md
+            navtitle: Managing extensions
           - topic: extensions-system-monitoring.md
             navtitle: System Monitoring
           - topic: extensions-activity-tracking.md

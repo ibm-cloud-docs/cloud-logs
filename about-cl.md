@@ -64,6 +64,7 @@ For example, you could use a log-based metric to monitor the page load time, the
 
 As data is ingested, metric data is derived from your logs and converted into Prometheus metrics. You can use Dashboards to visualize your metrics. You can configure alerts to notify of unexpected behaviour.
 
+For more information, see [Configuring collection of metrics from logs](/docs/cloud-logs?topic=cloud-logs-configure-event2metrics).
 
 ## Restructuring data for easy analysis and troubleshooting
 {: #about-cl-parse}
