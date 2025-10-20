@@ -59,7 +59,7 @@ Functional updates and fixes are available in the Montreal (`ca-mon`) region onl
 
     * [Incidents] [**Watch data** now presents undetected values that triggered an alert.](/docs/cloud-logs?topic=cloud-logs-incidents#incidents-history) This gives visibility into undetected values that contributed to the alerts, making it easier to understand the full context of an incident.
 
-:   Features that have been removed
+:   Features that have been removed:
 
     * The Datamap feature is removed and is no longer supported.
 
