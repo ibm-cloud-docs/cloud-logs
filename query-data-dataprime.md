@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-03"
+lastupdated: "2025-10-20"
 
 keywords:
 
@@ -36,8 +36,6 @@ Searching can be used in conjunction with [filtering](/docs/cloud-logs?topic=clo
 1. Use the **< > Lucene**/**< > DataPrime** switch to change the search type to **DataPrime**.
 
 2. In the search field specify your search in DataPrime format.
-
-   See the [DataPrime reference](/docs/cloud-logs?topic=cloud-logs-dataprime-ref) for operators and expressions that can be used when querying logs.
 
 3. Click the arrow at the end of the field run your query.
 
