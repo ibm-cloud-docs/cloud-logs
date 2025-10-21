@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-18"
+lastupdated: "2025-10-21"
 
 keywords:
 
@@ -16,14 +16,14 @@ subcollection: cloud-logs
 # Features
 {: #about-cl}
 
-{{site.data.keyword.logs_full}} provides observability services for {{site.data.keyword.cloud_notm}} so you can view, analyze, and alert on activity tracking events and logging activity. Logging data can be sent from orchestrated and nonorchestrated environments.
+{{site.data.keyword.logs_full}} is an observability service in {{site.data.keyword.cloud_notm}} designed to help organizations monitor, troubleshoot, analyze, and alert on the performance of their applications and infrastructure in real time and long-term. By collecting and analyzing logs from cloud-native applications, servers, databases, and other IT systems, {{site.data.keyword.logs_full_notm}} provides actionable insights into system behavior, helping SRE and Dev teams quickly identify and resolve issues. With {{site.data.keyword.logs_full_notm}}, you can monitor operational data that is generated in {{site.data.keyword.cloud_notm}}, on-premises, and by other cloud providers. You can also monitor security data that is generated in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 As workloads generate an expanding amount of observability data, pressure is increasing on collection tools to process all the data. The data becomes expensive to manage and makes it harder to obtain actionable insights. It is harder to have fast, effective, and cost-efficient operational and performance management.
 
 {{site.data.keyword.logs_full_notm}} is designed to help users take control of their observability data and expedite insights to reduce application downtime.
 
-{{site.data.keyword.logs_full_notm}} supports integration with common workload environments on {{site.data.keyword.cloud_notm}} including {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}}. Integration with non-orchestrated environments, such as Linux and Windows, is also supported.
+{{site.data.keyword.logs_full_notm}} supports integration with common workload environments on {{site.data.keyword.cloud_notm}}, on-premises, and other clouds, including {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}}. Integration with non-orchestrated environments, such as Linux and Windows, is also supported.
 
 With {{site.data.keyword.logs_full_notm}}, you can send both log data and activity tracking events into the service, which gives you flexibility in how you handle your data. Log and event data can be sent to separate {{site.data.keyword.logs_full_notm}} instances or combined into a single instance to expand observability insights.
 
@@ -43,11 +43,31 @@ When you review your observability needs and budget, you can select from three t
 
 * {{site.data.keyword.frequent-search}}: Select and configure most critical and highest value data to your operations for priority query results. Data in this tier is retained in hot storage.
 
-In the TCO optimizer, you define policies to configure policies that define which data pipeline handles data after ingestion.
+In the TCO optimizer, you define policies to configure policies that define which data pipeline handles data after ingestion. Data prioritization before storing or indexing data reduces monitoring costs while simultaneously improving system visibility.
 
 For more information, see [Controlling costs](/docs/cloud-logs?topic=cloud-logs-controlling-cost), [TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) and [Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage).
 
-## Detecting abnormal behaviour
+
+## Collecting data for centralized storage and analysis
+{: #features-1}
+
+In {{site.data.keyword.logs_full_notm}}, you can collect telemetry data that is generated in {{site.data.keyword.cloud_notm}}, on-premises, and by other cloud providers.
+
+{{site.data.keyword.logs_full_notm}} integrates with popular logging frameworks and libraries, enabling you to easily transfer your data to {{site.data.keyword.logs_full_notm}} for centralized storage and analysis.
+
+
+## Adhering to regulations for compliance and security
+{: #features-7}
+
+Data security and compliance is an {{site.data.keyword.logs_full_notm}} priority.
+
+{{site.data.keyword.logs_full_notm}} offers encryption at rest and in transit, access controls, and adheres to industry-standard security practices.
+
+{{site.data.keyword.logs_full_notm}} helps businesses meet standards, compliance requirements and regulations, such as GDPR and HIPAA, by providing features such as data anonymization and audit logs.
+
+
+
+## Predicting abnormal behaviour for promptly detection of abnormal situations
 {: #about-cl-anomaly}
 
 In {{site.data.keyword.logs_full_notm}}, you can detect abnormal behaviour by configuring anomaly detection alerts that use artificial intelligence algorithms to analyze incoming logs and predict their expected behavior for 24 hours.
@@ -55,7 +75,7 @@ In {{site.data.keyword.logs_full_notm}}, you can detect abnormal behaviour by co
 For example, you might want to detect rising trends of errors related to bad API responses that cause a spike in your logs and indicate something usual is happening, discover when a transaction’s response time exceeds its usual duration, allowing you to pinpoint and address performance bottlenecks, or detect unexpected spike of logs in your environment due to outgoing traffic of a host that exceeds its usual levels and could indicate that a potential security breach is occurring.
 
 
-## Enhancing observability with metrics derived from logs
+## Generating metrics derived from logs to enhance observability
 {: #about-cl-event2metrics}
 
 In {{site.data.keyword.logs_full_notm}}, you can improve observability to identify performance issues, monitor system's reliability, or troubleshoot problems by using the `Event2metrics` feature.
@@ -77,12 +97,12 @@ You can restructure and parse log data to aid processing and increase the value 
 
 For more information, see [Parsing rules](/docs/cloud-logs?topic=cloud-logs-log_parsing_rules).
 
-## Enriching logs with key context data
+## Enriching telemetry data with context information for easier analysis
 {: #about-cl-enrich}
 
-You can easily enrich your log data with {{site.data.keyword.logs_full_notm}} by using the enrich features. You can automatically add fields to your JSON logs based on specific matches in your log data by using a pre-defined custom data source of your own. This way, you can enhance your log data with business, operations, or security information that is not available at run time.
+In {{site.data.keyword.logs_full_notm}}, you can enrich your log data with additional context. You can automatically add fields to your JSON logs based on specific matches in your log data by using a pre-defined custom data source of your own. This way, you can enhance your log data with business, operations, or security information that is not available at run time, making telemetry data more meaningful and actionable for effective troubleshooting, root cause analysis, and performance optimization.
 
-For more information, see [Enrichind data](/docs/cloud-logs?topic=cloud-logs-enriching-data).
+For more information, see [Enriching data](/docs/cloud-logs?topic=cloud-logs-enriching-data).
 
 
 ## Archiving logs for long-term storage
@@ -94,7 +114,7 @@ In the TCO optimizer, you define policies to configure policies that define whic
 
 Data is stored after enrichment policies and parsing rules have been applied so the data that you store for long-term storage includes all the context information that you choose to add and any additional restructure of log data that you might apply to enhance your monitoring, analysis and troubleshooting.
 
-For more information, see
+For more information, see [Configuring buckets for long term storage and search](/docs/cloud-logs?topic=cloud-logs-about-bucket).
 
 
 ## Integrating with other applications
@@ -110,24 +130,6 @@ For more information, see
 
 * Integrate with other observability, SIEM, and data analysis tools. {{site.data.keyword.logs_full_notm}} can send data to {{site.data.keyword.messagehub_full}}, a Kafka service implementation, where data can be shared with a wide variety of tools and applications.
 
-* Integrate with your workload and bespoke tools. {{site.data.keyword.logs_full_notm}} supports launching into and out of the service by using a defined set of parameters. You can automate and streamline your SRE or users’ ability to navigate the comprehensive workloads and maintain smooth context-switching between tools.
-
-
-## Alerting
-{: #about-cl-alert}
-
-Sophisticated alert rules can be configured to reduce triage time. Examples include:
-
-* Notifying when a combination of alert events happens within a defined set of criteria.
-
-* Receiving alerts when new errors or log types are detected, or anomalous values occur on established data.
-
-For more information, see [Alerts](/docs/cloud-logs?topic=cloud-logs-alerts).
-
-## Incident management control
-{: #about-cl-incident}
-
-{{site.data.keyword.logs_full_notm}} provides alert incident management control. This control helps manage the operation of workloads and comprehensive environments with maintenance windows that can be managed within the tool. When complex incidents occur triggering multiple alarms, users can see the situation quickly within {{site.data.keyword.logs_full_notm}}. Configured alert management within {{site.data.keyword.logs_full_notm}} can suppress unnecessary alerts to other alert management solutions.
 
 
 ## Searching
@@ -146,7 +148,8 @@ Data is stored in {{site.data.keyword.cos_full_notm}} in a search-friendly forma
 
 Prompted help is available to construct queries for complex analysis.
 
-## Visualizing
+
+## Operational visibility into your architecture
 {: #about-cl-config}
 
 You can create unlimited, personalized custom dashboards catered to your specific observability needs, or take advantage of pre-built dashboards to help you analyze and visualize log data.
@@ -155,3 +158,24 @@ In {{site.data.keyword.logs_full_notm}}, you can configure dashboards to better 
 
 
 For more information, see [Extensions](/docs/cloud-logs?topic=cloud-logs-extensions).
+
+
+
+## Raising awareness of what is happening
+{: #about-cl-alert}
+
+You can configure alerts to detect and address issues before users notice them by proactively notifying you
+
+Sophisticated alert rules can be configured to reduce triage time. Examples include:
+
+* Notifying when a combination of alert events happens within a defined set of criteria.
+
+* Receiving alerts when new errors or log types are detected, or anomalous values occur on established data.
+
+For more information, see [Alerts](/docs/cloud-logs?topic=cloud-logs-alerts).
+
+
+## Incident management control
+{: #about-cl-incident}
+
+{{site.data.keyword.logs_full_notm}} provides alert incident management control. This control helps manage the operation of workloads and comprehensive environments with maintenance windows that can be managed within the tool. When complex incidents occur triggering multiple alarms, users can see the situation quickly within {{site.data.keyword.logs_full_notm}}. Configured alert management within {{site.data.keyword.logs_full_notm}} can suppress unnecessary alerts to other alert management solutions.
