@@ -132,7 +132,7 @@ For more information, see [Configuring buckets for long term storage and search]
 
 
 
-## Searching
+## Querying data to gain insights for troubleshooting and analysis
 {: #about-cl-search}
 
 With {{site.data.keyword.logs_full_notm}}, you can search and easily query all data that is retained by {{site.data.keyword.logs_full_notm}}.
@@ -141,27 +141,31 @@ Data is stored in {{site.data.keyword.cos_full_notm}} in a search-friendly forma
 
 {{site.data.keyword.logs_full_notm}} offers multiple tools to effectively query data:
 
-* Simple Boolean search
-* RegEx queries
-* Queries based on Apache Lucene
-* Queries based on the {{site.data.keyword.logs_full_notm}} DataPrime language.
+* Simple Boolean search.
+* Regular expressions (RegEx queries) are available to match patterns in your log.
+* Queries based on Apache Lucene for key value querying.
+* Queries based on the {{site.data.keyword.logs_full_notm}} DataPrime. Dataprime is a query syntax for describing event transformations and aggregations. Allows users to explore data, perform schema on read transformations, group and aggregate fields, extract data, and much more.
+* Prometheus Query Language (PromQL) to select and aggregate time series data derived from your logs.
 
 Prompted help is available to construct queries for complex analysis.
 
 
-## Operational visibility into your architecture
+## Improving operational visibility to gain insights for better analysis
 {: #about-cl-config}
+
+In {{site.data.keyword.logs_full_notm}}, you can improve operational visibility by configuring dashboards to gain insights for better analysis, troubleshooting and decision-making of your organization's environments and applications.
 
 You can create unlimited, personalized custom dashboards catered to your specific observability needs, or take advantage of pre-built dashboards to help you analyze and visualize log data.
 
-In {{site.data.keyword.logs_full_notm}}, you can configure dashboards to better visualize your environments. Preconfigured alerts and dashboards for common application environments can be tailored to your specific environment needs. Dashboard insights, which are paired with {{site.data.keyword.logs_full_notm}} machine learning analytics, gives SREs the ability to quickly identify the start of an incident before it becomes a significant issue.
+Preconfigured alerts and dashboards are available as extensions for common application environments can be tailored to your specific environment needs. For more information, see [Extensions](/docs/cloud-logs?topic=cloud-logs-extensions).
+
+Dashboard insights, which are paired with {{site.data.keyword.logs_full_notm}} machine learning analytics, gives SREs the ability to quickly identify the start of an incident before it becomes a significant issue.
+
+For more information, see [Dashboards](/docs/cloud-logs?topic=cloud-logs-about_dashboards).
 
 
-For more information, see [Extensions](/docs/cloud-logs?topic=cloud-logs-extensions).
 
-
-
-## Raising awareness of what is happening
+## Notifying issues to raise awareness and take action promptly
 {: #about-cl-alert}
 
 You can configure alerts to detect and address issues before users notice them by proactively notifying you
@@ -173,9 +177,3 @@ Sophisticated alert rules can be configured to reduce triage time. Examples incl
 * Receiving alerts when new errors or log types are detected, or anomalous values occur on established data.
 
 For more information, see [Alerts](/docs/cloud-logs?topic=cloud-logs-alerts).
-
-
-## Incident management control
-{: #about-cl-incident}
-
-{{site.data.keyword.logs_full_notm}} provides alert incident management control. This control helps manage the operation of workloads and comprehensive environments with maintenance windows that can be managed within the tool. When complex incidents occur triggering multiple alarms, users can see the situation quickly within {{site.data.keyword.logs_full_notm}}. Configured alert management within {{site.data.keyword.logs_full_notm}} can suppress unnecessary alerts to other alert management solutions.
