@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-21"
+lastupdated: "2025-10-22"
 
 keywords:
 
@@ -23,12 +23,28 @@ As workloads generate an expanding amount of observability data, pressure is inc
 
 {{site.data.keyword.logs_full_notm}} is designed to help users take control of their observability data and expedite insights to reduce application downtime.
 
-{{site.data.keyword.logs_full_notm}} supports integration with common workload environments on {{site.data.keyword.cloud_notm}}, on-premises, and other clouds, including {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}}. Integration with non-orchestrated environments, such as Linux and Windows, is also supported.
+{{site.data.keyword.logs_full_notm}} supports integration with common workload environments on {{site.data.keyword.cloud_notm}}, on-premises, and other clouds, including VPC, {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}}. Integration with non-orchestrated environments, such as Linux and Windows, is also supported.
 
 With {{site.data.keyword.logs_full_notm}}, you can send both log data and activity tracking events into the service, which gives you flexibility in how you handle your data. Log and event data can be sent to separate {{site.data.keyword.logs_full_notm}} instances or combined into a single instance to expand observability insights.
 
 {{site.data.keyword.logs_full_notm}} processes incoming data and applies machine learning algorithms, including log aggregation and anomaly detection. This processing helps you focus on the root cause of issues.
 
+
+- [Optimizing value and controlling your observability budget](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-tco)
+- [Collecting data for centralized storage and analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#features-1)
+- [Adhering to regulations for compliance and security](/docs/cloud-logs?topic=cloud-logs-about-cl#features-7)
+- [Predicting abnormal behaviour for promptly detection of abnormal situations](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-anomaly)
+- [Generating metrics derived from logs to enhance observability](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-event2metrics)
+- [Restructuring data for easy analysis and troubleshooting](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-parse)
+- [Enriching telemetry data with context information for easier analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-enrich)
+- [Archiving logs for long-term storage](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-bucket)
+- [Integrating with other applications](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-integrate)
+- [Querying data to gain insights for troubleshooting and analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-search)
+- [Improving operational visibility to gain insights for better analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-config)
+- [Notifying issues to raise awareness and take action promptly](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-config)
+- [Incident management control](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-incident)
+
+Let's explore these features.
 
 ## Optimizing value and controlling your observability budget
 {: #about-cl-tco}
@@ -177,3 +193,8 @@ Sophisticated alert rules can be configured to reduce triage time. Examples incl
 * Receiving alerts when new errors or log types are detected, or anomalous values occur on established data.
 
 For more information, see [Alerts](/docs/cloud-logs?topic=cloud-logs-alerts).
+
+## Incident management control
+{: #about-cl-incident}
+
+{{site.data.keyword.logs_full_notm}} provides alert incident management control. This control helps manage the operation of workloads and comprehensive environments with maintenance windows that can be managed within the tool. When complex incidents occur triggering multiple alarms, users can see the situation quickly within {{site.data.keyword.logs_full_notm}}. Configured alert management within {{site.data.keyword.logs_full_notm}} can suppress unnecessary alerts to other alert management solutions.
