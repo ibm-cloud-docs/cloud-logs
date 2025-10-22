@@ -576,7 +576,7 @@ toc:
       - topic: limits.md
         navtitle: Limits
       - topic: severities.md
-        navtitle: Severity mapping
+        navtitle: Logs severity mapping
       - topic: v3considerations.md
         navtitle: Considerations for recent release
       - topic: limits-sending-data.md

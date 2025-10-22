@@ -25,25 +25,25 @@ As workloads generate an expanding amount of observability data, pressure is inc
 
 {{site.data.keyword.logs_full_notm}} supports integration with common workload environments on {{site.data.keyword.cloud_notm}}, on-premises, and other clouds, including VPC, {{site.data.keyword.containerlong_notm}}, and {{site.data.keyword.openshiftlong_notm}}. Integration with non-orchestrated environments, such as Linux and Windows, is also supported.
 
-With {{site.data.keyword.logs_full_notm}}, you can send [platform log data](/docs/cloud-logs?topic=cloud-logs-cl-platform-logs), [operational log data](/docs/cloud-logs?topic=cloud-logs-cl-operational-logs), and [activity tracking events](/docs/cloud-logs?topic=cloud-logs-cl-at-events) into the service, which gives you flexibility in how you handle your data. Log and event data can be sent to separate {{site.data.keyword.logs_full_notm}} instances or combined into a single instance to expand observability insights.
+With {{site.data.keyword.logs_full_notm}}, you can send [IBM Cloud platform log data](/docs/cloud-logs?topic=cloud-logs-cl-platform-logs), [IBM Cloud activity tracking events](/docs/cloud-logs?topic=cloud-logs-cl-at-events), and [operational log data](/docs/cloud-logs?topic=cloud-logs-cl-operational-logs) and into the service, which gives you flexibility in how you handle your data. Log and event data can be sent to separate {{site.data.keyword.logs_full_notm}} instances or combined into a single instance to expand observability insights.
 
 {{site.data.keyword.logs_full_notm}} processes incoming data and applies machine learning algorithms, including log aggregation and anomaly detection. This processing helps you focus on the root cause of issues.
 
 {{site.data.keyword.logs_full_notm}} offers the following features:
 
-- [Optimizing value and controlling your observability budget](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-tco)
 - [Collecting data for centralized storage and analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#features-1)
+- [Optimizing value and controlling your observability budget](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-tco)
 - [Adhering to regulations for compliance and security](/docs/cloud-logs?topic=cloud-logs-about-cl#features-7)
-- [Predicting abnormal behavior for prompt detection of abnormal situations](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-anomaly)
+- [Predicting abnormal behavior to promptly detect abnormal situations](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-anomaly)
 - [Generating metrics derived from logs to enhance observability](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-event2metrics)
 - [Restructuring data for analysis and troubleshooting](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-parse)
 - [Enriching telemetry data with context information for enhanced analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-enrich)
 - [Archiving logs for long-term storage](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-bucket)
-- [Integrating with other applications](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-integrate)
 - [Querying data to gain insights for troubleshooting and analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-search)
 - [Improving operational visibility to gain insights for better analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-config)
 - [Notifying issues to raise awareness and act promptly](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-config)
 - [Incident management control](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-incident)
+- [Integrating with other applications](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-integrate)
 
 Let's explore these features.
 
@@ -200,3 +200,7 @@ For more information, see [Managing triggered alerts in {{site.data.keyword.logs
 * Share alert data with PagerDuty and other specialized alert management tools.
 
 * Integrate with other observability, SIEM, and data analysis tools. {{site.data.keyword.logs_full_notm}} can send data to {{site.data.keyword.messagehub_full}}, a Kafka service implementation, where data can be shared with a wide variety of tools and applications.
+
+
+
+For more information about integrating using {{site.data.keyword.en_full_notm}}, see [Working with alerts](/docs/cloud-logs?topic=cloud-logs-event-notifications-about). For more information about streaming using {{site.data.keyword.messagehub_full}}, see [Streaming data](/docs/cloud-logs?topic=cloud-logs-streaming)
