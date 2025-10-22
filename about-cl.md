@@ -29,6 +29,7 @@ With {{site.data.keyword.logs_full_notm}}, you can send both log data and activi
 
 {{site.data.keyword.logs_full_notm}} processes incoming data and applies machine learning algorithms, including log aggregation and anomaly detection. This processing helps you focus on the root cause of issues.
 
+{{site.data.keyword.logs_full_notm}} offers the following features:
 
 - [Optimizing value and controlling your observability budget](/docs/cloud-logs?topic=cloud-logs-about-cl#about-cl-tco)
 - [Collecting data for centralized storage and analysis](/docs/cloud-logs?topic=cloud-logs-about-cl#features-1)
