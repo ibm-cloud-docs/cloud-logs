@@ -14,42 +14,18 @@ toc:
       id: learn
       topics:
       - getting-started.md
-      - topic: atla.md
-        navtitle: Log Analysis and Activity Tracker users
       - topicgroup:
           label: About IBM Cloud Logs
           topics:
           - topic: about-cl.md
-            navtitle: About IBM Cloud Logs
-          - topic: features.md
             navtitle: Features
-          - topic: tco-data-pipelines.md
-            navtitle: TCO Data pipelines
-          - topic: about_dashboards.md
-            navtitle: Dashboards
-          - topic: log_parsing_rules.md
-            navtitle: Parsing rules
-          - topic: enrich.md
-            navtitle: Enriching data
-          - topic: query-data.md
-            navtitle: Querying data
-          - topic: alerts.md
-            navtitle: Alerting
-          - topic: extensions.md
-            navtitle: Extensions
-          - topic: data-usage.md
-            navtitle: Data usage
           - topic: metadata.md
             navtitle: Metadata fields
-          - topic: control-data.md
-            navtitle: Controlling ingested data for search
       - topicgroup:
           label: About the Logging agent
           topics:
           - topic: agent/agent-about.md
             navtitle: About the Logging agent
-          - topic: agent/agent-severity.md
-            navtitle: Understanding how the agent parses severities
           - topic: agent/agent-supported-versions.md
             navtitle: Supported agent versions
           - topic: agent/agent-support-policy.md
@@ -72,6 +48,8 @@ toc:
             navtitle: Release notes
           - topic: agent/releasenotes_agent.md
             navtitle: Logging agent release notes
+          - topic: atla.md
+            navtitle: Log Analysis and Activity Tracker users
           - releasenotes_notifications.md
   - navgroup:
       id: tutorial
@@ -175,141 +153,23 @@ toc:
           - topic: configure-metrics-bucket.md
             navtitle: Configuring the metrics bucket
           - topic: cos.md
-      - topic: instance-launch.md
-        navtitle: Launching the UI
-      - account_preferences.md
-      - topicgroup:
-          label: Sending data to a Cloud Logs instance
-          topics:
-          - topic: send-logs-api.md
-            navtitle: Sending data using the REST API
-          - topicgroup:
-              label: Customizing the Helm Chart used to deploy orchestrated environments
-              topics:
-              - topic: agent/helm-chart-versions.md
-                navtitle: Checking the available Helm chart versions
-              - topic: agent/helm-chart-download.md
-                navtitle: Downloading a Helm chart
-              - topic: agent/agent-helm-template-config-options-required.md
-                navtitle: Helm Chart required configuration options
-              - topic: agent/agent-helm-iam-endpoint.md
-                navtitle: Configuring the IAM endpoint
-              - topic: agent/agent-helm-iam-authentication.md
-                navtitle: Configuring the IAM authentication method
-              - topic: agent/agent-helm-metadata.md
-                navtitle: Configuring custom metadata values
-              - topic: agent/agent-helm-kubernetes-filter.md
-                navtitle: Enabling the Kubernetes filter to enrich logs with Kubernetes metadata
-              - topic: agent/agent-helm-retry-sending-data.md
-                navtitle: Configuring the number of retries sending data if an error occurs
-              - topic: agent/agent-helm-resources.md
-                navtitle: Changing the resources that are assigned to run the agent
-              - topic: agent/agent-helm-parallel-processing.md
-                navtitle: Configuring the output plugin to enable parallel processing of log data
-              - topic: agent/agent-helm-severity.md
-                navtitle: Overriding the default severity field
-              - topic: agent/agent-helm-tainted.md
-                navtitle: Ensuring tainted nodes are updated
-              - topic: agent/agent-helm-log-files.md
-                navtitle: Configuring the log files that are collected by the agent
-              - topic: agent/agent-helm-raw-log.md
-                navtitle: Keeping a copy of the original log
-              - topic: agent/agent-helm-additionalInputs.md
-                navtitle: Configuring multiple input plugins
-              - topic: agent/agent-helm-additionalParsers.md
-                navtitle: Configuring multiple parsers
-              - topic: agent/agent-helm-additionalFilters.md
-                navtitle: Configuring multiple filters
-              - topic: agent/agent-helm-additionalMultilineParsers.md
-                navtitle: Configuring custom multiline parsers
-              - topic: agent/agent-helm-additionalServiceOptions.md
-                navtitle: Configuring additional service options
-              - topic: agent/agent-helm-additionalOutputs.md
-                navtitle: Configuring multiple outputs
-              - topic: agent/agent-helm-configure-maxunavailable.md
-                navtitle: Configuring the number of unavailable pods
-              - topic: agent/agent-helm-maxloglength.md
-                navtitle: Configure the maximum length of the log
-          - topic: agent/agent-configuration-considerations.md
-            navtitle: Agent configuration considerations
-          - topicgroup:
-              label: Managing the Logging agent for orchestrated environments
-              topics:
-              - topic: agent/agent-version.md
-                navtitle: Checking the available agent versions
-              - topic: agent/agent-helm-os-deploy.md
-                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
-              - topic: agent/agent-helm-kube-deploy.md
-                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
-              - topic: agent/agent-helm-update.md
-                navtitle: Upgrading the Logging agent version using a Helm chart
-              - topic: agent/agent-helm-credential-rotation.md
-                navtitle: Rotating the Logging agent IAM APIKey for ingestion using a Helm chart
-              - topic: agent/agent-helm-remove.md
-                navtitle: Uninstalling the Logging agent using a Helm chart
-              - topic: agent/configure-agent.md
-                navtitle: Configuring the log files that are collected
-              - topic: agent/agent-multiline-new.md
-                navtitle: Multiline support
-          - topicgroup:
-              label: Managing the Logging agent for Linux environments
-              topics:
-              - topic: agent/agent-linux.md
-                navtitle: Deploying and managing the agent
-              - topic: agent/agent-rsyslog.md
-                navtitle: Configure the Logging agent to collect and route Rsyslog messages
-              - topic: agent/agent-multiline-linux.md
-                navtitle: Multiline support
-          - topicgroup:
-              label: Managing the Logging agent for Windows environments
-              topics:
-              - topic: agent/agent-windows.md
-                navtitle: Deploying the agent
-              - topic: agent/agent-windows-event-log.md
-                navtitle: Configuring the agent to collect the Windows event log
-              - topic: agent/agent-windows-read-files.md
-                navtitle: Configuring the agent to include or exclude files
-              - topic: agent/agent-windows-metadata.md
-                navtitle: Adding metadata
-              - topic: agent/agent-windows-manage.md
-                navtitle: Managing the agent
-              - topic: agent/agent-multiline-windows.md
-                navtitle: Multiline support
-          - topic: agent/agent-plugin-parameters.md
-            navtitle: Output plug-in parameters to send data to Cloud Logs
-          - topic: agent/agent-multiple-icl-targets.md
-            navtitle: Configuring multiple Cloud Logs destinations
-          - topic: agent/agent-proxy.md
-            navtitle: Configuring the agent to use proxies
-          - topic: agent/agent-fluentbit.md
-            navtitle: Understanding the agent configuration file
-          - topic: agent/agent-set-appsubname.md
-            navtitle: Configuring custom metadata fields
       - topicgroup:
           label: TCO Optimizer
           topics:
+          - topic: tco-data-pipelines.md
+            navtitle: TCO Data pipelines
           - topic: tco-optimizer.md
             navtitle: Configuring the TCO Optimizer
           - topic: tco-policy-order.md
             navtitle: Policy processing order
-      - topicgroup:
-          label: Streaming data
-          topics:
-          - topic: streaming.md
-            navtitle: Streaming data
-          - topic: streaming_config.md
-            navtitle: Configuring streaming
-          - topic: streaming_rules.md
-            navtitle: Configuring streaming data rules
-          - topic: streaming_at_select.md
-            navtitle: Streaming auditing data
-          - topic: streaming_platform_data_select.md
-            navtitle: Streaming platform logs
-          - topic: siem.md
-            navtitle: Streaming to SIEM tools
+      - topic: instance-launch.md
+        navtitle: Launching the UI
+      - account_preferences.md
       - topicgroup:
           label: Working with parsing rules
           topics:
+          - topic: log_parsing_rules.md
+            navtitle: Parsing rules
           - topic: rules_groups.md
             navtitle: Working with rule groups
           - topic: parse-severity.md
@@ -334,10 +194,20 @@ toc:
             navtitle: Reduce the amount of indexed fields
           - topic: parse-convert-to-json-object.md
             navtitle: Transform escaped or stringified logs to JSON format
-      - enrich-howto.md
+      - topicgroup:
+          label: Enriching data
+          topics:
+          - topic: enrich.md
+            navtitle: Enriching data
+          - topic: enrich-howto.md
+            navtitle: Configuring custom enrichments
       - topicgroup:
           label: Querying data
           topics:
+          - topic: query-data.md
+            navtitle: Querying data
+          - topic: livetail.md
+            navtitle: Using Livetail
           - topic: query-data-filters.md
             navtitle: Filtering data
           - topic: indexing_mapping.md
@@ -354,8 +224,6 @@ toc:
             navtitle: Querying data by using regex
           - topic: query-data-lucene.md
             navtitle: Querying data by using Lucene
-          - topic: query-archive-data-bucket.md
-            navtitle: Querying data directly from the archive
           - topic: query-data-time.md
             navtitle: Specifying a time interval
           - topic: query-limitations.md
@@ -384,7 +252,7 @@ toc:
               - dataprime-ref-date-time-func.md
               - dataprime-ref-encode-func.md
       - topicgroup:
-          label: Viewing data
+          label: Managing custom views
           topics:
           - topic: custom-views.md
             navtitle: Managing custom views
@@ -392,17 +260,21 @@ toc:
             navtitle: Compact views
           - topic: log-details.md
             navtitle: Log details
-          - livetail.md
           - topic: actions.md
             navtitle: Using actions
-          - topic: create_dashboard.md
-            navtitle: Managing custom dashboards
-          - topic: extensions-mgmt.md
-            navtitle: Managing extensions
           - topic: share_url.md
             navtitle: Sharing URLs
+      - topicgroup:
+          label: Managing dashboards
+          topics:
+          - topic: about_dashboards.md
+            navtitle: Dashboards
+          - topic: create_dashboard.md
+            navtitle: Managing custom dashboards
           - topic: visual-explorer.md
-            navtitle: Visual Explorer
+            navtitle: Using Visual Explorer
+          - topic: widget_query_builder.md
+          - topic: variables.md
           - topicgroup:
               label: Creating widgets
               topics:
@@ -422,10 +294,30 @@ toc:
                 navtitle: Markdown
               - topic: widget_dataprime.md
                 navtitle: DataPrime creator
-              - topic: widget_query_builder.md
-      - topic: variables.md
-      - topic: export-data.md
-        navtitle: Exporting data
+      - topicgroup:
+          label: Managing extensions
+          topics:
+          - topic: extensions.md
+            navtitle: Extensions
+          - topic: extensions-mgmt.md
+            navtitle: Managing extensions
+          - topic: extensions-system-monitoring.md
+            navtitle: System Monitoring
+          - topic: extensions-activity-tracking.md
+            navtitle: Activity Tracking
+          - topic: extensions-kubernetes.md
+            navtitle: IBM Cloud Kubernetes Service
+          - topic: extensions-db-mysql.md
+            navtitle: IBM Cloud Databases for MySQL
+          - topic: extensions-db-postgresql.md
+            navtitle: IBM Cloud Databases for PostgreSQL
+      - topicgroup:
+          label: Downloading data
+          topics:
+          - topic: export-data.md
+            navtitle: Exporting data from the Logs page
+          - topic: query-archive-data-bucket.md
+            navtitle: Exporting data directly from the bucket
       - topicgroup:
           label: Working with templates
           topics:
@@ -436,6 +328,8 @@ toc:
       - topicgroup:
           label: Managing alerts
           topics:
+          - topic: alerts.md
+            navtitle: Alerting
           - topic: alerts/event-notifications-about.md
             navtitle: Working with alerts
           - topic: alerts/priorities.md
@@ -491,6 +385,8 @@ toc:
       - topicgroup:
           label: Data and metrics usage
           topics:
+          - topic: data-usage.md
+            navtitle: Data usage
           - topic: data-usage-metrics.md
             navtitle: Enabling data usage metrics
           - topic: data-usage-reports.md
@@ -504,10 +400,156 @@ toc:
           topics:
           - topic: core/at_events.md
             navtitle: Auditing events
-      - topic: controlling-cost.md
+      - topicgroup:
+          label: Sending data to a Cloud Logs instance
+          topics:
+          - topic: send-logs-api.md
+            navtitle: Sending data using the REST API
+          - topicgroup:
+              label: Customizing the Helm Chart used to deploy orchestrated environments
+              topics:
+              - topic: agent/helm-chart-versions.md
+                navtitle: Checking the available Helm chart versions
+              - topic: agent/helm-chart-download.md
+                navtitle: Downloading a Helm chart
+              - topic: agent/agent-helm-template-config-options-required.md
+                navtitle: Helm Chart required configuration options
+              - topic: agent/agent-helm-iam-endpoint.md
+                navtitle: Configuring the IAM endpoint
+              - topic: agent/agent-helm-iam-authentication.md
+                navtitle: Configuring the IAM authentication method
+              - topic: agent/agent-helm-metadata.md
+                navtitle: Configuring custom metadata values
+              - topic: agent/agent-helm-kubernetes-filter.md
+                navtitle: Enabling the Kubernetes filter to enrich logs with Kubernetes metadata
+              - topic: agent/agent-helm-retry-sending-data.md
+                navtitle: Configuring the number of retries sending data if an error occurs
+              - topic: agent/agent-helm-resources.md
+                navtitle: Changing the resources that are assigned to run the agent
+              - topic: agent/agent-helm-parallel-processing.md
+                navtitle: Configuring the output plugin to enable parallel processing of log data
+              - topic: agent/agent-helm-severity.md
+                navtitle: Overriding the default severity field
+              - topic: agent/agent-helm-tainted.md
+                navtitle: Ensuring tainted nodes are updated
+              - topic: agent/agent-helm-log-files.md
+                navtitle: Configuring the log files that are collected by the agent
+              - topic: agent/agent-helm-raw-log.md
+                navtitle: Keeping a copy of the original log
+              - topic: agent/agent-helm-additionalInputs.md
+                navtitle: Configuring multiple input plugins
+              - topic: agent/agent-helm-additionalParsers.md
+                navtitle: Configuring multiple parsers
+              - topic: agent/agent-helm-additionalFilters.md
+                navtitle: Configuring multiple filters
+              - topic: agent/agent-helm-additionalMultilineParsers.md
+                navtitle: Configuring custom multiline parsers
+              - topic: agent/agent-helm-additionalServiceOptions.md
+                navtitle: Configuring additional service options
+              - topic: agent/agent-helm-additionalOutputs.md
+                navtitle: Configuring multiple outputs
+              - topic: agent/agent-helm-configure-maxunavailable.md
+                navtitle: Configuring the number of unavailable pods
+              - topic: agent/agent-helm-maxloglength.md
+                navtitle: Configure the maximum length of the log
+          - topic: agent/agent-configuration-considerations.md
+            navtitle: Agent configuration considerations
+          - topic: agent/agent-severity.md
+            navtitle: Understanding how the agent parses severities
+          - topicgroup:
+              label: Managing the Logging agent for orchestrated environments
+              topics:
+              - topic: agent/agent-version.md
+                navtitle: Checking the available agent versions
+              - topic: agent/agent-helm-os-deploy.md
+                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
+              - topic: agent/agent-helm-kube-deploy.md
+                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
+              - topic: agent/agent-helm-update.md
+                navtitle: Upgrading the Logging agent version using a Helm chart
+              - topic: agent/agent-helm-credential-rotation.md
+                navtitle: Rotating the Logging agent IAM APIKey for ingestion using a Helm chart
+              - topic: agent/agent-helm-remove.md
+                navtitle: Uninstalling the Logging agent using a Helm chart
+              - topic: agent/configure-agent.md
+                navtitle: Configuring the log files that are collected
+              - topic: agent/agent-multiline-new.md
+                navtitle: Multiline support
+          - topicgroup:
+              label: Managing the Logging agent for Linux environments
+              topics:
+              - topic: agent/agent-linux.md
+                navtitle: Deploying and managing the agent
+              - topic: agent/agent-rsyslog.md
+                navtitle: Configure the Logging agent to collect and route Rsyslog messages
+              - topic: agent/agent-multiline-linux.md
+                navtitle: Multiline support
+          - topicgroup:
+              label: Managing the Logging agent for Windows environments
+              topics:
+              - topic: agent/agent-windows.md
+                navtitle: Deploying the agent
+              - topic: agent/agent-windows-event-log.md
+                navtitle: Configuring the agent to collect the Windows event log
+              - topic: agent/agent-windows-read-files.md
+                navtitle: Configuring the agent to include or exclude files
+              - topic: agent/agent-windows-metadata.md
+                navtitle: Adding metadata
+              - topic: agent/agent-windows-manage.md
+                navtitle: Managing the agent
+              - topic: agent/agent-multiline-windows.md
+                navtitle: Multiline support
+          - topic: agent/agent-plugin-parameters.md
+            navtitle: Output plug-in parameters to send data to Cloud Logs
+          - topic: agent/agent-multiple-icl-targets.md
+            navtitle: Configuring multiple Cloud Logs destinations
+          - topic: agent/agent-proxy.md
+            navtitle: Configuring the agent to use proxies
+          - topic: agent/agent-fluentbit.md
+            navtitle: Understanding the agent configuration file
+          - topic: agent/agent-set-appsubname.md
+            navtitle: Configuring custom metadata fields
+      - topicgroup:
+          label: Streaming data
+          topics:
+          - topic: streaming.md
+            navtitle: Streaming data
+          - topic: streaming_config.md
+            navtitle: Configuring streaming
+          - topic: streaming_rules.md
+            navtitle: Configuring streaming data rules
+          - dpxl_reference.md
+          - topic: streaming_at_select.md
+            navtitle: Streaming auditing data
+          - topic: streaming_platform_data_select.md
+            navtitle: Streaming platform logs
+          - topic: siem.md
+            navtitle: Streaming to SIEM tools
+      - topicgroup:
+          label: Optimizing logs and costs
+          topics:
+          - topic: controlling-cost.md
+            navtitle: Controlling cost
+          - topic: control-data.md
+            navtitle: Controlling ingested data for search
   - navgroup:
       id: reference
       topics:
+      - topic: core/data-portability.md
+        navtitle: Data portability
+      - topic: shared-responsibilities.md
+        navtitle: Your responsibilities
+      - topic: service-dependency.md
+        navtitle: Service dependencies
+      - topic: core/ha-dr-new.md
+        navtitle: Understanding high availability and disaster recovery
+      - service_plans.md
+      - topic: regions.md
+        navtitle: Locations
+      - topic: endpoints_api.md
+      - topic: endpoints_ingress.md
+      - topic: ips4firewalls.md
+        navtitle: IP addresses for firewalls
       - topicgroup:
           label: API Reference
           links:
@@ -519,27 +561,24 @@ toc:
           topics:
           - topic: cloud-logs-cli-temp.md
             navtitle: CLI Reference
+      - topicgroup:
+          label: Terraform Reference
+          links:
+          - link:
+              label: Terraform reference
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
+      - topicgroup:
+          label: Observability services
+          links:
+          - link:
+              label: Observability services
+              href: https://cloud.ibm.com/docs/observability-hub
+      - topic: limits.md
+        navtitle: Limits
+      - topic: severities.md
+        navtitle: Logs severity mapping
       - topic: v3considerations.md
         navtitle: Considerations for recent release
-      - topic: core/data-portability.md
-        navtitle: Data portability
-      - topic: endpoints_api.md
-      - topic: endpoints_ingress.md
-      - topic: ips4firewalls.md
-        navtitle: IP addresses for firewalls
-      - topicgroup:
-          label: Extensions
-          topics:
-          - topic: extensions-system-monitoring.md
-            navtitle: System Monitoring
-          - topic: extensions-activity-tracking.md
-            navtitle: Activity Tracking
-          - topic: extensions-kubernetes.md
-            navtitle: IBM Cloud Kubernetes Service
-          - topic: extensions-db-mysql.md
-            navtitle: IBM Cloud Databases for MySQL
-          - topic: extensions-db-postgresql.md
-            navtitle: IBM Cloud Databases for PostgreSQL
       - topic: limits-sending-data.md
         navtitle: Considerations and limitations sending data
       - topicgroup:
@@ -562,26 +601,6 @@ toc:
                 navtitle: Rotating the Logging agent IAM APIKey by using a Helm chart
               - topic: agent/agent-helm-remove-1.md
                 navtitle: Uninstalling the Logging agent using a Helm chart
-      - topic: regions.md
-        navtitle: Locations
-      - service_plans.md
-      - topic: limits.md
-        navtitle: Limits
-      - topic: severities.md
-        navtitle: Severity mapping
-      - topic: shared-responsibilities.md
-        navtitle: Your responsibilities
-      - topic: service-dependency.md
-        navtitle: Service dependencies
-      - topicgroup:
-          label: Terraform Reference
-          links:
-          - link:
-              label: Terraform reference
-              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
-      - topic: core/ha-dr-new.md
-        navtitle: Understanding high availability and disaster recovery
-      - dpxl_reference.md
       - cloud_services_msg_prefix.md
   - navgroup:
       id: help

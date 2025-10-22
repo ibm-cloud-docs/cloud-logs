@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-21"
 
 keywords:
 
@@ -57,6 +57,9 @@ The condition rules determine an alert's priority when the alert condition is me
 If an alert matches the conditions for multiple priorities, the highest priority value is applied. For example, if an alert would trigger for a condition that is defined as `P1` and a condition that is defined as `P2` as well, the `P1` priority is applied to the alert. `P1` is the highest priority.
 
 On the [*Incidents* page](/docs/cloud-logs?topic=cloud-logs-incidents) the alert will be displayed with a `P1` priority and the information that triggered the alert.
+
+When you configure multiple condition rules, the first condition rule that is defined sets the severity of the alert that is displayed in the Incidents page. The first condition rule also sets the severity, triggering condition, and other alert definition details of the event that is sent to the {{site.data.keyword.en_full_notm}} service. The severity and alert definition details of the condition rule that triggers the alert is not used for the event notification unless it matches the first condition rule configured through the UI, CLI, API or Terraform. For this reason it is important that you configure your rule conditions in the desired priority order, top down. For example, you might want the notification to have a higher severity than the triggered alert priority. In this case you want to make sure you organize your conditions from highest priority to lowest priority.
+{: important}
 
 ### Alert Management display
 {: #mc-alert-mgmt}

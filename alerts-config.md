@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-10-21"
 
 keywords:
 
@@ -48,6 +48,12 @@ This condition you specifies differs depending on the alert type.
 | Alert type | Condition configuration information |
 |------------|-------------------------------------|
 | Standard alerts | [link](/docs/cloud-logs?topic=cloud-logs-alerts-config-standard#alerts-config-4-std) |
+| Time relative alerts | [link](/docs/cloud-logs?topic=cloud-logs-alerts-config-time-relative#alerts-config-4-tr) |
+| Unique count alerts | [link](/docs/cloud-logs?topic=cloud-logs-alerts-config-unique-count#alerts-config-4-uc) |
+| Ratio alerts | [link](/docs/cloud-logs?topic=cloud-logs-alerts-config-ratio#alerts-config-4-ratio) |
+| New value alerts | [link](/docs/cloud-logs?topic=cloud-logs-alerts-config-new-value#alerts-config-4-nv) |
+| Metric alerts | [link](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-alerts-config-metric#alerts-config-4b-metric) |
+| Flow alerts | [link](/docs/cloud-logs?topic=cloud-logs-alerts-config-flow#alerts-config-4-flow) |
 {: caption="Condition configuration details by alert type" caption-side="bottom"}
 
 

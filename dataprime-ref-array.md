@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-20"
 
 keywords:
 
@@ -76,7 +76,7 @@ create is_blocked_ip from blocked_ips.arrayContains(client_ip)
 ```
 {: codeblock}
 
-The result will will include a new vield (`is_blocked_ip`) with a boolean value.
+The result will will include a new field (`is_blocked_ip`) with a boolean value.
 
 ```json
 {

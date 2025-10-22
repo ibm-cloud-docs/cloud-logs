@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-03-17"
+lastupdated: "2025-10-21"
 
 keywords:
 
@@ -104,3 +104,5 @@ Within a rules group:
 
 
 The order of execution of rules groups and rules is important, and define the final log’s structure.
+
+
