@@ -26,7 +26,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #cloud-logs-oct2725}
 {: release-note}
 
-Functional updates and fixes are available made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
 
 :   Regions supporting new functionality and fixes:
 
