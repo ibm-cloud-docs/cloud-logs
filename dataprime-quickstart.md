@@ -391,7 +391,7 @@ source logs
 ```
 {: codeblock}
 
-When querying with the groupby operator, you can apply an aggregation function (such as `avg`, `max`, `sum`) to the bucket of results. This feature gives you the ability to manipulate an aggregation expression inside the expression itself, letting you to calculate and manipulate your data simultaneously. DataPrime aggregation functions can be found in the [DataPrime aggretation expressions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-expressions-agg).
+When querying with the groupby operator, you can apply an aggregation function (such as `avg`, `max`, `sum`) to the bucket of results. This feature gives you the ability to manipulate an aggregation expression inside the expression itself, letting you to calculate and manipulate your data simultaneously. DataPrime aggregation functions can be found in the [DataPrime aggregation expressions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-expressions-agg).
 
 ### Distinct examples
 {: #dp-qs-distinct}
