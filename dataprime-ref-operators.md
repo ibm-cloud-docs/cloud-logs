@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -500,7 +500,7 @@ Will result in logs of the following form:
 ```
 {: codeblock}
 
-When querying with the `groupby` operator, you can apply an [aggregation function](#aggregation_functions) (such `asavg`, `max`, `sum`) to the bucket of results. This feature gives you the power to manipulate an aggregation expression inside the expression itself, allowing you to calculate and manipulate your data simultaneously.
+When querying with the `groupby` operator, you can apply an [aggregation function](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-expressions-agg) (such as `avg`, `max`, `sum`) to the bucket of results. This feature gives you the power to manipulate an aggregation expression inside the expression itself, allowing you to calculate and manipulate your data simultaneously.
 
 
 
@@ -639,7 +639,7 @@ The result will be similar, but instead of `userid`, the field `id` is returned.
 ```
 {: codeblock}
 
-If you have two fields that are named differently but would simplify your `join` query, you can use [`move`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#move) to move one of the fields so keypaths match on both sides.
+If you have two fields that are named differently but would simplify your `join` query, you can use [`move`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#move) to move one of the fields so keypaths match on both sides.
 {: tip}
 
 ### `join` example using `left=>` and `right=>` keywords
@@ -800,7 +800,7 @@ There are limitations and considerations when including `join` in a query:
 
 * The `join` condition only supports keypath equality (`==`). If multiple equality conditions are needed, they can be combined with `&&` (logical and).
 
-* One side of the join (either current query or join query) must be small (< 200MB). You can use [`filter`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#filter) and [`remove`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#remove) to reduce the size of the query.
+* One side of the join (either current query or join query) must be small (< 200MB). You can use [`filter`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#filter) and [`remove`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#remove) to reduce the size of the query.
 
 * Left outer joins require all columns in the condition to be non-null. **Any null columns will not be joined.** To include right hand query null columns, use `join full`. To exclude all null columns produced by the left and right joins, use `join inner`.
 
@@ -1312,7 +1312,7 @@ Will result in logs of the following form:
 ```
 {: codeblock}
 
-You can apply an [aggregation function.](#aggregation_functions)
+You can apply an [aggregation function.](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-expressions-agg).
 
 
 
@@ -1392,5 +1392,3 @@ This will result in the following dataset:
 { "userid": "222", "timestamp": "2022-01-01T13:00:00Z", "team.id": "98361" }
 ```
 {: codeblock}
-
-

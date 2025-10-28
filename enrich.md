@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -28,7 +28,7 @@ You can enrich your logs in two possible ways:
 
    * The logs include the enrichment data, which can be consumed everywhere (for example, in any query and also by third-party products that read the logs from the bucket).
 
-* Use the DataPrime query [`enrich`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#enrich) to look up a value in a table and enrich the log dynamically for the query. The advantages of this mode are:
+* Use the DataPrime query [`enrich`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#enrich) to look up a value in a table and enrich the log dynamically for the query. The advantages of this mode are:
 
    * You can enrich old logs already ingested into {{site.data.keyword.logs_full_notm}}.
 

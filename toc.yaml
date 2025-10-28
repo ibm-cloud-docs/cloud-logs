@@ -232,7 +232,7 @@ toc:
               label: Dataprime
               topics:
               - topic: query-data-dataprime.md
-                navtitle: Querying data using Dataprime
+                navtitle: Querying data by using DataPrime
               - topic: dataprime-quickstart.md
                 navtitle: DataPrime examples
               - query-parameters.md

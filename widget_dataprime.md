@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2023-05-15"
+  years:  2024, 2025
+lastupdated: "2025-10-28"
 
 keywords: 
 
@@ -18,7 +18,7 @@ subcollection: cloud-logs
 You can create the optimum visualization for your data based on your DataPrime query that can then be included in custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
-The [DataPrime language](/docs/cloud-logs?topic=cloud-logs-dataprime-ref) can be used to query your data and transform it through operations tailored to your specific needs. This includes calculation, extraction, and aggregation.
+The [DataPrime language](/docs/cloud-logs?group=dataprime) can be used to query your data and transform it through operations tailored to your specific needs. This includes calculation, extraction, and aggregation.
 
 In a custom dashboard, the DataPrime creator widget lets you harness the capabilities of DataPrime queries. As your query evolves, this feature automatically lets you select optimal visualizations to display your data and suggests modifying your query for additional visualizations.
 
@@ -60,5 +60,3 @@ In a custom dashboard, the DataPrime creator widget lets you harness the capabil
    * [Vertical bar chart](/docs/cloud-logs?topic=cloud-logs-widget_verticalbar)
 
 5. Click **Save** to save your dashboard with the new widget.
-
-

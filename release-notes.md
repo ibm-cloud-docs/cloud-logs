@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -63,7 +63,7 @@ Functional updates and fixes are available in the Montreal (`ca-mon`) region onl
 
     * [UI] The **Logs** view is enhanced to support [a detailed view of an individual log record](/docs/cloud-logs?topic=cloud-logs-log-details).
 
-    * [Query] [CLI](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) and [API](/apidocs/logs-service-api/CloudLogs#submit-background-query) support is available for background archive queries (asynchronous archive queries).
+    * [Query] [CLI](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) and [API](/apidocs/logs-service-api#submit-background-query) support is available for background archive queries (asynchronous archive queries).
 
     * [DataPrime] Support is available for the following functions:
 
@@ -152,11 +152,11 @@ Release of the {{site.data.keyword.agent}} version 1.6.0
 
 
 [DataPrime] DataPrime enhancements
-:   DataPrime now support the [`multigrouby` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#multigroupby).
+:   DataPrime now support the [`multigrouby` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#multigroupby).
 
-    DataPrime now supports the [`union` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#union).
+    DataPrime now supports the [`union` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#stitch).
 
-    DataPrime now supports the [`join cross` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#join)
+    DataPrime now supports the [`join cross` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#join)
 
     DataPrime now supports passing of query parameter values using [`$p`](/docs/cloud-logs?topic=cloud-logs-query-parameters).
 
@@ -205,9 +205,9 @@ Geo enrichment
 :   [Geo enrichment](/docs/cloud-logs?topic=cloud-logs-enriching-data#geo-enrichment) now supports ASN (Autonomous System Number). ASN information will be added to the logs when geo enrichment is used.
 
 [DataPrime] DataPrime enhancements
-:   DataPrime now support the [`join` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#join) types `inner`, `full`, and `left`.
+:   DataPrime now support the [`join` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#join) types `inner`, `full`, and `left`.
 
-    DataPrime now supports the [`stitch` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#stitch).
+    DataPrime now supports the [`stitch` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#stitch).
 
 [UI] Shared URL
 :   Support added so you can [share the URL](/docs/cloud-logs?topic=cloud-logs-share_url) of the the current view of the logs explore screen.

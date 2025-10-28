@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -52,7 +52,7 @@ The `before` argument determines the unique ID of the policy before which the po
 
 - If `before` is provided with ID of policy that doesn't exist, the API returns an error.
 
-The [`order`](/apidocs/logs-service-api/CloudLogs-V2#create-policy-response) value in the API response returns the policy's order in the processing list. To get a list of all defined policies and their order values, use the [Get policies method](/apidocs/logs-service-api/CloudLogs-V2#get-company-policies).
+The [`order`](/apidocs/logs-service-api#create-policy-response) value in the API response returns the policy's order in the processing list. To get a list of all defined policies and their order values, use the [Get policies method](/apidocs/logs-service-api#get-company-policies).
 
 
 The following JSON is an example of the `before` field:
@@ -163,4 +163,3 @@ For example, consider where you try to create `policy3` between `policy1` and `p
    You need to update your TF file and update your resources with the correct `before` value before you run `apply` again to avoid state differences. Otherwise, Terraform recognizes a state difference and tries to apply unexpected changes.
 
 An error is not returned when a state difference occurs because it is not possible to reliably determine whether the detected change is intentional or a side effect of a previous `apply` operation. Since updates are applied based on the `before` state, differences between expected modifications and unintended drift cannot be determined. Instead of an error, a state difference (diff) is returned instead.
-

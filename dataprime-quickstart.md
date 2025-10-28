@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-05-01"
+  years:  2024, 2025
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -19,8 +19,6 @@ subcollection: cloud-logs
 
 DataPrime can be used to query and transform log data in {{site.data.keyword.logs_full_notm}}. This topic is intended to let you get started quickly with DataPrime by providing examples of various types of queries and data transformation.
 {: shortdesc}
-
- For a detailed reference of DataPrime operators and expressions, see the [DataPrime reference](/docs/cloud-logs?topic=cloud-logs-dataprime-ref).
 
 DataPrime supports data and helper types, expressions, and operators.
 
@@ -59,7 +57,7 @@ Expressions consist of literals, functions, methods, operators, cast, and groupi
 
 Use operators as commands that transform unstructured streams of JSON data and creates a new stream for a specified time period. Examples include: `filter`, `extract`, `sortby`, `groupby`, `orderby`, `find`, and `choose`.
 
-For more information about DataPrime operators, see the [DataPrime reference](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#operators).
+For more information about DataPrime operators, see the [DataPrime operators](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators).
 
 ## Formatting queries
 {: #dp-qs-format}
@@ -393,7 +391,7 @@ source logs
 ```
 {: codeblock}
 
-When querying with the groupby operator, you can apply an aggregation function (such as `avg`, `max`, `sum`) to the bucket of results. This feature gives you the ability to manipulate an aggregation expression inside the expression itself, letting you to calculate and manipulate your data simultaneously. DataPrime aggregation functions can be found in the [DataPrime reference](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#aggregation_functions).
+When querying with the groupby operator, you can apply an aggregation function (such as `avg`, `max`, `sum`) to the bucket of results. This feature gives you the ability to manipulate an aggregation expression inside the expression itself, letting you to calculate and manipulate your data simultaneously. DataPrime aggregation functions can be found in the [DataPrime aggretation expressions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-expressions-agg).
 
 ### Distinct examples
 {: #dp-qs-distinct}

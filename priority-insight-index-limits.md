@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -68,7 +68,7 @@ For more information, see:
 
 * [Metadata fields](/docs/cloud-logs?topic=cloud-logs-metadata)
 * [Sending logs by using the API](/docs/cloud-logs?topic=cloud-logs-send-logs-api)
-* [DataPrime reference: Expressions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#expressions)
+* [DataPrime expressions and constructs](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-expressions)
 
 ## Full-text and field-based search
 {: #pi-search}
@@ -109,7 +109,7 @@ For more information, see:
 
 * [Filtering log data](/docs/cloud-logs?topic=cloud-logs-query-data-filter)
 * [Querying data by using Lucene](/docs/cloud-logs?topic=cloud-logs-query-data-lucene)
-* [DataPrime reference](/docs/cloud-logs?topic=cloud-logs-dataprime-ref)
+* [Querying data by using DataPrime](/docs/cloud-logs?group=dataprime)
 
 ## Daily indices
 {: #pi-daily}
