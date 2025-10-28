@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# DataPrime aggregate expressions
+# DataPrime aggregation expressions
 {: #dataprime-ref-expressions-agg}
 
 This guide provides a glossary of {{site.data.keyword.logs_full}} DataPrime expressions that you can use for aggregation.

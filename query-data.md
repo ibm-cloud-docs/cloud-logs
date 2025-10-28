@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -111,11 +111,11 @@ You can refine your query results using the following methods:
 
 * Apply more selective filters to your queries (for example, application or subsystem).
 
-* If using the DataPrime [extract](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#extract) operator and subsequently filtering its results, create a parsing rule and filter on the parsed field instead.
+* If using the DataPrime [extract](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#extract) operator and subsequently filtering its results, create a parsing rule and filter on the parsed field instead.
 
 * Avoid regular expressions or wildcards in filters.
 
-* In [DataPrime](/docs/cloud-logs?topic=cloud-logs-dataprime-ref), switch from using the contains operator on strings to the free text search operator (`~`).
+* In [DataPrime](/docs/cloud-logs?group=dataprime), switch from using the contains operator on strings to the free text search operator (`~`).
 
 
 
@@ -147,7 +147,7 @@ ibmcloud logs query --query QUERY --syntax QUERY_SYNTAX --metadata '{"start_date
 ```
 {: pre}
 
-or 
+or
 
 ```text
 ibmcloud logs query --query QUERY --syntax QUERY_SYNTAX --start-date START-DATE --end-date END-DATE --syntax SYNTAX --limit 10
@@ -158,7 +158,7 @@ ibmcloud logs query --query QUERY --syntax QUERY_SYNTAX --start-date START-DATE 
 {: #cloud-logs-query-cli-options}
 
 `--query` (string)
-:   The query to be run. This is a required parameter. 
+:   The query to be run. This is a required parameter.
 
     The query syntax can be either Lucene or Dataprime. The syntax or type of the query is set using `--syntax` parameter.
 
@@ -181,15 +181,15 @@ ibmcloud logs query --query QUERY --syntax QUERY_SYNTAX --start-date START-DATE 
 :   Duration to look back from the current time when querying data. Using this flag overrides the `metadata-start-date` and `metadata-end-date`. For example, `1h` retrieves data from the past hour (default `1h0m0s`).
 
 `--tier` (string)
-:   Tier on which the query runs. Allowable values are: `archive`, `frequent_search` ({{site.data.keyword.frequent-search}}). 
+:   Tier on which the query runs. Allowable values are: `archive`, `frequent_search` ({{site.data.keyword.frequent-search}}).
 
-`--output` (string)        
+`--output` (string)
 :   The output format in which the results are returned. Valid values are `logs-raw` , `logs-prettify` and `json`.
 
 Example
 
 ```text
-ibmcloud logs query --query "Push and Query test" --metadata '{"start_date": "2025-06-16T12:00:00Z", "end_date": "2025-06-17T13:41:30Z","syntax": "lucene"}' --output logs-raw 
+ibmcloud logs query --query "Push and Query test" --metadata '{"start_date": "2025-06-16T12:00:00Z", "end_date": "2025-06-17T13:41:30Z","syntax": "lucene"}' --output logs-raw
 ```
 {: pre}
 
@@ -217,12 +217,12 @@ First you submit a background query. Then, you can use the ID with other command
 {: #cloud-logs-background-query-submit-cli-options}
 
 `--query` (string)
-:   The query to be run. This is a required parameter. 
+:   The query to be run. This is a required parameter.
 
     The query syntax can be either Lucene or Dataprime. The syntax or type of the query is set using `--syntax` parameter.
 
 `--syntax` (string)
-:   The syntax in which the query is written. Allowable values are: `lucene` and `dataprime`. 
+:   The syntax in which the query is written. Allowable values are: `lucene` and `dataprime`.
 
 `--start-date` (string)
 :   Beginning of the time range for the query. This must be in UTC ISO 8601 format, for example: `2025-07-15T08:45:00Z`. The default is 15 minutes before the `--end-date` value. If `--end-date` is not specified, the default value is 15 minutes before the current time.
@@ -240,7 +240,7 @@ ibmcloud logs background-query-create --query "Push and Query test" --syntax luc
 Example using DataPrime syntax
 
 ```text
-ibmcloud logs background-query-create --query "source logs | filter \$d.text == 'Push and Query test'" --syntax dataprime --start-date 2025-08-03T12:00:00Z 
+ibmcloud logs background-query-create --query "source logs | filter \$d.text == 'Push and Query test'" --syntax dataprime --start-date 2025-08-03T12:00:00Z
 ```
 {: pre}
 
@@ -248,7 +248,7 @@ ibmcloud logs background-query-create --query "source logs | filter \$d.text == 
 {: #background-query-status-cli}
 {: cli}
 
-You can determine the status of a [background query](#background-query-data-cli) by using the ID returned when running the background query command.
+You can determine the status of a [background query](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) by using the ID returned when running the background query command.
 
 ```text
 ibmcloud logs background-query-status --query-id QUERY-ID
@@ -259,7 +259,7 @@ ibmcloud logs background-query-status --query-id QUERY-ID
 {: #cloud-logs-background-query-status-cli-options}
 
 `--query-id` (strfmt.UUID)
-:   Query ID returned from a [background query](#background-query-data-cli) command. Required.
+:   Query ID returned from a [background query](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) command. Required.
 
     The value is 36 characters in length and must match the regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
@@ -274,7 +274,7 @@ ibmcloud logs background-query-status --query-id 8b5e7151-da2b-4633-be8c-9b269be
 {: #background-query-results-cli}
 {: cli}
 
-You can retrieve the query results of a [background query](#background-query-data-cli) by using the ID returned when running the background query command.
+You can retrieve the query results of a [background query](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) by using the ID returned when running the background query command.
 
 ```text
 ibmcloud logs background-query-data --query-id QUERY-ID --output OUTPUT
@@ -285,14 +285,14 @@ ibmcloud logs background-query-data --query-id QUERY-ID --output OUTPUT
 {: #cloud-logs-background-query-data-cli-options}
 
 `--query-id` (strfmt.UUID)
-:   Query ID returned from a [background query](#background-query-data-cli) command. Required.
+:   Query ID returned from a [background query](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) command. Required.
 
     The value is 36 characters in length and must match the regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
 `--output-file` (string)
 :   Specifies the path to the file where the output is written.
 
-`--output` (string)        
+`--output` (string)
 :   The output format in which the results are returned. Valid values are `logs-raw`, `logs-prettify`, `json`, `yaml`, `tui`, or `table`. The default is `table`.
 
 Example
@@ -306,7 +306,7 @@ ibmcloud logs background-query-data --query-id df47fff7-131d-41dc-9328-05489a93e
 {: #background-query-cancel-cli}
 {: cli}
 
-You can cancel a [background query](#background-query-data-cli) by using the ID returned when running the background query command.
+You can cancel a [background query](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) by using the ID returned when running the background query command.
 
 ```text
 ibmcloud logs background-query-cancel --query-id QUERY-ID --force
@@ -317,7 +317,7 @@ ibmcloud logs background-query-cancel --query-id QUERY-ID --force
 {: #cloud-logs-background-query-cancel-cli-options}
 
 `--query-id` (strfmt.UUID)
-:   Query ID returned from a [background query](#background-query-data-cli) command. Required.
+:   Query ID returned from a [background query](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) command. Required.
 
     The value is 36 characters in length and must match the regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-28"
 
 keywords:
 
@@ -97,7 +97,7 @@ Custom enrichment supports two methods:
 
 * Automatic enrichment during ingestion.
 
-* Dynamic enrichment using [DataPrime](/docs/cloud-logs?topic=cloud-logs-dataprime-ref) syntax.
+* Dynamic enrichment using [DataPrime](/docs/cloud-logs?group=dataprime) syntax.
 
 ### Automatic enrichment
 {: #enrich-howto-auto}
@@ -107,7 +107,7 @@ Automatic enrichment appends additional data to logs as they are ingested. This 
 ### DataPrime query enrichment
 {: #enrich-howto-dp}
 
-With the DataPrime [`enrich`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#enrich) query you can dynamically enrich at query time without increasing the stored log size. This approach lets you enrich previously ingested logs.
+With the DataPrime [`enrich`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#enrich) query you can dynamically enrich at query time without increasing the stored log size. This approach lets you enrich previously ingested logs.
 
 With DataPrime you can expose custom enrichments as fully queryable datasets. The custom enrichment feature lets you enhance your logs by adding critical contextual data that might not be available at runtime. This enrichment is done by appending fields to your JSON logs based on specific matches using a custom data source that you define. 
 
@@ -238,4 +238,4 @@ You can also configure custom enrichments using the API. For more information, s
 
 * CSV files are limited to 150,000 rows.
 
-* Files exceeding 10,000 rows can only be used for [DataPrime query enrichment](/docs/cloud-logs?topic=cloud-logs-dataprime-ref#enrich), not [automatic ingestion enrichment](#enrich-howto-auto).
+* Files exceeding 10,000 rows can only be used for [DataPrime query enrichment](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#enrich), not [automatic ingestion enrichment](#enrich-howto-auto).
