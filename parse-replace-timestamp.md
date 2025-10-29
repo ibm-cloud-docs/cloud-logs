@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-02"
+lastupdated: "2025-10-29"
 
 keywords:
 
@@ -18,6 +18,9 @@ subcollection: cloud-logs
 
 In {{site.data.keyword.logs_full}}, you can use the *Timestamp Extract* rule to replace the log's timestamp with the value of your custom timestamp field from your log.
 {: shortdesc}
+
+You can only replace the timestamp value by a value at most 24 hours in the past, or 4 hours in the future.
+{: restriction}
 
 The timestamp for each log entry is assigned by the receiving endpoint when logs arrive. Using the timestamp extract rule, you can override the timestamp for the log entry with the value of your custom timestamp field from your log.
 
