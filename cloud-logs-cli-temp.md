@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-19"
+  years:  2024, 2025
+lastupdated: "2025-10-31"
 
 keywords:
 
@@ -61,55 +61,131 @@ You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to 
 ## Commands
 {: #cl-commands}
 
-The current supported version of the {{site.data.keyword.logs_full_notm}} CLI is 0.1.0. If any other version is installed, uninstall the plug-in that is installed and install the current {{site.data.keyword.logs_full_notm}} CLI plug-in.
+The currently supported version of the {{site.data.keyword.logs_full_notm}} CLI is 0.3.0. If any other version is installed, uninstall the plug-in that is installed and install the current {{site.data.keyword.logs_full_notm}} CLI plug-in.
 {: important}
+
+Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.keyword.logs_full_notm}} CLI commands.
+{: tip}
 
 | Command | Description |
 |---------|-------------|
-| `ibmcloud logs alert` | Get an alert by ID. |
-| `ibmcloud logs alert-create` | Create an alert. |
-| `ibmcloud logs alert-delete` | Delete an alert. |
-| `ibmcloud logs alert-update` | Update an alert. |
-| `ibmcloud logs alerts` | List alerts. |
-| `ibmcloud logs config` | Control persistent configuration. |
-| `ibmcloud logs data-access-rule-create` | Create a data access rule. |
-| `ibmcloud logs data-access-rule-delete` | Delete a data access rule. |
-| `ibmcloud logs data-access-rule-update` | Update a data access rule. |
-| `ibmcloud logs data-access-rules` | List the service instance's data access rules with the provided IDs. |
-| `ibmcloud logs data-usage-metrics-export-status` | Get the data usage metrics export status. |
-| `ibmcloud logs data-usage-metrics-export-status-update` | Update the data usage metrics export status. |
-| `ibmcloud logs enrichment-create` | Create an enrichment. |
-| `ibmcloud logs enrichment-delete` | Delete enrichments. |
-| `ibmcloud enrichments` | List all enrichments. |
-| `ibmcloud logs events2metrics, e2m` | Gets event to metrics definitions by ID. |
-| `ibmcloud logs events2metrics-create`  \n `ibmcloud e2m-create` | Creates event to metrics definitions. |
-| `ibmcloud logs events2metrics-delete`  \n `ibmcloud e2m-delete` | Deletes event to metrics definitions by ID. |
-| `ibmcloud logs events2metrics-list`  \n `ibmcloud e2m-list` | Lists event to metrics definitions. |
-| `ibmcloud logs events2metrics-update`  \n `ibmcloud e2m-update` | Updates event to metrics definitions. |
-| `ibmcloud logs outgoing-webhook` | Gets an outbound integration by ID. |
-| `ibmcloud logs outgoing-webhook-create` | Create an outbound integration. |
-| `ibmcloud logs outgoing-webhook-delete` | Delete an outbound integration. |
-| `ibmcloud logs outgoing-webhook-update` | Update an outbound integration. |
-| `ibmcloud logs outgoing-webhooks` | Lists outbound integrations. |
-| `ibmcloud logs policies` | Gets policies. |
-| `ibmcloud logs policy` | Get a policy by ID. |
-| `ibmcloud logs policy-create` | Create a policy. |
-| `ibmcloud logs policy-delete` | Delete an existing policy. |
-| `ibmcloud logs policy-update` | Update an existing policy. |
-| `ibmcloud logs query` | Run a query to search the logs. |
-| `ibmcloud logs rule-group` | Gets rule group by group ID. |
-| `ibmcloud logs rule-group-create` | Create a rule group. |
-| `ibmcloud logs rule-group-delete` | Delete a rule group by group ID. |
-| `ibmcloud logs rule-group-update` | Update a rule group by group ID. |
-| `ibmcloud logs rule-groups` | Get all rule groups. |
-| `ibmcloud logs view` | Get a view by ID. |
-| `ibmcloud logs view-create` | Create a view. |
-| `ibmcloud logs view-delete` | Delete a view by ID. |
-| `ibmcloud logs view-folder-create` | Create a view folder. |
-| `ibmcloud logs view-folder-update` | Replace an existing view folder. |
-| `ibmcloud logs view-folders` | List a view's folders. |
-| `ibmcloud logs view-update` | Replace an existing view. |
-| `ibmcloud logs views` | List all public views. |
-{: caption="{{site.data.keyword.logs_full_notm}} CLI commands" caption-side="bottom"}
+| `alert` | Get an alert by ID. |
+| `alert-create` | Create an alert. |
+| `alert-delete` | Delete an alert. |
+| `alert-update` | Update an alert. |
+| `alerts` | List alerts. |
+{: caption="{{site.data.keyword.logs_full_notm}} alert CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `alert-definition` | Get an alert definition by ID. |
+| `alert-definition-create` | Create an alert definition. |
+| `alert-definition-delete` | Delete an alert definition by ID. |
+| `alert-definition-update` | Update an alert definition by ID. |
+| `alert-definitions` | List alert definitions. |
+{: caption="{{site.data.keyword.logs_full_notm}} alert definition CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `background-query-cancel`, `bgq-cancel` | Cancel a background query. |
+| `background-query-create`, `bgq-create` | Submit a background query to be processed asynchronously. |
+| `background-query-data`, `bgq-data` | Data of the background query to search the logs. |
+| `background-query-status`, `bgq-status` | Get the status of a background query. |
+{: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `data-access-rule-create` | Create a data access rule. |
+| `data-access-rule-delete` | Delete a data access rule. |
+| `data-access-rule-update` | Update a data access rule. |
+| `data-access-rules` | Get a service instance's data access rules by ID. |
+{: caption="{{site.data.keyword.logs_full_notm}} data access rule CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `data-usage` | Get the daily and detailed data usage. |
+| `data-usage-metrics-export-status` | Get the data usage metrics export status. |
+| `data-usage-metrics-export-status-update` | Update the data usage metrics export status. |
+{: caption="{{site.data.keyword.logs_full_notm}} data usage CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `enrichment-create` | Create an enrichment. |
+| `enrichment-delete` | Delete enrichments. |
+| `enrichments` | List all enrichments. |
+{: caption="{{site.data.keyword.logs_full_notm}} enrichment CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `event-stream-target-create` | Create an {{site.data.keyword.messagehub_full_notm}} integration. |
+| `event-stream-target-delete` | Delete an {{site.data.keyword.messagehub}} integration by ID. |
+| `event-stream-target-update` | Update an {{site.data.keyword.messagehub}} integration. |
+| `event-stream-targets` | List all {{site.data.keyword.messagehub}} integrations.
+{: caption="{{site.data.keyword.logs_full_notm}} {{site.data.keyword.messagehub}} integration CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `events2metrics`, `e2m` | Gets the events to metrics definitions by ID. |
+| `events2metrics-create`, `e2m-create` | Creates the events to metrics definitions. |
+| `events2metrics-delete`, `e2m-delete` | Deletes the events to metrics definitions by ID. |
+| `events2metrics-list`, `e2m-list` | Lists the events to metrics definitions. |
+| `events2metrics-update`, `e2m-update` | Updates the events to metrics definitions. |
+{: caption="{{site.data.keyword.logs_full_notm}} events to metrics CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `outgoing-webhook` | Gets an outbound integration by ID. |
+| `outgoing-webhook-create` | Create an outbound integration. |
+| `outgoing-webhook-delete` | Delete an outbound integration. |
+| `outgoing-webhook-update` | Update an outbound integration. |
+| `outgoing-webhooks` | List outbound integrations. |
+{: caption="{{site.data.keyword.logs_full_notm}} outbound integration CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `policies` | Gets policies. |
+| `policy` | Gets a policy by ID. |
+| `policy-create` | Creates a new policy. |
+| `policy-delete` | Deletes an existing policy. |
+| `policy-update` | Updates an existing policy. |
+{: caption="{{site.data.keyword.logs_full_notm}} policy CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `query` | Run a query to search the logs. |
+{: caption="{{site.data.keyword.logs_full_notm}} query CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `rule-group` | Gets a rule group by groupid. |
+| `rule-group-create` | Creates a rule group. |
+| `rule-group-delete` | Deletes a rule group by groupid. |
+| `rule-group-update` | Updates a rule group by groupid. |
+| `rule-groups` | Gets all rule groups. |
+{: caption="{{site.data.keyword.logs_full_notm}} rules CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `view` | Gets a view by ID. |
+| `view-create` | Creates a new view. |
+| `view-delete` | Deletes a view by ID. |
+| `view-update` | Replaces an existing view. |
+| `views` | Lists all public views. |
+{: caption="{{site.data.keyword.logs_full_notm}} view CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `view-folder` | Get a view folder. |
+| `view-folder-create` | Create a view folder. |
+| `view-folder-delete` | Deletes a view folder by ID. |
+| `view-folder-update` | Replaces an existing view folder. |
+| `view-folders` | List a view's folders. |
+{: caption="{{site.data.keyword.logs_full_notm}} view folder CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `config` | Control the persistent configuration. | 
+| `help` | Show help information. |
+{: caption="{{site.data.keyword.logs_full_notm}} additional CLI commands" caption-side="bottom"}
 
 For more information about using these commands, log in to the {{site.data.keyword.cloud_notm}} and run `ibmcloud logs command_name -h`. For example, `ibmcloud logs views -h`.
