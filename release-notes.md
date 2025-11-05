@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-11-05"
 
 keywords:
 
@@ -20,6 +20,21 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
+
+
+## 4 November 2025
+{: #cloud-logs-nov0425}
+{: release-note}
+
+Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Montreal (`ca-mon`)
+    * Sao Paulo (`br-sao`)
+    * Sydney (`au-syd`)
+
+    For more information about the changes, see the [17 October 2025 Release notes](#cloud-logs-oct1725)
 
 
 ## 30 October 2025
