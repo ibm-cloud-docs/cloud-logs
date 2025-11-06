@@ -36,7 +36,7 @@ The following list outlines extensions that you can deploy to monitor logs:
 - [System Monitoring](/docs/cloud-logs?topic=cloud-logs-extensions-system-monitoring): Use it to get insights into your system's performance and usage of an {{site.data.keyword.logs_full_notm}} instance. 
 - [Activity Tracking](/docs/cloud-logs?topic=cloud-logs-extensions-activity-tracking): Use it to get insights into your {{site.data.keyword.cloud_notm}} activity tracking data.
 - [{{site.data.keyword.containerlong_notm}}](/docs/cloud-logs?topic=cloud-logs-extensions-kubernetes):  Use it to get insights into your {{site.data.keyword.containerlong_notm}} logs.
-- [{{site.data.keyword.databases-for-mysql_full}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-mysql):  Use it to get insights into your {{site.data.keyword.databases-for-mysql_full_notm}} logs.
+- [{{site.data.keyword.databases-for-mysql_full}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-mysql):  Use it to get insights into your {{site.data.keyword.databases-for-mysql_full}} logs.
 - [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-postgresql):  Use it to get insights into your {{site.data.keyword.databases-for-postgresql_full_notm}} logs.
 
 
