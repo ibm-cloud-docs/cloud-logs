@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-11-10"
 
 keywords:
 
@@ -21,6 +21,22 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+
+## 10 November 2025
+{: #cloud-logs-nov1025}
+{: release-note}
+
+Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Frankfurt (`eu-de`)
+    * London (`eu-gb`)
+    * Montreal (`ca-mon`)
+    * Sao Paulo (`br-sao`)
+    * Sydney (`au-syd`)
+
+    For more information about the changes, see the [17 October 2025 Release notes](#cloud-logs-oct1725)
 
 ## 6 November 2025
 {: #cloud-logs-nov0625}
