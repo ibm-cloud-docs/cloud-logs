@@ -1,6 +1,7 @@
 ## Set a schedule and what log content to include
 {: step}
 {: #alerts-config-6}
+{: ui}
 
 
 Complete the following steps:
@@ -22,4 +23,3 @@ Complete the following steps:
 
 When an alert is triggered, there are limitations to the amout of data that is included in the event. For more information on these limitations, see [Data size](https://test.cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-event-payload#event-payload-2).
 {: note}
-    
