@@ -1,6 +1,7 @@
 ## Save the alert configuration
 {: #alerts-config-7}
 {: step}
+{: ui}
 
 Complete the following steps:
 

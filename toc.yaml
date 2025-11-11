@@ -347,6 +347,8 @@ toc:
                 navtitle: Multi-condition alerts
               - topic: alerts/eval-window.md
                 navtitle: Evaluation window
+              - topic: alerts-config-immediate.md
+                navtitle: Notify immediately
               - topic: alerts-config-standard.md
                 navtitle: Standard alerts
               - topic: alerts-config-time-relative.md

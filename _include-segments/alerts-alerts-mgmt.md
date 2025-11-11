@@ -1,6 +1,7 @@
 ## Launch alerts management
 {: step}
 {: #alerts-config-1}
+{: ui}
 
 Complete the following steps:
 

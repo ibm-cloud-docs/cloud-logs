@@ -1,7 +1,7 @@
 ## Configure the notification details
 {: step}
 {: #alerts-config-5}
-
+{: ui}
 
 Complete the following steps:
 
@@ -22,4 +22,3 @@ Complete the following steps:
 4. Add an integration.
 
     You must have an outbound integration defined to be able to add an integration. For more information, see [Configuring the integration with the Event Notifications service](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
-    
