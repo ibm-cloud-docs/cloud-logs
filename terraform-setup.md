@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-08-20"
+lastupdated: "2025-11-11"
 
 keywords:
 
@@ -23,9 +23,15 @@ Terraform on {{site.data.keyword.cloud}} enables predictable and consistent prov
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't need to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
 
-Before you begin, ensure that you have the [required access](/docs/cloud-logs?topic=cloud-logs-iam) to create and work with {{site.data.keyword.logs_full_notm}} resources.
 
-## Step 1. Install the Terraform CLI
+## Prereqs
+{: #terraform-setup-prereqs}
+
+- Before you begin, make sure that you have the [required access](/docs/cloud-logs?topic=cloud-logs-iam) to create and work with {{site.data.keyword.logs_full_notm}} resources.
+- Install the Terraform CLI.
+
+
+### Install the Terraform CLI
 {: #terraform-install-cli}
 
 Complete the following steps to install the Terraform CLI:
@@ -37,79 +43,38 @@ Complete the following steps to install the Terraform CLI:
     ```
     {: pre}
 
-2. Download the Terraform version that you want. For example, you can download `terraform_1.12.2_darwin_amd64.zip` for a MacOS.
+2. Download the Terraform version that you want. For example, you can download `terraform_1.12.2_darwin_amd64.zip` for a MacOS. See [Install Terraform](https://developer.hashicorp.com/terraform/install){: external}.
 
-3. Extract the Terraform zip file and copy the files to your terraform directory.
+3. Extract the Terraform zip file and copy the files to your terraform directory. Run the following commands:
 
-4. Set the environment PATH variable to your Terraform files.
-
-    ```terraform
-    export PATH=$PATH:<terraform-directory>/terraform
+    ```text
+    chmod +x terraform
     ```
     {: codeblock}
 
-5. Verify that the installation is successful by using a terraform command.
+    ```
+    sudo mv terraform /usr/local/bin/
+    ```
+    {: codeblock}
 
-    ```terraform
-    ./terraform
+4. Verify that the installation is successful by using a terraform command to confirm the version.
+
+    ```text
+    terraform --version
     ```
     {: pre}
 
-## Step 2. Set up the directory
-{: #terraform-setup-ibm-plugin-dir}
 
-Create a folder and navigate into the folder. This folder is used to store all configuration files and variable definitions that are needed to create the {{site.data.keyword.logs_full_notm}} instance.
+{{/_include-segments/terraform-setup-ibm-plugin-dir.md}}
 
-For example, in your Terraform installation directory `<terraform-directory>/terraform`, create the directory `myproject`.
 
-```text
-mkdir myproject && cd myproject
-```
-{: codeblock}
-
-## Step 3. Set up the {{site.data.keyword.cloud_notm}} Provider plug-in
-{: #terraform-setup-ibm-plugin}
-
-After the Terraform CLI installation is complete, you must set up the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform so that you can start working with resources and services in IBM Cloud.
-
-For a list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
-
-Make sure that you use the latest {{site.data.keyword.cloud_notm}} Provider plug-in release.
-{: tip}
-
-Create a `versions.tf` file and specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter.
-
-```terraform
-terraform {
-required_providers {
-    ibm = {
-        source = "IBM-Cloud/ibm"
-        version = "<provider version>"
-        }
-    }
-  }
-```
-{: codeblock}
-
-For example:
-
-```terraform
-terraform {
-  required_providers {
-    ibm = {
-      source  = "IBM-Cloud/ibm"
-      version = ">=1.80.0"
-    }
-  }
-}
-```
-{: codeblock}
+{{/_include-segments/terraform-setup-ibm-plugin.md}}
 
 
 
-
-## Step 4. Configure the {{site.data.keyword.cloud_notm}} Provider plug-in
+## Configure the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #terraform-config-ibm-plugin}
+{: step}
 
 After you complete the set up, you must [configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference).
 
@@ -257,8 +222,9 @@ provider "ibm" {
 
 
 
-## Step 5. Create the Terraform configuration files to provision an instance of {{site.data.keyword.logs_full_notm}}
+## Create the Terraform configuration files to provision an instance of {{site.data.keyword.logs_full_notm}}
 {: #terraform-main-tf}
+{: step}
 
 Next, create the following files:
 
@@ -433,8 +399,9 @@ Next, create the following files:
 For additional information on how to use Terraform for {{site.data.keyword.cloud_notm}} resources, see [ibm_resource_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance)
 
 
-## Step 6. Provision resources
+## Provision resources
 {: #terraform-provision}
+{: step}
 
 Complete the following steps:
 
