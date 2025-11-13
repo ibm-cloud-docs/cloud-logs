@@ -311,6 +311,18 @@ toc:
             navtitle: IBM Cloud Databases for MySQL
           - topic: extensions-db-postgresql.md
             navtitle: IBM Cloud Databases for PostgreSQL
+          - topic: extensions-db-cloudant.md
+            navtitle: IBM Cloudant
+          - topic: extensions-cloudflare.md
+            navtitle: Cloudflare
+          - topic: extensions-db-redis.md
+            navtitle: IBM Cloud Databases for Redis
+          - topic: extensions-linux.md
+            navtitle: Linux
+          - topic: extensions-mongodb.md
+            navtitle: MongoDB
+          - topic: extensions-nginx.md
+            navtitle: NGINX
       - topicgroup:
           label: Downloading data
           topics:
