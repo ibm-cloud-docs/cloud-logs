@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2025-11-13"
 
 keywords:
 
@@ -1027,7 +1027,7 @@ Examples:
 ```text
 redact $d.mykey /[0-9]+/ to 'SOME_INTEGER'
 redact $d.mysuperkey.user_id 'root' to 'UNKNOWN_USER'
-redact $d.mysuperkey.user_id matchingn 'root' to 'UNKNOWN_USER'
+redact $d.mysuperkey.user_id matching 'root' to 'UNKNOWN_USER'
 ```
 {: codeblock}
 
