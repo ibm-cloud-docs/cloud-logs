@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-11-13"
 
 keywords:
 
@@ -39,6 +39,12 @@ The following list outlines extensions that you can deploy to monitor logs:
 - [{{site.data.keyword.databases-for-mysql_full}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-mysql):  Use it to get insights into your {{site.data.keyword.databases-for-mysql_full}} logs.
 - [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-postgresql):  Use it to get insights into your {{site.data.keyword.databases-for-postgresql_full_notm}} logs.
 
+- [{{site.data.keyword.cloudantfull}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-cloudant):  Use it to get insights into your {{site.data.keyword.cloudantfull}} logs.
+- [Cloudflare](/docs/cloud-logs?topic=cloud-logs-extensions-cloudflare):  Use it to get insights into your Cloudflare logs.
+- [{{site.data.keyword.databases-for-redis_full}}](/docs/cloud-logs?topic=cloud-logs-extensions-db-redis):  Use it to get insights into your {{site.data.keyword.databases-for-redis_full_notm}} logs.
+- [Linux](/docs/cloud-logs?topic=cloud-logs-extensions-linux): Use it to get insights into your Linux logs.
+- [MongoDB](/docs/cloud-logs?topic=cloud-logs-extensions-mongodb): Use it to get insights into your MongoDB logs.
+- [NGINX](/docs/cloud-logs?topic=cloud-logs-extensions-nginx): Use it to get insights into your nginx logs.
 
 
 ## Determining available extensions
