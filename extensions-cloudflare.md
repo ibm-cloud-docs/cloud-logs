@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-11-13"
+lastupdated: "2025-11-17"
 
 keywords:
 
@@ -146,7 +146,7 @@ You can deploy any of the following alerts.
 
 * `Cloudflare - WAF - High Volume of Bot Requests`: This alert detects high volume of bot requests. A bot is an autonomous program on a network that can interact with computer systems or users, imitating or replacing a human user's behavior, and performing repetitive tasks. 
 
-* [Enterprise]{: tag-teal} `Cloudflare - WAF - Potential SQLi Attack`: This alert will trigger when a large number of logs containing Cloudflare WAF SQLi Attack Score values indicate an attack (score between 1 to 20). For more information about the Cloudflare WAF Attack Score, see [WAF attack score](https://developers.cloudflare.com/waf/about/waf-attack-score/){: external}.
+* [Enterprise]{: tag-teal} `Cloudflare - WAF - Potential SQLi Attack`: This alert will trigger when a large number of logs containing Cloudflare WAF SQLi Attack Score values indicate an attack (score between 1 to 20). For more information about the Cloudflare WAF Attack Score, see [WAF attack score](https://developers.cloudflare.com/waf/detections/attack-score/){: external}.
 
 * `Cloudflare - WAF - Possible Information Disclosure`: This alert detects when a successful HTTP GET request (2XX response) targets a URL that ends with a set of specific file extension (such as `txt` files) that can contain information that shouldn't be disclosed directly to the internet.
 
@@ -171,15 +171,15 @@ You can deploy any of the following alerts.
 
    The alert will trigger if the WAF Action is "unknown" AND NOT "simulate" AND WAF Attack Score is between 1 and 50, indicating an attack or likely attack.
 
-   For more information about the Cloudflare WAF Attack Score, see [WAF attack score](https://developers.cloudflare.com/waf/about/waf-attack-score/){: external}.
+   For more information about the Cloudflare WAF Attack Score, see [WAF attack score](https://developers.cloudflare.com/waf/detections/attack-score/){: external}.
 
 * `Cloudflare - WAF - Potential XSS Attack`: This alert will trigger when there are a large number of logs containing Cloudflare WAF XSS Attack Score values that indicate an attack (score between 1 to 20).
 
-   For more information about the Cloudflare WAF Attack Score, see [WAF attack score](https://developers.cloudflare.com/waf/about/waf-attack-score/){: external}.
+   For more information about the Cloudflare WAF Attack Score, see [WAF attack score](https://developers.cloudflare.com/waf/detections/attack-score/){: external}.
 
 * `Cloudflare - WAF - Potential RCE Attack`: This alert will trigger when there are a large number of logs containing Cloudflare WAF RCE Attack Score values that indicate an attack (score between 1 to 20).
 
-   For more information about the Cloudflare WAF Attack Score, see [WAF attack score](https://developers.cloudflare.com/waf/about/waf-attack-score/){: external}.
+   For more information about the Cloudflare WAF Attack Score, see [WAF attack score](https://developers.cloudflare.com/waf/detections/attack-score/){: external}.
 
 * `Cloudflare - WAF - Common Vulnerability Attack`: This alert triggers when logs containing triggered Cloudflare WAF rules have mentions of a CVE over a determined period of time in the context of a single IP address.
 
@@ -340,5 +340,3 @@ You can deploy any of the 3 enrichments.
 * `Geo enrichment`: Enrich your logs with location data by automatically converting IPs to geo-points which can be used to aggregate logs by location.
 * `Cloudflare DNS - DNS Record Types`: Enrich your data with DNS record type information.
 * `Cloudflare DNS - DNS Response Codes`: Enrich your data with DNS response code information.
-
-
