@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-06-24"
+lastupdated: "2025-11-25"
 
 keywords:
 
@@ -17,6 +17,9 @@ subcollection: cloud-logs
 
 {{site.data.keyword.logs_full}} provides a Livetail view where you can view the data that is ingested by {{site.data.keyword.logs_full_notm}} as the data is received.
 {: shortdesc}
+
+A Livetail view can run continuously for 10 minutes. After 10 minutes the Livetail will stop and you will need to access the Livetail again to restart the view.
+{: restriction}
 
 ## Accessing Livetail
 {: #livetail-access}

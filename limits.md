@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2025
-lastupdated: "2025-10-16"
+lastupdated: "2025-11-25"
 
 keywords:
 
@@ -63,3 +63,8 @@ For a single ingestion request {{site.data.keyword.logs_full_notm}}, these limit
 
 
 {{_include-segments/query-limits.md}}
+
+## Livetail limits
+{: #limit-livetail}
+
+A Livetail view can run continuously for 10 minutes. After 10 minutes the Livetail will stop and you will need to access the Livetail again to restart the view.
