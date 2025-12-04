@@ -389,6 +389,10 @@ toc:
             navtitle: Event payload
           - topic: alerts/destinations.md
             navtitle: Notification channels
+          links:
+          - link:
+              label: Configuring custom emails for alerts
+              href: https://community.ibm.com/community/user/blogs/marisa-lopez-de-silanes/2025/12/03/configuring-custom-emails-for-alerts-triggered-in
       - topicgroup:
           label: Working with metrics
           topics:
