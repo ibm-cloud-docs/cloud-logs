@@ -555,8 +555,6 @@ toc:
         navtitle: Data portability
       - topic: shared-responsibilities.md
         navtitle: Your responsibilities
-      - topic: service-dependency.md
-        navtitle: Service dependencies
       - topic: core/ha-dr-new.md
         navtitle: Understanding high availability and disaster recovery
       - service_plans.md
