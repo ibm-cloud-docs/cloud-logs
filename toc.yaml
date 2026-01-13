@@ -143,6 +143,7 @@ toc:
             navtitle: Recovering a deleted instance
           - topic: terraform-setup.md
             navtitle: Using Terraform
+      - account_preferences.md
       - topicgroup:
           label: Managing COS buckets
           topics:
@@ -164,7 +165,6 @@ toc:
             navtitle: Policy processing order
       - topic: instance-launch.md
         navtitle: Launching the UI
-      - account_preferences.md
       - topicgroup:
           label: Working with parsing rules
           topics:
