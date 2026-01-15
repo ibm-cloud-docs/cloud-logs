@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-01-16"
+  years:  2024, 2026
+lastupdated: "2026-01-15"
 
 keywords:
 
@@ -23,7 +23,7 @@ To send events that are generated when an alert is triggered in an {{site.data.k
 
 - Learn about alerts in {{site.data.keyword.logs_full_notm}}. For more information, see [Alerting](/docs/cloud-logs?topic=cloud-logs-alerts).
 - Learn about {{site.data.keyword.en_full_notm}}. For more information, see [What is {{site.data.keyword.en_full_notm}}?](/docs/event-notifications?topic=event-notifications-en-about).
-- Before you can enable notifications for {{site.data.keyword.logs_full_notm}}, be sure that you have an [{{site.data.keyword.en_short}} instance](/catalog/services/event-notifications){: external} that is in the same account as your {{site.data.keyword.logs_full_notm}} instance and permisions to configure resources in the {{site.data.keyword.en_short}} instance.
+- Before you can enable notifications for {{site.data.keyword.logs_full_notm}}, be sure that you have an [{{site.data.keyword.en_short}} instance](/catalog/services/event-notifications){: external} and permisions to configure resources in the {{site.data.keyword.en_short}} instance.
 
 
 ## Step 1. Define a service to service authorization
@@ -33,8 +33,47 @@ A service to service authorization is used in the {{site.data.keyword.cloud_notm
 
 You must configure a service to service authorization between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_short}} instance. For more information, see [Creating a S2S authorization to work with the IBM Cloud Event Notifications service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 
-## Step 2. Configuring an outbound integration
-{: #event-notifications-configure-step2}
+- You must create the service to service authorization the {{site.data.keyword.cloud_notm}} account where the {{site.data.keyword.en_full_notm}} instance is provisioned and available.
+- If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account number. 
+
+
+## Step 2. Configuring an outbound integration by using the API
+{: #event-notifications-configure-step2-api}
+{: api}
+
+You can only define via API the integration between an {{site.data.keyword.logs_full_notm}} instance and an {{site.data.keyword.en_short}} instance that is located in a different account. For information about the API method, see [Create an outbound integration](https://cloud.ibm.com/apidocs/logs-service-api#create-outgoing-webhook){: external}.
+
+For example, you can use the following cURL command to create an integration via API:
+
+```bash
+curl -X POST "https://API-ENDPOINT/v1/outgoing_webhooks" \
+ -H "Authorization: ${IAM_TOKEN}" \
+ -H "Accept: application/json" \
+ -H "Content-Type: application/json" \
+ -d '{
+  "type": "ibm_event_notifications",
+  "name": "<NAME>",
+  "ibm_event_notifications": {
+   "event_notifications_instance_id": "<EventNotificationsInstanceID>",
+   "region_id": "<Region-of-EventNotifications-Instance>",
+   "endpoint_type": "default_or_public"
+  }
+ }'
+```
+{: codeblock}
+
+Where
+- `API-ENDPOINT`: Set the API endpoint for the {{site.data.keyword.logs_full_notm}} instance.
+- `type`: Defines the type of integration. Set to **ibm_event_notifications**.
+- `name`: Enter a name for this resource definition.
+- `IAM_TOKEN`: Enter the IAM_TOKEN. You can run the following command to get the IAM token: `export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'``
+- `event_notifications_instance_id`: Set to the {{site.data.keyword.en_short}} instance ID.
+- `region_id`: Set to the region where the {{site.data.keyword.en_short}} instance is available.
+- `endpoint_type`: Define whether the integration goes through the public or the private network. Valid values are: `default_or_public`,or `private`
+
+## Step 2. Configuring an outbound integration in the UI
+{: #event-notifications-configure-step2-ui}
+{: ui}
 
 Complete the following steps to configure an outbound integration:
 
