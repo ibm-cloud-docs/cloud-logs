@@ -33,9 +33,6 @@ A service to service authorization is used in the {{site.data.keyword.cloud_notm
 
 You must configure a service to service authorization between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_short}} instance. For more information, see [Creating a S2S authorization to work with the IBM Cloud Event Notifications service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 
-- You must create the service to service authorization the {{site.data.keyword.cloud_notm}} account where the {{site.data.keyword.en_full_notm}} instance is provisioned and available.
-- If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account number. 
-
 
 ## Step 2. Configuring an outbound integration by using the API
 {: #event-notifications-configure-step2-api}
