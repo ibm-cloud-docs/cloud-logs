@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-01-15"
+lastupdated: "2026-01-16"
 
 keywords:
 
@@ -38,7 +38,11 @@ You must configure a service to service authorization between the {{site.data.ke
 {: #event-notifications-configure-step2-api}
 {: api}
 
-You can only define via API the integration between an {{site.data.keyword.logs_full_notm}} instance and an {{site.data.keyword.en_short}} instance that is located in a different account. For information about the API method, see [Create an outbound integration](https://cloud.ibm.com/apidocs/logs-service-api#create-outgoing-webhook){: external}.
+You can create an outbound integrauin by using the API. For more information about the API method, see [Create an outbound integration](https://cloud.ibm.com/apidocs/logs-service-api#create-outgoing-webhook){: external}.
+
+You can only define via API the integration between an {{site.data.keyword.logs_full_notm}} instance and an {{site.data.keyword.en_short}} instance that are located in a different accounts.
+{: note}
+
 
 For example, you can use the following cURL command to create an integration via API:
 
@@ -63,7 +67,13 @@ Where
 - `API-ENDPOINT`: Set the API endpoint for the {{site.data.keyword.logs_full_notm}} instance.
 - `type`: Defines the type of integration. Set to **ibm_event_notifications**.
 - `name`: Enter a name for this resource definition.
-- `IAM_TOKEN`: Enter the IAM_TOKEN. You can run the following command to get the IAM token: `export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'``
+- `IAM_TOKEN`: Enter the IAM_TOKEN. You can run the following command to get the IAM token:
+
+    ```bash
+    export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+    ```
+    {: codeblock}
+
 - `event_notifications_instance_id`: Set to the {{site.data.keyword.en_short}} instance ID.
 - `region_id`: Set to the region where the {{site.data.keyword.en_short}} instance is available.
 - `endpoint_type`: Define whether the integration goes through the public or the private network. Valid values are: `default_or_public`,or `private`
