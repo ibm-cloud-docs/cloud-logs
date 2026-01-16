@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-01-15"
+lastupdated: "2026-01-16"
 
 keywords:
 
@@ -25,11 +25,7 @@ Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {
 
 - Read about [Managing authorizations to grant access between services](/docs/cloud-logs?topic=cloud-logs-iam-service-auth).
 
-- You must have access to IAM to manage authorizations between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
-
-- You must create the service to service authorization in the {{site.data.keyword.cloud_notm}} account where the {{site.data.keyword.en_full_notm}} instance is provisioned and available.
-
-- If you create an authorization, and the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_short}} instance are in different accounts, you need to have permissions in the account where the the {{site.data.keyword.en_short}} instance is available. For the source account, you need only the account number to configure the authorization. 
+- You must have access to IAM to manage authorizations between services in the {{site.data.keyword.cloud_notm}} account where the {{site.data.keyword.en_full_notm}} instance is provisioned. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
 
 - The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.en_full_notm}} instance.
 
