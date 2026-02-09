@@ -31,6 +31,7 @@ Public endpoints can be accessed from the public internet.
 | Asia Pacific  | Osaka (`jp-osa`) | `<service-instance-guid>.ingress.jp-osa.logs.cloud.ibm.com` |
 | Asia Pacific  | Sydney (`au-syd`) | `<service-instance-guid>.ingress.au-syd.logs.cloud.ibm.com` |
 | Asia Pacific  | Tokyo (`jp-tok`) | `<service-instance-guid>.ingress.jp-tok.logs.cloud.ibm.com` |
+| Asia Pacific  | Chennai (`in-che`) | `<service-instance-guid>.ingress.in-che.logs.cloud.ibm.com` |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.ingress.eu-de.logs.cloud.ibm.com` |
 | Europe  | London (`eu-gb`) | `<service-instance-guid>.ingress.eu-gb.logs.cloud.ibm.com` |
 | Europe  | Madrid (`eu-es`) | `<service-instance-guid>.ingress.eu-es.logs.cloud.ibm.com` |
@@ -51,6 +52,7 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 | Asia Pacific  | Osaka (`jp-osa`) | `<service-instance-guid>.ingress.private.jp-osa.logs.cloud.ibm.com` |
 | Asia Pacific  | Sydney (`au-syd`) | `<service-instance-guid>.ingress.private.au-syd.logs.cloud.ibm.com` |
 | Asia Pacific  | Tokyo (`jp-tok`) | `<service-instance-guid>.ingress.private.jp-tok.logs.cloud.ibm.com` |
+| Asia Pacific  | Chennai (`in-che`) | `<service-instance-guid>.ingress.private.in-che.logs.cloud.ibm.com` |
 | Europe  | Frankfurt (`eu-de`) | `<service-instance-guid>.ingress.private.eu-de.logs.cloud.ibm.com` |
 | Europe  | London (`eu-gb`) | `<service-instance-guid>.ingress.private.eu-gb.logs.cloud.ibm.com` |
 | Europe  | Madrid (`eu-es`) | `<service-instance-guid>.ingress.private.eu-es.logs.cloud.ibm.com` |

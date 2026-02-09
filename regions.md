@@ -34,6 +34,7 @@ The following table lists the locations where the service is available:
 | Asia Pacific        | Osaka (`jp-osa`)         | Not applicable        | `MZR`     |
 | Asia Pacific        | Sydney (`au-syd`)        | Not applicable       | `MZR`     |
 | Asia Pacific        | Tokyo (`jp-tok`)         | Not applicable        | `MZR`     |
+| Asia Pacific        | Chennai (`in-che`)         | Not applicable        | `MZR`     |
 | Europe              | Frankfurt (`eu-de`) `(*)`  | YES        | `MZR`     |
 | Europe              | London (`eu-gb`)      | NO        | `MZR`     |
 | Europe              | Madrid (`eu-es`) `(*)`     | YES        | `MZR`     |
