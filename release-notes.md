@@ -20,7 +20,11 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
+## 9 February 2026
+{: #cloud-logs-feb0926}
 
+Chennai support
+:   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Chennai (`in-che`) region.
 
 ## 15 December 2025
 {: #cloud-logs-dec1525}
