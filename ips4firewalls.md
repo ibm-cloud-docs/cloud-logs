@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-07-31"
+  years:  2024, 2026
+lastupdated: "2026-02-13"
 
 keywords:
 
@@ -40,6 +40,7 @@ These private IP addresses are used to archive logs to {{site.data.keyword.cos_f
 | Sao Paulo (`br-sao`) | 10.12.178.24  \n 10.12.79.160  \n 10.51.193.140 |
 | Sydney (`au-syd`) | 10.223.237.71  \n 10.223.243.160  \n 10.223.254.90 |
 | Tokyo (`jp-tok`) | 10.223.197.221  \n 10.223.208.108  \n 10.223.220.15 |
+| Chennai (`in-che`) | 10.46.129.80  \n 10.46.133.80  \n 10.46.137.80 |
 | Toronto (`ca-tor`) | 10.223.153.79  \n 10.223.168.204  \n 10.223.176.163 |
 | Washington, DC (`us-east`) | 10.22.41.104  \n 10.22.53.64  \n 10.22.56.46 |
 {: caption="Private IP addresses for {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
@@ -60,6 +61,7 @@ These public IP addresses are used to send events to {{site.data.keyword.en_full
 | Sao Paulo (`br-sao`) | 13.116.82.31  \n 163.107.85.232  \n 163.109.87.9 |
 | Sydney (`au-syd`) | 159.23.94.217  \n 130.198.9.241  \n 135.90.138.121 |
 | Tokyo (`jp-tok`) | 162.133.137.8  \n 128.168.136.18  \n 165.192.138.249 |
+| Chennai (`in-che`) | 169.38.15.172  \n 169.38.18.136  \n 169.38.9.71 |
 | Toronto (`ca-tor`) | 163.66.94.68  \n 163.74.88.241  \n 163.74.88.241 |
 | Washington, DC (`us-east`) | 150.239.81.194  \n 169.63.190.140  \n 150.239.222.67 |
 {: caption="Public IP addresses for {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}" caption-side="top"}
@@ -84,6 +86,7 @@ These are private ingress endpoints IP addresses for {{site.data.keyword.logs_fu
 | Sao Paulo (`br-sao`) | 166.9.246.86  \n 166.9.246.118  \n 166.9.246.142 |
 | Sydney (`au-syd`) | 166.9.244.118  \n 166.9.244.150  \n 166.9.244.182 |
 | Tokyo (`jp-tok`) | 166.9.249.125  \n 166.9.249.154  \n 166.9.249.190 |
+| Chennai (`in-che`) | 166.9.236.7 |
 | Toronto (`ca-tor`) | 166.9.209.7  \n 166.9.247.184  \n 166.9.247.221 |
 | Washington, DC (`us-east`) | 166.9.231.251  \n 166.9.251.88  \n 166.9.233.27 |
 {: caption="IP addresses for {{site.data.keyword.logs_full_notm}} private ingress endpoints" caption-side="top"}
@@ -108,6 +111,7 @@ These are the private API IP addresses used for {{site.data.keyword.logs_full_no
 | Sao Paulo (`br-sao`) | 166.9.246.85  \n 166.9.246.117  \n 166.9.246.141 |
 | Sydney (`au-syd`) | 166.9.244.117  \n 166.9.244.149  \n 166.9.244.181 |
 | Tokyo (`jp-tok`) | 166.9.249.126  \n 166.9.249.155  \n 166.9.249.164 |
+| Chennai (`in-che`) | 166.9.236.6 |
 | Toronto (`ca-tor`) | 166.9.209.6  \n 166.9.209.34  \n 166.9.247.202 |
 | Washington, DC (`us-east`) | 166.9.231.250  \n 166.9.251.87  \n 166.9.233.26 |
 {: caption="{{site.data.keyword.logs_full_notm}} private API IP addresses" caption-side="top"}
