@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-02-06"
+lastupdated: "2026-02-23"
 
 keywords:
 
@@ -40,9 +40,8 @@ You must configure a service to service authorization between the {{site.data.ke
 
 You can create an outbound integration by using the API. For more information about the API method, see [Create an outbound integration](https://cloud.ibm.com/apidocs/logs-service-api#create-outgoing-webhook){: external}.
 
-You can only define via API the integration between an {{site.data.keyword.logs_full_notm}} instance and an {{site.data.keyword.en_short}} instance that are located in different accounts.
-{: note}
-
+You can only configure via API the integration between an {{site.data.keyword.logs_full_notm}} instance and an {{site.data.keyword.en_short}} instance that are located in different accounts.
+{: important}
 
 For example, you can use the following cURL command to create an integration via API:
 

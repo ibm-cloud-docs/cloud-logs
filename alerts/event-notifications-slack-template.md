@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-02-06"
+lastupdated: "2026-02-23"
 
 keywords:
 
@@ -38,13 +38,16 @@ Read the following information:
 	{: important}
 
 
-## Create a template by uysing the API
+## Create a template by using the API
 {: #event-notifications-slack-template-api}
+{: api}
 
 
 To customize the Slack message, you can configure the template by using the [{{site.data.keyword.en_full_notm}} API](/apidocs/event-notifications#create-template).
 
-The following is an example Slack message template.
+The following is an example Slack message template:
+
+You can include `data.log_example` in a section if the size of the payload is less than 3000 characters.
 
 ```json
 {
@@ -169,7 +172,7 @@ The following is a sample Slack template for Kubernetes logs including an `error
 ```
 {: codeblock}
 
-Before using the template with the API it must be converted to base64. After converting the template to base64 it can be included in the body of the API call. The following example uses the previous template converted to base64.
+Before using the template with the API, it must be converted to base64. After converting the template to base64 it can be included in the body of the API call. The following example uses the previous template converted to base64.
 
 ```sh
 curl --request POST \
@@ -188,6 +191,11 @@ curl --request POST \
 {: pre}
 
 You will need to change `<EVENT-NOTIFICATION-REGION>`, `<INSTANCE-ID`>, `<NAME>`, and `<DESCRIPTION>` as appropriate for your environment.
+
+## Create a template by using Terraform
+{: #event-notifications-slack-template-tf}
+{: terraform}
+
 
 You can also use a Terraform script to create the template.
 

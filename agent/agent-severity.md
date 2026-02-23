@@ -32,7 +32,7 @@ If the first step did not yield any results, the same fields (`severity`, `level
 If a match is found, the value is mapped as described in the mapping table, where upper-case and lower-case spellings are not relevant.
 
 | Log record severity value (case-insensitive) | Mapped to | API mapped value |
-|---------------------------|-----------|------------------|
+|----------------------------------------------|-----------|------------------|
 | `debug` | `Debug` | 1 |
 | `verbose` | `Verbose` | 2 |
 | `info` | `Info` | 3 |
