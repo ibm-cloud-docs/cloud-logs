@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-24"
+  years:  2024, 2026
+lastupdated: "2026-02-06"
 
 keywords:
 
@@ -56,6 +56,6 @@ Complete the following steps to configure a metrics bucket for an {{site.data.ke
 
     Select **Insert CRN from search** to get the list of buckets in your account. You can choose a CRN from the list.
 
-    Select **View endpoints in docs** to find the endpoints per location. Choose the endpoint based on your bucket configuration.
+    Select **View endpoints in docs** to find the endpoints per location. Choose the **direct endpoint** based on your bucket configuration.
 
 7. Click **Save** to save the configuration.

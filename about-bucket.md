@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-24"
+  years:  2024, 2026
+lastupdated: "2026-02-06"
 
 keywords:
 
@@ -76,6 +76,10 @@ You can configure a data bucket for an {{site.data.keyword.logs_full_notm}} inst
 
     If you have regulatory and compliance requirements, check the location where you can create the bucket. Then, if performance is critical, consider creating the bucket in the same region where the {{site.data.keyword.logs_full_notm}} instance is provisioned.
 
+- You must configure the direct endpoint as the bucket endpoint.
+
+    Direct endpoints are used for requests originating from resources within VPCs. Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers. For more information, see [Endpoint Types](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types).
+
 - You are responsible for the maintenance of the data bucket.
 
 For more information, see [Configuring the data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket).
@@ -93,6 +97,10 @@ You can configure a metrics bucket for an {{site.data.keyword.logs_full_notm}} i
     When you enable metrics, you can generate metrics from logs. These metrics are stored in the metrics bucket as [Prometheus index blocks](https://github.com/prometheus/prometheus/blob/main/tsdb/docs/format/index.md){: external}.
 
 - You can configure a metrics bucket in the same region where the {{site.data.keyword.logs_full_notm}} instance is provisioned.
+
+- You must configure the direct endpoint as the bucket endpoint.
+
+    Direct endpoints are used for requests to a bucket that originate from resources within VPCs. Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers. For more information, see [Endpoint Types](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types).
 
 - You are responsible for the maintenance of the metrics bucket.
 

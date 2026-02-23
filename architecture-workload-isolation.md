@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-20"
+  years:  2024, 2026
+lastupdated: "2026-02-06"
 
 keywords:
 
@@ -59,6 +59,7 @@ Storage components store data used by {{site.data.keyword.logs_full_notm}}.
 
 {{site.data.keyword.logs_full_notm}} integrates with other {{site.data.keyword.cloud_notm}} services that process, store, or control your data. {{site.data.keyword.logs_full_notm}} accesses these services through the {{site.data.keyword.cloud_notm}} public or private network.
 
+
 | Service name | Description |
 |------------|-------------------------------------|
 | {{site.data.keyword.atracker_full_notm}} | You can use {{site.data.keyword.logs_full_notm}} as a target for audit events. For more information, see [Managing targets in {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-target_v2). |
@@ -78,6 +79,7 @@ Each regional deployment serves multiple tenants that are identified by the {{si
 * There is a single deployment per region that is implementing the {{site.data.keyword.logs_full_notm}} control and data plane shared by all service instances.
 * All data - including logs, configuration, and service data - is processed and stored per region and not visible in other regions.
 * All service instances share the same network, compute, and memory and storage resources in the control and data planes of the service.
+* All data in transit exchanged with other {{site.data.keyword.cloud_notm}} Services is encrypted using transport layer security (TLS).
 * All data in transit, as well as data at rest, in control and data planes is encrypted using keys provided and managed by IBM.
 * All communication within control and data planes is performed on the {{site.data.keyword.cloud_notm}} private network.
 * You can use following approaches to access the ingestion and the API endpoints:

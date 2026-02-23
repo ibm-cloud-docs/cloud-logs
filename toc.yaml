@@ -143,6 +143,7 @@ toc:
             navtitle: Recovering a deleted instance
           - topic: terraform-setup.md
             navtitle: Using Terraform
+      - account_preferences.md
       - topicgroup:
           label: Managing COS buckets
           topics:
@@ -164,7 +165,6 @@ toc:
             navtitle: Policy processing order
       - topic: instance-launch.md
         navtitle: Launching the UI
-      - account_preferences.md
       - topicgroup:
           label: Working with parsing rules
           topics:
@@ -377,6 +377,8 @@ toc:
             navtitle: Alert suppression rules
           - topic: alerts/event-notifications-alerts.md
             navtitle: Configuring routing of events to destinations in Event Notifications
+          - topic: alerts/event-notifications-create-template.md
+            navtitle: Creating notification templates
           - topic: alerts/event-notifications-slack-template.md
             navtitle: Customizing Slack messages
           - topic: alerts/incidents.md
@@ -391,7 +393,7 @@ toc:
             navtitle: Notification channels
           links:
           - link:
-              label: Configuring custom emails for alerts
+              label: Configuring the custom email domain for alerts
               href: https://community.ibm.com/community/user/blogs/marisa-lopez-de-silanes/2025/12/03/configuring-custom-emails-for-alerts-triggered-in
       - topicgroup:
           label: Working with metrics

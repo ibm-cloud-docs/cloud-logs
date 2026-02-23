@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-18"
+  years:  2024, 2026
+lastupdated: "2026-01-13"
 
 keywords:
 
@@ -24,7 +24,11 @@ When you configure data access rules, you must complete these tasks:
 
 - Configure in {{site.data.keyword.iamlong}} (IAM) policies that specify the permissions granted to users or trusted profiles to operate the service, and the permissions on the data access rules that determine what data is authorized for those users to see.
 
+    You must define 1 IAM policy per user to grant permissions to operate the service. You must define 1 or more IAM policies to grant permissions on the data access rules.
+    {: important}
+
 - Configure in {{site.data.keyword.logs_full_notm}} data access rules that define policies of what data is visible.
+
 
 It is your responsibility to validate each data access rule. Verify that the data that is filtered by the data access rule only reports the data that you want returned.
 {: important}
@@ -77,7 +81,7 @@ Complete the following steps:
 {: step}
 
 This step is required only once per user, per access group or per trusted profile.
-{: note}
+{: important}
 
 Complete the following steps to grant permissions to users or trusted profiles through an access group to work with the service:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-09"
+  years:  2024, 2026
+lastupdated: "2026-02-23"
 
 keywords:
 
@@ -13,16 +13,41 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Customizing Slack messages using the API
+# Customizing Slack messages
 {: #event-notifications-slack-template}
 
-You can customize the Slack messages sent through {{site.data.keyword.en_full_notm}} by using the API to create a template.
+You can customize the Slack messages sent through {{site.data.keyword.en_full_notm}} by using a template. For more information, see [Creating an {{site.data.keyword.en_short}} template](/docs/cloud-logs?topic=cloud-logs-event-notifications-create-template).
 {: shortdesc}
 
-To customize the Slack message you need to configure the template using the [{{site.data.keyword.en_full_notm}} API](/apidocs/event-notifications#create-template) not the UI.
-{: important}
 
-The following is an example Slack message template.
+## Prereqs
+{: #event-notifications-slack-template-prereqs}
+
+Read the following information:
+- [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
+
+    When a message of length greater than 3000 characters is sent to slack, the message text gets truncated with leaders [...].
+	{: important}
+
+- [Configuring a slack destination](/docs/event-notifications?topic=event-notifications-en-destinations-slack#en-slack-configure-destination)
+- [Configuring a slack subscription](/docs/event-notifications?topic=event-notifications-en-destinations-slack#en-slack-configure-sub)
+- [Testing a Slack destination configuration](/docs/event-notifications?topic=event-notifications-en-destinations-slack#en-slack-test-destination)
+- [Slack retry policy](/docs/event-notifications?topic=event-notifications-en-destinations-slack#en-slack-retry)
+
+    If a call to the Slack webhook URL fails even after retry attempts, the notification is lost.
+	{: important}
+
+
+## Create a template by using the API
+{: #event-notifications-slack-template-api}
+{: api}
+
+
+To customize the Slack message, you can configure the template by using the [{{site.data.keyword.en_full_notm}} API](/apidocs/event-notifications#create-template).
+
+The following is an example Slack message template:
+
+You can include `data.log_example` in a section if the size of the payload is less than 3000 characters.
 
 ```json
 {
@@ -61,6 +86,8 @@ The following is an example Slack message template.
 }
 ```
 {: codeblock}
+
+
 
 The following is a sample Slack template for Kubernetes logs including an `errorMsg` field.
 
@@ -145,7 +172,7 @@ The following is a sample Slack template for Kubernetes logs including an `error
 ```
 {: codeblock}
 
-Before using the template with the API it must be converted to base64. After converting the template to base64 it can be included in the body of the API call. The following example uses the previous template converted to base64.
+Before using the template with the API, it must be converted to base64. After converting the template to base64 it can be included in the body of the API call. The following example uses the previous template converted to base64.
 
 ```sh
 curl --request POST \
@@ -164,6 +191,11 @@ curl --request POST \
 {: pre}
 
 You will need to change `<EVENT-NOTIFICATION-REGION>`, `<INSTANCE-ID`>, `<NAME>`, and `<DESCRIPTION>` as appropriate for your environment.
+
+## Create a template by using Terraform
+{: #event-notifications-slack-template-tf}
+{: terraform}
+
 
 You can also use a Terraform script to create the template.
 

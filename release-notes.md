@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-12-16"
+  years:  2024, 2026
+lastupdated: "2026-02-23"
 
 keywords:
 
@@ -21,6 +21,18 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+
+## 20 February 2026
+{: #cloud-logs-feb2026}
+
+Release of the {{site.data.keyword.agent}} version 1.8.0
+:    For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-feb2026)
+
+## 9 Feb 2026
+{: #cloud-logs-feb0926}
+
+Chennai support
+:   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Chennai (`in-che`) region.
 
 ## 15 December 2025
 {: #cloud-logs-dec1525}

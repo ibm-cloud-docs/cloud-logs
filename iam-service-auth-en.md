@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-24"
+  years:  2024, 2026
+lastupdated: "2026-01-16"
 
 keywords:
 
@@ -25,13 +25,9 @@ Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {
 
 - Read about [Managing authorizations to grant access between services](/docs/cloud-logs?topic=cloud-logs-iam-service-auth).
 
-- You must have access to the {{site.data.keyword.en_full_notm}} target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
+- You must have access to IAM to manage authorizations between services in the {{site.data.keyword.cloud_notm}} account where the {{site.data.keyword.en_full_notm}} instance is provisioned. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
 
-- The target service is located always in the account where the authorization is created.
-
-- The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.en_full_notm}} target.
-
-- If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account ID. 
+- The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.en_full_notm}} instance.
 
 ## Service access roles
 {: #iam-service-auth-en-roles}
@@ -47,15 +43,21 @@ For more information, see [Creating a S2S authorization to work with the {{site.
 {: #iam-service-auth-en-create-ui}
 {: ui}
 
+You must create the service to service authorization in the {{site.data.keyword.cloud_notm}} account where the {{site.data.keyword.en_full_notm}} instance is provisioned.
+{: important}
+
+When you configure the authorization, you must have access and permissions to create authorizations in the account where the {{site.data.keyword.en_full_notm}} instance is available. For the account where the {{site.data.keyword.logs_full_notm}} instance is available, you need only the account number to configure the cross-account service-to-service authorization.
+{: note}
+
 Complete the following steps:
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
 2. Click **Create**.
 3. Select a source account.
 
-    If the source service that needs access to the target service is in this account, select **This account**.
+    If the {{site.data.keyword.en_full_notm}} instance and the {{site.data.keyword.logs_full_notm}} instance are in the same account, select **This account**.
 
-    If the source service that needs access to the target service is in a different account, select **Other account**. Then, enter the account ID of the source account.
+    If the {{site.data.keyword.en_full_notm}} instance and the {{site.data.keyword.logs_full_notm}} instance are in different accounts, select **Other account**. Then, enter the account ID where the {{site.data.keyword.logs_full_notm}} instance is available.
 
 4. Select `Cloud Logs` as the source service. Then, set the scope of the access.
 
@@ -79,14 +81,11 @@ Complete the following steps:
 
 7. Click **Authorize**.
 
-If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account number. 
-{: note}
+
 
 ## Creating an authorization by using the CLI
 {: #iam-service-auth-en-create-cli}
 {: cli}
-
-
 
 Run the following command to create an authorization for the {{site.data.keyword.logs_full_notm}} service.
 
@@ -132,6 +131,7 @@ Use the following steps to create an authorization by using Terraform:
     resource "ibm_iam_authorization_policy" "policy" {
       source_service_name         = "logs"
       source_resource_instance_id = ibm_resource_instance.instance1.guid
+      source_service_account      =
       target_service_name         = "event-notifications"
       target_resource_instance_id = ibm_resource_instance.instance2.guid
       roles                       = ["Reader"]
