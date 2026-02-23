@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-12-16"
+  years:  2024, 2026
+lastupdated: "2026-02-23"
 
 keywords:
 
@@ -20,6 +20,64 @@ Use these release notes to learn about updates to the {{site.data.keyword.agent}
 {: shortdesc}
 
 
+
+## 20 February 2026
+{: #logs-router-agent-feb2026}
+{: release-note}
+
+Release of the {{site.data.keyword.agent}} version 1.8.0
+:   {{site.data.keyword.agent}} version 1.8.0 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, Ubuntu 24, Debian 11, Debian 12, and Windows.  This release is based on Fluent Bit [v4.2.2](https://fluentbit.io/announcements/v4.2.2/){: external}.
+
+   This version includes the following notable changes:
+
+   * Updated Fluent Bit to version 4.2.2
+   * Enabled support for Ubuntu 24 platform
+   * Added helm support for regular expression matching in the output to selectively send records based on their tag values
+
+   The following new {{site.data.keyword.agent}} packages are available.
+
+   Both packages are required for the installation.
+   {: important}
+
+   RHEL 8
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.8.0.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.8.0.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.8.0.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.8.0.rpm.sha256){: external}
+
+   RHEL 9
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.8.0.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.8.0.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.8.0.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.8.0.rpm.sha256){: external}
+
+   Debian 11
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.8.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.8.0.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.8.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.8.0.deb.sha256){: external}
+
+   Ubuntu 20
+
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.8.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.8.0.deb){: external}
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.8.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.8.0.deb.sha256){: external}
+
+   Ubuntu 22
+
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu22-1.8.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu22-1.8.0.deb){: external}
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu22-1.8.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu22-1.8.0.deb.sha256){: external}
+
+   Ubuntu 24
+
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu24-1.8.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu24-1.8.0.deb){: external}
+   *  [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu24-1.8.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu24-1.8.0.deb.sha256){: external}
+
+   Debian 12
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.8.0.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.8.0.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.8.0.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.8.0.deb.sha256){: external}
+
+   Windows
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.8.0.zip](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.8.0.zip){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.8.0.zip.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-agent-windows-1.8.0.zip.sha256){: external}
 
 ## 15 December 2025
 {: #logs-router-agent-dec1525}
