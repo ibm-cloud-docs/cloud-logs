@@ -30,8 +30,8 @@ Release of the {{site.data.keyword.agent}} version 1.8.0
 
    This version includes the following notable changes:
 
-   * Updated Fluent Bit to version 4.2.2
-   * Enabled support for Ubuntu 24 platform
+   * Updated Fluent Bit major version to 4.2.2
+   * Added support for Ubuntu 24 platform
    * Added helm support for regular expression matching in the output to selectively send records based on their tag values
 
    The following new {{site.data.keyword.agent}} packages are available.
@@ -89,7 +89,7 @@ Release of the {{site.data.keyword.agent}} version 1.7.1
    This version includes the following notable changes:
 
    * Change to ensure the record will have proper timestamp and metadata
-   * `failed log` platform metric now reports correctly, instead of twice as high as the actual value of dropped logs 
+   * `failed log` platform metric now reports correctly, instead of twice as high as the actual value of dropped logs
 
    The following new {{site.data.keyword.agent}} packages are available.
 
@@ -313,7 +313,7 @@ Release of the {{site.data.keyword.agent}} version 1.6.1
      - The cluster name is still recorded in `kubernetes.cluster_name` to be consistent with the container logs for filtering.
 
    * Multiline patterns are easier to configure.
- 
+
      The `enableMultiline: true` option can be used in conjunction with the `multilinePreprocessor` to override the default multiline processor to better fit your situation.
 
    * Option to skip the Kubernetes filter
@@ -323,7 +323,7 @@ Release of the {{site.data.keyword.agent}} version 1.6.1
    * After an initial successful test of the connection between the {{site.data.keyword.agent}} and {{site.data.keyword.logs_full_notm}}, all failed log transmissions are retried, regardless of the error received.
    * Fixed a bug when `defaultMetadata` is set in the `values.yaml` file that resulted in an invalid configuration.
 
-   The following new {{site.data.keyword.agent}} packages are available. 
+   The following new {{site.data.keyword.agent}} packages are available.
 
    Both packages are required for the installation.
    {: important}
@@ -368,7 +368,7 @@ Release of the {{site.data.keyword.agent}} version 1.6.0
    This version includes the following notable changes:
 
    * Updated Fluent Bit to version 3.2.10
-   * It is now possible to configure the agent to use [proxies](/docs/cloud-logs?topic=cloud-logs-agent-proxy). 
+   * It is now possible to configure the agent to use [proxies](/docs/cloud-logs?topic=cloud-logs-agent-proxy).
    * The helm chart provided for {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}} now use the Fluent Bit yaml-based configuration files.  This replaces the classic configuration which will be deprecated by Fluent Bit at the end of 2025.  The helm `values.yaml` files used with helm versions before 1.6.0 are compatible with 1.6.0.  Users that customize their configurations might need to take actions before applying this version of the helm chart.  If you are editing the config map files after deploying the helm chart then you will need to make changes to your process.  There are additional configuration values introduce with 1.6.0 that give more flexibility in your agent configuration. For more information, see [Template to deploy the {{site.data.keyword.agent}} using a 1.6.x Helm chart](/docs/cloud-logs?topic=cloud-logs-agent-helm-template-clusters).
 
    Backward compatibility: You can still use your existing `logs-values.yaml` file from version 1.5.x with version 1.6.0. The transition is designed to be non-disruptive.
@@ -492,7 +492,7 @@ Release of the {{site.data.keyword.agent}} version 1.5.1
    * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.5.1.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.5.1.deb.sha256){: external}
 
    Ubuntu 20
-   
+
    * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.5.1.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.5.1.deb){: external}
    * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.5.1.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.5.1.deb.sha256){: external}
 
