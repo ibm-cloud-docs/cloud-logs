@@ -249,8 +249,8 @@ toc:
               - dataprime-ref-uuid-func.md
               - dataprime-ref-date-time-func.md
               - dataprime-ref-encode-func.md
-          - topic: reserved-fields.md
-            navtitle: Reserved fields
+      - topic: reserved-fields.md
+        navtitle: Reserved fields
       - topicgroup:
           label: Managing custom views
           topics:
