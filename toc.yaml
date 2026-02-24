@@ -216,8 +216,6 @@ toc:
             navtitle: Daily index limit considerations
           - topic: query-mapping-exceptions.md
             navtitle: Managing data mapping exceptions
-          - topic: reserved-fields.md
-            navtitle: Reserving fieds
           - topic: benchmarks.md
             navtitle: Using benchmark tags
           - topic: query-regex.md
@@ -251,6 +249,8 @@ toc:
               - dataprime-ref-uuid-func.md
               - dataprime-ref-date-time-func.md
               - dataprime-ref-encode-func.md
+          - topic: reserved-fields.md
+            navtitle: Reserved fields
       - topicgroup:
           label: Managing custom views
           topics:
