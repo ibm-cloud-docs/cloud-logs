@@ -27,7 +27,7 @@ The following storage classes are not supported by {{site.data.keyword.logs_full
 
 If you do not need to search logs older than a certain time period, for example, a month, you can define an {{site.data.keyword.cos_full_notm}} archive rule to archive objects older that the time period required for searching. Do not configure archiving for a period of less than 7 days.
 
-By archiving data that you do not need to search, you can retain the log data at a reduced cost. If required, you can [restore archived objects](/docs/cloud-object-storage?topic=cloud-object-storage-archive#archive-restore-cli) if you need to search the data by using {{site.data.keyword.logs_full_notm}} in the future. 
+By archiving data that you do not need to search, you can retain the log data at a reduced cost. If required, you can [restore archived objects](/docs/cloud-object-storage?topic=cloud-object-storage-archive#archive-restore-cli) if you need to search the data by using {{site.data.keyword.logs_full_notm}} in the future.
 
 ### Successful read activity tracking events
 {: #cos_databucket_readevents}

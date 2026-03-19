@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-30"
+  years:  2024, 2026
+lastupdated: "2026-03-19"
 
 keywords:
 
@@ -27,22 +27,29 @@ In a service to service (S2S) authorization:
 - The roles that you select define the level of access for the source service.
 - The target service is the service that you are granting permission to be accessed by the source service based on the roles that you assign.
 - A source service can be in the same account where the authorization is created or in another account.
-- The target service is always in the account where the authorization is created.
+- The location of the target service defines the account where the authorization must be created.
 
     You can view whether the source service is located in the current account or another account by viewing the Source account column for the specific authorization on the [Authorizations](/iam/authorizations) page in the {{site.data.keyword.cloud}} console.
     {: tip}
 
-The following table lists the different S2S authorizations that you might need when you use the {{site.data.keyword.logs_full_notm}} service:
+The following table lists the different S2S authorizations that you might need when you configure the {{site.data.keyword.logs_full_notm}} service:
 
 | S2S Authorization | Source service | Target service |
 |-------------------|----------------|----------------|
 | Authorize access to read and write data into the data bucket | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.cos_full_notm}} |
 | Authorize access to read and write data into the metrics bucket | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.cos_full_notm}} |
-| Authorize sending logs to a tenant | {{site.data.keyword.logs_routing_full_notm}} | {{site.data.keyword.logs_full_notm}} |
-| Authorize sending activity tracking events | {{site.data.keyword.atracker_full_notm}} | {{site.data.keyword.logs_full_notm}} |
 | Authorize access to the {{site.data.keyword.en_full_notm}} service | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.en_full_notm}} |
 | Authorize access to the {{site.data.keyword.messagehub_full}} service | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.messagehub_full}} |
 {: caption="S2S authorizations."}
+
+The following table lists the different S2S authorizations that you might need to send {{site.data.keyword.cloud_notm}} platform data to the {{site.data.keyword.logs_full_notm}} service:
+
+| S2S Authorization | Source service | Target service |
+|-------------------|----------------|----------------|
+| Authorize sending logs to a tenant | {{site.data.keyword.logs_routing_full_notm}} | {{site.data.keyword.logs_full_notm}} |
+| Authorize sending activity tracking events | {{site.data.keyword.atracker_full_notm}} | {{site.data.keyword.logs_full_notm}} |
+{: caption="S2S authorizations."}
+
 
 For more information, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
 

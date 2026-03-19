@@ -12,30 +12,35 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a S2S authorization to grant {{site.data.keyword.logs_full_notm}} access to a bucket located in the same account
-{: #iam-service-auth-cos}
+# Creating a S2S authorization to grant {{site.data.keyword.logs_full_notm}} access to a bucket located in a different account
+{: #iam-service-auth-cos-crossacc}
 
-Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_full_notm}} access to an {{site.data.keyword.cos_full_notm}} bucket when the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} bucket are located in the same account.
+Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_full_notm}} access to an {{site.data.keyword.cos_full_notm}} bucket when the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} bucket are located in different accounts.
 {: shortdesc}
 
 
 
 ## Before you begin
-{: #iam-service-auth-cos-prereqs}
-
-- You must have permissions in the account to configure service to service authorizations in IAM.
+{: #iam-service-auth-cos-prereqs-crossacc}
 
 - Read about [Managing authorizations to grant access between services](/docs/cloud-logs?topic=cloud-logs-iam-service-auth).
 
-- Review the [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
+- You must have access to the target service to manage authorization between services. For more information, see [Permissions to manage authorizations](/docs/cloud-logs?topic=cloud-logs-iam-service-auth#iam-service-auth-permissions).
 
-- To configure the autorization between the {{site.data.keyword.logs_full_notm}} service and the {{site.data.keyword.cos_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.cos_full_notm}} service.
+- The target service is located always in the account where the authorization is created.
 
-- When you define the service to service authorization, you must grant the `Writer` role to {{site.data.keyword.logs_full_notm}} to be able to send data to the bucket.
+- The autorization that you define for the {{site.data.keyword.logs_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.cos_full_notm}} target.
+
+- If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account ID. 
+
+## Service access roles
+{: #iam-service-auth-cos-roles-crossacc}
+
+You must grant `Writer` role to grant permissions to work with buckets.
 
 
 ## Creating an authorization through the console
-{: #iam-service-auth-cos-create-ui}
+{: #iam-service-auth-cos-create-ui-crossacc}
 {: ui}
 
 Complete the following steps:
@@ -46,7 +51,7 @@ Complete the following steps:
 
     If the source service that needs access to the target service is in this account, select **This account**.
 
-    If the source service that needs access to the target service is in a different account, see [](). select **Other account**. Then, enter the account ID of the source account.
+    If the source service that needs access to the target service is in a different account, select **Other account**. Then, enter the account ID of the source account.
 
 4. Select `Cloud Logs` as the source service. Then, set the scope of the access.
 
@@ -70,7 +75,7 @@ If you create an authorization between a service in another account and a target
 {: note}
 
 ## Creating an authorization by using the CLI
-{: #iam-service-auth-cos-create-cli}
+{: #iam-service-auth-cos-create-cli-crossacc}
 {: cli}
 
 
@@ -91,7 +96,7 @@ For more information about all of the parameters that are available for this com
 
 
 ## Creating an authorization by using Terraform
-{: #iam-service-auth-cos-create-terra}
+{: #iam-service-auth-cos-create-terra-crossacc}
 {: terraform}
 
 
@@ -161,7 +166,7 @@ Use the following steps to create an authorization by using Terraform:
         {: pre}
 
 ## Creating an authorization by using the API
-{: #iam-service-auth-cos-create-api}
+{: #iam-service-auth-cos-create-api-crossacc}
 {: api}
 
 To authorize a source service access to a target service, use the [IAM Policy Management API](/apidocs/iam-policy-management#create-policy). See the following API example for create a policy method with the `type=authorization` specified for a `cloud-object-storage` bucket as the target.

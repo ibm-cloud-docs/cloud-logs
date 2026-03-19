@@ -118,6 +118,8 @@ toc:
                 navtitle: Managing authorizations
               - topic: iam-service-auth-cos.md
                 navtitle: S2S for Cloud Object Storage
+              - topic: iam-service-auth-cos-crossacc.md
+                navtitle: Cross-account S2S for Cloud Object Storage
               - topic: iam-service-auth-logs-routing.md
                 navtitle: S2S for Logs Routing
               - topic: iam-service-auth-atracker.md

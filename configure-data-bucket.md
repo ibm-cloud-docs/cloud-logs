@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-02-06"
+lastupdated: "2026-03-19"
 
 keywords:
 
@@ -23,8 +23,12 @@ Configure a bucket in {{site.data.keyword.cos_full_notm}} to store your {{site.d
 ## Prereqs
 {: #configure-data-bucket-prereqs}
 
-- You must have an {{site.data.keyword.cos_full_notm}} instance in the same account where your {{site.data.keyword.logs_full_notm}} instance is provisioned.
-- You must have permissions to create a bucket in the {{site.data.keyword.cos_full_notm}} instance or have the details of an existing bucket.
+- The {{site.data.keyword.cos_full_notm}} service can be in the same account as your {{site.data.keyword.logs_full_notm}} instance, or can be located in a different account.
+
+- You must have permissions to create a bucket in an {{site.data.keyword.cos_full_notm}} instance or have the details of an existing bucket.
+
+- You must have permissions to configure a service to service authorization between the {{site.data.keyword.cos_full_notm}} service and the {{site.data.keyword.logs_full_notm}} service.
+
 
 
 {{_include-segments/data-bucket-restrictions.md}}
@@ -33,7 +37,11 @@ Configure a bucket in {{site.data.keyword.cos_full_notm}} to store your {{site.d
 {: #configure-data-bucket-s2s}
 {: step}
 
-You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.cos_full_notm}} to allow {{site.data.keyword.logs_full_notm}} to read and write data into the data bucket. For more information, see [Creating a S2S authorization to grant access to a bucket](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos).
+You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.cos_full_notm}} to allow {{site.data.keyword.logs_full_notm}} to read and write data into the data bucket.
+
+For more information, see:
+- [Creating a S2S authorization to grant access to a bucket when the {{site.data.keyword.logs_full_notm}} instance and the bucket are in the same account](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos).
+- [Creating a cross-account S2S authorization to grant access to a bucket when the {{site.data.keyword.logs_full_notm}} instance and the bucket are in different accounts](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos-crossacc).
 
 
 ## Configure the data bucket
@@ -48,16 +56,21 @@ Complete the following steps to configure a data bucket for an {{site.data.keywo
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
 
-3. Select **Logging** &gt; **Instances**. You might need to click the **Cloud Logs** tab to see your {{site.data.keyword.logs_full_notm}} instances.
+3. Select **Logging** &gt; **Instances**. Then, select the instance to which you want to configure a data bucket.
 
-4. Select the instance to which you want to configure a data bucket.
+4. In the *Storage* section, select **Connect** in the *Data bucket* section.
 
-5. In the *Storage* section, select **Edit**.
+5. Choose how to enter the bucket details in the *Select bucket by* section:
 
-6. In the **Logs data** section, configure the *Bucket CRN*, and the *Bucket endpoint*.
+    Choose **Instance** and select a COS instance and bucket if your {{site.data.keyword.logs_full_notm}} instance and the bucket are located in the same account.
 
-    Select **Insert CRN from search** to get the list of buckets in your account. You can choose a CRN from the list.
+    Choose **Bucket CRN** and enter the bucket CRN if your {{site.data.keyword.logs_full_notm}} instance and the bucket are located in different accounts.
 
-    Select **View endpoints in docs** to find the endpoints per location. Choose the **direct endpoint** based on your bucket configuration.
+6. Configure the **direct endpoint** as the bucket endpoint.
+
+    Direct endpoints are used for requests originating from resources within VPCs. Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers. For more information, see [Endpoint Types](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types).
 
 7. Click **Save** to save the configuration.
+
+Once a bucket is connected to a {{site.data.keyword.logs_full_notm}} instance, a bucket is always required. It can be changed but not removed.
+{: important}
