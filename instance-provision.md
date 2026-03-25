@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-03-19"
+lastupdated: "2026-03-25"
 
 keywords:
 
@@ -170,5 +170,7 @@ After you provision the instance, complete the following steps:
 3. Configure one or more log sources. Choose any of the following options:
 
     - Configure the logging agent. This agent is responsible for collecting and forwarding logs to your instance. For more information, see [The logging agent](/docs/cloud-logs?topic=cloud-logs-agent-about).
-    - Configure {{site.data.keyword.atracker_full_notm}} to route auditing events, both [global](/docs/atracker?topic=atracker-event_types#event_types_global) and [location-based](/docs/atracker?topic=atracker-event_types#event_types_location) event data, in your {{site.data.keyword.cloud_notm}} to the {{site.data.keyword.logs_full_notm}} instance.
-    - Configure {{site.data.keyword.logs_routing_full}} to route platform logs from your {{site.data.keyword.cloud_notm}} account to the {{site.data.keyword.logs_full_notm}} instance.
+
+    - Configure {{site.data.keyword.atracker_full_notm}} to route auditing events, both [global](/docs/atracker?topic=atracker-event_types#event_types_global) and [location-based](/docs/atracker?topic=atracker-event_types#event_types_location) event data, in your {{site.data.keyword.cloud_notm}} to the {{site.data.keyword.logs_full_notm}} instance. For more information, see [Getting started with {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-getting-started).
+
+    - Configure {{site.data.keyword.logs_routing_full}} to route platform logs from your {{site.data.keyword.cloud_notm}} account to the {{site.data.keyword.logs_full_notm}} instance. For more information, see [Getting started with {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-getting-started).
