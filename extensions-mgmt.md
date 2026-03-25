@@ -321,8 +321,7 @@ Make sure that you specify in the API call all the resources from that extension
     "version": "1.0.0",
     "item_ids": [
       "1405e028-dd50-48a0-86c5-b361e029a3f1",
-      "93cda01a-526e-4872-b29a-125645abf784",
-      "9e2099ee-78f4-4070-a1fd-7be109f136ce"
+      "93cda01a-526e-4872-b29a-125645abf784"
     ],
     "applications": [
       "myapp"
