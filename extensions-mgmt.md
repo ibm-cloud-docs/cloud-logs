@@ -15,20 +15,21 @@ subcollection: cloud-logs
 # Managing {{site.data.keyword.logs_full_notm}} extensions
 {: #extensions-mgmt}
 
-In {{site.data.keyword.logs_full_notm}}, extensions offer out of the box configurations to manage log data. An extension contains a set of predefined resource definitions such as alerts, parsing rules, dashboards, and more that you can use to get up and running fast monitoring and alerting on data that is relevant to the extension.
+In {{site.data.keyword.logs_full_notm}}, extensions offer out of the box configurations to manage log data. An extension contains a set of pre-defined resource definitions such as alerts, parsing rules, dashboards, and more that you can use to get up and running fast monitoring and alerting on data that is relevant to the extension.
 {: shortdesc}
 
 - You can deploy all resources or a subset of resources of an extension in the context of selected applications and subsystems.
 - You can manage an extesion graphically via UI or programmatically via API.
 - After you deploy resources from an extension, you can customize them.
 
-    To prevent from overwritting your custom changes to predefined resources, you must detach these resources from the extension deployment. You can only detach resources graphically via UI.
+    To prevent overwritting custom changes to predefined resources, you must detach these resources from the extension deployment. You can only detach resources graphically via UI.
     {: important}
 
-Extensions can include:
-- Predefined alerts, parsing rules, and Events to Metrics definitions.
-- Predefined dashboards.
-- Predefined enrichments.
+- Extensions are classified by type. Valid types are `Security`, and `Observability`.
+
+- Extensions include labels that you can use to filter them. For example, the tag `IBM` is associated with extensions that you can use to monitor the {{site.data.keyword.cloud_notm}}.
+
+- Extensions can include predefined alerts, parsing rules, Events to Metrics definitions, dashboards and enrichments.
 
 ## List of available extensions
 {: #extensions-mgmt-list}
@@ -106,40 +107,60 @@ To see the extensions that are available through the {{site.data.keyword.logs_fu
 
 The list of available extensions is displayed.
 
-To see the extensions that are available by using th API, complete the following steps:
-
-
 
 
 ## Get the list of available extensions by using the API
 {: #determine-extensions-api}
 {: api}
 
-Get the list of extensions available for deployment, including additional details for the ones that are deployed.
+To get the list of extensions available for deployment, including additional details for the ones that are deployed, complete the following steps:
 
-Complete the following steps:
+1. Get the authentication token. See [Authentication via API](/apidocs/logs-service-api#authentication).
 
-1. Get the authenticastion token. See [Authentication via API](/apidocs/logs-service-api#authentication).
+2. Get the endpoint of the instance where you want to manage extensions. See [Service API endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_api).
 
-2. Get the endpoint of the instance where you want to manage extensions. See  see [Service API endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_api).
-
-3. Choose one of the following options:
-
-    - Option 1: List all extensions, including version and deployed resources per extension.
+3. List all extensions, including version and deployed resources per extension.
 
     ```text
     curl -X GET --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Accept: application/json"   "https://<API_ENDPOINT>/v1/extensions"
     ```
     {: codeblock}
 
-    - Option 2: List the deployed extensions including the version of the extension and the IDs of the resources that are deployed.
+
+
+### Getting the list of deployed extensions by using the API
+{: #determine-extensions-api-deployed-api}
+{: api}
+
+To get information about the extensions that are deployed in an {{site.data.keyword.logs_full_notm}} instance, you can use the method [Get list of extensions](/apidocs/logs-service-api#get-extensions).
+
+For example, complete the following steps:
+
+1. Get the authentication token. See [Authentication via API](/apidocs/logs-service-api#authentication).
+
+2. Get the endpoint of the instance where you want to deploy an extension. See  see [Service API endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_api).
+
+3. Get details of an deployed extensions.
 
     ```text
     curl -X GET --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Accept: application/json"   "https://<API_ENDPOINT>/v1/extensions?deployed=true"
     ```
     {: codeblock}
 
-    - Option 3: List the extensions that have not been deployed.
+
+### Getting the list of extensions that are not deployed by using the API
+{: #determine-extensions-api-undeployed-api}
+{: api}
+
+To get information about the extensions that are not yet deployed in an {{site.data.keyword.logs_full_notm}} instance, you can use the method [Get list of extensions](/apidocs/logs-service-api#get-extensions).
+
+For example, complete the following steps:
+
+1. Get the authentication token. See [Authentication via API](/apidocs/logs-service-api#authentication).
+
+2. Get the endpoint of the instance where you want to deploy an extension. See  see [Service API endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_api).
+
+3. Get details of an deployed extensions.
 
     ```text
     curl -X GET --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Accept: application/json"   "https://<API_ENDPOINT>/v1/extensions?deployed=false"
@@ -147,21 +168,11 @@ Complete the following steps:
     {: codeblock}
 
 
-
-### Getting the list of deployed extensions by ID using the API
-{: #determine-extensions-api-deployed-api}
-{: api}
-
-Get details of an extension by ID including information about deployed resources.
-
-```text
-curl -X GET --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Accept: application/json"   "https://<API_ENDPOINT>/v1/extensions/<ExtensionID>"
-```
-{: codeblock}
-
 ## Deploying an extension by using the API
 {: #extensions-mgmt-deploy-api}
 {: api}
+
+To deploy resources included in an extension, you can use the API method [Deploy or update deployment of an extension.](/apidocs/logs-service-api#update-extension-deployment).
 
 Complete the following steps to deploy an extension:
 
@@ -181,8 +192,7 @@ Complete the following steps to deploy an extension:
     For example, to get the information for the Kubernetes extension, run:
 
     ```text
-
-
+    curl -X GET --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Accept: application/json"   "https://<ENDPOINT>/v1/extensions/IBMCloudKubernetes"
     ```
     {: codeblock}
 
@@ -284,9 +294,11 @@ Complete the following steps to deploy an extension:
 {: #extensions-mgmt-update-api}
 {: api}
 
+You might want to deploy a new version of an extension, deploy additional resources, or modify the appliations and subsystems that are configured as sources of data relevant to the extension. To update resources that are included in an extension, you can use the API method [Deploy or update deployment of an extension.](/apidocs/logs-service-api#update-extension-deployment).
+
 Complete the following steps to update an extension:
 
-Make sure that you specify in the call all the resources from that extension that are currently deployed. If you have modified any resources previously deployed from this extension, detach the resources before running the update.
+Make sure that you specify in the API call all the resources from that extension that are currently deployed. If you have modified any resources previously deployed from this extension, detach the resources before running the update. If you do not include all resources previously deployed, they ones that are not included are removed.
 {: important}
 
 1. Get the authentication token. See [Authentication via API](/apidocs/logs-service-api#authentication).
