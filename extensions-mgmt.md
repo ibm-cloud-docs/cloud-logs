@@ -15,10 +15,15 @@ subcollection: cloud-logs
 # Managing {{site.data.keyword.logs_full_notm}} extensions
 {: #extensions-mgmt}
 
-{{site.data.keyword.logs_full_notm}} offers a number of data extensions. Each extension contains a set of predefined items – alerts, parsing rules, dashboards, and more. To be used, these extensions need to be deployed into your {{site.data.keyword.logs_full_notm}} instance. Once deployed they can be managed or removed, as required.
+In {{site.data.keyword.logs_full_notm}}, extensions offer out of the box configurations to manage log data. An extension contains a set of predefined resource definitions such as alerts, parsing rules, dashboards, and more that you can use to get up and running fast monitoring and alerting on data that is relevant to the extension.
 {: shortdesc}
 
-Extension packages provide you with predefined resources that accelerate your. Setting up these features manually would require additional time and resources.
+- You can deploy all resources or a subset of resources of an extension in the context of selected applications and subsystems.
+- You can manage an extesion graphically via UI or programmatically via API.
+- After you deploy resources from an extension, you can customize them.
+
+    To prevent from overwritting your custom changes to predefined resources, you must detach these resources from the extension deployment. You can only detach resources graphically via UI.
+    {: important}
 
 Extensions can include:
 - Predefined alerts, parsing rules, and Events to Metrics definitions.
@@ -44,6 +49,8 @@ The following list outlines extensions that you can deploy to monitor logs:
 
 
 
+## List of available extensions by ID
+{: #extensions-mgmt-list-id}
 
 The following table lists the IDs of the extensions that you must use when using the Extensions API:
 
@@ -91,9 +98,7 @@ For more information about the REST API, see [Extensions](/apidocs/logs-service-
 {: #determine-extensions-ui}
 {: ui}
 
-You can determine the extensions that are available through the {{site.data.keyword.logs_full_notm}} UI or by using the API
-
-To see the extensions that are available through the UI, complete the following steps:
+To see the extensions that are available through the {{site.data.keyword.logs_full_notm}} UI, complete the following steps:
 
 {{site.data.content.launch-ui}}
 
