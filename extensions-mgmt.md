@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying, managing, and removing {{site.data.keyword.logs_full_notm}} extensions
+# Managing {{site.data.keyword.logs_full_notm}} extensions
 {: #extensions-mgmt}
 
 {{site.data.keyword.logs_full_notm}} offers a number of data extensions. Each extension contains a set of predefined items – alerts, parsing rules, dashboards, and more. To be used, these extensions need to be deployed into your {{site.data.keyword.logs_full_notm}} instance. Once deployed they can be managed or removed, as required.

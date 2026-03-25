@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-02-23"
+lastupdated: "2026-03-25"
 
 keywords:
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+## 25 March 2026
+{: #cloud-logs-march2526}
+
+Release of the Extensions API.
+:    For more information, see the [Extensions API](/apidocs/logs-service-api#get-extension) and [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
+
 
 
 
@@ -195,7 +202,7 @@ Functional updates and fixes are available in the Montreal (`ca-mon`) region onl
 :   New features included in this release.
 
     * Additional capabilities are now supported for alerts with the introduction of a new `alert_definition` API method. Changes are also made as a result to the {{site.data.keyword.en_full_notm}} payload.  See the following documentation topics for information about the alerts API changes and actions you might need to take as a result.
-    
+
        * [Considerations for new alert and priority configuration](/docs/cloud-logs?topic=cloud-logs-new-version-considerations)
        * [Alert priorities](/docs/cloud-logs?topic=cloud-logs-priorities)
        * [Terraform changes required to convert alerts](/docs/cloud-logs?topic=cloud-logs-migrate_alert_definitions)
@@ -396,22 +403,22 @@ Documentation about using regex for queries
 Fixes implemented
 :   The following issues are resolved.
     - [Query] - Fixed an issue where running a query in `All Logs` would result in a "Query Failed" message with no results returned even if the query ran up to the maximum timeout of 5 minutes.
-    - [Alerts] - Fixed an error where Metric alerts were not triggering notifications. 
-    - [UI]\[Logs] - Fixed an issue where the selected keys in the `Content` column are reset when switching between `Priority Insights` and `All Logs`. 
+    - [Alerts] - Fixed an error where Metric alerts were not triggering notifications.
+    - [UI]\[Logs] - Fixed an issue where the selected keys in the `Content` column are reset when switching between `Priority Insights` and `All Logs`.
 
 ## 25 November 2024
 {: #cloud-logs-nov2524}
 {: release-note}
 
 Fixes implemented
-:   The following issues are resolved.   
+:   The following issues are resolved.
     - [API]\[Views] - Fixed a bug where setting `quick_selection` using the API sets a custom selection in the UI.
     - [UI]\[TCO] - Resolved an error when clicking **Reset all overrides** resulted in displaying `ERROR: Failed to reset all overrides`.
     - [API]\[View Folder] - Fixed failure when updating view folders through the API.
     - [API]\[Events2Metrics] - Fixed failure when updating Events to Metrics rules through the API.
     - [Query] - Fixed query errors when using longer query windows, for example, for 6 or 12 hours.
     - [UI] - Fixed an error where the dashboard login displayed intermittent HTTP 500 errors.
-    - [UI] - Fixed log highlighting for `surrounding logs` improving the ability to view the context around the logs. 
+    - [UI] - Fixed log highlighting for `surrounding logs` improving the ability to view the context around the logs.
     - [Alerts] - Fixed an error where the alert payload was not sent as valid JSON.
     - [UI]\[TCO] - Fixed an error where editing an existing TCO policy would wait to refresh for a long time.
 
@@ -420,7 +427,7 @@ Fixes implemented
 {: release-note}
 
 Fixes implemented
-:   The following issue is resolved. 
+:   The following issue is resolved.
     - Fixed custom dashboards displaying "Something went wrong" when selecting Analyze and Alert.
 
 
