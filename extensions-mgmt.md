@@ -15,11 +15,11 @@ subcollection: cloud-logs
 # Managing {{site.data.keyword.logs_full_notm}} extensions
 {: #extensions-mgmt}
 
-In {{site.data.keyword.logs_full_notm}}, extensions offer out of the box configurations to manage log data. An extension contains a set of pre-defined resource definitions such as alerts, parsing rules, dashboards, and more that you can use to get up and running fast monitoring and alerting on data that is relevant to the extension.
+In {{site.data.keyword.logs_full_notm}}, extensions offer out of the box configurations to manage log data. An extension contains a set of pre-defined resource definitions such as alerts, parsing rules, dashboards, and more that you can use to get up and running fast and monitor and alert on data that is relevant to the extension.
 {: shortdesc}
 
 - You can deploy all resources or a subset of resources of an extension in the context of selected applications and subsystems.
-- You can manage an extesion graphically via UI or programmatically via API.
+- You can manage an extension graphically via UI or programmatically via API.
 - After you deploy resources from an extension, you can customize them.
 
     To prevent overwritting custom changes to predefined resources, you must detach these resources from the extension deployment. You can only detach resources graphically via UI.
@@ -95,7 +95,7 @@ For more information about the REST API, see [Extensions](/apidocs/logs-service-
 
 
 
-## Get the list of available extensions through the UI
+## Getting the list of available extensions through the UI
 {: #determine-extensions-ui}
 {: ui}
 
@@ -109,7 +109,7 @@ The list of available extensions is displayed.
 
 
 
-## Get the list of available extensions by using the API
+## Getting the list of available extensions by using the API
 {: #determine-extensions-api}
 {: api}
 
@@ -128,7 +128,7 @@ To get the list of extensions available for deployment, including additional det
 
 
 
-### Getting the list of deployed extensions by using the API
+## Getting the list of deployed extensions by using the API
 {: #determine-extensions-api-deployed-api}
 {: api}
 
@@ -148,7 +148,7 @@ For example, complete the following steps:
     {: codeblock}
 
 
-### Getting the list of extensions that are not deployed by using the API
+## Getting the list of extensions that are not deployed by using the API
 {: #determine-extensions-api-undeployed-api}
 {: api}
 
@@ -268,7 +268,7 @@ Complete the following steps to deploy an extension:
 
 
 
-5. Run the the API call. For example, you can run the following cURL command for the Kubernetes extension that creates a dashboard and 2 alerts:
+5. Deploy the extension. For example, you can run the following cURL command to deploy partially the Kubernetes extension. This sample creates a dashboard and 2 alerts:
 
     ```text
     curl -X PUT --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Accept: application/json"   --header "Content-Type: application/json"   --data   '{
@@ -294,12 +294,12 @@ Complete the following steps to deploy an extension:
 {: #extensions-mgmt-update-api}
 {: api}
 
-You might want to deploy a new version of an extension, deploy additional resources, or modify the appliations and subsystems that are configured as sources of data relevant to the extension. To update resources that are included in an extension, you can use the API method [Deploy or update deployment of an extension.](/apidocs/logs-service-api#update-extension-deployment).
+You might want to deploy a new version of an extension, deploy additional resources, or modify the applications and subsystems that are configured as sources of data relevant to the extension. To update resources that are included in an extension, you can use the API method [Deploy or update deployment of an extension.](/apidocs/logs-service-api#update-extension-deployment).
 
 Complete the following steps to update an extension:
 
 Make sure that you specify in the API call all the resources from that extension that are currently deployed. If you have modified any resources previously deployed from this extension, detach the resources before running the update. If you do not include all resources previously deployed, they ones that are not included are removed.
-{: important}
+{: attention}
 
 1. Get the authentication token. See [Authentication via API](/apidocs/logs-service-api#authentication).
 
@@ -314,7 +314,7 @@ Make sure that you specify in the API call all the resources from that extension
     ```
     {: codeblock}
 
-5. Run the the API call. For example, you can run the following cURL command for the Kubernetes extension that keeps only the dashboard and 1 alert:
+5. Update the extension. For example, you can run the following cURL command to update the Kubernetes extension and keep only 1 dashboard and 1 alert:
 
     ```text
     curl -X PUT --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Accept: application/json"   --header "Content-Type: application/json"   --data   '{
@@ -355,19 +355,16 @@ To deploy an extension, complete the following steps:
 7. Click **+ Deploy** to install the extension in your {{site.data.keyword.logs_full_notm}} instances.
 
 
-## Modifying a deployed extension dashboard
+## Modifying a deployed extension
 {: #extensions-mgmt-modify-ui}
 {: ui}
 
+You might want to deploy a new version of an extension, deploy additional resources, or modify the applications and subsystems that are configured as sources of data relevant to the extension.
 
-After deploying an extension you can change a deployed custom dashboard by [modifying the dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards#modify_dashboard).
-
-You can also change the *Applications* and *Subsystems* associated with the deployed extension.
-
-If you have modified assets deployed by the extension (for example, dashboards), make sure that you keep a copy of those assets by editing them and saving them with **Save As** before updating the *Applications* and *Subsystems* associated with the deployed extension. When you update the *Applications* and *Subsystems* values in the extension, all assets are updated with the default extension assets and are associated with the new *Applications* and *Subsystems* values.
+Make sure that you keep selected all the resources from that extension that are currently deployed. If you have modified any resources previously deployed from this extension, detach the resources before running the update. If you do not include all resources previously deployed, they ones that are not included are removed.
 {: attention}
 
-Complete the following steps:
+Complete the following steps to update an extension:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
@@ -379,10 +376,13 @@ Complete the following steps:
 
 5. Change the *Applications* and *Subsystems* values as needed.
 
+    When you update the *Applications* and *Subsystems* values in the extension, all resources in the extension that you deploy are updated with the new list of *Applications* and *Subsystems* values.
+    {: attention}
+
 6. Click **Update**.
 
 ## Removing an extension
-{: #extensions-mgmt-remov-ui}
+{: #extensions-mgmt-remove-ui}
 {: ui}
 
 
@@ -405,6 +405,31 @@ To remove an extension you already have deployed in your instance, complete the 
    If you choose to keep the deployed assets when deleting the extension, the assets deployed by the extension will remain in your {{site.data.keyword.logs_full_notm}} instance, but will no longer be associated with the extension. If you deploy the extension again, a new copy of the extension will be deployed and the assets previously deployed will remain in your {{site.data.keyword.logs_full_notm}} instance and will not be overwritten.
 
 7. Click **Remove**.
+
+## Dettaching resources from a deployed extension
+{: #extensions-mgmt-dettach-ui}
+{: ui}
+
+To dettach resources from a deployed extension, complete the following steps:
+
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+
+2. [Access your {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
+
+3. Click the **Integrations icon** ![Integrations icon](/icons/integrations.svg "Integrations") > **Extensions**.
+
+4. Click the tile of the deployed extension you want to remove.
+
+5. Click **- Remove**.
+
+6. Choose `Retain all assets` to keep the modified assets that are deployed by the extension in your {{site.data.keyword.logs_full_notm}} instance.
+
+7. Click **Remove**.
+
+    Dettach resources will no longer be associated with the extension.
+
+    If you deploy the extension again, a new copy of the extension will be deployed and the assets previously deployed will remain in your {{site.data.keyword.logs_full_notm}} instance and will not be overwritten.
+
 
 ## Removing an extension
 {: #extensions-mgmt-remove-api}
