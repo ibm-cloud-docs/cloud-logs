@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-03-25"
+lastupdated: "2026-03-27"
 
 keywords:
 
@@ -132,7 +132,7 @@ To get the list of extensions available for deployment, including additional det
 {: #determine-extensions-api-deployed-api}
 {: api}
 
-To get information about the extensions that are deployed in an {{site.data.keyword.logs_full_notm}} instance, you can use the method [Get list of extensions](/apidocs/logs-service-api#get-extensions).
+To get information about the extensions that are deployed in an {{site.data.keyword.logs_full_notm}} instance, you can use the method [Get list of extensions](/apidocs/logs-service-api#get-extensions). Information includes details on the version and deployed resources.
 
 For example, complete the following steps:
 
