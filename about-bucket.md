@@ -44,7 +44,7 @@ For more information, see [Getting started with {{site.data.keyword.cos_full_not
 
 
 
-## Data and metrics buckets
+## About buckets with {{site.data.keyword.logs_full_notm}}
 {: #about-bucket-clbuckets}
 
 For each {{site.data.keyword.logs_full_notm}} instance, you can configure 1 data bucket and 1 metrics bucket.
@@ -86,7 +86,7 @@ The {{site.data.keyword.cos_full}} service is billed separately from {{site.data
 {: restriction}
 
 
-## IAM Service to service authorization
+## IAM Service to service authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.cos_full_notm}}
 {: #about-bucket-s2s}
 
 You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.cos_full_notm}} to allow {{site.data.keyword.logs_full_notm}} to read and write data into the buckets.
