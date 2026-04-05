@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-01"
+lastupdated: "2026-04-05"
 
 keywords:
 
@@ -14,62 +14,85 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-#  Archive Retention Tags
+# Configuring archive retention tags to manage data retention
 {: #retention-tags}
 
-In {{site.data.keyword.logs_full_notm}}, you can work with retention tags to get an extra layer of granularity for your data retention, in addition to our TCO Optimizer. Using our new Archive Retention feature, you can now control and modify the lenth of time your logs are archived.
+In {{site.data.keyword.logs_full_notm}}, you can use {{site.data.keyword.cos_full_notm}} object tags to manage automatically how long log data is available for search in the data bucket.
 {: shortdesc}
 
-## Overview
-{: #retention-tags-overview}
+After you configure the data bucket for an {{site.data.keyword.logs_full_notm}} instance, log data is stored in the bucket and you can search the data. You are responsible for the maintenance of the bucket and the data stored in the bucket.
 
-When creating a new policy for your data retention in your TCO Quota Optimizer screen, you now have the option to define a lifecycle policy - the length of archieve retention for a specific group of logs, defined by application, subsystem, and severity.
+By default, data in the bucket is kept indefinitely.
 
-Users can choose between 4 default retention periods: default, short, intermediate, or long. The names and values for the latter three are subjective and determined by the tag names set by the user in his/her s3 bucket configuration. While one user may define a "short" retention period as 3 days, another may define this period as 15 days. Another user may choose to change the name of the "short" retention period to "minimum."
-(image)
+To delete objects automatically after a defined period (from the object creation date), you can configure {{site.data.keyword.cos_full_notm}} expiration rules (lifecycle policies) to manage automatically the deletion of object files based on number of days since the object creation date. However, if you want a more granular control on the data that is kept for search in the data bucket and delete files automatically by using different retention periods on the data, you must configure in {{site.data.keyword.cos_full_notm}} expiration rules that limit the scope by using the object tag `ICL_ARCHIVE_RETENTION` and use the tag values that you define in your {{site.data.keyword.logs_full_notm}} instance. For more information, see [Deleting files from the data bucket](/docs/cloud-logs?topic=cloud-logs-about-bucket#about-bucket-cl-data-bucket-maintain).
+
+Archive retention tags are attached to object files that are uploaded into the data bucket after they are defined and enabled in the {{site.data.keyword.logs_full_notm}} instance.
 
 
-Note:
-Only new archived files are affected by these new settings.
-Files created before the new lifecycle policy have no retention tag and are not changed retroactively. The data retention policy that applied to them before the new lifecycle policy - default or defined - will continue to apply even after the new settings are put in place.
+## Prerequisites
+{: #retention-tags-prereqs}
 
-## Configuration
-{: #retention-tags-configuration}
+- An {{site.data.keyword.cloud_notm}} account.
+- An {{site.data.keyword.logs_full_notm}} instance.
+- Permissions in {{site.data.keyword.logs_full_notm}} to configure archive retention tags. You need the role **Manager** that includes the action **logs.archive-retention.manage** and **logs.archive-retention.read**. For more information, see [Getting started with IAM](/docs/cloud-logs?topic=cloud-logs-iam).
 
-1. Create an s3 bucket for configuration.
-2. Configure GetObjectTagging and PutObjectTagging permissions.
-- `Search S3 in your AWS search bar and select this service`.
-- `Find and click the bucket of choice for storing the archive`.
-- `Navigate to the permissions tab. Edit the Bucket Policy`.
-(Image)
+## Configure custom archive retention tags in {{site.data.keyword.logs_full_notm}}
+{: #retention-tags-step1}
+{: step}
 
-- `Paste the following code and update the name of your bucket:`
+Complete the following steps:
 
-(Code)
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 
-- `Click Save`.
+2. In the dashboard, click **Data Pipeline** > **Retention Tags**.
 
-3. (Image)
+    The Archive retention tags page opens.
 
-## Create a Lifecycle Policy
-{: #retention-tags-create-a-lifecycle-policy}
+    ![Archive retention tags.](images/archive-retention-tags.png "Archive retention tags."){: caption="Archive retention tags." caption-side="bottom"}
 
-The following section demonstrates one method of creating a lifecycle policy using AWS CLI. The example below sets a policy to remove archive files with the retention "short" after 15 days.
+3. Click **Edit** and enter values for 1 or more retention tags.
 
-1. Define a policy in a local lifecycle.jason file.
-(Code)
-2. Apply the policy
-(code)
+    Define per tag how data is classified. You can define your own values and criteria.{: important}
 
-Note:
-- This command will completely override the current policy of the bucket, if exists.
-- If you wish to append your existing policy, proceed with this command first and only then update lifecycle policy.
+    If you plan to have different retention policies per TCO data pipeline, enter the following values:
 
-3. Verify that the policy has been changed.
-(Code)
+    - **high** for *Retention Tag 1*, where high represents data processed through the {{site.data.keyword.frequent-search}} TCO data pipeline.
+    - **medium** for *Retention Tag 2*, where medium represents data processed through the {{site.data.keyword.monitoring}} TCO data pipeline.
+    - **low** for *Retention Tag 3*, where low represents data processed through the {{site.data.keyword.compliance}} TCO data pipeline.
 
-## Define Archive Retention Settings
-{: #retention-tags-define-archive-retention-settings}
+    If you plan to have different retention policies per log priority, enter the following values:
+
+    - **critical** for for *Retention Tag 1*, where critical represents data that have a log priority set to `debug` or `verbose`.
+    - **info** for for *Retention Tag 2*, where info represents data that have a log priority set to `info` or `warning`.
+    - **debug** for for *Retention Tag 3*, where debug represents data that have a log priority set to `error` or `critical`.
+
+4. Click **Activate** to enable this feature.
+
+
+After you activate archive retention tags, consider the following information:
+
+- This feature cannot be disabled.
+
+    Retention tags cannot be deactivated once enabled.
+    {: attention}
+
+- Custom tags are available to configure TCO policies.
+
+- You can modify the retention tags by clicking **Edit**.
+
+- New files in your data bucket are tagged with the custom tag `ICL_ARCHIVE_RETENTION`. The value of the tag is set to a custom tag value or to `default`.
+
+
+## Create expiration rules in {{site.data.keyword.cos_full_notm}}
+{: #retention-tags-step2}
+{: step}
+
+To create expiration rules, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
+
+
+## Configure TCO policies
+{: #retention-tags-step3}
+{: step}
 
 Once you configure your cx-data bucket in S3, set your Archive Retention Settings.
 1. In your {{site.data.keyword.logs_full_notm}} navigation bar, click **Data Flow > Select Setup Archive**.
@@ -82,10 +105,19 @@ Note:
 
  4. View your changes by navigating to **Data Flow > TCO Quota Optimizer**.
 
+
+
+
+You can use the `default` tag to define a default expiration period that you can apply to data that is not explicitly managed through a custom object tag.
+
+
+
  ## TCO Override
  {: #retention-tags-TCO-Override}
 
  Configuring a TCO override replaces the TCO policy for the specified application-subsystem-severity combination, including any associated Archive Retention Tags. In these cases, the Archive Retention Tag is overridden and reverts to the default tag.
+
+ When creating a new policy for your data retention in your TCO Quota Optimizer screen, you now have the option to define a lifecycle policy - the length of archieve retention for a specific group of logs, defined by application, subsystem, and severity.
 
 ### Impact
 {: #retention-tags-impact}
@@ -125,16 +157,3 @@ Notes:
 - `If you do not specify your retention policy, logs meeting the established criteria will be retained in your archive for the default period of time`.
 
 (Image)
-
-## Previously Archived Files
-{: #retention-previously-archived-files}
-
-Files created before the new lifecycle policy have no retention tag and are not changed retroactively when you establish a new retention policy. The data retention policy that applied to them beforehand - whether default or defined - will continue to apply even after your new settings are put in place.
-(code)
-
-## Additional Resources
-{: #retention-S3-bucket-configuration}
-
-- S3 Bucket Configuration
-
-## Support

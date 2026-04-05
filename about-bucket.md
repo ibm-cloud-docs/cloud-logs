@@ -70,19 +70,25 @@ You are responsible for the bucket and the data that is uploaded into the bucket
 
 - Compliance, corporate and industry requirements are key inputs to help define how long to keep the data for.
 
-- In {{site.data.keyword.cos_full}}, you can configure object lifecycle policies, including tags, to automatically delete files from your buckets.
+- In {{site.data.keyword.cos_full_notm}}, you can configure object lifecycle policies, including tags, to automatically delete files from your buckets.
 
 Deleted data will no longer be queryable. Ensure that you no longer require the deleted data for any queries or processes before removing it.
 {: attention}
 
-While all data stored in {{site.data.keyword.cos_full}} is automatically encrypted using randomly generated keys, some workloads require that the keys can be rotated, deleted, or otherwise controlled by a key management system (KMS) like {{site.data.keyword.keymanagementservicefull}}. Data at rest is encrypted with automatic provider-side Advanced Encryption Standard (AES) 256-bit encryption and the Secure Hash Algorithm (SHA)-256 hash. Data in motion is secured by using the built-in carrier grade Transport Layer Security/Secure Sockets Layer (TLS/SSL) or SNMPv3 with AES encryption. If you want more control over encryption, you can make use of {{site.data.keyword.keymanagementservicefull}} to manage generated or "bring your own" keying. For more information, see [Encrypting a bucket with {{site.data.keyword.keymanagementservicefull}}](/docs/cloud-object-storage?topic=cloud-object-storage-tutorial-kp-encrypt-bucket) and [Key-protect COS Integration](/docs/key-protect?topic=key-protect-integrate-cos).
+To use different object lifecycle periods for metrics and logs data, you must use different buckets to handle your log data and your metrics data separately, and configure the lifecycle policies appropriately.
+{: tip}
+
+To use different lifecycle periods for logs data ingested through different data pipelines, you must configure archive retention tags in {{site.data.keyword.logs_full_notm}} and lifecycle policies filtering by tag appropriately.
+{: tip}
+
+While all data stored in {{site.data.keyword.cos_full_notm}} is automatically encrypted using randomly generated keys, some workloads require that the keys can be rotated, deleted, or otherwise controlled by a key management system (KMS) like {{site.data.keyword.keymanagementservicefull}}. Data at rest is encrypted with automatic provider-side Advanced Encryption Standard (AES) 256-bit encryption and the Secure Hash Algorithm (SHA)-256 hash. Data in motion is secured by using the built-in carrier grade Transport Layer Security/Secure Sockets Layer (TLS/SSL) or SNMPv3 with AES encryption. If you want more control over encryption, you can make use of {{site.data.keyword.keymanagementservicefull}} to manage generated or "bring your own" keying. For more information, see [Encrypting a bucket with {{site.data.keyword.keymanagementservicefull}}](/docs/cloud-object-storage?topic=cloud-object-storage-tutorial-kp-encrypt-bucket) and [Key-protect COS Integration](/docs/key-protect?topic=key-protect-integrate-cos).
 
 Notice that data that is stored in the data bucket includes data across all TCO data pipelines: data from {{site.data.keyword.frequent-search}}, {{site.data.keyword.monitoring}} and {{site.data.keyword.compliance}}. If the data must be protected by a customer-managed encryption only, then [TCO policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) need to be configured to exclusively process data through the {{site.data.keyword.monitoring}} or {{site.data.keyword.compliance}} data pipelines. For more information, see [Configuring the TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-optimizer).
 {: attention}
 
-The {{site.data.keyword.cos_full}} service is billed separately from {{site.data.keyword.logs_full_notm}}. {{site.data.keyword.cos_full}} storage costs are determined by the [pricing plan](https://cloud.ibm.com/objectstorage/create#pricing){: external} that you choose for the {{site.data.keyword.cos_full}} instance.
+The {{site.data.keyword.cos_full_notm}} service is billed separately from {{site.data.keyword.logs_full_notm}}. {{site.data.keyword.cos_full_notm}} storage costs are determined by the [pricing plan](https://cloud.ibm.com/objectstorage/create#pricing){: external} that you choose for the {{site.data.keyword.cos_full_notm}} instance.
 
-{{site.data.keyword.logs_full_notm}} does not support {{site.data.keyword.cos_full}} buckets configured with [retention policies](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), [object lock policies](/docs/cloud-object-storage?topic=cloud-object-storage-ol-overview), or with [public access enabled](/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access) since {{site.data.keyword.logs_full_notm}} requires deletion permissions on the logs and metrics buckets.
+{{site.data.keyword.logs_full_notm}} does not support {{site.data.keyword.cos_full_notm}} buckets configured with [retention policies](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), [object lock policies](/docs/cloud-object-storage?topic=cloud-object-storage-ol-overview), or with [public access enabled](/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access) since {{site.data.keyword.logs_full_notm}} requires deletion permissions on the logs and metrics buckets.
 {: restriction}
 
 
@@ -110,7 +116,7 @@ You can configure a data bucket for an {{site.data.keyword.logs_full_notm}} inst
 
     Direct endpoints are used for requests originating from resources within VPCs. Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers. For more information, see [Endpoint Types](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types).
 
-- You are responsible for the maintenance of the data bucket. In {{site.data.keyword.logs_full_notm}}, you can use {{site.data.keyword.cos_full}} object tags to help you manage automatically the log data in a bucket. For more information, see [Deleting files from the data bucket](#about-bucket-cl-data-bucket-maintain).
+- You are responsible for the maintenance of the data bucket. In {{site.data.keyword.logs_full_notm}}, you can use {{site.data.keyword.cos_full_notm}} object tags to help you manage automatically the log data in a bucket. For more information, see [Deleting files from the data bucket](#about-bucket-cl-data-bucket-maintain).
 
 
 ### Files uploaded to the data bucket
@@ -144,16 +150,27 @@ cx/parquet/v1/team_id=58/dt=2024-12-18/hr=14/710bb5f8-0cfc-4706-8aec-27ec7d993af
 ### Deleting files from the data bucket
 {: #about-bucket-cl-data-bucket-maintain}
 
-In {{site.data.keyword.cos_full}}, you can define expiration rules on buckets. An expiration rule deletes objects after a defined period (from the object creation date). The expiration rules for each bucket are evaluated once every 24 hours. Any object that qualifies for expiration (based on the objects' expiration date) will be queued for deletion. The deletion of expired objects begins the following day and will typically take less than 24 hours.
-- You can configure object lifecycle policies that can limit the scope of the rule by using one or more filters such as an object prefix, an object tags, or an object size.
+In {{site.data.keyword.cos_full_notm}}, you can define expiration rules (lifecycle policies) on buckets. An expiration rule deletes objects after a defined period (from the object creation date). The expiration rules for each bucket are evaluated once every 24 hours. Any object that qualifies for expiration (based on the objects' expiration date) will be queued for deletion. The deletion of expired objects begins the following day and will typically take less than 24 hours.
+- You can configure expiration rules that can limit the scope of the rule by using one or more filters such as an object prefix, an object tags, or an object size.
 - You can use tags as a filter option that allows expiration rules to apply to objects that contain a matching tag. The tag filter is provided as a container that specifies a key string and value string. The key string must be less than 128 characters.
 - If no prefix, tag or object size is configured, the policy will apply to all objects in the bucket.
 For more information, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
 
-In {{site.data.keyword.logs_full_notm}}, you can use object tags to help you manage automatically the log data in a bucket.
-- You can define up to 3 custom object tags that you can use to define 3 different expiration periods on the log data.
-- You can use the `default` tag to define a default expiration period that you can apply to data that is not explicitly managed through a custom object tag.
-- In your bucket lifecycle policies section, you must configure expiration rules for each tag, including default.
+In {{site.data.keyword.cos_full_notm}}, you can configure expiration rules (lifecycle policies) to manage automatically the deletion of object files based on number of days since the object creation date. However, if you want a more granular control on the data that is kept for search in the data bucket and delete files automatically by using different retention periods on the data, you must configure in {{site.data.keyword.cos_full_notm}} expiration rules that limit the scope by using the object tag `ICL_ARCHIVE_RETENTION` and use the tag values that you define in your {{site.data.keyword.logs_full_notm}} instance.
+{: note}
+
+To use archive retention tags, you must complete the following steps:
+
+1. In {{site.data.keyword.logs_full_notm}}, configure {{site.data.keyword.cos_full_notm}} object tags to manage automatically how long log data is available for search in the data bucket.
+
+    - You must configure and enable archive retention tags in your {{site.data.keyword.logs_full_notm}} instance. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+    - You can define up to 3 custom object tags that you can use to define 3 different expiration periods on the log data.
+    - You can use the `default` tag to define a default expiration period that you can apply to data that is not explicitly managed through a custom object tag.
+
+    After you activate archive retention tags, every file in your data bucket is tagged with the custom tag `ICL_ARCHIVE_RETENTION`. The value of the tag is set to a custom tag value or to `default`. This action cannot be undone. Retention tags cannot be deactivated once enabled.
+    {: attention}
+
+2. In your {{site.data.keyword.cos_full_notm}} data bucket lifecycle policies section, configure expiration rules for each tag, including default.
 
     Use the key `ICL_ARCHIVE_RETENTION`.
 
@@ -162,15 +179,12 @@ In {{site.data.keyword.logs_full_notm}}, you can use object tags to help you man
     Make sure the tag names that you configure in {{site.data.keyword.logs_full_notm}} match the tag values you set in the expiration policies in your bucket. Tag values are case-sensitive.
     {: attention}
 
-- When you configure a TCO policy, you can define the object tag to use with the data selected in the policy. If no tag is configured, the `default` tag is used.
+3. In {{site.data.keyword.logs_full_notm}}, configure 1 or more TCO policies and define the object tag to use with the data selected in the policy. If no tag is configured, the `default` tag is used.
 
-Data that is sent to the log data bucket is uploaded into object files. Each file has 1 object tag `ICL_ARCHIVE_RETENTION` and value. For more information, see [Retention tags](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+    Data that is sent to the log data bucket is uploaded into object files. Each file has 1 object tag `ICL_ARCHIVE_RETENTION` and value. For more information, see [Retention tags](/docs/cloud-logs?topic=cloud-logs-retention-tags).
 
-To use different object lifecycle periods for metrics and logs data, you must use different buckets to handle your log data and your metrics data separately, and configure the lifecycle policies appropriately.
-{: tip}
-
-To use different lifecycle periods for logs data ingested through different data pipelines, you must configure archive retention tags in {{site.data.keyword.logs_full_notm}} and lifecycle policies filtering by tag appropriately.
-{: tip}
+Archive retention tags are attached to object files that are uploaded into the data bucket after they are defined and enabled in the {{site.data.keyword.logs_full_notm}} instance.
+{: note}
 
 
 
@@ -192,4 +206,4 @@ You can configure a metrics bucket for an {{site.data.keyword.logs_full_notm}} i
 
     Direct endpoints are used for requests to a bucket that originate from resources within VPCs. Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers. For more information, see [Endpoint Types](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types).
 
-- You are responsible for the maintenance of the metrics bucket. In {{site.data.keyword.cos_full}}, you can define an expiration rule to maintain data in the metrics bucket. For more information, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
+- You are responsible for the maintenance of the metrics bucket. In {{site.data.keyword.cos_full_notm}}, you can define an expiration rule to maintain data in the metrics bucket. For more information, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).

@@ -160,8 +160,6 @@ toc:
       - topicgroup:
           label: TCO Optimizer
           topics:
-          - topic: tco-data-pipelines.md
-            navtitle: TCO Data pipelines
           - topic: tco-optimizer.md
             navtitle: Configuring the TCO Optimizer
           - topic: tco-policy-order.md
