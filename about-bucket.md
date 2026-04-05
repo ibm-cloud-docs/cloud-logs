@@ -43,6 +43,7 @@ To create a bucket, you can choose 1 of the following options:
 For more information, see [Getting started with {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 
+
 ## Data and metrics buckets
 {: #about-bucket-clbuckets}
 
@@ -84,37 +85,6 @@ The {{site.data.keyword.cos_full}} service is billed separately from {{site.data
 {{site.data.keyword.logs_full_notm}} does not support {{site.data.keyword.cos_full}} buckets configured with [retention policies](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), [object lock policies](/docs/cloud-object-storage?topic=cloud-object-storage-ol-overview), or with [public access enabled](/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access) since {{site.data.keyword.logs_full_notm}} requires deletion permissions on the logs and metrics buckets.
 {: restriction}
 
-## Deleting files from the Data and metrics buckets
-{: #about-bucket-clbuckets-maintain}
-
-In {{site.data.keyword.cos_full}}, you can define expiration rules on buckets. An expiration rule deletes objects after a defined period (from the object creation date). The expiration rules for each bucket are evaluated once every 24 hours. Any object that qualifies for expiration (based on the objects' expiration date) will be queued for deletion. The deletion of expired objects begins the following day and will typically take less than 24 hours.
-- You can configure object lifecycle policies that can limit the scope of the rule by using one or more filters such as an object prefix, an object tags, or an object size.
-- You can use tags as a filter option that allows expiration rules to apply to objects that contain a matching tag. The tag filter is provided as a container that specifies a key string and value string. The key string must be less than 128 characters.
-- If no prefix, tag or object size is configured, the policy will apply to all objects in the bucket.
-
-In {{site.data.keyword.logs_full_notm}}, you can use object tags to help you manage automatically the log data in a bucket.
-- You can use a maximum of 3 object tags that you can use to define 3 different expiration periods on the log data.
-- In your bucket lifecycle policies section, you must configure expiration rules for each tag, including default.
-
-    Use the key `ICL_ARCHIVE_RETENTION`.
-
-    The value string must be less than 256 characters. For example, you can use values like `high`, `medium`, and `low`.
-
-    Make sure the tag names that you configure in {{site.data.keyword.logs_full_notm}} match the tag values you set in the expiration policies in your bucket. Tag values are case-sensitive.
-    {: attention}
-
-- When you configure a TCO policy, you can define the object tag to use with the data selected in the policy. If no tag is configured, the `default` tag is used.
-
-Data that is sent to the log data bucket is uploaded into object files. Each file has 1 object tag `ICL_ARCHIVE_RETENTION` and value. For more information, see [Retention tags](/docs/cloud-logs?topic=cloud-logs-retention-tags).
-
-To use different object lifecycle periods for metrics and logs data, you must use different buckets to handle your log data and your metrics data separately, and configure the lifecycle policies appropriately.
-{: tip}
-
-To use different lifecycle periods for logs data ingested through different data pipelines, you must configure archive retention tags in {{site.data.keyword.logs_full_notm}} and lifecycle policies filtering by tag appropriately.
-{: tip}
-
-For more information, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
-
 
 ## IAM Service to service authorization
 {: #about-bucket-s2s}
@@ -126,10 +96,11 @@ For more information, see:
 - [Creating a cross-account S2S authorization to grant access to a bucket when the {{site.data.keyword.logs_full_notm}} instance and the bucket are in different accounts](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos-crossacc).
 
 
+
 ## Data bucket
 {: #about-bucket-data}
 
-You can configure a data bucket for an {{site.data.keyword.logs_full_notm}} instance.
+You can configure a data bucket for an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Configuring the data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket).
 
 - The data bucket stores and retains logs for as long as you need them.
 
@@ -139,10 +110,11 @@ You can configure a data bucket for an {{site.data.keyword.logs_full_notm}} inst
 
     Direct endpoints are used for requests originating from resources within VPCs. Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers. For more information, see [Endpoint Types](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types).
 
-- You are responsible for the maintenance of the data bucket.
+- You are responsible for the maintenance of the data bucket. In {{site.data.keyword.logs_full_notm}}, you can use {{site.data.keyword.cos_full}} object tags to help you manage automatically the log data in a bucket. For more information, see [Deleting files from the data bucket](#about-bucket-cl-data-bucket-maintain).
 
-For more information, see [Configuring the data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket).
 
+### Files uploaded to the data bucket
+{: #about-bucket-cl-data-bucket-objects}
 
 Logs are stored as Parquet files with the following structure:
 
@@ -169,12 +141,46 @@ cx/parquet/v1/team_id=58/dt=2024-12-18/hr=14/710bb5f8-0cfc-4706-8aec-27ec7d993af
 
 
 
+### Deleting files from the data bucket
+{: #about-bucket-cl-data-bucket-maintain}
+
+In {{site.data.keyword.cos_full}}, you can define expiration rules on buckets. An expiration rule deletes objects after a defined period (from the object creation date). The expiration rules for each bucket are evaluated once every 24 hours. Any object that qualifies for expiration (based on the objects' expiration date) will be queued for deletion. The deletion of expired objects begins the following day and will typically take less than 24 hours.
+- You can configure object lifecycle policies that can limit the scope of the rule by using one or more filters such as an object prefix, an object tags, or an object size.
+- You can use tags as a filter option that allows expiration rules to apply to objects that contain a matching tag. The tag filter is provided as a container that specifies a key string and value string. The key string must be less than 128 characters.
+- If no prefix, tag or object size is configured, the policy will apply to all objects in the bucket.
+For more information, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
+
+In {{site.data.keyword.logs_full_notm}}, you can use object tags to help you manage automatically the log data in a bucket.
+- You can define up to 3 custom object tags that you can use to define 3 different expiration periods on the log data.
+- You can use the `default` tag to define a default expiration period that you can apply to data that is not explicitly managed through a custom object tag.
+- In your bucket lifecycle policies section, you must configure expiration rules for each tag, including default.
+
+    Use the key `ICL_ARCHIVE_RETENTION`.
+
+    The value string must be less than 256 characters. For example, you can use values like `high`, `medium`, and `low`.
+
+    Make sure the tag names that you configure in {{site.data.keyword.logs_full_notm}} match the tag values you set in the expiration policies in your bucket. Tag values are case-sensitive.
+    {: attention}
+
+- When you configure a TCO policy, you can define the object tag to use with the data selected in the policy. If no tag is configured, the `default` tag is used.
+
+Data that is sent to the log data bucket is uploaded into object files. Each file has 1 object tag `ICL_ARCHIVE_RETENTION` and value. For more information, see [Retention tags](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+
+To use different object lifecycle periods for metrics and logs data, you must use different buckets to handle your log data and your metrics data separately, and configure the lifecycle policies appropriately.
+{: tip}
+
+To use different lifecycle periods for logs data ingested through different data pipelines, you must configure archive retention tags in {{site.data.keyword.logs_full_notm}} and lifecycle policies filtering by tag appropriately.
+{: tip}
+
+
+
 {{_include-segments/data-bucket-restrictions.md}}
+
 
 ## Metrics bucket
 {: #about-bucket-metrics}
 
-You can configure a metrics bucket for an {{site.data.keyword.logs_full_notm}} instance.
+You can configure a metrics bucket for an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Configuring the metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
 
 - The metrics bucket stores and retains metrics from your events in a long-term index for as long as you need them.
 
@@ -186,6 +192,4 @@ You can configure a metrics bucket for an {{site.data.keyword.logs_full_notm}} i
 
     Direct endpoints are used for requests to a bucket that originate from resources within VPCs. Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers. For more information, see [Endpoint Types](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types).
 
-- You are responsible for the maintenance of the metrics bucket.
-
-For more information, see [Configuring the metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
+- You are responsible for the maintenance of the metrics bucket. In {{site.data.keyword.cos_full}}, you can define an expiration rule to maintain data in the metrics bucket. For more information, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
