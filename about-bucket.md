@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-01"
+lastupdated: "2026-04-05"
 
 keywords:
 
@@ -59,9 +59,11 @@ You should create a bucket with _Cross Region_ resiliency to store and access da
 
 You can configure the same bucket as your data bucket and your metrics bucket. However, consider the following recommendations:
 
-- Use different buckets for data and for metrics for production environments.{:tip}
+Use different buckets for data and for metrics for production environments.
+{: tip}
 
-- Use separate buckets for logs and metrics if you have different data retention requirements on logs and metrics.
+Use separate buckets for logs and metrics if you have different data retention requirements on logs and metrics.
+{: tip}
 
 You are responsible for the bucket and the data that is uploaded into the buckets. You decide for how long you want to keep the data in a bucket.
 

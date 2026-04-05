@@ -148,7 +148,7 @@ toc:
           label: Managing COS buckets
           topics:
           - topic: about-bucket.md
-            navtitle: Configuring buckets
+            navtitle: About buckets
           - topic: cos.md
             navtitle: Managing buckets
           - topic: retention-tags.md
