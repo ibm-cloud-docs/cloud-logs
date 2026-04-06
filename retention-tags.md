@@ -96,6 +96,6 @@ To create expiration rules, see [Deleting stale data with expiration rules](/doc
 {: #retention-tags-step3}
 {: step}
 
-Create policies and configure the *archive retention* section. For more information, see [Creating a TCO policy](/docs/cloud-logs?topic=cloud-logs-tco-optimizer).
+Create policies and configure the *archive retention* section. For more information, see [Creating a TCO policy](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-create-policy).
 
 You can use the `default` tag to define a default expiration period that you can apply to data that is not explicitly managed through a custom object tag. You can use any of the custom retention tags that you have defined.

@@ -18,6 +18,9 @@ subcollection: cloud-logs
 In {{site.data.keyword.logs_full}}, you can configure the Total Cost of Ownership ({{site.data.keyword.tco-optimizer}}) and define policies that specify how to route logs to different data pipelines based on their business value. Each pipeline has a different storage price and offers different features. By defining the data pipeline based on the importance of the data to your business, the {{site.data.keyword.tco-optimizer}} can help you improve real-time analysis and alerting and helps you manage costs. In addition, if you enable archive retention tags in your {{site.data.keyword.logs_full_notm}} instance, you can also configure different data retention periods per policy.
 {: shortdesc}
 
+## About the {{site.data.keyword.tco-optimizer}}
+{: #tco-optimizer-about}
+
 By default, when you send data to an {{site.data.keyword.logs_full_notm}} instance, data is routed to the {{site.data.keyword.frequent-search}} data pipeline at ingestion. This data is retained and available for search by the {{site.data.keyword.logs_full}} service for the number of days that you specify at the instance level. You can configure 7 days, 14 days, 30 days or 90 days.
 
 The {{site.data.keyword.tco-optimizer}} includes the following data pipelines:
@@ -94,7 +97,7 @@ Policies are evaluated in order, top down by default. The first matching policy 
 - Policies that block data should be defined last.
 
 
-## {{site.data.keyword.frequent-search}} data pipeline
+### {{site.data.keyword.frequent-search}} data pipeline
 {: #tco-optimizer-high}
 
 
@@ -122,7 +125,7 @@ Features available for high prioirty logs are:
 
 * Viewing traces in your explore screen
 
-## {{site.data.keyword.monitoring}} data pipeline
+### {{site.data.keyword.monitoring}} data pipeline
 {: #tco-optimizer-medium}
 
 
@@ -143,7 +146,7 @@ Features available for medium priority logs are:
 
 - Viewing traces in your explore screen
 
-## {{site.data.keyword.compliance}} data pipeline
+### {{site.data.keyword.compliance}} data pipeline
 {: #tco-optimizer-low}
 
 Use the *{{site.data.keyword.compliance}} data pipeline* for logs that you must keep for compliance purposes but do not require action to be taken.

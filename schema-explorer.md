@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-01"
+lastupdated: "2026-04-06"
 
 keywords:
 
@@ -17,17 +17,36 @@ subcollection: cloud-logs
 #  Schema Explorer
 {: #schema-explorer}
 
-In {{site.data.keyword.logs_full_notm}}, you can use the Schema Explorer to unify and control the structure of your logs in {{site.data.keyword.logs_full_notm}}. Since logs often come from your many sources with different naming conventions, inconsistencies can quickly make analysis harder.
+Use the Schema Explorer to automatically detect, highlight, and report on differences detected in the structure of your logs as they are ingested such as duplicate fields with different data types that cause conflict.
 {: shortdesc}
 
-The Schema Explorer automatically detects, highlights, and reports on these differences so you can:
+Logs often come from different sources and might have different naming conventions, causing inconsistencies that can quickly make analysis harder. In {{site.data.keyword.logs_full}}, you can use the `Schema Explorer` to centralize information about the structure of your logs, naming conventions and data types.
+
+
+At ingestion, all fields are extracted regardless of structure or naming convention. After ingestion, the Schema Manager identifies duplicate or similar keys. Then, you can explore how each field is used, how often it appears, its unique values and any mapping exceptions.
+
+You can use the Schema Explorer to automatically detect, highlight, and report on differences structure of your logs.
 - Prevent duplicate fields.
 - Reduce query errors caused by inconsistent keys.
 - Discover and resolve duplicate or conflicting fields.
 - Provide feedback to developers when fields are misaligned.
 
+## Usage scenarios
+{: #schema-explorer-recommendations}
 
-## Key Features
+Consider the following information when using the Schema Explorer:
+
+- Regularly check for new fields ingested to catch inconsistent naming early.
+
+- Standardize fields names with your development teams to enhance querying and keep consistency across services and applications.
+
+- Standardize the type of fields names with your development teams to reduce mapping exceptions.
+
+- Identify fields that you must define as `Reserve fields` for critical analysis.
+
+
+
+## Information per field
 {: #schema-explorer-key-features}
 
 You can use Schema Explorer to get a complete view of the fields that are ingested across your logs, For each field, you can see:
@@ -44,14 +63,6 @@ You can use Schema Explorer to get a complete view of the fields that are ingest
 This helps you identify fields that may be redundant, inconsistent, or unexpectedly missing.
 
 
-## How it Works
-{: #schema-explorer-how-it-works}
-
-1. Ingestion - Ingests all log fields, regardless of structure or naming convention.
-2. Detection - Schema Management identifies duplicate or similar keys.
-3. Analysis - You can explore how each field is used, how often it appears, and its unique values.
-4. Unification - Align conflicting keys into a single schema, ensuring consistency across teams and services.
-
 
 ## Example Scenario
 {: #schema-explorer-example-scenario
@@ -60,22 +71,22 @@ You have three services sending user data:
 - `Service A uses surname`
 - `Service B uses familyname`
 - `Service C uses family-name`
-Without Schema Management, your queries might miss data because the fields don't match. With Schema Management, you can detect these variations and map them to a unified key such as last_name.
+Without Schema Management, your queries might miss data because the fields don't match. With Schema Management, you can detect these variations and map them to a unified key such as last_name by using a parsing rule.
 
 
-## UI Walkthrough
-{: #schema-explorer-UI-Walkthrough}
-1. Go to **Data Flow > Schema Explorer**
-2. Use the search bar to find specific fields.
-3. Review each field's popularity, type, mapping status, and cardinality to identify duplicates or inconsistencies
-4. Use Mapping Exceptions to align similar fields into a single schema.
+## launching Schema Explorer
+{: #schema-explorer-ui}
+
+Complete the following steps:
 
 
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 
-## Recommendations
-{: #schema-explorer-recommendations}
+2. In the dashboard, click **Data Pipeline** > **Schema Manager**.
 
-- `Regularly check for new fields ingested to catch inconsistent naming early`.
-- `Standardize fields names with your development teams to reduce mapping exceptions`.
-- `Reservice fields for critical identifiers that must remain consistent across services`.
-To take schema governance a step further, {{site.data.keyword.logs_full_notm}} provides Reserved Fields which are a way to explicitly define the fields that matter most for your queries, alerts, and dashboards. While Schema Explorer helps you discover and analyze fields, Reserved Fields let you lock in critical ones, ensuring they are always indexed with the correct type and available for use.
+    The Schema Explorer opens.
+
+Next, you can:
+- Use the search bar to find specific fields.
+- Review each field's popularity, type, mapping status, and cardinality to identify duplicates or inconsistencies
+- Check Mapping Exceptions to align similar fields into a single schema.

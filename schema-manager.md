@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-01"
+lastupdated: "2026-04-06"
 
 keywords:
 
@@ -14,15 +14,29 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-#  Schema Management
+#  Schema Manager
 {: #schema-manager}
 
-In {{site.data.keyword.logs_full_notm}}, you can use the Schema Management to get a unified approach to governing your logs, letting you both discover the structure of ingested data and enforce the fields that matter most.
+In {{site.data.keyword.logs_full}}, you can use the Schema Manager to get a unified approach to governing your logs, letting you both discover the structure of ingested data and enforce the fields that matter most.
 {: shortdesc}
 
 
-- The `Schema Explorer` gives you full visibility into how your fields are structured and behave across your data. It surfaces key insights like field paths, data types (including type collisions), usage patterns, cardinality trends, and mapping exceptions, helping you spot inconsistencies before they cause issues.
+The Schema Manager includes the following features:
 
-- `Reserved fields` moves from observation to action. You can explicitly define which fields must always be available for querying, pre-mapping them on ingestion with a specific data type to avoid index limits, misclassification, or query breakage. Reserved fields ensure the critical parts of your schema remain consistent and performant. For more information, see [Reserved fields](/docs/cloud-logs?topic=cloud-logs-reserved-fields).
+`Schema Explorer`
+:   Use the Schema Explorer to gain visibility into the fields that are indexed from your logs, see how they are structured and behave across your data, and spot inconsistencies before they cause issues. You can see their paths, any mapping exceptions, usage patterns, cardinality trends, and data types.
 
-Together, these tools provide a powerful 1-2 punch for schemas hygiene: explore existing schema health, then reserve what's essential. Want to keep queries reliable and your observability costs in check? Start with the Schema Explorer, then use Reserved Fields, to solidify the parts of your schema that power your dashboards and alerts.
+For more information, see [Schema Explorer](/docs/cloud-logs?topic=cloud-logs-schema-explorer).
+
+
+`Reserved fields`
+:  To take schema governance a step further, {{site.data.keyword.logs_full_notm}} provides Reserved Fields which are a way to explicitly define the fields that matter most for your queries, alerts, and dashboards.
+
+Use Reserved fields to ensure the critical parts of your schema remain consistent. You can explicitly define the list of fields that must be available for querying through Priority Insights, pre-mapping them on ingestion with a specific data type to avoid index limits and mapping issues, misclassification, or query breakage.
+
+For more information, see [Reserved fields](/docs/cloud-logs?topic=cloud-logs-reserved-fields).
+
+
+
+While `Schema Explorer` helps you discover and analyze fields, `Reserved Fields` let you lock in critical ones, ensuring they are always indexed with the correct type and available for use.
+{: attention}
