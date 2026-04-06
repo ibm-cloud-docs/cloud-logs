@@ -25,16 +25,16 @@ Logs often come from different sources and might have different naming conventio
 
 At ingestion, all fields are extracted regardless of structure or naming convention. After ingestion, the Schema Manager identifies duplicate or similar keys. Then, you can explore how each field is used, how often it appears, its unique values and any mapping exceptions.
 
-You can use the Schema Explorer to automatically detect, highlight, and report on differences structure of your logs.
+You can use the Schema Explorer to automatically detect, highlight, and report on differences identified on the structure of your logs.
 - Prevent duplicate fields.
 - Reduce query errors caused by inconsistent keys.
 - Discover and resolve duplicate or conflicting fields.
 - Provide feedback to developers when fields are misaligned.
 
-## Usage scenarios
+## Use-case scenarios
 {: #schema-explorer-recommendations}
 
-Consider the following information when using the Schema Explorer:
+Consider the following use-case scenarios when using the Schema Explorer:
 
 - Regularly check for new fields ingested to catch inconsistent naming early.
 
@@ -74,11 +74,10 @@ You have three services sending user data:
 Without Schema Management, your queries might miss data because the fields don't match. With Schema Management, you can detect these variations and map them to a unified key such as last_name by using a parsing rule.
 
 
-## launching Schema Explorer
+## Launching Schema Explorer
 {: #schema-explorer-ui}
 
 Complete the following steps:
-
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 
