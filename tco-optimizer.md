@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-05"
+lastupdated: "2026-04-06"
 
 keywords:
 
@@ -43,7 +43,7 @@ When you provision an {{site.data.keyword.logs_full_notm}} instance with an {{si
 To configure the {{site.data.keyword.tco-optimizer}} and use different data pipelines, you must have an {{site.data.keyword.cos_full_notm}} bucket attached to your {{site.data.keyword.logs_full_notm}} instance. If you do not have the data bucket attached to the instance and you configure policies that send data to the {{site.data.keyword.monitoring}} or the {{site.data.keyword.compliance}} data pipelines, the data is not available for search or alerting as it cannot be archived in the bucket.
 {: attention}
 
-Data that you send to the {{site.data.keyword.compliance}} pipeline by configuring a block parsing rule with the option to see data through live tail and search also stores data in the data bucket. However, notice that a block parsing rule is applied after the {{site.data.keyword.tco-optimizer}} policies are applied. Archive retention tags cannot be used with the data sent to {{site.data.keyword.compliance}} through a blick parsing rule.
+Data that you send to the {{site.data.keyword.compliance}} pipeline by configuring a block parsing rule with the option to see data through live tail and search also stores data in the data bucket. However, notice that a block parsing rule is applied after the {{site.data.keyword.tco-optimizer}} policies are applied. Archive retention tags cannot be used with the data sent to {{site.data.keyword.compliance}} through a block parsing rule.
 {: important}
 
 When you configure TCO policies, each policy is assigned a priority. The selected priority determines the TCO data pipeline for the logs that match the criteria.
@@ -94,7 +94,7 @@ Policies are evaluated in order, top down by default. The first matching policy 
 - Policies that block data should be defined last.
 
 
-### {{site.data.keyword.frequent-search}} data pipeline
+## {{site.data.keyword.frequent-search}} data pipeline
 {: #tco-optimizer-high}
 
 
@@ -122,7 +122,7 @@ Features available for high prioirty logs are:
 
 * Viewing traces in your explore screen
 
-### {{site.data.keyword.monitoring}} data pipeline
+## {{site.data.keyword.monitoring}} data pipeline
 {: #tco-optimizer-medium}
 
 
@@ -143,7 +143,7 @@ Features available for medium priority logs are:
 
 - Viewing traces in your explore screen
 
-### {{site.data.keyword.compliance}} data pipeline
+## {{site.data.keyword.compliance}} data pipeline
 {: #tco-optimizer-low}
 
 Use the *{{site.data.keyword.compliance}} data pipeline* for logs that you must keep for compliance purposes but do not require action to be taken.

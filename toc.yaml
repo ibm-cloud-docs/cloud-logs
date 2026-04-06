@@ -151,12 +151,12 @@ toc:
             navtitle: About buckets
           - topic: cos.md
             navtitle: Managing buckets
-          - topic: retention-tags.md
-            navtitle: Retention tags
           - topic: configure-data-bucket.md
             navtitle: Configuring the data bucket
           - topic: configure-metrics-bucket.md
             navtitle: Configuring the metrics bucket
+          - topic: retention-tags.md
+            navtitle: Configuring retention tags to manage data retention
       - topicgroup:
           label: TCO Optimizer
           topics:

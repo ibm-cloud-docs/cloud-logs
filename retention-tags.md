@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-05"
+lastupdated: "2026-04-06"
 
 keywords:
 
@@ -87,6 +87,8 @@ After you activate archive retention tags, consider the following information:
 {: #retention-tags-step2}
 {: step}
 
+Create an expiration rule each custom archive retention tag, and an expiration rule for the `Default` value.
+
 To create expiration rules, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
 
 
@@ -94,66 +96,6 @@ To create expiration rules, see [Deleting stale data with expiration rules](/doc
 {: #retention-tags-step3}
 {: step}
 
-Once you configure your cx-data bucket in S3, set your Archive Retention Settings.
-1. In your {{site.data.keyword.logs_full_notm}} navigation bar, click **Data Flow > Select Setup Archive**.
-2. In the Archive Retention section, name Retention Periods 2, 3 and 4. You may opt for names "Short,"Intermediate," and "Long" as in the example below, or you many choose otherwise. The value for each period - the length of time data will be retained in a specific retention period - is managed by the s3 storage lifecycle defined in your AWS account.
-3. Click ACTIVATE. You will receive a popup message that reads: "An archive retention policy has been added to the bucket-name Bucket successfully."
+Create policies and configure the *archive retention* section. For more information, see [Creating a TCO policy](/docs/cloud-logs?topic=cloud-logs-tco-optimizer).
 
-Note:
- - `Only once you have activated your archive retention settings will they appear in your TCO Quota Optimizer`.
- - `When modifying existing archive retention settings, the ACTIVATE button will be replaced with a SAVE button`.
-
- 4. View your changes by navigating to **Data Flow > TCO Quota Optimizer**.
-
-
-
-
-You can use the `default` tag to define a default expiration period that you can apply to data that is not explicitly managed through a custom object tag.
-
-
-
- ## TCO Override
- {: #retention-tags-TCO-Override}
-
- Configuring a TCO override replaces the TCO policy for the specified application-subsystem-severity combination, including any associated Archive Retention Tags. In these cases, the Archive Retention Tag is overridden and reverts to the default tag.
-
- When creating a new policy for your data retention in your TCO Quota Optimizer screen, you now have the option to define a lifecycle policy - the length of archieve retention for a specific group of logs, defined by application, subsystem, and severity.
-
-### Impact
-{: #retention-tags-impact}
-
-This behavior directly impacts S3 lifecycle policies that depend on retention tags. If the tag is overridden to the default, lifecycle policies associated with specific tags, like 'Revenue,' may not be applied as intended, potentially resulting in unintended data deletion.
-
-### Prevention
-{: #retention-tags-prevention}
-
-If you manage S3 Lifecycle Policies based on Archive Retention Tags, review and adjust overrides to prevent unintended data deletion.
-
-### Example
-{: #retention-tags-example}
-
-- `TCO override is not in use: Retention Tag = revenue, Lifecycle Policy transitions data to Glacier after 30 days and deletes it from Glacier after 1 year`.
-- `TCO override is in use: Retention Tag = default, Lifecycle Policy expires data after 60 days (if set to default)`.
-
-## Create a New Policy
-{: #retention-tags-new-policy}
-Once you create your Archive Retention settings, create a new data retention policy.
-
-1. In your {{site.data.keyword.logs_full_notm}} navigation bar, click **Data Flow > select TCO Quota Optimizer**.
-2. Click +ADD NEW POLICY.
-
-(Image)
-3. Input POLICY NAME.
-4. Define APPLICATIONS, SUBSYSTEMS and SEVERITY level.
-5. Define PRIORITY.
-Note:
--  `If data is marked as ‘blocked’, it will not be archived`.
-- `Only data marked as priority ‘High’, ‘Medium’, or ‘Low’ is archived. Only this data is eligible for additional archive retention settings`.
-
-6. Define ARCHIVE RETENTION Settings
-
-Notes:
-- `When you add an archive retention policy, logs meeting the established criteria (application, subsystem, and severity level) will be retained in your archive for the period of time associated with the policy`.
-- `If you do not specify your retention policy, logs meeting the established criteria will be retained in your archive for the default period of time`.
-
-(Image)
+You can use the `default` tag to define a default expiration period that you can apply to data that is not explicitly managed through a custom object tag. You can use any of the custom retention tags that you have defined.
