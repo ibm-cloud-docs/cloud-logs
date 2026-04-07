@@ -33,7 +33,7 @@ Functional updates and fixes are available in the Chennai (`in-che`) region only
 
     * Pipeline analyzer: You can use the pipeline analyzer to gain full visibility into how your logs are processed before being available for search. You can inspect logs as they move through your data pipelines and gain insights into any parsing rule that a log goes through before it is available for search. For more information, see [Pipeline analyzer](/docs/cloud-logs?topic=cloud-logs-pipeline-analyzer).
 
-    * Tag retention: You can use {{site.data.keyword.cos_full_notm}} object tags to manage automatically how long log data is available for search in the data bucket. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+    * Tag retention: (UI Only) You can use {{site.data.keyword.cos_full_notm}} object tags to manage automatically how long log data is available for search in the data bucket. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
 
     * Schema explorer: You can use the Schema Explorer to automatically detect, highlight, and report on differences detected in the structure of your logs as they are ingested such as duplicate fields with different data types that cause conflict. For more information, see [Schema explorer](/docs/cloud-logs?topic=cloud-logs-schema-explorer).
 
