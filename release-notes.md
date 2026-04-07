@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-07"
 
 keywords:
 
@@ -20,14 +20,19 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
+
+
+## 6 April 2026
+{: #cloud-logs-apr0626}
+
+Release of the {{site.data.keyword.agent}} version 1.8.1
+:    For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-apr0626)
+
 ## 25 March 2026
 {: #cloud-logs-march2526}
 
 Release of the Extensions API.
 :    For more information, see the [Extensions API](/apidocs/logs-service-api#get-extension) and [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
-
-
-
 
 ## 20 February 2026
 {: #cloud-logs-feb2026}
