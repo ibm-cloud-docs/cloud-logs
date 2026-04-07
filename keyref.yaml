@@ -5,4 +5,3 @@ keyword:
   tco-optimizer: TCO Optimizer
   agent: Logging agent
   compact-mode: Compact Mode
-  otel-agent: OTel collector
