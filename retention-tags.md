@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-06"
+lastupdated: "2026-04-07"
 
 keywords:
 
@@ -62,9 +62,9 @@ Complete the following steps:
 
     If you plan to have different retention policies per log priority, enter the following values:
 
-    - **critical** for for *Retention Tag 1*, where critical represents data that have a log priority set to `debug` or `verbose`.
+    - **debug** for for *Retention Tag 1*, where critical represents data that have a log priority set to `debug` or `verbose`.
     - **info** for for *Retention Tag 2*, where info represents data that have a log priority set to `info` or `warning`.
-    - **debug** for for *Retention Tag 3*, where debug represents data that have a log priority set to `error` or `critical`.
+    - **critical** for for *Retention Tag 3*, where debug represents data that have a log priority set to `error` or `critical`.
 
 4. Click **Activate** to enable this feature.
 
