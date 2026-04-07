@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2026
+lastupdated: "2026-04-07"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Using actions in {{site.data.keyword.logs_full_notm}} to integrate with third-party services
 {: #actions}
 
-In {{site.data.keyword.logs_full_notm}}, you can trigger third-party services based on your search results and values and send data to those services.
+In {{site.data.keyword.logs_full_notm}}, you can trigger third-party services based on your search results and values and send data to those services. You can create manage actions from views and dashboards.
 {: shortdesc}
 
 ## Creating an action
@@ -137,7 +137,7 @@ The following variables are supported:
 `$m.<metadata>`
 :   Metadata variables are available in the logs. For example, `$m.applicationName` or `$m.timestamp`.
 
-`$d.<key>.<subkey>` 
+`$d.<key>.<subkey>`
 :   Data that is available in the log. For example, `$d.kubernetes.labels.my_label`.
 
 `$p.start_time`
@@ -158,4 +158,3 @@ The following action generates a Jira issue.
 http://<company_name>.atlassian.net//secure/CreateIssueDetails!init.jspa?pid=<Jira_PID>&issuetype=<Jira_issueType>&description={{$d.logRecord.body}}&summary={{$d.msg}}
 ```
 {: codeblock}
-

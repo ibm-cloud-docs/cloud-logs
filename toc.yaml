@@ -153,8 +153,6 @@ toc:
             navtitle: Configuring the data bucket
           - topic: configure-metrics-bucket.md
             navtitle: Configuring the metrics bucket
-          - topic: retention-tags.md
-            navtitle: Configuring retention tags to manage data retention
       - topicgroup:
           label: TCO Optimizer
           topics:
@@ -248,17 +246,6 @@ toc:
               - dataprime-ref-uuid-func.md
               - dataprime-ref-date-time-func.md
               - dataprime-ref-encode-func.md
-      - topic: pipeline-analyzer.md
-        navtitle: Pipeline analyzer
-      - topicgroup:
-          label: Schema Manager
-          topics:
-          - topic: schema-manager.md
-            navtitle: Schema manager
-          - topic: schema-explorer.md
-            navtitle: Schema explorer
-          - topic: reserved-fields.md
-            navtitle: Reserved fields
       - topicgroup:
           label: Managing custom views
           topics:
@@ -417,8 +404,6 @@ toc:
             navtitle: Generating data usage overview reports
           - topic: data-usage-detailed-reports.md
             navtitle: Generating detailed usage reports
-          - topic: metrics-usage.md
-            navtitle: Exploring metrics usage
       - topicgroup:
           label: Observability
           topics:
