@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-05-22"
+  years:  2024, 2026
+lastupdated: "2026-03-25"
 
 keywords:
 
@@ -159,10 +159,18 @@ To provision an instance of {{site.data.keyword.logs_full_notm}} through the com
 ## Next steps
 {: #instance-provision-next}
 
-{{site.data.keyword.logs_full_notm}} integrates with{{site.data.keyword.cos_full_notm}} for long term storage of the data and for collection of metrics, and with IBM Cloud Event Notifications for triggering of alerts. Authorization between services is done by configuring IAM service to service authorizations in the account.
+{{site.data.keyword.logs_full_notm}} integrates with{{site.data.keyword.cos_full_notm}} for long term storage of the data and for collection of metrics, and with {{site.data.keyword.en_full_notm}} for triggering of alerts. Authorization between services is done by configuring IAM service to service (S2S) authorizations in the account.
 
-After you provision the instance, you can:
+After you provision the instance, complete the following steps:
 
-- Attach a data bucket and a metrics bucket. For more information, see [Configuring buckets](/docs/cloud-logs?topic=cloud-logs-about-bucket).
-- Configure an outbound integration. For more information, see [Configuring an outbound integration to connect {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.en_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
-- Configure a log source by adding a logging agent. This agent is responsible for collecting and forwarding logs to your instance.
+1. Attach a data bucket and a metrics bucket to store data for long term storage and for search. For more information, see [Configuring buckets](/docs/cloud-logs?topic=cloud-logs-about-bucket).
+
+2. Configure an outbound integration to an {{site.data.keyword.en_full_notm}} instance to send notifications to destinations of your choice such as email, or slack. For more information, see [Configuring an outbound integration to connect {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.en_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure) and [Working with notification channels](/docs/cloud-logs?topic=cloud-logs-destinations).
+
+3. Configure one or more log sources. Choose any of the following options:
+
+    - Configure the logging agent. This agent is responsible for collecting and forwarding logs to your instance. For more information, see [The logging agent](/docs/cloud-logs?topic=cloud-logs-agent-about).
+
+    - Configure {{site.data.keyword.atracker_full_notm}} to route auditing events, both [global](/docs/atracker?topic=atracker-event_types#event_types_global) and [location-based](/docs/atracker?topic=atracker-event_types#event_types_location) event data, in your {{site.data.keyword.cloud_notm}} to the {{site.data.keyword.logs_full_notm}} instance. For more information, see [Getting started with {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-getting-started).
+
+    - Configure {{site.data.keyword.logs_routing_full}} to route platform logs from your {{site.data.keyword.cloud_notm}} account to the {{site.data.keyword.logs_full_notm}} instance. For more information, see [Getting started with {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-getting-started).

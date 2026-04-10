@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-02-23"
+lastupdated: "2026-04-10"
 
 keywords:
 
@@ -21,6 +21,51 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+## 09 April 2026
+{: #cloud-logs-april0726}
+
+Release of the Extensions API, CLI and Terraform.
+:    For more information, see the [Extensions API](/apidocs/logs-service-api#get-extension), [ibm_logs_extension_deployment](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_extension_deployment){: external} and [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
+
+Functional updates and fixes are available in the Chennai (`in-che`) region only.
+
+:   New features included in this release.
+
+    * Pipeline analyzer: You can use the pipeline analyzer to gain full visibility into how your logs are processed before being available for search. You can inspect logs as they move through your data pipelines and gain insights into any parsing rule that a log goes through before it is available for search. For more information, see [Pipeline analyzer](/docs/cloud-logs?topic=cloud-logs-pipeline-analyzer).
+
+    * Tag retention: You can use {{site.data.keyword.cos_full_notm}} object tags to manage automatically how long log data is available for search in the data bucket. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+
+    * Schema explorer: You can use the Schema Explorer to automatically detect, highlight, and report on differences detected in the structure of your logs as they are ingested such as duplicate fields with different data types that cause conflict. For more information, see [Schema explorer](/docs/cloud-logs?topic=cloud-logs-schema-explorer).
+
+    * TCO updated UI to include configuration of retention tags.
+
+    * Increased the size of the log sample that is included in an alert notification from 1000 characters to 40K characters.
+
+    * Enhanced the *Alert Management* page with options to **Snooze all alerts** or **Snooze selected alerts**.
+
+    * Enhanced the Create Views API to support the creation of views that query data from the {{site.data.keyword.cos_full_notm}} data bucket.
+
+    * Enhanced Custom Dashboard with additional features like color hashing, and added support to attach Actions from dashboards.
+
+    * Increased the limit to export logs from 2k to 5K in both Priority Insigths and All Logs.
+
+    * Added a new Extension for IBM Cloud Internet Services (CIS).
+
+    * Increased the limit of a regular expression that is used in a query from 256 characters to 32 KB.
+
+
+
+## 6 April 2026
+{: #cloud-logs-apr0626}
+
+Release of the {{site.data.keyword.agent}} version 1.8.1
+:    For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-apr0626)
+
+## 25 March 2026
+{: #cloud-logs-march2526}
+
+Release of the Extensions API.
+:    For more information, see the [Extensions API](/apidocs/logs-service-api#get-extension) and [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
 
 ## 20 February 2026
 {: #cloud-logs-feb2026}
@@ -195,7 +240,7 @@ Functional updates and fixes are available in the Montreal (`ca-mon`) region onl
 :   New features included in this release.
 
     * Additional capabilities are now supported for alerts with the introduction of a new `alert_definition` API method. Changes are also made as a result to the {{site.data.keyword.en_full_notm}} payload.  See the following documentation topics for information about the alerts API changes and actions you might need to take as a result.
-    
+
        * [Considerations for new alert and priority configuration](/docs/cloud-logs?topic=cloud-logs-new-version-considerations)
        * [Alert priorities](/docs/cloud-logs?topic=cloud-logs-priorities)
        * [Terraform changes required to convert alerts](/docs/cloud-logs?topic=cloud-logs-migrate_alert_definitions)
@@ -396,22 +441,22 @@ Documentation about using regex for queries
 Fixes implemented
 :   The following issues are resolved.
     - [Query] - Fixed an issue where running a query in `All Logs` would result in a "Query Failed" message with no results returned even if the query ran up to the maximum timeout of 5 minutes.
-    - [Alerts] - Fixed an error where Metric alerts were not triggering notifications. 
-    - [UI]\[Logs] - Fixed an issue where the selected keys in the `Content` column are reset when switching between `Priority Insights` and `All Logs`. 
+    - [Alerts] - Fixed an error where Metric alerts were not triggering notifications.
+    - [UI]\[Logs] - Fixed an issue where the selected keys in the `Content` column are reset when switching between `Priority Insights` and `All Logs`.
 
 ## 25 November 2024
 {: #cloud-logs-nov2524}
 {: release-note}
 
 Fixes implemented
-:   The following issues are resolved.   
+:   The following issues are resolved.
     - [API]\[Views] - Fixed a bug where setting `quick_selection` using the API sets a custom selection in the UI.
     - [UI]\[TCO] - Resolved an error when clicking **Reset all overrides** resulted in displaying `ERROR: Failed to reset all overrides`.
     - [API]\[View Folder] - Fixed failure when updating view folders through the API.
     - [API]\[Events2Metrics] - Fixed failure when updating Events to Metrics rules through the API.
     - [Query] - Fixed query errors when using longer query windows, for example, for 6 or 12 hours.
     - [UI] - Fixed an error where the dashboard login displayed intermittent HTTP 500 errors.
-    - [UI] - Fixed log highlighting for `surrounding logs` improving the ability to view the context around the logs. 
+    - [UI] - Fixed log highlighting for `surrounding logs` improving the ability to view the context around the logs.
     - [Alerts] - Fixed an error where the alert payload was not sent as valid JSON.
     - [UI]\[TCO] - Fixed an error where editing an existing TCO policy would wait to refresh for a long time.
 
@@ -420,7 +465,7 @@ Fixes implemented
 {: release-note}
 
 Fixes implemented
-:   The following issue is resolved. 
+:   The following issue is resolved.
     - Fixed custom dashboards displaying "Something went wrong" when selecting Analyze and Alert.
 
 
