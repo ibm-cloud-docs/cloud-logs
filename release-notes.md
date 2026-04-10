@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-07"
+lastupdated: "2026-04-10"
 
 keywords:
 
@@ -21,7 +21,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
-## 07 April 2026
+## 09 April 2026
 {: #cloud-logs-april0726}
 
 Release of the Extensions API, CLI and Terraform.
