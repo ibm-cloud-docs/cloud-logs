@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-13"
 
 keywords:
 
@@ -21,8 +21,18 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+## 13 April 2026
+{: #cloud-logs-april1326}
+
+Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Montreal (`ca-mon`)
+    * Chennai (`in-che`)
+
 ## 09 April 2026
-{: #cloud-logs-april0726}
+{: #cloud-logs-april0926}
 
 Release of the Extensions API, CLI and Terraform.
 :    For more information, see the [Extensions API](/apidocs/logs-service-api#get-extension), [ibm_logs_extension_deployment](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_extension_deployment){: external} and [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
