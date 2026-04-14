@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-13"
+lastupdated: "2026-04-14"
 
 keywords:
 
@@ -62,6 +62,8 @@ Functional updates and fixes are available in the Chennai (`in-che`) region only
     * Added a new Extension for IBM Cloud Internet Services (CIS).
 
     * Increased the limit of a regular expression that is used in a query from 256 characters to 32 KB.
+
+    * Metrics Explorer is now available as a drawer that allows to search metrics and labels, explore related metrics, and analyze data by name, label, or value.
 
 
 
