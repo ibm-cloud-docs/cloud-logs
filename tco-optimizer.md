@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-06"
+lastupdated: "2026-04-15"
 
 keywords:
 
@@ -191,29 +191,21 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 
 3. In the *Filters* section, add 1 or more filters to configure the applications, subsystems, and severity values that are relevant for this policy.
 
-   Logs received by {{site.data.keyword.logs_full_notm}} without a severity are treated as if their severity is `debug`.
-   {: note}
-
-   Create a parsing rule to set the priority of logs at ingestion when a priority value is not included.
-   {: tip}
-
    For applications and subsystems, criteria can be specified when the value matches one of: `All`, `Is`, `Is Not`, `Includes`, or `Starts With`.
 
-4. In the *Policy Type* section, select **Standard** to route all matching data to the priority that you configure in the next step.
-
-5. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
+4. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
 
     Valid values are: `High` for data managed through {{site.data.keyword.frequent-search}}, `Medium` for data managed through {{site.data.keyword.monitoring}}, `Low` for data managed through {{site.data.keyword.compliance}} and `Block` for data that you drop and is not available for search.
 
     The default value is `High`.
 
-6. In the *Archive retention* section, choose a [retention tag](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+5. In the *Archive retention* section, choose a [retention tag](/docs/cloud-logs?topic=cloud-logs-retention-tags).
 
     By default, the **Default** tag is selected.
 
     Notice that retention tags are available if they are defined and activated.
 
-5. Click **Apply**.
+6. Click **Apply**.
 
 ## Modifying a policy
 {: #tco-optimizer-modify-policy}

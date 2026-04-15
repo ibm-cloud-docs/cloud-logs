@@ -91,11 +91,13 @@ After you activate archive retention tags, consider the following information:
 
 Create an expiration rule for each custom archive retention tag, and an expiration rule for the `Default` value.
 
+For more information, see see [About deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry) and [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
+
 To create expiration rules, complete the following steps:
 
 1. Launch the {{site.data.keyword.cos_full_notm}} dashboard: [Dashboard](https://cloud.ibm.com/objectstorage/overview){: external}
-2. In the dashboard, select the instance where the bucket that is associated to the {{site.data.keyword.logs_full_notm}} instance is available.
-3. Select the bucket. Then, click **Object Lifecycle**.
+2. In *Instances*, select the instance where the bucket that is associated to the {{site.data.keyword.logs_full_notm}} instance is available.
+3. Select the bucket that is attached as a data bucket to your {{site.data.keyword.logs_full_notm}} instance. Then, click **Object Lifecycle**.
 4. In the *Expiration Rules* section, click **Add a rule**. The *Add expiration rule* wizard opens.
 5. Enable the toggle **Status** and enter a *Rule ID** that is meaningful for one of the tags that you have activated in your {{site.data.keyword.logs_full_notm}} instance.
 6. In the *Filter Type* section, choose **Limit the scope of the rule using one or more filters**
@@ -125,7 +127,7 @@ To create expiration rules, complete the following steps:
 
 9. Click **Save**.
 
-For more information, see see [About deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry) and [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
+
 
 ## Create expiration rules in {{site.data.keyword.cos_full_notm}}
 {: #retention-tags-step2-api}
@@ -143,3 +145,37 @@ To create expiration rules, see [About deleting stale data with expiration rules
 Create policies and configure the *archive retention* section. For more information, see [Creating a TCO policy](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-create-policy).
 
 You can use the `default` tag to define a default expiration period that you can apply to data that is not explicitly managed through a custom object tag. You can use any of the custom retention tags that you have defined.
+
+Complete the following steps:
+
+1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
+
+2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **TCO Optimizer**.
+
+3. Click **Create policy**.
+
+4. In the *Details* section, complete the following tasks:
+
+    Enter a policy name.
+
+    Enter a description. The description is optional.
+
+    Define the policy order. This order determines which rule is applied when multiple policies match. By default, the first policy has the highest priority.
+
+5. In the *Filters* section, add 1 or more filters to configure the applications, subsystems, and severity values that are relevant for this policy.
+
+   For applications and subsystems, criteria can be specified when the value matches one of: `All`, `Is`, `Is Not`, `Includes`, or `Starts With`.
+
+6. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
+
+    Valid values are: `High` for data managed through {{site.data.keyword.frequent-search}}, `Medium` for data managed through {{site.data.keyword.monitoring}}, `Low` for data managed through {{site.data.keyword.compliance}} and `Block` for data that you drop and is not available for search.
+
+    The default value is `High`.
+
+7. In the *Archive retention* section, choose a [retention tag](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+
+    By default, the **Default** tag is selected.
+
+    Notice that retention tags are available if they are defined and activated.
+
+8. Click **Apply**.
