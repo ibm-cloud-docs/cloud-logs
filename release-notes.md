@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-14"
+lastupdated: "2026-04-15"
 
 keywords:
 
@@ -19,6 +19,18 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+
+## 14 April 2026
+{: #cloud-logs-april1326}
+
+Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Montreal (`ca-mon`)
+    * Chennai (`in-che`)
+    * Sydney (`au-syd`)
 
 
 ## 13 April 2026
