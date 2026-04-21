@@ -90,7 +90,7 @@ To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the foll
 
 
 
-## Configuring alerts in {{site.data.keyword.logs_full_notm}}
+### Configuring alerts in {{site.data.keyword.logs_full_notm}}
 {: #event-notifications-about-alerts}
 
 When you configure an alert in {{site.data.keyword.logs_full_notm}}, you define per alert the following information:
@@ -107,7 +107,7 @@ For more information on configuring alerts, see [Configuring an alert](/docs/clo
 
 
 
-## Configuring alerts in {{site.data.keyword.en_full_notm}}
+### Configuring alerts in {{site.data.keyword.en_full_notm}}
 {: #event-notifications-about-channels}
 
 
@@ -124,7 +124,7 @@ For more information, see:
 
 ## Managing alerts in the Alert Management page
 {: #event-notifications-about-am}
-{: ui}
+
 
 You can use the *Alert Management* page to manage alerts through the UI.
 
@@ -152,6 +152,6 @@ In the *Alert Management* page, you can complete the following tasks:
 
 ## Monitoring alerts in the Incidents Page
 {: #event-notifications-about-incident}
-{: ui}
+
 
 You can use the *Incidents* page to monitor alerts that trigger through the UI. For more information, see [Managing triggered alerts](/docs/cloud-logs?topic=cloud-logs-incidents&interface=ui).
