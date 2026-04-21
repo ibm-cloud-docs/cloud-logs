@@ -406,10 +406,12 @@ toc:
       - topicgroup:
           label: Working with metrics
           topics:
-          - topic: configure-event2metrics.md
-            navtitle: Configuring collection of metrics from logs
+          - topic: metrics-usage.md
+            navtitle: Exploring metrics usage
           - topic: metrics-explorer.md
             navtitle: Using the Metrics Explorer
+          - topic: configure-event2metrics.md
+            navtitle: Configuring collection of metrics from logs
       - topicgroup:
           label: Data and metrics usage
           topics:
