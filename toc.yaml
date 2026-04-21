@@ -410,6 +410,8 @@ toc:
             navtitle: Configuring collection of metrics from logs
           - topic: metrics-usage.md
             navtitle: Exploring metrics usage
+          - topic: metrics-explorer.md
+            navtitle: Using the Metrics Explorer
       - topicgroup:
           label: Data and metrics usage
           topics:

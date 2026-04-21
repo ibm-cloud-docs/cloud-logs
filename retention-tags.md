@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-04-21"
 
 keywords:
 
@@ -103,8 +103,11 @@ To create expiration rules, complete the following steps:
 6. In the *Filter Type* section, choose **Limit the scope of the rule using one or more filters**
 
     Click **Object tags**.
+
     Click **Add**.
+
     Enter the key **ICL_ARCHIVE_RETENTION**.
+
     Enter the value of the tag. For example, **Long**.
 
     Make sure the value matches the archive retention tag in your {{site.data.keyword.logs_full_notm}} instance. Tag values are case-sensitive.{: note}
@@ -121,7 +124,9 @@ To create expiration rules, complete the following steps:
 
     Valid options are: `Do not clean up` and `Days to clean up after`. However, tags are not supported with incomplete multi-part upload objects.
 
-    If you choose the option `Days to clean up after` and specify a number of days, when you try to save you get the following error:`BMCOSUI060000: AbortIncompleteMultipartUpload cannot be specified with Tags.`
+    If you choose the option `Days to clean up after` and specify a number of days, when you try to save the policy, you get the following error:`BMCOSUI060000: AbortIncompleteMultipartUpload cannot be specified with Tags.`
+
+    You can run the following command to see if a bucket includes incomplete multi-part objects: `ibmcloud cos multipart-uploads --bucket BUCKET_NAME --region REGION`{: tip}
 
     ![Lifecycle policy Incomplete multi-part upload](images/expiration2.png "Lifecycle policy Incomplete multi-part upload"){: caption="Lifecycle policy Incomplete multi-part upload" caption-side="bottom"}
 
