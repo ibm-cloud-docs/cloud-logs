@@ -154,5 +154,4 @@ In the *Alert Management* page, you can complete the following tasks:
 ## Monitoring alerts in the Incidents Page
 {: #event-notifications-about-incident}
 
-
 You can use the *Incidents* page to monitor alerts that trigger through the UI. For more information, see [Managing triggered alerts](/docs/cloud-logs?topic=cloud-logs-incidents&interface=ui).
