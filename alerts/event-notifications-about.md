@@ -143,11 +143,11 @@ In the *Alert Management* page, you can complete the following tasks:
 
 - You can search by alert name in the query section.
 
-    ![Alert Management](/images/alert-management-2.png "Alert Management"){: caption="Alert Management" caption-side="bottom"}
+    ![Alert Management query](/images/alert-management-2.png "Alert Management query"){: caption="Alert Management query" caption-side="bottom"}
 
 - You can edit, duplicate, delete and snooze an alert.
 
-    ![Alert Management](/images/alert-management-3.png "Alert Management"){: caption="Alert Management" caption-side="bottom"}
+    ![Alert Management manage options](/images/alert-management-3.png "Alert Management manage options"){: caption="Alert Management manage options" caption-side="bottom"}
 
 
 ## Monitoring alerts in the Incidents Page
