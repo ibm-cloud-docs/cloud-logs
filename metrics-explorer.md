@@ -27,9 +27,9 @@ You can browse, search and filter metric time series by name and labels, generat
 
 Use Metric Explorer to:
 
-- Query without a dashboard — Build and run PromQL queries in a dedicated workspace, using a no-code builder or a code editor.
-- Visualize and compare — See metric trends as time series charts, filter by labels, apply aggregations, and combine expressions to derive new signals.
-- Find what's driving anomalies — Drill down by label dimensions to identify which label values are contributing to unusual behavior, without writing additional queries.
+- Query without a dashboard: Build and run PromQL queries in a dedicated workspace, using a no-code builder or a code editor.
+- Visualize and compare: See metric trends as time series charts, filter by labels, apply aggregations, and combine expressions to derive new signals.
+- Find what's driving anomalies: Drill down by label dimensions to identify which label values are contributing to unusual behavior, without writing additional queries.
 
 ## Launching the Metrics Explorer
 {: #metrics-explorer-launch}
