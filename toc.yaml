@@ -406,6 +406,8 @@ toc:
       - topicgroup:
           label: Working with metrics
           topics:
+          - topic: data-usage-metrics.md
+            navtitle: Enabling data usage metrics
           - topic: metrics-usage.md
             navtitle: Exploring metrics usage
           - topic: metrics-explorer.md
@@ -413,16 +415,14 @@ toc:
           - topic: configure-event2metrics.md
             navtitle: Configuring collection of metrics from logs
       - topicgroup:
-          label: Data and metrics usage
+          label: Logs usage
           topics:
           - topic: data-usage.md
-            navtitle: Data usage
-          - topic: data-usage-metrics.md
-            navtitle: Enabling data usage metrics
+            navtitle: Exploring logs data usage
           - topic: data-usage-reports.md
-            navtitle: Generating data usage overview reports
+            navtitle: Generating logs data usage overview reports
           - topic: data-usage-detailed-reports.md
-            navtitle: Generating detailed usage reports
+            navtitle: Generating logs detailed usage reports
       - topicgroup:
           label: Observability
           topics:

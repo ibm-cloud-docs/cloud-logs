@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-01-15"
+lastupdated: "2026-04-21"
 
 keywords:
 
@@ -47,11 +47,12 @@ The following figure shows the high level view of an {{site.data.keyword.logs_fu
 
 ![High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance](../images/alerts-cl-en-integration.svg "High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance"){: caption="High-level view of an {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance" caption-side="bottom"}
 
+
 ## Configuring alerts end to end
 {: #event-notifications-about-alerts-configure}
 
 To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the following steps:
-1. In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service.  For more information, see [Configuring an outbound integration for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
+1. In {{site.data.keyword.logs_full_notm}}, alerts are triggered through the {{site.data.keyword.en_full_notm}} service. For more information, see [Configuring an outbound integration for {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 
 2. In IAM, define a service to service authorization between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_full_notm}} instance. For more information, see [Creating a S2S authorization to work with the {{site.data.keyword.en_full_notm}} service](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-en).
 
@@ -89,7 +90,6 @@ To configure alerting in {{site.data.keyword.logs_full_notm}}, complete the foll
 
 
 
-
 ## Configuring alerts in {{site.data.keyword.logs_full_notm}}
 {: #event-notifications-about-alerts}
 
@@ -120,3 +120,38 @@ When you configure an alert in {{site.data.keyword.en_full_notm}}, you define th
 
 For more information, see:
 - [Configuring {{site.data.keyword.en_full_notm}} resources](/docs/cloud-logs?topic=cloud-logs-event-notifications-alerts).
+
+
+## Managing alerts in the Alert Management page
+{: #event-notifications-about-am}
+{: ui}
+
+You can use the *Alert Management* page to manage alerts through the UI.
+
+Complete the following steps to launch the *Alert Management* page:
+
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
+
+2. Select **Alerts** > **Alert management**.
+
+    ![Alert Management](/images/alert-management.png "Alert Management"){: caption="Alert Management" caption-side="bottom"}
+
+The *Alert Management* page opens.
+
+In the *Alert Management* page, you can complete the following tasks:
+- Filter alerts that are displayed by alert type, alert priority, status enabled or not, and labels.
+
+- You can search by alert name in the query section.
+
+    ![Alert Management](/images/alert-management-2.png "Alert Management"){: caption="Alert Management" caption-side="bottom"}
+
+- You can edit, duplicate, delete and snooze an alert.
+
+    ![Alert Management](/images/alert-management-3.png "Alert Management"){: caption="Alert Management" caption-side="bottom"}
+
+
+## Monitoring alerts in the Incidents Page
+{: #event-notifications-about-incident}
+{: ui}
+
+You can use the *Incidents* page to monitor alerts that trigger through the UI. For more information, see [Managing triggered alerts](/docs/cloud-logs?topic=cloud-logs-incidents&interface=ui).
