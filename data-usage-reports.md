@@ -57,13 +57,7 @@ Complete the following steps to export the Data Usage Report as a CSV file:
 
 2. Select the **Usage** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Usage**.
 
-    The *Data Usage* page opens.
-
-    ![Data Usage](/images/data-usage.png "Data Usage"){: caption="Data Usage" caption-side="bottom"}
-
-3. Select the **Action menu** icon ![Action menu icon](/icons/tasks.png "Action menu") > **Generate report**.
-
-    ![Data Usage report](/images/data-usage-report.png "Data Usage report"){: caption="Data Usage report" caption-side="bottom"}
+    The *Data Usage* page opens. 
 
 4. Select **Export as CSV**.
 

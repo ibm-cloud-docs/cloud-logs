@@ -21,7 +21,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 ## 22 April 2026
-{: #cloud-logs-april1626}
+{: #cloud-logs-april2226}
 
 Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
 
@@ -110,9 +110,7 @@ Functional updates and fixes are available in the Chennai (`in-che`) region only
 
     * Increased the limit to export logs from 2k to 5K in both Priority Insigths and All Logs.
 
-    * Added a new Extension for IBM Cloud Internet Services (CIS).
-
-    * Increased the limit of a regular expression that is used in a query from 256 characters to 32 KB.
+    * Added a new Extension for IBM Cloud Internet Services (CIS). 
 
     * Metrics Explorer is now available as a drawer that allows to search metrics and labels, explore related metrics, and analyze data by name, label, or value.
 
