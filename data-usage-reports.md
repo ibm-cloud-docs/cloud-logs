@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-03-06"
+  years:  2024, 2026
+lastupdated: "2026-04-22"
 
 keywords:
 
@@ -30,8 +30,8 @@ You can generate a report for:
 ## Prereqs
 {: #data-usage-reports-prereqs}
 
-- You must [configure a metrics bucket.](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
-- You must enable the data usage feature. For more information, see [Enabling data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics).
+- You must [configure a metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
+- You must enable the data usage feature. For more information, see [Enabling Data Usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics).
 
 ## Information included in a report
 {: #data-usage-reports-1}
@@ -53,15 +53,19 @@ The Data Usage Report includes the following information:
 
 Complete the following steps to export the Data Usage Report as a CSV file:
 
-1. In the navigation bar, click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Usage**.
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 
-2. Select **Export as CSV**.
+2. Select the **Usage** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Usage**.
 
-3. Select **Data usage overview report** for the *Data Usage Overview Report type*.
+    The *Data Usage* page opens. 
 
-4. Select the time range.
+4. Select **Export as CSV**.
 
-5. Click **EXPORT**.
+5. Select **Data usage overview report** for the *Data Usage Overview Report type*.
+
+6. Select the time range.
+
+7. Click **EXPORT**.
 
 ## Exporting an overview data usage report using API
 {: #ov-data-usage-reports-api}
@@ -83,7 +87,7 @@ curl 'https://{instance_ID}.api.{region}.logs.cloud.ibm.com/v1/data_usage?query=
     -H 'Content-Type: application/json' \
     -H 'Accept: application/json'
 ```
-{: codeblock} 
+{: codeblock}
 
 
 A successful response returns the data usage overview report for the specified timerange. For more information about the API, see [Get data usage metrics export status or return data usage report](/apidocs/logs-service-api#export-data-usage){: external}.
