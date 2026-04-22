@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-03-06"
+  years:  2024, 2026
+lastupdated: "2026-04-22"
 
 keywords:
 
@@ -48,7 +48,17 @@ The detailed usage report includes the following information per application, su
 
 Complete the following steps to export the Data Usage Report as a CSV file:
 
-1. In the navigation bar, click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Usage**.
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
+
+2. Select the **Usage** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Usage**.
+
+    The *Data Usage* page opens.
+
+    ![Data Usage](/images/data-usage.png "Data Usage"){: caption="Data Usage" caption-side="bottom"}
+
+3. Select the **Action menu** icon ![Action menu icon](/icons/tasks.png "Action menu") > **Generate report**.
+
+    ![Data Usage report](/images/data-usage-report.png "Data Usage report"){: caption="Data Usage report" caption-side="bottom"}
 
 2. Select **Export as CSV**.
 
@@ -78,7 +88,7 @@ curl 'https://{instance_ID}.api.{region}.logs.cloud.ibm.com/v1/data_usage?query=
     -H 'Content-Type: application/json' \
     -H 'Accept: application/json'
 ```
-{: codeblock} 
+{: codeblock}
 
 
 A successful response returns the detailed data usage report for the specified timerange. For more information about the API, see [Get data usage metrics export status or return data usage report](/apidocs/logs-service-api#export-data-usage){: external}.
