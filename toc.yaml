@@ -410,15 +410,15 @@ toc:
             navtitle: Configuring collection of metrics from logs (Event2metrics)
           - topic: metrics-explorer.md
             navtitle: Using the Metrics Explorer
-          - topic: data-usage-metrics.md
-            navtitle: Enabling data usage metrics
-          - topic: metrics-usage.md
-            navtitle: Exploring metrics usage
       - topicgroup:
           label: Data and Metrics Usage
           topics:
           - topic: data-usage.md
             navtitle: About Data Usage
+          - topic: data-usage-metrics.md
+            navtitle: Enabling data usage metrics
+          - topic: metrics-usage.md
+            navtitle: Exploring metrics usage
           - topic: data-usage-reports.md
             navtitle: Generating Data Usage overview reports
           - topic: data-usage-detailed-reports.md
