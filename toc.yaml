@@ -409,7 +409,7 @@ toc:
           - topic: configure-event2metrics.md
             navtitle: Configuring collection of metrics from logs (Event2metrics)
           - topic: metrics-explorer.md
-            navtitle: Using the Metrics Explorer
+            navtitle: Exploring metrics (Metrics Explorer)
       - topicgroup:
           label: Data and Metrics Usage
           topics:
