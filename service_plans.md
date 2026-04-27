@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-14"
+  years:  2024, 2026
+lastupdated: "2026-04-24"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -18,6 +18,10 @@ subcollection: cloud-logs
 
 One pricing plan is available when provisioning an {{site.data.keyword.logs_full}} instance.
 {: shortdesc}
+
+## Standard plan
+{: #service_plans-std}
+
 
 The`Standard` plan is the pricing plan available when provisioning an {{site.data.keyword.logs_full_notm}} instance. When provision an instance, the initial default is 7-days retention in {{site.data.keyword.frequent-search}}. Alternative retention periods can be selected in the console or as a parameter in the CLI or Terraform provider.
 
