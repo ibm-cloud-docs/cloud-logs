@@ -419,6 +419,16 @@ toc:
             navtitle: Enabling data usage metrics
           - topic: metrics-usage.md
             navtitle: Exploring metrics usage
+          - topic: data-usage-r114.md
+            navtitle: About Data Usage (r1.14)
+          - topic: data-usage-enable-metrics.md
+            navtitle: Enabling system metrics (r1.14)
+          - topic: data-usage-dashboard.md
+            navtitle: Using the Data Usage dashboard
+          - topic: data-usage-analyzer.md
+            navtitle: Using the Data Usage Analyzer
+          - topic: metrics-usage-analyzer.md
+            navtitle: Using the Metrics Usage Analyzer
           - topic: data-usage-reports.md
             navtitle: Generating Data Usage overview reports
           - topic: data-usage-detailed-reports.md
