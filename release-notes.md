@@ -6,8 +6,7 @@ lastupdated: "2026-05-05"
 
 keywords:
 
-subcollection: cloud-logs
-
+subcollection: cd-log
 content-type: release-note
 
 ---
