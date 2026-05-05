@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-24"
+lastupdated: "2026-05-05"
 
 keywords:
 
@@ -23,6 +23,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 ## 23 April 2026
 {: #cloud-logs-april2326}
+{: release-note}
 
 Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
 
@@ -39,6 +40,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 
 ## 22 April 2026
 {: #cloud-logs-april2226}
+{: release-note}
 
 Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
 
@@ -54,6 +56,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 
 ## 16 April 2026
 {: #cloud-logs-april1626}
+{: release-note}
 
 Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
 
@@ -67,6 +70,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 
 ## 15 April 2026
 {: #cloud-logs-april1526}
+{: release-note}
 
 Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
 
@@ -79,6 +83,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 
 ## 14 April 2026
 {: #cloud-logs-april1426}
+{: release-note}
 
 Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
 
@@ -91,6 +96,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 
 ## 13 April 2026
 {: #cloud-logs-april1326}
+{: release-note}
 
 Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
 
@@ -101,6 +107,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 
 ## 09 April 2026
 {: #cloud-logs-april0926}
+{: release-note}
 
 Release of the Extensions API, CLI and Terraform.
 :    For more information, see the [Extensions API](/apidocs/logs-service-api#get-extension), [ibm_logs_extension_deployment](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_extension_deployment){: external} and [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
@@ -135,30 +142,35 @@ Functional updates and fixes are available in the Chennai (`in-che`) region only
 
 ## 6 April 2026
 {: #cloud-logs-apr0626}
+{: release-note}
 
 Release of the {{site.data.keyword.agent}} version 1.8.1
 :    For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-apr0626)
 
 ## 25 March 2026
 {: #cloud-logs-march2526}
+{: release-note}
 
 Release of the Extensions API.
 :    For more information, see the [Extensions API](/apidocs/logs-service-api#get-extension) and [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
 
 ## 20 February 2026
 {: #cloud-logs-feb2026}
+{: release-note}
 
 Release of the {{site.data.keyword.agent}} version 1.8.0
 :    For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-feb2026)
 
 ## 9 Feb 2026
 {: #cloud-logs-feb0926}
+{: release-note}
 
 Chennai support
 :   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Chennai (`in-che`) region.
 
 ## 15 December 2025
 {: #cloud-logs-dec1525}
+{: release-note}
 
 Release of the {{site.data.keyword.agent}} version 1.7.1
 :    For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-dec1525)
