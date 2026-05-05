@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-11-25"
+  years:  2024, 2026
+lastupdated: "2026-05-05"
 
 keywords:
 
@@ -42,6 +42,7 @@ subcollection: cloud-logs
 | Branches | 1500 |
 | Query time range | 8 days |
 | Maximum number of fields | 3000 |
+| Number of logs that can be exported through the user interface (UI) | 5000 |
 {: caption="Limits per instance" caption-side="bottom"}
 
 
