@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-24"
+  years:  2024, 2026
+lastupdated: "2026-05-05"
 
 keywords:
 
@@ -49,3 +49,10 @@ In the Explore **Logs** page, complete the following steps to export data for a 
     Choose `Current view preferences` to export data filtered by the view that is selected.
 
 9. Click **Export**.
+
+
+## Limits
+{: #limit}
+| Item | Limit |
+|------|-------|
+| Number of logs that can be exported through the user interface (UI) | 5000 |
