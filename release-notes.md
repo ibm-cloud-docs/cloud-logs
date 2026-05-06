@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-05"
+lastupdated: "2026-05-06"
 
 keywords:
 
@@ -18,6 +18,23 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+
+# 29 April 2026
+{: #cloud-logs-april2326}
+{: release-note}
+
+Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Montreal (`ca-mon`)
+    * Chennai (`in-che`)
+    * Sydney (`au-syd`)
+    * Sao Paulo (`br-sao`)
+    * London (`eu-gb`)
+    * Madrid (`eu-es`)
+    * Osaka (`jp-osa`)
 
 
 ## 23 April 2026
