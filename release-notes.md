@@ -21,7 +21,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 # 29 April 2026
-{: #cloud-logs-april2326}
+{: #cloud-logs-april2926}
 {: release-note}
 
 Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
