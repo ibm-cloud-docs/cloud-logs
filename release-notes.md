@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-06"
+lastupdated: "2026-05-07"
 
 keywords:
 
@@ -34,6 +34,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
     * Sao Paulo (`br-sao`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
+    * Frankfurt (`eu-de`)
     * Osaka (`jp-osa`)
 
 
@@ -68,6 +69,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
     * Sao Paulo (`br-sao`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
+    * Frankfurt (`eu-de`)
 
 
 ## 16 April 2026
