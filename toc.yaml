@@ -617,26 +617,6 @@ toc:
         navtitle: Considerations for recent release
       - topic: limits-sending-data.md
         navtitle: Considerations and limitations sending data
-      - topicgroup:
-          label: Sending data using the Logging agent prior to v1.6.x
-          topics:
-          - topicgroup:
-              label: Logging agent for orchestrated environments
-              topics:
-              - topic: agent/helm-chart-versions-1.md
-                navtitle: Checking the available Helm chart versions
-              - topic: agent/helm-chart-download-1.md
-                navtitle: Helm chart template to deploy the Logging agent prior to v1.6.x
-              - topic: agent/agent-helm-os-deploy-1.md
-                navtitle: Deploying the Logging agent on OpenShift using a Helm chart
-              - topic: agent/agent-helm-kube-deploy-1.md
-                navtitle: Deploying the Logging agent on a Kubernetes cluster using a Helm chart
-              - topic: agent/agent-helm-template-clusters.md
-                navtitle: Deploying the Logging agent using a Helm chart
-              - topic: agent/agent-helm-credential-rotation-1.md
-                navtitle: Rotating the Logging agent IAM APIKey by using a Helm chart
-              - topic: agent/agent-helm-remove-1.md
-                navtitle: Uninstalling the Logging agent using a Helm chart
       - cloud_services_msg_prefix.md
   - navgroup:
       id: help
