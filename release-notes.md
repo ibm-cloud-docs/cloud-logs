@@ -36,7 +36,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
     * Madrid (`eu-es`)
     * Frankfurt (`eu-de`)
     * Osaka (`jp-osa`)
-    * Tokyo (jp-tok)
+    * Tokyo (`jp-tok`)
 
 
 ## 29 April 2026
