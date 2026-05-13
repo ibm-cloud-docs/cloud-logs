@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-12"
+lastupdated: "2026-05-13"
 
 keywords:
 
@@ -24,20 +24,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #cloud-logs-may1226}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
-
-:   Regions supporting new functionality and fixes:
-
-    * Montreal (`ca-mon`)
-    * Chennai (`in-che`)
-    * Sydney (`au-syd`)
-    * Sao Paulo (`br-sao`)
-    * London (`eu-gb`)
-    * Madrid (`eu-es`)
-    * Frankfurt (`eu-de`)
-    * Osaka (`jp-osa`)
-    * Tokyo (`jp-tok`)
-    * Mumbai (`in-mum`)
+Mumbai support
+:   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Mumbai (`in-mum`) region.
 
 
 ## 11 May 2026
