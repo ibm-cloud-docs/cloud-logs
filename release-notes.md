@@ -212,12 +212,6 @@ Release of the {{site.data.keyword.agent}} version 1.8.0
 Chennai support
 :   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Chennai (`in-che`) region.
 
-## 12 May 2026
-{: #cloud-logs-may1226}
-{: release-note}
-
-Mumbai support
-:   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Mumbai (`in-mum`) region.
 
 ## 15 December 2025
 {: #cloud-logs-dec1525}
