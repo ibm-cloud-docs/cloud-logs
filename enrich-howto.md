@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-28"
+  years:  2024, 2026
+lastupdated: "2026-05-14"
 
 keywords:
 
@@ -167,9 +167,13 @@ c80452a8-9573-4e3c-b3f6-88ae740c776c. customer5, medium
 
 2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
 
-3. Click **+ Add custom enrichment**.
+3. Click **+ Add enrichment**.
 
-4. Configure the enrichment by providing a name and description.
+4. Select the enrichment type.  
+
+5. With the geo enrichment, you can select the automatically add IP-based geographical information, including ASN (Autonomous System Number) information. To set the IP field, see Creating new fields.
+
+6. With the custom enrichment, enter a name and description.
 
 5. Upload your CSV file.
 
@@ -178,15 +182,16 @@ c80452a8-9573-4e3c-b3f6-88ae740c776c. customer5, medium
 
 6. To enable automatic enrichment, define how logs should be enriched during ingestion:
 
-   * Field: Select one or more fields for enrichment.
+   * Key: Select the key.
 
-   * Enriched Field Name: Specify the enriched field name.
-
-   * Lookup Column: Choose the CSV column that maps to the log field.
+   * Enriched Key Name: Specify the enrichedkey name.
 
    * Columns for Enrichment: Select additional CSV columns to enrich the logs.
 
-7. Click **Create enrichment**.
+7. Add more keys, if required.
+
+8. Click **Create enrichment**.
+
 
 
 
@@ -200,7 +205,7 @@ If you have a custom enrichment configured in your {{site.data.keyword.logs_full
 
 2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
 
-3. Click **Download CSV** for the custom enrichment you want to download.
+3. Click **Download CSV** for the enrichment you want to download.
 
 The CSV file is saved to your local system.
 
@@ -214,7 +219,7 @@ If you have a custom enrichment configured in your {{site.data.keyword.logs_full
 
 2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
 
-3. Click **View in explore screen** for the custom enrichment you want to view.
+3. Click **View in explore screen** for the enrichment you want to view.
 
 You can filter, transform, and aggregate the data using DataPrime.
 
