@@ -2,11 +2,11 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-13"
+lastupdated: "2026-05-14"
 
-keywords:
+keywords: IBM cloud logs, cloud logs changes
 
-subcollection: cd-log
+subcollection: cloud-logs
 content-type: release-note
 
 ---
