@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-28"
+  years:  2024, 2026
+lastupdated: "2026-05-15"
 
 keywords:
 
@@ -97,7 +97,7 @@ Custom enrichment supports two methods:
 
 * Automatic enrichment during ingestion.
 
-* Dynamic enrichment using [DataPrime](/docs/cloud-logs?group=dataprime) syntax.
+* Dynamic enrichment using  syntax.
 
 ### Automatic enrichment
 {: #enrich-howto-auto}
@@ -158,68 +158,6 @@ c80452a8-9573-4e3c-b3f6-88ae740c776c. customer5, medium
 {: codeblock}
 
 
-
-## Configuring a data enrichment
-{: #enrich-howto-steps}
-{: ui}
-
-1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
-
-2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
-
-3. Click **+ Add custom enrichment**.
-
-4. Configure the enrichment by providing a name and description.
-
-5. Upload your CSV file.
-
-   You can also replace a CSV file that you have uploaded.
-   {: note}
-
-6. To enable automatic enrichment, define how logs should be enriched during ingestion:
-
-   * Field: Select one or more fields for enrichment.
-
-   * Enriched Field Name: Specify the enriched field name.
-
-   * Lookup Column: Choose the CSV column that maps to the log field.
-
-   * Columns for Enrichment: Select additional CSV columns to enrich the logs.
-
-7. Click **Create enrichment**.
-
-
-
-## Downloading an enrichment CSV file
-{: #enrich-howto-download}
-{: ui}
-
-If you have a custom enrichment configured in your {{site.data.keyword.logs_full_notm}} instance, you can download the enrichment data as a CSV file.
-
-1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
-
-2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
-
-3. Click **Download CSV** for the custom enrichment you want to download.
-
-The CSV file is saved to your local system.
-
-## Viewing a custom enrichment
-{: #enrich-howto-view}
-{: ui}
-
-If you have a custom enrichment configured in your {{site.data.keyword.logs_full_notm}} instance, you can view the enrichment data in the {{site.data.keyword.logs_full_notm}} UI.
-
-1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
-
-2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
-
-3. Click **View in explore screen** for the custom enrichment you want to view.
-
-You can filter, transform, and aggregate the data using DataPrime.
-
-The UI displays up to 2,000 rows, but queries apply to all the custom enrichment data, not just the data that is displayed.
-{: note}
 
 
 

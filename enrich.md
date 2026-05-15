@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-28"
+  years:  2024, 2026
+lastupdated: "2026-05-15"
 
 keywords:
 
@@ -52,20 +52,3 @@ You can enrich the log by adding a field containing the customer name so you can
 In this example, the logs contain a field with a domain name that represents where an application is accessed. You want to create an alert that creates a notification if an attempt to access the application is made from an unauthorized domain.
 
 You can create a CSV file with a list of allowlisted domains so each log is enriched with a field (`domain_enriched`) with the word `allowed` for domains in the list. You can then create an alert for logs that do not contain this field (for example `NOT domain_enriched:allowed`).
-
-
-## Geo Enrichment
-{: #geo-enrichment}
-
-Logs can include IP information.
-
-With the geo enrichment, you can automatically add IP-based geographical information, including ASN (Autonomous System Number) information, to your logs as new fields that can be queried, visualized, and reported.
-
-For example, you can add the country name, city name, continent name, postal code, and location geo point.
-
-If you don’t have IP fields set, or your data isn’t JSON-formatted, you can use {{site.data.keyword.logs_full_notm}} rules to extract the IP addresses that are found in your log records by using the [`Extract`](/docs/cloud-logs?topic=cloud-logs-parse-extract-rule&interface=ui#parse-extract-3-ui) or [`Parse`](/docs/cloud-logs?topic=cloud-logs-parse-rule&interface=ui#parse-rule-3-ui) rules.
-
-After you define the IP field, {{site.data.keyword.logs_full_notm}} adds geographical information to the logs based on the selected fields.
-
-These fields are not added if the enrichment database does not have the queried IP.
-{: important}

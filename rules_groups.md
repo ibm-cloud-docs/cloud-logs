@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-03-18"
+  years:  2024, 2026
+lastupdated: "2026-05-15"
 
 keywords:
 
@@ -54,7 +54,6 @@ A rule group definition has several sections. Complete the following steps to cr
 
     - Timestamp Extract: Rule to replace the log timestamp with a timestamp that is included in the log record.
 
-    - Exclude Fields: Rule to remove JSON fields and reduce the number of indexed fields.
 
     - Stringify JSON Field: Rule to reduce the amount of indexed fields by transforming a JSON object into a stringify JSON field.
 
@@ -62,6 +61,7 @@ A rule group definition has several sections. Complete the following steps to cr
 
     When you create a rule, you can use the sample log area to verify your rule. Create or paste a log in to this area and it shows you the results of the rule that processes the log.
     {: tip}
+
 
 ## Changing the order of execution of rules groups
 {: #rules_groups_order_change}
@@ -117,7 +117,7 @@ Within a rules group:
 
     Only logs that match the applications, subsystems and severities that are configured continue applying the parsing rules.
 
-2. Parsing rules are then are applied top-down as defined in the parsing rules UI. You can drag and drop rules at different positions if you need to apply a rule before others.
+2. Parsing rules are then applied top-down as defined in the parsing rules UI. You can drag and drop rules at different positions if you need to apply a rule before others.
 
    * The rules within a rule group are applied from the first rule in the list to the final listed rule.
 
@@ -128,7 +128,7 @@ Within a rules group:
    Rules are applied immediately so that the output of one rule becomes the input of the next one.
    {: note}
 
-The order of execution of rules groups and rules is important and define the final log’s structure.
+The order of execution of rule groups and rules is important and define the final log’s structure.
 
 Put block rules first and use the rule matcher when possible to prevent unnecessary processing of logs and speed-up your data processing.
 {: important}
@@ -140,7 +140,6 @@ For example, consider these two rules that parse Heroku Postgres logs:
 * [Postgres leader](https://regex101.com/r/aQJsp5/2){: external}
 
 The follower log has this entry at the end: `follower_lag_commits`. This entry means that the leader rule captures both logs because it is less restrictive and all other fields match. Follower matches only the follower logs (the first test string is not captured in the follower example because it doesn’t have the additional entry). The follower rule would be run first. 
-
 
 
 ## Searching for a rules group
