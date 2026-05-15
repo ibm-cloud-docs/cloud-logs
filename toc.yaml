@@ -539,10 +539,10 @@ toc:
                 navtitle: Downloading a Helm chart version
                 tag: draft
               - topic: otel-collector/otel-collector-kube.md
-                navtitle: Managing the OTel collector using Helm
+                navtitle: Deploying the OTel collector using Helm step by step
                 tag: draft
               - topic: otel-collector/otel-collector-kube-script.md
-                navtitle: Managing the OTel collector using a script
+                navtitle: Deploying the OTel collector using a script
                 tag: draft
               - topic: otel-colector/otel-collector-upgrade.md
                 navtitle: Upgrade the OTel collector
