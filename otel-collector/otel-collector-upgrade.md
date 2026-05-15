@@ -41,3 +41,5 @@ Complete the following steps to upgrade the OTel collector that is deployed in a
     helm upgrade ibm-otel-collector  oci://icr.io/icl-charts/ibm-otel-collector-charts --version <VERSION> -n ibm-observe
     ```
     {: codeblock}
+
+    Where `VERSION` defines the Helm chart version. For more information, see [Checking the available Helm chart versions](/docs-draft/cloud-logs?topic=cloud-logs-helm-chart-otel-versions).

@@ -116,8 +116,18 @@ oc create secret generic ibmcloud-api-key \
 ```
 {: codeblock}
 
-## Step 5. Install the Helm chart
+## Step 5. Customize the Helm chart
 {: #otel-collector-kube-step5}
+
+You can customize the Helm chart by modifying the `values.yaml` file.
+
+Complete the following steps:
+1. Download the Helm chart. For more information, see [Downloading the Helm chart](/docs-draft/cloud-logs?topic=cloud-logs-helm-chart-otel-download).
+2. Open the `values.yaml` file.
+3.
+
+## Step 6. Install the Helm chart
+{: #otel-collector-kube-step6}
 
 If you are using the `iamMode` as `IAMAPIKey` then the apikey needs to be present in a Kubernetes secret named `icl-otel-collector` with the key name `IAM_API_KEY`.  The secret can be created using the Helm chart by including the `--set secret.iamAPIKey=<your iamAPIKey>` option when running the helm install.  If the secret has been created manually or if you are using `iamMode=TrustedProfile` then do not include this option.
 {: important}
@@ -195,8 +205,8 @@ Where
 - `--set openshift.enabled`: Set to true for OpenShift clusters. It enables the OpenShift security mode.
 
 
-## Step 6. Verify the OTel collector is successfully deployed
-{: #otel-collector-kube-step6}
+## Step 7. Verify the OTel collector is successfully deployed
+{: #otel-collector-kube-step7}
 
 When the collector is deployed, you can verify the deployment:
 
@@ -301,8 +311,8 @@ If you encounter a problem, you can run the `Automated Diagnostics Script` to tr
 
 
 
-## Step 7. Verify logs are being delivered to your target destination
-{: #otel-collector-kube-step7}
+## Step 8. Verify logs are being delivered to your target destination
+{: #otel-collector-kube-step8}
 
 Complete the following steps:
 

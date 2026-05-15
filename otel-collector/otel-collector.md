@@ -29,19 +29,18 @@ The following diagram shows the high level view of the three tier architecture t
 
 ![Metrics collection architecture for orchestrated environments](../images/metrics.png "Metrics collection architecture for orchestrated environments"){: caption="Metrics collection architecture for orchestrated environments" caption-side="bottom"}
 
-The **daemonSet** deploys a pod on each node of the cluster to collect node-local telemetry only.
+The **daemonSet**, known as the icl-shipper-agent, deploys a pod on each node of the cluster to collect node-local telemetry only.
 
-A **statefulSet** is deployed acting as a cluster-wide scraping and aggregation layer.
+A **statefulSet**, known as the icl-shipper-collector, is deployed acting as a cluster-wide scraping and aggregation layer.
 - Minimum 2 replicas are required for high availability.
 - Provides stable pod identities that are required by the *Target Allocator*.
 - Uses persistent storage for metric queues to help prevent data loss during backend outages.
 - Configured with a 60-second graceful shutdown period to flush queues during rollouts.
 
-The **target allocator** discovers scrape targets via Prometheus Custom Resource Definitions (CRD) and distributes the workload across the Collector replicas.
+The **target allocator**, known as the icl-shipper-targets-allocator, discovers scrape targets via Prometheus Custom Resource Definitions (CRD) and distributes the workload across the Collector replicas.
 - Uses consistent-hashing to ensure even distribution and minimize metric "churn" during scaling.
 - Minimum 2 replicas are required for high availability.
-
-
+- Automatically monitors the cluster for Prometheus Operator CRDs.
 
 ## Metrics collected in orchestrated environments
 {: #otel-collector-metrics-orchestrated}
