@@ -56,7 +56,7 @@ The following metrics are collected:
 
     - **cAdvisor metrics**: Detailed container metrics scraped from kubelet's /metrics/cadvisor endpoint via prometheus receiver.
 
-2. Cluster and application telemetry collected thorugh the StatefulSet tier:
+2. Cluster and application telemetry collected through the StatefulSet tier:
 
     - **Cluster metrics**: Nodes, deployments, pods, namespaces via k8s_cluster receiver.
 

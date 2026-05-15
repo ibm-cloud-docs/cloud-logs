@@ -17,10 +17,10 @@ subcollection: cloud-logs
 # Checking the available Helm chart versions
 {: #helm-chart-otel-versions}
 
-You can use a Helm chart to deploy, upgrade, and remove the {{site.data.keyword.agent}} from a Kubernetes cluster or an Openshift cluster. Before specifying a version, you can check the available Helm chart versions.
+You can use a Helm chart to deploy, upgrade, and remove the OTel collector from a Kubernetes cluster or an Openshift cluster. Before specifying a version, you can check the available Helm chart versions.
 {: shortdesc}
 
-Do the following to check the available {{site.data.keyword.agent}} versions.
+Complete the following steps to check the available Helm chart versions that are available to deploy the OTel collector:
 
 1. Login to IBM Cloud using the CLI.
 

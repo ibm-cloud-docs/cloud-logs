@@ -16,13 +16,19 @@ subcollection: cloud-logs
 # Deploying the OTel collector in an orchestrated environment by using a Helm chart
 {: #otel-collector-kube-script}
 
-You can use a Helm chart to deploy the {{site.data.keyword.collector}} v1.6.x to collect and route infrastructure and application metrics collector from a Kubernetes cluster to an {{site.data.keyword.logs_full_notm}} instance.
+You can use a Helm chart to deploy the OTel collector in a Kubernetes or OpenShift cluster. The OTel collector to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
 Complete the following steps to deploy an collector on an Kubernetes cluster:
 
 ## Prereqs
 {: #otel-collector-kube-script-prereqs}
+
+Learn about the OTel collector. For more information, see [About the OTel collector](/docs-draft/cloud-logs?topic=cloud-logs-otel-collector).
+
+Review the requirements to deploy the collector. For more information, see [Requirements to deploy the collector](/docs-draft/cloud-logs?topic=cloud-logs-otel-collector&interface=ui#otel-collector-requirements-orchestrated).
+
+Make sure you have access to the {{site.data.keyword.logs_full_notm}} instance where you plan to deploy the collector and send the metrics. You will need the region where the {{site.data.keyword.logs_full_notm}} instance is deployed and the service instance ID.
 
 [{{site.data.keyword.containershort}}]{: tag-iks} Complete the following tasks before you deploy the OTel collector in a Kubernetes cluster:
 - Make sure you have access to a Kubernetes cluster with permissions to create namespaces and deploy the collector.
@@ -42,38 +48,7 @@ Complete the following steps to deploy an collector on an Kubernetes cluster:
 
     - The Openshift CLI to manage the cluster from the command line. [Learn more](/docs/openshift?topic=openshift-cli-install).
 
-Review the requirements to deploy the collector:
 
--Agent (DaemonSet):
-
-    CPU: 200m request, 1000m limit
-
-    Memory: 512Mi request, 1Gi limit
-
--Collector (StatefulSet):
-
-    Minimum 2 replicas for high availability
-
-    CPU: 500m request per replica
-
-    Memory: 1Gi request per replica
-
--Persistent storage:
-
-    10Gi per replica (for queue persistence)
-
--Target Allocator (Deployment):
-
-    Minimum 2 replicas for high availability
-
-    CPU: 100m request
-
-    Memory: 256Mi request
-
-Other prereqs:
-- The latest release of the version 3 [Helm CLI](https://github.com/helm/helm/releases)
-
-- Make sure you have access to the {{site.data.keyword.logs_full_notm}} instance where you plan to send the metrics. You will need the region where the {{site.data.keyword.logs_full_notm}} instance is deployed and the service instance ID.
 
 
 ## Step 1. Create the API key for authentication

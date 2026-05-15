@@ -533,7 +533,7 @@ toc:
                 navtitle: About the OTel collector
                 tag: draft
               - topic: otel-collector/helm-chart-otel-versions.md
-                navtitle: Checking the available Helm chart versions
+                navtitle: Checking Helm chart versions
                 tag: draft
               - topic: otel-collector/helm-chart-otel-download.md
                 navtitle: Downloading a Helm chart version
