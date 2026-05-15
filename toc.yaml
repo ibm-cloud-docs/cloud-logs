@@ -526,6 +526,21 @@ toc:
             navtitle: Understanding the agent configuration file
           - topic: agent/agent-set-appsubname.md
             navtitle: Configuring custom metadata fields
+          - topicgroup:
+              label: Managing the OTel Collector for orchestrated environments
+              topics:
+              - topic: otel-collector/helm-chart-otel-versions.md
+                navtitle: Checking the available Helm chart versions
+                tag: draft
+              - topic: otel-collector/helm-chart-otel-download.md
+                navtitle: Downloading a Helm chart version
+                tag: draft
+              - topic: otel-collector/otel-collector-kube.md
+                navtitle: Managing the OTel collector using Helm
+                tag: draft
+              - topic: otel-collector/otel-collector-kube-script.md
+                navtitle: Managing the OTel collector using a script
+                tag: draft
       - topicgroup:
           label: Streaming data
           topics:
