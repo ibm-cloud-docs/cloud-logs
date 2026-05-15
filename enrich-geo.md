@@ -36,12 +36,17 @@ For example, you can add the country name, city name, continent name, postal cod
 
 5. Select the key and ASN information.
 
-If you don’t have IP fields set, or your data isn’t JSON-formatted, you can use {{site.data.keyword.logs_full_notm}} rules to extract the IP addresses that are found in your log records by using the Extract or Parse rules.
+If you don’t have IP fields set, or your data isn’t JSON-formatted, you can use {{site.data.keyword.logs_full_notm}} rules to extract the IP addresses that are found in your log records by using the [Extract](/docs/cloud-logs?topic=parse-extract-rule) or [Parse](/docs/cloud-logs?topic=parse-rule).
+
+6. Click **Create enrichment**
 
 After you define the IP field, {{site.data.keyword.logs_full_notm}} adds geographical information to the logs based on the selected fields.
 
 These fields are not added if the enrichment database does not have the queried IP.
 {: important}
+
+6. Click **Create enrichment**.
+
 
 
 ## Viewing a geo enrichment
@@ -60,7 +65,3 @@ You can filter, transform, and aggregate the data using DataPrime.
 
 The UI displays up to 2,000 rows, but queries apply to all the geo enrichment data, not just the data that is displayed.
 {: note}
-
-
-
-

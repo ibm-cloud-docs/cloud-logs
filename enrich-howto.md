@@ -169,7 +169,7 @@ c80452a8-9573-4e3c-b3f6-88ae740c776c. customer5, medium
 
 3. Click **+Add enrichment**.
 
-4. Select custom enrichment. 
+4. Select **Custom enrichment**. 
 
 5. Configure the enrichment by providing a name and description.
 
