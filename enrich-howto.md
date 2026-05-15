@@ -97,7 +97,7 @@ Custom enrichment supports two methods:
 
 * Automatic enrichment during ingestion.
 
-* Dynamic enrichment using [DataPrime](/docs/cloud-logs?group=dataprime) syntax.
+* Dynamic enrichment using  syntax.
 
 ### Automatic enrichment
 {: #enrich-howto-auto}
