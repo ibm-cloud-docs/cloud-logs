@@ -202,8 +202,6 @@ toc:
             navtitle: Enriching data
           - topic: enrich-howto.md
             navtitle: Configuring custom enrichments
-          - topic: enrich-geo.md
-            navtitle: Configuring geo enrichments
       - topicgroup:
           label: Querying data
           topics:

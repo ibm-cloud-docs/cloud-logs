@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-05-15"
 
 keywords:
 
@@ -54,7 +54,6 @@ A rule group definition has several sections. Complete the following steps to cr
 
     - Timestamp Extract: Rule to replace the log timestamp with a timestamp that is included in the log record.
 
-    - Remove Fields: Rule to remove JSON fields and reduce the number of indexed fields.
 
     - Stringify JSON Field: Rule to reduce the amount of indexed fields by transforming a JSON object into a stringify JSON field.
 
