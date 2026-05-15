@@ -231,43 +231,20 @@ When the collector is deployed, you can verify the deployment:
     ```
     {: codeblock}
 
-- Check a config map `icl-otel-collector` is available in the namespace `ibm-observe`.
-
-    Run the following command to view the OTel collector config details.
+- Check the pods that are deployed:
 
     ```sh
-    kubectl get configmap icl-otel-collector -n ibm-observe
-    ```
-    {: codeblock}
-
-    You can also use:
-
-    ```sh
-    kubectl describe configmaps icl-otel-collector -n ibm-observe
-    ```
-    {: codeblock}
-
-- A daemonset `icl-otel-collector` is available in the namespace `ibm-observe`.
-
-    Run the following command to view the daemonset.
-
-    ```sh
-    kubectl -n ibm-observe get ds icl-otel-collector
-    ```
-    {: codeblock}
-
-- Retrieve the list of pods by using the following command:
-
-    ```sh
-    kubectl get pods -n ibm-observe -o wide
+    kubectl get pods ibm-observe -o wide -l app.kubernetes.io/name=ibm-cloud-logs-shipper
     ```
     {: codeblock}
 
     ```text
-    NAME                  READY   STATUS    RESTARTS   AGE    IP              NODE           NOMINATED NODE   READINESS GATES
-    icl-otel-collector-4lwvt      1/1     Running   0          2d5h   172.17.61.181   192.168.16.4   <none>           <none>
-    icl-otel-collector-g7z87      1/1     Running   0          2d5h   172.17.0.48     192.168.32.4   <none>           <none>
-    icl-otel-collector-nw56s      1/1     Running   0          2d5h   172.17.32.232   192.168.0.10   <none>           <none>
+    NAME                                         READY   STATUS    RESTARTS   AGE
+    icl-shipper-agent-xxxxx                      1/1     Running   0          2m
+    icl-shipper-agent-yyyyy                      1/1     Running   0          2m
+    icl-shipper-collector-0                      1/1     Running   0          2m
+    icl-shipper-collector-1                      1/1     Running   0          2m
+    icl-shipper-target-allocator-zzzzz           1/1     Running   0          2m
     ```
     {: screen}
 
@@ -292,11 +269,45 @@ When the collector is deployed, you can verify the deployment:
 
     If your nodes are not named by their IP, you can append the `-o wide` option and compare the values in the `INTERNAL-IP` column instead.
 
-    To view the logs of a pod, run `kubectl logs <POD_NAME>> -n ibm-observe`
-    {: tip}
+- Check the logs by component type:
 
-    To check the helm chart deployed, run `helm list -n ibm-observe`
-    {: tip}
+    To check the logs of the agent (deployed as a deamonSet), run the following command:
+
+    ```sh
+    kubectl logs -n ibm-observe -l app.kubernetes.io/component=agent --tail=50
+    ```
+    {: codeblock}
+
+    To check the logs of the collector (deployed as a StatefulSet), run the following command:
+
+    ```sh
+    kubectl logs -n ibm-observe -l app.kubernetes.io/component=collector --tail=50
+    ```
+    {: codeblock}
+
+    To check the logs of the target allocator, run the following command:
+
+    ```sh
+    kubectl logs -n <namespace> -l app.kubernetes.io/component=target-allocator --tail=50
+    ```
+    {: codeblock}
+
+
+- To check the helm chart deployed, run `helm list -n ibm-observe`
+
+
+If you encounter a problem, you can run the `Automated Diagnostics Script` to troubleshoot what is happening:
+
+1. Get the troubleshooting script in the following URL: [OTel collector troublshooting script](https://github.com/observability-c/icl-otelcol-shipper/blob/main/scripts/troubleshoot.sh){: external}
+
+2. Run the following command:
+
+    ```sh
+    ./scripts/troubleshoot.sh -n ibm-observe [-r RELEASE_NAME] [--full]
+    ```
+    {: codeblock}
+
+
 
 
 ## Step 4. Verify logs are being delivered to your target destination

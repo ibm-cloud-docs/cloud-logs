@@ -544,6 +544,12 @@ toc:
               - topic: otel-collector/otel-collector-kube-script.md
                 navtitle: Managing the OTel collector using a script
                 tag: draft
+              - topic: otel-colector/otel-collector-upgrade.md
+                navtitle: Upgrade the OTel collector
+                tag: draft
+              - topic: otel-collector/otel-collector-remove.md
+                navtitle: Remove the OTel collector
+                tag: draft
       - topicgroup:
           label: Streaming data
           topics:
