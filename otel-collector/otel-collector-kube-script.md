@@ -16,10 +16,10 @@ subcollection: cloud-logs
 # Deploying the OTel collector in an orchestrated environment by using a Helm chart
 {: #otel-collector-kube-script}
 
-You can use a Helm chart to deploy the OTel collector in a Kubernetes or OpenShift cluster. The OTel collector to an {{site.data.keyword.logs_full_notm}} instance.
+You can use a Helm chart to deploy the OTel collector in a Kubernetes or OpenShift cluster.
 {: shortdesc}
 
-Complete the following steps to deploy an collector on an Kubernetes cluster:
+Complete the following steps to deploy the OTel collector:
 
 ## Prereqs
 {: #otel-collector-kube-script-prereqs}
@@ -51,18 +51,25 @@ Make sure you have access to the {{site.data.keyword.logs_full_notm}} instance w
 
 
 
-## Step 1. Create the API key for authentication
+## Step 1. Define the authentication method
 {: #otel-collector-kube-script-step1}
 
+Choose the type of identity and the authentication method for the agent. Then, create a trusted profile or an API key. The role that is required for sending logs to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
-You can use a service ID as the identity that is used by the collector to authenticate with the {{site.data.keyword.logs_full}} service.
+You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full}} service. For more information, see [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
-- For more information, see [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
-- The role that is required for sending metrics to {{site.data.keyword.logs_full_notm}} is `Sender`.
+Choose one of the following options:
+
+### Option 1: Authentication using a trusted profile
+{: #otel-collector-kube-script-step1-1}
+
+Create a Trusted Profile. For more information, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
+
+### Option 2: Authentication using a service ID API key
+{: #otel-collector-kube-script-step1-2}
 
 Generate an API Key for service ID authentication. For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
-
 
 ## Step 2. Deploy the collector
 {: #otel-collector-kube-script-step2}
@@ -195,3 +202,108 @@ secret/ibmcloud-api-key created
 Error: INSTALLATION FAILED: path "./helm/otel-ibmcloud" not found
 ```
 {: codeblock}
+
+## Step 3. Verify the OTel collector is successfully deployed
+{: #otel-collector-kube-script-step3}
+
+When the collector is deployed, you can verify the deployment:
+
+- Check the `ibm-observe` namespace is available.
+
+    Run the following command to list the namespaces in the cluster and check that the `ibm-observe` is listed.
+
+    ```sh
+    kubectl get namespace
+    ```
+    {: codeblock}
+
+-  Check the resources that are configured:
+
+    ```sh
+    kubectl get deployment --namespace ibm-observe
+    ```
+    {: codeblock}
+
+- Check the deployment status:
+
+    ```sh
+    kubectl rollout status deployment --namespace ibm-observe --selector app.kubernetes.io/name=icl-otel-collector;
+    ```
+    {: codeblock}
+
+- Check a config map `icl-otel-collector` is available in the namespace `ibm-observe`.
+
+    Run the following command to view the OTel collector config details.
+
+    ```sh
+    kubectl get configmap icl-otel-collector -n ibm-observe
+    ```
+    {: codeblock}
+
+    You can also use:
+
+    ```sh
+    kubectl describe configmaps icl-otel-collector -n ibm-observe
+    ```
+    {: codeblock}
+
+- A daemonset `icl-otel-collector` is available in the namespace `ibm-observe`.
+
+    Run the following command to view the daemonset.
+
+    ```sh
+    kubectl -n ibm-observe get ds icl-otel-collector
+    ```
+    {: codeblock}
+
+- Retrieve the list of pods by using the following command:
+
+    ```sh
+    kubectl get pods -n ibm-observe -o wide
+    ```
+    {: codeblock}
+
+    ```text
+    NAME                  READY   STATUS    RESTARTS   AGE    IP              NODE           NOMINATED NODE   READINESS GATES
+    icl-otel-collector-4lwvt      1/1     Running   0          2d5h   172.17.61.181   192.168.16.4   <none>           <none>
+    icl-otel-collector-g7z87      1/1     Running   0          2d5h   172.17.0.48     192.168.32.4   <none>           <none>
+    icl-otel-collector-nw56s      1/1     Running   0          2d5h   172.17.32.232   192.168.0.10   <none>           <none>
+    ```
+    {: screen}
+
+    The `READY` column shows `1/1` for all pods, with a `STATUS` of `Running`. Verify that an OTel collector pod is ready for each node in your cluster.
+
+    To check how many workers are available in your cluster, you can run the following command:
+
+    ```sh
+    kubectl get nodes
+    ```
+    {: codeblock}
+
+    ```text
+    NAME           STATUS   ROLES           AGE   VERSION
+    192.168.0.10   Ready    master,worker   8d    v1.20.0+558d959
+    192.168.32.4   Ready    master,worker   8d    v1.20.0+558d959
+    192.168.16.4   Ready    master,worker   8d    v1.20.0+558d959
+    ```
+    {: screen}
+
+    The number of items in each of these two lists need to be the same, and you can match the IP addresses in the node names with the values in the `NODE` column of the pod listing.
+
+    If your nodes are not named by their IP, you can append the `-o wide` option and compare the values in the `INTERNAL-IP` column instead.
+
+    To view the logs of a pod, run `kubectl logs <POD_NAME>> -n ibm-observe`
+    {: tip}
+
+    To check the helm chart deployed, run `helm list -n ibm-observe`
+    {: tip}
+
+
+## Step 4. Verify logs are being delivered to your target destination
+{: #otel-collector-kube-script-step4}
+
+Complete the following steps:
+
+1. [Go to the web UI for your {{site.data.keyword.logs_full_notm}} instance.](/docs/cloud-logs?topic=cloud-logs-instance-launch).
+
+2. Check that you can see metrics.
