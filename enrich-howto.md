@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-05-15"
 
 keywords:
 
@@ -165,37 +165,35 @@ c80452a8-9573-4e3c-b3f6-88ae740c776c. customer5, medium
 
 1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
 
-2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
+2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data enrichment**.
 
-3. Click **+ Add enrichment**.
+3. Click **+Add enrichment**.
 
-4. Select the enrichment type.  
+4. Select custom enrichment. 
 
-5. With the geo enrichment, you can select the automatically add IP-based geographical information, including ASN (Autonomous System Number) information. To set the IP field, see Creating new fields.
+5. Configure the enrichment by providing a name and description.
 
-6. With the custom enrichment, enter a name and description.
-
-5. Upload your CSV file.
+6. Upload your CSV file.
 
    You can also replace a CSV file that you have uploaded.
    {: note}
 
-6. To enable automatic enrichment, define how logs should be enriched during ingestion:
+7. To enable automatic enrichment, define how logs should be enriched during ingestion:
 
    * Key: Select the key.
 
-   * Enriched Key Name: Specify the enrichedkey name.
+   * Enriched key name: Specify the enriched key name.
 
-   * Columns for Enrichment: Select additional CSV columns to enrich the logs.
+   * Columns for enrichment: Select additional CSV columns to enrich the logs.
 
-7. Add more keys, if required.
+8. Add more keys, if required.
 
-8. Click **Create enrichment**.
-
-
+9. Click **Create enrichment**.
 
 
-## Downloading an enrichment CSV file
+
+
+## Downloading a custom enrichment CSV file
 {: #enrich-howto-download}
 {: ui}
 
@@ -203,11 +201,12 @@ If you have a custom enrichment configured in your {{site.data.keyword.logs_full
 
 1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
 
-2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
+2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data enrichment**.
 
 3. Click **Download CSV** for the enrichment you want to download.
 
 The CSV file is saved to your local system.
+
 
 ## Viewing a custom enrichment
 {: #enrich-howto-view}
@@ -217,7 +216,7 @@ If you have a custom enrichment configured in your {{site.data.keyword.logs_full
 
 1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
 
-2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Enrichment**.
+2. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data enrichment**.
 
 3. Click **View in explore screen** for the enrichment you want to view.
 
