@@ -76,25 +76,17 @@ Other prereqs:
 - Make sure you have access to the {{site.data.keyword.logs_full_notm}} instance where you plan to send the metrics. You will need the region where the {{site.data.keyword.logs_full_notm}} instance is deployed and the service instance ID.
 
 
-## Step 1. Define the authentication method for the agent
+## Step 1. Create the API key for authentication
 {: #otel-collector-kube-step1}
 
-Choose the type of identity and the authentication method for the collector. Then, create a trusted profile or an API key. The role that is required for sending metrics to {{site.data.keyword.logs_full_notm}} is `Sender`.
+You can use a service ID as the identity that is used by the collector to authenticate with the {{site.data.keyword.logs_full}} service.
 
-You can use a service ID or a trusted profile as the identity that is used by the agent to authenticate with the {{site.data.keyword.logs_full}} service. For more information, see [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
+- For more information, see [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
-
-Choose one of the following options:
-
-### Option 1: Authentication using a trusted profile
-{: #otel-collector-kube-step1-tp}
-
-Create a Trusted Profile. For more information, see [Generating a Trusted Profile for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-trusted-profile).
-
-### Option 2: Authentication using a service ID API key
-{: #otel-collector-kube-step1-key}
+- The role that is required for sending metrics to {{site.data.keyword.logs_full_notm}} is `Sender`.
 
 Generate an API Key for service ID authentication. For more information, see [Generating an API Key for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
+
 
 
 ## Step 2. Configuring the Helm chart values file for the {{site.data.keyword.agent}}

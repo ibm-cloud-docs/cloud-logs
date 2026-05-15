@@ -529,6 +529,9 @@ toc:
           - topicgroup:
               label: Managing the OTel Collector for orchestrated environments
               topics:
+              - topic: otel-collector/otel-collector.md
+                navtitle: About the OTel collector
+                tag: draft
               - topic: otel-collector/helm-chart-otel-versions.md
                 navtitle: Checking the available Helm chart versions
                 tag: draft
