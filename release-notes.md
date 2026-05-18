@@ -29,10 +29,10 @@ Functional updates and fixes are available in the Chennai (`in-che`) region only
 
 :   New features included in this release.
 
-    * Enhanced the *Data Usage* page to provide deeper visibility into data consumption, including metric sample distributions and log/metric volume insights. The *Metric Usage* section provides a breakdown of metric sample counts across varying scales, while the User Data section offers visibility into log and metric volumes. For more information, [Data Usage] (/docs/cloud-logs?topic=cloud-logs-data-usage&interface=api).
+    * Enhanced the *Data Usage* page to provide deeper visibility into data consumption, including metric sample distributions and log/metric volume insights. The *Metric Usage* section provides a breakdown of metric sample counts across varying scales, while the User Data section offers visibility into log and metric volumes. For more information, [Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage&interface=api).
 
     * Added the *Data Usage Analyser* page to provide detailed insights into log ingestion volumes by priority. The *User Data Sent* tab enables you to monitor ingestion trends, identify high-volume logs, and better understand overall data ingestion patterns for improved visibility and analysis. 
-    For more information, see [Data Usage Analyzer] (/docs/cloud-logs?topic=cloud-logs-data-usage-analyzer&interface=api).
+    For more information, see [Data Usage Analyzer](/docs/cloud-logs?topic=cloud-logs-data-usage-analyzer&interface=api).
 
     * The *Metrics Explorer* page provides comprehensive insights into metrics, ingestion volumes, cardinality, and dimensions. For example, you can use the *Metrics explorer* page to identify the label values that contribute most to a metric's cardinality. For more information, see [Metrics Explorer](/docs/cloud-logs?topic=cloud-logs-metrics-explorer-r114&interface=api).
 
@@ -40,13 +40,13 @@ Functional updates and fixes are available in the Chennai (`in-che`) region only
 
     * With the introduction of the *Data Dashboard* in this release, you can now gain detailed visibility into your observability data usage,
 
-    * The *Recording rules* feature enable you to preprocess and derive new time series from existing ones. The newly recorded metric can be used in various dashboard visualisations and delivers high-performance analytics. For more information, see [Recording Rules] (/docs/cloud-logs?topic=cloud-logs-metrics-recording-rules&interface=api)
+    * The *Recording rules* feature enable you to preprocess and derive new time series from existing ones. The newly recorded metric can be used in various dashboard visualisations and delivers high-performance analytics. For more information, see [Recording Rules](/docs/cloud-logs?topic=cloud-logs-metrics-recording-rules&interface=api)
 
-    * Generate data usage report that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days. For more information, see [Generete Reports] (/docs/cloud-logs?topic=cloud-logs-data-usage-reports&interface=api).
+    * Generate data usage report that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days. For more information, see [Generete Reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports&interface=api).
 
-    * Introduced Heatmap, Geomap, and Dynamic Widgets for enhanced visualisation. For more information, see [widgets] (/docs/cloud-logs?topic=cloud-logs-widget_geo_map).
+    * Introduced Heatmap, Geomap, and Dynamic Widgets for enhanced visualisation. For more information, see [widgets](/docs/cloud-logs?topic=cloud-logs-widget_geo_map).
 
-    * Improved usability and navigation across the *Parsing Rules* and *Enrichment* pages. For more information, see [Parsing Rules] (/docs/cloud-logs?topic=cloud-logs-rules_groups) and [Enrichment] (/docs/cloud-logs?topic=cloud-logs-enrich-howto&interface=ui).
+    * Improved usability and navigation across the *Parsing Rules* and *Enrichment* pages. For more information, see [Parsing Rules](/docs/cloud-logs?topic=cloud-logs-rules_groups) and [Enrichment](/docs/cloud-logs?topic=cloud-logs-enrich-howto&interface=ui).
 
 
 ## 14 May 2026
