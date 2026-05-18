@@ -40,7 +40,7 @@ Functional updates and fixes are available in the Chennai (`in-che`) region only
 
     * With the introduction of the *Data Dashboard* in this release, you can now gain detailed visibility into your observability data usage,
 
-    * The *Recording rules* feature enable you to preprocess and derive new time series from existing ones. The newly recorded metric can be used in various dashboard visualisations and delivers high-performance analytics.
+    * The *Recording rules* feature enable you to preprocess and derive new time series from existing ones. The newly recorded metric can be used in various dashboard visualisations and delivers high-performance analytics. For more information, see [Recording Rules] (/docs/cloud-logs?topic=cloud-logs-metrics-recording-rules&interface=api)
 
     * Generate data usage report that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days. For more information, see [Generete Reports] (/docs/cloud-logs?topic=cloud-logs-data-usage-reports&interface=api).
 
