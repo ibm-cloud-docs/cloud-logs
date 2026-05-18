@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-15"
+  years:  2024, 2026
+lastupdated: "2026-05-18"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -18,45 +18,91 @@ subcollection: cloud-logs
 You can create a gauge widget that can be included in custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
-The gauge widget works on a **single** time series.
-{: important}
+Use a gauge widget to display a single value within a specified range, often resembling a speedometer or dial. It is typically used to represent key metrics and performance indicators at a glance.
+{: note}
 
-## Creating a gauge
-{: #create_gauge}
+## Step 1: Enter name and description
+{: #widget_gauge_1}
 
-1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Gauge** widget from your side bar.
+Complete the following steps:
 
-2. Set the definitions for your gauge in the sidebar.
+1. 1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Gauge** widget from your side bar.
 
-   **Name & Description**: Create a name and description.
+2. Replace *New gauge* with the **Name** for the widget.
 
-   **Source**: Select a data type.
+3. Enter a description.
 
-   If the data type chosen is metrics, specify the metric or desired PromQL in the **Query** field.
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Add description**.
 
-   **Calculation**: Determines the values for your gauge. Possible parameters are **Instant**, **Last**, **Avg**, **Sum**, **Min** and **Max**.
+4. Define where legend values are displayed. Valid values are: `Side`, `Bottom`, `Auto`, and `Hide`.
 
-   Selecting the parameter **Last** will provide the last data point in a time series within the selected time frame, while **Instant** will provide the final value at the end of the time frame. **Avg**, **Sum**, **Min**, and **Max** calculate the value by applying the selected aggregation function to the time series data points within the time frame.
-
-   For example, if the time is 03:25:00, fetching the time series with hour steps returns 00:00:00 - 1, 01:00:00 - 3, 02:00:00 - 15, 03:00:00 - 60, the **Last** value would be 60. However, if we get the value for the exact time of 03:25:00 using **Instant**, the value returned will be taken from the exact time in the timeline, resulting in a value of 120.
-
-   If you choose a data type of logs or spans, you will be directed to select an **Aggregation.**
-
-   **Add Filter:**  (Optional) Add a filter to your gauge.
-
-   Unlike the dashboard filter in the sidebar which affects the entire dashboard, this filter only affects the widget.
-
-   The widget and dashboard filters operate in parallel to one another and intersect. If they negate one another, dashboard filters override widget filters.
-
-   **Visuality**: Indicate how you want the data displayed.
-
-   Select **Unit** to display a % symbol with your results.
-
-    Enable or disable the **Inner arc** and **Outer arc**. The inner arc will show the actual value. The outer arc will show the thresholds. If you choose not to enable either arc, only a number will be displayed in your gauge.
-
-    **Thresholds.**: Choose the base **Thresholds**. That is, when the gauge should appear green and red. Add additional thresholds - yellow and orange - if necessary.
-
-3. Click **Save** to save your widget.
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Leggend Settings**.
 
 
 
+## Step 2: Configure the query to define the data set
+{: #widget_gauge_2}
+
+Complete the following steps:
+
+1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
+
+2. For `Query 1`, complete the following steps:
+
+    Select the **data type**. Valid values are: `Logs`, `Metrics`, and `DataPrime`.
+
+    Select the **source**. Valid options are: `Priority Insights` and `Analyze and Alert`.
+
+    You can rename the query. Select the ![Action icon](/icons/action-menu-icon.svg "Action icon") and then click **Rename query**.
+
+3. Enter the query.
+
+    When the data type is `DataPrime`, enter a Dataprime query in the **Query** field.
+
+    When the data type is `Logs`, enter a Lucene query in the **Query** field. You can apply filters and aggregations.
+
+    When the data type is `Metrics`, specify the metric or desired PromQL in the **Query** field. You can apply filters and aggregations.
+
+## Step 3: Configure the widget
+{: #widget_gauge_3}
+
+Complete the following steps:
+
+1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
+
+2. Choose a *Legend Management* option. Valid values are: `Group` and `Threshold`.
+
+    **Group** organizes the legend based on different data entities, such as servers or applications, displaying each as a separate entry.
+
+    **Threshold** categorizes values based on predefined limits (e.g., normal, warning, critical), helping to visualize whether a metric is within an acceptable range or has crossed into a warning state.
+
+3. In the *Visual management* section, choose how you want to visualize tha data.
+
+    The inner arc displays the actual value for your query.
+
+    The outer arc displays thresholds that you define.
+
+    Enable the *inner arc*, the *outer arc*, or both to display a single value within a specified range, often resembling a speedometer or dial.
+
+    If the *inner arc* and the *outer arc* are disabled, the numerical result of your query will appear as a **STAT widget** without additional visualizations. In this case, you may determine whether the threshold color will be applied to the value or background.
+
+    Threshold color. Set the color/s for the values and background in your visualization.
+
+**Thresholds.**: Choose the base **Thresholds**. That is, when the gauge should appear green and red. Add additional thresholds - yellow and orange - if necessary.
+
+## Step 4: Save the widget
+{: #widget_gauge_5}
+
+Complete the following steps:
+
+1. [Optional] Set the widget's dashboard time if you want to use a time range that is different from the Dashboard selected one.
+
+2. Click **Save** to save your widget.
+
+3. [Optional] Share a direct link to the widget. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Share Widget URL**, and copy the URL.
+
+    Anyone with access to the dashboard can open the shared link to view the widget in context.
+
+    Shared widget URLs always reflect the dashboard’s last saved version. If you’ve made changes to the widget or layout, save your dashboard before sharing.{: attention}
+
+4. [Optional] Add a custom action. For more information, see [Using actions to integrate with third-party services](/docs/cloud-logs?topic=cloud-logs-actions).
