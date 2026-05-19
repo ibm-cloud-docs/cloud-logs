@@ -28,7 +28,7 @@ Gauges incorporate thresholds which allow you to change the appearance of the vi
 
 Complete the following steps:
 
-1. 1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Gauge** widget from your side bar.
+1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Gauge** widget from your side bar.
 
 2. Replace *New gauge* with the **Name** for the widget.
 
