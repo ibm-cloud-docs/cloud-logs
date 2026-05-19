@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-15"
+lastupdated: "2026-05-19"
 
 keywords:
 
@@ -128,17 +128,17 @@ Complete the following steps:
 
     Option 1: Agent component only
 
-        This option is configured by setting `agent.targetAllocator.enabled = true`, `collector.enabled = false` and `targetAllocator = false` in the Helm chart `values.yaml` file.
+    This option is configured by setting `agent.targetAllocator.enabled = true`, `collector.enabled = false` and `targetAllocator = false` in the Helm chart `values.yaml` file.
 
     Option 2: Collector component only
 
-        This option is configured by setting `agent.targetAllocator.enabled = false`, `collector.enabled = true` and `targetAllocator = false` in the Helm chart `values.yaml` file.
+    This option is configured by setting `agent.targetAllocator.enabled = false`, `collector.enabled = true` and `targetAllocator = false` in the Helm chart `values.yaml` file.
 
     Option 3: Collector that uses the target allocator (Recommended)
 
-        This option is configured by setting `agent.targetAllocator.enabled=false`, `collector.enabled = true` and `targetAllocator = true` in the Helm chart `values.yaml` file.
+    This option is configured by setting `agent.targetAllocator.enabled=false`, `collector.enabled = true` and `targetAllocator = true` in the Helm chart `values.yaml` file.
 
-        You must configure the the PodMonitor and the serviceMonitor. For more information, see [Using ServiceMonitors](https://prometheus-operator.dev/docs/developer/getting-started/#using-servicemonitors_){: external} and the [Using PodMonitors](https://prometheus-operator.dev/docs/developer/getting-started/#using-podmonitors){: external}.
+    You must configure the the PodMonitor and the serviceMonitor. For more information, see [Using ServiceMonitors](https://prometheus-operator.dev/docs/developer/getting-started/#using-servicemonitors_){: external} and the [Using PodMonitors](https://prometheus-operator.dev/docs/developer/getting-started/#using-podmonitors){: external}.
 
 ## Step 6. Install the Helm chart
 {: #otel-collector-kube-step6}

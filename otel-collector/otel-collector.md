@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-15"
+lastupdated: "2026-05-19"
 
 keywords:
 
@@ -137,7 +137,7 @@ The following metrics are collected:
 
     - **Collector self-monitoring metrics**: Collector's own internal metrics.
 
-## Metrics collected in orchestrated environments
+## Metrics collection interval
 {: #otel-collector-metrics-collection}
 
 Metrics are collected every 30 seconds by default.

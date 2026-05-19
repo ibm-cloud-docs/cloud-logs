@@ -607,6 +607,12 @@ toc:
               label: Terraform reference
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
       - topicgroup:
+          label: SDK Reference
+          links:
+          - link:
+              label: GO SDK
+              href: https://github.com/IBM/logs-go-sdk/
+      - topicgroup:
           label: Observability services
           links:
           - link:
