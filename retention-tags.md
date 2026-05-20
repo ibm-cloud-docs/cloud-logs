@@ -254,7 +254,7 @@ Complete the following steps:
     "name": "NAME",
     "order": 2,
     "priority": "PRIORITY"
-  }'   "https://<INSTANCE_API_ENDPOINT>/v1/policies"
+    }'   "https://<INSTANCE_API_ENDPOINT>/v1/policies"
     ```
     {: codeblock}
 
