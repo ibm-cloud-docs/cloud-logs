@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-15"
+  years:  2024, 2026
+lastupdated: "2026-05-19"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -18,45 +18,139 @@ subcollection: cloud-logs
 You can create a gauge widget that can be included in custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
-The gauge widget works on a **single** time series.
-{: important}
+Use a gauge widget to display a single value within a specified range, often resembling a speedometer or dial. It is typically used to represent key metrics and performance indicators at a glance.
+{: note}
 
-## Creating a gauge
-{: #create_gauge}
+Gauges incorporate thresholds which allow you to change the appearance of the visualization when certain values are met or exceeded. When you group a data set by a specific parameter, you create a multi-gauge, where each gauge represents a subset of the data. This enables simultaneous comparison across different categories or groups, providing a broader view of performance.
+
+## Step 1: Enter name and description
+{: #widget_gauge_1}
+
+Complete the following steps:
 
 1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Gauge** widget from your side bar.
 
-2. Set the definitions for your gauge in the sidebar.
+2. Replace *New gauge* with the **Name** for the widget.
 
-   **Name & Description**: Create a name and description.
+3. Enter a description.
 
-   **Source**: Select a data type.
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Add description**.
 
-   If the data type chosen is metrics, specify the metric or desired PromQL in the **Query** field.
+4. Define where legend values are displayed. Valid values are: `Side`, `Bottom`, `Auto`, and `Hide`.
 
-   **Calculation**: Determines the values for your gauge. Possible parameters are **Instant**, **Last**, **Avg**, **Sum**, **Min** and **Max**.
-
-   Selecting the parameter **Last** will provide the last data point in a time series within the selected time frame, while **Instant** will provide the final value at the end of the time frame. **Avg**, **Sum**, **Min**, and **Max** calculate the value by applying the selected aggregation function to the time series data points within the time frame.
-
-   For example, if the time is 03:25:00, fetching the time series with hour steps returns 00:00:00 - 1, 01:00:00 - 3, 02:00:00 - 15, 03:00:00 - 60, the **Last** value would be 60. However, if we get the value for the exact time of 03:25:00 using **Instant**, the value returned will be taken from the exact time in the timeline, resulting in a value of 120.
-
-   If you choose a data type of logs or spans, you will be directed to select an **Aggregation.**
-
-   **Add Filter:**  (Optional) Add a filter to your gauge.
-
-   Unlike the dashboard filter in the sidebar which affects the entire dashboard, this filter only affects the widget.
-
-   The widget and dashboard filters operate in parallel to one another and intersect. If they negate one another, dashboard filters override widget filters.
-
-   **Visuality**: Indicate how you want the data displayed.
-
-   Select **Unit** to display a % symbol with your results.
-
-    Enable or disable the **Inner arc** and **Outer arc**. The inner arc will show the actual value. The outer arc will show the thresholds. If you choose not to enable either arc, only a number will be displayed in your gauge.
-
-    **Thresholds.**: Choose the base **Thresholds**. That is, when the gauge should appear green and red. Add additional thresholds - yellow and orange - if necessary.
-
-3. Click **Save** to save your widget.
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Leggend Settings**.
 
 
 
+## Step 2: Configure the query to define the data set
+{: #widget_gauge_2}
+
+Complete the following steps:
+
+1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
+
+2. For `Query 1`, complete the following steps:
+
+    Select the **data type**. Valid values are: `Logs`, `Metrics`, and `DataPrime`.
+
+    Select the **source**. Valid options are: `Priority Insights` and `Analyze and Alert`.
+
+    You can rename the query. Select the ![Action icon](/icons/action-menu-icon.svg "Action icon") and then click **Rename query**.
+
+3. Enter the query.
+
+    When the data type is `DataPrime`, enter a Dataprime query in the **Query** field.
+
+    When the data type is `Logs`, enter a Lucene query in the **Query** field. You can apply filters and aggregations.
+
+    When the data type is `Metrics`, specify the metric or desired PromQL in the **Query** field. You can apply filters and aggregations.
+
+
+4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed in your gauge.
+
+    Select a label and its corresponding value.
+
+    Filters are applied at the widget level and work alongside dashboard filters. If there is a conflict, the dashboard filters take precedence over widget filters.
+
+5. Add a function.
+
+    For a query where the data type is `Logs`, you can show an aggregated value using one of the following functions:
+
+    | Aggregation      | Description |
+    |------------------|-------------|
+    | Count	           | The total number of logs within the selected time range. |
+    | Count Distinct   | The number of unique logs within the selected time range. |
+    | Sum	             | The sum of all logs within the selected time range. |
+    | Min	             | The smallest value among the logs within the selected time range. |
+    | Max	             | The largest value among the logs within the selected time range. |
+    | Average	         | The average value of all logs within the selected time range. |
+    | Percentile XX	   | Represents the value below which XX% of the logs fall. For example, Percentile 95 is the value below which 95% of logs fall. |
+    {: caption="Aggregation option when building a query when the data type is Logs" caption-side="top"}
+
+    For a query where the data type is `Metrics`, you can show a calculated value using one of the following functions:
+
+    | Calculation      | Description |
+    |------------------|-------------|
+    | Instant	         | The value at the current point in time. |
+    | Last	           | The most recent value within the selected time range. |
+    | Min	             | The smallest value within the selected time range. |
+    | Max	             | The largest value within the selected time range. |
+    | Avg	             | The average value of all data points within the selected time range. |
+    | Sum	             | The total sum of all data points within the selected time range. |
+    | None	           | No calculation is applied. Raw data is used. |
+    {: caption="Calculations option when building a query when the data type is Metrics" caption-side="top"}
+
+6. Add 1 or more fields in *Group By* to generate multiple gauges.
+
+## Step 3: Configure the widget
+{: #widget_gauge_3}
+
+Complete the following steps:
+
+1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
+
+2. Choose a *Legend Management* option. Valid values are: `Group` and `Threshold`.
+
+    **Group** organizes the legend based on different data entities, such as servers or applications, displaying each as a separate entry.
+
+    **Threshold** categorizes values based on predefined limits such as normal, warning, critical, helping to visualize whether a metric is within an acceptable range or has crossed into a warning state.
+
+3. In the *Visual management* section, choose how you want to visualize tha data.
+
+    The inner arc displays the actual value for your query.
+
+    The outer arc displays thresholds that you define.
+
+    Enable the *inner arc*, the *outer arc*, or both to display a single value within a specified range, often resembling a speedometer or dial.
+
+    If the *inner arc* and the *outer arc* are disabled, the numerical result of your query will appear as a **STAT widget** without additional visualizations. In this case, you may determine whether the threshold color will be applied to the value or background. In this part of teh configuration, you set the *threshold color* option that you want. You can choose **Value** to set the threshold color for the value, or you can set **Background** to set the background with the threshold color.
+
+4. Configure the *Thresholds* section.
+
+    A threshold is a value you set, that when met or exceeded, changes the visualization's appearance based on the query results. You may choose between percentage or absolute numbers as values.
+
+    Choose the *Threshold type*. Valid options are: `absolute` to define specific numbers as the value and `percentage` to define values that are relative to the minimum or maximum value.
+
+    You can change the color of a threshold value.
+
+    You can set the values for a threshold and add labels that describe it.
+
+    You can add additional thresholds.
+
+
+## Step 4: Save the widget
+{: #widget_gauge_5}
+
+Complete the following steps:
+
+1. [Optional] Set the widget's dashboard time if you want to use a time range that is different from the Dashboard selected one.
+
+2. Click **Save** to save your widget.
+
+3. [Optional] Share a direct link to the widget. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Share Widget URL**, and copy the URL.
+
+    Anyone with access to the dashboard can open the shared link to view the widget in context.
+
+    Shared widget URLs always reflect the dashboard’s last saved version. If you’ve made changes to the widget or layout, save your dashboard before sharing.{: attention}
+
+4. [Optional] Add a custom action. For more information, see [Using actions to integrate with third-party services](/docs/cloud-logs?topic=cloud-logs-actions).

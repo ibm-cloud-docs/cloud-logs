@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-21"
+lastupdated: "2026-05-19"
 
 keywords:
 
@@ -38,7 +38,7 @@ Byte and unit calculations are approximate and might not be identical to data us
 
 To explore your metrics usage, complete the following steps:
 
-1. In the navigation bar, click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Metrics Usage**.
+1. In the navigation bar, click the **Usage** icon ![Data pipeline icon](/icons/usage.svg "Data pipeline") > **Usage icon**.
 
 2. In **Search**, enter a metric or label of interest and adjust the time frame to analyze usage data for the day and time (UTC).
 
