@@ -563,6 +563,8 @@ toc:
       - topic: endpoints_ingress.md
       - topic: ips4firewalls.md
         navtitle: IP addresses for firewalls
+      - topic: retrieve-access-token.md
+        navtitle: Retrieving an access token
       - topicgroup:
           label: API Reference
           links:
