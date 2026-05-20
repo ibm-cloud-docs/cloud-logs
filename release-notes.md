@@ -21,6 +21,30 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
+## 18 May 2026
+{: #cloud-logs-may1826}
+{: release-note}
+
+
+Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Montreal (`ca-mon`)
+    * Chennai (`in-che`)
+    * Sydney (`au-syd`)
+    * Sao Paulo (`br-sao`)
+    * London (`eu-gb`)
+    * Madrid (`eu-es`)
+    * Frankfurt (`eu-de`)
+    * Osaka (`jp-osa`)
+    * Tokyo (`jp-tok`)
+    * Toronto (`ca-tor`)
+    * Washington, DC (`us-east`)
+    * US South (`us-south`)
+
+
+
 ## 14 May 2026
 {: #cloud-logs-may1426}
 {: release-note}
