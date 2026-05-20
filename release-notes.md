@@ -21,6 +21,13 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
+
+## 20 May 2026
+{: #cloud-logs-may2026}
+{: release-note}
+
+API and Terraform support for the Tag retention feature. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+
 ## 18 May 2026
 {: #cloud-logs-may1826}
 {: release-note}

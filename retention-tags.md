@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-21"
+lastupdated: "2026-05-20"
 
 keywords:
 
@@ -29,6 +29,7 @@ To delete objects automatically after a defined period (from the object creation
 Archive retention tags are attached to object files that are uploaded into the data bucket after they are defined and enabled in the {{site.data.keyword.logs_full_notm}} instance.
 
 
+
 ## Prerequisites
 {: #retention-tags-prereqs}
 
@@ -36,9 +37,26 @@ Archive retention tags are attached to object files that are uploaded into the d
 - An {{site.data.keyword.logs_full_notm}} instance.
 - Permissions in {{site.data.keyword.logs_full_notm}} to configure archive retention tags. You need the role **Manager** that includes the action **logs.archive-retention.manage** and **logs.archive-retention.read**. For more information, see [Getting started with IAM](/docs/cloud-logs?topic=cloud-logs-iam).
 
-## Configure custom archive retention tags in {{site.data.keyword.logs_full_notm}}
-{: #retention-tags-step1}
-{: step}
+## Before you begin
+{: #retention-tags-before}
+
+After you activate archive retention tags, consider the following information:
+
+- This feature cannot be disabled.
+
+    Retention tags cannot be deactivated once enabled.
+    {: attention}
+
+- Custom tags are available to configure TCO policies.
+
+- You can modify the retention tags by clicking **Edit**.
+
+- New files in your data bucket are tagged with the custom tag `ICL_ARCHIVE_RETENTION`. The value of the tag is set to a custom tag value or to `default`.
+
+
+## Step 1: Configure custom archive retention tags in {{site.data.keyword.logs_full_notm}} through the UI
+{: #retention-tags-step1-ui}
+{: ui}
 
 Complete the following steps:
 
@@ -70,24 +88,36 @@ Complete the following steps:
 
 
 
-After you activate archive retention tags, consider the following information:
-
-- This feature cannot be disabled.
-
-    Retention tags cannot be deactivated once enabled.
-    {: attention}
-
-- Custom tags are available to configure TCO policies.
-
-- You can modify the retention tags by clicking **Edit**.
-
-- New files in your data bucket are tagged with the custom tag `ICL_ARCHIVE_RETENTION`. The value of the tag is set to a custom tag value or to `default`.
 
 
-## Create expiration rules in {{site.data.keyword.cos_full_notm}}
+
+## Step 1: Configure custom archive retention tags in {{site.data.keyword.logs_full_notm}} by using the API
+{: #retention-tags-step1-api}
+{: api}
+
+Complete the following steps:
+
+1. Retrieve your access token programmatically by first creating a [service ID API key](/docs/account?topic=account-serviceidapikeys){: external} for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. For more information, see [Retrieving an access token](/docs/cloud-logs?topic=cloud-logs-retrieve-access-token&interface=api).
+
+2. Run the following cURL command to activate tags in your {{site.data.keyword.logs_full_notm}} instance and to configure custom tags:
+
+    ```text
+    curl -X PUT --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Content-Type: application/json"   --data   '{
+        "tags": [
+        "tag1",
+        "tag2",
+        "tag3"
+        ]
+    }'   "https://<INSTANCE_API_ENDPOINT>/v1/log_data_retention_tags"
+    ```
+    {: codeblock}
+
+    Where `INSTANCE_API_ENDPOINT` is the API endpoint of your {{site.data.keyword.logs_full_notm}} instance. For more information, see [Service API endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_api&interface=api).
+
+## Step 2: Create expiration rules in {{site.data.keyword.cos_full_notm}} through the UI
 {: #retention-tags-step2-ui}
 {: ui}
-{: step}
+
 
 Create an expiration rule for each custom archive retention tag, and an expiration rule for the `Default` value.
 
@@ -134,18 +164,20 @@ To create expiration rules, complete the following steps:
 
 
 
-## Create expiration rules in {{site.data.keyword.cos_full_notm}}
+## Step 2: Create expiration rules in {{site.data.keyword.cos_full_notm}} by using the API
 {: #retention-tags-step2-api}
 {: api}
-{: step}
+
 
 Create an expiration rule for each custom archive retention tag, and an expiration rule for the `Default` value.
 
 To create expiration rules, see [About deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry) and [Deleting stale data with expiration rules using APIs](/docs/cloud-object-storage?topic=cloud-object-storage-expiry#expiry-using-api-sdks).
 
-## Configure TCO policies
-{: #retention-tags-step3}
-{: step}
+
+
+## Step 3: Configure TCO policies
+{: #retention-tags-step3-ui}
+{: ui}
 
 Create policies and configure the *archive retention* section. For more information, see [Creating a TCO policy](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-create-policy).
 
@@ -184,3 +216,58 @@ Complete the following steps:
     Notice that retention tags are available if they are defined and activated.
 
 8. Click **Apply**.
+
+
+## Step 3: Configure TCO policies by using the API
+{: #retention-tags-step3-api}
+{: api}
+
+Complete the following steps:
+
+1. Retrieve your access token programmatically by first creating a [service ID API key](/docs/account?topic=account-serviceidapikeys){: external} for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. For more information, see [Retrieving an access token](/docs/cloud-logs?topic=cloud-logs-retrieve-access-token&interface=api).
+
+2. Run the following cURL command to configure a TCO policy:
+
+    ```text
+    curl -X POST --location --header "Authorization: Bearer ${IAM_TOKEN}"   --header "Accept: application/json"   --header "Content-Type: application/json"   --data   '{
+    "application_rule": {
+      "name": "APP_NAME",
+      "rule_type_id": "is"
+    },
+    "subsystem_rule": {
+      "name": "SUBSYSTEM_NAME",
+      "rule_type_id": "is"
+    },
+    "log_rules": {
+      "severities": [
+        "debug",
+        "verbose",
+        "info",
+        "warning",
+        "error"
+      ]
+    },
+    "deleted": false,
+    "description": "Policy for sending data to Priority Insights",
+    "enabled": true,
+    "archive_retention_tag": "TAG_VALUE",
+    "name": "NAME",
+    "order": 2,
+    "priority": "PRIORITY"
+  }'   "https://<INSTANCE_API_ENDPOINT>/v1/policies"
+    ```
+    {: codeblock}
+
+    Where
+
+    `INSTANCE_API_ENDPOINT` is the API endpoint of your {{site.data.keyword.logs_full_notm}} instance. For more information, see [Service API endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_api&interface=api).
+
+    `IAM_TOKEN` is the IAM bearer token used to request authorization to create a TCO policy. For more information, see [Retrieving an access token](/docs/cloud-logs?topic=cloud-logs-retrieve-access-token&interface=api).
+
+    `TAG_VALUE` is the value of one of the tags that you configured in a previous step.
+
+    `NAME` is the name of the TCO Policy
+
+    `PRIORITY` defines the data pipeline that is associated to the data that meets the conditions of this policy. Valid values are: `type_block`, `type_low`, `type_medium`, and `type_high`.
+
+  For more information, see [Create a TCO policy](/apidocs/logs-service-api#create-policy).{: external}
