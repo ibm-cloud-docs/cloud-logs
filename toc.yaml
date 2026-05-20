@@ -582,6 +582,10 @@ toc:
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
       - topicgroup:
           label: SDK Reference
+          topics:
+          - topic: sdk.md
+            navtitle: SDK
+            tag: staging
           links:
           - link:
               label: GO SDK
