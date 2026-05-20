@@ -29,9 +29,11 @@ You can use the {{site.data.keyword.logs_full_notm}} Go SDK to programmatically 
 {: caption="GO SDK for {{site.data.keyword.logs_full_notm}}" caption-side="top"}
 
 
-## Preequisites
-* An [IBM cloud](/cloud.ibm.com/registration) account
-* An IAM API key to allow SDK to access your account. Create one [here](/cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
+## Pre-reqs
+{: #sdk-prereqs}
+
+* You must have access to an [IBM cloud](/cloud.ibm.com/registration) account.
+* You must An IAM API key to allow SDK to access your account. Create one [here](/cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
 * Go version 1.19 or above
 
 
@@ -54,7 +56,10 @@ Next run *go build* or *go mod tid* to download and install the new dependencies
 ## *go get command*
 Alternatvely, you can use the *go get* command to download and install the packages needed by your application:
 
+```go
 go get -u github.com/IBM/logs-go-sdk/logsv0
+```
+{: codeblock}
 
 Be sure to use the appropriate package name from the service table above for the services used by your application.
 
