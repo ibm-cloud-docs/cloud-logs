@@ -270,4 +270,5 @@ Complete the following steps:
 
     `PRIORITY` defines the data pipeline that is associated to the data that meets the conditions of this policy. Valid values are: `type_block`, `type_low`, `type_medium`, and `type_high`.
 
-  For more information, see [Create a TCO policy](/apidocs/logs-service-api#create-policy).{: external}
+
+For more information, see [Create a TCO policy](/apidocs/logs-service-api#create-policy).{: external}
