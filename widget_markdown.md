@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2023-05-15"
+  years:  2024, 2026
+lastupdated: "2026-05-21"
 
 keywords: 
 
@@ -24,6 +24,22 @@ Markdown is a lightweight markup language that allows users to format and struct
 
 No prior knowledge of Markdown is required. You have the option to edit in Markdown or take advantage of the simplified WYSIWYG editor that converts your input to Markdown.
 
+
+## Step 1: Enter name and description
+{: #widget_markdown_1}
+
+Complete the following steps:
+
+1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Line Chart** widget from your side bar.
+
+2. Replace *New line chart* with the **Name** for the widget.
+
+3. Enter a description.
+
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Add description**.
+
+  
+
 ## Creating a Markdown widget
 {: #create_markdown}
 
@@ -42,4 +58,3 @@ No prior knowledge of Markdown is required. You have the option to edit in Markd
 5. (Optional) Add text to be displayed as a tooltip to be displayed when hovering over the widget title bar.
 
 6. Click **Save** to save your widget.
-
