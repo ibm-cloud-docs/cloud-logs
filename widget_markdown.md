@@ -64,14 +64,4 @@ Alternatively, in the *Markdown* section, you can add your text in Markdown usin
 ## Step 3: Save the widget
 {: #widget_markdown_3}
 
-Complete the following steps:
-
-1. [Optional] Set the widget's dashboard time if you want to use a time range that is different from the Dashboard selected one.
-
-2. Click **Save** to save your widget.
-
-3. [Optional] Share a direct link to the widget. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Share Widget URL**, and copy the URL.
-
-    Anyone with access to the dashboard can open the shared link to view the widget in context.
-
-    Shared widget URLs always reflect the dashboard’s last saved version. If you’ve made changes to the widget or layout, save your dashboard before sharing.{: attention}
+Click **Save** to save your widget.
