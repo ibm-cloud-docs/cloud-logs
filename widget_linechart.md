@@ -4,7 +4,7 @@ copyright:
   years:  2024, 2026
 lastupdated: "2026-05-22"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -18,7 +18,7 @@ subcollection: cloud-logs
 You can create a line chart widget that can be included in custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
-The line chart displays values as a series of data points.  
+The line chart displays values as a series of data points.
 
 
 ## Step 1: Enter name and description
@@ -99,8 +99,6 @@ Complete the following steps:
     | None	           | No calculation is applied. Raw data is used. |
     {: caption="Calculations option when building a query when the data type is Metrics" caption-side="top"}
 
-6. Add 1 or more fields in *Group By* to generate multiple charts.
-
 
 ## Step 3: Configure the widget
 {: #widget_linechart_3}
@@ -111,23 +109,23 @@ Complete the following steps:
 
 2. Choose a *Tooltip* option. Valid values are: `Show all series` and `Single View`.
 
- Select whether to see all time series when hovering over them, or to see only the single time series you hover over.
+    Select whether to see all time series when hovering over them, or to see only the single time series you hover over.
 
 3. In the *Visual management* section, choose how you want to visualize tha data. Options are **Absolute** and   **Relative**.
 
-  `Absolute` displays specific numbers as the value whereas `Relative` values that are relative to the minimum or maximum value.
+    `Absolute` displays specific numbers as the value whereas `Relative` values that are relative to the minimum or maximum value.
 
-4.  In the *Time Bucket* section, choose how you want to group data points. You can decide to group data automatically or choose the exact time interval, manually. 
+4.  In the *Time Bucket* section, choose how you want to group data points. You can decide to group data automatically or choose the exact time interval, manually.
 
-  You can enter a value that should be shown as data points inside each time bucket. 
+    You can enter a value that should be shown as data points inside each time bucket.
 
-5. In the *Series Management* section, configure the `Scale` option. 
+5. In the *Series Management* section, configure the `Scale` option.
 
-    A scale refers to how values are displayed along the x-axis and y-axis. 
+    A scale refers to how values are displayed along the x-axis and y-axis.
 
-   Valid options are: `linear` that defines how values increases proportionally and `logarithmic` wherein value is defined by logarithms instead of equal linear intervals. 
+    Valid options are: `linear` that defines how values increases proportionally and `logarithmic` wherein value is defined by logarithms instead of equal linear intervals.
 
-   By default, setting is linear. If however you have large differences between the different values, it can be helful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than linear scale. 
+    By default, setting is linear. If however you have large differences between the different values, it can be helful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than linear scale.
    {: note}
 
 

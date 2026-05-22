@@ -4,7 +4,7 @@ copyright:
   years:  2024, 2026
 lastupdated: "2026-05-22"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -19,7 +19,7 @@ You can create a vertical bar chart that can be included in custom {{site.data.k
 {: shortdesc}
 
 Use a vertical bar charts to sort your data alphabetically by default by column name. In [horizontal bar charts](/docs/cloud-logs?topic=cloud-logs-widget_horizontalbar), data is usually sorted by value.
- 
+
 
 
 ## Step 1: Enter name and description
@@ -63,8 +63,7 @@ Complete the following steps:
 
     When the data type is `Metrics`, specify the metric or desired PromQL in the **Query** field. You can apply filters and aggregations.
 
-When creating a bar chart with metrics as the data type, the categories specified in the PromQL query appear in the Group By field automatically. You can reorder categories in the Group By field by dragging and dropping. Drag and drop categories from the Category field into the Stacking field, to stack by a particular category.
-
+    When creating a bar chart with metrics as the data type, the categories specified in the PromQL query appear in the Group By field automatically. You can reorder categories in the Group By field by dragging and dropping. Drag and drop categories from the Category field into the Stacking field, to stack by a particular category.
 
 4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed.
 
@@ -100,7 +99,6 @@ When creating a bar chart with metrics as the data type, the categories specifie
     | None	           | No calculation is applied. Raw data is used. |
     {: caption="Calculations option when building a query when the data type is Metrics" caption-side="top"}
 
-6. Add 1 or more fields in *Group By* to generate multiple charts.
 
 
 ## Step 3: Configure the widget
@@ -114,31 +112,28 @@ Complete the following steps:
 
     **Group** organizes the legend based on different data entities, such as servers or applications, displaying each as a separate entry.
 
-    **Stack** displays how multiple data entries are grouped and layered together on the same horizontal bar. The data sets of the same stack are grouped into a single horizontal bar chart divided into segments. This shows you a second layer of data on the chart. 
+    **Stack** displays how multiple data entries are grouped and layered together on the same horizontal bar. The data sets of the same stack are grouped into a single horizontal bar chart divided into segments. This shows you a second layer of data on the chart.
 
-**Legend Colour Scheme** : Select whether you want your legend colours to be by group, stack, or aggregation. By default, the horizontal bar chart is by aggregation, which means a single colour will be shown for all bars. 
-
+    **Legend Colour Scheme** : Select whether you want your legend colours to be by group, stack, or aggregation. By default, the horizontal bar chart is by aggregation, which means a single colour will be shown for all bars.
 
 3. In the *Visual management* section, choose how you want to visualize tha data.
 
-    The max bar by graph displays the maximum number of individual bars in a single chart view according to your query. 
+    The max bar by graph displays the maximum number of individual bars in a single chart view according to your query.
 
-    The max slices per bar displays the maximum number of segments within a single bar. 
+    The max slices per bar displays the maximum number of segments within a single bar.
 
     Enable the *max bar by graph*, the *max slices per bar*, or both to display a single value within a specified range.
-
-    If the *inner arc* and the *outer arc* are disabled, the numerical result of your query will appear as a **STAT widget** without additional visualizations. In this case, you may determine whether the threshold color will be applied to the value or background. In this part of teh configuration, you set the *threshold color* option that you want. You can choose **Value** to set the threshold color for the value, or you can set **Background** to set the background with the threshold color.
 
 4. Configure the *Scale* section.
 
     A scale refers to how values are displayed along the x-axis and y-axis. You may choose between linear or logarithmic as values.
 
-    Choose the *Scale type*. Valid options are: `Linear` that defines how values increases proportionally and `Logarithmic` wherein value is defined by logarithms instead of equal linear intervals. 
+    Choose the *Scale type*. Valid options are: `Linear` that defines how values increases proportionally and `Logarithmic` wherein value is defined by logarithms instead of equal linear intervals.
 
     You can change the color of a threshold value.
 
-   By default, setting is linear. If however you have large differences between the different values, it can be helful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than linear scale. 
-   {: note}
+    By default, setting is linear. If however you have large differences between the different values, it can be helful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than linear scale.
+
 
 
 ## Step 4: Save the widget

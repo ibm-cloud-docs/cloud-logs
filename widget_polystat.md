@@ -4,7 +4,7 @@ copyright:
   years:  2024, 2026
 lastupdated: "2026-05-22"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -24,7 +24,7 @@ You can create polystat widget that can be included in custom {{site.data.keywor
 
 Complete the following steps:
 
-1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Gauge** widget from your side bar.
+1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Polystat** widget from your side bar.
 
 2. Replace *New polystat* with the **Name** for the widget.
 
@@ -96,7 +96,6 @@ Complete the following steps:
     | None	           | No calculation is applied. Raw data is used. |
     {: caption="Calculations option when building a query when the data type is Metrics" caption-side="top"}
 
-6. Add 1 or more fields in *Group By* to generate multiple polystats.
 
 
 ## Step 3: Configure the widget
@@ -112,8 +111,7 @@ Complete the following steps:
 
     **Threshold** categorizes values based on predefined limits such as normal, warning, critical, helping to visualize whether a metric is within an acceptable range or has crossed into a warning state.
 
-
-4. Configure the *Thresholds* section.
+3. Configure the *Thresholds* section.
 
     A threshold is a value you set, that when met or exceeded, changes the visualization's appearance based on the query results. You may choose between percentage or absolute numbers as values.
 

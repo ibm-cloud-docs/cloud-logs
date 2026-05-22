@@ -4,7 +4,7 @@ copyright:
   years:  2024, 2026
 lastupdated: "2026-05-22"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -18,9 +18,9 @@ subcollection: cloud-logs
 You can create a horizontal bar chart that can be included in custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
-Use a horizontal bar chart widget to sourt your data by value, in descending order by default. With [vertical bar charts](/docs/cloud-logs?topic=cloud-logs-widget_verticalbar), data is generally sorted alphabetically by column name.
+Use a horizontal bar chart widget to sort your data by value, in descending order by default. With [vertical bar charts](/docs/cloud-logs?topic=cloud-logs-widget_verticalbar), data is generally sorted alphabetically by column name.
 
-Horizontal bar chart widget incorporates thresholds, which allow you to change the visualization when certain values are met or executed. When you grop a data set by specific parameters, you create a multi-horizontal bar, where each horizontal bar represents a subset of the data. This enables simultaneous comparison across different categories or groups, providing a broader view. 
+Horizontal bar chart widget incorporates thresholds, which allow you to change the visualization when certain values are met or executed. When you grop a data set by specific parameters, you create a multi-horizontal bar, where each horizontal bar represents a subset of the data. This enables simultaneous comparison across different categories or groups, providing a broader view.
 
 
 ## Step 1: Enter name and description
@@ -28,7 +28,7 @@ Horizontal bar chart widget incorporates thresholds, which allow you to change t
 
 Complete the following steps:
 
-1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Horizontal Bar Chartrt** widget from your side bar.
+1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Horizontal Bar Chart** widget from your side bar.
 
 2. Replace *New horizontal bar chart* with the **Name** for the widget.
 
@@ -83,23 +83,13 @@ Complete the following steps:
     | Min	             | The smallest value among the logs within the selected time range. |
     | Max	             | The largest value among the logs within the selected time range. |
     | Average	         | The average value of all logs within the selected time range. |
-    | Percentile XX	   | Represents the value below which XX% of the logs fall. For example, Percentile 95 is the value below which 95% of logs fall. |
     {: caption="Aggregation option when building a query when the data type is Logs" caption-side="top"}
 
-    For a query where the data type is `Metrics`, you can show a calculated value using one of the following functions:
+    In Bar charts, changing the aggregation type will change the type of data you see.
 
-    | Calculation      | Description |
-    |------------------|-------------|
-    | Instant	         | The value at the current point in time. |
-    | Last	           | The most recent value within the selected time range. |
-    | Min	             | The smallest value within the selected time range. |
-    | Max	             | The largest value within the selected time range. |
-    | Avg	             | The average value of all data points within the selected time range. |
-    | Sum	             | The total sum of all data points within the selected time range. |
-    | None	           | No calculation is applied. Raw data is used. |
-    {: caption="Calculations option when building a query when the data type is Metrics" caption-side="top"}
+    For a query where the data type is `Metrics`, choose a function.
 
-6. Add 1 or more fields in *Group By* to generate multiple charts.
+
 
 
 ## Step 3: Configure the widget
@@ -109,37 +99,36 @@ Complete the following steps:
 
 1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
 
-2. Choose a *Legend Management* option. Valid values are: `Group` `Stack`, and `Aggregation `.
+2. Choose a *Bar chart settings* option for the *Y-Axis view by* to configure whether the value or the category is desiplayed. Valid options are: `Value` and `Category`.
+
+3. Choose a *Legend Management* option. Valid values for *Logs* are: `Group`, `Stack`, and `Aggregation `. Valid values for *Metrics* are: `Group` and `Stack`
 
     **Group** organizes the legend based on different data entities, such as servers or applications, displaying each as a separate entry.
 
-    **Stack** displays how multiple data entries are grouped and layered together on the same horizontal bar. The data sets of the same stack are grouped into a single horizontal bar chart divided into segments. This shows you a second layer of data on the chart. 
+    **Stack** displays how multiple data entries are grouped and layered together on the same horizontal bar. The data sets of the same stack are grouped into a single horizontal bar chart divided into segments. This shows you a second layer of data on the chart.
 
-    **Aggregation** displays value by combining multiple data values into a single summarized value before displaying them in the chart or legend. 
+    **Aggregation** displays value by combining multiple data values into a single summarized value before displaying them in the chart or legend.
 
-**Legend Colour Scheme** : Select whether you want your legend colours to be by group, stack, or aggregation. By default, the horizontal bar chart is by aggregation, which means a single colour will be shown for all bars. 
+**Legend Colour Scheme** : Select whether you want your legend colours to be by group, stack, or aggregation. By default, the horizontal bar chart is by aggregation, which means a single colour will be shown for all bars.
 
+4. In the *Visual management* section, choose how you want to visualize tha data.
 
-3. In the *Visual management* section, choose how you want to visualize tha data.
+    The max bar by graph displays the maximum number of individual bars in a single chart view according to your query.
 
-    The max bar by graph displays the maximum number of individual bars in a single chart view according to your query. 
-
-    The max slices per bar displays the maximum number of segments within a single bar. 
+    The max slices per bar displays the maximum number of segments within a single bar.
 
     Enable the *max bar by graph*, the *max slices per bar*, or both to display a single value within a specified range.
 
-    If the *inner arc* and the *outer arc* are disabled, the numerical result of your query will appear as a **STAT widget** without additional visualizations. In this case, you may determine whether the threshold color will be applied to the value or background. In this part of teh configuration, you set the *threshold color* option that you want. You can choose **Value** to set the threshold color for the value, or you can set **Background** to set the background with the threshold color.
-
-4. Configure the *Scale* section.
+5. Configure the *Scale* section.
 
     A scale refers to how values are displayed along the x-axis and y-axis. You may choose between linear or logarithmic as values.
 
-    Choose the *Scale type*. Valid options are: `linear` that defines how values increases proportionally and `logarithmic` wherein value is defined by logarithms instead of equal linear intervals. 
+    Choose the *Scale type*. Valid options are: `linear` that defines how values increases proportionally and `logarithmic` wherein value is defined by logarithms instead of equal linear intervals.
 
     You can change the color of a threshold value.
 
-   By default, setting is linear. If however you have large differences between the different values, it can be helful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than linear scale. 
-   {: note}
+    By default, setting is linear. If however you have large differences between the different values, it can be helful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than linear scale.
+    {: tip}
 
 
 ## Step 4: Save the widget

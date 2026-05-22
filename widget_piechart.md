@@ -4,7 +4,7 @@ copyright:
   years:  2024, 2026
 lastupdated: "2026-05-22"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 {: #widget_piechart}
 
 You can create a pie chart widget that can be included in custom {{site.data.keyword.logs_full}} dashboards.
-{: shortdesc} 
+{: shortdesc}
 
 
 ## Step 1: Enter name and description
@@ -97,7 +97,7 @@ Complete the following steps:
     | None	           | No calculation is applied. Raw data is used. |
     {: caption="Calculations option when building a query when the data type is Metrics" caption-side="top"}
 
-6. Add 1 or more fields in *Group By* to generate multiple charts.
+
 
 
 ## Step 3: Configure the widget
@@ -107,11 +107,11 @@ Complete the following steps:
 
 1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
 
-2. In the *Visual Management* section, choose how you want to visualize the data. The options are **Group by** and **Stack**. 
+2. In the *Visual Management* section, choose how you want to visualize the data. The options are **Group by** and **Stack**.
 
-  `Group by` defines in which criteria the data is displayed: name, value, or percentage,  
-  
-  `Max slices by stack` displays the maximum number of individual segments in a single stack according to your query. 
+  `Group by` defines in which criteria the data is displayed: name, value, or percentage,
+
+  `Max slices by stack` displays the maximum number of individual segments in a single stack according to your query.
 
   `Max slices in chart` displays the maximum number of individual segments in a single chart.
 
