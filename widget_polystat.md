@@ -18,9 +18,6 @@ subcollection: cloud-logs
 You can create polystat widget that can be included in custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
-Use a gauge widget to display a single value within a specified range, often resembling a speedometer or dial. It is typically used to represent key metrics and performance indicators at a glance.
-{: note}
-
 
 ## Step 1: Enter name and description
 {: #widget_polystat_1}
@@ -99,7 +96,7 @@ Complete the following steps:
     | None	           | No calculation is applied. Raw data is used. |
     {: caption="Calculations option when building a query when the data type is Metrics" caption-side="top"}
 
-6. Add 1 or more fields in *Group By* to generate multiple gauges.
+6. Add 1 or more fields in *Group By* to generate multiple polystats.
 
 
 ## Step 3: Configure the widget
@@ -130,7 +127,7 @@ Complete the following steps:
 
 
 ## Step 4: Save the widget
-{: #widget_polystat_5}
+{: #widget_polystat_4}
 
 Complete the following steps:
 
