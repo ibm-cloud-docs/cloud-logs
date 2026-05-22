@@ -12,24 +12,21 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a {{site.data.keyword.logs_full_notm}} vertical bar widget
-{: #widget_verticalbar}
+# Creating a {{site.data.keyword.logs_full_notm}} polystat widget
+{: #widget_polystat}
 
-You can create a vertical bar chart that can be included in custom {{site.data.keyword.logs_full}} dashboards.
+You can create polystat widget that can be included in custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
-
-Use a vertical bar charts to sort your data alphabetically by default by column name. In [horizontal bar charts](/docs/cloud-logs?topic=cloud-logs-widget_horizontalbar), data is usually sorted by value.
-
 
 
 ## Step 1: Enter name and description
-{: #widget_verticalbar_1}
+{: #widget_polystat_1}
 
 Complete the following steps:
 
-1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Vertical Bar Chart** widget from your side bar.
+1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Polystat** widget from your side bar.
 
-2. Replace *New vertical bar chart* with the **Name** for the widget.
+2. Replace *New polystat* with the **Name** for the widget.
 
 3. Enter a description.
 
@@ -37,11 +34,12 @@ Complete the following steps:
 
 4. Define where legend values are displayed. Valid values are: `Side`, `Bottom`, `Auto`, and `Hide`.
 
-    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Legend Settings**.
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Leggend Settings**.
+
 
 
 ## Step 2: Configure the query to define the data set
-{: #widget_verticalbar_2}
+{: #widget_polystat_2}
 
 Complete the following steps:
 
@@ -63,9 +61,8 @@ Complete the following steps:
 
     When the data type is `Metrics`, specify the metric or desired PromQL in the **Query** field. You can apply filters and aggregations.
 
-    When creating a bar chart with metrics as the data type, the categories specified in the PromQL query appear in the Group By field automatically. You can reorder categories in the Group By field by dragging and dropping. Drag and drop categories from the Category field into the Stacking field, to stack by a particular category.
 
-4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed.
+4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed in your gauge.
 
     Select a label and its corresponding value.
 
@@ -102,42 +99,33 @@ Complete the following steps:
 
 
 ## Step 3: Configure the widget
-{: #widget_verticalbar_3}
+{: #widget_polystat_3}
 
 Complete the following steps:
 
 1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
 
-2. Choose a *Legend Management* option. Valid values are: `Group` and `Stack`.
+2. Choose a *Legend Management* option. Valid values are: `Group` and `Threshold`.
 
     **Group** organizes the legend based on different data entities, such as servers or applications, displaying each as a separate entry.
 
-    **Stack** displays how multiple data entries are grouped and layered together on the same horizontal bar. The data sets of the same stack are grouped into a single horizontal bar chart divided into segments. This shows you a second layer of data on the chart.
+    **Threshold** categorizes values based on predefined limits such as normal, warning, critical, helping to visualize whether a metric is within an acceptable range or has crossed into a warning state.
 
-    **Legend Colour Scheme** : Select whether you want your legend colours to be by group, stack, or aggregation. By default, the horizontal bar chart is by aggregation, which means a single colour will be shown for all bars.
+3. Configure the *Thresholds* section.
 
-3. In the *Visual management* section, choose how you want to visualize tha data.
+    A threshold is a value you set, that when met or exceeded, changes the visualization's appearance based on the query results. You may choose between percentage or absolute numbers as values.
 
-    The max bar by graph displays the maximum number of individual bars in a single chart view according to your query.
-
-    The max slices per bar displays the maximum number of segments within a single bar.
-
-    Enable the *max bar by graph*, the *max slices per bar*, or both to display a single value within a specified range.
-
-4. Configure the *Scale* section.
-
-    A scale refers to how values are displayed along the x-axis and y-axis. You may choose between linear or logarithmic as values.
-
-    Choose the *Scale type*. Valid options are: `Linear` that defines how values increases proportionally and `Logarithmic` wherein value is defined by logarithms instead of equal linear intervals.
+    Choose the *Threshold type*. Valid options are: `absolute` to define specific numbers as the value and `relative` to define values that are relative to the minimum or maximum value.
 
     You can change the color of a threshold value.
 
-    By default, setting is linear. If however you have large differences between the different values, it can be helful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than linear scale.
+    You can set the values for a threshold and add labels that describe it.
 
+    You can add additional thresholds.
 
 
 ## Step 4: Save the widget
-{: #widget_verticalbar_4}
+{: #widget_polystat_4}
 
 Complete the following steps:
 

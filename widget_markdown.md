@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2023-05-15"
+  years:  2024, 2026
+lastupdated: "2026-05-22"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -22,24 +22,46 @@ When creating custom dashboards, you can add Markdown widgets. Markdown widgets 
 
 Markdown is a lightweight markup language that allows users to format and structure plain text documents by using a simple and intuitive syntax. By adding the Markdown widget to your custom dashboards, you can easily add personalized context to your dashboards using straightforward symbols and conventions.
 
-No prior knowledge of Markdown is required. You have the option to edit in Markdown or take advantage of the simplified WYSIWYG editor that converts your input to Markdown.
 
-## Creating a Markdown widget
-{: #create_markdown}
 
-1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Markdown*** widget from your side bar.
 
-3. Enter a description for your widget.
+## Step 1: Enter name and description
+{: #widget_markdown_1}
 
-4. Enter your Markdown content.
+Complete the following steps:
 
-   In the top section you can see the Markdown in a simplified WYSIWYG editor.
+1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Markdown** widget from your side bar.
 
-   In the bottom section you can enter Markdown coding directly.
+2. Replace *New line chart* with the **Name** for the widget.
 
-   When you change either section the other section is updated automatically.
+3. Enter a description.
 
-5. (Optional) Add text to be displayed as a tooltip to be displayed when hovering over the widget title bar.
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Add description**.
 
-6. Click **Save** to save your widget.
 
+
+## Step 2: Configure the widget
+{: #wwidget_markdown_2}
+
+You have the option to add your text in the widget.
+
+Alternatively, in the *Markdown* section, you can add your text in Markdown using the WYSIWYG editor. The WYSIWYG editor includes the following options for editing Markdown:
+- Bold
+- Italics
+- Strikethrough
+- Heading/Normal text
+- Bulleted list
+- Numbered list
+- Checkbox list
+- Add Link
+- Quote
+- Code
+- Code Block
+- Add table
+- Add divider
+
+
+## Step 3: Save the widget
+{: #widget_markdown_3}
+
+Click **Save** to save your widget.

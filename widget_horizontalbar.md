@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-15"
+  years:  2024, 2026
+lastupdated: "2026-05-22"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -18,50 +18,132 @@ subcollection: cloud-logs
 You can create a horizontal bar chart that can be included in custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
-With horizontal bar charts your data is sorted by value, in descending order by default. With [vertical bar charts](/docs/cloud-logs?topic=cloud-logs-widget_verticalbar), data is usually sorted alphabetically by column name.
+Use a horizontal bar chart widget to sort your data by value, in descending order by default. With [vertical bar charts](/docs/cloud-logs?topic=cloud-logs-widget_verticalbar), data is generally sorted alphabetically by column name.
 
-## Creating a horizontal bar widget
-{: #create_horizontal}
+Horizontal bar chart widget incorporates thresholds, which allow you to change the visualization when certain values are met or executed. When you grop a data set by specific parameters, you create a multi-horizontal bar, where each horizontal bar represents a subset of the data. This enables simultaneous comparison across different categories or groups, providing a broader view.
+
+
+## Step 1: Enter name and description
+{: #widget_horizontalbar_1}
+
+Complete the following steps:
 
 1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** ![Add Widget icon](/icons/Plus.svg "Add Widget") and drag and drop the **Horizontal Bar Chart** widget from your side bar.
 
-2. Set the definitions for your bar chart in the sidebar.
+2. Replace *New horizontal bar chart* with the **Name** for the widget.
 
-   **Name & Description**: Enter a name and description.
+3. Enter a description.
 
-   **Source**: Select a data source.
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Add description**.
 
-   If the **Source** chosen is metrics, specify the metric or desired PromQL in the **Query** field.
+4. Define where legend values are displayed. Valid values are: `Side`, `Bottom`, `Auto`, and `Hide`.
 
-   When creating a bar chart with metrics as the data source, the categories specified in the PromQL query appear in the **Group By** field automatically. You can reorder categories in the **Group By** field by dragging and dropping.
+    Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Legend Settings**.
 
-   **Add Filter**: (Optional) Add a filter to your bar chart.
 
-   Unlike the dashboard filter in the sidebar which affects the entire dashboard, this filter only affects the widget.
+## Step 2: Configure the query to define the data set
+{: #widget_horizontalbar_2}
 
-   The widget and dashboard filters operate in parallel to one another and intersect. If they negate one another, dashboard filters override widget filters.
+Complete the following steps:
 
-   **Category**: Select the fields to sort your bar chart from the drop-down menu.
+1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
 
-   **Aggregation**: Aggregate by **Count**, **Count Distinct**, **Sum**, **Min**, **Max**, or **Average**.
+2. For `Query 1`, complete the following steps:
 
-   In Bar charts, changing the aggregation type will change the type of data you see. For example, aggregating by count, might show you the number of people in a country. When aggregating by Average, you would need to provide additional parameters, such as height, which will give you a bar chart displaying the average height by country.
+    Select the **data type**. Valid values are: `Logs`, `Metrics`, and `DataPrime`.
 
-   **Advanced**: You can also specify the following advanced options.
+    Select the **source**. Valid options are: `Priority Insights` and `Analyze and Alert`.
 
-   **Y AXIS View**: Select whether the Y-axis of the chart shows the value or the category.
+    You can rename the query. Select the ![Action icon](/icons/action-menu-icon.svg "Action icon") and then click **Rename query**.
 
-   **Legend Colors By**: Select whether you want your legend colors to be by aggregation or by category. By default the horizontal bar chart is by aggregation, which means a single color will be shown for all bars.
+3. Enter the query.
 
-    **Scale**: Select whether you want the scale of the bar chart to be **Logarithmic** or **Linear**. The default is linear, however if you have large differences between the different values, it can be helpful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than the linear scale.
+    When the data type is `DataPrime`, enter a Dataprime query in the **Query** field.
 
-    **Sort By**: Select whether to sort the chart by column name or by value. By default the horizontal bar chart is sorted by value.
+    When the data type is `Logs`, enter a Lucene query in the **Query** field. You can apply filters and aggregations.
 
-    **Max Bars Per Graph**: Select the maximum number of bars you want to show per graph.
+    When the data type is `Metrics`, specify the metric or desired PromQL in the **Query** field. You can apply filters and aggregations.
 
-    **Group Name** (Optional) Customize the displayed group name.
 
-    **Unit**: (Optional) Select the units used to display in the bar chart.
+4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed.
 
-3. Click **Save** to save your widget.
+    Select a label and its corresponding value.
 
+    Filters are applied at the widget level and work alongside dashboard filters. If there is a conflict, the dashboard filters take precedence over widget filters.
+
+5. Add a function.
+
+    For a query where the data type is `Logs`, you can show an aggregated value using one of the following functions:
+
+    | Aggregation      | Description |
+    |------------------|-------------|
+    | Count	           | The total number of logs within the selected time range. |
+    | Count Distinct   | The number of unique logs within the selected time range. |
+    | Sum	             | The sum of all logs within the selected time range. |
+    | Min	             | The smallest value among the logs within the selected time range. |
+    | Max	             | The largest value among the logs within the selected time range. |
+    | Average	         | The average value of all logs within the selected time range. |
+    {: caption="Aggregation option when building a query when the data type is Logs" caption-side="top"}
+
+    In Bar charts, changing the aggregation type will change the type of data you see.
+
+    For a query where the data type is `Metrics`, choose a function.
+
+
+
+
+## Step 3: Configure the widget
+{: #widget_horizontalbar_3}
+
+Complete the following steps:
+
+1. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Edit mode**.
+
+2. Choose a *Bar chart settings* option for the *Y-Axis view by* to configure whether the value or the category is desiplayed. Valid options are: `Value` and `Category`.
+
+3. Choose a *Legend Management* option. Valid values for *Logs* are: `Group`, `Stack`, and `Aggregation `. Valid values for *Metrics* are: `Group` and `Stack`
+
+    **Group** organizes the legend based on different data entities, such as servers or applications, displaying each as a separate entry.
+
+    **Stack** displays how multiple data entries are grouped and layered together on the same horizontal bar. The data sets of the same stack are grouped into a single horizontal bar chart divided into segments. This shows you a second layer of data on the chart.
+
+    **Aggregation** displays value by combining multiple data values into a single summarized value before displaying them in the chart or legend.
+
+**Legend Colour Scheme** : Select whether you want your legend colours to be by group, stack, or aggregation. By default, the horizontal bar chart is by aggregation, which means a single colour will be shown for all bars.
+
+4. In the *Visual management* section, choose how you want to visualize tha data.
+
+    The max bar by graph displays the maximum number of individual bars in a single chart view according to your query.
+
+    The max slices per bar displays the maximum number of segments within a single bar.
+
+    Enable the *max bar by graph*, the *max slices per bar*, or both to display a single value within a specified range.
+
+5. Configure the *Scale* section.
+
+    A scale refers to how values are displayed along the x-axis and y-axis. You may choose between linear or logarithmic as values.
+
+    Choose the *Scale type*. Valid options are: `linear` that defines how values increases proportionally and `logarithmic` wherein value is defined by logarithms instead of equal linear intervals.
+
+    You can change the color of a threshold value.
+
+    By default, setting is linear. If however you have large differences between the different values, it can be helful to show the logarithmic scale instead. For example, if the majority of your values are under 1k and one value is 10k, using the logarithmic scale will show you an easier to read bar chart than linear scale.
+    {: tip}
+
+
+## Step 4: Save the widget
+{: #widget_horizontalbar_4}
+
+Complete the following steps:
+
+1. [Optional] Set the widget's dashboard time if you want to use a time range that is different from the Dashboard selected one.
+
+2. Click **Save** to save your widget.
+
+3. [Optional] Share a direct link to the widget. Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Share Widget URL**, and copy the URL.
+
+    Anyone with access to the dashboard can open the shared link to view the widget in context.
+
+    Shared widget URLs always reflect the dashboard’s last saved version. If you’ve made changes to the widget or layout, save your dashboard before sharing.
+
+4. [Optional] Add a custom action. For more information, see [Using actions to integrate with third-party services](/docs/cloud-logs?topic=cloud-logs-actions).

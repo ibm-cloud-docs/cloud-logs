@@ -302,6 +302,8 @@ toc:
                 navtitle: Markdown
               - topic: widget_dataprime.md
                 navtitle: DataPrime creator
+              - topic: widget_polystat.md
+                navtitle: Polystat
       - topicgroup:
           label: Managing extensions
           topics:
