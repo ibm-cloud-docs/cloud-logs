@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-05-22"
 
 keywords: 
 
@@ -120,7 +120,7 @@ Complete the following steps:
   You can also select whether or not to show labels and which labels to show, customise the group name, and select whether or not to show the legend.
 
 
-# Step 4: Save the widget
+## Step 4: Save the widget
 {: #widget_piechart_4}
 
 Complete the following steps:

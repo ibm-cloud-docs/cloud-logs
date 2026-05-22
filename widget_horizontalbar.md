@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-05-22"
 
 keywords: 
 
@@ -142,7 +142,7 @@ Complete the following steps:
    {: note}
 
 
-# Step 4: Save the widget
+## Step 4: Save the widget
 {: #widget_horizontalbar_}
 
 Complete the following steps:
