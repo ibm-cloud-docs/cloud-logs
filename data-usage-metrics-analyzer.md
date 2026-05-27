@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Working with the Metrics Usage Analyzer
+# Analyzing metrics usage
 {: #data-usage-metrics-analyzer}
 
 In {{site.data.keyword.logs_full_notm}}, you can gain insights into metrics usage through the **Data usage > Metrics Usage** tab.
