@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-03"
+  years:  2024, 2026
+lastupdated: "2026-05-27"
 
 keywords:
 
@@ -42,7 +42,7 @@ The `<v>` prefix is automatically included when using the UI and does not need t
 <v1> $m.timestamp < @'2024-01-01T00:00:00'
 
 # A filter that returns true if the application name starts with 'dev-'
-<v1> $l.applicationName.startsWith('dev-')
+<v1> $l.applicationname.startsWith('dev-')
 
 # A filter that returns true if the field region_id is us-east-1 or us-east-2
 <v1> region_id:string.in('us-east-1', 'us-west-2')
