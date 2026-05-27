@@ -21,8 +21,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
-## 25 May 2026
-{: #cloud-logs-may2526}
+## 26 May 2026
+{: #cloud-logs-may2626}
 {: release-note}
 
 
