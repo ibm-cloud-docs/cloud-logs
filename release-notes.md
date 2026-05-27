@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-20"
+lastupdated: "2026-05-27"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -19,6 +19,28 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
+
+
+## 25 May 2026
+{: #cloud-logs-may2526}
+{: release-note}
+
+
+Functional updates and fixes are available in the Sao Paulo (`br-sao`) region only.
+
+:   New features included in this release.
+
+    * **Data Usage Analyser**: Added the Data Usage Analyser page to provide detailed insights into log ingestion volumes by priority. The *User Data Sent* tab enables you to monitor ingestion trends, identify high-volume logs, and better understand overall data ingestion patterns for improved visibility and analysis. For more information, see [Data Usage Analyzer](/docs/cloud-logs?topic=cloud-logs-data-usage-analyzer&interface=api).
+
+    * **Metrics Explorer**: The Metrics Explorer page provides comprehensive insights into metrics, ingestion volumes, cardinality, and dimensions. For example, you can use the *Metrics explorer* page to identify the label values that contribute most to a metric's cardinality. Introduced multiple views within the *Metric Usage* tab in the *Metrics Explorer* page to enhance observability and usage analysis. The new views — Metrics, Labels, Query Analyser, and Fair Usage Limits. For more information, see [Metrics Explorer](/docs/cloud-logs?topic=cloud-logs-metrics-explorer-r114&interface=ui).
+
+    * Enhanced the *Data Usage* page to provide deeper visibility into data consumption, including metric sample distributions and log/metric volume insights. The *Metric Usage* section provides a breakdown of metric sample counts across varying scales, while the User Data section offers visibility into log and metric volumes. For more information, [Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage-r114).
+
+    * Enhanced the data usage report that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days. For more information, see [Generate Reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports&interface=ui).
+
+    * Added new visualizations: Introduced Heatmap, Geomap, and Dynamic Widgets for enhanced visualization. For more information, see [Geo widget](/docs/cloud-logs?topic=cloud-logs-widget_geo_map), [Heatmap widget](/docs/cloud-logs?topic=cloud-logs-widget_heatmap) and [Dynamic widgets](/docs/cloud-logs?topic=cloud-logs-widget_dynamic).
+
+    * Improved usability and navigation across the *Parsing Rules* and *Enrichment* pages. For more information, see [Parsing Rules](/docs/cloud-logs?topic=cloud-logs-rules_groups) and [Enrichment](/docs/cloud-logs?topic=cloud-logs-enrich-howto&interface=ui).
 
 
 
