@@ -406,23 +406,21 @@ toc:
       - topicgroup:
           label: Working with metrics
           topics:
+          - topic: data-usage-enable-metrics.md
+            navtitle: Enabling system metrics
           - topic: configure-event2metrics.md
             navtitle: Configuring collection of metrics from logs (Event2metrics)
-          - topic: metrics-explorer-r114.md
-            navtitle: Exploring metrics (Metrics Explorer)
       - topicgroup:
-          label: Data and Metrics Usage
+          label: Data Usage
           topics:
           - topic: data-usage-r114.md
             navtitle: About Data Usage
-          - topic: data-usage-enable-metrics.md
-            navtitle: Enabling system metrics
+          - topic: data-usage-analyzer.md
+            navtitle: Analyzing user data sent
+          - topic: metrics-explorer-r114.md
+            navtitle: Exploring metrics (Metrics Explorer)
           - topic: metrics-usage.md
             navtitle: Exploring metrics usage
-          - topic: data-usage-dashboard.md
-            navtitle: Using the Data Usage dashboard
-          - topic: data-usage-analyzer.md
-            navtitle: Using the Data Usage Analyzer
           - topic: metrics-usage-analyzer.md
             navtitle: Using the Metrics Usage Analyzer
           - topic: data-usage-reports.md

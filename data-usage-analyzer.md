@@ -13,19 +13,19 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Using the Data Usage Analyzer
+# Analyzing user data sent
 {: #data-usage-analyzer}
 
-In {{site.data.keyword.logs_full_notm}}, you can use the *Data Usage Analyzer* to gain insights into log ingestion volumes by prioriy.
+In {{site.data.keyword.logs_full_notm}}, you can gain insights into data ingestion volumes by prioriy in the **Data usage > User Data Sent** tab.
 {: shortdesc}
 
-In the *Data Usage Analyzer*, you can monitor logs to:
-- Identify high-volume logs
+In the *User data sent* tab, you can:
+- Identify high-volume logs and metrics
 - Understand data ingestion patterns
-in the *User data sent* tab.
 
 
-## Launching the Data Usage Analyzer
+
+## Opening the Data user sent tab
 {: #data-usage-analyzer-launch}
 
 Complete the following steps:
@@ -55,22 +55,23 @@ You can filter data by choosing one or more options in **Filtered by**:
 - Pillar: Defines the type of telemetry data. Valid values are: `Logs` and `Metrics`.
 
 
+
 ## Aggregation options
 {: #data-usage-analyzer-agg}
 
 You can aggregate data by choosing one or more options in **Group data by**:
 - Entity Type: Define the type of data. Valid values are: `Logs` and `Metrics`.
 - Priority: Defines the TCO data pipeline associated with the logs. Valid values are: `High`, `Medium`, `Low` and `Blocked`.
+- Pillar: Defines the type of telemetry data. Valid values are: `Logs` and `Metrics`.
 
 ## Viewing data
 {: #data-usage-analyzer-data}
 
 You can view information about data ingestion volumes reported in bytes in the following widgets:
-- Current usage
-- Blocked days
-- Max daily usage
-- Min daily usage
-- Avg daily usage
+- *Current usage*: Average daily usage in the selected period
+- *Max daily usage*: Highest daily ingested volume
+- *Min daily usage*: Lowest daily ingetsed volume
+- *Avg daily usage*: Average daily ingested volume
 
 
 In the *Usage breakdown* section, you can monitor volumes of ingested data based on the filtering and group by options selected.

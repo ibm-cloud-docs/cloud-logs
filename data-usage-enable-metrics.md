@@ -31,7 +31,7 @@ To configure this feature, you must attach a metrics bucket to your {{site.data.
 
 The following metrics are generated when you enable Data Usage metrics:
 - `cx_data_usage_bytes_total`: Reports GB Sent.
-- `cx_alerts `: Reports data whern an alert is triggered or resolved.
+- `cx_alerts `: Reports data when an alert is triggered or resolved.
 
 The information gathered on the new metrics includes the following labels:
 
@@ -47,7 +47,7 @@ The information gathered on the new metrics includes the following labels:
 {: caption="Data Usage metric labels" caption-side="top"}
 
 
-## Enabling the data usage metric
+## Enabling Data Usage metrics
 {: #data-usage-enable-metrics-data-usage}
 
 Complete the following steps to enable collection of the Data Usage metric `cx_data_usage_bytes_total`:
@@ -76,7 +76,7 @@ Complete the following steps:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 
-2. Select the **Preferences** icon ![Preferences icon](/icons/preferences.png "Preferences icon").
+2. Select the **Person** icon ![Person icon](/icons/preferences.png "Person icon").
 
     ![Preferences](/images/preferences-1.png "Preferences"){: caption="Preferences" caption-side="bottom"}
 
