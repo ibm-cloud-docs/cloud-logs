@@ -404,14 +404,31 @@ toc:
               label: Configuring the custom email domain for alerts
               href: https://community.ibm.com/community/user/blogs/marisa-lopez-de-silanes/2025/12/03/configuring-custom-emails-for-alerts-triggered-in
       - topicgroup:
+          label: Working with metrics
+          topics:
+          - topic: configure-event2metrics.md
+            navtitle: Configuring collection of metrics from logs (Event2metrics)
+          - topic: metrics-explorer-r114.md
+            navtitle: Exploring metrics (Metrics Explorer)
+      - topicgroup:
           label: Data and Metrics Usage
           topics:
-          - topic: data-usage.md
+          - topic: data-usage-r114.md
             navtitle: About Data Usage
-          - topic: data-usage-metrics.md
-            navtitle: Enabling data usage metrics
+          - topic: data-usage-enable-metrics.md
+            navtitle: Enabling system metrics
           - topic: metrics-usage.md
             navtitle: Exploring metrics usage
+          - topic: data-usage-dashboard.md
+            navtitle: Using the Data Usage dashboard
+          - topic: data-usage-analyzer.md
+            navtitle: Using the Data Usage Analyzer
+          - topic: metrics-usage-analyzer.md
+            navtitle: Using the Metrics Usage Analyzer
+          - topic: data-usage-reports.md
+            navtitle: Generating Data Usage overview reports
+          - topic: data-usage-detailed-reports.md
+            navtitle: Generating detailed Data Usage reports
       - topicgroup:
           label: Observability
           topics:
