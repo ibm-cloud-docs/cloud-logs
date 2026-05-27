@@ -288,8 +288,14 @@ toc:
               topics:
               - topic: widget_datatable.md
                 navtitle: Data table
+              - topic: widget_dynamic.md
+                navtitle: Dynamic
               - topic: widget_gauge.md
                 navtitle: Gauge
+              - topic: widget_geomap.md
+                navtitle: Geomap
+              - topic: widget_heatmap.md
+                navtitle: Heatmap
               - topic: widget_horizontalbar.md
                 navtitle: Horizontal bar
               - topic: widget_linechart.md
