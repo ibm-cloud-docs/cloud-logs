@@ -114,7 +114,7 @@ Keypaths are divided into three different parts, each with a separate prefix:
 :   Metadata
 
 `$l`
-:   Labels, such as `applicationName` or `subsystemName`
+:   Labels, such as `applicationname` or `subsystemName`
 
 `$d`
 :   User data (default prefix)
