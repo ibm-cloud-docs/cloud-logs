@@ -33,18 +33,7 @@ The following metrics are generated when you enable Data Usage metrics:
 - `cx_data_usage_bytes_total`: Reports GB Sent.
 - `cx_alerts `: Reports data when an alert is triggered or resolved.
 
-The information gathered on the new metrics includes the following labels:
 
-| Label	| Description |
-|-------|-------------|
-| pillar | Type of traffic. \n Valid values are: `logs`, `metrics`  |
-| subsystem_name | Subsystem that generates the traffic. \n Only valid for pillar set to `logs`. |
-| application_name | Application that generates the traffic \n Only valid for pillar set to `logs`. |
-| priority | TCO priority \n Valid values are: `high`, `medium`, `low`, `blocked` |
-| severity | Log severity \n Valid values are: `critical`, `error`, `warn`, `info`, `debug`, `trace` \n Only valid for pillar set to `logs`. |
-| blocking_reason_type | The reason why traffic is blocked. \n Valid values are: `tco_policy` or `parsing_rule`. |
-| blocking_reason_name | The name of the TCO policy or parsing rule which is blocking traffic. |
-{: caption="Data Usage metric labels" caption-side="top"}
 
 
 ## Enabling Data Usage metrics
