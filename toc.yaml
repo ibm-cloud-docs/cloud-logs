@@ -417,12 +417,10 @@ toc:
             navtitle: About Data Usage
           - topic: data-usage-analyzer.md
             navtitle: Analyzing user data sent
+          - topic: data-usage-metrics-analyzer..md
+            navtitle: Analyzing metrics
           - topic: metrics-explorer-r114.md
             navtitle: Exploring metrics (Metrics Explorer)
-          - topic: metrics-usage.md
-            navtitle: Exploring metrics usage
-          - topic: metrics-usage-analyzer.md
-            navtitle: Using the Metrics Usage Analyzer
           - topic: data-usage-reports.md
             navtitle: Generating Data Usage overview reports
           - topic: data-usage-detailed-reports.md

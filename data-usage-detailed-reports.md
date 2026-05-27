@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Generating detailed usage reports
 {: #data-usage-detailed-reports}
 
-In {{site.data.keyword.logs_full_notm}}, you can export, as csv, a `Data Usage Report` that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days.
+In {{site.data.keyword.logs_full_notm}}, you can export a `Data Usage Report` as CSV, TSV or JSON. The report tprovides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days.
 {: shortdesc}
 
 
@@ -54,13 +54,19 @@ Complete the following steps to export the Data Usage Report as a CSV file:
 
     The *Data Usage* page opens. 
 
-2. Select **Export as CSV**.
+4. Choose the export format.
 
-3. Select **Detailed usage report** for the *Data Usage Overview Report type*.
+    Valid values are: `CSV`,`TSV`, and `JSON`.
 
-4. Select the time range.
+    Use `CSV`, and `TSV` to manage data through spreadsheets.
 
-5. Click **EXPORT**.
+    Use `JSON` to manage data through automated integrations.
+
+5. Select **Detailed usage report** for the *Data Usage Overview Report type*.
+
+6. Select the time range.
+
+7. Click **EXPORT**.
 
 ## Exporting a detailed data usage report using API
 {: #data-usage-reports-api}

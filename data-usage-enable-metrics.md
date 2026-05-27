@@ -60,7 +60,9 @@ Complete the following steps to enable collection of the Data Usage metric `cx_d
 
     ![Data Usage](/images/data-usage.png "Data Usage"){: caption="Data Usage" caption-side="bottom"}
 
-3. Switch on the toggle **Enable usage metrics**.
+3. Select **Settings**. The Data usage settings page opens.
+
+4. In the *Data Usage visibility > Enable metrics* section, switch on the toggle **Enable metrics**.
 
     ![Enable Data Usage](/images/data-usage-enable.png "Enable Data Usage"){: caption="Enable Data Usage" caption-side="bottom"}
 

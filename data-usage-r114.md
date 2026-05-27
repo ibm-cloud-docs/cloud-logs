@@ -32,7 +32,7 @@ In {{site.data.keyword.logs_full_notm}}, you can get detailed insights into your
 {: #data-usage-launch}
 
 Through the *Data Usage page*, you can view information related to:
-- Ingested logs and metrics through the *User data sent* tab. For more information, see [Analyzing user data sent](/docs/cloud-logs?topic=cloud-logs-data-usage-analyzer).
+- Ingested logs and metrics through the *User data sent* tab. For more information, see [Analyzing user data ingested](/docs/cloud-logs?topic=cloud-logs-data-usage-analyzer).
 - Metrics usage through the *Metrics Usage* tab. For more information, see [Analyzing metrics usage](/docs/cloud-logs?topic=cloud-logs-metrics-agent-usage-analyzer).
 
 For example, you can use the information in the *Data Usage* page to:

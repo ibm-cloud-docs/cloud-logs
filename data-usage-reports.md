@@ -59,7 +59,13 @@ Complete the following steps to export the Data Usage Report as a CSV file:
 
     The *Data Usage* page opens. 
 
-4. Select **Export as CSV**.
+4. Choose the export format.
+
+    Valid values are: `CSV`,`TSV`, and `JSON`.
+
+    Use `CSV`, and `TSV` to manage data through spreadsheets.
+
+    Use `JSON` to manage data through automated integrations.
 
 5. Select **Data usage overview report** for the *Data Usage Overview Report type*.
 
