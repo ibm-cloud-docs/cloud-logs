@@ -410,6 +410,8 @@ toc:
             navtitle: Enabling system metrics
           - topic: configure-event2metrics.md
             navtitle: Configuring collection of metrics from logs (Event2metrics)
+          - topic: metrics-explorer-r114.md
+            navtitle: Exploring metrics
       - topicgroup:
           label: Data Usage
           topics:
@@ -417,10 +419,8 @@ toc:
             navtitle: About Data Usage
           - topic: data-usage-analyzer.md
             navtitle: Analyzing user data sent
-          - topic: data-usage-metrics-analyzer..md
+          - topic: data-usage-metrics-analyzer.md
             navtitle: Analyzing metrics
-          - topic: metrics-explorer-r114.md
-            navtitle: Exploring metrics (Metrics Explorer)
           - topic: data-usage-reports.md
             navtitle: Generating Data Usage overview reports
           - topic: data-usage-detailed-reports.md
