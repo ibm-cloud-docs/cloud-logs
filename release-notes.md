@@ -31,8 +31,6 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Chennai (`in-che`)
 
 
-
-
 ## 26 May 2026
 {: #cloud-logs-may2626}
 {: release-note}
@@ -60,7 +58,8 @@ Functional updates and fixes are available in the Sao Paulo (`br-sao`) region on
 {: #cloud-logs-may2026}
 {: release-note}
 
-API and Terraform support for the Tag retention feature. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+   API and Terraform support for the Tag retention feature. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+   
 
 ## 18 May 2026
 {: #cloud-logs-may1826}
