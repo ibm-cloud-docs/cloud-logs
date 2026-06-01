@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-01-15"
+  years:  2024, 2026
+lastupdated: "2026-06-01"
 
 keywords:
 
@@ -62,13 +62,18 @@ List of parameters that you can use to configure the output plugin to send data 
 |  `IAM_Host`  | The IAM hostname for a custom IAM environment | n/a | The fully qualified IAM host name for example: `private.eu-de.iam.cloud.ibm.com` | Only used when `IAM_Environment` is set to `Custom` |
 |  `CR_Token_Mount_Path` |  Path where the CRToken is present |  `/var/run/secrets/tokens/vault-token` | any string  | false - Only used when Authentication_Mode is set to TrustedProfile  |
 |  `Trusted_Profile_ID` |  ID of the Trusted Profile to be used |  n/a |  any string	  | true - Only used when Authentication_Mode is set to TrustedProfile |
+| `IAM_API_key` | The api key to be used; see the note below for further information on specifying an api key | n/a | any string | false
 {: caption="Authentication parameters" caption-side="bottom"}
 
-When `Authentication_Mode` is set to `IAMAPIKey`, consider the following information:
+When `Authentication_Mode` is set to `IAMAPIKey`, the api key must be specified in one of three ways. These are, in order of precedence, as follows:
 
-- The API key must be specified in an environment variable called `IAM_API_KEY`.
-- If no value is provided in the `IAM_API_KEY` variable, the plug-in initialization will fail.
+1. Using the `IAM_API_key` field in the config
+    - It is strongly recommended to not insert an api key directly into the config file. Instead, a value of the form `${CUSTOM_ENVIRONMENT_VARIABLE}` can be used to retrieve environment variables other than those mentioned below
+1. Using an environment variable named `IAM_API_KEY_<output_ID>`
+    - Where `<output_ID>` is the ID given to the output plug-in as specified in the `Id` parameter, with any dashes (`-`) replaced by underscores (`_`)
+1. Using an environment variable named `IAM_API_KEY`
 
+If no value is provided in any of the above options, the plug-in initialization will fail.
 
 
 ## Fluentbit Agent Workers configuration considerations

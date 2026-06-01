@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-03"
+  years:  2024, 2026
+lastupdated: "2026-06-01"
 
 keywords:
 
@@ -86,7 +86,6 @@ The `Match` parameter corresponds to one of the tags previously specified in the
     # Authentication
     Authentication_Mode IAMAPIKey
     IAM_Environment     Production
-    IAM_API_key         ${ENV_VAR_API_KEY_INSTANCE_1}
 
 [OUTPUT]
     Name                logger-icl-output-plugin
@@ -101,11 +100,11 @@ The `Match` parameter corresponds to one of the tags previously specified in the
     # Authentication
     Authentication_Mode IAMAPIKey
     IAM_Environment     Production
-    IAM_API_key         ${ENV_VAR_API_KEY_INSTANCE_2}
 ```
 {: codeblock}
 
-When using an API key, you need to provide this API key in the [OUTPUT] stanza it belongs to.
-This can also be used to work with multiple {{site.data.keyword.logs_full_notm}} instances located in different accounts.
-To not persist the API key in a configuration file for security reasons, it is strongly recommended to provide the API key in a unique environment variable and refer to it with the following notation: `IAM_API_key ${NAME_OF_ENV_VARIABLE_WHERE_API_KEY_IS_STORED}`.
+When using an API key, you need to provide the API key in one of the way described in [the plug-in parameters page](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-plugin-parameters-authentication-parms).
+If both {{site.data.keyword.logs_full_notm}} instances are located in the same account and can be accessed using the same api key, it can be specified in the `IAM_API_KEY` environment variable.
+If they need different api keys, you can use the `IAM_API_KEY_<output_ID>` environment variable, where `<output_ID>` is the ID given to the output plug-in as specified in the `Id` parameter, with any dashes (`-`) replaced by underscores (`_`).
+Alternatively, if needed, you can specify `IAM_API_key ${CUSTOM_ENVIRONMENT_VARIABLE}` in the output config to use a custom environment variable.
 {: tip}
