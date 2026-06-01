@@ -28,6 +28,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
 
 :   Regions supporting new functionality and fixes:
 
+    * Sao Paulo (`br-sao`)
     * Chennai (`in-che`)
 
 
