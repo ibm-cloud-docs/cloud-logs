@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-01"
+lastupdated: "2026-06-02"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -18,6 +18,19 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+
+## 01 June 2026
+{: #cloud-logs-june0126}
+{: release-note}
+
+Functional updates and fixes made available on 26 May 2026 are now available in additional regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Sao Paulo (`br-sao`)
+    * Chennai (`in-che`)
+    * Frankfurt (`eu-de`)
 
 
 ## 29 May 2026
