@@ -28,9 +28,8 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
 
 :   Regions supporting new functionality and fixes:
 
+    * Sao Paulo (`br-sao`)
     * Chennai (`in-che`)
-
-
 
 
 ## 26 May 2026
@@ -42,17 +41,15 @@ Functional updates and fixes are available in the Sao Paulo (`br-sao`) region on
 
 :   New features included in this release.
 
-    * **Data Usage Analyser**: Added the Data Usage Analyser page to provide detailed insights into log ingestion volumes by priority. The *User Data Sent* tab enables you to monitor ingestion trends, identify high-volume logs, and better understand overall data ingestion patterns for improved visibility and analysis. For more information, see [Data Usage Analyzer](/docs/cloud-logs?topic=cloud-logs-data-usage-analyzer&interface=api).
+    * **Data usage**: The *Data usage* page has been revised and now provides a *User data sent* and a *Metric usage* tab. The *Data usage* page enables you to monitor ingestion trends, identify high-volume logs, and better understand overall data ingestion patterns for improved visibility and analysis.The *User Data Sent* tab provides detailed insights into log and metric ingestion volumes by priority. The *Metric usage* tab provides insights about metric sample distribution by source. For more information, see [About Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage-r114).
 
-    * **Metrics Explorer**: The Metrics Explorer page provides comprehensive insights into metrics, ingestion volumes, cardinality, and dimensions. For example, you can use the *Metrics explorer* page to identify the label values that contribute most to a metric's cardinality. Introduced multiple views within the *Metric Usage* tab in the *Metrics Explorer* page to enhance observability and usage analysis. The new views — Metrics, Labels, Query Analyser, and Fair Usage Limits. For more information, see [Metrics Explorer](/docs/cloud-logs?topic=cloud-logs-metrics-explorer-r114&interface=ui).
+    * Enhanced the data usage report that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days. For more information, see [Generate Reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports).
 
-    * Enhanced the *Data Usage* page to provide deeper visibility into data consumption, including metric sample distributions and log/metric volume insights. The *Metric Usage* section provides a breakdown of metric sample counts across varying scales, while the User Data section offers visibility into log and metric volumes. For more information, [Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage-r114).
-
-    * Enhanced the data usage report that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days. For more information, see [Generate Reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports&interface=ui).
+    * **Metrics data**: The *Metrics data* page has been revised and now provides a *Usage analysis* and a *Fair usage limits* tab. The *Usage analysis* tab provides comprehensive insights into metrics, metric volumes, metric samples, metric label cardinalities, and time series cardinalities in *Metrics* view, metric labels and metric label variations in *Labels* view, and statistics about executed metric queries in *Queries* view. For example, you can use this tab to identify the label values that contribute most to a metric's cardinality. In addition, you can block ingestion of individual metrics as well as view blocked metrics and unblock them. The *Fair usage limits* tab displays active metric, metric ingestion, and metric query limits for better transparency. For more information, see [Working with the Metrics Data explorer](/docs/cloud-logs?topic=cloud-logs-metrics-explorer-r114).
 
     * Added new visualizations: Introduced Heatmap, Geomap, and Dynamic Widgets for enhanced visualization. For more information, see [Geo widget](/docs/cloud-logs?topic=cloud-logs-widget_geo_map), [Heatmap widget](/docs/cloud-logs?topic=cloud-logs-widget_heatmap) and [Dynamic widgets](/docs/cloud-logs?topic=cloud-logs-widget_dynamic).
 
-    * Improved usability and navigation across the *Parsing Rules* and *Enrichment* pages. For more information, see [Parsing Rules](/docs/cloud-logs?topic=cloud-logs-rules_groups) and [Enrichment](/docs/cloud-logs?topic=cloud-logs-enrich-howto&interface=ui).
+    * Improved usability and navigation across the *Parsing Rules* and *Enrichment* pages. For more information, see [Parsing Rules](/docs/cloud-logs?topic=cloud-logs-rules_groups) and [Enrichment](/docs/cloud-logs?topic=cloud-logs-enrich-howto).
 
 
 
@@ -60,7 +57,8 @@ Functional updates and fixes are available in the Sao Paulo (`br-sao`) region on
 {: #cloud-logs-may2026}
 {: release-note}
 
-API and Terraform support for the Tag retention feature. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+   API and Terraform support for the Tag retention feature. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
+   
 
 ## 18 May 2026
 {: #cloud-logs-may1826}

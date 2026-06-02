@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-01"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Enabling system metrics
 {: #data-usage-enable-metrics}
 
-In {{site.data.keyword.logs_full_notm}}, you can enable data usage metrics to collect predefined metrics that you can use to monitor your data usage. Then, you can use these metrics in custom dashboards, insights, and alerts
+In {{site.data.keyword.logs_full_notm}}, you can enable data usage metrics to collect predefined metrics that you can use to monitor your data usage. Then, you can use these metrics in custom dashboards, insights, and alerts.
 {: shortdesc}
 
 
@@ -75,11 +75,11 @@ Complete the following steps:
 
 4. In the *Alerts* section, enable the toggle to create a [gauge-type](/docs/cloud-logs?topic=cloud-logs-widget_gauge) metric called `cx_alerts`.
 
-    ![cx_alerts metrics](/images/cx-alert.png "cx_alerts metrics"){: caption="cx_alerts metrics" caption-side="bottom"}
+    ![cx_alerts metrics](/images/cx-alerts-enable.png "cx_alerts metrics"){: caption="cx_alerts metrics" caption-side="bottom"}
 
 
 
-If enabled, the metric is generated whenever an alert is triggerred or resolved.
+If enabled, the metric is generated whenever an alert is triggered or resolved.
 {: note}
 
 You can add this metric to [custom dashboards](/docs/cloud-logs?topic=cloud-logs-create_dashboards).
