@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-03"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Generating detailed usage reports
 {: #data-usage-detailed-reports}
 
-In {{site.data.keyword.logs_full_notm}}, you can export a `Data Usage Report` as CSV, TSV or JSON. The report tprovides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days.
+In {{site.data.keyword.logs_full_notm}}, you can export a `Data Usage Report` as CSV, TSV or JSON. The report provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days.
 {: shortdesc}
 
 
@@ -50,23 +50,25 @@ Complete the following steps to export the Data Usage Report as a CSV file:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 
-2. Select the **Usage** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Usage**.
+2. Select the **Usage** icon ![Usage icon](/icons/usage.svg "Usage") > **Data Usage**.
 
     The *Data Usage* page opens. 
 
-4. Choose the export format.
+4. Select **Detailed report** for the *Data Usage Report type*.
 
-    Valid values are: `CSV`,`TSV`, and `JSON`.
+5. Select the date range.
+
+6. Choose the export format.
+
+    Valid values are: `CSV`, `TSV`, and `JSON`.
 
     Use `CSV`, and `TSV` to manage data through spreadsheets.
 
     Use `JSON` to manage data through automated integrations.
 
-5. Select **Detailed usage report** for the *Data Usage Overview Report type*.
+7. For export formats `CSV` and `TSV`, select whether you want to include headers in the report. When selected, column names will be added as first row of the exported file.
 
-6. Select the time range.
-
-7. Click **EXPORT**.
+8. Click **Export**.
 
 ## Exporting a detailed data usage report using API
 {: #data-usage-reports-api}
@@ -91,7 +93,7 @@ curl 'https://{instance_ID}.api.{region}.logs.cloud.ibm.com/v1/data_usage?query=
 {: codeblock}
 
 
-A successful response returns the detailed data usage report for the specified timerange. For more information about the API, see [Get data usage metrics export status or return data usage report](/apidocs/logs-service-api#export-data-usage){: external}.
+A successful response returns the detailed data usage report for the specified time range. For more information about the API, see [Get data usage metrics export status or return data usage report](/apidocs/logs-service-api#export-data-usage){: external}.
 
 ## Exporting the detailed data usage report using CLI
 {: #data-usage-reports-cli}
@@ -110,4 +112,4 @@ Detailed data usage reports are exported using `query` parameter with value `det
 
 You can retrieve the detailed data usage report over a specified time range for your {{site.data.keyword.logs_full_notm}} instance with `range` request parameters. Valid values of the `range` parameter are `current_month`, `last_30_days`, `last_90_days`, and `last_week`. The default is `current_month`.
 
-A successful command outputs the detailed data usage report for the specified timerange.
+A successful command returns the detailed data usage report for the specified time range.

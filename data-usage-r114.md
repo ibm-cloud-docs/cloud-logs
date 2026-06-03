@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-03"
 
 keywords:
 
@@ -33,7 +33,7 @@ In {{site.data.keyword.logs_full_notm}}, you can get detailed insights into your
 
 Through the *Data Usage page*, you can view information related to:
 - Ingested logs and metrics through the *User data sent* tab. For more information, see [Analyzing user data ingested](/docs/cloud-logs?topic=cloud-logs-data-usage-analyzer).
-- Metrics usage through the *Metrics Usage* tab. For more information, see [Analyzing metrics usage](/docs/cloud-logs?topic=cloud-logs-metrics-agent-usage-analyzer).
+- Metrics usage through the *Metrics Usage* tab. For more information, see [Analyzing metrics usage](/docs/cloud-logs?topic=cloud-logs-data-usage-analyzer).
 
 For example, you can use the information in the *Data Usage* page to:
 - Investigate spikes and anomalies in a period of time.
@@ -44,7 +44,7 @@ Complete the following steps to launch the *Data Usage Page*:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 
-2. Select the **Usage** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Data Usage**.
+2. Select the **Usage** icon ![Usage icon](/icons/usage.svg "Usage") > **Data Usage**.
 
     The *Data Usage page* opens.
 
@@ -52,7 +52,7 @@ Complete the following steps to launch the *Data Usage Page*:
 
 3. Configure the time selector. You can choose **Quick** to choose a preset or **Custom** to set a custom date and time range to view and compare usage across any timeframe.
 
-    ![Data Usage time selector](/images/data-usage-timepicker.png "Data Usage time selector"){: caption="Data Usage time selector" caption-side="bottom"}
+    ![Data Usage time selector](/images/data-usage-timepicker-r114.png "Data Usage time selector"){: caption="Data Usage time selector" caption-side="bottom"}
 
 
 ## Launching the Data Usage pre-defined custom dashboard
@@ -67,5 +67,5 @@ To deploy and launch the *Data Usage dashboard*, see [Deploying an extension](/d
 
 From the *Data Usage* page, you can generate and export data usage information. Choose any of the following options:
 
-- [Generating detailed usage reports](/docs/cloud-logs?topic=cloud-logs-data-usage-detailed-reports)
 - [Generating data usage overview reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports)
+- [Generating detailed usage reports](/docs/cloud-logs?topic=cloud-logs-data-usage-detailed-reports)
