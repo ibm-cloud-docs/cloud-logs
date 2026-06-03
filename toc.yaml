@@ -416,8 +416,10 @@ toc:
             navtitle: Enabling system metrics
           - topic: configure-event2metrics.md
             navtitle: Configuring collection of metrics from logs (Event2metrics)
+          - topic: metrics-explorer.md
+            navtitle: Exploring a metric through the Metrics Explorer
           - topic: metrics-explorer-r114.md
-            navtitle: Exploring metrics
+            navtitle: Exploring metrics through the Metrics Data Dashboard
       - topicgroup:
           label: Data Usage
           topics:
