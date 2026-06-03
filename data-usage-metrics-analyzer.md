@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-03"
 
 keywords:
 
@@ -42,7 +42,7 @@ Complete the following steps:
 
 3. Configure the time selector. You can choose **Quick** to choose a preset or **Custom** to set a custom date and time range to view and compare usage across any timeframe.
 
-    ![Data Usage time selector](/images/data-usage-timepicker.png "Data Usage time selector"){: caption="Data Usage time selector" caption-side="bottom"}
+    ![Data Usage time selector](/images/data-usage-timepicker-r114.png "Data Usage time selector"){: caption="Data Usage time selector" caption-side="bottom"}
 
 4. Select the **Metric usage** tab.
 
@@ -52,7 +52,7 @@ Complete the following steps:
 
 You can filter data by **Source** in *Filtered by*.
 
-Valid source values are: `user`, `system`, and `event2metrics`.
+Valid source values are: `User`, `System`, and `EventsToMetric`.
 
 
 ## Aggregation options
@@ -60,7 +60,7 @@ Valid source values are: `user`, `system`, and `event2metrics`.
 
 You can aggregate data by choosing one or more options in **Group data by**:
 - Priority: Defines the TCO data pipeline associated with the metrics. Valid values are: `Medium` and `Blocked`.
-- Source: Defines the type of source. Valid values are: `user`, `system`, and `event2metrics`.
+- Source: Defines the type of source. Valid values are: `User`, `System`, and `EventsToMetric`.
 
 
 ## Viewing data
@@ -72,7 +72,7 @@ You can view information about metric volumes in the following widgets:
     Use this chart to spot ingestion spikes or drops that might indicate deployment issues, misconfigured scrapers, or unexpected increases in data volume.
 
 - *Max daily usage*: Highest daily ingested volume
-- *Min daily usage*: Lowest daily ingetsed volume
+- *Min daily usage*: Lowest daily ingested volume
 - *Avg daily usage*: Average daily ingested volume
 
 In the *Metrics breakdown* section, you can monitor volumes of metrics based on the filtering and group by options selected.

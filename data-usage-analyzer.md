@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-03"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Analyzing user data sent
 {: #data-usage-analyzer}
 
-In {{site.data.keyword.logs_full_notm}}, you can gain insights into data ingestion volumes by prioriy in the **Data usage > User Data Sent** tab.
+In {{site.data.keyword.logs_full_notm}}, you can gain insights into data ingestion volumes by priority in the **Data usage > User Data Sent** tab.
 {: shortdesc}
 
 In the *User data sent* tab, you can:
@@ -25,7 +25,7 @@ In the *User data sent* tab, you can:
 
 
 
-## Opening the Data user sent tab
+## Opening the User data sent tab
 {: #data-usage-analyzer-launch}
 
 Complete the following steps:
@@ -40,7 +40,7 @@ Complete the following steps:
 
 3. Configure the time selector. You can choose **Quick** to choose a preset or **Custom** to set a custom date and time range to view and compare usage across any timeframe.
 
-    ![Data Usage time selector](/images/data-usage-timepicker.png "Data Usage time selector"){: caption="Data Usage time selector" caption-side="bottom"}
+    ![Data Usage time selector](/images/data-usage-timepicker-r114.png "Data Usage time selector"){: caption="Data Usage time selector" caption-side="bottom"}
 
 4. Select the **User data sent** tab.
 
@@ -51,7 +51,7 @@ Complete the following steps:
 You can filter data by choosing one or more options in **Filtered by**:
 
 - Entity Type: Define the type of data. Valid values are: `Logs` and `Metrics`.
-- Priority: Defines the TCO data pipeline associated with the logs. Valid values are: `High`, `Medium`, `Low` and `Blocked`.
+- Priority: Defines the TCO data pipeline associated with the logs and metrics. Valid values are: `High`, `Medium`, `Low` and `Blocked`.
 - Pillar: Defines the type of telemetry data. Valid values are: `Logs` and `Metrics`.
 
 
@@ -61,7 +61,7 @@ You can filter data by choosing one or more options in **Filtered by**:
 
 You can aggregate data by choosing one or more options in **Group data by**:
 - Entity Type: Define the type of data. Valid values are: `Logs` and `Metrics`.
-- Priority: Defines the TCO data pipeline associated with the logs. Valid values are: `High`, `Medium`, `Low` and `Blocked`.
+- Priority: Defines the TCO data pipeline associated with the logs and metrics. Valid values are: `High`, `Medium`, `Low` and `Blocked`.
 - Pillar: Defines the type of telemetry data. Valid values are: `Logs` and `Metrics`.
 
 ## Viewing data
@@ -70,7 +70,7 @@ You can aggregate data by choosing one or more options in **Group data by**:
 You can view information about data ingestion volumes reported in bytes in the following widgets:
 - *Current usage*: Average daily usage in the selected period
 - *Max daily usage*: Highest daily ingested volume
-- *Min daily usage*: Lowest daily ingetsed volume
+- *Min daily usage*: Lowest daily ingested volume
 - *Avg daily usage*: Average daily ingested volume
 
 
