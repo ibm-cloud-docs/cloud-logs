@@ -2,7 +2,7 @@
 
 Copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-03"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Working with the Metrics Data explorer
+# Exploring metrics through the Metrics Data Dashboard
 {: #metrics-explorer-r114}
 
 In {{site.data.keyword.logs_full_notm}}, you can use the **Metrics Data explorer** to identify high-volume or high-cardinality metrics, understand ingestion patterns, detect inefficient time series, and optimize the data pipeline. You can drill down further and see how individual label values affect the number of generated series.
