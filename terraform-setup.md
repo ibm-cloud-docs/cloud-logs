@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-11-11"
+  years:  2024, 2026
+lastupdated: "2026-06-04"
 
 keywords:
 
@@ -19,6 +19,11 @@ subcollection: cloud-logs
 
 Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments that follow Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.logs_full_notm}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
+
+For production deployments, consider using [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for [{{site.data.keyword.logs_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external}, which provide pre-built, open-source, and enterprise-ready configurations following {{site.data.keyword.cloud_notm}} best practices. 
+
+TIM modules simplify complex deployments, ensure consistency across environments, and reduce configuration errors. Explore the [Terraform IBM Modules(TIM) registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external} for available modules.
+{: note}
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't need to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
@@ -398,6 +403,51 @@ Next, create the following files:
 
 For additional information on how to use Terraform for {{site.data.keyword.cloud_notm}} resources, see [ibm_resource_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance)
 
+### Provisioning {{site.data.keyword.logs_full_notm}} instance by using Terraform IBM Modules
+{: #provision-using-tim}
+
+As an alternative to Step 4, you can provision {{site.data.keyword.logs_full_notm}} using Terraform IBM Modules (TIM). If you choose this module-based approach, skip Step 4 and proceed directly to [Provision resources](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-terraform-setup&interface=terraform#terraform-provision).
+
+1. Create a `main.tf` file:
+
+    ```terraform
+    module "cloud_logs" {
+      source            = "terraform-ibm-modules/cloud-logs/ibm"
+      version           = "latest" # Replace "latest" with a release version to lock into a specific release
+      resource_group_id = var.resource_group_id
+      region            = var.region
+      instance_name     = "my-cloud-logs-instance"
+      plan              = "standard"
+      resource_tags     = ["env:production", "team:devops"]
+    }
+
+    output "cloud_logs_instance_guid" {
+      value = module.cloud_logs.guid
+    }
+    ```
+    {: codeblock}
+
+2. Optional: if you want to parameterize the configuration, define input variables. For example, create a `variables.tf` file:
+
+    ```terraform
+    variable "resource_group_id" {
+      description = "Resource group ID for the Cloud Logs instance"
+      type        = string
+    }
+
+    variable "region" {
+      description = "Region where the Cloud Logs instance will be created"
+      type        = string
+      default     = "us-south"
+    }
+    ```
+    {: codeblock}
+
+For complete module documentation and advanced configuration options, see the [{{site.data.keyword.logs_full_notm}} module](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external}.
+
+You can also refer this [documentation](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module) for Terraform IBM Modules deployment using Terraform CLI.
+{: tip}
+
 
 ## Provision resources
 {: #terraform-provision}
@@ -431,8 +481,11 @@ Complete the following steps:
     To delete resources, run `./terraform destroy`.
     {: tip}
 
-
 ## What's next?
 {: #terraform_setup_next}
 
 Verify that the resources are created. [Launch the Observability UI](/docs/cloud-logs?topic=cloud-logs-instance-launch) and check the instance has been created.
+
+You can explore all modules for production-ready configurations:
+- [Terraform IBM Modules (TIM) GitHub Repository](https://github.com/terraform-ibm-modules){: external}
+- [Terraform IBM Modules (TIM) Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}

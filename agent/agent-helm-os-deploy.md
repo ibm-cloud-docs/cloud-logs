@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-08-13"
+  years:  2024, 2026
+lastupdated: "2026-06-04"
 
 keywords:
 
@@ -18,6 +18,9 @@ subcollection: cloud-logs
 
 You can use a Helm chart to deploy the {{site.data.keyword.agent}} v1.6.x to collect and route infrastructure and application logs from an OpenShift cluster to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
+
+You can also use Terraform IBM Modules (TIM) for [{{site.data.keyword.agent}}](https://registry.terraform.io/modules/terraform-ibm-modules/logs-agent/ibm/latest){: external} to deploy and configure the logs agent on supported OpenShift clusters. This module automates the Helm-based deployment and key configuration settings by using Infrastructure as Code (IaC) automation.
+{: tip}
 
 Complete the following steps to deploy an agent on an OpenShift cluster:
 
