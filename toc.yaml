@@ -14,6 +14,7 @@ toc:
       id: learn
       topics:
       - getting-started.md
+      - tutorial-try-free.md
       - topicgroup:
           label: About IBM Cloud Logs
           topics:
@@ -604,6 +605,9 @@ toc:
           links:
           - link:
               label: Terraform reference
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_dashboard
+          - link:
+              label: Terraform IBM Modules (TIM) for IBM Cloud Logs
               href: https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest
       - topicgroup:
           label: SDK Reference

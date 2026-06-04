@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-15"
+lastupdated: "2026-06-04"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Configuring custom enrichments
 {: #enrich-howto}
 
-You can enhance {{site.data.keyword.logs_full}} log data with additional business, operational, or security context to improve log analysis and understandability.
+You can enhance {{site.data.keyword.logs_full}} log data with more business, operational, or security context to improve log analysis and understandability.
 {: shortdesc}
 
 Custom enrichment lets you enhance your logs by adding critical contextual data that might not be available at runtime. This enrichment is done by appending fields to your JSON logs based on specific matches using a custom data source that you define.
@@ -102,19 +102,19 @@ Custom enrichment supports two methods:
 ### Automatic enrichment
 {: #enrich-howto-auto}
 
-Automatic enrichment appends additional data to logs as they are ingested. This ensures enriched logs are consistently available for queries across {{site.data.keyword.logs_full_notm}}, including in [alerts](/docs/cloud-logs?topic=cloud-logs-event-notifications-about) and [custom dashboards](/docs/cloud-logs?topic=cloud-logs-create_dashboards).
+Automatic enrichment appends more data to logs as they are ingested. This ensures enriched logs are consistently available for queries across {{site.data.keyword.logs_full_notm}}, including in [alerts](/docs/cloud-logs?topic=cloud-logs-event-notifications-about) and [custom dashboards](/docs/cloud-logs?topic=cloud-logs-create_dashboards).
 
 ### DataPrime query enrichment
 {: #enrich-howto-dp}
 
-With the DataPrime [`enrich`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#enrich) query you can dynamically enrich at query time without increasing the stored log size. This approach lets you enrich previously ingested logs.
+With the DataPrime [`enrich`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#enrich) query, you can dynamically enrich at query time without increasing the stored log size. This approach lets you enrich previously ingested logs.
 
-With DataPrime you can expose custom enrichments as fully queryable datasets. The custom enrichment feature lets you enhance your logs by adding critical contextual data that might not be available at runtime. This enrichment is done by appending fields to your JSON logs based on specific matches using a custom data source that you define. 
+With DataPrime, you can expose custom enrichments as fully queryable datasets. The custom enrichment feature lets you enhance your logs by adding critical contextual data that might not be available at runtime. This enrichment is done by appending fields to your JSON logs based on specific matches using a custom data source that you define.
 
 For example:
 
 ```text
-source ... | enrich ... using my_enrichment | ... 
+source ... | enrich ... using my_enrichment | ...
 ```
 {: codeblock}
 
@@ -136,7 +136,7 @@ key, value
 b2f3f7e6-362a-4838-97d4-69886552fd88, customer2
 978bfb69-b9ab-4550-8133-0f3f8b4d302b, customer3
 58a2d452-51b0-4667-bfe5-a11f864f1c57, customer4
-c80452a8-9573-4e3c-b3f6-88ae740c776c. customer5 
+c80452a8-9573-4e3c-b3f6-88ae740c776c. customer5
 ```
 {: codeblock}
 
