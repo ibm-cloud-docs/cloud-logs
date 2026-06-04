@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-05"
+lastupdated: "2026-06-04"
 
 keywords:
 
@@ -124,14 +124,14 @@ You can configure a data bucket for an {{site.data.keyword.logs_full_notm}} inst
 
 Logs are stored as Parquet files with the following structure:
 
-```
+```text
 cx/parquet/v1/team_id=<TEAM>/dt=<DT>/hr=<HR>/UUID.parquet
 ```
 {: codeblock}
 
-*Metadata* is stored in manifest files with this structure:
+_Metadata_ is stored in manifest files with this structure:
 
-```
+```text
 cx/parquet/v1/_manifest/team_id=<TEAM>/dt=<DT>/hr=<HR>/_manifest/UUID.manifest
 ```
 {: codeblock}
@@ -139,7 +139,7 @@ cx/parquet/v1/_manifest/team_id=<TEAM>/dt=<DT>/hr=<HR>/_manifest/UUID.manifest
 
 For example:
 
-```
+```text
 cx/parquet/v1/team_id=58/dt=2024-12-18/hr=14/_manifest/df7bda51-9a1a-4c67-9f4d-b17f93ec4fd1.manifest
 cx/parquet/v1/team_id=58/dt=2024-12-18/hr=14/710bb5f8-0cfc-4706-8aec-27ec7d993af8.parquet
 ```
@@ -154,6 +154,7 @@ In {{site.data.keyword.cos_full_notm}}, you can define expiration rules (lifecyc
 - You can configure expiration rules that can limit the scope of the rule by using one or more filters such as an object prefix, an object tags, or an object size.
 - You can use tags as a filter option that allows expiration rules to apply to objects that contain a matching tag. The tag filter is provided as a container that specifies a key string and value string. The key string must be less than 128 characters.
 - If no prefix, tag or object size is configured, the policy will apply to all objects in the bucket.
+
 For more information, see [Deleting stale data with expiration rules](/docs/cloud-object-storage?topic=cloud-object-storage-expiry).
 
 In {{site.data.keyword.cos_full_notm}}, you can configure expiration rules (lifecycle policies) to manage automatically the deletion of object files based on number of days since the object creation date. However, if you want a more granular control on the data that is kept for search in the data bucket and delete files automatically by using different retention periods on the data, you must configure in {{site.data.keyword.cos_full_notm}} expiration rules that limit the scope by using the object tag `ICL_ARCHIVE_RETENTION` and use the tag values that you define in your {{site.data.keyword.logs_full_notm}} instance.

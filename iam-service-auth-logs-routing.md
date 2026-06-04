@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-24"
+  years:  2024, 2026
+lastupdated: "2026-06-04"
 
 keywords:
 
@@ -115,6 +115,9 @@ Use the following steps to create an authorization by using Terraform:
 
    - You can provide a `target_resource_instance_id` to scope an {{site.data.keyword.logs_full_notm}} target instance.
    - For more examples, see the [Terraform documentation for authorization resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_authorization_policy){: external}.
+
+You can use Terraform IBM Modules (TIM) for [{{site.data.keyword.logs_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external} to create the authorization policy to allow {{site.data.keyword.logs_routing_full_notm}} to send logs to the {{site.data.keyword.logs_full_notm}} instance. This module can also provision {{site.data.keyword.logs_routing_full_notm}} tenants for routing platform logs to your chosen target destination.
+{: tip}
 
 2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 

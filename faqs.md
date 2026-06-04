@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-10"
+  years:  2024, 2026
+lastupdated: "2026-06-04"
 
 keywords:
 
@@ -59,3 +59,10 @@ In the {{site.data.keyword.cos_full}} pricing model, {{site.data.keyword.logs_fu
 The {{site.data.keyword.logs_full_notm}} plan cost applies to the [data pipeline](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) processing the data in {{site.data.keyword.logs_full_notm}}. You can adjust the data pipelines by using the [TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-optimizer).
 
 For more information about {{site.data.keyword.logs_full_notm}} pricing, see [service plans and pricing](/docs/cloud-logs?topic=cloud-logs-service_plans). For more information about {{site.data.keyword.logs_full_notm}} cost management, see [controlling cost](/docs/cloud-logs?topic=cloud-logs-controlling-cost).
+
+
+## Can I use Terraform IBM Modules to provision an {{site.data.keyword.logs_full_notm}} instance?
+{: #use-terraform-ibm-modules}
+{: faq}
+
+Yes, you can use [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision an [{{site.data.keyword.logs_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external} instance. Terraform IBM Modules are pre-built, validated, and enterprise-ready modules that follow IBM Cloud best practices. For more information and available modules, check the [Terraform Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}.
