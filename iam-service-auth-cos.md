@@ -138,8 +138,9 @@ Use the following steps to create an authorization by using Terraform:
 
     - For more examples, see the [Terraform documentation for authorization resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_authorization_policy){: external}.
 
+
 You can also use Terraform IBM Modules (TIM) for [{{site.data.keyword.logs_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external} to create the authorization policy between {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.cos_full_notm}} bucket when data or metrics storage is enabled.
-{: tip}
+{: tip } 
 
 2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 
