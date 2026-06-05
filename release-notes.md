@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-04"
+lastupdated: "2026-06-05"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -20,11 +20,27 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+## 04 June 2026
+{: #cloud-logs-june0426}
+{: release-note}
+
+Functional updates and fixes made available on 26 May 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Sao Paulo (`br-sao`)
+    * Chennai (`in-che`)
+    * Frankfurt (`eu-de`)
+    * Montreal (`ca-mon`)
+    * Toronto (`ca-tor`)
+    * Sydney (`au-syd`)
+
+
 ## 03 June 2026
 {: #cloud-logs-june0326}
 {: release-note}
 
-Functional updates and fixes made available on 26 May 2026 are now available in additional regions.
+Functional updates and fixes made available on 26 May 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -39,7 +55,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
 {: #cloud-logs-june0226}
 {: release-note}
 
-Functional updates and fixes made available on 26 May 2026 are now available in additional regions.
+Functional updates and fixes made available on 26 May 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -53,7 +69,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
 {: #cloud-logs-june0126}
 {: release-note}
 
-Functional updates and fixes made available on 26 May 2026 are now available in additional regions.
+Functional updates and fixes made available on 26 May 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -66,7 +82,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
 {: #cloud-logs-may2926}
 {: release-note}
 
-Functional updates and fixes made available on 26 May 2026 are now available in additional regions.
+Functional updates and fixes made available on 26 May 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -81,7 +97,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
 
 Functional updates and fixes are available in the Sao Paulo (`br-sao`) region only.
 
-:   New features included in this release.
+:   New features are included in this release.
 
     * **Data usage**: The *Data usage* page has been revised and now provides a *User data sent* and a *Metric usage* tab. The *Data usage* page enables you to monitor ingestion trends, identify high-volume logs, and better understand overall data ingestion patterns for improved visibility and analysis.The *User Data Sent* tab provides detailed insights into log and metric ingestion volumes by priority. The *Metric usage* tab provides insights about metric sample distribution by source. For more information, see [About Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage-r114).
 
@@ -100,14 +116,14 @@ Functional updates and fixes are available in the Sao Paulo (`br-sao`) region on
 {: release-note}
 
    API and Terraform support for the Tag retention feature. For more information, see [Configuring archive retention tags to manage data retention](/docs/cloud-logs?topic=cloud-logs-retention-tags).
-   
+
 
 ## 18 May 2026
 {: #cloud-logs-may1826}
 {: release-note}
 
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -131,7 +147,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: release-note}
 
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -156,7 +172,7 @@ Mumbai support
 :   The {{site.data.keyword.logs_full_notm}} service is fully supported in the Mumbai (`in-mum`) region.
 
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -176,7 +192,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: #cloud-logs-may1126}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -195,7 +211,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: #cloud-logs-april2926}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -213,7 +229,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: #cloud-logs-april2326}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -230,7 +246,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: #cloud-logs-april2226}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -246,7 +262,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: #cloud-logs-april1626}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -260,7 +276,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: #cloud-logs-april1526}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -273,7 +289,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: #cloud-logs-april1426}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -286,7 +302,7 @@ Functional updates and fixes made available on 09 April 2026 are now available i
 {: #cloud-logs-april1326}
 {: release-note}
 
-Functional updates and fixes made available on 09 April 2026 are now available in additional regions.
+Functional updates and fixes made available on 09 April 2026 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -302,7 +318,7 @@ Release of the Extensions API, CLI and Terraform.
 
 Functional updates and fixes are available in the Chennai (`in-che`) region only.
 
-:   New features included in this release.
+:   New features are included in this release.
 
     * Pipeline analyzer: You can use the pipeline analyzer to gain full visibility into how your logs are processed before being available for search. You can inspect logs as they move through your data pipelines and gain insights into any parsing rule that a log goes through before it is available for search. For more information, see [Pipeline analyzer](/docs/cloud-logs?topic=cloud-logs-pipeline-analyzer).
 
@@ -318,7 +334,7 @@ Functional updates and fixes are available in the Chennai (`in-che`) region only
 
     * Enhanced the Create Views API to support the creation of views that query data from the {{site.data.keyword.cos_full_notm}} data bucket.
 
-    * Enhanced Custom Dashboard with additional features like color hashing, and added support to attach Actions from dashboards.
+    * Enhanced Custom Dashboard with more features like color hashing, and added support to attach Actions from dashboards.
 
     * Increased the limit to export logs from 2k to 5K in both Priority Insigths and All Logs.
 
@@ -368,7 +384,7 @@ Release of the {{site.data.keyword.agent}} version 1.7.1
 {: #cloud-logs-dec0325}
 {: release-note}
 
-Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -390,7 +406,7 @@ Functional updates and fixes made available on 17 October 2025 are now available
 {: #cloud-logs-nov2025}
 {: release-note}
 
-Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -412,7 +428,7 @@ Functional updates and fixes made available on 17 October 2025 are now available
 {: #cloud-logs-nov1325}
 {: release-note}
 
-Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -430,7 +446,7 @@ Functional updates and fixes made available on 17 October 2025 are now available
 {: #cloud-logs-nov1225}
 {: release-note}
 
-Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -447,7 +463,7 @@ Functional updates and fixes made available on 17 October 2025 are now available
 {: #cloud-logs-nov1025}
 {: release-note}
 
-Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -463,7 +479,7 @@ Functional updates and fixes made available on 17 October 2025 are now available
 {: #cloud-logs-nov0625}
 {: release-note}
 
-Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -478,7 +494,7 @@ Functional updates and fixes made available on 17 October 2025 are now available
 {: #cloud-logs-nov0425}
 {: release-note}
 
-Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -499,7 +515,7 @@ Release of the {{site.data.keyword.agent}} version 1.7.0
 {: #cloud-logs-oct2725}
 {: release-note}
 
-Functional updates and fixes made available on 17 October 2025 are now available in additional regions.
+Functional updates and fixes made available on 17 October 2025 are now available in more regions.
 
 :   Regions supporting new functionality and fixes:
 
@@ -516,7 +532,7 @@ Functional updates and fixes made available on 17 October 2025 are now available
 
 Functional updates and fixes are available in the Montreal (`ca-mon`) region only.
 
-:   New features included in this release.
+:   New features are included in this release.
 
     * Additional capabilities are now supported for alerts with the introduction of a new `alert_definition` API method. Changes are also made as a result to the {{site.data.keyword.en_full_notm}} payload.  See the following documentation topics for information about the alerts API changes and actions you might need to take as a result.
 
@@ -634,7 +650,7 @@ Release of the {{site.data.keyword.agent}} version 1.6.0
     DataPrime now supports passing of query parameter values using [`$p`](/docs/cloud-logs?topic=cloud-logs-query-parameters).
 
 [UI] Compact mode
-:   [Compact mode](/docs/cloud-logs?topic=cloud-logs-compact-views) provides a simplified and streamlined view, enabling users to focus on active monitoring and querying without additional widgets, filters, or statistics.
+:   [Compact mode](/docs/cloud-logs?topic=cloud-logs-compact-views) provides a simplified and streamlined view, enabling users to focus on active monitoring and querying without more widgets, filters, or statistics.
 
 [UI] Shared URL
 :   Enhancements added to the [share the URL functionality](/docs/cloud-logs?topic=cloud-logs-share_url) so you can share a URL of the the current view of the logs explore screen.
