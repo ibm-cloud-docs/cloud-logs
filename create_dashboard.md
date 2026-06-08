@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-24"
+  years:  2024, 2026
+lastupdated: "2026-06-08"
 
 keywords:
 
@@ -25,13 +25,18 @@ You can create custom {{site.data.keyword.logs_full}} dashboards.
 Custom dashboard are comprosed of widgets. You can create the widgets you want to use in the dashboard.
 
 * [Data table](/docs/cloud-logs?topic=cloud-logs-widget_datatable)
+* [Dynamic](/docs/cloud-logs?topic=cloud-logs-widget_dynamic)
 * [Gauge](/docs/cloud-logs?topic=cloud-logs-widget_gauge)
+* [Geomap](/docs/cloud-logs?topic=cloud-logs-widget_geo_map)
+* [Heatmap](/docs/cloud-logs?topic=cloud-logs-widget_heatmap)
 * [Horizontal bar chart](/docs/cloud-logs?topic=cloud-logs-widget_horizontalbar).
 * [Line chart](/docs/cloud-logs?topic=cloud-logs-widget_linechart).
 * [Pie chart](/docs/cloud-logs?topic=cloud-logs-widget_piechart)
 * [Vertical bar chart](/docs/cloud-logs?topic=cloud-logs-widget_verticalbar)
 * [Markdown](/docs/cloud-logs?topic=cloud-logs-widget_markdown)
 * [DataPrime creator](/docs/cloud-logs?topic=cloud-logs-widget_dataprime)
+* [Polystat](/docs/cloud-logs?topic=cloud-logs-widget_polystat)
+
 
 ## Creating a custom dashboard
 {: #custom_dashboard}
