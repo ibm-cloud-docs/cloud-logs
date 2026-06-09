@@ -19,6 +19,7 @@ subcollection: cloud-logs
 {: shortdesc}
 
 
+![The image shows the locations where the {{site.data.keyword.logs_full_notm}} service is available.](/images/cloud-logs-regions.pdf){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_full_notm}} resources." caption-side="bottom"}
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
 {: note}

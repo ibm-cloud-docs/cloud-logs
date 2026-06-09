@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-17"
+  years:  2024, 2026
+lastupdated: "2026-06-08"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: cloud-logs
 # Visual Explorer
 {: #visual-explorer}
 
-The {{site.data.keyword.logs_full}} Visual Explorer is a powerful tool that integrates a multifunctional display with customizable dashboard widgets. Visual Explorer provides a fast way to add query-based graphs without needing to set up custom dashboards. You can run multiple queries from different data sources so they are be displayed side by side on the same page, making it easier to correlate data and providing a more comprehensive view of your system.
+The {{site.data.keyword.logs_full}} Visual Explorer is a powerful tool that integrates a multifunctional display with customizable dashboard widgets. Visual Explorer provides a fast way to add query-based graphs without needing to set up custom dashboards. You can run multiple queries from different data sources so they are displayed side by side on the same page, making it easier to correlate data and providing a more comprehensive view of your system.
 {: shortdesc}
 
 This is a beta feature that is subject to change and is available for evaluation and testing purposes.
@@ -77,7 +77,7 @@ A query chart can be deleted from the Visual Explorer page. The action is perman
 
 You can easily switch chart visualizations without re-creating the widgets. By switching chart types you can explore data in different ways with the same query.
 
-Use the menu to toggle between the different available views.
+Use the dropdown menu to toggle between the different available views.
 
 ### Saving as a dashboard
 {: #ve-save}
@@ -193,8 +193,13 @@ A rollup function refers to functions that aggregate time series data over a spe
 | `average over time` |	Computes the average of time series values over a time range. |
 | `max over time` |	Finds the maximum value of time series data over a time range. |
 | `min over time` |	Determines the minimum value of time series data over a time range. |
+| `max over time` |	Determines the maximum value of time series data over a time range. |
 | `sum over time` |	Calculates the sum of time series values over a time range. |
 | `count over time` |	Counts the number of non-NaN elements in the time series over a time range. |
+| `deviation over time` |	Determines the deviation value of time series data over a time range. |
+| `variance over time` |	Determines the variance value of time series data over a time range. |
+| `last over time` |	Determines the last value of time series data over a time range. |
+| `rate per second` |	Determines the rate per second value of time series data over a time range. |
 | `quantile over time` |	Computes the specified quantile of time series data over a time range. |
 {: caption="Rollup functions" caption-side="bottom"}
 
@@ -236,5 +241,3 @@ Then, add the metrics query:
 3. Select the `mem_used` metrics.
 
 4. Add the `sum` by `host` function.
-
-
