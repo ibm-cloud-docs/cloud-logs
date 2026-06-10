@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-08"
+lastupdated: "2026-06-10"
 
 keywords:
 
@@ -19,7 +19,7 @@ subcollection: cloud-logs
 {: shortdesc}
 
 
-![The image shows the locations where the {{site.data.keyword.logs_full_notm}} service is available.](/images/cloud-logs-regions.pdf){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_full_notm}} resources." caption-side="bottom"}
+![The image shows the locations where the {{site.data.keyword.logs_full_notm}} service is available.](/images/cloud-logs-regions.png){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_full_notm}} resources." caption-side="bottom"}
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
 {: note}
