@@ -2,9 +2,9 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-11"
 
-keywords:
+keywords: metrics analyzer
 
 subcollection: cloud-logs
 
