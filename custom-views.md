@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-03-31"
+  years:  2024, 2026
+lastupdated: "2026-06-10"
 
 keywords:
 
@@ -49,7 +49,7 @@ Do the following to create a custom view.
 
 2. (Optional) Add additional filters click **+ Add Filter** and select and configure additional field and filter values.
 
-3. Select if you want you view to only include **Priority Logs** (those in the {{site.data.keyword.frequent-search}} pipeline) or **All Logs**, that is, logs that are stored in {{site.data.keyword.cos_full_notm}}. Logs in {{site.data.keyword.cos_full_notm}} includes logs collected through all the data pipelines.
+3. Select if you want to view only include **Priority Logs** (those in the {{site.data.keyword.frequent-search}} pipeline) or **All Logs**, that is, logs that are stored in {{site.data.keyword.cos_full_notm}}. Logs in {{site.data.keyword.cos_full_notm}} includes logs collected through all the data pipelines.
 
 4. (Optional) Add a Lucene or DataPrime query to further filter your data.
 
