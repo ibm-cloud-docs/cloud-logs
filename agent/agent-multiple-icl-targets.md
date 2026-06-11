@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-01"
+lastupdated: "2026-06-11"
 
 keywords:
 
@@ -104,7 +104,40 @@ The `Match` parameter corresponds to one of the tags previously specified in the
 {: codeblock}
 
 When using an API key, you need to provide the API key in one of the way described in [the plug-in parameters page](/docs/cloud-logs?topic=cloud-logs-agent-plugin-parameters#agent-plugin-parameters-authentication-parms).
-If both {{site.data.keyword.logs_full_notm}} instances are located in the same account and can be accessed using the same api key, it can be specified in the `IAM_API_KEY` environment variable.
-If they need different api keys, you can use the `IAM_API_KEY_<output_ID>` environment variable, where `<output_ID>` is the ID given to the output plug-in as specified in the `Id` parameter, with any dashes (`-`) replaced by underscores (`_`).
-Alternatively, if needed, you can specify `IAM_API_key ${CUSTOM_ENVIRONMENT_VARIABLE}` in the output config to use a custom environment variable.
-{: tip}
+If both {{site.data.keyword.logs_full_notm}} instances are located in the same account and can be accessed using the same API key, it can be specified in the `IAM_API_KEY` environment variable and no further configuration of the output plugins is necessary.
+
+If the two instances need different API keys, you can use the `IAM_API_KEY_<output_ID>` environment variable for at least one of them, where `<output_ID>` is the ID given to the output plug-in as specified in the `Id` parameter, with any dashes (`-`) replaced by underscores (`_`). For the example configuration above, the key for the first instance could thus be specified in the environment variable called `IAM_API_KEY_logger_icl_output_plugin_instance_one`. The second instance can then either fall back to the `IBM_API_KEY` variable, or use the dedicated `IAM_API_KEY_logger_icl_output_plugin_instance_two` environment variable.
+
+As a third option, you can specify `IAM_API_key ${CUSTOM_ENVIRONMENT_VARIABLE}` in the output config to use a custom environment variable, as shown in the example below, where the first instance uses the API key specified in `IBM_API_KEY` or `IAM_API_KEY_logger_icl_output_plugin_instance_one`, and the second instance uses the `NAME_OF_VAR_WITH_KEY_FOR_INSTANCE_TWO` environment variable.
+
+```conf
+[OUTPUT]
+    Name                logger-icl-output-plugin
+    Id                  logger-icl-output-plugin-instance-one
+    Match               dummy.multi.instance.one
+
+    # Connection
+    Target_Host         <ICL_INSTANCE_ENDPOINT>
+    Target_Port         443
+    Target_Path         /logs/v1/singles
+
+    # Authentication
+    Authentication_Mode IAMAPIKey
+    IAM_Environment     Production
+
+[OUTPUT]
+    Name                logger-icl-output-plugin
+    Id                  logger-icl-output-plugin-instance-two
+    Match               dummy.multi.instance.two
+
+    # Connection
+    Target_Host         <ICL_INSTANCE_ENDPOINT>
+    Target_Port         443
+    Target_Path         /logs/v1/singles
+
+    # Authentication
+    Authentication_Mode IAMAPIKey
+    IAM_API_key         ${NAME_OF_VAR_WITH_KEY_FOR_INSTANCE_TWO}
+    IAM_Environment     Production
+```
+{: codeblock}
