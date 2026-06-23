@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-23"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -18,6 +18,30 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+
+## 22 June 2026
+{: #cloud-logs-june2226}
+{: release-note}
+
+Functional updates and fixes made available on 26 May 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Sao Paulo (`br-sao`)
+    * Chennai (`in-che`)
+    * Frankfurt (`eu-de`)
+    * Montreal (`ca-mon`)
+    * Toronto (`ca-tor`)
+    * Sydney (`au-syd`)
+    * London (`eu-gb`)
+    * Madrid (`eu-es`)
+    * Osaka (`jp-osa`) 
+    * Washington, DC (`us-east`)
+    * Tokyo (`jp-tok`)
+    * US South (`us-south`)
+    * Mumbai (`in-mum`)
+    * France (`eu-fr`)
 
 
 ## 18 June 2026
