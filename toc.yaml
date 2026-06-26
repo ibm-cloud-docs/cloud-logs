@@ -423,7 +423,7 @@ toc:
       - topicgroup:
           label: Data Usage
           topics:
-          - topic: data-usage-r114.md
+          - topic: data-usage.md
             navtitle: About Data Usage
           - topic: data-usage-analyzer.md
             navtitle: Analyzing user data sent

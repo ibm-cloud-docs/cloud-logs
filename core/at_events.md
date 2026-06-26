@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-26"
 
 keywords:
 
@@ -42,9 +42,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 {: row-headers}
 
 
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
+| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) | Mumbai (`in-mum`) |
+|---------------------|------------------|------------------|--------------------|--------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-red} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #atracker-table-2}
 {: tab-title="Asia Pacific"}
@@ -53,7 +53,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 {: row-headers}
 
 | Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
+|----------------------|------------------|------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #atracker-table-3}
