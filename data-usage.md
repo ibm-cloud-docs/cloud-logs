@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-26"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 # About Data Usage
-{: #data-usage-r114}
+{: #data-usage}
 
 In {{site.data.keyword.logs_full_notm}}, you can get detailed insights into your data usage through the *Data Usage page* or through the *Data Usage pre-defined custom dashboard*.
 {: shortdesc}
