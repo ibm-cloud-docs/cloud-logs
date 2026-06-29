@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-05-23"
+  years:  2024, 2026
+lastupdated: "2026-06-29"
 
 keywords:
 
@@ -25,7 +25,7 @@ When you stream data to data lakes, other analysis tools, or other SIEM tools, y
 
 For example, when you enable streaming on an {{site.data.keyword.logs_full}} instance, you configure {{site.data.keyword.logs_full}} to send data to an {{site.data.keyword.messagehub}} instance. Then, you can configure Kafka Connect to consume the data and forward it to your destination tool. Once the data is persisted within {{site.data.keyword.messagehub}}, you can configure any application or service to create a subscription and take action on the log data being streamed.
 
-![Streaming with {{site.data.keyword.messagehub}}](images/streaming_overview.svg "Streaming flow showing {{site.data.keyword.logs_full_notm}} sending data to {{site.data.keyword.messagehub}} which in turn sends data to a configured Kafka client"){: caption="Streaming with {{site.data.keyword.messagehub}}" caption-side="bottom"}
+![Streaming with {{site.data.keyword.messagehub}}](/images/streaming_overview.png)"Streaming flow showing {{site.data.keyword.logs_full_notm}} sending data to {{site.data.keyword.messagehub}} which in turn sends data to a configured Kafka client" {: caption="Streaming with {{site.data.keyword.messagehub}}" caption-side="bottom"}
 
 For more information about available {{site.data.keyword.messagehub}} Kafka clients, see [Choosing a Kafka client to use with {{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-kafka_using&interface=ui#kafka_clients).
 
