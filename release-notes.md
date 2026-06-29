@@ -24,7 +24,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #cloud-logs-june2926}
 {: release-note}
 
-The platform metrics for {{site.data.keyword.logs_full_notm}} service is fully supported in the London (`eu-gb`) region. 
+Platform metrics for the {{site.data.keyword.logs_full_notm}} service is fully supported in the London (`eu-gb`) region. 
 
 
 ## 18 June 2026
