@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-23"
+lastupdated: "2026-06-29"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -18,6 +18,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+
+## 29 June 2026
+{: #cloud-logs-june2926}
+{: release-note}
+
+The platform metrics for {{site.data.keyword.logs_full_notm}} service is fully supported in the London (`eu-gb`) region. 
 
 
 ## 18 June 2026
