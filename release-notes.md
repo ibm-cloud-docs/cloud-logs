@@ -20,12 +20,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
-## 29 June 2026
-{: #cloud-logs-june2926}
-{: release-note}
-
-Platform metrics for the {{site.data.keyword.logs_full_notm}} service is fully supported in the London (`eu-gb`) region. 
-
 
 ## 18 June 2026
 {: #cloud-logs-june1826}
@@ -43,7 +37,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
     * Washington, DC (`us-east`)
     * Tokyo (`jp-tok`)
     * US South (`us-south`)
@@ -66,7 +60,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
     * Washington, DC (`us-east`)
     * Tokyo (`jp-tok`)
     * US South (`us-south`)
@@ -88,7 +82,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
     * Washington, DC (`us-east`)
     * Tokyo (`jp-tok`)
 
@@ -109,7 +103,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
     * Washington, DC (`us-east`)
 
 
@@ -129,7 +123,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
 
 
 ## 09 June 2026
