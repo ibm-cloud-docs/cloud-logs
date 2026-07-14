@@ -18,8 +18,6 @@ subcollection: cloud-logs
 You can configure how the {{site.data.keyword.logs_full}} UI displays data along with other personal preferences.
 {: shortdesc}
 
-Account preferences apply to your user sessions across all views and pages. To save column configuration, view mode, or sidebar layout for a specific log view, use saved views. For more information, see [Managing custom views](/docs/cloud-logs?topic=cloud-logs-custom_views). 
-{: note}
 
 1. In the console, click the **Navigation menu** icon ![Navigation menu icon](../icons/icon_hamburger.svg) > **Observability** > **Logging** > **Instances**.
 
