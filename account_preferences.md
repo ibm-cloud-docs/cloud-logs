@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-03-18"
+  years:  2024, 2026
+lastupdated: "2026-07-14"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: cloud-logs
 
 You can configure how the {{site.data.keyword.logs_full}} UI displays data along with other personal preferences.
 {: shortdesc}
+
 
 1. In the console, click the **Navigation menu** icon ![Navigation menu icon](../icons/icon_hamburger.svg) > **Observability** > **Logging** > **Instances**.
 

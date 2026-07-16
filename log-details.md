@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-17"
+  years:  2024, 2026
+lastupdated: "2026-07-14"
 
 keywords:
 
@@ -36,12 +36,10 @@ To see the **Log details** for a log line in a view:
 
 2. Press the Space bar. The **Log details** for the log line opens.
 
-In the **Log details** you can see the information in a table, as JSON, or in a raw log line format. When you view the **Log details** as a table, you can also search the table.
-
+In the **Log details** you can see the information in a table, as JSON, or in a raw log line format. When you view the **Log details** as a table, you can also search the table. 
 ## Example Log details
 {: #log-details-example}
 
 The following image is an example of **Logs deails** of a warning log.
 
 ![Log details example](/images/log-details.png "Log details example of a warning message in table format"){: caption="Log details example of a warning message in table format" caption-side="bottom"}
-

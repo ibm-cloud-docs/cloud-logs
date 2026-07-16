@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-05-16"
+  years:  2024, 2026
+lastupdated: "2026-07-14"
 
 keywords:
 
@@ -37,7 +37,7 @@ Set **{{site.data.keyword.compact-mode}}** to on.
 
 When {{site.data.keyword.compact-mode}} is enabled, the page opens or reloads without widgets, fiters, and log, tempate, and trace count statistics.
 
-The selected mode will be retained between your user sessions.
+The selected mode will be retained between your user sessions. 
 
 ## Differences in behavior when using the {{site.data.keyword.compact-mode}}
 {: #compact-diff}

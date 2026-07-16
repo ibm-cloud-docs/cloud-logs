@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-14"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -20,6 +20,14 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+
+## 13 July 2026
+{: #cloud-logs-jul1326}
+{: release-note}
+
+Release of the {{site.data.keyword.agent}} version 1.9.0
+:   For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-jul1326)
+
 ## 18 June 2026
 {: #cloud-logs-june1826}
 {: release-note}
@@ -36,7 +44,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
     * Washington, DC (`us-east`)
     * Tokyo (`jp-tok`)
     * US South (`us-south`)
@@ -59,7 +67,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
     * Washington, DC (`us-east`)
     * Tokyo (`jp-tok`)
     * US South (`us-south`)
@@ -81,7 +89,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
     * Washington, DC (`us-east`)
     * Tokyo (`jp-tok`)
 
@@ -102,7 +110,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
     * Washington, DC (`us-east`)
 
 
@@ -122,7 +130,7 @@ Functional updates and fixes made available on 26 May 2026 are now available in 
     * Sydney (`au-syd`)
     * London (`eu-gb`)
     * Madrid (`eu-es`)
-    * Osaka (`jp-osa`) 
+    * Osaka (`jp-osa`)
 
 
 ## 09 June 2026

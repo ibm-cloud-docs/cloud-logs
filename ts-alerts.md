@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-18"
+  years:  2024, 2026
+lastupdated: "2026-07-16"
 
 keywords: 
 
@@ -99,8 +99,7 @@ Review your alert configuration for errors such as:
 
 
 
-For more information, see [Configuring alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-alerts-config).
-
+For more information, see [Configuring alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-alerts-config). 
 
 ## Is {{site.data.keyword.en_full_notm}} correctly configured?
 {: #ts-alert-en-config}
