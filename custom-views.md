@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-07-14"
+lastupdated: "2026-07-16"
 
 keywords:
 
@@ -21,7 +21,6 @@ subcollection: cloud-logs
 ## About views
 {: #custom_views_ov}
 
-- Views can include a saved column layout.
 - You can configure views to see logs that match a specific filtering criteria.
 - Views can be shared (public) or private.
 - To configure a custom view, you can define a query, filter by selected fields, or both.
