@@ -8,7 +8,7 @@ There are limits to the number of characters that can be included in a query.
 
 * A maximum of 3000 characters can be included in a query in the **Logs** view.
 
-* A maxumum of 65,535 characters can be included in an alert query definition. Alert query definitions are also limited to a maximum of 50 `AND` and `OR` statements.
+* A maximum of 65,535 characters can be included in an alert query definition. Alert query definitions are also limited to a maximum of 50 `AND` and `OR` statements.
 
 
 ### Keyword types
@@ -39,6 +39,4 @@ A maximum of 100 MB is scanned for {{site.data.keyword.frequent-search}} data. N
 ### Rate limiting
 {: #limit_rate_limit}
 
-A maximum of 10 queries per minute can be submitted.
-
-When the rate limit is exceeded, an HTTP 429 is returned.
+A maximum of 10 queries per minute can be submitted via API or through the archive query feature. When the rate limit is exceeded, an HTTP 429 is returned.
