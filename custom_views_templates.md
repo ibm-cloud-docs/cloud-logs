@@ -28,7 +28,6 @@ Consider the following information when creating a custom view as a template:
 
 - Users with `Writer` or `Manager` role can create, modify and delete views.
 
-- To prevent users from modifying templates, A user with `Writer` or `Manager` role can create 1 or more custom views as templates.
 
 
 
