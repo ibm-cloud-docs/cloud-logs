@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-07-22"
+lastupdated: "2026-07-23"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using public views as team templates
+# Using public views as templates
 {: #custom_views_templates}
 
 In {{site.data.keyword.logs_full}}, you can use a public view to allow a team member publish a view that has a consistent column layout, view mode, and filter configurations. The team members can open the public view, and set it as their own default view.

@@ -265,9 +265,9 @@ toc:
           - topic: custom-views.md
             navtitle: Managing custom views
           - topic: custom_views_default.md
-            navtitle: Creating a default view
+            navtitle: Managing default views
           - topic: custom_views_templates.md
-            navtitle: Using views as team templates
+            navtitle: Using views as templates
           - topic: compact-views.md
             navtitle: Compact views
           - topic: log-details.md
