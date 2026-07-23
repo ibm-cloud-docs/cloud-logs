@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-07-22"
+lastupdated: "2026-07-23"
 
 keywords:
 
@@ -29,7 +29,9 @@ You can configure views to see logs that match a specific filtering criteria.
 - Views can be grouped into folders. The folder order cannot be changed.
 - View names must be unique within a folder.
 - You can configure {{site.data.keyword.iamlong}} to manage the permissions that you grant users to work with private and public views in an {{site.data.keyword.logs_full_notm}} instance. [Granting permissions to work with views](/docs/cloud-logs?topic=cloud-logs-iam-views).
-- Each user can configure a custom view as their default view. The user's default view opens automatically when the user launches **Explore Logs**.
+- Each user can configure a custom view as their default view. The user's default view opens automatically when the user launches **Explore Logs**. This settings applies only to the individual user and does not affect other users of the instance.
+- Users with the `Manager` role can assign a public view as the instance-wide custom view. The instance-wide default view opens automatically for all users.
+- Users with `Manager` or `Writer`role can create additional public views. This can be adopted by other users as personal custom view.
 - You can create a public custom view with the column layout and filter configurations for your data that users can choose to use as their default view.
 
 Views including column configurations are stored as per instance. If you work with multiple instances, you must configure and save views in each instance separately
