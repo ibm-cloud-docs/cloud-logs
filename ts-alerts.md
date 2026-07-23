@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-07-22"
+lastupdated: "2026-07-23"
 
 keywords: 
 
@@ -105,6 +105,3 @@ For more information, see [Configuring alerts in {{site.data.keyword.logs_full_n
 {: #ts-alert-en-config}
 
 If {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_full_notm}} are not correctly configured, your alert will not trigger your intended notification. See [Configuring the integration with the {{site.data.keyword.en_short}} service](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure) for information about configuring the integration between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.en_full_notm}}.
-
-
-## 
