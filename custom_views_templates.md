@@ -39,18 +39,18 @@ Consider the following information when creating a custom view as a template:
 
 Complete the following steps to create a custom view that you can use as a template:
 
-1.[Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
-1. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
+2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
 
-2. Set up the **Explore Logs** page with the column layout, view modes, and filters.
+3. Set up the **Explore Logs** page with the column layout, view modes, and filters.
 
-3. Click the three dots next to the view name and click **Save view**.
+4. Click the three dots next to the view name and click **Save view**.
 
-4. Enter a name that identifies the view. Use a naming convention so it is clear that you plan to use this view as a template, for example, you can name your template as follows `Template - <Title>`.
+5. Enter a name that identifies the view. Use a naming convention so it is clear that you plan to use this view as a template, for example, you can name your template as follows `Template - <Title>`.
 
-5. Select **Save query and filters** if you want filters and query to be part of the template.
+6. Select **Save query and filters** if you want filters and query to be part of the template.
 
-6. Set the **Visibility** to **Public**.
+7. Set the **Visibility** to **Public**.
 
-7. Click **Save**.
+8. Click **Save**.
