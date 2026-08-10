@@ -373,6 +373,8 @@ toc:
               topics:
               - topic: alerts-config.md
                 navtitle: Configuring alerts in Cloud Logs
+              - topic: alerts-queries.md
+                navtitle: Quering alerts in Cloud Logs
               - topic: alerts/multi-condition.md
                 navtitle: Multi-condition alerts
               - topic: alerts/eval-window.md
@@ -667,6 +669,8 @@ toc:
             navtitle: FAQ
           - topic: agent/agent-faqs.md
             navtitle: Agent FAQ
+          - topic: alerts-faq.md
+            navtitle: FAQ for alerts
       - topicgroup:
           label: Troubleshooting
           topics:

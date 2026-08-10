@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-10"
 
 keywords:
 
@@ -18,14 +18,14 @@ subcollection: cloud-logs
 In {{site.data.keyword.logs_full}}, each user can select a different custom view as their instance's default view when they launch *Explorer*.
 {: shortdesc}
 
-A user can use any custom view as their default view. This setting is applicable only to the user's profile in the {{site.data.keyword.logs_full_notm}} instance.
-{: note}
+
+
+
 
 If you work with multiple {{site.data.keyword.logs_full_notm}} instances, you can set a default view in each instance separately.
 {: note}
 
-- A user can set any public view or private view that the user creates as a default view.
-- The default view opens automatically each time the user navigates to **Explore logs**.
+- A user can set any public view or private view that the user creates as a default view. 
 - The user can change the default view at any time by opening a different view and checking **Set as default view** while saving.
 
 

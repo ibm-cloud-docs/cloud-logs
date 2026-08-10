@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-17"
+  years:  2024, 2026
+lastupdated: "2026-08-10"
 
 keywords:
 
@@ -338,7 +338,7 @@ For this example, an alert that is named `alert-managed-by-tf` is converted.
 5. Run the [{{site.data.keyword.bpshort}} `workspace import` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import) with the [<constructed_alert_ID>](#migrate_construct_alertid) for the alert to import your resource:
 
     ```text
-    ibmcloud schematics workspace get --id <schematics workspace id> --address ibm_logs_alert_definition.alert_managed_by_tf --resourceID <constructed_alert_ID>
+    ibmcloud schematics workspace import --id <schematics workspace id> --address ibm_logs_alert_definition.alert_managed_by_tf --resourceID <constructed_alert_ID>
     ```
     {: pre}
 
