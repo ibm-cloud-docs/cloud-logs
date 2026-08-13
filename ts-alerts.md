@@ -38,14 +38,14 @@ Some issues that can cause alerts to not be sent include:
 To resolve your alerting issues, you need to determine the cause of the problem, and then make the appropriate changes to your environment.
 {: tsResolve}
 
-## Are alerted logs sent to the {{site.data.keyword.compliance}} pipeline?
+## Are alert notifications sent when the triggering condition queries data from the {{site.data.keyword.compliance}} pipeline?
 {: #ts-alert-wrong-pipeline}
 {: troubleshoot}
 
 
 If the logs where you are expecting alerts are being sent to the [{{site.data.keyword.compliance}} TCO pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer), then alerts are never sent on those logs. Alerts are only sent on logs in the {{site.data.keyword.frequent-search}} and {{site.data.keyword.monitoring}} pipelines.
 
-If you need to alert on these logs, reconfigure your TCO pipelines so the logs flow to either the {{site.data.keyword.frequent-search}} or {{site.data.keyword.monitoring}} pipeline.
+If you need to alert on logs in the {{site.data.keyword.compliance}} pipeline, reconfigure your TCO pipelines so the logs flow to either the {{site.data.keyword.frequent-search}} or {{site.data.keyword.monitoring}} pipeline.
 
 You can determine the pipeline where the log is being sent by using a DataPrime query in the {{site.data.keyword.logs_full_notm}} UI logs view:
 
