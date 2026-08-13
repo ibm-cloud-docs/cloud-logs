@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-02-05"
+  years:  2024, 2026
+lastupdated: "2026-08-10"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: cloud-logs
 # Using regex when querying data
 {: #query-regex}
 
-Regular expressions (regex) can be used when querying {{site.data.keyword.logs_full_notm}} data for pattern searching and string replacement.
+You can use regular expressions (regex) when querying {{site.data.keyword.logs_full_notm}} data for pattern searching and string replacement.
 {: shortdesc}
 
 You might want to extract specific data from your logs to make it easier to analyze and visualize. Sometimes you might want to capture specific logged data. Other times, you might need to hide sensitive data in logs before they are saved.
@@ -280,7 +280,7 @@ Suppose we need to replace `europe` with `eu` in the strings in the format `west
 Howerver, replacing the string using the methods we used before might be rather hard. This is because we need to insert two strings before and after the `europe` text, and those strings might vary. To do this, we first need to capture the strings into capturing groups:
 
 ```text
-(.+?)-europe-(d+) 
+(.+?)-europe-(d+)
 ```
 {: codeblock}
 
@@ -321,7 +321,7 @@ And the log after applying the rule:
 
 Another place where you can use regex is the {{site.data.keyword.logs_full_notm}} UI **Logs** page search bar.
 
-When searching from the page search bar you can enter exact text, Lucene, or Dataprime queries. You can also look for particular patterns using regex. Regex queries have their own format which is: 
+When searching from the page search bar you can enter exact text, Lucene, or Dataprime queries. You can also look for particular patterns using regex. Regex queries have their own format which is:
 
 ```text
 /${fieldName}.keyword:/REGEX//
@@ -331,10 +331,10 @@ When searching from the page search bar you can enter exact text, Lucene, or Dat
 Suppose we have many JSON-structured logs in the following format:
 
 ```json
-{    
+{
     "log":  `${text}` ,
     "regionName":  `${text}`,
-    "region":  `${text}`, 
+    "region":  `${text}`,
     "type"  :  `ltest-w-${number}`
 }
 ```
@@ -353,7 +353,7 @@ The text between square brackets `[` and `]`, is called a *character class*. It 
 You can use the same syntax to match data in unstrucutred logs with regex. You only need to set the field name to `text.keyword`. For example:
 
 ```text
- /text.keyword:/.*ltest-w-[1-3].*// 
+ /text.keyword:/.*ltest-w-[1-3].*//
 ```
 {: codeblock}
 
@@ -362,7 +362,7 @@ This regex will search for the text `ltest-w-1`, `ltest-w-2` or `ltest-w-3` in m
 ## Triggering alerts with regex
 {: #query-regex-alerts}
 
-Another popular use case for regex in {{site.data.keyword.logs_full_notm}} is in defining alerts. the alerts syntax is the same as logs query syntax. 
+Another popular use case for regex in {{site.data.keyword.logs_full_notm}} is in defining alerts. the alerts syntax is the same as logs query syntax.
 
 Let’s say we want to alert us on a line of the following form:
 
@@ -385,5 +385,3 @@ For more information about alerts, see:
 
 * [Working with alerts](/docs/cloud-logs?topic=cloud-logs-event-notifications-about)
 * [Configuring alerts](/docs/cloud-logs?topic=cloud-logs-alerts-config)
- 
-

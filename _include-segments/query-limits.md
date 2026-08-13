@@ -33,7 +33,8 @@ The maximum number of rows that are returned from a query depends if you are que
 ### Bytes scanned
 {: #limit_bytes_scanned}
 
-A maximum of 100 MB is scanned for {{site.data.keyword.frequent-search}} data. No limit exists when data stored in {{site.data.keyword.cos_full_notm}} is scanned.
+A maximum of 100 MB is scanned for {{site.data.keyword.frequent-search}} data.
+
 
 
 ### Rate limiting

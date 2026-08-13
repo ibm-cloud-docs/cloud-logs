@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-10"
 
 keywords:
 
@@ -34,11 +34,7 @@ In {{site.data.keyword.logs_full}}, you can use custom views to monitor logs tha
 
 - Views can be grouped into folders. The folder order cannot be changed.
 
-- View names must be unique within a folder.
-
-- You can configure {{site.data.keyword.iamlong}} to manage the permissions that you grant users to work with private and public views in an {{site.data.keyword.logs_full_notm}} instance. [Granting permissions to work with views](/docs/cloud-logs?topic=cloud-logs-iam-views).
-
-- Each user can configure per {{site.data.keyword.logs_full_notm}} instance a custom view as their default view. The user's default view opens automatically when the user launches **Explore Logs**.
+- View names must be unique within a folder. 
 
 - The following preferences are saved within saved views. They are restored automatically the next time you open a view:
 
@@ -60,9 +56,7 @@ Complete the following steps to see all views:
 
 2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs").
 
-3. Click **Logs**.
-
-The last view you had opened will be displayed. If no view was previously open, the default view will be displayed.
+3. Click **Logs**. 
 
 
 ## Creating a custom view
@@ -97,9 +91,7 @@ Complete the following steps to create a custom view:
 
    3. If you want your view to be the default view, check **Set as default view**.
 
-        This sets the view as the default for you as the user. It does not set the view as the default view for the entire account.
-
-        The default view opens automatically each time you navigate to **Explore logs**.
+        This sets the view as the default for you as the user. It does not set the view as the default view for the entire account. 
 
         You can change your default view at any time by opening a different view and checking **Set as default view** while saving.
 
@@ -132,8 +124,7 @@ Complete the following steps to edit the columns of an existing view:
 7. Save the updated column layout by clicking the three dots **...** next to the view name. Select **Save query and filters**. Then, click **Save**.
 
 
-The new column layout is saved as part of the view and is applied the next time the view is opened.
-
+The new column layout is saved as part of the view and is applied the next time the view is opened. 
 
 
 ## Creating folders

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-03"
+  years:  2024, 2026
+lastupdated: "2026-08-10"
 
 keywords:
 
@@ -56,10 +56,10 @@ Phrase
 {{site.data.keyword.logs_full_notm}} provides the following search types:
 
 Free text search
-:   A free text search is used to match terms in any field in your log data.
+:   A free text search is used to match terms in any field in your log data. Enclose the text in double quotation marks (").
 
 Field search
-:   A field search restricts the search to the specific field that must match your search term.
+:   A field search restricts the search to the specific field that must match your search term. Enclose the text in double quotation marks (").
 
 Range search
 :   A range search lets you query a range of matching numeric values.
@@ -80,7 +80,7 @@ The following are examples of different types of searches and their results.
 | Query | Results |
 |-------|---------|
 | `a very interesting log message` | Matches logs containing these terms. They can appear in any field and in any order. |
-| `“a very interesting log message”` | Matches this exact phrase in any field. | 
+| `“a very interesting log message”` | Matches this exact phrase in any field. |
 {: caption="Example free text searches" caption-side="bottom"}
 
 | Query | Results |
