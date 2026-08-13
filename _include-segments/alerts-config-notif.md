@@ -9,7 +9,7 @@ Complete the following steps:
 
 2. Enable **Resolve automatically** to get an event when the event has been resolved.
 
-    When the alert's condition is no longer triggering events, the event that is trigered initially is marked as resolved.
+    When the alert's condition is no longer triggering events, the event that is triggered initially is marked as resolved.
 
 3. Enable **Enable phantom mode** to indicate that this alert is a phantom alert.
 
@@ -21,4 +21,6 @@ Complete the following steps:
 
 4. Add an integration.
 
-    You must have an outbound integration defined to be able to add an integration. For more information, see [Configuring the integration with the Event Notifications service](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
+    You must have an outbound integration defined to be able to add an integration. For more information, see [Configuring the integration with the Event Notifications service](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure). 
+
+      

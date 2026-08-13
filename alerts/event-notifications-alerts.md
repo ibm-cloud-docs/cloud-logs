@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-05" 
+  years:  2024, 2026
+lastupdated: "2026-08-13" 
 
 keywords:
 
@@ -81,8 +81,6 @@ Complete the following steps to create a topic:
    {: note}
 
 8. Click **Create**.
-
-
 
 
 ## Define 1 or more destinations

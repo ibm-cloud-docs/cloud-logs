@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-10"
+lastupdated: "2026-08-13"
 
 keywords: 
 
@@ -139,13 +139,13 @@ If the rewritten query now matches the expected logs, replace the original query
 
 2. Are string values quoted and special characters escaped?
 
-  You can check of all plain string values are enclosed in double quotation marks so that they are matched as a phrase. For example, use `status:"payment failed"` instead of `status:payment failed`.
+   You can check of all plain string values are enclosed in double quotation marks so that they are matched as a phrase. For example, use `status:"payment failed"` instead of `status:payment failed`.
 
 3. Does the query value contain token shorter than three characters
   
-  The Lucene analyzer drops tokens that are shorter than three characters during indexing. Values such as `v2`, `01`, or `5` are silently removed from standard text fields and cannot be matched by a direct field query.
+   The Lucene analyzer drops tokens that are shorter than three characters during indexing. Values such as `v2`, `01`, or `5` are silently removed from standard text fields and cannot be matched by a direct field query.
 
-  If your alert query includes a short value, move the query to the `.keyword` sub-field and use a regex pattern to bypass the analyzer. For example, use `log_level.keyword:/.*v2.*/` instead of `log_level:"v2"`.
+   If your alert query includes a short value, move the query to the `.keyword` sub-field and use a regex pattern to bypass the analyzer. For example, use `log_level.keyword:/.*v2.*/` instead of `log_level:"v2"`.
 
 4. Is the target field inside an array or a nested structure?
   
@@ -153,11 +153,11 @@ If the rewritten query now matches the expected logs, replace the original query
 
 5. Are logs assigned to a higher or medium TCO tier?
 
-  The alert engine evaluates only logs that are assigned to the Medium or High TCO tier. Logs in the Low tier are excluded from alert evaluation entirely.
+   The alert engine evaluates only logs that are assigned to the Medium or High TCO tier. Logs in the Low tier are excluded from alert evaluation entirely.
 
-  Confirm that the logs you want to alert on are assigned to the Medium or High priority tier. For more information about checking the TCO tier for a log, see [Are alerted logs sent to the compliance pipeline?](/docs/cloud-logs?topic=cloud-logs-ts-alerts#ts-alert-wrong-pipeline).
+   Confirm that the logs you want to alert on are assigned to the Medium or High priority tier. For more information about checking the TCO tier for a log, see [Are alerted logs sent to the compliance pipeline?](/docs/cloud-logs?topic=cloud-logs-ts-alerts#ts-alert-wrong-pipeline).
 
-  If the logs are in the Low tier, reconfigure your TCO policy so that those logs flow to either the {{site.data.keyword.frequent-search}} or {{site.data.keyword.monitoring}} pipeline.
+   If the logs are in the Low tier, reconfigure your TCO policy so that those logs flow to either the {{site.data.keyword.frequent-search}} or {{site.data.keyword.monitoring}} pipeline.
 
 6. Did you wait 15 minutes after editing the alert?
    
@@ -170,53 +170,4 @@ If the rewritten query now matches the expected logs, replace the original query
      * A raw sample of a log that you expect to trigger the alert, including all field names and values.
      * The full alert definition, including the query, conditions, and notification settings.
      * The alert URL and, if available, the incident URL from the alert history.
-     * The exact date and time when the alert was expected to fire but did not, including the time zone.
-
-
-## Why does an alert fire when it should not?
-{: #ts-alert-false-positive}
-{: troubleshoot}
-
-An alert fires repeatedly even though the conditions that should trigger it are not met.
-{: shortdesc}
-
-An alert is configured in {{site.data.keyword.logs_full_notm}} and fires, but the triggering conditions do not appear to be met. For absence or "less than" alert types, the alert fires even though the expected logs are present.
-
-Follow the below checks to identify and resolve the issue
-
-1. Is the query mis-parsing or matching nothing?
-
-For absence and "less than" alert types, if the alert query fails to match any logs, the alert engine treats the absence condition as met and fires. This is the most common cause of false positives for these alert types.
-
-Apply the following fixes to the query:
-
-Rewrite the query by using the `.keyword` sub-field with an anchored regex pattern:
-
-   ```text
-   field.keyword:/.*value.*/
-   ```
-   {: codeblock}
-
-   The `.keyword` sub-field stores the raw, un-tokenized value and bypasses the Lucene analyzer. The `.*` anchors on both sides match any field value that contains the specified text.
-
-Escape any special characters in the value.
-
-2. Is the query matching unintended logs because of a loose term match?
- 
- An unquoted term query is passed through the Lucene analyzer, which can match unintended substrings.
-
- Tighten the query to an exact `.keyword` match so that only logs where the field value precisely equals the intended value are matched. For example, replace `status:error` with `status.keyword:/.*error.*/` and anchor the pattern as specifically as possible to the intended value.
-
-3. Is the evaluation delay too short for absence alerts?
- 
-  Add or increase the evaluation delay in the alert configuration to allow sufficient time for all logs to be ingested before the window is evaluated. The appropriate delay depends on your typical ingestion latency. Start with a delay of at least 5 minutes and increase it if premature triggers persist.
-
-4. If false positives persist with a correct query
-  
-
-If you have applied all of the preceding fixes and the alert still fires incorrectly, collect the following information and contact {{site.data.keyword.cloud_notm}} support:
-
-   * A raw sample of the logs that were present during the false positive, including all field names and values.
-   * The full alert definition, including the query, alert type, conditions, and evaluation delay setting.
-   * The alert URL and the incident URL from the alert history.
-   * The exact date and time of each false positive, including the time zone.
+     * The exact date and time when the alert was expected to fire but did not, including the time zone. 
