@@ -38,7 +38,7 @@ User-level default homepage
     * Incidents
     * LiveTail
 
-To set which specific view opens within the **Explore Logs**, see ee [Managing default views](/docs/cloud-logs?topic=cloud-logs-custom_views_default). 
+To set which specific view opens within the **Explore Logs**, see [Managing default views](/docs/cloud-logs?topic=cloud-logs-custom_views_default). 
 
 Change your time zone settings
 :   You can select if you want times to be displayed in your local time or in Greenwich Mean Time (GMT). GMT is also known as Coordinated Universal Time (UTC).
