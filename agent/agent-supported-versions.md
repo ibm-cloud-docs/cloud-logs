@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-07-14"
+lastupdated: "2026-08-20"
 
 keywords:
 
@@ -24,6 +24,7 @@ The following table lists the agent versions that are supported and the version 
 
 | {{site.data.keyword.agent}}                         | Based on Fluent Bit Version | Helm chart version |
 |-----------------------------------------------------|-----------------------------|--------------------|
+| v1.9.1                                              | [v5.0.6](https://fluentbit.io/announcements/v5.0.6/){: external} | v1.9.1   |
 | v1.9.0                                              | [v5.0.6](https://fluentbit.io/announcements/v5.0.6/){: external} | v1.9.0   |
 | v1.8.1                                              | [v4.2.2](https://fluentbit.io/announcements/v4.2.2/){: external} | v1.8.1   |
 | v1.8.0                                              | [v4.2.2](https://fluentbit.io/announcements/v4.2.2/){: external} | v1.8.0   |

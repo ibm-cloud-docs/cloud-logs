@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-07-14"
+lastupdated: "2026-08-20"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -19,7 +19,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
+## 21 August 2026
+{: #cloud-logs-aug2126}
+{: release-note}
 
+Release of the {{site.data.keyword.agent}} version 1.9.1
+:   For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-aug2126)
 
 ## 13 July 2026
 {: #cloud-logs-jul1326}
@@ -27,6 +32,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 Release of the {{site.data.keyword.agent}} version 1.9.0
 :   For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-jul1326)
+
+
 
 ## 18 June 2026
 {: #cloud-logs-june1826}
