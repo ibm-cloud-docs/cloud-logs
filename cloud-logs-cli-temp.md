@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-31"
+  years:  2024, 2026
+lastupdated: "2026-09-09"
 
 keywords:
 
@@ -119,8 +119,8 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 |---------|-------------|
 | `event-stream-target-create` | Create an {{site.data.keyword.messagehub_full_notm}} integration. |
 | `event-stream-target-delete` | Delete an {{site.data.keyword.messagehub}} integration by ID. |
-| `event-stream-target-update` | Update an {{site.data.keyword.messagehub}} integration. |
-| `event-stream-targets` | List all {{site.data.keyword.messagehub}} integrations.
+| `event-stream-target-update` | Update an {{site.data.keyword.messagehub}} integration. | 
+| `event-stream-targets` | List all {{site.data.keyword.messagehub}} integrations. 
 {: caption="{{site.data.keyword.logs_full_notm}} {{site.data.keyword.messagehub}} integration CLI commands" caption-side="bottom"}
 
 | Command | Description |
@@ -144,7 +144,7 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | Command | Description |
 |---------|-------------|
 | `policies` | Gets policies. |
-| `policy` | Gets a policy by ID. |
+| `policy` | Gets policy by ID. |
 | `policy-create` | Creates a new policy. |
 | `policy-delete` | Deletes an existing policy. |
 | `policy-update` | Updates an existing policy. |
@@ -170,17 +170,26 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `view-create` | Creates a new view. |
 | `view-delete` | Deletes a view by ID. |
 | `view-update` | Replaces an existing view. |
-| `views` | Lists all public views. |
+| `views` | Lists all company public views. |
 {: caption="{{site.data.keyword.logs_full_notm}} view CLI commands" caption-side="bottom"}
 
 | Command | Description |
 |---------|-------------|
-| `view-folder` | Get a view folder. |
-| `view-folder-create` | Create a view folder. |
+| `view-folder` | Get view folder. |
+| `view-folder-create` | Create view folder. |
 | `view-folder-delete` | Deletes a view folder by ID. |
 | `view-folder-update` | Replaces an existing view folder. |
-| `view-folders` | List a view's folders. |
+| `view-folders` | List view's folders. |
 {: caption="{{site.data.keyword.logs_full_notm}} view folder CLI commands" caption-side="bottom"}
+
+| Command | Description |
+|---------|-------------|
+| `extensions` | Gets an extension by ID. |
+| `extension-deployment` | Get deplayment details by an extension. |
+| `extension-deployment-delete` | Delete deployment of an extension. |
+| `extension-deployment-managep` | Deploy or update deployment of an extension. |
+| `extensions` | Get list of extensions. |
+{: caption="{{site.data.keyword.logs_full_notm}} extensions CLI commands" caption-side="bottom"}
 
 | Command | Description |
 |---------|-------------|
