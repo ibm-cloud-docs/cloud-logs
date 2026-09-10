@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-20"
+lastupdated: "2026-09-10"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -19,12 +19,21 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
+
+## 10 September 2026
+{: #cloud-logs-sept1026}
+{: release-note}
+
+Release of the {{site.data.keyword.logs_full_notm}} CLI plugin version 0.6.0, which includes the security remediation for CVE-2024-24790. 
+
+
 ## 21 August 2026
 {: #cloud-logs-aug2126}
 {: release-note}
 
 Release of the {{site.data.keyword.agent}} version 1.9.1
 :   For more information, see the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-aug2126)
+
 
 ## 13 July 2026
 {: #cloud-logs-jul1326}
