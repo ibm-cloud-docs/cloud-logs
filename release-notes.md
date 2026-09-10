@@ -24,7 +24,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #cloud-logs-sept1026}
 {: release-note}
 
-Release of the {{site.data.keyword.logs_full_notm}} version 0.6.0 CLI plugin, which includes security remediation CVE-2024-24790. 
+Release of the {{site.data.keyword.logs_full_notm}} CLI plugin version 0.6.0, which includes the security remediation for CVE-2024-24790. 
 
 
 ## 21 August 2026
