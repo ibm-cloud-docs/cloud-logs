@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-20"
+lastupdated: "2026-09-13"
 
 keywords:
 
@@ -20,6 +20,12 @@ Use these release notes to learn about updates to the {{site.data.keyword.agent}
 {: shortdesc}
 
 
+
+## 14 September 2026
+{: #logs-router-agent-sep1426}
+{: release-note}
+
+Starting with agent version 1.9.2, Ubuntu 20 and Debian 11 based agents will no longer be supported since the operating systems have reached their supported end of life dates.
 
 ## 21 August 2026
 {: #logs-router-agent-aug2126}
