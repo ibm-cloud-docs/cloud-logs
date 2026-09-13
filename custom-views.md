@@ -99,19 +99,28 @@ Complete the following steps to create a custom view:
 
 9. Save your view by clicking the three dots **...**
 
-   1. Enter a name for your view.
+    1. Enter a name for your view.
 
-   2. If you want to save the query and filter values you configured, check **Save query and filters**.
+    2. Check **Save query and filters** to save the query and filter values you configured. When you open the view later, these query and filter values are restored automatically. If this option is not checked, the view opens without any pre-applied query or filter.
 
-   3. If you want your view to be the default view, check **Set as default view**.
+    3. Check **Set as default view** to make this view the default view.
 
         This sets the view as the default for you as the user. It does not set the view as the default view for the entire account.
 
+        A default view opens automatically the next time your navigate to **Explore Logs** without a previously open view.
+
         You can change your default view at any time by opening a different view and checking **Set as default view** while saving.
 
-   4. Set the privacy of your view. Private views can only be seen by you. You can set a view as **Private** or **Public**.
+    4. Set the privacy of your view. Private views can only be seen by you. You can set a view as **Private** or **Public**.
 
         The column configuration, selected view mode (compact or standard), and the existing layout are saved as part of the view. These settings are restored automatically the next time a view is opened.
+
+        **Private views** are visible only to you. Other users cannot see them or open them. Use this setting for personal or experimental views.
+
+       **Public views** are shared and visible to all users of the instance. Use this setting when you want to share a consistent view with your team.
+
+After you save the view, the view is available in the **All Views** list.
+
 
 
 ## Updating the column layout in views in {{site.data.keyword.logs_full_notm}}
@@ -140,35 +149,6 @@ Complete the following steps to edit the columns of an existing view:
 
 The new column layout is saved as part of the view and is applied the next time the view is opened.
 
-## Saving view dialog options in {{site.data.keyword.logs_full_notm}}
-{: #custom_views_save_options}
-
-You can save your view by clicking **...** next to the view name and then click **Save view**.
-
-The **Save view** dialog box contains the following options:
-
-* View name
-
-: Enter a unique name for your view. The name displays in the **All Views** list.
-
-* Save query and filters
-
-: Check this option to save the current query and filter values. When you open the view later, these query and filter values are restored automatically.
-
-If this option is not checked, the view opens without any pre-applied query or filter.
-
-* Set as default view
-
-: Check this option to make this view your default view. Your default view opens automatically the next time your navigate to **Explore Logs** without a previously open view.
-
-You can update your default view at any time by opening a different view and selecting **Set as default view** when saving.
-
-Privacy
-   :   Controls who can see and open the view.
-
-       **Private views** are visible only to you. Other users cannot see or open it. Use this setting for personal or experimental views.
-
-       **Public views** are shared and visible to all users of the instance. Use this setting when you want to share a consistent view with your team.
 
 
 ## Creating folders in {{site.data.keyword.logs_full_notm}}
