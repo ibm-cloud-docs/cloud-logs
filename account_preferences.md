@@ -65,7 +65,7 @@ You can change any of the following preferences in an {{site.data.keyword.logs_f
 
     
 
-## How can I change the default view in the Explorer Logs that is launched by default when a user logs into an {{site.data.keyword.logs_full_notm}} instance?
+## How can I change the default view in the Explorer Logs that is launched by default when a user logs into an {{site.data.keyword.logs_full_notm}} instance
 {: #account_preferences_faq1}
 
 Account preferences apply to user sessions across all views and pages.
