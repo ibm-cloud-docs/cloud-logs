@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-09-13"
 
 keywords: 
 
@@ -38,14 +38,14 @@ Some issues that can cause alerts to not be sent include:
 To resolve your alerting issues, you need to determine the cause of the problem, and then make the appropriate changes to your environment.
 {: tsResolve}
 
-## Are alert notifications sent when the triggering condition queries data from the {{site.data.keyword.compliance}} pipeline?
+## Are alerted logs sent to the {{site.data.keyword.compliance}} pipeline?
 {: #ts-alert-wrong-pipeline}
 {: troubleshoot}
 
 
 If the logs where you are expecting alerts are being sent to the [{{site.data.keyword.compliance}} TCO pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer), then alerts are never sent on those logs. Alerts are only sent on logs in the {{site.data.keyword.frequent-search}} and {{site.data.keyword.monitoring}} pipelines.
 
-If you need to alert on logs in the {{site.data.keyword.compliance}} pipeline, reconfigure your TCO pipelines so the logs flow to either the {{site.data.keyword.frequent-search}} or {{site.data.keyword.monitoring}} pipeline.
+If you need to alert on these logs, reconfigure your TCO pipelines so the logs flow to either the {{site.data.keyword.frequent-search}} or {{site.data.keyword.monitoring}} pipeline.
 
 You can determine the pipeline where the log is being sent by using a DataPrime query in the {{site.data.keyword.logs_full_notm}} UI logs view:
 
@@ -103,6 +103,8 @@ Review your alert configuration for errors such as:
 
 * Are you using parentheses in your query to determine [operator precedence](/docs/cloud-logs?topic=cloud-logs-query-data-lucene#lucene-operators)? Are your parentheses correctly coded?
 
+
+
 For more information, see [Configuring alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-alerts-config). 
 
 ## Is {{site.data.keyword.en_full_notm}} correctly configured?
@@ -123,7 +125,8 @@ Follow the below checks to identify and resolve the issue
 
 1. Does the alert query fire when rewritten as `.keyword` regex?
 
-    Rewrite the alert query in the following form: 
+Rewrite the alert query in the following form: 
+
 
    ```text
    field.keyword:/.*value.*/
@@ -132,7 +135,7 @@ Follow the below checks to identify and resolve the issue
 
    The `.keyword` sub-field stores the raw, un-tokenized value and bypasses the Lucene analyzer entirely, which produces consistent and predictable results in the alert engine. The `.*` anchors on both sides match any field value that contains the specified text.
 
-    If the rewritten query now matches the expected logs, replace the original query with the `.keyword` form and save the alert.
+If the rewritten query now matches the expected logs, replace the original query with the `.keyword` form and save the alert.
 
 2. Are string values quoted and special characters escaped?
 
@@ -160,7 +163,9 @@ Follow the below checks to identify and resolve the issue
    
    After you save a change to an alert, allow up to 15 minutes for the alert engine to apply the updated configuration. The alert engine continues to evaluate logs against the previous query until the update is active. Testing the alert immediately after saving a change can produce misleading results.
 
-7. If you have verified all of the preceding checks and the alert still does not fire, collect the following information and contact {{site.data.keyword.cloud_notm}} support:
+7. If the alert still does not fire
+   
+   If you have verified all of the preceding checks and the alert still does not fire, collect the following information and contact {{site.data.keyword.cloud_notm}} support:
 
      * A raw sample of a log that you expect to trigger the alert, including all field names and values.
      * The full alert definition, including the query, conditions, and notification settings.

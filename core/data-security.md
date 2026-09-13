@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025, 2025
-lastupdated: "2025-06-12"
+  years:  2025, 2026
+lastupdated: "2026-09-13"
 
 keywords:
 
@@ -48,13 +48,7 @@ If the data must be protected by a customer-managed encryption, then [TCO polici
 
 Log data managed in an {{site.data.keyword.cos_full}} (COS) bucket supports the bring your own key method or keep your own key method, allowing you to meet the data control requirements if you need this level of assurance. For more information, see [Data security](/docs/cloud-object-storage?topic=cloud-object-storage-security).
 
-Two key management options often selected are:
-
-* [Key Protect](/docs/key-protect) – a full-service encryption solution that allows data to be secured and stored in {{site.data.keyword.cloud_notm}} using the latest encryption techniques that leverages FIPS 140-2 Level 3 certified cloud-based hardware security modules.
-
-* [Hyper Protect Crypto Services](/docs/hs-crypto) – a dedicated key management services and hardware security module (HSM) based on {{site.data.keyword.cloud_notm}}.
-
-Follow {{site.data.keyword.cos_full}} (COS) bucket configuration guidance from each of these services’ configuration.  No unique {{site.data.keyword.logs_full_notm}} configuration is required beyond connecting your {{site.data.keyword.logs_full_notm}} instance to a COS bucket.
+Follow {{site.data.keyword.cos_full}} (COS) bucket configuration guidance.
 
 ## Deleting your data in {{site.data.keyword.logs_full_notm}}
 {: #data-delete}

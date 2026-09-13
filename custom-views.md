@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-10"
+lastupdated: "2026-09-13"
 
 keywords:
 
@@ -71,11 +71,15 @@ Complete the following steps to create a custom view:
 
 2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
 
-3. Select the fields to be included in the view. By default you can select *Applications*, *Subsystems*, and log *Severities*.
+3. Select filters to define the data that is displayed through the view. By default you can select *Applications*, *Subsystems*, and log *Severities*.
 
 4. (Optional) Add additional filters click **+ Add Filter** and select and configure additional field and filter values.
 
-5. Select if you want to view only include **Priority Logs** (those in the {{site.data.keyword.frequent-search}} pipeline) or **All Logs**, that is, logs that are stored in {{site.data.keyword.cos_full_notm}}. Logs in {{site.data.keyword.cos_full_notm}} includes logs collected through all the data pipelines.
+5. Select what logs you want to view.
+
+    Choose **Priority Insights** to view logs ingested through the {{site.data.keyword.frequent-search}} pipeline.
+
+    Choose **All Logs** to view logs that are stored in the {{site.data.keyword.cos_full_notm}} data bucket. Logs in {{site.data.keyword.cos_full_notm}} includes logs collected through all the data pipelines.
 
 6. (Optional) Add a Lucene or DataPrime query to further filter your data.
 

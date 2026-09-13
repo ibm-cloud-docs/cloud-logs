@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-26"
+  years:  2024, 2026
+lastupdated: "2026-09-13"
 
 keywords:
 
@@ -34,7 +34,7 @@ To obtain your token by using the IBM Cloud CLI, complete the following steps:
 
 2. Run the following command:
 
-    ```
+    ```sh
     ibmcloud iam oauth-tokens
     ```
     {: codeblock}
