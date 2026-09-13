@@ -19,8 +19,10 @@ In {{site.data.keyword.logs_full}}, you can use custom views to monitor logs tha
 {: shortdesc}
 
 
-## About views
+## About views in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_ov}
+
+Consider the following information when working with views in {{site.data.keyword.logs_full_notm}}:
 
 - Views can be public or private.
 
@@ -34,7 +36,11 @@ In {{site.data.keyword.logs_full}}, you can use custom views to monitor logs tha
 
 - Views can be grouped into folders. The folder order cannot be changed.
 
-- View names must be unique within a folder. 
+- View names must be unique within a folder.
+
+- Each user can configure per {{site.data.keyword.logs_full_notm}} instance a custom view as their default view.
+
+    The user's default view opens automatically when the user launches **Explore Logs**.
 
 - The following preferences are saved within saved views. They are restored automatically the next time you open a view:
 
@@ -46,8 +52,10 @@ In {{site.data.keyword.logs_full}}, you can use custom views to monitor logs tha
 
     Time interval: The time range you selected at the time you save is stored with the view and applied when the view is opened.
 
+- You must have {{site.data.keyword.iamlong}} permissions to work with private and public views in an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Granting permissions to work with views](/docs/cloud-logs?topic=cloud-logs-iam-views).
 
-## Launching views
+
+## Launching views in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_launch}
 
 Complete the following steps to see all views:
@@ -56,10 +64,12 @@ Complete the following steps to see all views:
 
 2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs").
 
-3. Click **Logs**. 
+3. Click **Logs**.
+
+    The last view you had opened will be displayed. If no view was previously open, the default view will be displayed. If you have not set a default view, the instance-level default view configuration is displayed.
 
 
-## Creating a custom view
+## Creating a custom view in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_create}
 
 To configure a custom view, you can define a query, filter by selected fields, or both.
@@ -95,7 +105,7 @@ Complete the following steps to create a custom view:
 
    3. If you want your view to be the default view, check **Set as default view**.
 
-        This sets the view as the default for you as the user. It does not set the view as the default view for the entire account. 
+        This sets the view as the default for you as the user. It does not set the view as the default view for the entire account.
 
         You can change your default view at any time by opening a different view and checking **Set as default view** while saving.
 
@@ -104,7 +114,7 @@ Complete the following steps to create a custom view:
         The column configuration, selected view mode (compact or standard), and the existing layout are saved as part of the view. These settings are restored automatically the next time a view is opened.
 
 
-## Editing existing views columns
+## Updating the column layout in views in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_update}
 
 You can update the column layout of any saved view. The column configurations are saved as part of the view.
@@ -128,10 +138,40 @@ Complete the following steps to edit the columns of an existing view:
 7. Save the updated column layout by clicking the three dots **...** next to the view name. Select **Save query and filters**. Then, click **Save**.
 
 
-The new column layout is saved as part of the view and is applied the next time the view is opened. 
+The new column layout is saved as part of the view and is applied the next time the view is opened.
+
+## Saving view dialog options in {{site.data.keyword.logs_full_notm}}
+{: #custom_views_save_options}
+
+You can save your view by clicking **...** next to the view name and then click **Save view**.
+
+The **Save view** dialog box contains the following options:
+
+* View name
+
+: Enter a unique name for your view. The name displays in the **All Views** list.
+
+* Save query and filters
+
+: Check this option to save the current query and filter values. When you open the view later, these query and filter values are restored automatically.
+
+If this option is not checked, the view opens without any pre-applied query or filter.
+
+* Set as default view
+
+: Check this option to make this view your default view. Your default view opens automatically the next time your navigate to **Explore Logs** without a previously open view.
+
+You can update your default view at any time by opening a different view and selecting **Set as default view** when saving.
+
+Privacy
+   :   Controls who can see and open the view.
+
+       **Private views** are visible only to you. Other users cannot see or open it. Use this setting for personal or experimental views.
+
+       **Public views** are shared and visible to all users of the instance. Use this setting when you want to share a consistent view with your team.
 
 
-## Creating folders
+## Creating folders in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_folders_create}
 
 The order of the folders cannot be changed.
@@ -148,14 +188,14 @@ Complete the following steps to create a folder and add saved views to the folde
 4. To create a new folder, click the folder icon. Enter a folder name, and click **Create**.
 
 
-## Orginizing views in folders
+## Orginizing views in folders in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_folders_views}
 
 After you create 1 or more view folders, you can orginize views to folders by dragging them to the folder.
 
 
 
-## Deleting views
+## Deleting views in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_delete}
 
 Complete the following steps to delete a view:
@@ -173,7 +213,7 @@ Complete the following steps to delete a view:
 6. Confirm that you want to delete the view by clicking **Delete**.
 
 
-## Deleting folders
+## Deleting folders in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_folder_delete}
 
 Folders must be empty before a folder can be deleted.
