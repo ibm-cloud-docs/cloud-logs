@@ -120,8 +120,8 @@ The number of logs lines that are returned by a query is the smaller of:
     The TIER_ARCHIVE hard limit is 50,000 log lines for archive queries and 1,000,000 log lines for backgroubd archive queries.
 
 
-To control the number of results that are returned by a query, you can refine the query by applying filters and reducing the timerange.
-{: tip}
+To control the number of results that are returned by a query, you can refine the query by applying filters and reducing the timerange. For more information, see [Refining query results](/docs/cloud-logs?topic=cloud-logs-query-refine).
+
 
 
 ## Partial data when Shuffle limit is reached

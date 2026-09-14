@@ -208,7 +208,7 @@ toc:
           label: Querying logs
           topics:
           - topic: query-about.md
-            navtitle: Running queries
+            navtitle: About running queries
           - topic: query-data-ui-explorer.md
             navtitle: Querying data through Explorer
           - topic: query-data-ui-archive.md
