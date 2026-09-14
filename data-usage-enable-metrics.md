@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-09-14"
 
 keywords:
 
@@ -26,12 +26,12 @@ In {{site.data.keyword.logs_full_notm}}, you can enable data usage metrics to co
 To configure this feature, you must attach a metrics bucket to your {{site.data.keyword.logs_full_notm}} instance. For more information, see [Configuring the metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
 {: attention}
 
-## System metrics
+## System metrics in an {{site.data.keyword.logs_full_notm}} instance
 {: #data-usage-enable-metrics-1}
 
 The following metrics are generated when you enable Data Usage metrics:
 - `cx_data_usage_bytes_total`: Tracks your total data usage in bytes.
-- `cx_alerts`: Reports data when an alert is triggered or resolved.
+- `cx_alerts`: Aggregate data when an alert is triggered or resolved into a gauge-type metric.
 
 
 The information gathered on the new metrics includes the following labels:
@@ -49,7 +49,7 @@ The information gathered on the new metrics includes the following labels:
 
 
 
-## Enabling Data Usage metrics
+## Enabling Data Usage metrics in an {{site.data.keyword.logs_full_notm}} instance
 {: #data-usage-enable-metrics-data-usage}
 
 Complete the following steps to enable collection of the Data Usage metric `cx_data_usage_bytes_total`:
@@ -73,10 +73,10 @@ After you enable data usage metrics, it can take up to two hours to see metrics.
 {: note}
 
 
-## Enabling the alerts metric
+## Enabling the cx_metrics metric in an {{site.data.keyword.logs_full_notm}} instance
 {: #data-usage-enable-metrics-alerts}
 
-Complete the following steps:
+Complete the following steps to enable the alerts metric `cx_metrics` in an {{site.data.keyword.logs_full_notm}} instance:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 

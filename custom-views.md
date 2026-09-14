@@ -52,6 +52,8 @@ Consider the following information when working with views in {{site.data.keywor
 
     Time interval: The time range you selected at the time you save is stored with the view and applied when the view is opened.
 
+- When you save a view, Tte column configuration, the selected view mode (compact or standard), and the existing layout are saved as part of the view. These settings are restored automatically the next time a view is opened.
+
 - You must have {{site.data.keyword.iamlong}} permissions to work with private and public views in an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Granting permissions to work with views](/docs/cloud-logs?topic=cloud-logs-iam-views).
 
 
@@ -74,6 +76,8 @@ Complete the following steps to see all views in {{site.data.keyword.logs_full_n
 
 To configure a custom view in {{site.data.keyword.logs_full_notm}}, you can define a query, filter by selected fields, or both.
 {: note}
+
+
 
 Complete the following steps to create a custom view in {{site.data.keyword.logs_full_notm}}:
 
@@ -113,14 +117,11 @@ Complete the following steps to create a custom view in {{site.data.keyword.logs
 
     4. Set the privacy of your view. Private views can only be seen by you. You can set a view as **Private** or **Public**.
 
-        The column configuration, selected view mode (compact or standard), and the existing layout are saved as part of the view. These settings are restored automatically the next time a view is opened.
-
         **Private views** are visible only to you. Other users cannot see them or open them. Use this setting for personal or experimental views.
 
        **Public views** are shared and visible to all users of the instance. Use this setting when you want to share a consistent view with your team.
 
 After you save the view, the view is available in the **All Views** list.
-
 
 
 ## Updating the column layout in views in {{site.data.keyword.logs_full_notm}}
