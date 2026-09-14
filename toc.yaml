@@ -226,6 +226,8 @@ toc:
       - topicgroup:
           label: Building queries
           topics:
+          - topic: query-refine.md
+            navtitle: Refining a query
           - topic: query-data-lucene.md
             navtitle: Querying data by using Lucene
           - topic: query-data-dataprime.md

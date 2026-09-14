@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-09-14"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Querying data through the Explorer Logs UI
+# Querying data through the Explorer Logs UI in {{site.data.keyword.logs_full_notm}}
 {: #query-data-ui-explorer}
 
 In {{site.data.keyword.logs_full_notm}}, you can query data through the *Explorer Logs* page.

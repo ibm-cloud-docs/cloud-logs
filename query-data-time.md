@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-02-08"
+  years:  2024, 2026
+lastupdated: "2026-09-14"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-# Viewing log data by time interval
+# Viewing log data by time interval in {{site.data.keyword.logs_full_notm}}
 {: #query-data-time}
 
 The log data displayed by {{site.data.keyword.logs_full_notm}} can be filtered by a specific time interval.
@@ -52,4 +52,3 @@ By default the **last 15 minutes** of data is displayed. You can change the time
 
 
 {{site.data.content.save-view}}
-

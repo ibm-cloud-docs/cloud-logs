@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-10"
+lastupdated: "2026-09-14"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-# Querying data by using Lucene
+# Querying data by using Lucene in {{site.data.keyword.logs_full_notm}}
 {: #query-data-lucene}
 
 {{site.data.keyword.logs_full_notm}} log data can be searched using Lucene or DataPrime. For information on querying with DataPrime, see [Querying data by using DataPrime](/docs/cloud-logs?topic=cloud-logs-query-data-dataprime).
