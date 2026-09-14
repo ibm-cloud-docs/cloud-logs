@@ -32,7 +32,7 @@ In {{site.data.keyword.logs_full_notm}}, you aggregate data by using the Query B
 
 - *Global Aggregation method*: Use this method to compute totals, averages, minimums, maximums, or counts as a single group using the aggregate command. For more information, see [DataPrime aggregation expressions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-expressions-agg).
 
-- *Grouping Data method*: Use this method to split data into distinct categories or shared values using the groupby command to calculate metrics per group. For more information, see [Gorup by](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#groupby).
+- *Grouping Data method*: Use this method to split data into distinct categories or shared values using the groupby command to calculate metrics per group. For more information, see [Group by](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#groupby).
 
 - *Multi-Grouping method*: Use this method to combine multiple grouping statements or concatenate queries using multigroupby for efficient single-scan execution. For more information, see [multigroupby](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#multigroupby).
 

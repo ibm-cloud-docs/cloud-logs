@@ -15,10 +15,8 @@ subcollection: cloud-logs
 # Querying data by using DataPrime in {{site.data.keyword.logs_full_notm}}
 {: #query-data-dataprime}
 
-In {{site.data.keyword.logs_full_notm}}, you can search log data by using DataPrime.
+In {{site.data.keyword.logs_full_notm}}, you can search log data by using DataPrime. Dataprime is an advanced query language that filters, transforms, and aggregates data by using commands that are combined by using the pipe (`|`) operator and applied sequentially.
 {: shortdesc}
-
-Dataprime is an advanced query language that filters, transforms, and aggregates data by using commands that are combined by using the pipe (`|`) operator and applied sequentially.
 
 Use Dataprime queries to filter, transform, and aggregate data by using commands that help you manipulate log records with a language that offers full expression support similar to programming languages.
 
@@ -66,7 +64,7 @@ Complete the following steps to run a query in the *Logs* page in {{site.data.ke
 
     By default, **Priority Insights** is selected.
 
-    If you want to explore data from the COS bucket, click **Archive**.
+    If you want to explore data from the COS bucket, click **All Logs**.
 
 3. In the query section, select **</> DataPrime** to specify your search to be a DataPrime query.
 
