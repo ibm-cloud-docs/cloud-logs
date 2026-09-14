@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-09-14"
 
 keywords:
 
@@ -58,7 +58,7 @@ Consider the following information when working with views in {{site.data.keywor
 ## Launching views in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_launch}
 
-Complete the following steps to see all views:
+Complete the following steps to see all views in {{site.data.keyword.logs_full_notm}}:
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
@@ -72,10 +72,10 @@ Complete the following steps to see all views:
 ## Creating a custom view in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_create}
 
-To configure a custom view, you can define a query, filter by selected fields, or both.
+To configure a custom view in {{site.data.keyword.logs_full_notm}}, you can define a query, filter by selected fields, or both.
 {: note}
 
-Complete the following steps to create a custom view:
+Complete the following steps to create a custom view in {{site.data.keyword.logs_full_notm}}:
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
@@ -126,9 +126,9 @@ After you save the view, the view is available in the **All Views** list.
 ## Updating the column layout in views in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_update}
 
-You can update the column layout of any saved view. The column configurations are saved as part of the view.
+You can update the column layout of any saved view in {{site.data.keyword.logs_full_notm}}. The column configurations are saved as part of the view.
 
-Complete the following steps to edit the columns of an existing view:
+Complete the following steps to edit the columns of an existing view in {{site.data.keyword.logs_full_notm}}:
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
@@ -154,10 +154,10 @@ The new column layout is saved as part of the view and is applied the next time 
 ## Creating folders in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_folders_create}
 
-The order of the folders cannot be changed.
+The order of the folders cannot be changed in {{site.data.keyword.logs_full_notm}}.
 {: note}
 
-Complete the following steps to create a folder and add saved views to the folder:
+Complete the following steps to create a folder and add saved views to the folder in {{site.data.keyword.logs_full_notm}}:
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
@@ -178,7 +178,7 @@ After you create 1 or more view folders, you can orginize views to folders by dr
 ## Deleting views in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_delete}
 
-Complete the following steps to delete a view:
+Complete the following steps to delete a view in {{site.data.keyword.logs_full_notm}}:
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
@@ -199,7 +199,7 @@ Complete the following steps to delete a view:
 Folders must be empty before a folder can be deleted.
 {: note}
 
-Complete the following steps to delete a folder:
+Complete the following steps to delete a folder in {{site.data.keyword.logs_full_notm}}:
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
