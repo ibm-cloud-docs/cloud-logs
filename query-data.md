@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-09-15"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-#  Querying data
+#  Querying data in {{site.data.keyword.logs_full_notm}}
 {: #query-data}
 
 In {{site.data.keyword.logs_full_notm}}, you can query log data by using Lucene queries, DataPrime queries, or by querying directly data from an {{site.data.keyword.cos_full_notm}} (COS) bucket. You can also apply filters to your queries.
@@ -154,22 +154,6 @@ The `query` command is limited to returning 50K log lines.
 ## Refining query results (recommendations building queries)
 {: #query-data-refine-query}
 
-You can refine your query results using the following methods:
+In {{site.data.keyword.logs_full}}, you can refine a query by adding filters, narrowing timeframes, using dynamic variables, creating parsing rules, and using exact matches.
 
-- Reduce the time range of the query.
-
-- Apply more filters to your queries, in addition to application, subsystem or severity.
-
-- In [DataPrime](/docs/cloud-logs?group=dataprime),
-
-    Switch from using the contains operator on strings to the free text search operator (`~`).
-
-    If using the DataPrime [extract](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#extract) operator and subsequently filtering its results, create a parsing rule and filter on the parsed field instead.
-
-    Decrease the number of joins in a query.
-
-    Use the `limit` clause in your search query. For example, `source logs | limit 500`.
-
-    When you run the query via API or CLI, you can also limit the number of results setting the `limit` parameter in `metadata` for the request.
-
-- Avoid regular expressions or wildcards in filters.
+For more information, see [Refining query results in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-query-refine).

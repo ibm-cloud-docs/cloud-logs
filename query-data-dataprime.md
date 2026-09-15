@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-14"
+lastupdated: "2026-09-15"
 
 keywords:
 
@@ -41,15 +41,37 @@ You can also define Dataprime queries across multiple lines:
 
 ```text
 source logs |
-operator1 .... |
-operator2 .... |
-operator3 ....
+operator1 expression |
+operator2 expression |
+operator3 expression
 ```
 {: codeblock}
 
-Operators are commands that transform unstructured streams of JSON data to create a new stream for a specified time period. Examples include: `filter`, `extract`, `sortby`, `groupby`, `orderby`, `find`, and `choose`.
+Expressions such as `filter status_code == 403` compute or compare any value. Every expression must return a result, like a string, number, boolean, timestamp, or array.
 
-For more information about DataPrime operators, see the [DataPrime operators](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators).
+Operators are commands that transform unstructured streams of JSON data to create a new stream for a specified time period. Examples include: `filter`, `extract`, `sortby`, `groupby`, `orderby`, `find`, and `choose`. For more information about DataPrime operators, see the [DataPrime operators](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators).
+
+Functions in DataPrime queries transform, compute, and manipulate telemetry data at the field level. For more information, see:
+- [DataPrime general functions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-expressions-gral-func)
+- [DataPrime number functions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-number-func)
+- [DataPrime: URL decoding / encoding](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-url-func)
+- [DataPrime string functions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-str-func)
+- [DataPrime array functions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-array)
+- [DataPrime IP functions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-ip-func)
+- [DataPrime UUID functions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-uuid-func)
+- [DataPrime date / time functions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-date-time-func)
+- [DataPrime encoding / decoding functions](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-encode-func)
+
+Commands must be in the correct order. For example, the `create` command must be set before the `filter` command if you're filtering on a derived field.
+
+Use a command when transforming the shape, size, or structure of your dataset.
+{: tip}
+
+Use a function when transforming, computing or manipulating individual field values.
+{: tip}
+
+Type mismatches can break filters or aggregations. Use the `convert` command or inline casting to set the expected type. Inline casting is performed using a colon suffix syntax (`:type`) directly on fields or expressions, for example, `filter status_code:number > 403`.
+
 
 ## Running a Dataprime query in the Logs page in {{site.data.keyword.logs_full_notm}}
 {: #query-data-dataprime-ui}
