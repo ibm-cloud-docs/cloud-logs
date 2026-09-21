@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-10"
+lastupdated: "2026-09-21"
 
 keywords:
 
@@ -12,10 +12,10 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Locations
+# Supported {{site.data.keyword.cloud_notm}} locations for the {{site.data.keyword.logs_full_notm}} service
 {: #regions}
 
-{{site.data.keyword.logs_full}} is available in the following locations:
+Discover the {{site.data.keyword.cloud_notm}} locations for the {{site.data.keyword.logs_full_notm}} service that are supported.
 {: shortdesc}
 
 
