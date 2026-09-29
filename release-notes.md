@@ -22,6 +22,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
+
 ## 10 September 2026
 {: #cloud-logs-sept1026}
 {: release-note}
