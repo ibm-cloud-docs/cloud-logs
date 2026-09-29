@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-09"
+lastupdated: "2026-09-29"
 
 keywords:
 
@@ -12,57 +12,61 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.logs_full_notm}} CLI
+# Working with the {{site.data.keyword.logs_full_notm}} CLI
 {: #cloud-logs-cli-temp}
 
 You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to manage your {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
 ## Prerequisites
-{: #logs-cli-prereq-temp}
+{: #cloud-logs-cli-temp-prereq}
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
-* Install the {{site.data.keyword.logs_full_notm}} CLI plug-in by running the following command:
 
-   ```text
-   ibmcloud plugin install logs
-   ```
-   {: pre}
+## Installing the {{site.data.keyword.logs_full_notm}} CLI Plugin
+{: #cloud-logs-cli-temp-install}
 
-   You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
-   {: tip}
+Install the {{site.data.keyword.logs_full_notm}} CLI plug-in by running the following command:
 
-* To target the {{site.data.keyword.logs_full_notm}} instance, use one of the following options.
+```text
+ibmcloud plugin install logs
+```
+{: pre}
 
-   Option 1: Run the `ibmcloud logs config set` command.
+You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
+{: tip}
 
-   ```text
-   ibmcloud logs config set service-url https://{API_endpoint}
-   ```
-   {: pre}
+## Setting the {{site.data.keyword.logs_full_notm}} instance
+{: #cloud-logs-cli-temp-context}
+
+To target the {{site.data.keyword.logs_full_notm}} instance by using a CLI command, use one of the following options:
+
+- Option 1: Run the `ibmcloud logs config set` command.
+
+    ```text
+    ibmcloud logs config set service-url https://{API_endpoint}
+    ```
+    {: pre}
 
 
-   Option 2: Export an environment variable with your {{site.data.keyword.logs_full_notm}} service endpoint URL.
+- Option 2: Export an environment variable with your {{site.data.keyword.logs_full_notm}} service endpoint URL.
 
-   ```text
-   export LOGS_URL=https://{API_endpoint}
-   ```
-   {: pre}
+    ```text
+    export LOGS_URL=https://{API_endpoint}
+    ```
+    {: pre}
 
-   Option 3: Set the service endpoint in the command.
+- Option 3: Set the service endpoint in the command.
 
-   ```text
-   ibmcloud logs --service-url https://{API_endpoint}
-   ```
-   {: pre}
+    ```text
+    ibmcloud logs --service-url https://{API_endpoint}
+    ```
+    {: pre}
 
-   Replace `{API_endpoint}` with the API endpoint that is specific to your instance. The API endpoint information can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
+    Replace `{API_endpoint}` with the API endpoint that is specific to your instance. The API endpoint information can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
 
 ## Commands
-{: #cl-commands}
-
-The currently supported version of the {{site.data.keyword.logs_full_notm}} CLI is 0.3.0. If any other version is installed, uninstall the plug-in that is installed and install the current {{site.data.keyword.logs_full_notm}} CLI plug-in.
-{: important}
+{: #cloud-logs-cli-temp-cl-commands}
 
 Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.keyword.logs_full_notm}} CLI commands.
 {: tip}
@@ -119,8 +123,8 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 |---------|-------------|
 | `event-stream-target-create` | Create an {{site.data.keyword.messagehub_full_notm}} integration. |
 | `event-stream-target-delete` | Delete an {{site.data.keyword.messagehub}} integration by ID. |
-| `event-stream-target-update` | Update an {{site.data.keyword.messagehub}} integration. | 
-| `event-stream-targets` | List all {{site.data.keyword.messagehub}} integrations. 
+| `event-stream-target-update` | Update an {{site.data.keyword.messagehub}} integration. |
+| `event-stream-targets` | List all {{site.data.keyword.messagehub}} integrations.
 {: caption="{{site.data.keyword.logs_full_notm}} {{site.data.keyword.messagehub}} integration CLI commands" caption-side="bottom"}
 
 | Command | Description |
@@ -193,8 +197,9 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 
 | Command | Description |
 |---------|-------------|
-| `config` | Control the persistent configuration. | 
+| `config` | Control the persistent configuration. |
 | `help` | Show help information. |
 {: caption="{{site.data.keyword.logs_full_notm}} additional CLI commands" caption-side="bottom"}
 
 For more information about using these commands, log in to the {{site.data.keyword.cloud_notm}} and run `ibmcloud logs command_name -h`. For example, `ibmcloud logs views -h`.
+{: note}

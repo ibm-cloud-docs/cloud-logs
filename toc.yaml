@@ -207,8 +207,6 @@ toc:
       - topicgroup:
           label: Querying logs
           topics:
-          - topic: query-about.md
-            navtitle: About running queries
           - topic: query-data-ui-explorer.md
             navtitle: Querying data through Explorer
           - topic: query-data-ui-archive.md
@@ -617,6 +615,8 @@ toc:
           label: CLI Reference
           topics:
           - topic: cloud-logs-cli-temp.md
+            navtitle: Working with the IBM Cloud Logs CLI
+          - topic: cloud-logs-cli.md
             navtitle: CLI Reference
       - topicgroup:
           label: Terraform Reference

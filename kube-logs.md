@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-04-28"
+  years:  2024, 2026
+lastupdated: "2026-09-29"
 
 keywords:
 
@@ -81,10 +81,10 @@ Connect to your {{site.data.keyword.containerlong_notm}} cluster. Connecting to 
    ```
    {: pre}
 
-4. Connect to your cluster. Replace `<cluster_name>` with the name of your cluster.
+4. Connect to your cluster. Replace `CLUSTER_NAME` with the name of your cluster.
 
    ```text
-   ibmcloud ks cluster config --cluster <cluster_name>
+   ibmcloud ks cluster config --cluster CLUSTER_NAME
    ```
    {: pre}
 
