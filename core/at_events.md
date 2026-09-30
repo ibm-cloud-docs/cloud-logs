@@ -381,6 +381,6 @@ The following table lists the query events that are archived by {{site.data.keyw
 |---------------------------------------------------|----------------------------|
 | `logs.archive-queries.read` | 	Reading archive query results |
 | `logs.archive-queries-status.get` |	Getting the status of a background archive query |
-{: caption="Events for archive querys" caption-side="top"} 
+{: caption="Events for archive query" caption-side="top"} 
 
 </stage>
