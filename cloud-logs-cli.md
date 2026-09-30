@@ -25,16 +25,8 @@ You can use the {{site.data.keyword.cloud_notm}} command-line interface (CLI) to
 
 
 
-## Config
-{: #cloud-logs-cli-config-command}
 
-Global parameters can also be stored in persistent configuration so that they do not need to be manually specified each time the plug-in is invoked. Each parameter can be configured with the `config` command and its subcommands.
-
-```sh
-ibmcloud cloud-logs config
-```
-
-### `ibmcloud cloud-logs config set`
+## `ibmcloud cloud-logs config set`
 {: #cloud-logs-cli-config-set-command}
 
 Set a new config value for a specific option. Each subcommand of the `set` command maps to a global option. Each subcommand accepts a single argument, the string representation of the value to store for the option.
@@ -43,16 +35,24 @@ Set a new config value for a specific option. Each subcommand of the `set` comma
 ibmcloud cloud-logs config set <option> <value>
 ```
 
-#### Examples
+### Command options
+{: #cloud-logs-cli-config-set-command-options}
+
+`--service-url` (strfmt.UUID)
+:   The URL of the {{site.data.keyword.logs_full_notm}} instance. For more information, see [Service API endpoints](docs/cloud-logs?topic=cloud-logs-endpoints_api).
+
+The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
+
+
+### Examples
 {: #cloud-logs-config-set-command-examples}
 
 ```sh
-ibmcloud cloud-logs config set service-url \
-    'https://cloud.ibm.com/my-api'
+ibmcloud cloud-logs config set service-url 'https://aaaaaaaa-0000-0000-0000-aaaaaaaaaaaa.api.eu-es.logs.cloud.ibm.com'
 ```
 {: pre}
 
-### `ibmcloud cloud-logs config get`
+## `ibmcloud cloud-logs config get`
 {: #cloud-logs-cli-config-get-command}
 
 Print out the currently set value for a specific option. Each subcommand of the `get` command maps to a global option.
@@ -61,7 +61,7 @@ Print out the currently set value for a specific option. Each subcommand of the 
 ibmcloud cloud-logs config get <option>
 ```
 
-#### Examples
+### Examples
 {: #cloud-logs-config-get-command-examples}
 
 ```sh
@@ -69,7 +69,7 @@ ibmcloud cloud-logs config get service-url
 ```
 {: pre}
 
-### `ibmcloud cloud-logs config unset`
+## `ibmcloud cloud-logs config unset`
 {: #cloud-logs-cli-config-unset-command}
 
 Unset the currently set value for a specific option. Each subcommand of the `unset` command maps to a global option.
@@ -80,7 +80,7 @@ The subcommands available for this service are: `service-url`, .
 ibmcloud cloud-logs config unset <option>
 ```
 
-#### Examples
+### Examples
 {: #cloud-logs-config-unset-command-examples}
 
 ```sh
@@ -88,7 +88,7 @@ ibmcloud cloud-logs config unset service-url
 ```
 {: pre}
 
-### `ibmcloud cloud-logs config list`
+## `ibmcloud cloud-logs config list`
 {: #cloud-logs-cli-config-list-command}
 
 List out all of the currently set config values.
@@ -97,7 +97,7 @@ List out all of the currently set config values.
 ibmcloud cloud-logs config list
 ```
 
-#### Examples
+### Examples
 {: #cloud-logs-config-list-command-examples}
 
 ```sh
@@ -110,7 +110,7 @@ ibmcloud cloud-logs config list
 
 Create and manage alert definitions.
 
-### `ibmcloud cloud-logs alert-definition`
+## `ibmcloud cloud-logs alert-definition`
 {: #cloud-logs-cli-command}
 
 Get details of an existing alert by using the alert ID.
@@ -120,7 +120,7 @@ ibmcloud cloud-logs alert-definition --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-cli-options}
 
 `--id` (strfmt.UUID)
@@ -128,7 +128,7 @@ ibmcloud cloud-logs alert-definition --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-examples}
 
 ```sh
@@ -137,7 +137,7 @@ ibmcloud cloud-logs alert-definition \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -155,7 +155,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs alert-definition-update`
+## `ibmcloud cloud-logs alert-definition-update`
 {: #cloud-logs-cli-alert-definition-update-command}
 
 Update an alert definition.
@@ -165,7 +165,7 @@ ibmcloud cloud-logs alert-definition-update --id ID [--prototype PROTOTYPE | --n
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-alert-definition-update-cli-options}
 
 `--id` (strfmt.UUID)
@@ -282,7 +282,7 @@ ibmcloud cloud-logs alert-definition-update --id ID [--prototype PROTOTYPE | --n
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--logs-unique-count=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-alert-definition-update-examples}
 
 ```sh
@@ -312,7 +312,7 @@ ibmcloud cloud-logs alert-definition-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-alert-definition-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -330,7 +330,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs alert-definition-delete`
+## `ibmcloud cloud-logs alert-definition-delete`
 {: #cloud-logs-cli-alert-definition-delete-command}
 
 Delete an alert definition.
@@ -340,7 +340,7 @@ ibmcloud cloud-logs alert-definition-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-alert-definition-delete-cli-options}
 
 `--id` (strfmt.UUID)
@@ -348,7 +348,7 @@ ibmcloud cloud-logs alert-definition-delete --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-alert-definition-delete-examples}
 
 ```sh
@@ -357,7 +357,7 @@ ibmcloud cloud-logs alert-definition-delete \
 ```
 {: pre}
 
-### `ibmcloud cloud-logs alert-definitions`
+## `ibmcloud cloud-logs alert-definitions`
 {: #cloud-logs-cli-alert-definitions-command}
 
 List alert definitions.
@@ -367,7 +367,7 @@ ibmcloud cloud-logs alert-definitions
 ```
 
 
-#### Example
+### Example
 {: #cloud-logs-alert-definitions-examples}
 
 ```sh
@@ -375,7 +375,7 @@ ibmcloud cloud-logs alert-definitions
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-alert-definitions-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -393,7 +393,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs alert-definition-create`
+## `ibmcloud cloud-logs alert-definition-create`
 {: #cloud-logs-cli-alert-definition-create-command}
 
 Create an alert definition.
@@ -403,7 +403,7 @@ ibmcloud cloud-logs alert-definition-create [--prototype PROTOTYPE | --name NAME
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-alert-definition-create-cli-options}
 
 `--prototype` ([`AlertDefinitionPrototype`](#cli-prototype-example-schema))
@@ -515,7 +515,7 @@ ibmcloud cloud-logs alert-definition-create [--prototype PROTOTYPE | --name NAME
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--logs-unique-count=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-alert-definition-create-examples}
 
 ```sh
@@ -543,7 +543,7 @@ ibmcloud cloud-logs alert-definition-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-alert-definition-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -566,7 +566,7 @@ If a custom JMESPath query is provided, it will replace any of the JMESPath in t
 
 Create and manage alerts.
 
-### `ibmcloud cloud-logs alert`
+## `ibmcloud cloud-logs alert`
 {: #cloud-logs-cli-alert-command}
 
 Get an alert by ID.
@@ -576,7 +576,7 @@ ibmcloud cloud-logs alert --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-alert-cli-options}
 
 `--id` (strfmt.UUID)
@@ -584,7 +584,7 @@ ibmcloud cloud-logs alert --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-alert-examples}
 
 ```sh
@@ -593,7 +593,7 @@ ibmcloud cloud-logs alert \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-alert-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -611,7 +611,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs alert-update`
+## `ibmcloud cloud-logs alert-update`
 {: #cloud-logs-cli-alert-update-command}
 
 Update an alert.
@@ -621,7 +621,7 @@ ibmcloud cloud-logs alert-update --id ID --name NAME --is-active=IS-ACTIVE --sev
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-alert-update-cli-options}
 
 `--id` (strfmt.UUID)
@@ -803,7 +803,7 @@ ibmcloud cloud-logs alert-update --id ID --name NAME --is-active=IS-ACTIVE --sev
 `--incident-settings-use-as-notification-settings` (bool)
 :   Use these settings for all notificaion webhook. This option provides a value for a sub-field of the JSON option 'incident-settings'. It is mutually exclusive with that option.
 
-#### Examples
+### Examples
 {: #cloud-logs-alert-update-examples}
 
 ```sh
@@ -855,7 +855,7 @@ ibmcloud cloud-logs alert-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-alert-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -873,7 +873,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs alert-delete`
+## `ibmcloud cloud-logs alert-delete`
 {: #cloud-logs-cli-alert-delete-command}
 
 Delete an alert.
@@ -883,7 +883,7 @@ ibmcloud cloud-logs alert-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-alert-delete-cli-options}
 
 `--id` (strfmt.UUID)
@@ -891,7 +891,7 @@ ibmcloud cloud-logs alert-delete --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-alert-delete-examples}
 
 ```sh
@@ -900,7 +900,7 @@ ibmcloud cloud-logs alert-delete \
 ```
 {: pre}
 
-### `ibmcloud cloud-logs alerts`
+## `ibmcloud cloud-logs alerts`
 {: #cloud-logs-cli-alerts-command}
 
 List alerts.
@@ -910,7 +910,7 @@ ibmcloud cloud-logs alerts
 ```
 
 
-#### Example
+### Example
 {: #cloud-logs-alerts-examples}
 
 ```sh
@@ -918,7 +918,7 @@ ibmcloud cloud-logs alerts
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-alerts-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -936,7 +936,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs alert-create`
+## `ibmcloud cloud-logs alert-create`
 {: #cloud-logs-cli-alert-create-command}
 
 Create an alert.
@@ -946,7 +946,7 @@ ibmcloud cloud-logs alert-create --name NAME --is-active=IS-ACTIVE --severity SE
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-alert-create-cli-options}
 
 `--name` (string)
@@ -1123,7 +1123,7 @@ ibmcloud cloud-logs alert-create --name NAME --is-active=IS-ACTIVE --severity SE
 `--incident-settings-use-as-notification-settings` (bool)
 :   Use these settings for all notificaion webhook. This option provides a value for a sub-field of the JSON option 'incident-settings'. It is mutually exclusive with that option.
 
-#### Examples
+### Examples
 {: #cloud-logs-alert-create-examples}
 
 ```sh
@@ -1172,7 +1172,7 @@ ibmcloud cloud-logs alert-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-alert-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1195,7 +1195,7 @@ If a custom JMESPath query is provided, it will replace any of the JMESPath in t
 
 Submit a background query and fetch your archive logs.
 
-### `ibmcloud cloud-logs background-query-create`
+## `ibmcloud cloud-logs background-query-create`
 {: #cloud-logs-cli-background-query-create-command}
 
 Submits a query that runs in the background, allowing the client to continue without waiting for the results immediately.
@@ -1204,12 +1204,12 @@ Submits a query that runs in the background, allowing the client to continue wit
 ibmcloud cloud-logs background-query-create --query QUERY --syntax SYNTAX [--start-date START-DATE] [--end-date END-DATE] [--now-date NOW-DATE]
 ```
 
-#### Aliases
+### Aliases
 {: #cloud-logs-cli-background-query-create-command-aliases}
 
 `background-query-create`, `bgq-create`
 
-#### Command options
+### Command options
 {: #cloud-logs-background-query-create-cli-options}
 
 `--query` (string)
@@ -1234,7 +1234,7 @@ ibmcloud cloud-logs background-query-create --query QUERY --syntax SYNTAX [--sta
 :   Contextual `now` for the query, default: current time. Used by functions
  like now() in DataPrime.
 
-#### Example
+### Example
 {: #cloud-logs-background-query-create-examples}
 
 ```sh
@@ -1247,7 +1247,7 @@ ibmcloud cloud-logs background-query-create \
 ```
 {: pre}
 
-### `ibmcloud cloud-logs background-query-status`
+## `ibmcloud cloud-logs background-query-status`
 {: #cloud-logs-cli-background-query-status-command}
 
 Get the status of a background query.
@@ -1256,12 +1256,12 @@ Get the status of a background query.
 ibmcloud cloud-logs background-query-status --query-id QUERY-ID
 ```
 
-#### Aliases
+### Aliases
 {: #cloud-logs-cli-background-query-status-command-aliases}
 
 `background-query-status`, `bgq-status`
 
-#### Command options
+### Command options
 {: #cloud-logs-background-query-status-cli-options}
 
 `--query-id` (strfmt.UUID)
@@ -1269,7 +1269,7 @@ ibmcloud cloud-logs background-query-status --query-id QUERY-ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-background-query-status-examples}
 
 ```sh
@@ -1278,7 +1278,7 @@ ibmcloud cloud-logs background-query-status \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-background-query-status-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1296,7 +1296,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs background-query-cancel`
+## `ibmcloud cloud-logs background-query-cancel`
 {: #cloud-logs-cli-background-query-cancel-command}
 
 Cancel a background query.
@@ -1305,12 +1305,12 @@ Cancel a background query.
 ibmcloud cloud-logs background-query-cancel --query-id QUERY-ID
 ```
 
-#### Aliases
+### Aliases
 {: #cloud-logs-cli-background-query-cancel-command-aliases}
 
 `background-query-cancel`, `bgq-cancel`
 
-#### Command options
+### Command options
 {: #cloud-logs-background-query-cancel-cli-options}
 
 `--query-id` (strfmt.UUID)
@@ -1318,7 +1318,7 @@ ibmcloud cloud-logs background-query-cancel --query-id QUERY-ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-background-query-cancel-examples}
 
 ```sh
@@ -1332,7 +1332,7 @@ ibmcloud cloud-logs background-query-cancel \
 
 Create and manage Data Access Rules.
 
-### `ibmcloud cloud-logs data-access-rules`
+## `ibmcloud cloud-logs data-access-rules`
 {: #cloud-logs-cli-data-access-rules-command}
 
 Get service instance's Data Access Rules by ids.
@@ -1342,7 +1342,7 @@ ibmcloud cloud-logs data-access-rules [--id ID]
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-data-access-rules-cli-options}
 
 `--id` ([]strfmt.UUID)
@@ -1350,7 +1350,7 @@ ibmcloud cloud-logs data-access-rules [--id ID]
 
     The list items must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`. The maximum length is `4096` items. The minimum length is `0` items.
 
-#### Example
+### Example
 {: #cloud-logs-data-access-rules-examples}
 
 ```sh
@@ -1359,7 +1359,7 @@ ibmcloud cloud-logs data-access-rules \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-data-access-rules-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1377,7 +1377,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs data-access-rule-create`
+## `ibmcloud cloud-logs data-access-rule-create`
 {: #cloud-logs-cli-data-access-rule-create-command}
 
 Create a data access rule.
@@ -1387,7 +1387,7 @@ ibmcloud cloud-logs data-access-rule-create --display-name DISPLAY-NAME --filter
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-data-access-rule-create-cli-options}
 
 `--display-name` (string)
@@ -1412,7 +1412,7 @@ ibmcloud cloud-logs data-access-rule-create --display-name DISPLAY-NAME --filter
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-data-access-rule-create-examples}
 
 ```sh
@@ -1424,7 +1424,7 @@ ibmcloud cloud-logs data-access-rule-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-data-access-rule-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1442,7 +1442,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs data-access-rule-update`
+## `ibmcloud cloud-logs data-access-rule-update`
 {: #cloud-logs-cli-data-access-rule-update-command}
 
 Update a data access rule.
@@ -1452,7 +1452,7 @@ ibmcloud cloud-logs data-access-rule-update --id ID --display-name DISPLAY-NAME 
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-data-access-rule-update-cli-options}
 
 `--id` (strfmt.UUID)
@@ -1482,7 +1482,7 @@ ibmcloud cloud-logs data-access-rule-update --id ID --display-name DISPLAY-NAME 
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-data-access-rule-update-examples}
 
 ```sh
@@ -1495,7 +1495,7 @@ ibmcloud cloud-logs data-access-rule-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-data-access-rule-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1513,7 +1513,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs data-access-rule-delete`
+## `ibmcloud cloud-logs data-access-rule-delete`
 {: #cloud-logs-cli-data-access-rule-delete-command}
 
 Delete a data access rule.
@@ -1523,7 +1523,7 @@ ibmcloud cloud-logs data-access-rule-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-data-access-rule-delete-cli-options}
 
 `--id` (strfmt.UUID)
@@ -1531,7 +1531,7 @@ ibmcloud cloud-logs data-access-rule-delete --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-data-access-rule-delete-examples}
 
 ```sh
@@ -1545,7 +1545,7 @@ ibmcloud cloud-logs data-access-rule-delete \
 
 Data usage service.
 
-### `ibmcloud cloud-logs data-usage`
+## `ibmcloud cloud-logs data-usage`
 {: #cloud-logs-cli-data-usage-command}
 
 Get data usage metrics export status when invoked without query parameters. Get daily or detailed data usage report when invoked with query parameters.
@@ -1555,7 +1555,7 @@ ibmcloud cloud-logs data-usage --query QUERY [--range RANGE]
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-data-usage-cli-options}
 
 `--query` (string)
@@ -1568,7 +1568,7 @@ ibmcloud cloud-logs data-usage --query QUERY [--range RANGE]
 
     The default value is `current_month`. Allowable values are: `current_month`, `last_30_days`, `last_90_days`, `last_week`.
 
-#### Example
+### Example
 {: #cloud-logs-data-usage-examples}
 
 ```sh
@@ -1578,7 +1578,7 @@ ibmcloud cloud-logs data-usage \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-data-usage-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1596,7 +1596,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs data-usage-metrics-export-status-update`
+## `ibmcloud cloud-logs data-usage-metrics-export-status-update`
 {: #cloud-logs-cli-data-usage-metrics-export-status-update-command}
 
 Update data usage metrics export status.
@@ -1606,13 +1606,13 @@ ibmcloud cloud-logs data-usage-metrics-export-status-update --enabled=ENABLED
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-data-usage-metrics-export-status-update-cli-options}
 
 `--enabled` (bool)
 :   Whether metrics export is enabled or not. When 'true' metrics are exported. Required.
 
-#### Example
+### Example
 {: #cloud-logs-data-usage-metrics-export-status-update-examples}
 
 ```sh
@@ -1626,7 +1626,7 @@ ibmcloud cloud-logs data-usage-metrics-export-status-update \
 
 Create and manage enrichments.
 
-### `ibmcloud cloud-logs enrichments`
+## `ibmcloud cloud-logs enrichments`
 {: #cloud-logs-cli-enrichments-command}
 
 List all enrichments.
@@ -1636,7 +1636,7 @@ ibmcloud cloud-logs enrichments
 ```
 
 
-#### Example
+### Example
 {: #cloud-logs-enrichments-examples}
 
 ```sh
@@ -1644,7 +1644,7 @@ ibmcloud cloud-logs enrichments
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-enrichments-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1662,7 +1662,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs enrichment-create`
+## `ibmcloud cloud-logs enrichment-create`
 {: #cloud-logs-cli-enrichment-create-command}
 
 Create an enrichment.
@@ -1672,7 +1672,7 @@ ibmcloud cloud-logs enrichment-create --field-name FIELD-NAME [--enrichment-type
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-enrichment-create-cli-options}
 
 `--field-name` (string)
@@ -1700,7 +1700,7 @@ ibmcloud cloud-logs enrichment-create --field-name FIELD-NAME [--enrichment-type
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--enrichment-type-custom-enrichment=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-enrichment-create-examples}
 
 ```sh
@@ -1718,7 +1718,7 @@ ibmcloud cloud-logs enrichment-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-enrichment-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1736,7 +1736,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs enrichment-delete`
+## `ibmcloud cloud-logs enrichment-delete`
 {: #cloud-logs-cli-enrichment-delete-command}
 
 Delete enrichments.
@@ -1746,7 +1746,7 @@ ibmcloud cloud-logs enrichment-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-enrichment-delete-cli-options}
 
 `--id` (int64)
@@ -1754,7 +1754,7 @@ ibmcloud cloud-logs enrichment-delete --id ID
 
     The maximum value is `4294967295`. The minimum value is `0`.
 
-#### Example
+### Example
 {: #cloud-logs-enrichment-delete-examples}
 
 ```sh
@@ -1768,7 +1768,7 @@ ibmcloud cloud-logs enrichment-delete \
 
 Create and manage your events to metrics definitions.
 
-### `ibmcloud cloud-logs events2metrics-list`
+## `ibmcloud cloud-logs events2metrics-list`
 {: #cloud-logs-cli-events2metrics-list-command}
 
 Lists events to metrics definitions.
@@ -1777,12 +1777,12 @@ Lists events to metrics definitions.
 ibmcloud cloud-logs events2metrics-list
 ```
 
-#### Aliases
+### Aliases
 {: #cloud-logs-cli-events2metrics-list-command-aliases}
 
 `events2metrics-list`, `e2m-list`
 
-#### Example
+### Example
 {: #cloud-logs-events2metrics-list-examples}
 
 ```sh
@@ -1790,7 +1790,7 @@ ibmcloud cloud-logs events2metrics-list
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-events2metrics-list-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1808,7 +1808,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs events2metrics-create`
+## `ibmcloud cloud-logs events2metrics-create`
 {: #cloud-logs-cli-events2metrics-create-command}
 
 Creates events to metrics definitions.
@@ -1817,12 +1817,12 @@ Creates events to metrics definitions.
 ibmcloud cloud-logs events2metrics-create [--event2-metric-prototype EVENT2-METRIC-PROTOTYPE | --event2-metric-name EVENT2-METRIC-NAME --event2-metric-description EVENT2-METRIC-DESCRIPTION --event2-metric-permutations-limit EVENT2-METRIC-PERMUTATIONS-LIMIT --event2-metric-metric-labels EVENT2-METRIC-METRIC-LABELS --event2-metric-metric-fields EVENT2-METRIC-METRIC-FIELDS --event2-metric-type EVENT2-METRIC-TYPE --event2-metric-logs-query EVENT2-METRIC-LOGS-QUERY]
 ```
 
-#### Aliases
+### Aliases
 {: #cloud-logs-cli-events2metrics-create-command-aliases}
 
 `events2metrics-create`, `e2m-create`
 
-#### Command options
+### Command options
 {: #cloud-logs-events2metrics-create-cli-options}
 
 `--event2-metric-prototype` ([`Event2MetricPrototype`](#cli-event2-metric-prototype-example-schema))
@@ -1869,7 +1869,7 @@ ibmcloud cloud-logs events2metrics-create [--event2-metric-prototype EVENT2-METR
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--event2-metric-logs-query=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-events2metrics-create-examples}
 
 ```sh
@@ -1891,7 +1891,7 @@ ibmcloud cloud-logs events2metrics-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-events2metrics-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1909,7 +1909,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs events2metrics`
+## `ibmcloud cloud-logs events2metrics`
 {: #cloud-logs-cli-events2metrics-command}
 
 Gets events to metrics definitions by ID.
@@ -1918,12 +1918,12 @@ Gets events to metrics definitions by ID.
 ibmcloud cloud-logs events2metrics --id ID
 ```
 
-#### Aliases
+### Aliases
 {: #cloud-logs-cli-events2metrics-command-aliases}
 
 `events2metrics`, `e2m`
 
-#### Command options
+### Command options
 {: #cloud-logs-events2metrics-cli-options}
 
 `--id` (string)
@@ -1931,7 +1931,7 @@ ibmcloud cloud-logs events2metrics --id ID
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-events2metrics-examples}
 
 ```sh
@@ -1940,7 +1940,7 @@ ibmcloud cloud-logs events2metrics \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-events2metrics-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -1958,7 +1958,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs events2metrics-update`
+## `ibmcloud cloud-logs events2metrics-update`
 {: #cloud-logs-cli-events2metrics-update-command}
 
 Updates events to metrics definitions.
@@ -1967,12 +1967,12 @@ Updates events to metrics definitions.
 ibmcloud cloud-logs events2metrics-update --id ID [--event2-metric-prototype EVENT2-METRIC-PROTOTYPE | --event2-metric-name EVENT2-METRIC-NAME --event2-metric-description EVENT2-METRIC-DESCRIPTION --event2-metric-permutations-limit EVENT2-METRIC-PERMUTATIONS-LIMIT --event2-metric-metric-labels EVENT2-METRIC-METRIC-LABELS --event2-metric-metric-fields EVENT2-METRIC-METRIC-FIELDS --event2-metric-type EVENT2-METRIC-TYPE --event2-metric-logs-query EVENT2-METRIC-LOGS-QUERY]
 ```
 
-#### Aliases
+### Aliases
 {: #cloud-logs-cli-events2metrics-update-command-aliases}
 
 `events2metrics-update`, `e2m-update`
 
-#### Command options
+### Command options
 {: #cloud-logs-events2metrics-update-cli-options}
 
 `--id` (string)
@@ -2024,7 +2024,7 @@ ibmcloud cloud-logs events2metrics-update --id ID [--event2-metric-prototype EVE
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--event2-metric-logs-query=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-events2metrics-update-examples}
 
 ```sh
@@ -2048,7 +2048,7 @@ ibmcloud cloud-logs events2metrics-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-events2metrics-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2066,7 +2066,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs events2metrics-delete`
+## `ibmcloud cloud-logs events2metrics-delete`
 {: #cloud-logs-cli-events2metrics-delete-command}
 
 Deletes events to metrics definitions by ID.
@@ -2075,12 +2075,12 @@ Deletes events to metrics definitions by ID.
 ibmcloud cloud-logs events2metrics-delete --id ID
 ```
 
-#### Aliases
+### Aliases
 {: #cloud-logs-cli-events2metrics-delete-command-aliases}
 
 `events2metrics-delete`, `e2m-delete`
 
-#### Command options
+### Command options
 {: #cloud-logs-events2metrics-delete-cli-options}
 
 `--id` (string)
@@ -2088,7 +2088,7 @@ ibmcloud cloud-logs events2metrics-delete --id ID
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-events2metrics-delete-examples}
 
 ```sh
@@ -2102,7 +2102,7 @@ ibmcloud cloud-logs events2metrics-delete \
 
 Manage extensions and extension deployments.
 
-### `ibmcloud cloud-logs extension`
+## `ibmcloud cloud-logs extension`
 {: #cloud-logs-cli-extension-command}
 
 Get an extension by ID.
@@ -2112,7 +2112,7 @@ ibmcloud cloud-logs extension --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-extension-cli-options}
 
 `--id` (string)
@@ -2120,7 +2120,7 @@ ibmcloud cloud-logs extension --id ID
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-extension-examples}
 
 ```sh
@@ -2129,7 +2129,7 @@ ibmcloud cloud-logs extension \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-extension-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2147,7 +2147,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs extension-deployment`
+## `ibmcloud cloud-logs extension-deployment`
 {: #cloud-logs-cli-extension-deployment-command}
 
 Get deployment details of an extension using id of an extension.
@@ -2157,7 +2157,7 @@ ibmcloud cloud-logs extension-deployment --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-extension-deployment-cli-options}
 
 `--id` (string)
@@ -2165,7 +2165,7 @@ ibmcloud cloud-logs extension-deployment --id ID
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-extension-deployment-examples}
 
 ```sh
@@ -2174,7 +2174,7 @@ ibmcloud cloud-logs extension-deployment \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-extension-deployment-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2192,7 +2192,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs extension-deployment-manage`
+## `ibmcloud cloud-logs extension-deployment-manage`
 {: #cloud-logs-cli-extension-deployment-manage-command}
 
 Deploy or update deployment of an extension using extension ID.
@@ -2202,7 +2202,7 @@ ibmcloud cloud-logs extension-deployment-manage --id ID --version VERSION --item
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-extension-deployment-manage-cli-options}
 
 `--id` (string)
@@ -2230,7 +2230,7 @@ ibmcloud cloud-logs extension-deployment-manage --id ID --version VERSION --item
 
     The list items must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`. The maximum length is `4096` items. The minimum length is `0` items.
 
-#### Example
+### Example
 {: #cloud-logs-extension-deployment-manage-examples}
 
 ```sh
@@ -2243,7 +2243,7 @@ ibmcloud cloud-logs extension-deployment-manage \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-extension-deployment-manage-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2261,7 +2261,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs extension-deployment-delete`
+## `ibmcloud cloud-logs extension-deployment-delete`
 {: #cloud-logs-cli-extension-deployment-delete-command}
 
 Delete deployment of an extension using extension ID.
@@ -2271,7 +2271,7 @@ ibmcloud cloud-logs extension-deployment-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-extension-deployment-delete-cli-options}
 
 `--id` (string)
@@ -2279,7 +2279,7 @@ ibmcloud cloud-logs extension-deployment-delete --id ID
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-extension-deployment-delete-examples}
 
 ```sh
@@ -2288,7 +2288,7 @@ ibmcloud cloud-logs extension-deployment-delete \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-extension-deployment-delete-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2306,7 +2306,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs extensions`
+## `ibmcloud cloud-logs extensions`
 {: #cloud-logs-cli-extensions-command}
 
 Get list of extensions.
@@ -2316,13 +2316,13 @@ ibmcloud cloud-logs extensions [--deployed=DEPLOYED]
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-extensions-cli-options}
 
 `--deployed` (bool)
 :   Optional deployment filter. If omitted, returns all extensions. If true, returns only deployed extensions. If false, returns only non-deployed extensions.
 
-#### Example
+### Example
 {: #cloud-logs-extensions-examples}
 
 ```sh
@@ -2331,7 +2331,7 @@ ibmcloud cloud-logs extensions \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-extensions-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2354,7 +2354,7 @@ If a custom JMESPath query is provided, it will replace any of the JMESPath in t
 
 Create and manage view folders.
 
-### `ibmcloud cloud-logs view-folders`
+## `ibmcloud cloud-logs view-folders`
 {: #cloud-logs-cli-view-folders-command}
 
 List view's folders.
@@ -2364,7 +2364,7 @@ ibmcloud cloud-logs view-folders
 ```
 
 
-#### Example
+### Example
 {: #cloud-logs-view-folders-examples}
 
 ```sh
@@ -2372,7 +2372,7 @@ ibmcloud cloud-logs view-folders
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-view-folders-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2390,7 +2390,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs view-folder-create`
+## `ibmcloud cloud-logs view-folder-create`
 {: #cloud-logs-cli-view-folder-create-command}
 
 Create view folder.
@@ -2400,7 +2400,7 @@ ibmcloud cloud-logs view-folder-create --name NAME
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-view-folder-create-cli-options}
 
 `--name` (string)
@@ -2408,7 +2408,7 @@ ibmcloud cloud-logs view-folder-create --name NAME
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-view-folder-create-examples}
 
 ```sh
@@ -2417,7 +2417,7 @@ ibmcloud cloud-logs view-folder-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-view-folder-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2435,7 +2435,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs view-folder`
+## `ibmcloud cloud-logs view-folder`
 {: #cloud-logs-cli-view-folder-command}
 
 Get view folder.
@@ -2445,7 +2445,7 @@ ibmcloud cloud-logs view-folder --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-view-folder-cli-options}
 
 `--id` (strfmt.UUID)
@@ -2453,7 +2453,7 @@ ibmcloud cloud-logs view-folder --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-view-folder-examples}
 
 ```sh
@@ -2462,7 +2462,7 @@ ibmcloud cloud-logs view-folder \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-view-folder-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2480,7 +2480,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs view-folder-update`
+## `ibmcloud cloud-logs view-folder-update`
 {: #cloud-logs-cli-view-folder-update-command}
 
 Replaces an existing view folder.
@@ -2490,7 +2490,7 @@ ibmcloud cloud-logs view-folder-update --id ID --name NAME
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-view-folder-update-cli-options}
 
 `--id` (strfmt.UUID)
@@ -2503,7 +2503,7 @@ ibmcloud cloud-logs view-folder-update --id ID --name NAME
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Example
+### Example
 {: #cloud-logs-view-folder-update-examples}
 
 ```sh
@@ -2513,7 +2513,7 @@ ibmcloud cloud-logs view-folder-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-view-folder-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2531,7 +2531,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs view-folder-delete`
+## `ibmcloud cloud-logs view-folder-delete`
 {: #cloud-logs-cli-view-folder-delete-command}
 
 Deletes a view folder by ID.
@@ -2541,7 +2541,7 @@ ibmcloud cloud-logs view-folder-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-view-folder-delete-cli-options}
 
 `--id` (strfmt.UUID)
@@ -2549,7 +2549,7 @@ ibmcloud cloud-logs view-folder-delete --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-view-folder-delete-examples}
 
 ```sh
@@ -2563,7 +2563,7 @@ ibmcloud cloud-logs view-folder-delete \
 
 Get and update log data retention tags.
 
-### `ibmcloud cloud-logs log-data-retention-tags`
+## `ibmcloud cloud-logs log-data-retention-tags`
 {: #cloud-logs-cli-log-data-retention-tags-command}
 
 Get log data retention tags. Returns 404 if retention tags have not been activated.
@@ -2573,7 +2573,7 @@ ibmcloud cloud-logs log-data-retention-tags
 ```
 
 
-#### Example
+### Example
 {: #cloud-logs-log-data-retention-tags-examples}
 
 ```sh
@@ -2581,7 +2581,7 @@ ibmcloud cloud-logs log-data-retention-tags
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-log-data-retention-tags-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2599,7 +2599,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs log-data-retention-tags-update`
+## `ibmcloud cloud-logs log-data-retention-tags-update`
 {: #cloud-logs-cli-log-data-retention-tags-update-command}
 
 Update log data retention tags. If retention tags have not been activated yet, the first successful PUT request will activate them. An archive bucket must be configured before retention tags can be activated.
@@ -2609,7 +2609,7 @@ ibmcloud cloud-logs log-data-retention-tags-update --tags TAGS
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-log-data-retention-tags-update-cli-options}
 
 `--tags` ([]string)
@@ -2617,7 +2617,7 @@ ibmcloud cloud-logs log-data-retention-tags-update --tags TAGS
 
     The list items must match regular expression `/^[a-zA-Z0-9_-]+$/`. The maximum length is `3` items. The minimum length is `3` items.
 
-#### Example
+### Example
 {: #cloud-logs-log-data-retention-tags-update-examples}
 
 ```sh
@@ -2631,7 +2631,7 @@ ibmcloud cloud-logs log-data-retention-tags-update \
 
 Create and manage your outbound integrations so that you can receive alerts.
 
-### `ibmcloud cloud-logs outgoing-webhooks`
+## `ibmcloud cloud-logs outgoing-webhooks`
 {: #cloud-logs-cli-outgoing-webhooks-command}
 
 List Outbound Integrations.
@@ -2641,7 +2641,7 @@ ibmcloud cloud-logs outgoing-webhooks [--type TYPE]
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-outgoing-webhooks-cli-options}
 
 `--type` (string)
@@ -2649,7 +2649,7 @@ ibmcloud cloud-logs outgoing-webhooks [--type TYPE]
 
     Allowable values are: `ibm_event_notifications`.
 
-#### Example
+### Example
 {: #cloud-logs-outgoing-webhooks-examples}
 
 ```sh
@@ -2658,7 +2658,7 @@ ibmcloud cloud-logs outgoing-webhooks \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-outgoing-webhooks-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2676,7 +2676,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs outgoing-webhook-create`
+## `ibmcloud cloud-logs outgoing-webhook-create`
 {: #cloud-logs-cli-outgoing-webhook-create-command}
 
 Create an outbound integration.
@@ -2686,7 +2686,7 @@ ibmcloud cloud-logs outgoing-webhook-create [--prototype PROTOTYPE | --type TYPE
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-outgoing-webhook-create-cli-options}
 
 `--prototype` ([`OutgoingWebhookPrototype`](#cli-prototype-example-schema))
@@ -2714,7 +2714,7 @@ ibmcloud cloud-logs outgoing-webhook-create [--prototype PROTOTYPE | --type TYPE
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--ibm-event-notifications=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-outgoing-webhook-create-examples}
 
 ```sh
@@ -2733,7 +2733,7 @@ ibmcloud cloud-logs outgoing-webhook-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-outgoing-webhook-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2751,7 +2751,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs outgoing-webhook`
+## `ibmcloud cloud-logs outgoing-webhook`
 {: #cloud-logs-cli-command}
 
 Gets an outbound integration by ID.
@@ -2761,7 +2761,7 @@ ibmcloud cloud-logs outgoing-webhook --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-cli-options}
 
 `--id` (strfmt.UUID)
@@ -2769,7 +2769,7 @@ ibmcloud cloud-logs outgoing-webhook --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-examples}
 
 ```sh
@@ -2778,7 +2778,7 @@ ibmcloud cloud-logs outgoing-webhook \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2796,7 +2796,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs outgoing-webhook-update`
+## `ibmcloud cloud-logs outgoing-webhook-update`
 {: #cloud-logs-cli-outgoing-webhook-update-command}
 
 Update an outbound integration.
@@ -2806,7 +2806,7 @@ ibmcloud cloud-logs outgoing-webhook-update --id ID [--prototype PROTOTYPE | --t
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-outgoing-webhook-update-cli-options}
 
 `--id` (strfmt.UUID)
@@ -2839,7 +2839,7 @@ ibmcloud cloud-logs outgoing-webhook-update --id ID [--prototype PROTOTYPE | --t
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--ibm-event-notifications=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-outgoing-webhook-update-examples}
 
 ```sh
@@ -2860,7 +2860,7 @@ ibmcloud cloud-logs outgoing-webhook-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-outgoing-webhook-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2878,7 +2878,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs outgoing-webhook-delete`
+## `ibmcloud cloud-logs outgoing-webhook-delete`
 {: #cloud-logs-cli-outgoing-webhook-delete-command}
 
 Delete an outbound integration.
@@ -2888,7 +2888,7 @@ ibmcloud cloud-logs outgoing-webhook-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-outgoing-webhook-delete-cli-options}
 
 `--id` (strfmt.UUID)
@@ -2896,7 +2896,7 @@ ibmcloud cloud-logs outgoing-webhook-delete --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-outgoing-webhook-delete-examples}
 
 ```sh
@@ -2910,7 +2910,7 @@ ibmcloud cloud-logs outgoing-webhook-delete \
 
 Create and manage TCO policies.
 
-### `ibmcloud cloud-logs policy`
+## `ibmcloud cloud-logs policy`
 {: #cloud-logs-cli-command}
 
 Gets policy by ID.
@@ -2920,7 +2920,7 @@ ibmcloud cloud-logs policy --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-cli-options}
 
 `--id` (strfmt.UUID)
@@ -2928,7 +2928,7 @@ ibmcloud cloud-logs policy --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-examples}
 
 ```sh
@@ -2937,7 +2937,7 @@ ibmcloud cloud-logs policy \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -2955,7 +2955,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs policy-update`
+## `ibmcloud cloud-logs policy-update`
 {: #cloud-logs-cli-policy-update-command}
 
 Updates an existing policy.
@@ -2965,7 +2965,7 @@ ibmcloud cloud-logs policy-update --id ID [--prototype PROTOTYPE | --name NAME -
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-policy-update-cli-options}
 
 `--id` (strfmt.UUID)
@@ -3023,7 +3023,7 @@ ibmcloud cloud-logs policy-update --id ID [--prototype PROTOTYPE | --name NAME -
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--log-rules=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-policy-update-examples}
 
 ```sh
@@ -3049,7 +3049,7 @@ ibmcloud cloud-logs policy-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-policy-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3067,7 +3067,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs policy-delete`
+## `ibmcloud cloud-logs policy-delete`
 {: #cloud-logs-cli-policy-delete-command}
 
 Deletes an existing policy.
@@ -3077,7 +3077,7 @@ ibmcloud cloud-logs policy-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-policy-delete-cli-options}
 
 `--id` (strfmt.UUID)
@@ -3085,7 +3085,7 @@ ibmcloud cloud-logs policy-delete --id ID
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-policy-delete-examples}
 
 ```sh
@@ -3094,7 +3094,7 @@ ibmcloud cloud-logs policy-delete \
 ```
 {: pre}
 
-### `ibmcloud cloud-logs policies`
+## `ibmcloud cloud-logs policies`
 {: #cloud-logs-cli-policies-command}
 
 Gets policies.
@@ -3104,7 +3104,7 @@ ibmcloud cloud-logs policies [--enabled-only=ENABLED-ONLY] [--source-type SOURCE
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-policies-cli-options}
 
 `--enabled-only` (bool)
@@ -3115,7 +3115,7 @@ ibmcloud cloud-logs policies [--enabled-only=ENABLED-ONLY] [--source-type SOURCE
 
     Allowable values are: `unspecified`, `logs`.
 
-#### Example
+### Example
 {: #cloud-logs-policies-examples}
 
 ```sh
@@ -3125,7 +3125,7 @@ ibmcloud cloud-logs policies \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-policies-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3143,7 +3143,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs policy-create`
+## `ibmcloud cloud-logs policy-create`
 {: #cloud-logs-cli-policy-create-command}
 
 Creates a new policy.
@@ -3153,7 +3153,7 @@ ibmcloud cloud-logs policy-create [--prototype PROTOTYPE | --name NAME --before 
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-policy-create-cli-options}
 
 `--prototype` ([`PolicyPrototype`](#cli-prototype-example-schema))
@@ -3206,7 +3206,7 @@ ibmcloud cloud-logs policy-create [--prototype PROTOTYPE | --name NAME --before 
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--log-rules=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-policy-create-examples}
 
 ```sh
@@ -3230,7 +3230,7 @@ ibmcloud cloud-logs policy-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-policy-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3253,7 +3253,7 @@ If a custom JMESPath query is provided, it will replace any of the JMESPath in t
 
 Create and manage parsing rules.
 
-### `ibmcloud cloud-logs rule-group`
+## `ibmcloud cloud-logs rule-group`
 {: #cloud-logs-cli-rule-group-command}
 
 Gets rule group by groupid.
@@ -3263,7 +3263,7 @@ ibmcloud cloud-logs rule-group --id id
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-rule-group-cli-options}
 
 `--id` (strfmt.UUID)
@@ -3271,7 +3271,7 @@ ibmcloud cloud-logs rule-group --id id
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-rule-group-examples}
 
 ```sh
@@ -3280,7 +3280,7 @@ ibmcloud cloud-logs rule-group \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-rule-group-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3298,7 +3298,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs rule-group-update`
+## `ibmcloud cloud-logs rule-group-update`
 {: #cloud-logs-cli-rule-group-update-command}
 
 Updates rule group by groupid.
@@ -3308,7 +3308,7 @@ ibmcloud cloud-logs rule-group-update --id id --name NAME --rule-subgroups RULE-
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-rule-group-update-cli-options}
 
 `--id` (strfmt.UUID)
@@ -3348,7 +3348,7 @@ ibmcloud cloud-logs rule-group-update --id id --name NAME --rule-subgroups RULE-
 
     The maximum value is `4294967295`. The minimum value is `0`.
 
-#### Example
+### Example
 {: #cloud-logs-rule-group-update-examples}
 
 ```sh
@@ -3363,7 +3363,7 @@ ibmcloud cloud-logs rule-group-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-rule-group-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3381,7 +3381,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs rule-group-delete`
+## `ibmcloud cloud-logs rule-group-delete`
 {: #cloud-logs-cli-rule-group-delete-command}
 
 Deletes rule group by groupid.
@@ -3391,7 +3391,7 @@ ibmcloud cloud-logs rule-group-delete --id id
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-rule-group-delete-cli-options}
 
 `--id` (strfmt.UUID)
@@ -3399,7 +3399,7 @@ ibmcloud cloud-logs rule-group-delete --id id
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
-#### Example
+### Example
 {: #cloud-logs-rule-group-delete-examples}
 
 ```sh
@@ -3408,7 +3408,7 @@ ibmcloud cloud-logs rule-group-delete \
 ```
 {: pre}
 
-### `ibmcloud cloud-logs rule-groups`
+## `ibmcloud cloud-logs rule-groups`
 {: #cloud-logs-cli-rule-groups-command}
 
 Gets all rule groups.
@@ -3418,7 +3418,7 @@ ibmcloud cloud-logs rule-groups
 ```
 
 
-#### Example
+### Example
 {: #cloud-logs-rule-groups-examples}
 
 ```sh
@@ -3426,7 +3426,7 @@ ibmcloud cloud-logs rule-groups
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-rule-groups-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3444,7 +3444,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs rule-group-create`
+## `ibmcloud cloud-logs rule-group-create`
 {: #cloud-logs-cli-rule-group-create-command}
 
 Creates rule group.
@@ -3454,7 +3454,7 @@ ibmcloud cloud-logs rule-group-create --name NAME --rule-subgroups RULE-SUBGROUP
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-rule-group-create-cli-options}
 
 `--name` (string)
@@ -3489,7 +3489,7 @@ ibmcloud cloud-logs rule-group-create --name NAME --rule-subgroups RULE-SUBGROUP
 
     The maximum value is `4294967295`. The minimum value is `0`.
 
-#### Example
+### Example
 {: #cloud-logs-rule-group-create-examples}
 
 ```sh
@@ -3503,7 +3503,7 @@ ibmcloud cloud-logs rule-group-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-rule-group-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3526,7 +3526,7 @@ If a custom JMESPath query is provided, it will replace any of the JMESPath in t
 
 Create and manage your Event Streams Integrations.
 
-### `ibmcloud cloud-logs event-stream-targets`
+## `ibmcloud cloud-logs event-stream-targets`
 {: #cloud-logs-cli-event-stream-targets-command}
 
 List all Event Streams.
@@ -3536,7 +3536,7 @@ ibmcloud cloud-logs event-stream-targets
 ```
 
 
-#### Example
+### Example
 {: #cloud-logs-event-stream-targets-examples}
 
 ```sh
@@ -3544,7 +3544,7 @@ ibmcloud cloud-logs event-stream-targets
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-event-stream-targets-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3562,7 +3562,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs event-stream-target-create`
+## `ibmcloud cloud-logs event-stream-target-create`
 {: #cloud-logs-cli-event-stream-target-create-command}
 
 Create an Event Stream Integration.
@@ -3572,7 +3572,7 @@ ibmcloud cloud-logs event-stream-target-create --name NAME --dpxl-expression DPX
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-event-stream-target-create-cli-options}
 
 `--name` (string)
@@ -3608,7 +3608,7 @@ ibmcloud cloud-logs event-stream-target-create --name NAME --dpxl-expression DPX
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Examples
+### Examples
 {: #cloud-logs-event-stream-target-create-examples}
 
 ```sh
@@ -3633,7 +3633,7 @@ ibmcloud cloud-logs event-stream-target-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-event-stream-target-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3651,7 +3651,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs event-stream-target-update`
+## `ibmcloud cloud-logs event-stream-target-update`
 {: #cloud-logs-cli-event-stream-target-update-command}
 
 Update an Event Stream.
@@ -3661,7 +3661,7 @@ ibmcloud cloud-logs event-stream-target-update --id ID --name NAME --dpxl-expres
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-event-stream-target-update-cli-options}
 
 `--id` (int64)
@@ -3702,7 +3702,7 @@ ibmcloud cloud-logs event-stream-target-update --id ID --name NAME --dpxl-expres
 
     The maximum length is `4096` characters. The minimum length is `1` character. The value must match regular expression `/^[\\p{L}\\p{N}\\p{P}\\p{Z}\\p{S}\\p{M}]+$/`.
 
-#### Examples
+### Examples
 {: #cloud-logs-event-stream-target-update-examples}
 
 ```sh
@@ -3729,7 +3729,7 @@ ibmcloud cloud-logs event-stream-target-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-event-stream-target-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3747,7 +3747,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs event-stream-target-delete`
+## `ibmcloud cloud-logs event-stream-target-delete`
 {: #cloud-logs-cli-event-stream-target-delete-command}
 
 Delete an Event Stream integration by ID.
@@ -3757,7 +3757,7 @@ ibmcloud cloud-logs event-stream-target-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-event-stream-target-delete-cli-options}
 
 `--id` (int64)
@@ -3765,7 +3765,7 @@ ibmcloud cloud-logs event-stream-target-delete --id ID
 
     The maximum value is `4294967295`. The minimum value is `0`.
 
-#### Example
+### Example
 {: #cloud-logs-event-stream-target-delete-examples}
 
 ```sh
@@ -3779,7 +3779,7 @@ ibmcloud cloud-logs event-stream-target-delete \
 
 Create and manage views.
 
-### `ibmcloud cloud-logs views`
+## `ibmcloud cloud-logs views`
 {: #cloud-logs-cli-views-command}
 
 Lists all company public views.
@@ -3789,7 +3789,7 @@ ibmcloud cloud-logs views
 ```
 
 
-#### Example
+### Example
 {: #cloud-logs-views-examples}
 
 ```sh
@@ -3797,7 +3797,7 @@ ibmcloud cloud-logs views
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-views-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3815,7 +3815,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs view-create`
+## `ibmcloud cloud-logs view-create`
 {: #cloud-logs-cli-view-create-command}
 
 Creates a new view.
@@ -3825,7 +3825,7 @@ ibmcloud cloud-logs view-create --name NAME [--time-selection TIME-SELECTION | -
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-view-create-cli-options}
 
 `--name` (string)
@@ -3885,7 +3885,7 @@ ibmcloud cloud-logs view-create --name NAME [--time-selection TIME-SELECTION | -
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--filters-filters=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-view-create-examples}
 
 ```sh
@@ -3912,7 +3912,7 @@ ibmcloud cloud-logs view-create \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-view-create-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3930,7 +3930,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs view`
+## `ibmcloud cloud-logs view`
 {: #cloud-logs-cli-view-command}
 
 Gets a view by ID.
@@ -3940,7 +3940,7 @@ ibmcloud cloud-logs view --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-view-cli-options}
 
 `--id` (int64)
@@ -3948,7 +3948,7 @@ ibmcloud cloud-logs view --id ID
 
     The maximum value is `2147483647`. The minimum value is `0`.
 
-#### Example
+### Example
 {: #cloud-logs-view-examples}
 
 ```sh
@@ -3957,7 +3957,7 @@ ibmcloud cloud-logs view \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-view-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -3975,7 +3975,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs view-update`
+## `ibmcloud cloud-logs view-update`
 {: #cloud-logs-cli-view-update-command}
 
 Replaces an existing view.
@@ -3985,7 +3985,7 @@ ibmcloud cloud-logs view-update --id ID --name NAME [--time-selection TIME-SELEC
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-view-update-cli-options}
 
 `--id` (int64)
@@ -4050,7 +4050,7 @@ ibmcloud cloud-logs view-update --id ID --name NAME [--time-selection TIME-SELEC
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--filters-filters=@path/to/file.json`.
 
-#### Examples
+### Examples
 {: #cloud-logs-view-update-examples}
 
 ```sh
@@ -4079,7 +4079,7 @@ ibmcloud cloud-logs view-update \
 ```
 {: pre}
 
-#### Default JMESPath
+### Default JMESPath
 {: #cloud-logs-view-update-default-jmespath}
 
 A JMESPath query will be applied to this output of this command by default, if one is not provided by the user. The exact query will depend on the scenario and the output format requested.
@@ -4097,7 +4097,7 @@ You can see the condition for each default JMESPath query in the following table
 
 If a custom JMESPath query is provided, it will replace any of the JMESPath in the table above.
 
-### `ibmcloud cloud-logs view-delete`
+## `ibmcloud cloud-logs view-delete`
 {: #cloud-logs-cli-view-delete-command}
 
 Deletes a view by ID.
@@ -4107,7 +4107,7 @@ ibmcloud cloud-logs view-delete --id ID
 ```
 
 
-#### Command options
+### Command options
 {: #cloud-logs-view-delete-cli-options}
 
 `--id` (int64)
@@ -4115,7 +4115,7 @@ ibmcloud cloud-logs view-delete --id ID
 
     The maximum value is `2147483647`. The minimum value is `0`.
 
-#### Example
+### Example
 {: #cloud-logs-view-delete-examples}
 
 ```sh
@@ -4129,7 +4129,7 @@ ibmcloud cloud-logs view-delete \
 
 The following schema examples represent the data that you need to specify for a command option. These examples model the data structure and include placeholder values for the expected value type. When you run a command, replace these values with the values that apply to your environment as appropriate.
 
-### AlertDefinitionPrototype
+## AlertDefinitionPrototype
 {: #cli-prototype-example-schema}
 
 The following example shows the format of the AlertDefinitionPrototype object.
@@ -4211,7 +4211,7 @@ The following example shows the format of the AlertDefinitionPrototype object.
 ```
 {: codeblock}
 
-### AlertsV1AlertActiveTimeframe
+## AlertsV1AlertActiveTimeframe
 {: #cli-alerts-v1-alert-active-timeframe-example-schema}
 
 The following example shows the format of the AlertsV1AlertActiveTimeframe object.
@@ -4226,7 +4226,7 @@ The following example shows the format of the AlertsV1AlertActiveTimeframe objec
 ```
 {: codeblock}
 
-### AlertsV1AlertActiveWhen
+## AlertsV1AlertActiveWhen
 {: #cli-alerts-v1-alert-active-when-example-schema}
 
 The following example shows the format of the AlertsV1AlertActiveWhen object.
@@ -4253,7 +4253,7 @@ The following example shows the format of the AlertsV1AlertActiveWhen object.
 ```
 {: codeblock}
 
-### AlertsV1AlertFilters
+## AlertsV1AlertFilters
 {: #cli-alerts-v1-alert-filters-example-schema}
 
 The following example shows the format of the AlertsV1AlertFilters object.
@@ -4281,7 +4281,7 @@ The following example shows the format of the AlertsV1AlertFilters object.
 ```
 {: codeblock}
 
-### AlertsV1AlertFiltersMetadataFilters
+## AlertsV1AlertFiltersMetadataFilters
 {: #cli-alerts-v1-alert-filters-metadata-filters-example-schema}
 
 The following example shows the format of the AlertsV1AlertFiltersMetadataFilters object.
@@ -4295,7 +4295,7 @@ The following example shows the format of the AlertsV1AlertFiltersMetadataFilter
 ```
 {: codeblock}
 
-### AlertsV1AlertFiltersRatioAlert
+## AlertsV1AlertFiltersRatioAlert
 {: #cli-alerts-v1-alert-filters-ratio-alert-example-schema}
 
 The following example shows the format of the AlertsV1AlertFiltersRatioAlert object.
@@ -4313,7 +4313,7 @@ The following example shows the format of the AlertsV1AlertFiltersRatioAlert obj
 ```
 {: codeblock}
 
-### AlertsV1Date
+## AlertsV1Date
 {: #cli-alerts-v1-date-example-schema}
 
 The following example shows the format of the AlertsV1Date object.
@@ -4328,7 +4328,7 @@ The following example shows the format of the AlertsV1Date object.
 ```
 {: codeblock}
 
-### AlertsV1MetaLabel[]
+## AlertsV1MetaLabel[]
 {: #cli-alerts-v1-meta-label-example-schema}
 
 The following example shows the format of the AlertsV1MetaLabel[] object.
@@ -4342,7 +4342,7 @@ The following example shows the format of the AlertsV1MetaLabel[] object.
 ```
 {: codeblock}
 
-### AlertsV2AlertCondition
+## AlertsV2AlertCondition
 {: #cli-alerts-v2-alert-condition-example-schema}
 
 The following example shows the format of the AlertsV2AlertCondition object.
@@ -4385,7 +4385,7 @@ The following example shows the format of the AlertsV2AlertCondition object.
 ```
 {: codeblock}
 
-### AlertsV2AlertIncidentSettings
+## AlertsV2AlertIncidentSettings
 {: #cli-alerts-v2-alert-incident-settings-example-schema}
 
 The following example shows the format of the AlertsV2AlertIncidentSettings object.
@@ -4400,7 +4400,7 @@ The following example shows the format of the AlertsV2AlertIncidentSettings obje
 ```
 {: codeblock}
 
-### AlertsV2AlertNotificationGroups[]
+## AlertsV2AlertNotificationGroups[]
 {: #cli-alerts-v2-alert-notification-groups-example-schema}
 
 The following example shows the format of the AlertsV2AlertNotificationGroups[] object.
@@ -4418,7 +4418,7 @@ The following example shows the format of the AlertsV2AlertNotificationGroups[] 
 ```
 {: codeblock}
 
-### AlertsV2FlowCondition
+## AlertsV2FlowCondition
 {: #cli-alerts-v2-flow-condition-example-schema}
 
 The following example shows the format of the AlertsV2FlowCondition object.
@@ -4432,7 +4432,7 @@ The following example shows the format of the AlertsV2FlowCondition object.
 ```
 {: codeblock}
 
-### AlertsV2ImmediateConditionEmpty
+## AlertsV2ImmediateConditionEmpty
 {: #cli-alerts-v2-immediate-condition-empty-example-schema}
 
 The following example shows the format of the AlertsV2ImmediateConditionEmpty object.
@@ -4443,7 +4443,7 @@ The following example shows the format of the AlertsV2ImmediateConditionEmpty ob
 ```
 {: codeblock}
 
-### AlertsV2LessThanCondition
+## AlertsV2LessThanCondition
 {: #cli-alerts-v2-less-than-condition-example-schema}
 
 The following example shows the format of the AlertsV2LessThanCondition object.
@@ -4462,7 +4462,7 @@ The following example shows the format of the AlertsV2LessThanCondition object.
 ```
 {: codeblock}
 
-### AlertsV2LessThanUsualCondition
+## AlertsV2LessThanUsualCondition
 {: #cli-alerts-v2-less-than-usual-condition-example-schema}
 
 The following example shows the format of the AlertsV2LessThanUsualCondition object.
@@ -4481,7 +4481,7 @@ The following example shows the format of the AlertsV2LessThanUsualCondition obj
 ```
 {: codeblock}
 
-### AlertsV2MoreThanCondition
+## AlertsV2MoreThanCondition
 {: #cli-alerts-v2-more-than-condition-example-schema}
 
 The following example shows the format of the AlertsV2MoreThanCondition object.
@@ -4500,7 +4500,7 @@ The following example shows the format of the AlertsV2MoreThanCondition object.
 ```
 {: codeblock}
 
-### AlertsV2MoreThanUsualCondition
+## AlertsV2MoreThanUsualCondition
 {: #cli-alerts-v2-more-than-usual-condition-example-schema}
 
 The following example shows the format of the AlertsV2MoreThanUsualCondition object.
@@ -4519,7 +4519,7 @@ The following example shows the format of the AlertsV2MoreThanUsualCondition obj
 ```
 {: codeblock}
 
-### AlertsV2NewValueCondition
+## AlertsV2NewValueCondition
 {: #cli-alerts-v2-new-value-condition-example-schema}
 
 The following example shows the format of the AlertsV2NewValueCondition object.
@@ -4538,7 +4538,7 @@ The following example shows the format of the AlertsV2NewValueCondition object.
 ```
 {: codeblock}
 
-### AlertsV2UniqueCountCondition
+## AlertsV2UniqueCountCondition
 {: #cli-alerts-v2-unique-count-condition-example-schema}
 
 The following example shows the format of the AlertsV2UniqueCountCondition object.
@@ -4557,7 +4557,7 @@ The following example shows the format of the AlertsV2UniqueCountCondition objec
 ```
 {: codeblock}
 
-### ApisAlertDefinitionActivitySchedule
+## ApisAlertDefinitionActivitySchedule
 {: #cli-apis-activity-schedule-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionActivitySchedule object.
@@ -4571,7 +4571,7 @@ The following example shows the format of the ApisAlertDefinitionActivitySchedul
 ```
 {: codeblock}
 
-### ApisAlertDefinitionAlertDefIncidentSettings
+## ApisAlertDefinitionAlertDefIncidentSettings
 {: #cli-apis-alert-def-incident-settings-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionAlertDefIncidentSettings object.
@@ -4585,7 +4585,7 @@ The following example shows the format of the ApisAlertDefinitionAlertDefInciden
 ```
 {: codeblock}
 
-### ApisAlertDefinitionAlertDefNotificationGroup
+## ApisAlertDefinitionAlertDefNotificationGroup
 {: #cli-apis-alert-def-notification-group-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionAlertDefNotificationGroup object.
@@ -4598,7 +4598,7 @@ The following example shows the format of the ApisAlertDefinitionAlertDefNotific
 ```
 {: codeblock}
 
-### ApisAlertDefinitionFlowType
+## ApisAlertDefinitionFlowType
 {: #cli-apis-flow-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionFlowType object.
@@ -4612,7 +4612,7 @@ The following example shows the format of the ApisAlertDefinitionFlowType object
 ```
 {: codeblock}
 
-### ApisAlertDefinitionLogsAnomalyType
+## ApisAlertDefinitionLogsAnomalyType
 {: #cli-apis-logs-anomaly-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionLogsAnomalyType object.
@@ -4626,7 +4626,7 @@ The following example shows the format of the ApisAlertDefinitionLogsAnomalyType
 ```
 {: codeblock}
 
-### ApisAlertDefinitionLogsImmediateType
+## ApisAlertDefinitionLogsImmediateType
 {: #cli-apis-logs-immediate-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionLogsImmediateType object.
@@ -4640,7 +4640,7 @@ The following example shows the format of the ApisAlertDefinitionLogsImmediateTy
 ```
 {: codeblock}
 
-### ApisAlertDefinitionLogsNewValueType
+## ApisAlertDefinitionLogsNewValueType
 {: #cli-apis-logs-new-value-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionLogsNewValueType object.
@@ -4654,7 +4654,7 @@ The following example shows the format of the ApisAlertDefinitionLogsNewValueTyp
 ```
 {: codeblock}
 
-### ApisAlertDefinitionLogsRatioThresholdType
+## ApisAlertDefinitionLogsRatioThresholdType
 {: #cli-apis-logs-ratio-threshold-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionLogsRatioThresholdType object.
@@ -4668,7 +4668,7 @@ The following example shows the format of the ApisAlertDefinitionLogsRatioThresh
 ```
 {: codeblock}
 
-### ApisAlertDefinitionLogsThresholdType
+## ApisAlertDefinitionLogsThresholdType
 {: #cli-apis-logs-threshold-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionLogsThresholdType object.
@@ -4682,7 +4682,7 @@ The following example shows the format of the ApisAlertDefinitionLogsThresholdTy
 ```
 {: codeblock}
 
-### ApisAlertDefinitionLogsTimeRelativeThresholdType
+## ApisAlertDefinitionLogsTimeRelativeThresholdType
 {: #cli-apis-logs-time-relative-threshold-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionLogsTimeRelativeThresholdType object.
@@ -4696,7 +4696,7 @@ The following example shows the format of the ApisAlertDefinitionLogsTimeRelativ
 ```
 {: codeblock}
 
-### ApisAlertDefinitionLogsUniqueCountType
+## ApisAlertDefinitionLogsUniqueCountType
 {: #cli-apis-logs-unique-count-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionLogsUniqueCountType object.
@@ -4710,7 +4710,7 @@ The following example shows the format of the ApisAlertDefinitionLogsUniqueCount
 ```
 {: codeblock}
 
-### ApisAlertDefinitionMetricAnomalyType
+## ApisAlertDefinitionMetricAnomalyType
 {: #cli-apis-metric-anomaly-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionMetricAnomalyType object.
@@ -4723,7 +4723,7 @@ The following example shows the format of the ApisAlertDefinitionMetricAnomalyTy
 ```
 {: codeblock}
 
-### ApisAlertDefinitionMetricThresholdType
+## ApisAlertDefinitionMetricThresholdType
 {: #cli-apis-metric-threshold-type-example-schema}
 
 The following example shows the format of the ApisAlertDefinitionMetricThresholdType object.
@@ -4736,7 +4736,7 @@ The following example shows the format of the ApisAlertDefinitionMetricThreshold
 ```
 {: codeblock}
 
-### ApisEvents2metricsV2MetricField
+## ApisEvents2metricsV2MetricField
 {: #cli-apis-events2metrics-v2-metric-field-example-schema}
 
 The following example shows the format of the ApisEvents2metricsV2MetricField object.
@@ -4749,7 +4749,7 @@ The following example shows the format of the ApisEvents2metricsV2MetricField ob
 ```
 {: codeblock}
 
-### ApisEvents2metricsV2MetricLabel
+## ApisEvents2metricsV2MetricLabel
 {: #cli-apis-events2metrics-v2-metric-label-example-schema}
 
 The following example shows the format of the ApisEvents2metricsV2MetricLabel object.
@@ -4763,7 +4763,7 @@ The following example shows the format of the ApisEvents2metricsV2MetricLabel ob
 ```
 {: codeblock}
 
-### ApisLogs2metricsV2LogsQuery
+## ApisLogs2metricsV2LogsQuery
 {: #cli-apis-logs2metrics-v2-logs-query-example-schema}
 
 The following example shows the format of the ApisLogs2metricsV2LogsQuery object.
@@ -4780,7 +4780,7 @@ The following example shows the format of the ApisLogs2metricsV2LogsQuery object
 ```
 {: codeblock}
 
-### ApisViewsV1CustomTimeSelection
+## ApisViewsV1CustomTimeSelection
 {: #cli-apis-views-v1-custom-time-selection-example-schema}
 
 The following example shows the format of the ApisViewsV1CustomTimeSelection object.
@@ -4794,7 +4794,7 @@ The following example shows the format of the ApisViewsV1CustomTimeSelection obj
 ```
 {: codeblock}
 
-### ApisViewsV1Filter
+## ApisViewsV1Filter
 {: #cli-apis-views-v1-filter-example-schema}
 
 The following example shows the format of the ApisViewsV1Filter object.
@@ -4808,7 +4808,7 @@ The following example shows the format of the ApisViewsV1Filter object.
 ```
 {: codeblock}
 
-### ApisViewsV1QuickTimeSelection
+## ApisViewsV1QuickTimeSelection
 {: #cli-apis-views-v1-quick-time-selection-example-schema}
 
 The following example shows the format of the ApisViewsV1QuickTimeSelection object.
@@ -4822,7 +4822,7 @@ The following example shows the format of the ApisViewsV1QuickTimeSelection obje
 ```
 {: codeblock}
 
-### ApisViewsV1SearchQuery
+## ApisViewsV1SearchQuery
 {: #cli-apis-views-v1-search-query-example-schema}
 
 The following example shows the format of the ApisViewsV1SearchQuery object.
@@ -4836,7 +4836,7 @@ The following example shows the format of the ApisViewsV1SearchQuery object.
 ```
 {: codeblock}
 
-### ApisViewsV1SelectedFilters
+## ApisViewsV1SelectedFilters
 {: #cli-apis-views-v1-selected-filters-example-schema}
 
 The following example shows the format of the ApisViewsV1SelectedFilters object.
@@ -4852,7 +4852,7 @@ The following example shows the format of the ApisViewsV1SelectedFilters object.
 ```
 {: codeblock}
 
-### ApisViewsV1TimeSelection
+## ApisViewsV1TimeSelection
 {: #cli-apis-views-v1-time-selection-example-schema}
 
 The following example shows the format of the ApisViewsV1TimeSelection object.
@@ -4868,7 +4868,7 @@ The following example shows the format of the ApisViewsV1TimeSelection object.
 ```
 {: codeblock}
 
-### DataAccessRuleFilter[]
+## DataAccessRuleFilter[]
 {: #cli-data-access-rule-filter-example-schema}
 
 The following example shows the format of the DataAccessRuleFilter[] object.
@@ -4882,7 +4882,7 @@ The following example shows the format of the DataAccessRuleFilter[] object.
 ```
 {: codeblock}
 
-### EnrichmentV1CustomEnrichmentType
+## EnrichmentV1CustomEnrichmentType
 {: #cli-enrichment-v1-custom-enrichment-type-example-schema}
 
 The following example shows the format of the EnrichmentV1CustomEnrichmentType object.
@@ -4895,7 +4895,7 @@ The following example shows the format of the EnrichmentV1CustomEnrichmentType o
 ```
 {: codeblock}
 
-### EnrichmentV1EnrichmentType
+## EnrichmentV1EnrichmentType
 {: #cli-enrichment-v1-enrichment-type-example-schema}
 
 The following example shows the format of the EnrichmentV1EnrichmentType object.
@@ -4908,7 +4908,7 @@ The following example shows the format of the EnrichmentV1EnrichmentType object.
 ```
 {: codeblock}
 
-### EnrichmentV1GeoIpTypeEmpty
+## EnrichmentV1GeoIpTypeEmpty
 {: #cli-enrichment-v1-geo-ip-type-empty-example-schema}
 
 The following example shows the format of the EnrichmentV1GeoIpTypeEmpty object.
@@ -4919,7 +4919,7 @@ The following example shows the format of the EnrichmentV1GeoIpTypeEmpty object.
 ```
 {: codeblock}
 
-### EnrichmentV1SuspiciousIpTypeEmpty
+## EnrichmentV1SuspiciousIpTypeEmpty
 {: #cli-enrichment-v1-suspicious-ip-type-empty-example-schema}
 
 The following example shows the format of the EnrichmentV1SuspiciousIpTypeEmpty object.
@@ -4930,7 +4930,7 @@ The following example shows the format of the EnrichmentV1SuspiciousIpTypeEmpty 
 ```
 {: codeblock}
 
-### Event2MetricPrototype
+## Event2MetricPrototype
 {: #cli-event2-metric-prototype-example-schema}
 
 The following example shows the format of the Event2MetricPrototype object.
@@ -4969,7 +4969,7 @@ The following example shows the format of the Event2MetricPrototype object.
 ```
 {: codeblock}
 
-### IbmEventStreams
+## IbmEventStreams
 {: #cli-ibm-event-streams-example-schema}
 
 The following example shows the format of the IbmEventStreams object.
@@ -4983,7 +4983,7 @@ The following example shows the format of the IbmEventStreams object.
 ```
 {: codeblock}
 
-### OutgoingWebhookPrototype
+## OutgoingWebhookPrototype
 {: #cli-prototype-example-schema}
 
 The following example shows the format of the OutgoingWebhookPrototype object.
@@ -5005,7 +5005,7 @@ The following example shows the format of the OutgoingWebhookPrototype object.
 ```
 {: codeblock}
 
-### OutgoingWebhooksV1IbmEventNotificationsConfig
+## OutgoingWebhooksV1IbmEventNotificationsConfig
 {: #cli-outgoing-webhooks-v1-ibm-event-notifications-config-example-schema}
 
 The following example shows the format of the OutgoingWebhooksV1IbmEventNotificationsConfig object.
@@ -5022,7 +5022,7 @@ The following example shows the format of the OutgoingWebhooksV1IbmEventNotifica
 ```
 {: codeblock}
 
-### PolicyBeforePrototype
+## PolicyBeforePrototype
 {: #cli-before-prototype-example-schema}
 
 The following example shows the format of the PolicyBeforePrototype object.
@@ -5035,7 +5035,7 @@ The following example shows the format of the PolicyBeforePrototype object.
 ```
 {: codeblock}
 
-### PolicyPrototype
+## PolicyPrototype
 {: #cli-prototype-example-schema}
 
 The following example shows the format of the PolicyPrototype object.
@@ -5066,7 +5066,7 @@ The following example shows the format of the PolicyPrototype object.
 ```
 {: codeblock}
 
-### QuotaV1LogRules
+## QuotaV1LogRules
 {: #cli-quota-v1-log-rules-example-schema}
 
 The following example shows the format of the QuotaV1LogRules object.
@@ -5079,7 +5079,7 @@ The following example shows the format of the QuotaV1LogRules object.
 ```
 {: codeblock}
 
-### QuotaV1Rule
+## QuotaV1Rule
 {: #cli-quota-v1-rule-example-schema}
 
 The following example shows the format of the QuotaV1Rule object.
@@ -5093,7 +5093,7 @@ The following example shows the format of the QuotaV1Rule object.
 ```
 {: codeblock}
 
-### RulesV1CreateRuleGroupRequestCreateRuleSubgroup[]
+## RulesV1CreateRuleGroupRequestCreateRuleSubgroup[]
 {: #cli-rules-v1-create-rule-group-request-create-rule-subgroup-example-schema}
 
 The following example shows the format of the RulesV1CreateRuleGroupRequestCreateRuleSubgroup[] object.
@@ -5120,7 +5120,7 @@ The following example shows the format of the RulesV1CreateRuleGroupRequestCreat
 ```
 {: codeblock}
 
-### RulesV1RuleMatcher[]
+## RulesV1RuleMatcher[]
 {: #cli-rules-v1-rule-matcher-example-schema}
 
 The following example shows the format of the RulesV1RuleMatcher[] object.

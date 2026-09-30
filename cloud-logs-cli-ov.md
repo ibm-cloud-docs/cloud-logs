@@ -54,7 +54,11 @@ To target the {{site.data.keyword.logs_full_notm}} instance every time you run a
     ```
     {: pre}
 
-    Global parameters can be stored in a persistent configuration so that you do not need to manually specify each time the plug-in is invoked. Each parameter can be managed with the `ibmcloud logs config` commands.
+    For more information, see [Service API endpoints](docs/cloud-logs?topic=cloud-logs-endpoints_api).
+
+    Global parameters can be stored in a persistent configuration so that you do not need to manually specify each time you run a command.
+
+    You can manage configuration parameters with the `ibmcloud logs config` commands.
     {: tip}
 
 - Option 2: Set the service endpoint in each command that you run.
