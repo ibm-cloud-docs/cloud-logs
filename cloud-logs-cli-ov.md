@@ -18,6 +18,12 @@ subcollection: cloud-logs
 You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to manage your {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
+Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.keyword.logs_full_notm}} CLI commands.
+{: tip}
+
+Use `ibmcloud cloud-logs COMMAND --help` for more information about a command.
+{: tip}
+
 ## Prerequisites
 {: #cloud-logs-cli-ov-prereq}
 
@@ -39,46 +45,42 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 ## Setting the {{site.data.keyword.logs_full_notm}} instance
 {: #cloud-logs-cli-ov-context}
 
-To target the {{site.data.keyword.logs_full_notm}} instance by using a CLI command, use one of the following options:
+To target the {{site.data.keyword.logs_full_notm}} instance every time you run a CLI command, use one of the following options:
 
-- Option 1: Run the `ibmcloud logs config set` command.
+- Option 1: Run the `ibmcloud logs config set` command to configure the service URL and persist the value in the terminal that you use to run the commands.
 
     ```text
     ibmcloud logs config set service-url https://{API_endpoint}
     ```
     {: pre}
 
+    Global parameters can be stored in a persistent configuration so that you do not need to manually specify each time the plug-in is invoked. Each parameter can be managed with the `ibmcloud logs config` commands.
+    {: tip}
 
-- Option 2: Export an environment variable with your {{site.data.keyword.logs_full_notm}} service endpoint URL.
+- Option 2: Set the service endpoint in each command that you run.
+
+    Export an environment variable with your {{site.data.keyword.logs_full_notm}} service endpoint URL.
 
     ```text
     export LOGS_URL=https://{API_endpoint}
     ```
     {: pre}
 
-- Option 3: Set the service endpoint in the command.
+    Add the `--service-url` to each command.
 
     ```text
-    ibmcloud logs --service-url https://{API_endpoint}
+    ibmcloud logs --service-url https://$LOGS_URL
     ```
     {: pre}
 
     Replace `{API_endpoint}` with the API endpoint that is specific to your instance. The API endpoint information can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
 
-## Commands
-{: #cloud-logs-cli-ov-cl-commands}
 
-Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.keyword.logs_full_notm}} CLI commands.
-{: tip}
 
-| Command | Description |
-|---------|-------------|
-| `alert` | Get an alert by ID. |
-| `alert-create` | Create an alert. |
-| `alert-delete` | Delete an alert. |
-| `alert-update` | Update an alert. |
-| `alerts` | List alerts. |
-{: caption="{{site.data.keyword.logs_full_notm}} alert CLI commands" caption-side="bottom"}
+## Commands to manage alerts
+{: #cloud-logs-cli-ov-cl-cmd-alerts}
+
+The following table lists the commands that you can use to manage alerts:
 
 | Command | Description |
 |---------|-------------|
@@ -87,7 +89,20 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `alert-definition-delete` | Delete an alert definition by ID. |
 | `alert-definition-update` | Update an alert definition by ID. |
 | `alert-definitions` | List alert definitions. |
-{: caption="{{site.data.keyword.logs_full_notm}} alert definition CLI commands" caption-side="bottom"}
+{: caption="{{site.data.keyword.logs_full_notm}} V3 alert definition CLI commands" caption-side="bottom"}
+
+
+## Commands to manage queries
+{: #cloud-logs-cli-ov-cl-cmd-query}
+
+The following table lists the command that you can use to manage queries:
+
+| Command | Description |
+|---------|-------------|
+| `query` | Run a query to search the logs. |
+{: caption="{{site.data.keyword.logs_full_notm}} query CLI commands" caption-side="bottom"}
+
+The following table lists the commands that you can use to manage background queries:
 
 | Command | Description |
 |---------|-------------|
@@ -97,6 +112,11 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `background-query-status`, `bgq-status` | Get the status of a background query. |
 {: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) CLI commands" caption-side="bottom"}
 
+## Commands to manage data access rules
+{: #cloud-logs-cli-ov-cl-cmd-bck}
+
+The following table lists the commands that you can use to manage data access rules:
+
 | Command | Description |
 |---------|-------------|
 | `data-access-rule-create` | Create a data access rule. |
@@ -105,12 +125,23 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `data-access-rules` | Get a service instance's data access rules by ID. |
 {: caption="{{site.data.keyword.logs_full_notm}} data access rule CLI commands" caption-side="bottom"}
 
+## Commands to manage data usage
+{: #cloud-logs-cli-ov-cl-cmd-data-usage}
+
+The following table lists the commands that you can use to manage data usage:
+
 | Command | Description |
 |---------|-------------|
 | `data-usage` | Get the daily and detailed data usage. |
 | `data-usage-metrics-export-status` | Get the data usage metrics export status. |
 | `data-usage-metrics-export-status-update` | Update the data usage metrics export status. |
 {: caption="{{site.data.keyword.logs_full_notm}} data usage CLI commands" caption-side="bottom"}
+
+
+## Commands to manage enrichments
+{: #cloud-logs-cli-ov-cl-cmd-enrich}
+
+The following table lists the commands that you can use to manage enrichments:
 
 | Command | Description |
 |---------|-------------|
@@ -119,6 +150,12 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `enrichments` | List all enrichments. |
 {: caption="{{site.data.keyword.logs_full_notm}} enrichment CLI commands" caption-side="bottom"}
 
+
+## Commands to manage streaming
+{: #cloud-logs-cli-ov-cl-cmd-stream}
+
+The following table lists the commands that you can use to manage streaming:
+
 | Command | Description |
 |---------|-------------|
 | `event-stream-target-create` | Create an {{site.data.keyword.messagehub_full_notm}} integration. |
@@ -126,6 +163,12 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `event-stream-target-update` | Update an {{site.data.keyword.messagehub}} integration. |
 | `event-stream-targets` | List all {{site.data.keyword.messagehub}} integrations.
 {: caption="{{site.data.keyword.logs_full_notm}} {{site.data.keyword.messagehub}} integration CLI commands" caption-side="bottom"}
+
+
+## Commands to manage events2metrics
+{: #cloud-logs-cli-ov-cl-cmd-e2m}
+
+The following table lists the commands that you can use to manage events2metrics:
 
 | Command | Description |
 |---------|-------------|
@@ -136,6 +179,11 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `events2metrics-update`, `e2m-update` | Updates the events to metrics definitions. |
 {: caption="{{site.data.keyword.logs_full_notm}} events to metrics CLI commands" caption-side="bottom"}
 
+## Commands to manage webhooks
+{: #cloud-logs-cli-ov-cl-cmd-wh}
+
+The following table lists the commands that you can use to manage webhooks:
+
 | Command | Description |
 |---------|-------------|
 | `outgoing-webhook` | Gets an outbound integration by ID. |
@@ -144,6 +192,11 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `outgoing-webhook-update` | Update an outbound integration. |
 | `outgoing-webhooks` | List outbound integrations. |
 {: caption="{{site.data.keyword.logs_full_notm}} outbound integration CLI commands" caption-side="bottom"}
+
+## Commands to manage policies
+{: #cloud-logs-cli-ov-cl-cmd-pol}
+
+The following table lists the commands that you can use to manage policies:
 
 | Command | Description |
 |---------|-------------|
@@ -154,10 +207,12 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `policy-update` | Updates an existing policy. |
 {: caption="{{site.data.keyword.logs_full_notm}} policy CLI commands" caption-side="bottom"}
 
-| Command | Description |
-|---------|-------------|
-| `query` | Run a query to search the logs. |
-{: caption="{{site.data.keyword.logs_full_notm}} query CLI commands" caption-side="bottom"}
+
+
+## Commands to manage rule groups
+{: #cloud-logs-cli-ov-cl-cmd-rg}
+
+The following table lists the commands that you can use to manage rule groups:
 
 | Command | Description |
 |---------|-------------|
@@ -168,6 +223,12 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `rule-groups` | Gets all rule groups. |
 {: caption="{{site.data.keyword.logs_full_notm}} rules CLI commands" caption-side="bottom"}
 
+
+## Commands to manage views
+{: #cloud-logs-cli-ov-cl-cmd-view}
+
+The following table lists the commands that you can use to manage views:
+
 | Command | Description |
 |---------|-------------|
 | `view` | Gets a view by ID. |
@@ -176,6 +237,11 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `view-update` | Replaces an existing view. |
 | `views` | Lists all company public views. |
 {: caption="{{site.data.keyword.logs_full_notm}} view CLI commands" caption-side="bottom"}
+
+## Commands to manage view folders
+{: #cloud-logs-cli-ov-cl-cmd-view-folder}
+
+The following table lists the commands that you can use to manage view folders:
 
 | Command | Description |
 |---------|-------------|
@@ -186,6 +252,11 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `view-folders` | List view's folders. |
 {: caption="{{site.data.keyword.logs_full_notm}} view folder CLI commands" caption-side="bottom"}
 
+## Commands to manage extensions
+{: #cloud-logs-cli-ov-cl-cmd-ext}
+
+The following table lists the commands that you can use to manage extensions:
+
 | Command | Description |
 |---------|-------------|
 | `extensions` | Gets an extension by ID. |
@@ -194,12 +265,3 @@ Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.ke
 | `extension-deployment-managep` | Deploy or update deployment of an extension. |
 | `extensions` | Get list of extensions. |
 {: caption="{{site.data.keyword.logs_full_notm}} extensions CLI commands" caption-side="bottom"}
-
-| Command | Description |
-|---------|-------------|
-| `config` | Control the persistent configuration. |
-| `help` | Show help information. |
-{: caption="{{site.data.keyword.logs_full_notm}} additional CLI commands" caption-side="bottom"}
-
-For more information about using these commands, log in to the {{site.data.keyword.cloud_notm}} and run `ibmcloud logs command_name -h`. For example, `ibmcloud logs views -h`.
-{: note}

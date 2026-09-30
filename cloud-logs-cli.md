@@ -10,8 +10,20 @@ keywords: cloud logs api, cli, plugin
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Cloud Logs CLI
+# {{site.data.keyword.logs_full_notm}} CLI
 {: #cloud-logs-cli}
+
+You can use the {{site.data.keyword.cloud_notm}} command-line interface (CLI) to manage your {{site.data.keyword.logs_full_notm}} instance.
+{: shortdesc}
+
+## Prerequisites
+{: #logs-cli-prereq}
+
+1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
+2. [Install the {{site.data.keyword.logs_full_notm}} CLI Plugin](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov#cloud-logs-cli-ov-install).
+3. [Set the IBM Cloud Logs instance](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov#cloud-logs-cli-ov-context) that you want to target with the CLI commands.
+
+
 
 ## Config
 {: #cloud-logs-cli-config-command}
@@ -814,6 +826,7 @@ ibmcloud cloud-logs alert-update \
 {: pre}
 
 Alternatively, granular options are available for the sub-fields of JSON string options:
+
 ```sh
 ibmcloud cloud-logs alert-update \
     --id 3dc02998-0b50-4ea8-b68a-4779d716fa1f \
