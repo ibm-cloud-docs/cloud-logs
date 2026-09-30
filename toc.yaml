@@ -614,9 +614,8 @@ toc:
       - topicgroup:
           label: CLI Reference
           topics:
-          - topic: cloud-logs-cli-temp.md
+          - topic: cloud-logs-cli-ov.md
             navtitle: Working with the IBM Cloud Logs CLI
-          - cloud-logs-cli-summary.md
           - topic: cloud-logs-cli.md
             navtitle: CLI Reference
       - topicgroup:

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-09-30"
 
 keywords:
 
@@ -13,18 +13,18 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 # Working with the {{site.data.keyword.logs_full_notm}} CLI
-{: #cloud-logs-cli-temp}
+{: #cloud-logs-cli-ov}
 
 You can use the {{site.data.keyword.logs_full}} command-line interface (CLI) to manage your {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
 ## Prerequisites
-{: #cloud-logs-cli-temp-prereq}
+{: #cloud-logs-cli-ov-prereq}
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
 ## Installing the {{site.data.keyword.logs_full_notm}} CLI Plugin
-{: #cloud-logs-cli-temp-install}
+{: #cloud-logs-cli-ov-install}
 
 Install the {{site.data.keyword.logs_full_notm}} CLI plug-in by running the following command:
 
@@ -37,7 +37,7 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 {: tip}
 
 ## Setting the {{site.data.keyword.logs_full_notm}} instance
-{: #cloud-logs-cli-temp-context}
+{: #cloud-logs-cli-ov-context}
 
 To target the {{site.data.keyword.logs_full_notm}} instance by using a CLI command, use one of the following options:
 
@@ -66,7 +66,7 @@ To target the {{site.data.keyword.logs_full_notm}} instance by using a CLI comma
     Replace `{API_endpoint}` with the API endpoint that is specific to your instance. The API endpoint information can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
 
 ## Commands
-{: #cloud-logs-cli-temp-cl-commands}
+{: #cloud-logs-cli-ov-cl-commands}
 
 Both `ibmcloud cloud-logs` and `ibmcloud logs` can be used to run {{site.data.keyword.logs_full_notm}} CLI commands.
 {: tip}
