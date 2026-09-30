@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-14"
+lastupdated: "2026-09-30"
 
 keywords:
 
@@ -31,10 +31,10 @@ To configure this feature, you must attach a metrics bucket to your {{site.data.
 
 The following metrics are generated when you enable Data Usage metrics:
 - `cx_data_usage_bytes_total`: Tracks your total data usage in bytes.
-- `cx_alerts`: Aggregate data when an alert is triggered or resolved into a gauge-type metric.
+- `cx_alerts`: Tracks when an alert is triggered or resolved into a gauge-type metric.
 
 
-The information gathered on the new metrics includes the following labels:
+The information that is gathered on the system metrics include the following labels:
 
 | Label	| Description |
 |-------|-------------|

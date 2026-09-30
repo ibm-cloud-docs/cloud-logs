@@ -2,17 +2,15 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-09-30"
 
 keywords:
 
 subcollection: cloud-logs
 
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Generating data usage overview reports
 {: #data-usage-reports}
@@ -108,14 +106,16 @@ A successful response returns the data usage overview report for the specified t
 
 Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-temp#logs-cli-prereq-temp) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
 
-To export data usage by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud logs data-usage`** command. For example, the following command exports the data usage detailed report for last 30 days.
+To export data usage by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud logs data-usage`** command.
 
-```text
+For example, the following command exports the data usage detailed report for last 30 days.
+
+```sh
 ibmcloud logs data-usage --query daily --range last_30_days
 ```
 {: pre}
 
-Overview data usage reports are exported using `query` parameter with value `daily`.
+Overview data usage reports are exported using the `query` parameter with the value set to `daily`.
 
 You can retrieve the data usage report over a specified time range for your {{site.data.keyword.logs_full_notm}} instance with `range` request parameters. Valid values of the `range` parameter are `current_month`, `last_30_days`, `last_90_days`, and `last_week`. The default is `current_month`.
 

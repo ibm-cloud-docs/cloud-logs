@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-14"
+lastupdated: "2026-09-30"
 
 keywords:
 
@@ -72,7 +72,7 @@ Account preferences apply to user sessions across all views and pages.
 
 By default, when a user launches the *Explorer Logs > Logs* section or logs into an {{site.data.keyword.logs_full_notm}} instance that has the `User-level default homepage` set to *Explorer Logs*, the user lands on the default view layout.
 
-As a user, you can configure the column layout, the filter options and the view mode (JSON, condensed, 1 line, and more) and more  in the default Logs view. Then you can save this configuration and set it as your default view. For more information, see [Creating a custom view as default](/docs/cloud-logs?topic=cloud-logs-custom_views_default).
+As a user, you can configure the column layout, the filter options and the view mode such as JSON, condensed, 1 line, or 2 lines in the default Logs view. Then, you can save this configuration and set it as your default view. For more information, see [Creating a custom view as default](/docs/cloud-logs?topic=cloud-logs-custom_views_default).
 
 Then, the default homepage that is launched when the user logs in is set to the default view that the user hascconfigured for `Logs Explorer`.
 

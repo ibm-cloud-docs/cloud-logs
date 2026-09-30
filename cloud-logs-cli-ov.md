@@ -54,8 +54,6 @@ To target the {{site.data.keyword.logs_full_notm}} instance every time you run a
     ```
     {: pre}
 
-    For more information, see [Service API endpoints](docs/cloud-logs?topic=cloud-logs-endpoints_api).
-
     Global parameters can be stored in a persistent configuration so that you do not need to manually specify each time you run a command.
 
     You can manage configuration parameters with the `ibmcloud logs config` commands.
@@ -73,13 +71,13 @@ To target the {{site.data.keyword.logs_full_notm}} instance every time you run a
     Add the `--service-url` to each command.
 
     ```text
-    ibmcloud logs --service-url https://$LOGS_URL
+    ibmcloud logs --service-url $LOGS_URL
     ```
     {: pre}
 
     Replace `{API_endpoint}` with the API endpoint that is specific to your instance. The API endpoint information can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
 
-
+For more information, see [Service API endpoints](docs/cloud-logs?topic=cloud-logs-endpoints_api).
 
 ## Commands to manage alerts
 {: #cloud-logs-cli-ov-cl-cmd-alerts}
