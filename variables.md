@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-05-16"
+  years:  2024, 2026
+lastupdated: "2026-10-01"
 
 keywords: 
 
@@ -115,6 +115,12 @@ You can also use predefined variables in your PromQL query.
 | `${__range}` | This variable represents the duration of the dashboard time range. It is rendered as an interval string supported by PromQL. For example, if you select a time range from `13.00` to `14.30`, then the `${__range}` variable is calculated as `90m`. |	`1d`, `5m` |
 | `${__range_s}` | Calculated as the number of seconds in the selected time frame. | `60s`, `180s` |
 | `${__range_ms}` |	Calculated as the number of milliseconds in the selected time frame. | `60ms`, `180ms` |
+| `${__interval}` |  Calculated based  on the selected time range. Used to group time series data efficiently in visualizations. The behavior depends on the widget type. In widgets that support time bucket configuration (such as line charts and vertical bar charts by time), this variable resolves to the value set in the widget's configuration. In other widgets, it defaults to the selected time range divided by 96. | `5m`, `1h`, `1d`| 
+| `${__interval_s}` |  Calculated as a number in seconds. Useful for functions that require interval math in seconds. | `60s`, `1200s` | 
+| `${__interval_ms}` | Calculated in milliseconds as a number. Useful for calculations or functions requiring millisecond precision. | `60000ms`, `1200000ms` | 
+| `${__rate_interval}` |  A dynamic range for PromQL rate() queries. It resolves to the larger of `${__rate_interval}` + `15s` or `60s`, ensuring both adequate overlap and enough data points for accurate calculation. | `60s`, `2m` | 
+| `${__rate_interval_s}` |  Calculated as a number in seconds. | `60s`, `120m` | 
+| `${__rate_interval_ms}`  | Calculated as a number in milliseconds. Enables precise math and comparisons. |  `6000000ms`, `1200000ms` | 
 {: caption="Predefined PromQL variables" caption-side="bottom"}
 
 For example, you might use the `__range variable` in `sum_over_time`.
