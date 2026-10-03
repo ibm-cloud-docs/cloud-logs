@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-30"
+lastupdated: "2026-10-03"
 
 keywords:
 
@@ -61,7 +61,7 @@ You can change any of the following preferences in an {{site.data.keyword.logs_f
 
     When the setting is enabled, {{site.data.keyword.logs_full_notm}} generates a metric for every alert that triggers or is resolved.
 
-    You can add this metric to a custom dashboard to monitor alerts in your instance. For more information, see [custom dashboards](/docs/cloud-logs?topic=cloud-logs-create_dashboards) and [Creating a IBM Cloud Logs gauge widget](//docs/cloud-logs?topic=cloud-logs-widget_gauge).
+    You can add this metric to a custom dashboard to monitor alerts in your instance. For more information, see [custom dashboards](/docs/cloud-logs?topic=cloud-logs-create_dashboards) and [Creating a IBM Cloud Logs gauge widget](/docs/cloud-logs?topic=cloud-logs-widget_gauge).
 
     
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-30"
+  years:  2024, 2026
+lastupdated: "2026-10-03"
 
 keywords:
 
@@ -122,13 +122,13 @@ Complete the following steps:
     `-k <iam_api_key>`
     :   Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
-        For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
+        For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/iam?topic=iam-manapikey).
         {: tip}
 
     `-d <trusted_profile_id>`
     :   Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Setting up Permissions for Ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions&interface=cli). You must create the instance with the metadata service enabled and link the trusted profile to your instance by specifying the ID when creating it. For more information see [Creating virtual server instances](/docs/vpc?topic=vpc-creating-virtual-servers).
 
-        For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
+        For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/iam?topic=iam-trusted-profile-update&interface=ui).
         {: tip}
 
    
