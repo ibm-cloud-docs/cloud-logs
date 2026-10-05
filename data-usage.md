@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-26"
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -25,7 +25,7 @@ In {{site.data.keyword.logs_full_notm}}, you can get detailed insights into your
 
 1. You must attach a metrics bucket to your {{site.data.keyword.logs_full_notm}} instance. For more information, see [Configuring the metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
 
-2. Enable Data Usage system metrics. For more information, see [Enabling System metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics).
+2. Enable Data Usage system metrics. For more information, see [Enabling System metrics](/docs/cloud-logs?topic=cloud-logs-data-usage).
 
 
 ## Launching the Data Usage page

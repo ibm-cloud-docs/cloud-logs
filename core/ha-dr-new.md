@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-08-20"
+  years: 2026
+lastupdated: "2026-10-05"
 
 keywords: HA for IBM Cloud Logs, DR for IBM Cloud Logs, IBM Cloud Logs recovery time objective, IBM Cloud Logs recovery point objective
 
@@ -151,7 +151,7 @@ In the case of a regional disaster, you must complete the following steps to rec
 
     * If your {{site.data.keyword.logs_full_notm}} instance in the the disaster region was using a _Cross Region_ {{site.data.keyword.cos_full_notm}} (COS) bucket, you can attach the same bucket to the new {{site.data.keyword.logs_full_notm}} instance, but you cannot query data created over the {{site.data.keyword.logs_full_notm}} instance in the disaster region using the new {{site.data.keyword.logs_full_notm}} instance's dashboards or CLI. You will only be able to query data that is ingested in the new region. You can download and view existing data from the region that is down. For more information about the archive data structure, see [Querying data directly from the archive](/docs/cloud-logs?topic=cloud-logs-query-archive-data-bucket).
 
-    * If you need to access the logs from the {{site.data.keyword.logs_full_notm}} instance in the disaster area using the newly created {{site.data.keyword.logs_full_notm}} instance's dashboard or CLI, [contact IBM Support](/docs/account?topic=account-using-avatar&interface=ui). For more information about the disaster recovery strategy for {{site.data.keyword.cos_full_notm}}, see [Cross-Region Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-geo), [Data security](/docs/cloud-object-storage?topic=cloud-object-storage-security), [Create a Secure Content Store](/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store), and [Using replication for business continuity and disaster recovery](/docs/cloud-object-storage?topic=cloud-object-storage-replication-overview#replication-bcdr).
+    * If you need to access the logs from the {{site.data.keyword.logs_full_notm}} instance in the disaster area using the newly created {{site.data.keyword.logs_full_notm}} instance's dashboard or CLI, [contact IBM Support](/docs/support?topic=support-using-avatar). For more information about the disaster recovery strategy for {{site.data.keyword.cos_full_notm}}, see [Cross-Region Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-geo), [Data security](/docs/cloud-object-storage?topic=cloud-object-storage-security), [Create a Secure Content Store](/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store), and [Using replication for business continuity and disaster recovery](/docs/cloud-object-storage?topic=cloud-object-storage-replication-overview#replication-bcdr).
 
     * If you were using local or regional buckets from the affected region, create new buckets. Attach the buckets to the new {{site.data.keyword.logs_full_notm}} instance. For more information, see [Configuring the data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket&interface=ui) and [Configuring the metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket&interface=ui).
 
@@ -313,4 +313,4 @@ All upgrades follow the {{site.data.keyword.IBM_notm}} service best practices an
 
 
 
-Changes that impact customer workloads are detailed in notifications. For more information, see [monitoring notifications and status](/docs/account?topic=account-viewing-cloud-status) for planned maintenance, announcements, and release notes that impact this service.
+Changes that impact customer workloads are detailed in notifications. For more information, see [monitoring notifications and status](/docs/account) for planned maintenance, announcements, and release notes that impact this service.

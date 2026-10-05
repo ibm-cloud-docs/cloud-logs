@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-30"
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -27,7 +27,7 @@ Review the available [service plans and pricing](/docs/cloud-logs?topic=cloud-lo
 
 Also, consider how long you need to keep your data for fast search in {{site.data.keyword.frequent-search}}. You can configure your {{site.data.keyword.logs_full_notm}} instance to save your data in {{site.data.keyword.frequent-search}} for a shorter time period.
 
-Data is metered by the service per gigabytes ingested. You can configure [data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics) to monitor your data usage. Data usage metrics requires that you have a [metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket) configured.
+Data is metered by the service per gigabytes ingested. You can configure [data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics-analyzer) to monitor your data usage. Data usage metrics requires that you have a [metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket) configured.
 {: tip}
 
 ## Configuring the TCO optimizer

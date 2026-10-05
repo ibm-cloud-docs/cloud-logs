@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-02-06"
+  years:  2024, 2026
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -15,17 +15,17 @@ subcollection: cloud-logs
 # Protecting resources with context-based restrictions
 {: #iam-cbr}
 
-[Context-based restrictions](/docs/account?topic=account-context-restrictions-whatis&interface=ui) provide a way for administrators to limit access to resources. What if certain data must be accessed from trusted networks only? A properly configured policy restricts all access to data unless the request originates from an approved [network zone](/docs/account?topic=account-context-restrictions-whatis&interface=ui#network-zones-whatis) and endpoint type (public, private, or direct).
+[Context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis) provide a way for administrators to limit access to resources. What if certain data must be accessed from trusted networks only? A properly configured policy restricts all access to data unless the request originates from an approved [network zone](/docs/account?topic=account-context-restrictions-whatis&interface=ui#network-zones-whatis) and endpoint type (public, private, or direct).
 {: shortdesc}
 
 ## Using context-based restrictions
 {: #setting-cbr}
 
-A [context-based restriction](/docs/account?topic=account-context-restrictions-whatis&interface=ui) is comprised of a **rule** and one or more **contexts** (network zones and/or endpoint type). These restrictions do not replace IAM policies, but simply check that a request is coming from an allowed context, such as a range of IP addresses, VPCs, or service references.
+A [context-based restriction](/docs/iam?topic=iam-context-restrictions-whatis) is comprised of a **rule** and one or more **contexts** (network zones and/or endpoint type). These restrictions do not replace IAM policies, but simply check that a request is coming from an allowed context, such as a range of IP addresses, VPCs, or service references.
 
 A user must have the `Administrator` role on a service to create, update, or delete rules.  A user must have either the `Editor` or `Administrator` role to create, update, or delete network zones.
 
-You can learn more about how context-based restrictions work in the [detailed documentation](/docs/account?topic=account-context-restrictions-create&interface=ui), or you can follow these tutorials:
+You can learn more about how context-based restrictions work in the [detailed documentation](/docs/iam?topic=iam-context-restrictions-create&interface=ui), or you can follow these tutorials:
 
 - [Restricting access to {{site.data.keyword.logs_full_notm}} from a network zone](/docs/cloud-logs?topic=cloud-logs-iam-cbr-tutorial).
 - [Restricting access to integrated services from {{site.data.keyword.logs_full_notm}} using context-based restrictions](/docs/cloud-logs?topic=cloud-logs-iam-cbr-tutorial-integrated-services)
@@ -79,4 +79,4 @@ Define rules to protect access to resources in your account. The contexts that y
 {: #cbr-limitations}
 
 - After you create, enforce, or disable enforcement of a rule, it might take up to 10 minutes for the change to take effect.
-- An account is limited in the number of rules and network zones that can be supported. For more details see [Context-based restrictions limits](/docs/account?topic=account-context-restrictions-whatis#cbr-limits).
+- An account is limited in the number of rules and network zones that can be supported. For more details see [Context-based restrictions limits](/docs/iam?topic=iam-context-restrictions-whatis#cbr-limits).

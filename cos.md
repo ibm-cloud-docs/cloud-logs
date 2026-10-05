@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-03-19"
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -23,7 +23,7 @@ You must manage the {{site.data.keyword.cos_full_notm}} buckets that you attach 
 ## Before you begin
 {: #cos_pre_req}
 
-To manage buckets, your user must be granted permissions to work with buckets on the {{site.data.keyword.cos_full_notm}} instance. For more information about roles, see [Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-with-iam&interface=ui).
+To manage buckets, your user must be granted permissions to work with buckets on the {{site.data.keyword.cos_full_notm}} instance. For more information about roles, see [Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 For {{site.data.keyword.logs_full_notm}} to access configured {{site.data.keyword.cos_short}} buckets, S2S authorization is required. For more information, see [Creating a S2S authorization to grant access to a bucket](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-cos&interface=ui).
 {: important}

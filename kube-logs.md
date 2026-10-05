@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -103,7 +103,7 @@ Before you provision the {{site.data.keyword.agent}} as a daemonset, you need an
 
 First, create a service ID and obtain an API key.
 
-1. Create a [service ID](/docs/account?topic=account-serviceids&interface=ui) by running the following command.
+1. Create a [service ID](/docs/iam?topic=iam-serviceids&interface=ui) by running the following command.
 
    ```text
    ibmcloud iam service-id-create kubernetes-logs-agent --description "Service ID for sending logs from IKS"

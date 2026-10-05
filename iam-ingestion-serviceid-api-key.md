@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -24,7 +24,7 @@ An individual user ID API key should only be used for non-production environment
 
 The API key is used to open a secure web socket to the {{site.data.keyword.logs_full_notm}} ingestion endpoint to authenticate the {{site.data.keyword.agent}}.
 
-API keys are used to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+API keys are used to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys&interface=ui).
 
 Make sure the user who grants the policy has the `Sender` role permissions.
 {: important}
@@ -32,9 +32,9 @@ Make sure the user who grants the policy has the `Sender` role permissions.
 Make sure to grant the service ID the `Sender` role before generating the API key.
 {: note}
 
-- [Creating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#create_service_key).
-- [Updating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#update_service_key).
-- [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#delete_service_key).
+- [Creating an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#create_service_key).
+- [Updating an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#create_service_key).
+- [Deleting an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#create_service_key).
 
 
 ## Generating an API Key by using the CLI
