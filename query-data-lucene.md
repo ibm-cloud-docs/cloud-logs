@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-14"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -78,6 +78,7 @@ Complete the following steps to run a query in the *Custom Dashboards* page in {
 4. In the widget's configuration panel, select **Lucene**.
 
     ![Lucene query in a custom dashboard](/images/query-dashboard-Lucene.png)
+    {: #query-data-lucene-query}
 
 5. Enter a Lucene query.
 

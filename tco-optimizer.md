@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -58,7 +58,7 @@ When you configure TCO policies, each policy is assigned a priority. The selecte
 | `Low` | {{site.data.keyword.compliance}} |
 | `Blocked` | `[*]` |
 {: caption="Mapping of policy priority to TCO pipeline" caption-side="bottom"}
-{: #tco_mapping}
+
 
 `[*]` Logs matching policies with the `Blocked` priority are dropped and are not sent to any TCO pipeline.
 

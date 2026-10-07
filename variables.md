@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-07"
 
 keywords: 
 
@@ -60,27 +60,7 @@ Query variable
       Include all
       :    *Include all* can be selected when the multi-value option is enabled. The query will select all available and future values for a specific time frame, regardless of your specific selection.
 
-      When both options are selected, all variable options are selected by default, and one or more can be deselected. If neither option is specified, you can select one variable value at a time.
-
-7. For `query` type variables:
-
-   * Specify the query source (`logs` or `metrics`).
-
-   * For `variable type` specify `values` for `logs`. For `metrics` specify `metric names`, `metric labels`, or `label values`. If you select `metric labels`, select the label to be used for the displayed values.
-
-   * For `logs`, define the field by selecting a log key that you want to query. A list of current variable values are displayed in the **Values Preview** in alphanumeric order.
-
-   * For `metrics`, in **Metrics regex**, enter a regex expression to fetch the list of metrics that you would like displayed. For example, `^kube(.*)` returns all metric names that begin with kube.
-
-      * For `label values`, for **Metric label**, choose the label for the displayed values. Make the label dynamic by inserting a variable, for example `Pod Name = {{ pod }}`.
-
-      * For `label values`, for **Label filters**, create one or more nested variables and an extra filter layer for your query. For example, you can choose to filter the labels by cluster by selecting a value that is `{{ podvalue }}` or the hardcoded name of your cluster.
-
-      * For `metrics`, for **Variable value display name**, define how the values are displayed in the drop-down selection list.
-
-         A list of current variable values for the field is displayed in the **Values Preview**.
-
-   * For **Sort values**, select how to sort the data in the **Values Preview**.
+      When both options are selected, all variable options are selected by default, and one or more can be deselected. If neither option is specified, you can select one variable value at a time. 
 
 8. Click **Save**.
 
@@ -104,9 +84,7 @@ After a variable is created, the variable values that are chosen by the user can
 ### PromQL queries
 {: #variables-promql}
 
-Use `{{ variable_name }}` in the PromQL query language.
-
-For example, the PromQL query `sum(kube_pod_owner{pod=~"{{ pod }}"})` is used to aggregate metrics that are related to Kubernetes pods. `{pod=~"{{ pod }}"}` is a label selector that filters the `kube_pod_owner` metric for the specific pod whose name matches the variable's value. The `{{ pod }}` placeholder is a template variable, which replaces the actual pod name when the query is run.
+Use `{{ variable_name }}` in the PromQL query language. 
 
 You can also use predefined variables in your PromQL query.
 
@@ -122,10 +100,3 @@ You can also use predefined variables in your PromQL query.
 | `${__rate_interval_s}` |  Calculated as a number in seconds. | `60s`, `120m` | 
 | `${__rate_interval_ms}`  | Calculated as a number in milliseconds. Enables precise math and comparisons. |  `6000000ms`, `1200000ms` | 
 {: caption="Predefined PromQL variables" caption-side="bottom"}
-
-For example, you might use the `__range variable` in `sum_over_time`.
-
-```text
-sum_over_time(kube_pod_owner[${__range}])
-```
-{: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -69,7 +69,7 @@ Where
 
 - `INSTANCE_ID`: GUID of the {{site.data.keyword.logs_full_notm}} instance where you want to send logs.
 - `REGION`: Region where the {{site.data.keyword.logs_full_notm}} instance is located.
-- `IAM_TOKEN`: [IAM bearer token](#send-logs-token) used to request authorization to seng to logs. The pemission `logs.data.send` is required.
+- `IAM_TOKEN`: [IAM bearer token](/docs/cloud-logs?topic=cloud-logs-send-logs-api#send-logs-token) used to request authorization to seng to logs. The pemission `logs.data.send` is required.
 
 
 Use the following cURL command to send a log line:

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -426,7 +426,7 @@ ibmcloud logs background-query-data --query-id df47fff7-131d-41dc-9328-05489a93e
 {: #background-query-cancel-cli}
 {: cli}
 
-You can cancel a [background query](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) by using the ID returned when running the background query command.
+You can cancel a [background query](docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) by using the ID returned when running the background query command.
 
 ```text
 ibmcloud logs background-query-cancel --query-id QUERY-ID --force
@@ -437,7 +437,7 @@ ibmcloud logs background-query-cancel --query-id QUERY-ID --force
 {: #cloud-logs-background-query-cancel-cli-options}
 
 `--query-id` (strfmt.UUID)
-:   Query ID returned from a [background query](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) command. Required.
+:   Query ID returned from a [background query](docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) command. Required.
 
     The value is 36 characters in length and must match the regular expression `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`.
 
@@ -450,5 +450,3 @@ Example
 ibmcloud logs background-query-cancel --query-id df47fff7-131d-41dc-9328-05489a93e27c
 ```
 {: pre}
-
-

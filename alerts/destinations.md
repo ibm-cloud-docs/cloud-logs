@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-02-05"
+  years:  2024, 2026
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -49,7 +49,7 @@ You can configure a custom template. For more information, see [Webhook Notifica
 
 You can configure a PagerDuty destination. For more information, see [Configuring a PagerDuty destination](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty).
 
-Only [event alerts](https://developer.pagerduty.com/docs/send-alert-event){: external} are sent to Pagerduty.
+Only [event alerts](https://docs.pagerduty.com/developer/send-alert-event){: external} are sent to Pagerduty.
 {: restriction}
 
 There is a 512 KB size limit for the event [payload](/docs/cloud-logs?topic=cloud-logs-event-payload&interface=ui) sent by {{site.data.keyword.logs_full_notm}} via {{site.data.keyword.en_short}} to PagerDuty.
