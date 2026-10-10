@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-10"
 
 keywords:
 
@@ -65,17 +65,17 @@ To understand how to contol your cost when using {{site.data.keyword.logs_full_n
 
 2. {{site.data.keyword.logs_full_notm}} ingests (receives) the data.
 
-3. {{site.data.keyword.logs_full_notm}} parsing rules are applied to the ingested data.
+3. {{site.data.keyword.logs_full_notm}} parsing rules and enrichments are applied to the ingested data.
 
 4. TCO [policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-create-policy) are applied and the data is assigned to the appropriate [data pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-about), or dropped, depending on the policy.
 
-A log is considered to be ingested for the purposes of billing once the parsing rules and TCO policies have been applied.  Logs that are blocked before being sent to the data pipelines do not incur charges and these logs are not retained.
+A log is considered to be ingested for the purposes of billing once the parsing rules, enrichments, and TCO policies have been applied. Logs that are blocked before being sent to the data pipelines do not incur charges and these logs are not retained.
 {: important}
 
 ## Controlling ingested data
 {: #cc-ingest-control}
 
-In addition to controlling the data pipelines where your data is kept within {{site.data.keyword.logs_full_notm}}, you can control the data that is ingested by {{site.data.keyword.logs_full_notm}}.
+In addition to controlling the data pipelines where your data is kept within {{site.data.keyword.logs_full_notm}}, you can control the data that is ingested by {{site.data.keyword.logs_full_notm}} by configuring parsing rules or filtering and restructuring data sent through the {{site.data.keyword.agent}}.
 
 ### Using parsing rules
 {: #cc-parse}

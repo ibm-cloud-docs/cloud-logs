@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-03"
+lastupdated: "2026-10-10"
 
 keywords:
 
@@ -34,9 +34,7 @@ You can change any of the following preferences in an {{site.data.keyword.logs_f
 
     Through this setting, you can change the default landing page when a user logs in to any valid option.
 
-    If a user logs into an intance and does not change the default view or default dashboard, then, the default homepage that is launched when the user logs in is set to the preference that you select in this setting for `Custom Dashboards`or `Logs Explorer`.
-
-    If a user logs into an intance and changes the default view or default custom dashboard, then, the default homepage that is launched when the user logs in is set to the preference that the user configured for `Custom Dashboards`or `Logs Explorer`.
+    If a user logs into an intance and changes the default view or default custom dashboard, then, the default homepage that is launched when the user logs in is set to the preferences that the user configures for `Custom Dashboards` or `Logs Explorer`.
 
 - `Change time zone settings`
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-03"
+lastupdated: "2026-10-10"
 
 keywords:
 
@@ -25,7 +25,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.cos_full_notm}} is a highly available, durable, and secure platform for storing unstructured data. The files that are uploaded into {{site.data.keyword.cos_full_notm}} are called objects. Objects can be anywhere from a few bytes up to 10TB. They are organized into buckets that serve as containers for objects, and which can be configured independently from one another in terms of locations, resiliency, billing rates, security, and object lifecycle. For more information, see [What is {{site.data.keyword.cos_full_notm}}?](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
 
-To manage buckets, your user must be granted permissions to work with buckets on the {{site.data.keyword.cos_full_notm}} instance. For more information about roles, see [Identity and Access Management roles](docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage&interface=ui).
+To manage buckets, your user must be granted permissions to work with buckets on the {{site.data.keyword.cos_full_notm}} instance. For more information about roles, see [Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-iam).
 
 To create a bucket, you can choose 1 of the following options:
 

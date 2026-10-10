@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-30"
+lastupdated: "2026-10-10"
 
 keywords:
 
@@ -75,9 +75,8 @@ To target the {{site.data.keyword.logs_full_notm}} instance every time you run a
     ```
     {: pre}
 
-    Replace `{API_endpoint}` with the API endpoint that is specific to your instance. The API endpoint information can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI.
+    Replace `{API_endpoint}` with the API endpoint that is specific to your instance. The API endpoint information can be copied from the service details page in the {{site.data.keyword.logs_full_notm}} UI. For more information, see [Service API endpoints](docs/cloud-logs?topic=cloud-logs-endpoints_api).
 
-For more information, see [Service API endpoints](docs/cloud-logs?topic=cloud-logs-endpoints_api).
 
 ## Commands to manage alerts
 {: #cloud-logs-cli-ov-cl-cmd-alerts}

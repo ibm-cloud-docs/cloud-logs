@@ -307,6 +307,7 @@ toc:
             navtitle: Using Visual Explorer
           - topic: widget_query_builder.md
           - topic: variables.md
+            navtitle: Working with variables
           - topicgroup:
               label: Creating widgets
               topics:
