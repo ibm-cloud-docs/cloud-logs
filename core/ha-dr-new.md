@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-11"
 
 keywords: HA for IBM Cloud Logs, DR for IBM Cloud Logs, IBM Cloud Logs recovery time objective, IBM Cloud Logs recovery point objective
 
@@ -54,11 +54,11 @@ A region (location) is a geographically and physically separate group of one or 
 
 
 
-| Feature | Description | 
-| -------------- | -------------- | 
-| Multi-zone region deployment | {{site.data.keyword.logs_full_notm}} is deployed only into multi-zone regions (MZRs), and within an MZR, the data plane cluster spans all three zones, ensuring that the loss of a zone does not impact service availability. | 
+| Feature | Description |
+| -------------- | -------------- |
+| Multi-zone region deployment | {{site.data.keyword.logs_full_notm}} is deployed only into multi-zone regions (MZRs), and within an MZR, the data plane cluster spans all three zones, ensuring that the loss of a zone does not impact service availability. |
 | {{site.data.keyword.logs_full_notm}} resources replication across zones | All {{site.data.keyword.logs_full_notm}} resources, such as alerts, metrics & logs, are replicated across three zones within MZRs. This ensures that the data will be retained in the event of a zone loss. |
-| Liveness / readiness monitoring | All microservices are monitored via Kubernetes liveness and readiness probes. | 
+| Liveness / readiness monitoring | All microservices are monitored via Kubernetes liveness and readiness probes. |
 {: caption="HA features for {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 
@@ -82,10 +82,10 @@ There is no automatic cross-regional failover or cross-regional disaster recover
 
 
 
-| Feature | Description | 
-| -------------- | -------------- | 
-| Alternate region | Service running on an alternate region can be used, separate from the main service | 
-| Database backup | A copy of the current dataset is stored | 
+| Feature | Description |
+| -------------- | -------------- |
+| Alternate region | Service running on an alternate region can be used, separate from the main service |
+| Database backup | A copy of the current dataset is stored |
 {: caption="DR features for {{site.data.keyword.logs_full_notm}}" caption-side="bottom"}
 
 
@@ -313,4 +313,4 @@ All upgrades follow the {{site.data.keyword.IBM_notm}} service best practices an
 
 
 
-Changes that impact customer workloads are detailed in notifications. For more information, see [monitoring notifications and status](/docs/account) for planned maintenance, announcements, and release notes that impact this service.
+Changes that impact customer workloads are detailed in notifications. For more information, see [monitoring notifications and status](docs/account?topic=account-best-practices) for planned maintenance, announcements, and release notes that impact this service.

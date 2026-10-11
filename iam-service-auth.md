@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-11"
 
 keywords:
 
@@ -51,7 +51,7 @@ The following table lists the different S2S authorizations that you might need t
 {: caption="S2S authorizations."}
 
 
-For more information, see [Using authorizations to grant access between services](/docs/account).
+For more information, see [Using authorizations to grant access between services](/docs/iam?topic=iam-serviceauth&interface=ui).
 
 
 

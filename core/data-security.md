@@ -2,7 +2,7 @@
 
 copyright:
   years:  2025, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-10-11"
 
 keywords:
 
@@ -102,12 +102,17 @@ When you delete your {{site.data.keyword.logs_full_notm}} instance, all of the u
 ## Deleting the {{site.data.keyword.logs_full_notm}} instance
 {: #service-delete}
 
-If you no longer need an instance of {{site.data.keyword.logs_full_notm}}, you can delete the instance and any data that is stored. Once the instance is deleted, you will no longer have access to it. The instance will remain in the pending reclamation phase for 7 days. If you choose to reclaim the instance within this period, the reclamation process can be initiated and will complete successfully. See [Removing an instance](/docs/cloud-logs?topic=cloud-logs-instance-remove&interface=cli) for the steps to delete an instance.
+If you no longer need an instance of {{site.data.keyword.logs_full_notm}}, you can delete the instance and any data that is stored. Once the instance is deleted, you will no longer have access to it. The instance will remain in the pending reclamation phase for 7 days. If you choose to reclaim the instance within this period, you can initiate the reclamation process. See [Removing an instance](/docs/cloud-logs?topic=cloud-logs-instance-remove&interface=cli) for the steps to delete an instance.
+
+
 
 ## Restoring deleted data for {{site.data.keyword.logs_full_notm}}
 {: #data-restore}
 
-When an {{site.data.keyword.logs_full_notm}} instance is deleted, it is put in a suspend state for 7 days after which its removed from the {{site.data.keyword.cloud_notm}}. If the instance is reclaimed and re-enabled, you can regain access to it. Any previously stored data will be available and accessible again. If the instance is not reclaimed within the 7-day pending reclamation period, the data will be permanently deleted within 90 days. See [Recovering a deleted instance](/docs/cloud-logs?topic=cloud-logs-instance-reclaim&interface=ui) for the steps to recover an {{site.data.keyword.logs_full_notm}} instance.
+When an {{site.data.keyword.logs_full_notm}} instance is deleted, it is put in a suspend state for 7 days after which its removed from the {{site.data.keyword.cloud_notm}}. If the instance is reclaimed and re-enabled, you can regain access to data.
 
-Data retention in {{site.data.keyword.frequent-search}} depends on the [service plan](/docs/cloud-logs?topic=cloud-logs-service_plans) configured for the instance.
-{: important}
+Consider the following information in regards to the data that is reclaimed:
+- Data retention in {{site.data.keyword.frequent-search}} depends on the [service plan](/docs/cloud-logs?topic=cloud-logs-service_plans) configured for the instance. Therefore, you can only regain access that is available based on the service plan.
+- Data in the bucket that is attached to the {{site.data.keyword.logs_full_notm}} instance is available as long as the data is available in the bucket.
+
+ If the instance is not reclaimed within the 7-day pending reclamation period, the data will be permanently deleted within 90 days. See [Recovering a deleted instance](/docs/cloud-logs?topic=cloud-logs-instance-reclaim&interface=ui) for the steps to recover an {{site.data.keyword.logs_full_notm}} instance.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-07"
+lastupdated: "2026-10-11"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Configuring archive retention tags to manage data retention
+# Configuring archive retention tags in {{site.data.keyword.logs_full_notm}} to manage data retention in {{site.data.keyword.cos_full_notm}}
 {: #retention-tags}
 
 In {{site.data.keyword.logs_full_notm}}, you can use {{site.data.keyword.cos_full_notm}} object tags to manage automatically how long log data is available for search in the data bucket.
