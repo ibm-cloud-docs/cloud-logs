@@ -59,7 +59,7 @@ In {{site.data.keyword.logs_full_notm}}, consider the following information:
 
 
 ## Managing background queries through the CLI in {{site.data.keyword.logs_full_notm}}
-{: #query-background-cli}
+{: #query-background-ov-cli}
 {: cli}
 
 The following table lists the CLI commands that you can use to manage background queries:
@@ -187,7 +187,7 @@ Where
 
 
 ## Managing background queries through the UI in {{site.data.keyword.logs_full_notm}}
-{: #query-background-ui}
+{: #query-background-ov-ui}
 {: ui}
 
 In the UI, you can manage background queries that are created in the UI, by using the CLI or through the API.
@@ -277,17 +277,17 @@ Complete the following steps to clone a background query:
 
 
 ## Managing background queries through the API in {{site.data.keyword.logs_full_notm}}
-{: #query-background-api}
+{: #query-background-ov-api}
 {: api}
 
 The following table lists the API methods that you can use to manage background queries in {{site.data.keyword.logs_full_notm}}:
 
 | Command                                  | Description | More info |
 |------------------------------------------|-------------|-----------|
-| `POST /v1/background_query` | Submit a background query to be processed asynchronously. | [Submit a background query](/docs/apis/logs-service-api#submit-background-query) |
-| `GET /v1/background_query/{query_id}/status` | Get the status of a background query. | [Get the status of a background query](/docs/apis/logs-service-api#get-background-query-status) |
-| `GET /v1/background_query/{query_id}/data`  | Get the data of the background query. | [Get the data of a background query](/docs/apis/logs-service-api#get-background-query-data) |
-| `POST /v1/background_query/{query_id}/cancel` | Cancel a background query. This request stops a query that is running in the background. | [Cancel a background query](/docs/apis/logs-service-api#cancel-background-query) |
+| `POST ${URL}/v1/background_query` | Submit a background query to be processed asynchronously. | [Submit a background query](/docs/apis/logs-service-api#submit-background-query) |
+| `GET ${URL}/v1/background_query/{query_id}/status` | Get the status of a background query. | [Get the status of a background query](/docs/apis/logs-service-api#get-background-query-status) |
+| `GET ${URL}/v1/background_query/{query_id}/data`  | Get the data of the background query. | [Get the data of a background query](/docs/apis/logs-service-api#get-background-query-data) |
+| `POST ${URL}/v1/background_query/{query_id}/cancel` | Cancel a background query. This request stops a query that is running in the background. | [Cancel a background query](/docs/apis/logs-service-api#cancel-background-query) |
 {: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) API methods" caption-side="bottom"}
 
 
@@ -333,7 +333,7 @@ curl -X POST --location "${base_url}/v1/background_query"
 --header "Authorization: Bearer $IAM_TOKEN" \
 --header "Accept: application/json"  \
 --header "Content-Type: application/json" \
---data '{ "query": "QUERY", "syntax": "dataprime_utf8_base64" }'
+--data '{ "query": "QUERY", "syntax": "QUERY_SYNTAX" }'
 ```
 {: pre}
 

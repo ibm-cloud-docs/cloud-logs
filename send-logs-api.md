@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-07"
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-#  Sending logs by using the API
+#  Sending logs by using the API in {{site.data.keyword.logs_full_notm}}
 {: #send-logs-api}
 
 You can send logs to an {{site.data.keyword.logs_full_notm}} instance by using the ingestion API.
@@ -51,7 +51,7 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 ```
 {: pre}
 
-## Send logs by using cURL
+## Send logs by using cURL in {{site.data.keyword.logs_full_notm}}
 {: #send-logs-curl}
 {: step}
 
