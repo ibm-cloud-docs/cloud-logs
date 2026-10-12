@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-15"
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -117,26 +117,34 @@ These commands reduce the dataset by applying filters or keeping only relevant f
     text '503'
 
 
-## Commands that let you generate new fields or modify existing ones
 
-Commands that let you generate new fields or modify existing ones.
 
-    create / add / c – Define a new field based on an expression. This acts similarly to a variable.
+Deduplication
 
-    create is_error from status_code >= 500
+Reduce redundancy or volume.
 
-    replace – Overwrite a field with a new value.
+    dedupeby – Keep N unique combinations based on expression(s).
 
-    replace duration_ms with duration / 1_000_000
+    dedupeby operationName keep 5
 
-    remove – Remove fields from the document.
+When to use a command vs a function
 
-    remove user_agent
+    Use a function when working with individual field values (ipInSubnet, length, urlDecode, etc.).
+    Use a command when transforming the shape, size, or structure of your dataset.
 
-    convert – Make type conversions explicit for readability.
+## explode
 
-    convert datatypes status_code:number
+The explode command transforms an array of N elements into N separate documents, each containing one element of the array at the specified keypath. It’s commonly used to “flatten” nested data structures for easier analysis or aggregation.
 
-    redact – Mask sensitive data using regex.
+When using explode, you can control whether to keep or remove the original document fields via the original modifier:
 
-    redact message matching /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/ to '[EMAIL]'
+    original discard removes all original fields, producing minimal output
+
+with just the exploded key.
+
+    original preserve retains the original document fields, duplicating them
+
+across the new documents.
+Note
+
+If the destination keypath already exists in the document, it is overwritten by the exploded value. The default behavior is original discard.

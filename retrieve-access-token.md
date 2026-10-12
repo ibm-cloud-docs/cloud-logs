@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-20"
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Retrieving an access token
+# Retrieving an access token when using the CLI or API in {{site.data.keyword.logs_full_notm}}
 {: #retrieve-access-token}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service.

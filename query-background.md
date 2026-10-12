@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-07"
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -12,19 +12,19 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Querying data by using an asynchronous background query
+# Querying data by using an asynchronous background query in {{site.data.keyword.logs_full_notm}}
 {: #query-background}
 
-In {{site.data.keyword.logs_full_notm}}, you can run a long-running query asynchronously by using a *Background query* feature. You can use DataPrime or Lucene syntax to query the data. This feature queries data in the {{site.data.keyword.cos_full_notm}} (COS) data bucket. The query results are prepared and, once ready, you can download the results as a file using the UI, the CLI or the API at a later point in time.
+In {{site.data.keyword.logs_full_notm}}, you can run a long-running query asynchronously by running a *Background query*. You can use DataPrime or Lucene syntax to query the data. This feature queries data in the {{site.data.keyword.cos_full_notm}} (COS) data bucket. The query results are prepared and, once ready, you can download the results as a file using the UI, the CLI or the API at a later point in time.
 {: shortdesc}
 
 Use a background query for recurring, extensive analytical tasks such as monthly or quarterly analysis.
 {: tip}
 
-## Running background queries
+## Running background queries in {{site.data.keyword.logs_full_notm}}
 {: #query-background-ov}
 
-Consider the following information:
+In {{site.data.keyword.logs_full_notm}}, consider the following information:
 
 - `startDate` and `endDate` must be valid ISO 8601 date-time strings.
 
@@ -53,7 +53,7 @@ Consider the following information:
 - If you cancel a background query, you cannot access partial data. However, the query's metadata will persist for 30 days and count towards the total number of queries that you can submit.
 
 
-## Managing background queries through the CLI
+## Managing background queries through the CLI in {{site.data.keyword.logs_full_notm}}
 {: #query-background-cli}
 {: cli}
 
@@ -74,6 +74,9 @@ After you submit a background query, you can check the status of the query by ru
 If you need to stop a query that is still running, you can run the command `ibmcloud cloud-logs background-query-cancel`.
 
 If you want to download the data, you can run the command `ibmcloud cloud-logs background-query-data`.
+
+When you create a background query through the CLI or API, the query ID is part of the name of the query. For example, in this query `background_query_d840dad0-2b2c-41df-89aa-c1faabc8c275`, the value `d840dad0-2b2c-41df-89aa-c1faabc8c275` is the query ID that you must use to check its status, cancel the query, or download the data. To see the IDs of background queries that you have requested via API, go to UI and select **Explore logs > Archive Query**.
+{: tip}
 
 ### ibmcloud logs background-query-create
 {: #query-background-create-cli}
@@ -177,7 +180,7 @@ Where
 - `URL` represents the base endpoint URL `https://{API_endpoint}` for the API. For more information, see [Service API endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_api).
 
 
-## Errors running background queries
+## Errors running background queries in {{site.data.keyword.logs_full_notm}}
 {: #query-background-errors}
 
 When you run a background query, you may encounter system-enforced limits or errors related to data volume, storage access, or execution time.
@@ -198,7 +201,7 @@ The following table outlines the most common error codes and messages you might 
 
 When you receive any of the following errors, consider the following information to resolve them:
 
-- `MAX_RESULTS`: The query exceeded the maximum number of log lines allowed for a single response. This usually indicates that the result set is too large. Refine your query and narrow the query scope; for example, try reducing the time range or applying filters.
+- `MAX_RESULTS`: The query exceeded the maximum number of log lines allowed for a single response. This usually indicates that the result set is too large. Refine your query and narrow the query scope; for example, try reducing the time range or apply filters.
 
 - `SCANNED_BYTES_LIMIT`: The query attempted to scan more data than permitted by the tier. Reduce the data scope, apply filters, or check if you can use a different type of query that returns a highr volume of data.
 
@@ -216,7 +219,7 @@ When you receive any of the following errors, consider the following information
 
 
 
-## Managing background queries through the UI
+## Managing background queries through the UI in {{site.data.keyword.logs_full_notm}}
 {: #query-background-ui}
 {: ui}
 
@@ -225,7 +228,7 @@ In the UI, you can manage background queries that are created in the UI, by usin
 After you run a background query, you can view your results through the **Logs Preview** or the **Download TSV** options.
 
 
-### Creating a background query
+### Creating a background query in {{site.data.keyword.logs_full_notm}}
 {: #query-background-create-ui}
 {: ui}
 
@@ -252,7 +255,7 @@ Complete the following steps to create a background query:
 6. Click **Run archive query**.
 
 
-### Viewing a preview of the results
+### Viewing a preview of the results in {{site.data.keyword.logs_full_notm}}
 {: #query-background-preview-ui}
 {: ui}
 
@@ -269,7 +272,7 @@ Complete the following steps to see a preview of the results from a background q
 
 
 
-### Download the results
+### Download the results in {{site.data.keyword.logs_full_notm}}
 {: #query-background-download-ui}
 {: ui}
 
@@ -286,7 +289,7 @@ Complete the following steps to download the data from running a background quer
 
 
 
-### Cloning a background query
+### Cloning a background query in {{site.data.keyword.logs_full_notm}}
 {: #query-background-clone-ui}
 {: ui}
 
@@ -306,33 +309,29 @@ Complete the following steps to clone a background query:
 
 
 
-## Managing background queries through the API
+## Managing background queries through the API in {{site.data.keyword.logs_full_notm}}
 {: #query-background-api}
 {: api}
 
-The following table lists the API methods that you can use to manage background queries:
+The following table lists the API methods that you can use to manage background queries in {{site.data.keyword.logs_full_notm}}:
 
-| Command                                  | Description |
-|------------------------------------------|-------------|
-| `POST /v1/background_query` | Submit a background query to be processed asynchronously. |
-| `background-query-status` (`bgq-status`) | Get the status of a background query. |
-| `background-query-data`   (`bgq-data`)   | Get the data of the background query. |
-| `background-query-cancel` (`bgq-cancel`) | Cancel a background query. This request stops a query that is running in the background. |
-{: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) CLI commands" caption-side="bottom"}
+| Command                                  | Description | More info |
+|------------------------------------------|-------------|-----------|
+| `POST /v1/background_query` | Submit a background query to be processed asynchronously. | [Submit a background query](/docs/apis/logs-service-api#submit-background-query) |
+| `GET /v1/background_query/{query_id}/status` | Get the status of a background query. | [Get the status of a background query](/docs/apis/logs-service-api#get-background-query-status) |
+| `GET /v1/background_query/{query_id}/data`  | Get the data of the background query. | [Get the data of a background query](/docs/apis/logs-service-api#get-background-query-data) |
+| `POST /v1/background_query/{query_id}/cancel` | Cancel a background query. This request stops a query that is running in the background. | [Cancel a background query](/docs/apis/logs-service-api#cancel-background-query) |
+{: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) API methods" caption-side="bottom"}
 
-You can run the `ibmcloud cloud-logs background-query-create` command to run a query asynchronously.
 
-After you submit a background query, you can check the status of the query by running the command `ibmcloud cloud-logs background-query-status`.
+When you create a background query through the CLI or API, the query ID is part of the name of the query. For example, in this query `background_query_d840dad0-2b2c-41df-89aa-c1faabc8c275`, the value `d840dad0-2b2c-41df-89aa-c1faabc8c275` is the query ID that you must use to check its status, cancel the query, or download the data. To see the IDs of background queries that you have requested via API, go to UI and select **Explore logs > Archive Query**.
+{: tip}
 
-If you need to stop a query that is still running, you can run the command `ibmcloud cloud-logs background-query-cancel`.
-
-If you want to download the data, you can run the command `ibmcloud cloud-logs background-query-data`.
-
-### API endpoint
-{: #query-background-endpoint}
+### API endpoint for background queries in {{site.data.keyword.logs_full_notm}}
+{: #query-background-api-endpoint}
 {: api}
 
-The following table outlines the endpoint details:
+The following table outlines the endpoint details in background queries in {{site.data.keyword.logs_full_notm}}:
 
 | Detail                  | Value |
 |-------------------------|-------|
@@ -348,46 +347,66 @@ Where
 - `REGION`: Region where the {{site.data.keyword.logs_full_notm}} instance is located.
 - `IAM_TOKEN`: [IAM bearer token](/docs/cloud-logs?topic=cloud-logs-send-logs-api#send-logs-token) used to request authorization to run a background query.
 
+### Retrieving an access token when using the API in {{site.data.keyword.logs_full_notm}}
+{: #query-background-api-token}
+{: api}
+
+You can retrieve your access token programmatically by first creating a [service ID API key](/docs/account?topic=account-serviceidapikeys){: external} for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. For more information, see [Retrieving an access token with the API](/docs/cloud-logs?topic=cloud-logs-retrieve-access-token&interface=api).
 
 
-### Submit
+### Submit a background query in {{site.data.keyword.logs_full_notm}}
+{: #query-background-api-submit}
+{: api}
 
 
-curl -X POST --location --header "Authorization: Bearer ${iam_token}"   --header "Accept: application/json"   --header "Content-Type: application/json"   --data '{ "query": "source logs | filter $d.apiVersion == 42", "syntax": "dataprime_utf8_base64" }'   "${base_url}/v1/background_query"
-
-Use the following cURL command to send a log line:
+Use the following cURL command to submit a background query in {{site.data.keyword.logs_full_notm}}:
 
 ```sh
-curl -v --location "<INSTANCE_ID>.api.<REGION>.logs.cloud.ibm.com/logs/v1/singles" \
+curl -X POST --location "${base_url}/v1/background_query"
+--header "Authorization: Bearer $IAM_TOKEN" \
+--header "Accept: application/json"  \
 --header "Content-Type: application/json" \
---header "Authorization: $IAM_TOKEN" \
---data '[{
-      "applicationName": "ENTER_APPLICATION_NAME",
-      "subsystemName": "ENTER_SUBSYSTEM_NAME",
-      "severity": "ENTER_SEVERITY",
-      "computerName": "ENTER_VALUE",
-      "text": ENTER_LOG_LINE,
-      "category": "ENTER_VALUE",
-      "className": "ENTER_VALUE",
-      "methodName": "ENTER_VALUE",
-      "threadId": "ENTER_VALUE"
-    }]'
+--data '{ "query": "QUERY", "syntax": "dataprime_utf8_base64" }'
 ```
 {: pre}
 
+Where
+
+- `query` defines the query to run asynchronously in the background.
+
+    You can define a query with a maximun of 4096 characters that matches the regular expression `^[\p{L}\p{N}\p{P}\p{Z}\p{S}\p{M}]+$`.
+
+    For example: `source logs | filter $d.apiVersion == 42`
+
+- `syntax` define the query syntax.
+
+    Valid values are: `unspecified`,`lucene`, `dataprime`, `lucene_utf8_base64`, `dataprime_utf8_base64`
+
+    Queries might be misinterpreted as SQL queries when you go through a proxy server and rejected.
+
+- `start_date` defines the beginning of the time range for the query.
+
+    The default value is `end - 15 minutes` or `current time - 15 minutes` if end is not defined.
+
+    For example: `2026-11-20T12:15:30.000Z`
+
+- `end_date` defines the end of the time range for the query.
+
+    The default value is `start + 15 minutes` or `current time` if start is not defined.
+
+    For example: `2026-11-20T12:15:30.000Z`
+
+- `now_date` defines Contextual now for the query,
+
+    The defaultvalue is the current time.
+
+    It is used by functions like `now()` in DataPrime.
+
+    For example: `2026-11-20T12:15:30.000Z`
 
 
-curl -X GET --location --header "Authorization: Bearer ${iam_token}"   --header "Accept: application/json"   "${base_url}/v1/background_query/${query_id}/status"
 
-
-
-curl -X GET --location --header "Authorization: Bearer ${iam_token}"   --header "Accept: text/event-stream"   "${base_url}/v1/background_query/${query_id}/data"
-
-curl -X POST --location --header "Authorization: Bearer ${iam_token}"   "${base_url}/v1/background_query/${query_id}/cancel"
-
-
-
-## Deleting background queries
+## Deleting background queries in {{site.data.keyword.logs_full_notm}}
 {: #query-background-delete}
 
 You cannot delete a background query.

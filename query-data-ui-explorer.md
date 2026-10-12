@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-14"
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: cloud-logs
 # Querying data through the Explorer Logs UI in {{site.data.keyword.logs_full_notm}}
 {: #query-data-ui-explorer}
 
-In {{site.data.keyword.logs_full_notm}}, you can query data through the *Explorer Logs* page.
+In {{site.data.keyword.logs_full_notm}}, you can query data through the *Explorer Logs* page by using Lucene or Dataprime queries.
 {: shortdesc}
 
 In the *Explore logs* page, you can:
@@ -32,13 +32,12 @@ After you define a query, you can save it for later reuse by creating a view. Fo
 ## Limitations querying data from the data bucket through Explorer
 {: #query-data-ui-archive-limitations-1}
 
-Read the following limitations that apply when you query data located in the data bucket through a view in **Explore Logs > Logs** that queries **All Logs**:
+Read the following limitations in {{site.data.keyword.logs_full_notm}} that apply when you query data located in the data bucket through a view in **Explore Logs > Logs** that queries **All Logs**:
 
 | Limitations per query     | Description  |
 |--------------------------|--------------|
 | Characters that can be included in a query | A search query can include a maximum of 3000 characters. |
-| Query using the keyword data type | You can not create a keyword type when a field that is longer than 256 characters. |
-| Bytes processed          | Up to 30% of daily ingested bytes |
+| Query using the keyword data type | You can not create a keyword type when a field that is longer than 256 characters. | 
 | Parquet files scanned    | Up to 500.000 files |
 | Ordering of logs         | Ordering is guaranteed only for up to 10,000 results. |
 | Time out running a query | Up to 5 minutes of query execution |
@@ -48,7 +47,7 @@ Read the following limitations that apply when you query data located in the dat
 Once a limit is reached, a warning message is displayed. Refine your query results to avoid reaching a limit.
 {: important}
 
-## Limitations querying data in {{site.data.keyword.frequent-search}} through Explorer
+## Limitations querying data in {{site.data.keyword.frequent-search}} through Explorer in {{site.data.keyword.logs_full_notm}}
 {: #query-data-ui-archive-limitations-2}
 
 Read the following limitations that apply when you query data located in {{site.data.keyword.frequent-search}} through a view in **Explore Logs > Logs** that queries **Priority Insights**:
@@ -65,23 +64,4 @@ Read the following limitations that apply when you query data located in {{site.
 {: caption="Limitations running a query on data in Priority Insights" caption-side="bottom"}
 
 Once a limit is reached, a warning message is displayed. Refine your query results to avoid reaching a limit.
-{: important}
-
-
-
-## Keyword data type in search queries
-{: #query-data-ui-explorer-keyword}
-
-Keywords represent text that does not pass through the analyzer before indexing.
-
-The keyword data type is suitable for regular expressions, aggregation, and sorting. For more information, see [Using RegEX to query data](/docs/cloud-logs?topic=cloud-logs-query-regex).
-
-The syntax to use the keyword data type in your query is:
-
-```text
-<fieldName>.keyword
-```
-{: codeblock}
-
-{{site.data.keyword.logs_full_notm}} can not create a keyword type when a field is longer than 256 characters.
 {: important}
