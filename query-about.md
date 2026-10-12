@@ -87,21 +87,6 @@ filter $d.my_array == null
 ```
 {: codeblock}
 
-### Data stored in a COS bucket is normalized using a column-based schema in {{site.data.keyword.logs_full_notm}}
-{: #query-about-0}
-
-Logs that are ingested have different structures. As data is ingested, the {{site.data.keyword.logs_full_notm}} service automatically normalizes logs into a consistent column-based schema to improve querying.
-
-- The normalization process prioritizes commonly used field names.
-
-- Less frequent or rarely used fields might be excluded from the Parquet schema.
-
-- Each Parquet file is limited to a maximum of 5,100 columns.
-
-- A full original JSON document is also stored within a special column.
-
-- If a query references a field that is not among the 5,100 Parquet columns, DataPrime will fall back to searching the raw JSON in the special column to retrieve the data.
-
 
 
 ##  Considerations when querying {{site.data.keyword.frequent-search}} data
@@ -213,5 +198,3 @@ In {{site.data.keyword.logs_full_notm}}, you can query log data synchronously by
 The `query` command is limited to returning 50K records.
 
 For more information, see [Running synchronous queries through the API in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-query-synch#query-sync-ov-api).
-
-
