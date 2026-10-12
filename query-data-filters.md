@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-14"
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-# Filtering log data
+# Filtering log data in {{site.data.keyword.logs_full_notm}}
 {: #query-data-filter}
 
 In {{site.data.keyword.logs_full_notm}}, filter data by configuring filters through the UI when you run a Lucene or a Dataprime query. You can also add filters by adding the `filter` command in Dataprime queries.
@@ -24,7 +24,7 @@ Filtering can be used in conjunction with searching using [Lucene](/docs/cloud-l
 {: tip}
 
 
-## Specifying filters through the UI
+## Specifying filters through the UI in {{site.data.keyword.logs_full_notm}}
 {: #query-data-filter-ui}
 
 You can apply filters to a Lucene or Dataprime query in a view by choosing 1 or more filters that reduce the data that is processed by the query. You can also apply filters to a query that is configured for a widget in a custom dashboard.
@@ -36,7 +36,7 @@ You can add additional filters by clicking **Add Filter**.
 - You can select the filter values to be included in the view. You can select individual values, **SELECT ALL**, or **UNSELECT ALL**.
 
 
-## Specifying filters by using the filter command
+## Specifying filters by using the filter command in {{site.data.keyword.logs_full_notm}}
 {: #query-data-filter-1}
 
 Add explicit filter clauses or grep conditions early in your DataPrime Query Assistance or search bar to reduce the working data set before running transformations.

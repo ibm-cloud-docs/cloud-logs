@@ -59,9 +59,54 @@ If you are running a Dataprime query in a widget in a custom dashboard, you can 
 
 For more information, see [Using query parameters in your DataPrime queries in IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-query-parameters).
 
+## Reduce the data resultset by using Dataprime commands in a query in {{site.data.keyword.logs_full_notm}}
+{: #query-refine-3}
+
+Reduce the data resultset by using Dataprime commands that apply filters or keep only relevant fields.
+
+- **filter** command: Keeps rows where a condition is true.
+
+    For example, you can select the logs where the status_code value is greater or equal to 500.
+
+    ```text
+    filter status_code >= 500
+    ```
+    {: pre}
+
+- **block** command: Removes rows that match a condition.
+
+    For example, you can ignore logs that include a field method and the value of the field is set to mm1.
+
+    ```text
+    block method == 'mm1'
+    ```
+    {: pre}
+
+- **choose** command: Keeps only the specified fields and ignores other fields in the log record.
+
+    For example, you can choose 2 fields from a log records.
+
+    ```text
+    choose path, status_code
+    ```
+    {: pre}
+
+- **distinct** command: Returns one row per unique value.
+
+    For example, you can identify all the user IDs in the your logs.
+
+    ```text
+    distinct user_id
+    ```
+    {: pre}
+
+- **find** command: Free-text search within a field or across all data.
+
+    Use the `find` command for quickly searching raw log fields across log messages or string fields where full parsing is unnecessary in DataPrime queries.
+
 
 ## Narrow the timeframe of a query in {{site.data.keyword.logs_full_notm}}
-{: #query-refine-3}
+{: #query-refine-4}
 
 Shorten the default time range in the *Explore Logs* page or inside the query code to minimize the volume of data that is scanned.
 
@@ -80,7 +125,7 @@ To narrow the timeframe of a query in {{site.data.keyword.logs_full_notm}}:
     You can shift the evaluation window backward inside specific Dataprime commands to analyze historical baselines or compare current operational data against past performance. The `timeshifted` keyword modifies the timerange within the scope of the query. For example, when a custom dashboard has a global timerange of Today but your query only makes sense when looking at yesterday's data, you can use the keyword `timeshifted` followed by a time interval (`source logs timeshifted 1h`).
 
 ## Change the querying mode to query data in the COS bucket to increase the amount of logs that are returned in {{site.data.keyword.logs_full_notm}}
-{: #query-refine-4}
+{: #query-refine-5}
 
 Change the querying mode to query data in the COS bucket to increase the amount of logs that are returned.
 
