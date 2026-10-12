@@ -205,6 +205,8 @@ toc:
       - topicgroup:
           label: Querying logs
           topics:
+          - topic: query-about.md
+            navtitle: About running queries
           - topic: query-synch.md
             navtitle: Querying data synchronously
           - topic: query-background.md
