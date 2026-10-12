@@ -243,3 +243,5 @@ Where
     When is set to false, you cannot use fields that are not detected in the ingested data.
 
     The default value is set to `false`.
+
+For more information, see [Run a query to search the logs](/docs/apis/logs-service-api#query).
