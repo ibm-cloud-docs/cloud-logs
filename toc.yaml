@@ -21,8 +21,6 @@ toc:
             navtitle: Features
           - topic: metadata.md
             navtitle: Metadata fields
-      - topic: query-data.md
-        navtitle: Querying data
       - topicgroup:
           label: About the Logging agent
           topics:

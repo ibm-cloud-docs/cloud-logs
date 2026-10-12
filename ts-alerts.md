@@ -2,9 +2,9 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-10-12"
 
-keywords: 
+keywords:
 
 subcollection: cloud-logs
 
@@ -13,7 +13,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why are my alerts not being sent?
+# Why are my alerts not triggering in {{site.data.keyword.logs_full_notm}}?
 {: #ts-alerts}
 {: troubleshoot}
 {: support}
@@ -38,7 +38,7 @@ Some issues that can cause alerts to not be sent include:
 To resolve your alerting issues, you need to determine the cause of the problem, and then make the appropriate changes to your environment.
 {: tsResolve}
 
-## Are alerted logs sent to the {{site.data.keyword.compliance}} pipeline?
+## Are alert notifications sent when the triggering condition queries data from the {{site.data.keyword.compliance}} pipeline?
 {: #ts-alert-wrong-pipeline}
 {: troubleshoot}
 
@@ -67,7 +67,7 @@ To determine the log ID value, from the {{site.data.keyword.logs_full_notm}} UI 
 
 ![Finding the TCO pipeline for a log. The TCO value must display high or medium for alerts on the log to be sent.](/images/tsa_01.png){: caption="Finding the TCO pipeline for a log" caption-side="bottom"}
 
-If the `TCO` value is `low`, then the log is being sent to the {{site.data.keyword.compliance}} pipeline and alerts cannot be triggered by logs in the {{site.data.keyword.compliance}} pipeline. 
+If the `TCO` value is `low`, then the log is being sent to the {{site.data.keyword.compliance}} pipeline and alerts cannot be triggered by logs in the {{site.data.keyword.compliance}} pipeline.
 
 
 ## Has enough time elapsed?
@@ -84,7 +84,7 @@ Consider the following timing considerations with alerts.
    A 1-minute period must elapse between when {{site.data.keyword.logs_full_notm}} receives a log and an immediate alert is triggered.
    {: note}
 
-## Is your alert correctly configured?
+## Is your alert correctly configured in {{site.data.keyword.logs_full_notm}}?
 {: #ts-alert-config}
 {: troubleshoot}
 
@@ -125,7 +125,7 @@ Follow the below checks to identify and resolve the issue
 
 1. Does the alert query fire when rewritten as `.keyword` regex?
 
-Rewrite the alert query in the following form: 
+Rewrite the alert query in the following form:
 
 
    ```text
@@ -142,13 +142,13 @@ If the rewritten query now matches the expected logs, replace the original query
    You can check of all plain string values are enclosed in double quotation marks so that they are matched as a phrase. For example, use `status:"payment failed"` instead of `status:payment failed`.
 
 3. Does the query value contain token shorter than three characters
-  
+
    The Lucene analyzer drops tokens that are shorter than three characters during indexing. Values such as `v2`, `01`, or `5` are silently removed from standard text fields and cannot be matched by a direct field query.
 
    If your alert query includes a short value, move the query to the `.keyword` sub-field and use a regex pattern to bypass the analyzer. For example, use `log_level.keyword:/.*v2.*/` instead of `log_level:"v2"`.
 
 4. Is the target field inside an array or a nested structure?
-  
+
    The alert engine does not support querying values that are nested inside arrays or nested structures. If the field that you want to match is stored in an array, the alert query never matches it.
 
 5. Are logs assigned to a higher or medium TCO tier?
@@ -160,11 +160,11 @@ If the rewritten query now matches the expected logs, replace the original query
    If the logs are in the Low tier, reconfigure your TCO policy so that those logs flow to either the {{site.data.keyword.frequent-search}} or {{site.data.keyword.monitoring}} pipeline.
 
 6. Did you wait 15 minutes after editing the alert?
-   
+
    After you save a change to an alert, allow up to 15 minutes for the alert engine to apply the updated configuration. The alert engine continues to evaluate logs against the previous query until the update is active. Testing the alert immediately after saving a change can produce misleading results.
 
 7. If the alert still does not fire
-   
+
    If you have verified all of the preceding checks and the alert still does not fire, collect the following information and contact {{site.data.keyword.cloud_notm}} support:
 
      * A raw sample of a log that you expect to trigger the alert, including all field names and values.
