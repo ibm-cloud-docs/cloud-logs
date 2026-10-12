@@ -180,44 +180,6 @@ Where
 - `URL` represents the base endpoint URL `https://{API_endpoint}` for the API. For more information, see [Service API endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_api).
 
 
-## Errors running background queries in {{site.data.keyword.logs_full_notm}}
-{: #query-background-errors}
-
-When you run a background query, you may encounter system-enforced limits or errors related to data volume, storage access, or execution time.
-
-The following table outlines the most common error codes and messages you might receive:
-
-| Error                    | Error Description                                                     |
-|--------------------------|-----------------------------------------------------------------------|
-| `MAX_RESULTS`            | Max results is 1000000. Refine your query.                            |
-| `SCANNED_BYTES_LIMIT`    | Scanned bytes limit has been reached.                                 |
-| `BLOCK_LIMIT`            | Blocks limit has been reached.                                        |
-| `METASTORE_DATA_MISSING` | No data exists in your object storage bucket for the given timeframe. |
-| `BUCKET_ACCESS_DENIED`   | Access to bucket denied.                                              |
-| `BUCKET_READ_FAILED`     | Failed to read from bucket.                                           |
-| `BUCKET_MISSING_DATA`    | Data partially missing from bucket.                                   |
-| `SCROLL_TIMEOUT`         | Scroll timed out.                                                     |
-{: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) CLI commands" caption-side="bottom"}
-
-When you receive any of the following errors, consider the following information to resolve them:
-
-- `MAX_RESULTS`: The query exceeded the maximum number of log lines allowed for a single response. This usually indicates that the result set is too large. Refine your query and narrow the query scope; for example, try reducing the time range or apply filters.
-
-- `SCANNED_BYTES_LIMIT`: The query attempted to scan more data than permitted by the tier. Reduce the data scope, apply filters, or check if you can use a different type of query that returns a highr volume of data.
-
-- `BLOCK_LIMIT`: Too many data blocks were involved in processing the query. This often results from querying a large time range or high-cardinality data. Refine your query and narrow the query scope; for example, try reducing the time range or applying filters.
-
-- `METASTORE_DATA_MISSING`: The query timeframe points to archived data, but there is no available metadata for this period. Check that logs are available in the data bucket for the time range of the query.
-
-- `BUCKET_ACCESS_DENIED`: The background query engine was unable to access the specified data bucket due to permission issues. Verify the authorization between {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.logs_full_notm}} (COS) is properly configured.
-
-- `BUCKET_READ_FAILED`: A general I/O error occurred while attempting to read data from the COS bucket. This may be due to connectivity, permissions, or a corrupted file.
-
-- `BUCKET_MISSING_DATA`: Some of the expected data blocks could not be found or read from your data bucket. Results may be incomplete.
-
-- `SCROLL_TIMEOUT`: The server took too long to scroll through the result set, usually due to large volumes or resource constraints. Try running a smaller or more efficient query.
-
-
 
 ## Managing background queries through the UI in {{site.data.keyword.logs_full_notm}}
 {: #query-background-ui}
@@ -403,6 +365,44 @@ Where
     It is used by functions like `now()` in DataPrime.
 
     For example: `2026-11-20T12:15:30.000Z`
+
+
+## Errors running background queries in {{site.data.keyword.logs_full_notm}}
+{: #query-background-errors}
+
+When you run a background query, you may encounter system-enforced limits or errors related to data volume, storage access, or execution time.
+
+The following table outlines the most common error codes and messages you might receive:
+
+| Error                    | Error Description                                                     |
+|--------------------------|-----------------------------------------------------------------------|
+| `MAX_RESULTS`            | Max results is 1000000. Refine your query.                            |
+| `SCANNED_BYTES_LIMIT`    | Scanned bytes limit has been reached.                                 |
+| `BLOCK_LIMIT`            | Blocks limit has been reached.                                        |
+| `METASTORE_DATA_MISSING` | No data exists in your object storage bucket for the given timeframe. |
+| `BUCKET_ACCESS_DENIED`   | Access to bucket denied.                                              |
+| `BUCKET_READ_FAILED`     | Failed to read from bucket.                                           |
+| `BUCKET_MISSING_DATA`    | Data partially missing from bucket.                                   |
+| `SCROLL_TIMEOUT`         | Scroll timed out.                                                     |
+{: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) CLI commands" caption-side="bottom"}
+
+When you receive any of the following errors, consider the following information to resolve them:
+
+- `MAX_RESULTS`: The query exceeded the maximum number of log lines allowed for a single response. This usually indicates that the result set is too large. Refine your query and narrow the query scope; for example, try reducing the time range or apply filters.
+
+- `SCANNED_BYTES_LIMIT`: The query attempted to scan more data than permitted by the tier. Reduce the data scope, apply filters, or check if you can use a different type of query that returns a highr volume of data.
+
+- `BLOCK_LIMIT`: Too many data blocks were involved in processing the query. This often results from querying a large time range or high-cardinality data. Refine your query and narrow the query scope; for example, try reducing the time range or applying filters.
+
+- `METASTORE_DATA_MISSING`: The query timeframe points to archived data, but there is no available metadata for this period. Check that logs are available in the data bucket for the time range of the query.
+
+- `BUCKET_ACCESS_DENIED`: The background query engine was unable to access the specified data bucket due to permission issues. Verify the authorization between {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.logs_full_notm}} (COS) is properly configured.
+
+- `BUCKET_READ_FAILED`: A general I/O error occurred while attempting to read data from the COS bucket. This may be due to connectivity, permissions, or a corrupted file.
+
+- `BUCKET_MISSING_DATA`: Some of the expected data blocks could not be found or read from your data bucket. Results may be incomplete.
+
+- `SCROLL_TIMEOUT`: The server took too long to scroll through the result set, usually due to large volumes or resource constraints. Try running a smaller or more efficient query.
 
 
 

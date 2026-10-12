@@ -207,18 +207,10 @@ toc:
       - topicgroup:
           label: Querying logs
           topics:
-          - topic: query-data-ui-explorer.md
-            navtitle: Querying data through Explorer
-          - topic: query-data-ui-archive.md
-            navtitle: Querying data using the Archive Query feature
-          - topic: query-archive-data-bucket.md
-            navtitle: Querying data directly from the bucket
+          - topic: query-synch.md
+            navtitle: Querying data synchronously
           - topic: query-background.md
-            navtitle: Querying data running a background query
-          - topic: query-data-cli.md
-            navtitle: Querying data through the CLI
-          - topic: query-data-api.md
-            navtitle: Querying data through the API
+            navtitle: Querying data asynchronously
           - topic: livetail.md
             navtitle: Using Livetail
       - topicgroup:
