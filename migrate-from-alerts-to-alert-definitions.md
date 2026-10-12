@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-10"
+lastupdated: "2026-09-29"
 
 keywords:
 
@@ -170,17 +170,17 @@ For this example, an alert that is named `alert-managed-by-tf` is managed by Ter
     ```
     {: codeblock}
 
-3. Run the following command with the [<constructed_alert_ID>](#migrate_construct_alertid) for the alert to be converted. 
+3. Run the following command with the [CONSTRUCTED_ALERT_ID](#migrate_construct_alertid) for the alert to be converted.
 
     ```sh
-    terraform import ibm_logs_alert_definition.alert_managed_by_tf <constructed_alert_ID>
+    terraform import ibm_logs_alert_definition.alert_managed_by_tf CONSTRUCTED_ALERT_ID
     ```
     {: pre}
 
     The state is imported for `ibm_logs_alert_definition.alert_managed_by_tf` resource.
 
 4. Run the following command to see the state of imported resource.
-   
+
     ```sh
     terraform state show ibm_logs_alert_definition.alert_managed_by_tf
     ```
@@ -335,17 +335,17 @@ For this example, an alert that is named `alert-managed-by-tf` is converted.
 
 4. Run the [{{site.data.keyword.bpshort}} `workspace update` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) to pull latest code into your workspace.
 
-5. Run the [{{site.data.keyword.bpshort}} `workspace import` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import) with the [<constructed_alert_ID>](#migrate_construct_alertid) for the alert to import your resource:
+5. Run the [{{site.data.keyword.bpshort}} `workspace import` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import) with the [CONSTRUCTED_ALERT_ID](#migrate_construct_alertid) for the alert to import your resource:
 
     ```text
-    ibmcloud schematics workspace import --id <schematics workspace id> --address ibm_logs_alert_definition.alert_managed_by_tf --resourceID <constructed_alert_ID>
+    ibmcloud schematics workspace import --id SCHEMATICS_WORKSPACE_ID --address ibm_logs_alert_definition.alert_managed_by_tf --resourceID CONSTRUCTED_ALERT_ID
     ```
     {: pre}
 
 6. Run the [{{site.data.keyword.bpshort}} `workspace state show` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show):
 
     ```text
-    ibmcloud schematics workspace state show --id <schematics workspace id>  --address ibm_logs_alert_definition.alert_managed_by_tf`
+    ibmcloud schematics workspace state show --id SCHEMATICS_WORKSPACE_ID  --address ibm_logs_alert_definition.alert_managed_by_tf`
     ```
     {: pre}
 

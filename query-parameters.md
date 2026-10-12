@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-04"
+  years:  2024, 2026
+lastupdated: "2026-09-14"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using query parameters in your DataPrime queries
+# Using query parameters in your DataPrime queries in {{site.data.keyword.logs_full_notm}}
 {: #query-parameters}
 
 The {{site.data.keyword.logs_full}} DataPrime `$p` variable lets you incorporate variables into your DataPrime queries for custom dashboards and time-related parameters.
@@ -149,7 +149,7 @@ source logs between $p.timeRange.startTime/1h and $p.timeRange.endTime/1h+1h
 Using the `join` command, the following query joins and compares the number of logs per subsystem from today to those exactly one week prior.
 
 ```text
-source logs 
+source logs
 | groupby $l.subsystemname calculate count() as cnt
 | join (source logs timeshifted -7d
         | groupby $l.subsystemname calculate count() as cnt) using subsystemname into a_week_before
@@ -159,7 +159,7 @@ source logs
 This verbose example provides a way to gain more control over the time range, if needed.
 
 ```text
-source logs 
+source logs
 | groupby $l.subsystemname calculate count() as cnt
 | join (source logs between $p.timeRange.startTime-7d and $p.timeRange.endTime-7d
         | groupby $l.subsystemname calculate count() as cnt) using subsystemname into a_week_before

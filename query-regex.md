@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-10"
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-# Using regex when querying data
+# Using regex when querying data in {{site.data.keyword.logs_full_notm}}
 {: #query-regex}
 
 You can use regular expressions (regex) when querying {{site.data.keyword.logs_full_notm}} data for pattern searching and string replacement.
@@ -32,7 +32,7 @@ Regular Expressions, also known as regex, is a domain-specific language (DSL) us
 The information in this topic is not intended to give a full educational tutorial on regex. If you are unfamiliar with regex, you might want to review publicly available information on regex before trying to understand the specific concepts included here.
 {: tip}
 
-## Regex concepts
+## Regex concepts in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-concepts}
 
 There are some basic concepts you need to know to understand the examples in this topic.
@@ -46,7 +46,7 @@ Named capture group
 Character class
 :   A range of characters to be matched enclosed in square brackets (`[]`). A dash can be used as a shorthand to list several characters: `[1-5]` is the same as `[12345]`.
 
-## When to use regex
+## When to use regex in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-when}
 
 There are times when you will not need a regular expression and you can just search for a specific text. For example, if you just want to find log lines with the text `user logged in`, you can simply enter this text into your log search. But if your log lines look like this: `user_32 logged in` you can’t search for the exact text since the user ID is a variable that changes.
@@ -58,7 +58,7 @@ user_d+ logged in
 ```
 {: codeblock}
 
-## Using regex to extract text into custom JSON fields
+## Using regex to extract text into custom JSON fields in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-extract}
 
 Suppose you have an unstructured log in the following format:
@@ -129,7 +129,7 @@ Is converted into this JSON object:
 ```
 {: codeblock}
 
-## Extracting text into predefined fields
+## Extracting text into predefined fields in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-extract-predefined}
 
 You might want to extract text into predefined fields. Consider this log:
@@ -152,7 +152,7 @@ This regex will format the log so it will display as shown.
 
 ![Example view showing formatted log](images/regex_1.png "Example view showing formatted log"){: caption="Log display after applying regex formatting" caption-side="bottom"}
 
-## Extracting specific data from structured logs
+## Extracting specific data from structured logs in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-specific}
 
 A similar method can be used to extract data from structured logs. The following is an example showing you how to extract data from a specific JSON field.
@@ -196,7 +196,7 @@ The result will be similar to the following:
 ```
 {: codeblock}
 
-## Replacing and removing values
+## Replacing and removing values in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-replace}
 
 One of the most common examples where we need to replace or remove values is hiding personal data. Suppose you log phone numbers somewhere and don’t want those to be saved in {{site.data.keyword.logs_full_notm}}.
@@ -234,7 +234,7 @@ And here is the result of applying the above rule:
 ```
 {: codeblock}
 
-## Replacing JSON values in structured logs
+## Replacing JSON values in structured logs in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-replace-structured}
 
 Replacing JSON values in structured logs is similar to replacing values in unstructured logs. The whole JSON string is used as the input for the [Replace rule](/docs/cloud-logs?topic=cloud-logs-parse-replace-rule&interface=ui).
@@ -267,7 +267,7 @@ Here is the regex to replace any value in the `type` field with `newType`:
 ```
 {: codeblock}
 
-## Using backreferences
+## Using backreferences in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-backref}
 
 Suppose we need to replace `europe` with `eu` in the strings in the format `west-europe-2`. And suppose we need to do this not only in the `region` field but in any other part of the log where the string is found. Matching this pattern is easily done with this regex:
@@ -316,7 +316,7 @@ And the log after applying the rule:
 ```
 {: codeblock}
 
-## Searching using regex from the logs search bar
+## Searching using regex from the logs search bar in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-search}
 
 Another place where you can use regex is the {{site.data.keyword.logs_full_notm}} UI **Logs** page search bar.
@@ -359,7 +359,7 @@ You can use the same syntax to match data in unstrucutred logs with regex. You o
 
 This regex will search for the text `ltest-w-1`, `ltest-w-2` or `ltest-w-3` in main log body.
 
-## Triggering alerts with regex
+## Triggering alerts with regex in {{site.data.keyword.logs_full_notm}}
 {: #query-regex-alerts}
 
 Another popular use case for regex in {{site.data.keyword.logs_full_notm}} is in defining alerts. the alerts syntax is the same as logs query syntax.

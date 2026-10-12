@@ -48,8 +48,6 @@ toc:
             navtitle: Release notes
           - topic: agent/releasenotes_agent.md
             navtitle: Logging agent release notes
-          - topic: atla.md
-            navtitle: Log Analysis and Activity Tracker users
           - releasenotes_notifications.md
   - navgroup:
       id: tutorial
@@ -202,36 +200,45 @@ toc:
             navtitle: Enriching data
           - topic: enrich-howto.md
             navtitle: Configuring custom enrichments
+          - topic: benchmarks.md
+            navtitle: Adding version benchmark tags
       - topicgroup:
-          label: Querying data
+          label: Querying logs
           topics:
-          - topic: query-data.md
-            navtitle: Querying data
+          - topic: query-about.md
+            navtitle: About running queries
+          - topic: query-synch.md
+            navtitle: Querying data synchronously
+          - topic: query-background.md
+            navtitle: Querying data asynchronously
           - topic: livetail.md
             navtitle: Using Livetail
+      - topicgroup:
+          label: Building queries
+          topics:
+          - topic: query-recommendations.md
+            navtitle: Writting optimized queries
+          - topic: query-refine.md
+            navtitle: Refining a query
+          - topic: query-data-lucene.md
+            navtitle: Querying data by using Lucene
+          - topic: query-data-dataprime.md
+            navtitle: Querying data by using DataPrime
           - topic: query-data-filters.md
             navtitle: Filtering data
+          - topic: query-regex.md
+            navtitle: Querying data by using regex
           - topic: indexing_mapping.md
             navtitle: Indexing and field mapping
           - topic: priority-insight-index-limits.md
             navtitle: Daily index limit considerations
           - topic: query-mapping-exceptions.md
             navtitle: Managing data mapping exceptions
-          - topic: benchmarks.md
-            navtitle: Using benchmark tags
-          - topic: query-regex.md
-            navtitle: Querying data by using regex
-          - topic: query-data-lucene.md
-            navtitle: Querying data by using Lucene
           - topic: query-data-time.md
             navtitle: Specifying a time interval
-          - topic: query-limitations.md
-            navtitle: Limitations when querying data through the Logs page
           - topicgroup:
               label: Dataprime
               topics:
-              - topic: query-data-dataprime.md
-                navtitle: Querying data by using DataPrime
               - query-parameters.md
               - dataprime-ref-expressions.md
               - dataprime-ref-operators.md
@@ -248,6 +255,11 @@ toc:
               - dataprime-ref-uuid-func.md
               - dataprime-ref-date-time-func.md
               - dataprime-ref-encode-func.md
+      - topicgroup:
+          label: Exporting data
+          topics:
+          - topic: export-data.md
+            navtitle: Exporting data from the Logs page
       - topic: pipeline-analyzer.md
         navtitle: Pipeline analyzer
       - topicgroup:
@@ -287,6 +299,7 @@ toc:
             navtitle: Using Visual Explorer
           - topic: widget_query_builder.md
           - topic: variables.md
+            navtitle: Working with variables
           - topicgroup:
               label: Creating widgets
               topics:
@@ -341,13 +354,6 @@ toc:
             navtitle: MongoDB
           - topic: extensions-nginx.md
             navtitle: NGINX
-      - topicgroup:
-          label: Downloading data
-          topics:
-          - topic: export-data.md
-            navtitle: Exporting data from the Logs page
-          - topic: query-archive-data-bucket.md
-            navtitle: Exporting data directly from the bucket
       - topicgroup:
           label: Working with templates
           topics:
@@ -601,8 +607,8 @@ toc:
       - topicgroup:
           label: CLI Reference
           topics:
-          - topic: cloud-logs-cli-temp.md
-            navtitle: CLI Reference
+          - topic: cloud-logs-cli-ov.md
+            navtitle: Working with the IBM Cloud Logs CLI
       - topicgroup:
           label: Terraform Reference
           links:

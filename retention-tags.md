@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-20"
+lastupdated: "2026-10-11"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Configuring archive retention tags to manage data retention
+# Configuring archive retention tags in {{site.data.keyword.logs_full_notm}} to manage data retention in {{site.data.keyword.cos_full_notm}}
 {: #retention-tags}
 
 In {{site.data.keyword.logs_full_notm}}, you can use {{site.data.keyword.cos_full_notm}} object tags to manage automatically how long log data is available for search in the data bucket.
@@ -203,7 +203,7 @@ Complete the following steps:
 
    For applications and subsystems, criteria can be specified when the value matches one of: `All`, `Is`, `Is Not`, `Includes`, or `Starts With`.
 
-6. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
+6. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco_mapping) for logs that are matched by the policy.
 
     Valid values are: `High` for data managed through {{site.data.keyword.frequent-search}}, `Medium` for data managed through {{site.data.keyword.monitoring}}, `Low` for data managed through {{site.data.keyword.compliance}} and `Block` for data that you drop and is not available for search.
 

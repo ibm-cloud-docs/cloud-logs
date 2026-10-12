@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-24"
+lastupdated: "2026-10-01"
 
 keywords:
 
@@ -25,7 +25,7 @@ One pricing plan is available when provisioning an {{site.data.keyword.logs_full
 
 The`Standard` plan is the pricing plan available when provisioning an {{site.data.keyword.logs_full_notm}} instance. When provision an instance, the initial default is 7-days retention in {{site.data.keyword.frequent-search}}. Alternative retention periods can be selected in the console or as a parameter in the CLI or Terraform provider.
 
-You can adjust the consumption tier values using the [TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) feature within the {{site.data.keyword.logs_full_notm}} instance. Policies can be configured to process log and event data using the consumption tiers. You can select to process everything through 1 tier or define policies to configure a mix of consumption tiers to optimize the level of {{site.data.keyword.logs_full_notm}} processing for your log and event data.
+You can adjust the consumption tier values using the [TCO Optimizer](cloud-logs?topic=cloud-logs-tco-optimizer) feature within the {{site.data.keyword.logs_full_notm}} instance. Policies can be configured to process log and event data using the consumption tiers. You can select to process everything through 1 tier or define policies to configure a mix of consumption tiers to optimize the level of {{site.data.keyword.logs_full_notm}} processing for your log and event data.
 
 Data is metered by the service per gigabytes ingested. You can configure [data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics) to monitor your data usage.
 

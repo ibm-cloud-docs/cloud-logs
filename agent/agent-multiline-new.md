@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-03"
+  years:  2024, 2026
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -92,7 +92,7 @@ Choose one of the following options to configure the {{site.data.keyword.agent}}
 ## Adding a custom multiline parser
 {: #agent-multiline-new-parser-0}
 
-To create a custom multiline parser for use with the {{site.data.keyword.agent}}, follow the instructions in [Configurable Multiline Parsers](https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/multiline-parsing#configurable-multiline-parsers){: external}. You will define a custom regex to determine the multiline pattern.
+To create a custom multiline parser for use with the {{site.data.keyword.agent}}, follow the instructions in [Configurable Multiline Parsers](https://docs.fluentbit.io/manual/data-pipeline/parsers/multiline-parsing#configurable-multiline-parsers){: external}. You will define a custom regex to determine the multiline pattern.
 
 The {{site.data.keyword.agent}} configuration must also include a `FILTER` after the `INPUT` plug-in. The filter will apply the pattern of the configured `MULTILINE_PARSER`. The `Name` value of the `MULTILINE_PARSER` must match the `Multiline.parser` value in the `FILTER`.
 

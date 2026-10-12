@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-04"
+lastupdated: "2026-10-10"
 
 keywords:
 
@@ -25,7 +25,7 @@ subcollection: cloud-logs
 
 {{site.data.keyword.cos_full_notm}} is a highly available, durable, and secure platform for storing unstructured data. The files that are uploaded into {{site.data.keyword.cos_full_notm}} are called objects. Objects can be anywhere from a few bytes up to 10TB. They are organized into buckets that serve as containers for objects, and which can be configured independently from one another in terms of locations, resiliency, billing rates, security, and object lifecycle. For more information, see [What is {{site.data.keyword.cos_full_notm}}?](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
 
-To manage buckets, your user must be granted permissions to work with buckets on the {{site.data.keyword.cos_full_notm}} instance. For more information about roles, see [Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-with-iam&interface=ui).
+To manage buckets, your user must be granted permissions to work with buckets on the {{site.data.keyword.cos_full_notm}} instance. For more information about roles, see [Identity and Access Management roles](/docs/cloud-object-storage?topic=cloud-object-storage-iam).
 
 To create a bucket, you can choose 1 of the following options:
 
@@ -44,7 +44,7 @@ For more information, see [Getting started with {{site.data.keyword.cos_full_not
 
 
 
-## About buckets with {{site.data.keyword.logs_full_notm}}
+## About buckets in {{site.data.keyword.logs_full_notm}}
 {: #about-bucket-clbuckets}
 
 For each {{site.data.keyword.logs_full_notm}} instance, you can configure 1 data bucket and 1 metrics bucket.
@@ -82,6 +82,9 @@ To use different lifecycle periods for logs data ingested through different data
 {: tip}
 
 While all data stored in {{site.data.keyword.cos_full_notm}} is automatically encrypted using randomly generated keys, some workloads require that the keys can be rotated, deleted, or otherwise controlled by a key management system (KMS) like {{site.data.keyword.keymanagementservicefull}}. Data at rest is encrypted with automatic provider-side Advanced Encryption Standard (AES) 256-bit encryption and the Secure Hash Algorithm (SHA)-256 hash. Data in motion is secured by using the built-in carrier grade Transport Layer Security/Secure Sockets Layer (TLS/SSL) or SNMPv3 with AES encryption. If you want more control over encryption, you can make use of {{site.data.keyword.keymanagementservicefull}} to manage generated or "bring your own" keying. For more information, see [Encrypting a bucket with {{site.data.keyword.keymanagementservicefull}}](/docs/cloud-object-storage?topic=cloud-object-storage-tutorial-kp-encrypt-bucket) and [Key-protect COS Integration](/docs/key-protect?topic=key-protect-integrate-cos).
+
+{{site.data.keyword.logs_full_notm}} supports server-side encryption (SSE) per bucket.
+{: important}
 
 Notice that data that is stored in the data bucket includes data across all TCO data pipelines: data from {{site.data.keyword.frequent-search}}, {{site.data.keyword.monitoring}} and {{site.data.keyword.compliance}}. If the data must be protected by a customer-managed encryption only, then [TCO policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) need to be configured to exclusively process data through the {{site.data.keyword.monitoring}} or {{site.data.keyword.compliance}} data pipelines. For more information, see [Configuring the TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-optimizer).
 {: attention}

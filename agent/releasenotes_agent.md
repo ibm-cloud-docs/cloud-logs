@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-20"
+lastupdated: "2026-09-29"
 
 keywords:
 
@@ -20,6 +20,14 @@ Use these release notes to learn about updates to the {{site.data.keyword.agent}
 {: shortdesc}
 
 
+
+## 14 September 2026
+{: #logs-router-agent-sep1426}
+{: release-note}
+
+Discontinued support for Ubuntu 20 and Debian 11:
+
+To align with the operating system's end-of-life (EOL) timelines, the {{site.data.keyword.agent}} version 1.9.2 and later will not support Ubuntu 20 or Debian 11. If you want to receive updates to the {{site.data.keyword.agent}}, you can upgrade to a supported operating system version.
 
 ## 21 August 2026
 {: #logs-router-agent-aug2126}

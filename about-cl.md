@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-22"
+  years:  2024, 2026
+lastupdated: "2026-10-03"
 
 keywords:
 
@@ -166,7 +166,7 @@ Dashboard insights, which are paired with {{site.data.keyword.logs_full_notm}} m
 
 For more information, see [Dashboards](/docs/cloud-logs?topic=cloud-logs-about_dashboards).
 
-Preconfigured alerts and dashboards are available as extensions for common application environments and can be tailored to your specific environment needs. For more information, see [Extensions](/docs/cloud-logs?topic=cloud-logs-extensions).
+Preconfigured alerts and dashboards are available as extensions for common application environments and can be tailored to your specific environment needs. For more information, see [Extensions](docs/cloud-logs?topic=cloud-logs-extensions-mgmt&interface=ui).
 
 ## Notifying about issues to raise awareness and act promptly
 {: #about-cl-alert}

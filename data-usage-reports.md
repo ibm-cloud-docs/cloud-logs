@@ -2,17 +2,15 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-09-30"
 
 keywords:
 
 subcollection: cloud-logs
 
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Generating data usage overview reports
 {: #data-usage-reports}
@@ -78,7 +76,7 @@ Complete the following steps to export the Data Usage Report as a CSV file:
 9. Click **Export**.
 
 ## Exporting an overview data usage report using API
-{: #ov-data-usage-reports-api}
+{: #data-usage-reports-api}
 {: api}
 
 
@@ -103,19 +101,21 @@ curl 'https://{instance_ID}.api.{region}.logs.cloud.ibm.com/v1/data_usage?query=
 A successful response returns the data usage overview report for the specified time range. For more information about the API, see [Get data usage metrics export status or return data usage report](/apidocs/logs-service-api#export-data-usage){: external}.
 
 ## Exporting an overview data usage report using CLI
-{: #ov-data-usage-reports-cli}
+{: #data-usage-reports-cli}
 {: cli}
 
 Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-temp#logs-cli-prereq-temp) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
 
-To export data usage by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud logs data-usage`** command. For example, the following command exports the data usage detailed report for last 30 days.
+To export data usage by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud logs data-usage`** command.
 
-```text
+For example, the following command exports the data usage detailed report for last 30 days.
+
+```sh
 ibmcloud logs data-usage --query daily --range last_30_days
 ```
 {: pre}
 
-Overview data usage reports are exported using `query` parameter with value `daily`.
+Overview data usage reports are exported using the `query` parameter with the value set to `daily`.
 
 You can retrieve the data usage report over a specified time range for your {{site.data.keyword.logs_full_notm}} instance with `range` request parameters. Valid values of the `range` parameter are `current_month`, `last_30_days`, `last_90_days`, and `last_week`. The default is `current_month`.
 

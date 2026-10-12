@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-03"
+  years:  2024, 2026
+lastupdated: "2026-10-10"
 
 keywords:
 
@@ -23,11 +23,11 @@ You can configure {{site.data.keyword.logs_full_notm}} or adjust the data that i
 ## Selecting the best service plan
 {: #cc-sp}
 
-Review the available [service plans and pricing](/docs/cloud-logs?topic=cloud-logs-service_plans). The cost for the [data pipeline](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines) where you plan to store data affects your total cost.
+Review the available [service plans and pricing](/docs/cloud-logs?topic=cloud-logs-service_plans). The cost for the [data pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) where you plan to store data affects your total cost.
 
 Also, consider how long you need to keep your data for fast search in {{site.data.keyword.frequent-search}}. You can configure your {{site.data.keyword.logs_full_notm}} instance to save your data in {{site.data.keyword.frequent-search}} for a shorter time period.
 
-Data is metered by the service per gigabytes ingested. You can configure [data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics) to monitor your data usage. Data usage metrics requires that you have a [metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket) configured.
+Data is metered by the service per gigabytes ingested. You can configure [data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics-analyzer) to monitor your data usage. Data usage metrics requires that you have a [metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket) configured.
 {: tip}
 
 ## Configuring the TCO optimizer
@@ -58,26 +58,26 @@ To understand how to contol your cost when using {{site.data.keyword.logs_full_n
 
 {{site.data.keyword.logs_full_notm}} ingests data from multiple sources and that data is processed in a specific order:
 
-1. Logs are sent by the source. 
+1. Logs are sent by the source.
 
-   * Operational logs are sent using an agent or API REST call. 
+   * Operational logs are sent using an agent or API REST call.
    * Platform logs and activity tracking events are sent by IBM Cloud.
 
 2. {{site.data.keyword.logs_full_notm}} ingests (receives) the data.
 
-3. {{site.data.keyword.logs_full_notm}} parsing rules are applied to the ingested data.
+3. {{site.data.keyword.logs_full_notm}} parsing rules and enrichments are applied to the ingested data.
 
-4. TCO [policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-create-policy) are applied and the data is assigned to the appropriate [data pipeline](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines), or dropped, depending on the policy.
+4. TCO [policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-create-policy) are applied and the data is assigned to the appropriate [data pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco-optimizer-about), or dropped, depending on the policy.
 
-A log is considered to be ingested for the purposes of billing once the parsing rules and TCO policies have been applied.  Logs that are blocked before being sent to the data pipelines do not incur charges and these logs are not retained.
+A log is considered to be ingested for the purposes of billing once the parsing rules, enrichments, and TCO policies have been applied. Logs that are blocked before being sent to the data pipelines do not incur charges and these logs are not retained.
 {: important}
 
 ## Controlling ingested data
 {: #cc-ingest-control}
 
-In addition to controlling the data pipelines where your data is kept within {{site.data.keyword.logs_full_notm}}, you can control the data that is ingested by {{site.data.keyword.logs_full_notm}}.
+In addition to controlling the data pipelines where your data is kept within {{site.data.keyword.logs_full_notm}}, you can control the data that is ingested by {{site.data.keyword.logs_full_notm}} by configuring parsing rules or filtering and restructuring data sent through the {{site.data.keyword.agent}}.
 
-### Using parsing rules 
+### Using parsing rules
 {: #cc-parse}
 
 You can use the *block* parsing rule to filter out incoming logs based on a RegEx expression. For more information on configuring a *block* parsing rule, see [Blocking log data](/docs/cloud-logs?topic=cloud-logs-parse-block-rule&interface=ui).

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -12,13 +12,13 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring the {{site.data.keyword.tco-optimizer}}
+# Configuring the {{site.data.keyword.tco-optimizer}} in {{site.data.keyword.logs_full_notm}}
 {: #tco-optimizer}
 
 In {{site.data.keyword.logs_full}}, you can configure the Total Cost of Ownership ({{site.data.keyword.tco-optimizer}}) and define policies that specify how to route logs to different data pipelines based on their business value. Each pipeline has a different storage price and offers different features. By defining the data pipeline based on the importance of the data to your business, the {{site.data.keyword.tco-optimizer}} can help you improve real-time analysis and alerting and helps you manage costs. In addition, if you enable archive retention tags in your {{site.data.keyword.logs_full_notm}} instance, you can also configure different data retention periods per policy.
 {: shortdesc}
 
-## About the {{site.data.keyword.tco-optimizer}}
+## About the {{site.data.keyword.tco-optimizer}} in {{site.data.keyword.logs_full_notm}}
 {: #tco-optimizer-about}
 
 By default, when you send data to an {{site.data.keyword.logs_full_notm}} instance, data is routed to the {{site.data.keyword.frequent-search}} data pipeline at ingestion. This data is retained and available for search by the {{site.data.keyword.logs_full}} service for the number of days that you specify at the instance level. You can configure 7 days, 14 days, 30 days or 90 days.
@@ -58,7 +58,7 @@ When you configure TCO policies, each policy is assigned a priority. The selecte
 | `Low` | {{site.data.keyword.compliance}} |
 | `Blocked` | `[*]` |
 {: caption="Mapping of policy priority to TCO pipeline" caption-side="bottom"}
-{: #tco_mapping}
+
 
 `[*]` Logs matching policies with the `Blocked` priority are dropped and are not sent to any TCO pipeline.
 
@@ -97,7 +97,7 @@ Policies are evaluated in order, top down by default. The first matching policy 
 - Policies that block data should be defined last.
 
 
-### {{site.data.keyword.frequent-search}} data pipeline
+### {{site.data.keyword.frequent-search}} data pipeline in {{site.data.keyword.logs_full_notm}}
 {: #tco-optimizer-high}
 
 
@@ -125,7 +125,7 @@ Features available for high prioirty logs are:
 
 * Viewing traces in your explore screen
 
-### {{site.data.keyword.monitoring}} data pipeline
+### {{site.data.keyword.monitoring}} data pipeline in {{site.data.keyword.logs_full_notm}}
 {: #tco-optimizer-medium}
 
 
@@ -146,7 +146,7 @@ Features available for medium priority logs are:
 
 - Viewing traces in your explore screen
 
-### {{site.data.keyword.compliance}} data pipeline
+### {{site.data.keyword.compliance}} data pipeline in {{site.data.keyword.logs_full_notm}}
 {: #tco-optimizer-low}
 
 Use the *{{site.data.keyword.compliance}} data pipeline* for logs that you must keep for compliance purposes but do not require action to be taken.
@@ -160,7 +160,7 @@ Features available for low priority logs include:
 - Viewing traces in your explore screen
 
 
-## Accessing the {{site.data.keyword.tco-optimizer}}
+## Accessing the {{site.data.keyword.tco-optimizer}} in {{site.data.keyword.logs_full_notm}}
 {: #tco-access}
 
 Complete the following steps to access the {{site.data.keyword.tco-optimizer}}:
@@ -171,7 +171,7 @@ Complete the following steps to access the {{site.data.keyword.tco-optimizer}}:
 
 The {{site.data.keyword.tco-optimizer}} page shows the percentage of ingested data that is flowing to each pipeline after the configured policies are applied.
 
-## Creating a policy
+## Creating a TCO policy in {{site.data.keyword.logs_full_notm}}
 {: #tco-optimizer-create-policy}
 
 You must have a [{{site.data.keyword.cos_full_notm}} data bucket](/docs/cloud-logs?topic=cloud-logs-configure-data-bucket) configured before creating a policy.
@@ -207,7 +207,7 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 
 6. Click **Apply**.
 
-## Modifying a policy
+## Modifying a TCO policy in {{site.data.keyword.logs_full_notm}}
 {: #tco-optimizer-modify-policy}
 
 On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to modify an existing policy:
@@ -221,7 +221,7 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 If you want to change the policy priority value, you can also change the priority in the **Priority** drop-down list for the policy in the policy list. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
 {: tip}
 
-## Deleting a policy
+## Deleting a TCO policy in {{site.data.keyword.logs_full_notm}}
 {: #tco-optimizer-delete-policy}
 
 On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to delete an existing policy:
@@ -231,6 +231,8 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 2. Click **Delete**.
 
 3. Confirm that you want to delete the policy.
+
+
 
 ## Creating an application and policy override
 {: #tco-optimizer-override}

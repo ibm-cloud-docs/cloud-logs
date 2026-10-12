@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-03"
+  years:  2024, 2026
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -26,14 +26,14 @@ You can assign access to {{site.data.keyword.logs_full_notm}} by using any of th
 
     Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access.
 
-    An access group can be created to organize a set of users, service IDs, and trusted profiles into a single entity that makes it easy for you to assign access. You can assign a single policy to the group instead of assigning the same access multiple times for an individual user or service ID. For more information, see [Setting up access groups](/docs/account?topic=account-groups).
+    An access group can be created to organize a set of users, service IDs, and trusted profiles into a single entity that makes it easy for you to assign access. You can assign a single policy to the group instead of assigning the same access multiple times for an individual user or service ID. For more information, see [Setting up access groups](/docs/iam?topic=iam-groups&interface=ui).
 
     To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use access groups. You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
     {: tip}
 
 * Trusted profiles
 
-    You can use trusted profiles to grant different {{site.data.keyword.cloud}} identities access to resources in your account. Automatically grant federated users access to your account with conditions based on SAML attributes from your corporate directory. Or, use trusted profiles to set up fine-grained authorization for applications that are running in compute resources. This way, you aren't required to create service IDs or API keys for the compute resources. You can also establish trust with {{site.data.keyword.cloud_notm}} services or service IDs in another account to grant cross-account access. For more information, see [Creating trusted profiles](/docs/account?topic=account-create-trusted-profile).
+    You can use trusted profiles to grant different {{site.data.keyword.cloud}} identities access to resources in your account. Automatically grant federated users access to your account with conditions based on SAML attributes from your corporate directory. Or, use trusted profiles to set up fine-grained authorization for applications that are running in compute resources. This way, you aren't required to create service IDs or API keys for the compute resources. You can also establish trust with {{site.data.keyword.cloud_notm}} services or service IDs in another account to grant cross-account access. For more information, see [Creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile&interface=ui).
 
 If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned.
 {: important}
@@ -45,9 +45,9 @@ If you have the IAM permission to create policies and authorizations, you can gr
 
 There are two common ways to assign access to {{site.data.keyword.logs_full_notm}} in the console:
 
-* Access groups. You can manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
+* Access groups. You can manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/iam?topic=iam-groups&interface=ui#access_ag).
 
-* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
+* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources](/docs/iam?topic=iam-assign-access-resources&interface=ui#access-resources-console).
 
 
 
@@ -55,7 +55,7 @@ There are two common ways to assign access to {{site.data.keyword.logs_full_notm
 {: #iam-assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `Viewer` role for {{site.data.keyword.logs_full_notm}}:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/iam?topic=iam-assign-access-resources&interface=ui#access-resources-cli). The following example shows a command for assigning the `Viewer` role for {{site.data.keyword.logs_full_notm}}:
 
 Use `logs` for the service name. Also, use quotations around role names that are more than one word.
 {: tip}
@@ -69,7 +69,7 @@ ibmcloud iam user-policy-create name@example.com --service-name logs --roles "Vi
 {: #iam-assign-access-api}
 {: api}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api) or the [Create a policy API docs](/apidocs/iam-policy-management#create-policy). Role cloud resource names (CRN) in the following table are used to assign access with the API.
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/iam?topic=iam-assign-access-resources&interface=ui) or the [Create a policy API docs](/apidocs/iam-policy-management#create-policy). Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
 
 | Role name | Role CRN |

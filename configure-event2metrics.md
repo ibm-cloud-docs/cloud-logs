@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-10-01"
 
 keywords:
 
@@ -62,7 +62,7 @@ Do the following to configure Events to Metrics in your environment.
 
 4. Define the details for your metrics.
 
-   For **Name**, specify the name for the metric that will be used in the long-term index.
+   For **Name**, specify the name for the metric that will be used in the long-term index. Name can be used when creating dashboards showing metric samples as graphs or sums.
 
    For **Description**, describe your metric.
 
@@ -160,4 +160,3 @@ You need to use forward slash (`/`) before and after your regex string.
 
 Keywords are not created for fields longer than 256 characters.
 {: restriction}
-

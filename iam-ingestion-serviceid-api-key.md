@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-25"
+  years:  2024, 2026
+lastupdated: "2026-10-05"
 
 keywords:
 
@@ -24,7 +24,7 @@ An individual user ID API key should only be used for non-production environment
 
 The API key is used to open a secure web socket to the {{site.data.keyword.logs_full_notm}} ingestion endpoint to authenticate the {{site.data.keyword.agent}}.
 
-API keys are used to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+API keys are used to authenticate as a particular service ID and are granted the access that is associated with that specific service ID. For more information, see [Managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys&interface=ui).
 
 Make sure the user who grants the policy has the `Sender` role permissions.
 {: important}
@@ -32,9 +32,9 @@ Make sure the user who grants the policy has the `Sender` role permissions.
 Make sure to grant the service ID the `Sender` role before generating the API key.
 {: note}
 
-- [Creating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#create_service_key).
-- [Updating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#update_service_key).
-- [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#delete_service_key).
+- [Creating an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#create_service_key).
+- [Updating an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#create_service_key).
+- [Deleting an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#create_service_key).
 
 
 ## Generating an API Key by using the CLI
@@ -58,7 +58,7 @@ Complete the following steps to generate an API key for a service ID by using th
 3. Add an IAM policy for your service ID that grants access to send logs.
 
     ```sh
-    ibmcloud iam service-policy-create <SERVICE_ID> --service-name logs --roles Sender
+    ibmcloud iam service-policy-create SERVICE_ID --service-name logs --roles Sender
     ```
     {: pre}
 
@@ -67,6 +67,6 @@ Complete the following steps to generate an API key for a service ID by using th
     Be sure to give the API key a description that helps you retrieve the key later. Save your API key in a secure location. You can't retrieve the API key again. If you want to export the output to a file on your local machine, include the `--file <path>/<file_name>` option.
 
     ```sh
-    ibmcloud iam service-api-key-create logs-ingestion-key <SERVICE_ID> --description "API key for service ID <SERVICE_ID> with permissions to send logs to the IBM Cloud Logs service"
+    ibmcloud iam service-api-key-create logs-ingestion-key SERVICE_ID --description "API key for service ID SERVICE_ID with permissions to send logs to the IBM Cloud Logs service"
     ```
     {: pre}

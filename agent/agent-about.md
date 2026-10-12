@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-08-13"
+  years:  2024, 2026
+lastupdated: "2026-09-13"
 
 keywords:
 
@@ -77,9 +77,8 @@ The following platforms are supported:
 
 - RHEL 8
 - RHEL 9
-- Ubuntu 20
 - Ubuntu 22
-- Debian 11
+- Ubuntu 24
 - Debian 12
 - Windows Server 2016
 - Windows Server 2019

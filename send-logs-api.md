@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-11-26"
+  years:  2024, 2026
+lastupdated: "2026-10-12"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: cloud-logs
 
 
 
-#  Sending logs by using the API
+#  Sending logs by using the API in {{site.data.keyword.logs_full_notm}}
 {: #send-logs-api}
 
 You can send logs to an {{site.data.keyword.logs_full_notm}} instance by using the ingestion API.
@@ -34,7 +34,7 @@ To obtain your token by using the IBM Cloud CLI, complete the following steps:
 
 2. Run the following command:
 
-    ```
+    ```sh
     ibmcloud iam oauth-tokens
     ```
     {: codeblock}
@@ -51,7 +51,7 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 ```
 {: pre}
 
-## Send logs by using cURL
+## Send logs by using cURL in {{site.data.keyword.logs_full_notm}}
 {: #send-logs-curl}
 {: step}
 
@@ -69,7 +69,7 @@ Where
 
 - `INSTANCE_ID`: GUID of the {{site.data.keyword.logs_full_notm}} instance where you want to send logs.
 - `REGION`: Region where the {{site.data.keyword.logs_full_notm}} instance is located.
-- `IAM_TOKEN`: [IAM bearer token](#send-logs-token) used to request authorization to seng to logs. The pemission `logs.data.send` is required.
+- `IAM_TOKEN`: [IAM bearer token](/docs/cloud-logs?topic=cloud-logs-send-logs-api#send-logs-token) used to request authorization to seng to logs. The pemission `logs.data.send` is required.
 
 
 Use the following cURL command to send a log line:
