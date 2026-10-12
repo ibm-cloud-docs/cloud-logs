@@ -12,16 +12,51 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Querying data in {{site.data.keyword.logs_full_notm}}
+# Querying data synchronously in {{site.data.keyword.logs_full_notm}}
 {: #query-synch}
 
-In {{site.data.keyword.logs_full_notm}}, you can run a long-running query asynchronously by running a *Background query*. You can use DataPrime or Lucene syntax to query the data. This feature queries data in the {{site.data.keyword.cos_full_notm}} (COS) data bucket. The query results are prepared and, once ready, you can download the results as a file using the UI, the CLI or the API at a later point in time.
+In {{site.data.keyword.logs_full_notm}}, you can run a synchronously query using DataPrime or Lucene syntax to query the data.
 {: shortdesc}
 
-Use a background query for recurring, extensive analytical tasks such as monthly or quarterly analysis.
-{: tip}
+
+## Managing queries through the UI in {{site.data.keyword.logs_full_notm}}
+{: #query-sync-ui}
+{: ui}
+
+In {{site.data.keyword.logs_full_notm}}, you can query data through the *Logs Explorer* page by using any of the following options:
+
+- [Querying data by using Lucene queries](/docs/cloud-logs?topic=cloud-logs-query-data-lucene)
+
+- [Querying data by using DataPrime queries](/docs/cloud-logs?topic=cloud-logs-query-data-dataprime)
+
+In the **Logs Explorer > Logs** page, you can choose any of the following options to query data:
+
+- You can monitor {{site.data.keyword.frequent-search}} data through the *Priority Insights* option.
+
+- You can monitor data through the *All Logs* option that is available in the COS data bucket and ingested through any data pipeline.
 
 
+## Managing background queries through the CLI in {{site.data.keyword.logs_full_notm}}
+{: #query-background-cli}
+{: cli}
+
+The following table lists the CLI commands that you can use to manage background queries:
+
+| Command                                  | Description |
+|------------------------------------------|-------------|
+| `background-query-create` (`bgq-create`) | Submit a background query to be processed asynchronously. |
+| `background-query-status` (`bgq-status`) | Get the status of a background query. |
+| `background-query-data`   (`bgq-data`)   | Get the data of the background query. |
+| `background-query-cancel` (`bgq-cancel`) | Cancel a background query. This request stops a query that is running in the background. |
+{: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) CLI commands" caption-side="bottom"}
+
+You can run the `ibmcloud cloud-logs background-query-create` command to run a query asynchronously.
+
+After you submit a background query, you can check the status of the query by running the command `ibmcloud cloud-logs background-query-status`.
+
+If you need to stop a query that is still running, you can run the command `ibmcloud cloud-logs background-query-cancel`.
+
+If you want to download the data, you can run the command `ibmcloud cloud-logs background-query-data`.
 
 
 ##   query - Run a query to search the logs.

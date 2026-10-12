@@ -15,8 +15,13 @@ subcollection: cloud-logs
 # Querying data by using an asynchronous background query in {{site.data.keyword.logs_full_notm}}
 {: #query-background}
 
-In {{site.data.keyword.logs_full_notm}}, you can run a long-running query asynchronously by running a *Background query*. You can use DataPrime or Lucene syntax to query the data. This feature queries data in the {{site.data.keyword.cos_full_notm}} (COS) data bucket. The query results are prepared and, once ready, you can download the results as a file using the UI, the CLI or the API at a later point in time.
+In {{site.data.keyword.logs_full_notm}}, you can run a long-running query asynchronously by running a *Background query*. You can use DataPrime or Lucene syntax to query the data.
 {: shortdesc}
+
+This feature queries data in the {{site.data.keyword.cos_full_notm}} (COS) data bucket.
+{: important}
+
+To run a background query, you submit a query request. Once the query results are prepared and ready, you can download the results as a file using the UI, the CLI or the API at a later point in time.
 
 Use a background query for recurring, extensive analytical tasks such as monthly or quarterly analysis.
 {: tip}
