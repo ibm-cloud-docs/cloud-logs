@@ -126,6 +126,7 @@ For example, if **Unique values** is 663, the **Max unique count values should n
 
 When the **Max unique count values should not exceed** threshold is reached for the key group, the alert is triggered.
 
+
 ## Configure the notification details
 {: step}
 {: #alerts-config-5}
@@ -152,6 +153,7 @@ Complete the following steps:
     You must have an outbound integration defined to be able to add an integration. For more information, see [Configuring the integration with the Event Notifications service](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure). 
 
 
+
 ## Set a schedule and what log content to include
 {: step}
 {: #alerts-config-6}
@@ -176,6 +178,7 @@ Complete the following steps:
 
 When an alert is triggered, there are limitations to the amount of data that is included in the event. For more information on these limitations, see [Data size](/docs/cloud-logs?topic=cloud-logs-event-payload#event-payload-2).
 {: note}
+
 
 ## Save the alert configuration
 {: #alerts-config-7}
