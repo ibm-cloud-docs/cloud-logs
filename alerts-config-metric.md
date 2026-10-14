@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-17"
+  years:  2024, 2026
+lastupdated: "2026-10-14"
 
 keywords:
 
@@ -24,8 +24,14 @@ Metric alerts are notifications triggered by predefined thresholds being met or 
 
 Metric alerts are designed to monitor critical performance indicators surrounding infrastructure and other metrics. When specific thresholds or conditions are exceeded, these alerts act as an early warning system, notifying teams of potential issues requiring immediate attention. For instance, they help monitor server CPU utilization, response times, error rates, and resource utilization in cloud environments.
 
+## Prereqs
+{: #alerts-config-metric-prereqs}
+{: ui}
 
-{{/_include-segments/alerts-prereq.md}}
+- Learn about alerts in {{site.data.keyword.logs_full_notm}}. For more information, see [Alerting](/docs/cloud-logs?topic=cloud-logs-alerts).
+- Check that you have an [{{site.data.keyword.en_short}} instance](/catalog/services/event-notifications){: external} that is in the same account as your {{site.data.keyword.logs_full_notm}} instance and permisions to configure resources in the {{site.data.keyword.en_short}} instance.
+- Check that the outbound integration between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_short}} instance is configured. For more information, see [Configuring an outbound integration to connect](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
+
 
 
 {{/_include-segments/alerts-alerts-mgmt.md}}
