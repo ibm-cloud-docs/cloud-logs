@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-25"
+  years:  2024, 2026
+lastupdated: "2026-10-20"
 
 keywords:
 
@@ -78,8 +78,8 @@ When you deploy the extension, consider the following information:
 
 For more information about deploying the extension, see [Deploying, managing, and removing {{site.data.keyword.logs_full_notm}} extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
 
+After deploying, verify that the extension configuration handles data in a way that matches your {{site.data.keyword.logs_full_notm}} instance TCO configuration. Alerts, dashboards, and events to metrics are features available for data handled through the {{site.data.keyword.monitoring}} and the {{site.data.keyword.frequent-search}} data pipelines. After you deploy the extension, make sure the configuration meets your needs. For example, if you have [TCO policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) sending data to the {{site.data.keyword.monitoring}} pipeline, you will need to change the dashboard configured by this extension to use **Analyze and Alert** data instead of **{{site.data.keyword.frequent-search}}**.
 
-{{/_include-segments/extensions-validate.md}}
 
 ## Parsing rules
 {: #extensions-activity-tracking-rules}
