@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-10-23"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -19,6 +19,9 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+
+
 
 
 

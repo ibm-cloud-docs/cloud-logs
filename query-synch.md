@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-12"
+lastupdated: "2026-10-23"
 
 keywords:
 
@@ -134,6 +134,10 @@ ibmcloud logs query --query "Push and Query test" --metadata '{"start_date": "20
 
 ```text
 ibmcloud logs query --query "source logs | filter \$d.text == 'Push and Query test'" --syntax dataprime --start-date 2025-08-03T12:00:00Z  --end-date 2025-08-04T13:41:30Z
+```
+
+```text
+ibmcloud logs query --query 'severity:ERROR AND applicationName:permission-service AND NOT message:"connection reset"' --syntax lucene --since 1h
 ```
 {: pre}
 
