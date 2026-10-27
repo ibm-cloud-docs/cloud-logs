@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-23"
+lastupdated: "2026-10-27"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+
+## 26 October 2026
+{: #cloud-logs-oct2626}
+{: release-note}
+
+The newly released {{site.data.keyword.logs_full_notm}} CLI plugin version 0.7.0 includes a context request header in all REST API requests to support the Paver TechXchange integration.
 
 
 
