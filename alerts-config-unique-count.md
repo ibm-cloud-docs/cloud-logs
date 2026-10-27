@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-07-11"
+  years:  2024, 2026
+lastupdated: "2026-10-14"
 
 keywords:
 
@@ -24,17 +24,81 @@ The unique count alert is triggered based on the number of unique values associa
 
 This type of alert can help you understand the severity or breadth of a potential issue without having to analyze the data or dashboards.
 
+## Prereqs
+{: #alerts-config-prereqs}
+{: ui}
 
-{{/_include-segments/alerts-prereq.md}}
+- Learn about alerts in {{site.data.keyword.logs_full_notm}}. For more information, see [Alerting](/docs/cloud-logs?topic=cloud-logs-alerts).
+- Check that you have an [{{site.data.keyword.en_short}} instance](/catalog/services/event-notifications){: external} that is in the same account as your {{site.data.keyword.logs_full_notm}} instance and permisions to configure resources in the {{site.data.keyword.en_short}} instance.
+- Check that the outbound integration between the {{site.data.keyword.logs_full_notm}} instance and the {{site.data.keyword.en_short}} instance is configured. For more information, see [Configuring an outbound integration to connect](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure).
 
 
-{{/_include-segments/alerts-alerts-mgmt.md}}
+## Launch alerts management
+{: step}
+{: #alerts-config-1}
+{: ui}
+
+Complete the following steps:
+
+1. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list**.
+2. Select your instance of {{site.data.keyword.logs_full_notm}}.
+3. In the {{site.data.keyword.logs_full_notm}} navigation, click the **Alerts** icon ![Alerts icon](../icons/alerts_icon.svg "Alerts") > **Alerts Management**.
+4. Click **New alert**.
 
 
-{{/_include-segments/alerts-choose-type.md}}
+## Choose the type of alert to configure
+{: step}
+{: #alerts-config-2}
+{: ui}
+
+Complete the following steps:
+
+1. Choose the alert type. For more information, see [Alert types](/docs/cloud-logs?topic=cloud-logs-alerts#alert-types).
+
+2. In the *Details* section, complete the following steps:
+
+    1. Enter a name.
+
+        - The maximum length of the name is 4096 characters.
+
+    2. [Optional] Enter a description.
+
+        - The maximum length of the description is 4096 characters.
 
 
-{{/_include-segments/alerts-choose-logs.md}}
+
+    3. [Optional] Add one or more labels.
+
+        Labels are key:value pairs that you can use later for quick searching.
+
+
+## Specify the logs that will be analyzed against the filtering criteria
+{: step}
+{: #alerts-config-3}
+{: ui}
+
+
+Complete the following steps to specify the logs that will be analyzed against the filtering criteria:
+
+1. Specify a `Lucene` search query to specify the logs that will be returned as part of the alert.
+
+    You can define a query that filters based on a free text string. For example, to trigger an alert when POST requests that have a return code of 403 are identified, you can enter `"POST 403"` as your search query. The query will look for logs that include the value `403` and `POST`.
+
+    You can define a query that filters logs where a specific field matches the value in the query. For example, you can define a query to search for the value production in the environment field: `environment:"production"`
+
+    You can define a query that filters logs where a specific field matches a range of numeric values using the format `[START_VALUE TO END_VALUE]`. For example, to search for logs that have 2xx status codes for a field `RC`, you can use the query: `rc.numeric:[400 TO 499]`
+
+    You can define a query that filters logs where a specific field matches a regular expression (RegEx). Wrap the RegEx expression with `/`. For example, you can define a query to search for different regions such as `west-europe-1, west-europe-2, west-us-1` in a field region: `region:/west-(europe|us)-[12]/`
+
+    You can define complex queries that use the Boolean operators `AND`, `OR`, and `NOT`. For example, you can define a query such as `environment:"production" AND status.numeric:[400 TO 499] NOT region:/west-(europe|us)-[12]/`
+
+2. Add additional filtering of logs by choosing 1 or more applications.
+
+3. Add additional filtering of logs by choosing 1 or more subsystems.
+
+4. Add additional filtering of logs by choosing 1 or more log severites.
+
+    Valid values are: `Debug`, `Verbose`, `Info`, `Warning`, `Error`, and `Critical`.
 
 
 ## Specify the triggering condition
@@ -63,14 +127,77 @@ For example, if **Unique values** is 663, the **Max unique count values should n
 When the **Max unique count values should not exceed** threshold is reached for the key group, the alert is triggered.
 
 
-{{/_include-segments/alerts-config-notif.md}}
+## Configure the notification details
+{: step}
+{: #alerts-config-5}
+{: ui}
+
+Complete the following steps:
+
+1. Configure **Notify every** to define how often you want to get an event once the alert is triggered. By default is set to 0 hours and 10 minutes.
+
+2. Enable **Resolve automatically** to get an event when the event has been resolved.
+
+    When the alert's condition is no longer triggering events, the event that is triggered initially is marked as resolved.
+
+3. Enable **Enable phantom mode** to indicate that this alert is a phantom alert.
+
+    A Phantom alert serves as a building block for flow alerts.
+
+    A Phantom alert does not trigger independent event notifications.
+
+    When you enable this option, *Notifications* section  is removed from the alert definition.
+
+4. Add an integration.
+
+    You must have an outbound integration defined to be able to add an integration. For more information, see [Configuring the integration with the Event Notifications service](/docs/cloud-logs?topic=cloud-logs-event-notifications-configure). 
 
 
-{{/_include-segments/alerts-set-schedule.md}}
+
+## Set a schedule and what log content to include
+{: step}
+{: #alerts-config-6}
+{: ui}
+
+Complete the following steps:
+
+1. In the *Schedule* section, set a Schedule to control when this alert is enabled. You can choose specific days and times.
+
+2. In the *Notification Content* section, define whether you want to include a sample log line or only some fields in the event that is triggered.
+
+    Choose specific JSON keys to include in the alert notification, or leave this blank to include the full log text in the alert message:
+
+    - Option 1: Leave blank to include one log line that matches the filtering conditions of the alert.
+
+    - Option 2: Specify JSON keys to include selected fields in the format of key:value pairs. Notice that to be able to add fields, your log records must be in JSON format.
+
+       JSON keys containing a `.` in their name cannot be used as selected fields.
+       {: restriction}
+
+    - Option 3: Specify a  JSON path as the filter.
+
+When an alert is triggered, there are limitations to the amount of data that is included in the event. For more information on these limitations, see [Data size](/docs/cloud-logs?topic=cloud-logs-event-payload#event-payload-2).
+{: note}
 
 
-{{/_include-segments/alerts-save-config.md}}
+## Save the alert configuration
+{: #alerts-config-7}
+{: step}
+{: ui}
 
+Complete the following steps:
 
-{{/_include-segments/alerts-next-steps.md}}
+1. Verify the alert.
 
+    Click **Verify** to evaluate data to find out how many times the alert matched the criteria in the last 24 hours.
+
+    Verify evaluates data in the {{site.data.keyword.frequent-search}} pipeline only. If your alert is configured to trigger on data that is available in the {{site.data.keyword.monitoring}} pipeline, notice that this feature is not available.
+    {: important}
+
+2. Click **CREATE ALERT**.
+
+## Verifying your alert
+{: #alerts-config-next}
+{: step}
+
+Trigger an alert. Once an alert is triggered and processed, the system sends notifications to the designated users or teams through various channels such as email, Slack, SMS, or integrated incident management platforms. You can then go to the *Incidents* page to see information about the alerts that are triggered. For more information, see [Managing triggered alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-incidents).

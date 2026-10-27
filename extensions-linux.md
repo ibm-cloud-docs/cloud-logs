@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-11-13"
+  years:  2024, 2026
+lastupdated: "2026-10-20"
 
 keywords:
 
@@ -62,8 +62,8 @@ You can deploy this extension in any {{site.data.keyword.logs_full_notm}} instan
 
 For more information about deploying the extension, see [Deploying, managing, and removing {{site.data.keyword.logs_full_notm}} extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt).
 
+After deploying, verify that the extension configuration handles data in a way that matches your {{site.data.keyword.logs_full_notm}} instance TCO configuration. Alerts, dashboards, and events to metrics are features available for data handled through the {{site.data.keyword.monitoring}} and the {{site.data.keyword.frequent-search}} data pipelines. After you deploy the extension, make sure the configuration meets your needs. For example, if you have [TCO policies](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) sending data to the {{site.data.keyword.monitoring}} pipeline, you will need to change the dashboard configured by this extension to use **Analyze and Alert** data instead of **{{site.data.keyword.frequent-search}}**.
 
-{{/_include-segments/extensions-validate.md}}
 
 ## Parsing rule
 {: #extensions-linux-rules}
@@ -95,5 +95,3 @@ You can deploy any of the following alerts:
 * `Linux - Reverse Shell Command Executed`: This alert triggers whenever a Python or a Bash reverse shell command is executed in a Linux environment.
 * `Linux - Kernal Parameters Configuration File Modified`: This alert triggers whenever a user configures kernel parameters on a Linux system by using the `sysctl` command and by modifying the configuration files in the `/etc/sysctl.d/` directory.
 * `Linux - Possible Password Spraying Attempt`: This alert triggers when there is a possible password spraying attempt. Password spraying uses one password (for example, `Password01`) or a small list of commonly used passwords that might match the complexity policy of the domain. Logins are attemted with the password against different accounts on a network to avoid account lockouts that would normally occur when brute forcing a single account with many passwords.
-
-

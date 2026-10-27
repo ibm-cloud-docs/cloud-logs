@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-03-25"
+lastupdated: "2026-10-20"
 
 keywords:
 
@@ -25,8 +25,19 @@ You can run Cloud Logs without a data bucket or a metrics bucket. However, featu
 There are limits for each provisioned instance. For more information, see [Limits per instance](/docs/cloud-logs?topic=cloud-logs-limits&interface=ui#limits-per-instance).
 {: note}
 
+## Naming requirements when provisioning an {{site.data.keyword.logs_full_notm}} instance
+{: #limits-instance-name}
 
-{{_include-segments/instance-naming-limits.md}}
+When provisioning an {{site.data.keyword.logs_full_notm}} instance, the service instance name is limited to 1-256 characters in length and can only include the following characters:
+
+* Letters (`A`-`Z`, `a`-`z`)
+* Numbers (`0`-`9`)
+* Period (`.`)
+* Underscore (`_`)
+* Hypen (`-`)
+* Colon (`:`)
+* Space (` `)
+
 
 ## Provisioning an instance through the Observability dashboard
 {: #instance-provision-ui}
