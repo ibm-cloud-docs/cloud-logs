@@ -39,7 +39,7 @@ You can generate a report for:
 
 - You must [configure a metrics bucket.](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
 - You must enable the data usage feature. For more information, see [Enabling data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics&interface=ui#data-usage-enable-metrics-data-usage).
--  Set the service endpoint. For more information, see [Setting the {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov&interface=api#cloud-logs-cli-ov-context).
+- Set the service endpoint. For more information, see [Setting the {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov&interface=api#cloud-logs-cli-ov-context).
 
 
 ## Information included in a report
