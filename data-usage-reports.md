@@ -29,7 +29,7 @@ You can generate a report for:
 {: #data-usage-reports-prereqs}
 
 - You must [configure a metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
-- You must enable the data usage feature. For more information, see [Enabling Data Usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics).
+- You must enable the data usage feature. For more information, see [Enabling Data Usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics&interface=ui#data-usage-enable-metrics-data-usage).
 
 ## Information included in a report
 {: #data-usage-reports-1}
