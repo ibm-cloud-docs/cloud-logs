@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -63,7 +63,7 @@ The *System Monitoring* extension includes a predefined dashboard that displays 
 To deploy and launch the *Data Usage dashboard*, see [Deploying an extension](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt&interface=ui#extensions-mgmt-deploy-ui).
 
 ## Generating reports
-{: #data-usage-reports}
+{: #data-usage-reports-1}
 
 From the *Data Usage* page, you can generate and export data usage information. Choose any of the following options:
 
