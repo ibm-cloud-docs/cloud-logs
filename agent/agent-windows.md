@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-01-21"
+  years:  2024, 2026
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -125,13 +125,13 @@ Where
 `-IAMApiKey <iam_api_key>`
 :   (Optional) Specify the {{site.data.keyword.iamshort}} API key (required for `IAMAPIKey` mode). Make sure you follow the instructions in [Generating an API Key](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-serviceid-api-key).
 
-    For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/account?topic=account-manapikey).
+    For more information about {{site.data.keyword.iamshort}} API Keys, see [Managing API Keys](/docs/iam?topic=iam-manapikey).
     {: tip}
 
 `-TrustedProfile <trusted_profile_id>`
 :   (Optional) Specify the trusted profile ID (required for `VSITrustedProfile` mode). When using trusted profiles, set to the ID configured in [Granting IAM permissions for ingestion](/docs/cloud-logs?topic=cloud-logs-iam-ingestion-permissions).
 
-    For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
+    For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui).
     {: tip}
 
 `-Channels <channels_list>`

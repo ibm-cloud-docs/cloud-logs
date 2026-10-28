@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-23"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -173,7 +173,7 @@ Where
 {: #query-sync-ov-api-token}
 {: api}
 
-You can retrieve your access token programmatically by first creating a [service ID API key](/docs/account?topic=account-serviceidapikeys){: external} for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. For more information, see [Retrieving an access token with the API](/docs/cloud-logs?topic=cloud-logs-retrieve-access-token&interface=api).
+You can retrieve your access token programmatically by first creating a [service ID API key](/docs/iam?topic=iam-serviceidapikeys&interface=ui){: external} for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. For more information, see [Retrieving an access token with the API](/docs/cloud-logs?topic=cloud-logs-retrieve-access-token&interface=api).
 
 ### Running a synchronous query in {{site.data.keyword.logs_full_notm}}
 {: #query-sync-ov-api-token}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-30"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -29,7 +29,15 @@ You can generate a report for:
 {: #data-usage-reports-prereqs}
 
 - You must [configure a metrics bucket](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
-- You must enable the data usage feature. For more information, see [Enabling Data Usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-metrics).
+- You must enable the data usage feature. For more information, see [Enabling Data Usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics&interface=ui#data-usage-enable-metrics-data-usage).
+
+# Prereqs
+{: #data-usage-reports-prereqs-cli}
+{: cli}
+
+- You must [configure a metrics bucket.](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
+- You must enable the data usage feature. For more information, see [Enabling data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics&interface=ui#data-usage-enable-metrics-data-usage).
+- Set the service endpoint. For more information, see [Setting the {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov&interface=api#cloud-logs-cli-ov-context).
 
 ## Information included in a report
 {: #data-usage-reports-1}
@@ -103,8 +111,6 @@ A successful response returns the data usage overview report for the specified t
 ## Exporting an overview data usage report using CLI
 {: #data-usage-reports-cli}
 {: cli}
-
-Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-temp#logs-cli-prereq-temp) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
 
 To export data usage by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud logs data-usage`** command.
 

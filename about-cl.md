@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-03"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -69,7 +69,7 @@ When you review your observability needs and budget, you can select from three t
 
 In the TCO optimizer, you configure policies that define which data pipeline handles data after ingestion. Data prioritization before data is stored or indexed reduces monitoring costs while simultaneously improving system visibility.
 
-For more information, see [Controlling costs](/docs/cloud-logs?topic=cloud-logs-controlling-cost), [TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-data-pipelines), and [Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage).
+For more information, see [Controlling costs](/docs/cloud-logs?topic=cloud-logs-controlling-cost), [TCO Optimizer](/docs/cloud-logs?topic=cloud-logs-tco-optimizer), and [Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage).
 
 
 ## Adhering to regulations for compliance and security
@@ -166,7 +166,7 @@ Dashboard insights, which are paired with {{site.data.keyword.logs_full_notm}} m
 
 For more information, see [Dashboards](/docs/cloud-logs?topic=cloud-logs-about_dashboards).
 
-Preconfigured alerts and dashboards are available as extensions for common application environments and can be tailored to your specific environment needs. For more information, see [Extensions](docs/cloud-logs?topic=cloud-logs-extensions-mgmt&interface=ui).
+Preconfigured alerts and dashboards are available as extensions for common application environments and can be tailored to your specific environment needs. For more information, see [Extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt&interface=ui).
 
 ## Notifying about issues to raise awareness and act promptly
 {: #about-cl-alert}
