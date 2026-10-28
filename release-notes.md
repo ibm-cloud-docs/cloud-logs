@@ -730,7 +730,7 @@ Functional updates and fixes are available in the Montreal (`ca-mon`) region onl
 
     * [UI] The **Logs** view is enhanced to support [a detailed view of an individual log record](/docs/cloud-logs?topic=cloud-logs-log-details).
 
-    * [Query] [CLI](docs/cloud-logs?topic=cloud-logs-query-synch&interface=ui) and [API](/apidocs/logs-service-api#submit-background-query) support is available for background archive queries (asynchronous archive queries).
+    * [Query] [CLI](/docs/cloud-logs?topic=cloud-logs-query-background&interface=cli) and [API](/apidocs/logs-service-api#submit-background-query) support is available for background archive queries (asynchronous archive queries).
 
     * [DataPrime] Support is available for the following functions:
 
