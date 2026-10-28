@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-29"
+  years:  2024, 2026
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -22,4 +22,4 @@ If you have problems or questions when using {{site.data.keyword.logs_full_notm}
 
 * You can review the forums to see whether other users ran into the same problem. When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 
-* If you still can't resolve the problem, you can open an IBM support ticket. For information about opening an IBM support ticket, or about support levels and ticket severities, see [Creating support cases](/docs/account?topic=account-open-case&interface=ui).
+* If you still can't resolve the problem, you can open an IBM support ticket. For information about opening an IBM support ticket, or about support levels and ticket severities, see [Creating support cases](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics).

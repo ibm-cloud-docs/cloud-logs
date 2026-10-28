@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -63,7 +63,7 @@ To get the alert ID by using the UI:
 
 To get the alert ID by using the CLI:
 
-1. Log in to the CLI and set the configuration by following [these steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-temp#logs-cli-prereq-temp)
+1. Log in to the CLI and set the configuration by following [these steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov)
 
 2. List the alerts by running the `ibmcloud logs alert-definitions` command.
 

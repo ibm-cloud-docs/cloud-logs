@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: cloud-logs
 # Protecting resources with context-based restrictions
 {: #iam-cbr}
 
-[Context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis) provide a way for administrators to limit access to resources. What if certain data must be accessed from trusted networks only? A properly configured policy restricts all access to data unless the request originates from an approved [network zone](/docs/account?topic=account-context-restrictions-whatis&interface=ui#network-zones-whatis) and endpoint type (public, private, or direct).
+[Context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis) provide a way for administrators to limit access to resources. What if certain data must be accessed from trusted networks only? A properly configured policy restricts all access to data unless the request originates from an approved [network zone](/docs/iam?topic=iam-context-restrictions-whatis#network-zones-whatis) and endpoint type (public, private, or direct).
 {: shortdesc}
 
 ## Using context-based restrictions
@@ -58,7 +58,7 @@ A network zone represents an allowlist of IP addresses where an access request i
 {: ui}
 
 1. Determine the resources that you want add to your allowlist.
-2. Follow the steps to [create context-based restrictions in the console](/docs/account?topic=account-context-restrictions-create). Add the {{site.data.keyword.logs_full_notm}} service as a service reference to your network zones to allow {{site.data.keyword.logs_full_notm}} access to services and resources in your account.
+2. Follow the steps to [create context-based restrictions in the console](/docs/iam?topic=iam-context-restrictions-create&interface=ui). Add the {{site.data.keyword.logs_full_notm}} service as a service reference to your network zones to allow {{site.data.keyword.logs_full_notm}} access to services and resources in your account.
 
 
 ## Creating rules

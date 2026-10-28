@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-11"
+lastupdated: "2026-10-28"
 
 keywords: HA for IBM Cloud Logs, DR for IBM Cloud Logs, IBM Cloud Logs recovery time objective, IBM Cloud Logs recovery point objective
 
@@ -313,4 +313,4 @@ All upgrades follow the {{site.data.keyword.IBM_notm}} service best practices an
 
 
 
-Changes that impact customer workloads are detailed in notifications. For more information, see [monitoring notifications and status](docs/account?topic=account-best-practices) for planned maintenance, announcements, and release notes that impact this service.
+Changes that impact customer workloads are detailed in notifications. For more information, see [monitoring notifications and status](/docs/account?topic=account-best-practices) for planned maintenance, announcements, and release notes that impact this service.

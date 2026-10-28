@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-11"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -97,7 +97,7 @@ Complete the following steps:
 
 Complete the following steps:
 
-1. Retrieve your access token programmatically by first creating a [service ID API key](/docs/account?topic=account-serviceidapikeys){: external} for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. For more information, see [Retrieving an access token](/docs/cloud-logs?topic=cloud-logs-retrieve-access-token&interface=api).
+1. Retrieve your access token programmatically by first creating a [service ID API key](/docs/iam?topic=iam-serviceidapikeys&interface=ui){: external} for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. For more information, see [Retrieving an access token](/docs/cloud-logs?topic=cloud-logs-retrieve-access-token&interface=api).
 
 2. Run the following cURL command to activate tags in your {{site.data.keyword.logs_full_notm}} instance and to configure custom tags:
 

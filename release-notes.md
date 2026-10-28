@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-27"
+lastupdated: "2026-10-28"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -277,7 +277,7 @@ Functional updates and fixes are available in the Sao Paulo (`br-sao`) region on
 
 :   New features are included in this release.
 
-    * **Data usage**: The *Data usage* page has been revised and now provides a *User data sent* and a *Metric usage* tab. The *Data usage* page enables you to monitor ingestion trends, identify high-volume logs, and better understand overall data ingestion patterns for improved visibility and analysis.The *User Data Sent* tab provides detailed insights into log and metric ingestion volumes by priority. The *Metric usage* tab provides insights about metric sample distribution by source. For more information, see [About Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage-r114).
+    * **Data usage**: The *Data usage* page has been revised and now provides a *User data sent* and a *Metric usage* tab. The *Data usage* page enables you to monitor ingestion trends, identify high-volume logs, and better understand overall data ingestion patterns for improved visibility and analysis.The *User Data Sent* tab provides detailed insights into log and metric ingestion volumes by priority. The *Metric usage* tab provides insights about metric sample distribution by source. For more information, see [About Data Usage](/docs/cloud-logs?topic=cloud-logs-data-usage).
 
     * Enhanced the data usage report that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days. For more information, see [Generate Reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports).
 
@@ -730,7 +730,7 @@ Functional updates and fixes are available in the Montreal (`ca-mon`) region onl
 
     * [UI] The **Logs** view is enhanced to support [a detailed view of an individual log record](/docs/cloud-logs?topic=cloud-logs-log-details).
 
-    * [Query] [CLI](/docs/cloud-logs?topic=cloud-logs-query-data&interface=cli#background-query-data-cli) and [API](/apidocs/logs-service-api#submit-background-query) support is available for background archive queries (asynchronous archive queries).
+    * [Query] [CLI](docs/cloud-logs?topic=cloud-logs-query-synch&interface=ui) and [API](/apidocs/logs-service-api#submit-background-query) support is available for background archive queries (asynchronous archive queries).
 
     * [DataPrime] Support is available for the following functions:
 
@@ -834,7 +834,7 @@ Release of the {{site.data.keyword.agent}} version 1.6.0
 :   Enhancements added to the [share the URL functionality](/docs/cloud-logs?topic=cloud-logs-share_url) so you can share a URL of the the current view of the logs explore screen.
 
 [UI] New extensions
-:   New [extensions](/docs/cloud-logs?topic=cloud-logs-extensions) are available:
+:   New [extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt&interface=ui) are available:
 
     - [Activity Tracking](/docs/cloud-logs?topic=cloud-logs-extensions-activity-tracking): Use to get insights into your {{site.data.keyword.cloud_notm}} activity tracking data.
     - [{{site.data.keyword.containerlong_notm}}](/docs/cloud-logs?topic=cloud-logs-extensions-kubernetes):  Use to get insights into your {{site.data.keyword.containerlong_notm}} logs.

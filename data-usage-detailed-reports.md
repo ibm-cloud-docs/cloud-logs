@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -99,7 +99,7 @@ A successful response returns the detailed data usage report for the specified t
 {: #data-usage-reports-cli}
 {: cli}
 
-Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-query-data-cli&interface=ui) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
+Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-data-usage-detailed-reports&interface=ui) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
 
 To export the detailed data usage report by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud logs data-usage`** command. For example, the following command exports the data usage detailed report for last 30 days.
 

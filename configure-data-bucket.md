@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-20"
+lastupdated: "2026-10-28"
 
 keywords:
 
@@ -53,7 +53,7 @@ The following storage classes are not supported by {{site.data.keyword.logs_full
 
 {{site.data.keyword.cos_full_notm}} allows you to define [archive rules](/docs/cloud-object-storage?topic=cloud-object-storage-archive) on buckets that archive objects automatically after the defined time period. Archived objects have a lower cost than regular objects, but need to be restored before they can be read again.
 
-{{site.data.keyword.logs_full_notm}} cannot read archived objects. {{site.data.keyword.logs_full_notm}} searching of archived objects in the [All Logs](/docs/cloud-logs?topic=cloud-logs-query-data#query-data-all-logs) view, or querying in [Archive queries](/docs/cloud-logs?topic=cloud-logs-query-archive-data-bucket), returns an error message.
+{{site.data.keyword.logs_full_notm}} cannot read archived objects. {{site.data.keyword.logs_full_notm}} searching of archived objects in the [All Logs](/docs/cloud-logs?topic=cloud-logs-query-about&interface=ui) view, or querying in [Archive queries](/docs/cloud-logs?topic=cloud-logs-query-archive-data-bucket), returns an error message.
 
 {{site.data.keyword.cos_full_notm}} buckets used as {{site.data.keyword.logs_full_notm}} data buckets must not define archive rules that immediately archive objects, or archive objects within a few hours.
 
