@@ -25,11 +25,11 @@ You can control data that is ingested, and is available for search in {{site.dat
 
 You can configure TCO policies:
 
-- [{{site.data.keyword.frequent-search}}](/docs/cloud-logs?topic=cloud-logs-tco-optimizer)
+- [{{site.data.keyword.frequent-search}}](/docs/cloud-logs?topic=cloud-logs-tco-optimizer&interface=ui#tco-optimizer-high)
 
-- [{{site.data.keyword.monitoring}}](/docs/cloud-logs?topic=cloud-logs-control-data)
+- [{{site.data.keyword.monitoring}}](/docs/cloud-logs?topic=cloud-logs-tco-optimizer&interface=ui#tco-optimizer-medium)
 
-- [{{site.data.keyword.compliance}}](/docs/cloud-logs?topic=cloud-logs-control-data)
+- [{{site.data.keyword.compliance}}](/docs/cloud-logs?topic=cloud-logs-tco-optimizer&interface=ui#tco-optimizer-low)
 
 to manage logs through different data pipelines based on
 
