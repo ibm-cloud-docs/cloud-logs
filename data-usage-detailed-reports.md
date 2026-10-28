@@ -33,6 +33,15 @@ You can generate a report for:
 - You must [configure a metrics bucket.](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
 - You must enable the data usage feature. For more information, see [Enabling data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics&interface=ui#data-usage-enable-metrics-data-usage).
 
+## Prereqs
+{: #data-usage-detailed-reports-prereqs-cli}
+{: cli}
+
+- You must [configure a metrics bucket.](/docs/cloud-logs?topic=cloud-logs-configure-metrics-bucket).
+- You must enable the data usage feature. For more information, see [Enabling data usage metrics](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics&interface=ui#data-usage-enable-metrics-data-usage).
+-  Set the service endpoint. For more information, see [Setting the {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov&interface=api#cloud-logs-cli-ov-context).
+
+
 ## Information included in a report
 {: #data-usage-detailed-reports-1}
 
@@ -98,8 +107,6 @@ A successful response returns the detailed data usage report for the specified t
 ## Exporting the detailed data usage report using CLI
 {: #data-usage-reports-cli}
 {: cli}
-
-Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-data-usage-detailed-reports&interface=ui) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
 
 To export the detailed data usage report by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud logs data-usage`** command. For example, the following command exports the data usage detailed report for last 30 days.
 
