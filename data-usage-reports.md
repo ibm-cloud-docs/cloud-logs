@@ -104,7 +104,7 @@ A successful response returns the data usage overview report for the specified t
 {: #data-usage-reports-cli}
 {: cli}
 
-Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
+Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov#cloud-logs-cli-ov-context) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
 
 To export data usage by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud logs data-usage`** command.
 
