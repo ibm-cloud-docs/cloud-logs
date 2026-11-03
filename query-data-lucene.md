@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-07"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -78,13 +78,13 @@ Complete the following steps to run a query in the *Custom Dashboards* page in {
 4. In the widget's configuration panel, select **Lucene**.
 
     ![Lucene query in a custom dashboard](/images/query-dashboard-Lucene.png)
-    {: #query-data-lucene-query}
+
 
 5. Enter a Lucene query.
 
     In the search field specify your search in [Lucene format](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html){: external}.
 
-    For more information, see [Building a Lucene query in {{site.data.keyword.logs_full_notm}}](#query-data-Lucene-query).
+    For more information, see [Building a Lucene query in {{site.data.keyword.logs_full_notm}}](#query-data-lucene-query).
 
 If you are searching in {{site.data.keyword.frequent-search}} and you are not seeing the data you expect, see [Why am I not seeing results from my Priority insights searches?](/docs/cloud-logs?topic=cloud-logs-ts-mapping-exceptions).
 {: note}

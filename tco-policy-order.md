@@ -1,7 +1,7 @@
 ---
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-28"
+  years:  2024, 2026
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -96,7 +96,7 @@ curl -X POST --location --header "Authorization: Bearer ${iam_token}" --header "
 {: #tco-optimizer-ordering-cli}
 {: cli}
 
-Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-temp#logs-cli-prereq-temp) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
+Before you begin, [follow the steps](/docs/cloud-logs?topic=cloud-logs-cloud-logs-cli-ov) to set your {{site.data.keyword.logs_full_notm}} instance API endpoint.
 
 To order TCO policies by using the {{site.data.keyword.logs_full_notm}} CLI plug-in, run the **`ibmcloud cloud-logs policy-create`** command and specify the `before` argument.
 

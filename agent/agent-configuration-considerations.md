@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-17"
+  years:  2024, 2026
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -38,7 +38,7 @@ The {{site.data.keyword.agent}} is configured by default to use Fluent Bit `file
 
 If you change the configuration to use `memory` buffering, and an issue occurs where the {{site.data.keyword.agent}} is terminated or terminates unexpectedly, logs in the `memory` buffer can be dropped.
 
-For more information, see [Buffering and storage](https://docs.fluentbit.io/manual/administration/buffering-and-storage){: external}.
+For more information, see [Buffering and storage](https://docs.fluentbit.io/manual/data-pipeline/buffering){: external}.
 
 ## Log rotation
 {: #consid-rotate}

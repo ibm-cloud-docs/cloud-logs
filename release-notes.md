@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-28"
+lastupdated: "2026-11-03"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -730,7 +730,7 @@ Functional updates and fixes are available in the Montreal (`ca-mon`) region onl
 
     * [UI] The **Logs** view is enhanced to support [a detailed view of an individual log record](/docs/cloud-logs?topic=cloud-logs-log-details).
 
-    * [Query] [CLI](/docs/cloud-logs?topic=cloud-logs-query-background&interface=cli) and [API](/apidocs/logs-service-api#submit-background-query) support is available for background archive queries (asynchronous archive queries).
+    * [Query] [CLI](docs/cloud-logs?topic=cloud-logs-query-synch&interface=ui) and [API](/apidocs/logs-service-api#submit-background-query) support is available for background archive queries (asynchronous archive queries).
 
     * [DataPrime] Support is available for the following functions:
 
@@ -869,7 +869,7 @@ Fixes implemented
 {: release-note}
 
 Geo enrichment
-:   [Geo enrichment](/docs/cloud-logs?topic=cloud-logs-enriching-data#geo-enrichment) now supports ASN (Autonomous System Number). ASN information will be added to the logs when geo enrichment is used.
+:   [Geo enrichment](/docs/cloud-logs?topic=cloud-logs-enriching-data#geo-enrichment){: external} now supports ASN (Autonomous System Number). ASN information will be added to the logs when geo enrichment is used.
 
 [DataPrime] DataPrime enhancements
 :   DataPrime now support the [`join` operator](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#join) types `inner`, `full`, and `left`.

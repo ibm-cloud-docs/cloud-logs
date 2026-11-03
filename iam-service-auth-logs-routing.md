@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-04"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -149,7 +149,7 @@ You can use Terraform IBM Modules (TIM) for [{{site.data.keyword.logs_full_notm}
 You must have access to the target service to create an authorization between services. You can grant only the level of access that you have as a user of the target service. The autorization that you define for the {{site.data.keyword.logs_routing_full_notm}} service requires that you have `Administrator` role for the {{site.data.keyword.logs_full_notm}} target service.
 {: important}
 
-To authorize a source service access to a target service, use the [IAM Policy Management API](/apidocs/iam-policy-management#create-policy).
+To authorize a source service access to a target service, use the [IAM Policy Management API](/docs/apidocs/iam-policy-management#create-policy).
 
 The supported attributes for creating an authorization policy depend on what each service supports. For more information about the supported attributes for each service, see the documentation for the services that you're using.
 {: note}

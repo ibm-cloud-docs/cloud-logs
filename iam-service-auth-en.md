@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-01-16"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -174,7 +174,7 @@ Use the following steps to create an authorization by using Terraform:
 {: api}
 
 
-To authorize a source service access to a target service, use the [IAM Policy Management API](/apidocs/iam-policy-management#create-policy). See the following API example for create a policy method with the `type=authorization` specified for a `event-notifications` target.
+To authorize a source service access to a target service, use the [IAM Policy Management API](/docs/apidocs/iam-policy-management#create-policy). See the following API example for create a policy method with the `type=authorization` specified for a `event-notifications` target.
 
 The supported attributes for creating an authorization policy depend on what each service supports. For more information about the supported attributes for each service, see the documentation for the services that you're using.
 {: note}

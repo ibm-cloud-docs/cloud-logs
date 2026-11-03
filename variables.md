@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-10"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -47,12 +47,12 @@ You can choose from different variable types and methods:
 
 | Value Type              | Description                            | Supported Methods  | Example Use Cases    |
 |-------------------------|----------------------------------------|--------------------|----------------------|
-| **Single string**       | A single value is selected or entered  | [Static values](#static-values-method), [Text box](#text-box-method), all [Query](#query-method) (All sources: DataPrime, metrics, logs) | Filter one service or region   |
-| **Multi-string**        | One or more values are selected        | [Static values](#static-values-method), [Query](#query-method) (All sources: DataPrime, metrics and logs) | Filter  multiple environments or error codes     |
-| **Single Numeric**      | A single number is selected or entered | [Text box](#text-box-method), [Static values](#static-values-method), [DataPrime query](#dataprime)     | Filter a thresholds, percentile selection, or scaling factor  |
-| **Regex**               | One or more values are selected based on the pattern-matching expression that is entered  | [Text box](#text-box-method)        | Filter values based on  logs that match the wildcard/pattern filter    |
-| **Lucene Query**        | A structured Lucene query              | [Text box](#text-box-method)    |            |
-| **Interval**            | A time duration (e.g., `15m`, `1h`, `1d`) is entered | [Static values](#static-values-method), [Text box](#text-box-method)       | Bucket size for charts, rolling windows, step sizes for range selectors |
+| **Single string**       | A single value is selected or entered  | [Static values](#static-values-method){: external}, [Text box](#text-box-method){: external}, all [Query](#query-method){: external} (All sources: DataPrime, metrics, logs) | Filter one service or region   |
+| **Multi-string**        | One or more values are selected        | [Static values](#static-values-method){: external}, [Query](#query-method){: external} (All sources: DataPrime, metrics and logs) | Filter  multiple environments or error codes     |
+| **Single Numeric**      | A single number is selected or entered | [Text box](#text-box-method){: external}, [Static values](#static-values-method){: external}, [DataPrime query](#dataprime){: external}     | Filter a thresholds, percentile selection, or scaling factor  |
+| **Regex**               | One or more values are selected based on the pattern-matching expression that is entered  | [Text box](#text-box-method){: external}        | Filter values based on  logs that match the wildcard/pattern filter    |
+| **Lucene Query**        | A structured Lucene query              | [Text box](#text-box-method){: external}    |            |
+| **Interval**            | A time duration (e.g., `15m`, `1h`, `1d`) is entered | [Static values](#static-values-method){: external}, [Text box](#text-box-method){: external}       | Bucket size for charts, rolling windows, step sizes for range selectors |
 {: caption="Variable types in Dashboards" caption-side="bottom"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-16"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -227,7 +227,7 @@ Trigger an alert. After an alert is triggered and processed, the system sends no
 
 
 ## Dynamic alerts limits
-{: #limit-dynamic alert}
+{: #limit-dynamic-alert}
 
 A dynamic alert is an alert with a **More than usual** or **Less than usual** condition. Each dynamic alert is allocated 500 permutations with a maximum of 10,000 permutations allowed for any {{site.data.keyword.logs_full_notm}} instance.
 

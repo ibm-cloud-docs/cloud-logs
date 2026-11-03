@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-13"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -72,7 +72,6 @@ You must configure the log files that the {{site.data.keyword.agent}} monitors a
 
 The agent runs as a Linux daemon by using `systemd`. You can manage the agent by using `systemctl`.
 
-
 The following platforms are supported:
 
 - RHEL 8
@@ -83,6 +82,7 @@ The following platforms are supported:
 - Windows Server 2016
 - Windows Server 2019
 - Windows Server 2022
+- Windows Server 2025
 - Windows 10 Enterprise
 - Windows 11 Enterprise
 
