@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-21"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -58,4 +58,4 @@ For more information about {{site.data.keyword.logs_full_notm}} pricing, see [se
 {: #use-terraform-ibm-modules}
 {: faq}
 
-Yes, you can use [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision an [{{site.data.keyword.logs_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external} instance. Terraform IBM Modules are pre-built, validated, and enterprise-ready modules that follow IBM Cloud best practices. For more information and available modules, check the [Terraform Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}.
+Yes, you can use [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision an [{{site.data.keyword.logs_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external} instance. Terraform IBM Modules are pre-built, validated, and enterprise-ready modules that follow IBM Cloud best practices. For more information and available modules, check the [Terraform Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}.

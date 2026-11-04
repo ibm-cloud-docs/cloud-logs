@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-09-25"
+  years:  2024, 2026
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -40,7 +40,7 @@ Review the following sections for the specific responsibilities for you and for 
 | Task              | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-------------------|-------------------------------------------------|-----------------------|
 | Incident and operations management | Maintain service instances and infrastructure workloads. | Maintain incident and operations management of your data. |
-| Monitor incidents  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | * Set preferences to [receive emails about platform notifications](/docs/account?topic=account-email-prefs#setting-platform-notifications).  \n * Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
+| Monitor incidents  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | * Set preferences to [receive emails about platform notifications](/docs/support?topic=support-email-prefs#setting-platform-notifications).  \n * Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
 | Maintain {{site.data.keyword.cloud_notm}} high availability SLA for {{site.data.keyword.logs_full_notm}}   | * Provide {{site.data.keyword.logs_full_notm}} functionality across availability zones in a Multi-Zone Region (MZR).  \n * Provide replication, fail-over features, and infrastructure maintenance and updates. | * Back up your {{site.data.keyword.logs_full_notm}} configuration. For example, keep the configuration in a version control system so that you can reconfigure a region if needed.   \n * Comply with [Operational responsibilities when using {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-responsibilities).  \n * Comply with [Operational responsibilities when using {{site.data.keyword.en_full_notm}}](/docs/event-notifications?topic=event-notifications-en-responsibilities). |
 {: caption="Responsibilities for incident and operations" caption-side="top"}
 

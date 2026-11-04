@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-12"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -193,7 +193,7 @@ On the {{site.data.keyword.tco-optimizer}} page, complete the following steps to
 
    For applications and subsystems, criteria can be specified when the value matches one of: `All`, `Is`, `Is Not`, `Includes`, or `Starts With`.
 
-4. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](#tco_mapping) for logs that are matched by the policy.
+4. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](#tco_mapping){: external} for logs that are matched by the policy.
 
     Valid values are: `High` for data managed through {{site.data.keyword.frequent-search}}, `Medium` for data managed through {{site.data.keyword.monitoring}}, `Low` for data managed through {{site.data.keyword.compliance}} and `Block` for data that you drop and is not available for search.
 

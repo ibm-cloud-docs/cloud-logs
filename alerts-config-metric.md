@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-16"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -236,7 +236,7 @@ Complete the following steps:
 Trigger an alert. After an alert is triggered and processed, the system sends notifications to the designated users or teams through channels such as email, Slack, SMS, or integrated incident management platforms. Go to the **Incidents** page to see information about triggered alerts. For more information, see [Managing triggered alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-incidents).
 
 ## Dynamic alerts limits
-{: #limit-dynamic alert}
+{: #limit-dynamic-alert}
 
 A dynamic alert is an alert with a **More than usual** or **Less than usual** condition. Each dynamic alert is allocated 500 permutations with a maximum of 10,000 permutations allowed for any {{site.data.keyword.logs_full_notm}} instance.
 

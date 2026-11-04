@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-24"
+  years:  2024, 2026
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -182,7 +182,7 @@ Use the following steps to create an authorization by using Terraform:
 {: #iam-service-auth-logs-create-api}
 {: api}
 
-To authorize a source service access to a target service, use the [IAM Policy Management API](/apidocs/iam-policy-management#create-policy). See the following API example for create a policy method with the `type=authorization` specified for a `cloud-object-storage` bucket as the target.
+To authorize a source service access to a target service, use the [IAM Policy Management API](/docs/apidocs/iam-policy-management#create-policy). See the following API example for create a policy method with the `type=authorization` specified for a `cloud-object-storage` bucket as the target.
 
 The supported attributes for creating an authorization policy depend on what each service supports.
 {: note}

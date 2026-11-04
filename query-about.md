@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-12"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -116,7 +116,7 @@ In {{site.data.keyword.logs_full_notm}}, you can query data in the UI through th
 
 You can also apply [filtering](/docs/cloud-logs?topic=cloud-logs-query-data-filter) in conjunction with searching using Lucene or DataPrime.
 
-After you define a query, you can save it for later reuse by creating a view. For more information, see [Launching views](/docs/cloud-logs?topic=cloud-logs-custom_views#custom_views_launch) and [Creating custom views](/docs/cloud-logs?topic=cloud-logs-custom_views&interface=ui#create_view).
+After you define a query, you can save it for later reuse by creating a view. For more information, see [Launching views](/docs/cloud-logs?topic=cloud-logs-custom_views#custom_views_launch) and [Creating custom views](/docs/cloud-logs?topic=cloud-logs-custom_views&interface=ui#create_view){: external}.
 
 ### Querying data synchronously through the Logs Explorer UI in {{site.data.keyword.logs_full_notm}}
 {: #query-about-ui-explorer}
@@ -157,7 +157,7 @@ The background query lets you run a query and fetch the results at a later point
 
 With the background query up to 1M records can be returned.
 
-For more information, see [Managing background queries through the CLI](/docs/cloud-logs?topic=cloud-logs-query-background&interface=cli#query-background-cli).
+For more information, see [Managing background queries through the CLI](/docs/cloud-logs?topic=cloud-logs-query-background&interface=cli#query-background-cli){: external}.
 
 
 ### Querying data synchronously by using CLI commands in {{site.data.keyword.logs_full_notm}}

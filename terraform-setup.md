@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-20"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -20,7 +20,7 @@ subcollection: cloud-logs
 Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments that follow Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.logs_full_notm}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
-For production deployments, consider using [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for [{{site.data.keyword.logs_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external}, which provide pre-built, open-source, and enterprise-ready configurations following {{site.data.keyword.cloud_notm}} best practices. 
+For production deployments, consider using [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for [{{site.data.keyword.logs_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external}, which provide pre-built, open-source, and enterprise-ready configurations following {{site.data.keyword.cloud_notm}} best practices. 
 
 TIM modules simplify complex deployments, ensure consistency across environments, and reduce configuration errors. Explore the [Terraform IBM Modules(TIM) registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external} for available modules.
 {: note}
@@ -138,7 +138,7 @@ The following table lists input parameters that you can set in the `provider` bl
 
 |Input parameter | Required / optional  | Description           |
 |----------------|----------------------|-----------------------|
-|`ibmcloud_api_key`| Required | The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform. For more information, about how to create an API key, see [Creating an API key](/docs/account?topic=account-userapikey&interface=ui#create_user_key). You can specify the API key in the `provider` block or retrieve the value from the `IC_API_KEY` or `IBMCLOUD_API_KEY` environment variables. If both environment variables are defined, `IC_API_KEY` takes precedence. |
+|`ibmcloud_api_key`| Required | The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform. For more information, about how to create an API key, see [Creating an API key](/docs/iam?topic=iam-userapikey&interface=ui#create_user_key). You can specify the API key in the `provider` block or retrieve the value from the `IC_API_KEY` or `IBMCLOUD_API_KEY` environment variables. If both environment variables are defined, `IC_API_KEY` takes precedence. |
 |`ibmcloud_timeout`| Optional | The number of seconds that you want to wait until the {{site.data.keyword.cloud_notm}} API is considered unavailable. The default value is `60`. You can specify the timeout in the `provider` block or retrieve the value from the `IC_TIMEOUT` or `IBMCLOUD_TIMEOUT` environment variables. If both variables are specified, `IC_TIMEOUT` takes precedence. |
 |`region`| Optional | The {{site.data.keyword.cloud_notm}} region where you want to create your resources. If this value is not specified, `us-south` is used by default. You can specify the region in the `provider` block or retrieve the value from the `IBMCLOUD_REGION` or `IC_REGION` environment variables. If both environment variables are specified, `IC_REGION` takes precedence. |
 |`resource_group`| Optional | The ID of the resource group that you want to use for your {{site.data.keyword.cloud_notm}} resources. To retrieve the ID, run `ibmcloud resource groups`. You can specify the resource group in the `provider` block or retrieve the value from the `IC_RESOURCE_GROUP` or `IBMCLOUD_RESOURCE_GROUP` environment variables. If both environment variables are defined, `IC_RESOURCE_GROUP` takes precedence. |
@@ -494,7 +494,7 @@ As an alternative to Step 4, you can provision {{site.data.keyword.logs_full_not
 
 For complete module documentation and advanced configuration options, see the [{{site.data.keyword.logs_full_notm}} module](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-logs/ibm/latest){: external}.
 
-You can also refer this [documentation](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module) for Terraform IBM Modules deployment using Terraform CLI.
+You can also refer this [documentation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module) for Terraform IBM Modules deployment using Terraform CLI.
 {: tip}
 
 

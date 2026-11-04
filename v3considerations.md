@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-17"
+  years:  2024, 2026
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -39,7 +39,7 @@ With the latest {{site.data.keyword.logs_full_notm}} release, {{site.data.keywor
 `[*]` - There is no equivalent severity value for priority `P4`. `P4` is logically mapped as `Info` along with `P5`.
 {: note}
 
-Any existing automation (API or Terraform) in your environment can continue using the old severity values and they will be mapped to the new priority values. However, to take advantage of all new alert API functionality, you will want to update your automation to use the [new API](/apidocs/logs-service-api).
+Any existing automation (API or Terraform) in your environment can continue using the old severity values and they will be mapped to the new priority values. However, to take advantage of all new alert API functionality, you will want to update your automation to use the [new API](/docs/apis/logs-service-api).
 
 ## Alert configuration changes made by using the UI
 {: #newconsider_UI}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-28"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -85,10 +85,6 @@ Complete the following steps:
     - **debug** for for *Retention Tag 1*, where critical represents data that have a log priority set to `debug` or `verbose`.
     - **info** for for *Retention Tag 2*, where info represents data that have a log priority set to `info` or `warning`.
     - **critical** for for *Retention Tag 3*, where debug represents data that have a log priority set to `error` or `critical`.
-
-
-
-
 
 
 ## Step 1: Configure custom archive retention tags in {{site.data.keyword.logs_full_notm}} by using the API
@@ -203,7 +199,7 @@ Complete the following steps:
 
    For applications and subsystems, criteria can be specified when the value matches one of: `All`, `Is`, `Is Not`, `Includes`, or `Starts With`.
 
-6. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco_mapping) for logs that are matched by the policy.
+6. In the *Priority* section, set the priority for the policy. The priority determines the [pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer#tco_mapping){: external} for logs that are matched by the policy.
 
     Valid values are: `High` for data managed through {{site.data.keyword.frequent-search}}, `Medium` for data managed through {{site.data.keyword.monitoring}}, `Low` for data managed through {{site.data.keyword.compliance}} and `Block` for data that you drop and is not available for search.
 

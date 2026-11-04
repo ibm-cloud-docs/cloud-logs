@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-08"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -22,7 +22,6 @@ This is a beta feature that is subject to change and is available for evaluation
 {: beta}
 
 Instead of manually sifting through raw logs or metrics data, you can quickly pinpoint the source of issues that use log patterns and visual indicators. The ad hoc visualizations can be created by using a simplified query builder or by using query languages such as DataPrime, Lucene, or PromQL.
-
 
 
 ## Building queries
@@ -203,7 +202,7 @@ A rollup function refers to functions that aggregate time series data over a spe
 | `quantile over time` |	Computes the specified quantile of time series data over a time range. |
 {: caption="Rollup functions" caption-side="bottom"}
 
-After you choose the function, select the range to be queried as a number or `${__range}`. The variable represents the duration of the dashboard time range. It is an interval string that is supported by PromQL. For example, if you select a time range from `13.00` to `14.30`, the `${__range}` variable is rendered as`90m`. For more information, see [PromQL query variables](/docs/cloud-logs?topic=cloud-logs-variables#variables-promql).
+After you choose the function, select the range to be queried as a number or `${__range}`. The variable represents the duration of the dashboard time range. It is an interval string that is supported by PromQL. For example, if you select a time range from `13.00` to `14.30`, the `${__range}` variable is rendered as`90m`. For more information, see [PromQL query variables](/docs/cloud-logs?topic=cloud-logs-variables#variables-promql){: external}.
 
 #### Rank
 {: #ve-metrics-rank}

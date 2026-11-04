@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-28"
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -50,7 +50,7 @@ You can also retrieve your access token programmatically by first creating a [se
 
 1. Create a [service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
 
-2. Call the [IAM Identity Services API](/apidocs/iam-identity-token-api){: external} to retrieve your access token.
+2. Call the [IAM Identity Services API](/docs/apis/iam-identity-token-api){: external} to retrieve your access token.
 
     ```sh
     $ curl -X POST \

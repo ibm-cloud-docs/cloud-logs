@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-29"
+  years:  2024, 2026
+lastupdated: "2026-11-03"
 
 keywords:
 
@@ -115,7 +115,7 @@ Saving this rule results in the following log entry:
 ```
 {: codeblock}
 
-Again, use the `strftime` standard to set the time format to match my time field string format. But in this case the time field format has few differences than the default (`%Y-%m-%dT%H:%M:%S.%f%z`), for example `2021-01-11T15:04:05.000000+0100`. One difference is the month format, which in this case is an abbreviated month name. Referring to the [strftime reference](https://strftime.org/){: extetrnal}, `%b` represents the abbreviated month name format. By using `%b` and adding the other needed changes that you can create the matching format.
+Again, use the `strftime` standard to set the time format to match my time field string format. But in this case the time field format has few differences than the default (`%Y-%m-%dT%H:%M:%S.%f%z`), for example `2021-01-11T15:04:05.000000+0100`. One difference is the month format, which in this case is an abbreviated month name. Referring to the [strftime reference](https://www.bairesdev.com/tools/strftime/){: extetrnal}, `%b` represents the abbreviated month name format. By using `%b` and adding the other needed changes that you can create the matching format.
 
 ![Example where time field differs from default.](images/Screen-Shot-2021-03-03-at-11-06-56-700x323.png "Example where time field differs from default."){: caption="Example where time field differs from default." caption-side="bottom"}
 
