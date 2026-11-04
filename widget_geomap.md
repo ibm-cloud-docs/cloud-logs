@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-11-04"
 
 keywords:
 
@@ -21,6 +21,20 @@ You can create a geo map that can be included in custom {{site.data.keyword.logs
 Use the Geomap widget to visualize geographically the data at different levels of detail to identify regional patterns, hotspots, and anomalies.
 {: note}
 
+
+## Data requirements for the Geomap widget
+{: #iam-extensions-geomap-requirements}
+
+The Geomap widget visualizes geographically distributed event logs. For the widget to display data, incoming log records must meet the following payload requirements. For more information about the widget, see [Creating an {{site.data.keyword.logs_full_notm}} Geomap widget](/docs/cloud-logs?topic=cloud-logs-widget_geo_map).
+
+**Region-based mapping**
+:   The `target` field of the payload must contain an official {{site.data.keyword.cloud_notm}} region code, for example, `jp-tok`, `eu-es`, or `us-south`. The custom region names do not resolve.
+
+**Coordinate-based mapping**
+:   The payload must contain numeric latitude (`lat`) and longitude (`lon`) fields in signed decimal notation, for example, `32.0853` or `-33.8688`. Cardinal designations (N, S, E, and W) are not supported. 
+
+**Query aggregation** 
+:   The widget query must include a group by parameter, for example, grouped by application. The Geomap widget do not display data without it.
 
 
 ## Before you begin
@@ -67,11 +81,11 @@ xxxxx
 ```
 {: codeblock}
 
-
 Consider the following information when interacting with the map:
 - Zooming in and out changes the level of geographic aggregation, allowing you to move from high-level regional patterns to more granular locations.
 - Hovering over points or clusters displays a tooltip with contextual information based on the current configuration.
 - Clicking a cluster drills down into smaller geographic groupings, making it easier to investigate areas with mixed or aggregated values.
+
 
 ## Step 1: Enter name and description
 {: #widget_geo_map_1}
@@ -85,6 +99,7 @@ Complete the following steps:
 3. Enter a description.
 
     Click **Action icon** ![Action icon](/images/action-three-dots-horizontal.png "Action icon"). Then, select **Add description**.
+
 
 
 ## Step 2: Configure the query to define the data set
@@ -194,6 +209,66 @@ Complete the following steps:
 3. [Optional] Add a custom action. For more information, see [Using actions to integrate with third-party services](/docs/cloud-logs?topic=cloud-logs-actions).
 
 
+## Configuring the Geomap widget by region
+{: #widget_geo_map_regions}
+
+You can use the region-based mapping when your log records contain an {{site.data.keyword.cloud_notm}} region code instead of latitude and longitude values.
+
+Complete the following steps:
+
+1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** and drag and drop the **Geomap** widget from your side bar. You can open an existing dashboard or create a dashboard.
+
+2. In **General Settings**, complete the following steps:
+
+    1. Set **Input Type** to **Regions**.
+
+    2. Set the region field to the payload property that contains the region code, for example, `region`.
+
+3. In the **query** section, under **Filters**, add a group by field, for example, `Application`.
+
+4. Click **Save Changes**.
+
+
+## Configuring the Geomap widget by coordinates
+{: #widget_geo_map_coordinates}
+
+You can use the coordinate-based mapping when your log records contain numeric latitude and longitude fields.
+
+Complete the following steps:
+
+1. In a [custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards), click **Add Widget** and drag and drop the **Geomap** widget from your side bar.
+
+2. In **General Settings**, complete the following steps:
+
+    1. Set **Input Type** to **Coordinates**.
+
+    2. Set **Latitude** to the payload field that contains the latitude value, for example, `coordinates.lat`.
+
+    3. Set **Longitude** to the payload field that contains the longitude value, for example, `coordinates.lon`.
+
+3. In the **query** section, under **Filters**, add a group by parameter, for example, `Application`.
+
+4. Click **Save Changes**.
+
+
+## Configuring hover tooltips and data labels
+{: #widget_geo_map_tooltips}
+
+You can display contextual metadata when users hover over a point or cluster on the map.
+
+Complete the following steps:
+
+1. Open the Geomap widget in **Edit mode**.
+
+2. In the **Tooltip Management** section, complete the following steps:
+
+    1. In **Text Message**, define a custom header template by using dynamic syntax, for example, `Region {region}`.
+
+    2. In **Labels**, select the additional payload fields to display, for example, `client_ip`, `coordinates.lat`, and `coordinates.lon`.
+
+3. Click **Save Changes**.
+
+
 ## Actions on a map
 {: #widget_geo_map_next}
 
@@ -208,3 +283,14 @@ When you select a point or cluster, a context menu provides the following action
 - `Filter out`: Excludes the selected location and value context from the dashboard query.
 
 - `Copy name`: Copies the location label or key=value pair associated with the selected point or cluster.
+
+
+## Limitations
+{: #widget_geo_map_limitations}
+
+Consider the following limitation when you use the Geomap widget.
+
+Single query
+:   The Geomap widget supports only one query for each widget.
+
+To plot multiple log streams in the same widget, write a single DataPrime query that merges the sources into one result set. For example, use the [`join`](/docs/cloud-logs?topic=cloud-logs-dataprime-ref-operators#join) operator to combine the data from the different sources.
