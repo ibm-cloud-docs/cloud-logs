@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-05"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -20,14 +20,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
 
-
 ## 26 October 2026
 {: #cloud-logs-oct2626}
 {: release-note}
 
+
 The newly released {{site.data.keyword.logs_full_notm}} CLI plugin version 0.7.0 includes a context request header in all REST API requests.
-
-
 
 
 
@@ -286,7 +284,6 @@ Functional updates and fixes are available in the Sao Paulo (`br-sao`) region on
     * Added new visualizations: Introduced Heatmap, Geomap, and Dynamic Widgets for enhanced visualization. For more information, see [Geo widget](/docs/cloud-logs?topic=cloud-logs-widget_geo_map), [Heatmap widget](/docs/cloud-logs?topic=cloud-logs-widget_heatmap) and [Dynamic widgets](/docs/cloud-logs?topic=cloud-logs-widget_dynamic).
 
     * Improved usability and navigation across the *Parsing Rules* and *Enrichment* pages. For more information, see [Parsing Rules](/docs/cloud-logs?topic=cloud-logs-rules_groups) and [Enrichment](/docs/cloud-logs?topic=cloud-logs-enrich-howto).
-
 
 
 ## 20 May 2026
