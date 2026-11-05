@@ -708,3 +708,13 @@ toc:
               - ts-helm-proxy.md
               - ts-ingestion-failures.md
               - ts-agent-logs.md
+          - topicgroup:
+              label: Troubleshooting the Cloud Logs Agent for Power
+              topics:
+              - ts-logs-agent-401.md
+              - ts-logs-agent-403.md
+              - ts-logs-agent-cannot-connect.md
+              - ts-logs-agent-long-lines.md
+              - ts-logs-agent-no-logs-files.md
+              - ts-logs-agent-no-logs-rsyslog.md
+              - ts-logs-agent-service-stops.md
