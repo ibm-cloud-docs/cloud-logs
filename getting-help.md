@@ -24,10 +24,12 @@ If you have problems or questions when using {{site.data.keyword.logs_full_notm}
 
 * If you still can't resolve the problem, you can open an IBM support ticket. For information about opening an IBM support ticket, or about support levels and ticket severities, see [Creating support cases](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics).
 
-## Information to include in a support case for the agent
+<power>
+  
+## Information to include in a support case for the {{site.data.keyword.powerSysShort}} agent
 {: #getting-help-agent-support-case}
 
-When you open a support case about a problem with the {{site.data.keyword.agent}}, include the following information:
+When you open a support case about a problem with the {{site.data.keyword.powerSysShort}} {{site.data.keyword.agent}}, include the following information:
 
 * The output of the `systemctl status otelcol-ibm` command.
 * The last 100 lines of the service output. To display them, run the `journalctl -u otelcol-ibm -n 100` command. Remove any sensitive data from the output before you share it.
@@ -36,3 +38,7 @@ When you open a support case about a problem with the {{site.data.keyword.agent}
 
 Do not include your API key in the support case.
 {: important}
+
+</power>
+
+
