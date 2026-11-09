@@ -24,7 +24,7 @@ If you have problems or questions when using {{site.data.keyword.logs_full_notm}
 
 * If you still can't resolve the problem, you can open an IBM support ticket. For information about opening an IBM support ticket, or about support levels and ticket severities, see [Creating support cases](/docs/cloud-logs?topic=cloud-logs-data-usage-enable-metrics).
 
-<power>
+
   
 ## Information to include in a support case for the {{site.data.keyword.powerSysShort}} agent
 {: #getting-help-agent-support-case}
@@ -38,7 +38,5 @@ When you open a support case about a problem with the {{site.data.keyword.powerS
 
 Do not include your API key in the support case.
 {: important}
-
-</power>
 
 
