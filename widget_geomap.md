@@ -34,7 +34,7 @@ The Geomap widget visualizes geographically distributed event logs. For the widg
 :   The payload must contain numeric latitude (`lat`) and longitude (`lon`) fields in signed decimal notation, for example, `32.0853` or `-33.8688`. Cardinal designations (N, S, E, and W) are not supported. 
 
 **Query aggregation** 
-:   The widget query must include a group by parameter, for example, grouped by application. The Geomap widget do not display data without it.
+:   The widget query must include a group by parameter, for example, grouped by application. The Geomap widget does not display data without it.
 
 
 ## Before you begin
@@ -125,7 +125,7 @@ Complete the following steps:
 
     When the data type is `Metrics`, specify the metric or desired PromQL in the **Query** field. You can apply filters and aggregations.
 
-4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed in your gauge.
+4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed.
 
     Select a label and its corresponding value.
 

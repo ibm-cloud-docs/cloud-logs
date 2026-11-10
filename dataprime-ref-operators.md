@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-09"
+lastupdated: "2026-11-10"
 
 keywords:
 
@@ -1031,10 +1031,7 @@ redact $d.mysuperkey.user_id matching 'root' to 'UNKNOWN_USER'
 ```
 {: codeblock}
 
-When you use a regular expression in a DPXL expression, such as with the `matches` function, and you want to match the beginning of a string, you must include the caret (`^`) at the start of the pattern. For example, `hostname.matches(/^prod-.*/)`.
 
-Regular expressions in DataPrime and DPXL are unanchored. A pattern matches anywhere in the string unless you anchor it. To match only at the beginning of a string, start the pattern with a caret (^). 
-{: important}
 
 ## `remove`
 {: #remove}
