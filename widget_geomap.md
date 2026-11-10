@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-10"
 
 keywords:
 
@@ -132,6 +132,7 @@ Complete the following steps:
     Filters are applied at the widget level and work alongside dashboard filters. If there is a conflict, the dashboard filters take precedence over widget filters.
 
 5. Add a function to group and aggregate your data for the Geomap.
+
 
 ## Step 3: Configure the widget
 {: #widget_geo_map_3}
