@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-11-10"
 
 keywords:
 
@@ -159,7 +159,8 @@ Functions provide additional capabilities within DPXL expressions.
 | `<s>.contains(<substr>):bool` | Checks if a string `<s>` contains the specified substring `<substr>` | `stream.contains(’err’)` |
 | `<s>.matches(<regex>):bool` | Checks if a string `<s>` matches the specified pattern provided by the `<regex>` | `hostname.matches(/prod-.*/)` |
 | `<value>.in(<value1>,<value2>,...)` | Checks if value is one of the provided values | `value1-valueN	region.in(’us-east’,’us-south’)` |
-{: caption="Functions" caption-side="bottom"}
+{: caption="Functions" caption-side="bottom"} 
+
 
 
 ## Inferring data types

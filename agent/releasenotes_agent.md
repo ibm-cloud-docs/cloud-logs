@@ -2,11 +2,12 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-11-05"
 
 keywords:
 
 subcollection: cloud-logs
+content-type: release-note
 
 ---
 

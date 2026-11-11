@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-11"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -11,7 +11,7 @@ content-type: release-note
 
 ---
 
-{{site.data.keyword.attribute-definition-list}} 
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Release notes for {{site.data.keyword.logs_full_notm}}
@@ -19,6 +19,100 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.logs_full}}.
 {: shortdesc}
+
+
+## 11 November 2026
+{: #cloud-logs-nov1126}
+{: release-note}
+
+Functional updates and fixes are available in the Mumbai (`in-mum`) region only.
+
+New features are included in this release.
+
+* **Dynamic widget**: With this release, the dynamic widget selects a display type, by default, based on the data you select. You can change to a different display type any time. For more information, see [Creating a dynamic widget](/docs/cloud-logs?topic=cloud-logs-widget_dynamic).
+
+* **Enhanced visual explorer**:
+    * **Parallel investigations**: You can now open up to four tabs in the **Visual Explorer** . Each tab acts as an independent workspace with its own time selector, enabling you to run parallel investigations simultaneously.
+
+    * **Multi-widget support**: Each tab in the **Visual Explorer** supports up to four widgets, allowing you to build a focused multi-view within a single explore session before committing to a dashboard.
+
+    For more information, see [Visual Explorer](/docs/cloud-logs?topic=cloud-logs-visual-explorer).
+
+* **Data usage reports** :
+    * **Customizable reports**: Generate Data Usage reports on the Data Usage screen, filtering by data type and period.
+
+    * **One year Data usage reporting**: Full year history report to cover a complete seasonal cycle.
+
+    For more information, see [Configuring data usage review reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports&interface=ui).
+
+
+
+* **Enhanced alert features**:
+
+    * **Metric alerts**: You can now construct complex Prometheus queries using a no-code visual builder without prior knowledge of PromptQL syntax. The query builder allows you to select metrics, apply granular filters with operators including regular expressions and configure aggregation and rollup functions. Use these capabilities to define alert conditions based on performance trends or real-time data snapshots. For more information, see [Configuring metric alerts](/docs/cloud-logs?topic=cloud-logs-alerts-config-metric&interface=ui).
+
+    * **Log alerts**: You can now build precise log-based filters by using a no-code visual query builder within the alert creation page instead of manually writing lucene queries. The query builder provides field attributes and combines multiple conditions by using `AND` or `OR` operators to isolate specific events that should trigger an event. For more information see [Configuring alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-alerts-config&interface=ui)
+
+    * **Historical evaluation feature**: You can now preview and validate the alert criteria against 24 hours of historical data during alert creation. When you define conditions and thresholds, the system performs a dry run against each historical data to show expected frequency. This dry run preview allows you to test and fine-tune the threshold criteria to prevent noisy or false positive alerts before activating them. For more information, see [Creating alerts](/docs/cloud-logs?topic=cloud-logs-alerts-config&interface=ui).
+
+    * **Export alerts to CSV**: You can now select multiple alerts and export them directly to a CSV file from the **Alert Management** page. Use this feature to analyse, audit, or report your alert configurations. For more information, see [Managing alerts in the Alert Management page](/docs/cloud-logs?topic=cloud-logs-event-notifications-about&interface=ui#event-notifications-about-am).
+
+    * **Alert definition management and drill-down views**: Improved alert definition management with a unified view and interactive drill-down capabilities. You can now view, filter, and bulk manage alert definitions across your instance. For more information, see [Managing alerts in the Alert Management page](/docs/cloud-logs?topic=cloud-logs-event-notifications-about&interface=ui#event-notifications-about-am).
+
+    * **Create alerts from All Logs**: Create alerts directly from the **All Logs** view. This allows you to quickly convert the search filters in archive data into active alert definitions without manually re-entering query criteria in the **Alerts Management** page. For more information, see [Managing custom views](/docs/cloud-logs?topic=cloud-logs-custom_views&interface=ui).
+
+* **Metrics Explorer**: The metrics explorer is now available as a dedicated, standalone page. You can browse, search, and analyse Prometheus metric time series in a full page without opening the side panel or configuring a dashboard first. For more information, see [Exploring a metric through the Metrics Explorer](/docs/cloud-logs?topic=cloud-logs-metrics-explorer).
+
+* **IAM Authorization with Trusted Profile (TP) tokens**: {{site.data.keyword.logs_full_notm}} now uses trusted profile (TP) tokens to perform authorization requests. This enhancement provides more secure and efficient token management for authorization workflows.
+
+* **Data ingestion and storage**: Enhanced error detection and reporting when routing data. If a TCO policy or rule targets a storage bucket that does not exist or is not accessible, the service now detects write failures and reports errors. This enables you to quickly identify missing COS buckets and prevent data loss. For more information, see [Configuring buckets for long term storage and search](/docs/cloud-logs?topic=cloud-logs-about-bucket).
+
+* **Navigation changes**: Updated and streamlined navigation layout that is designed to improve workflow efficiency.
+
+    **Default homepage**: The default landing page is now set to **Explore** > **Logs** for users who have not configured a custom homepage previoudsly.
+
+    **User Preferences Page**: A top-level configuration menu. **Preferences** are moved from the user profile menu to **Configuration > Preferences**.
+
+    **Menu reordering**: Reorganized top-level and second level navigation items to group related workflows.
+
+    Renamed menu items:
+        1. Explore logs is now Explore
+        2. Data pipeline is now Data
+        3. Metric data is now Metric usage
+
+    **New menu items**: Added **Metric explorer** and **Recording rules** to the navigation menu for easier access to metrics exploration and recording rule management.
+
+* Renaming of activity tracker events.
+
+    * Activity Tracker audit events for retention tags: The `logs.retentions.get` event is renamed to `logs.retention-tags.list`. Two new events are also available: `logs.retention-tags.enable` for activating the retention tags feature, and `logs.retention-tags.update` for modifying retention tag configurations.
+
+    * New audit events for TCO policies*: Three new Activity Tracker audit events are now available for TCO policies: `logs.logs-tco-policy.enable`, `logs.logs-tco-policy.disable`, and `logs.logs-tco-policy.update`. The `logs.logs-tco-policy.get` event is not applicable; use `logs.logs-tco-policy.list` instead.
+
+    * `logs.logs-tco-policy.create` audit event: The `logs.logs-tco-policy.create` Activity Tracker audit event now includes the ID of the newly created TCO policy and reflects the policy's enabled status.
+
+    * `logs.custom-enrichment-data.create` audit event: The `logs.custom-enrichment-data.create` Activity Tracker audit event now includes the ID of the newly created enrichment.
+
+* **Extensions**
+
+
+
+    * IBM label: The IBM label is now applied to all existing IBM extensions to make it easier to identify and filter IBM extensions in the extensions catalog.
+
+    * Multiple extension types: Extensions now support multiple types. You can classify each extension by its function, such as `Security` or `Observability`, to organize and filter extensions by type.
+
+    * New Data Usage extension.
+
+    * New IAM extension.
+
+
+* **Improvements in dashboard**:
+
+    * Export widget data to CSV: You can export data from a dynamic widget to a CSV file by using the **Export to CSV** option in the widget menu. The export preserves the widget's active filters and grouping, and includes up to 2,000 rows.
+
+    * Selective filters: You can now apply dashboard filters to all widgets or to selected widgets only. This lets you target specific parts of a dashboard without affecting the full view.
+
+    * Resized and streamlined dashboard.
+
 
 
 ## 26 October 2026
@@ -31,14 +125,11 @@ The newly released {{site.data.keyword.logs_full_notm}} CLI plugin version 0.7.0
 
 
 
-
-
-
 ## 10 September 2026
 {: #cloud-logs-sept1026}
 {: release-note}
 
-Release of the {{site.data.keyword.logs_full_notm}} CLI plugin version 0.6.0, which includes the security remediation for CVE-2024-24790. 
+Release of the {{site.data.keyword.logs_full_notm}} CLI plugin version 0.6.0, which includes the security remediation for CVE-2024-24790.
 
 
 ## 21 August 2026
@@ -286,7 +377,6 @@ Functional updates and fixes are available in the Sao Paulo (`br-sao`) region on
     * Added new visualizations: Introduced Heatmap, Geomap, and Dynamic Widgets for enhanced visualization. For more information, see [Geo widget](/docs/cloud-logs?topic=cloud-logs-widget_geo_map), [Heatmap widget](/docs/cloud-logs?topic=cloud-logs-widget_heatmap) and [Dynamic widgets](/docs/cloud-logs?topic=cloud-logs-widget_dynamic).
 
     * Improved usability and navigation across the *Parsing Rules* and *Enrichment* pages. For more information, see [Parsing Rules](/docs/cloud-logs?topic=cloud-logs-rules_groups) and [Enrichment](/docs/cloud-logs?topic=cloud-logs-enrich-howto).
-
 
 
 ## 20 May 2026

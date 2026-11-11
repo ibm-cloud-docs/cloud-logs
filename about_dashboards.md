@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-08-26"
+  years:  2024, 2026
+lastupdated: "2026-11-11"
 
 keywords:
 
@@ -42,7 +42,10 @@ When you launch the UI, the home dashboard opens.
 ## Custom dashboards
 {: #about_dashboard_custom}
 
-Dashboards can be created to meet your specific observability needs by adding visualization widgets.
+Use custom dashboards to monitor data through different types of data visualizations, also known as widgets.
+
+You can only monitor data from the {{site.data.keyword.frequent-search}} data pipeline and the {{site.data.keyword.monitoring}} data pipeline.
+{: important}
 
 Custom dashboard are comprised of widgets. You can add one or more widgets to a dashboard. Each widget supports different data types: logs or metrics. The timeframe configured for the dashboard is applied to all the widgets.
 

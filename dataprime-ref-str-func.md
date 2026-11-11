@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-17"
+  years:  2024, 2026
+lastupdated: "2026-11-10"
 
 keywords:
 
@@ -170,6 +170,7 @@ Splits string on regexp-delimiter, returns the field at index. Indexes start wit
 regexpSplitParts(string: string, delimiter: regexp, index: number): string
 ```
 {: codeblock}
+
 
 
 

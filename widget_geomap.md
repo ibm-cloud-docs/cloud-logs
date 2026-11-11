@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-11"
 
 keywords:
 
@@ -34,7 +34,7 @@ The Geomap widget visualizes geographically distributed event logs. For the widg
 :   The payload must contain numeric latitude (`lat`) and longitude (`lon`) fields in signed decimal notation, for example, `32.0853` or `-33.8688`. Cardinal designations (N, S, E, and W) are not supported. 
 
 **Query aggregation** 
-:   The widget query must include a group by parameter, for example, grouped by application. The Geomap widget do not display data without it.
+:   The widget query must include a group by parameter, for example, grouped by application. The Geomap widget does not display data without it.
 
 
 ## Before you begin
@@ -125,13 +125,14 @@ Complete the following steps:
 
     When the data type is `Metrics`, specify the metric or desired PromQL in the **Query** field. You can apply filters and aggregations.
 
-4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed in your gauge.
+4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed.
 
     Select a label and its corresponding value.
 
     Filters are applied at the widget level and work alongside dashboard filters. If there is a conflict, the dashboard filters take precedence over widget filters.
 
 5. Add a function to group and aggregate your data for the Geomap.
+
 
 ## Step 3: Configure the widget
 {: #widget_geo_map_3}
@@ -267,22 +268,6 @@ Complete the following steps:
     2. In **Labels**, select the additional payload fields to display, for example, `client_ip`, `coordinates.lat`, and `coordinates.lon`.
 
 3. Click **Save Changes**.
-
-
-## Actions on a map
-{: #widget_geo_map_next}
-
-Use quick actions to investigate data directly from the map.
-
-When you select a point or cluster, a context menu provides the following actions:
-
-- `Open Explore`: Opens the logs in the Explore view, pre-filtered using the selected location and cluster context.
-
-- `Filter in`: Adds the selected location and value context to the dashboard query.
-
-- `Filter out`: Excludes the selected location and value context from the dashboard query.
-
-- `Copy name`: Copies the location label or key=value pair associated with the selected point or cluster.
 
 
 ## Limitations

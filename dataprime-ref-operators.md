@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-11-13"
+  years:  2024, 2026
+lastupdated: "2026-11-10"
 
 keywords:
 
@@ -1030,6 +1030,8 @@ redact $d.mysuperkey.user_id 'root' to 'UNKNOWN_USER'
 redact $d.mysuperkey.user_id matching 'root' to 'UNKNOWN_USER'
 ```
 {: codeblock}
+
+
 
 ## `remove`
 {: #remove}
