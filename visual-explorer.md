@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-11"
 
 keywords:
 
@@ -12,11 +12,15 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Visual Explorer
+# Visual Explorer in {{site.data.keyword.logs_full_notm}}
 {: #visual-explorer}
 
-The {{site.data.keyword.logs_full}} Visual Explorer is a powerful tool that integrates a multifunctional display with customizable dashboard widgets. Visual Explorer provides a fast way to add query-based graphs without needing to set up custom dashboards. You can run multiple queries from different data sources so they are displayed side by side on the same page, making it easier to correlate data and providing a more comprehensive view of your system.
+The {{site.data.keyword.logs_full}} Visual Explorer is a tool that integrates a multifunctional display with customizable dashboard widgets. Visual Explorer provides a fast way to add query-based graphs without needing to set up custom dashboards. You can run multiple queries from different data sources so they are displayed side by side on the same page, making it easier to correlate data and providing a more comprehensive view of your system.
 {: shortdesc}
+
+- You can open up to four tabs in the **Visual Explorer** . Each tab acts as an independent workspace with its own time selector, enabling you to run parallel investigations simultaneously.
+
+- Each tab in the **Visual Explorer** supports up to four widgets, allowing you to build a focused multi-view within a single explore session before committing to a dashboard.
 
 This is a beta feature that is subject to change and is available for evaluation and testing purposes.
 {: beta}
@@ -25,7 +29,7 @@ Instead of manually sifting through raw logs or metrics data, you can quickly pi
 
 
 ## Building queries
-{: #ve-build}
+{: #visual-explorer-build}
 
 By using the Visual Explorer, you can build queries for your widgets without having to know the exact DataPrime, Lucene, or PromQL syntax for the query.
 
@@ -217,26 +221,3 @@ After you select a rank function, configure it by specifying the metric and para
 | `SORT`	| Orders data in ascending order based on the selected metric. Use `SORT` to organize data from the smallest to the largest value. |
 | `SORT Descending` |	Orders data in descending order based on the selected metric. Use `SORT Descending` to prioritize the largest values at the beginning of the result set. |
 {: caption="Rank functions" caption-side="bottom"}
-
-## Example use case
-{: #ve-example}
-
-This example combines two graphs to correlate logs with `Error` and `Critical` severity levels with the memory usage of the host that is running the services.
-
-First, add the logs query:
-
-1. Select `Logs` as the data source.
-
-2. Add the `Group` by `product_id` function.
-
-3. Add a filter for `Severity=Error, Critical`.
-
-Then, add the metrics query:
-
-1. Click **+** to add a query.
-
-2. Select `Metrics` as the data source.
-
-3. Select the `mem_used` metrics.
-
-4. Add the `sum` by `host` function.

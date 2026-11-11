@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-11"
 
 keywords:
 
@@ -12,10 +12,10 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Generating data usage overview reports
+# Generating data usage overview reports in {{site.data.keyword.logs_full_notm}}
 {: #data-usage-reports}
 
-In {{site.data.keyword.logs_full_notm}}, you can export, as csv, a `Data Usage Report` that provides an overview of your instance's data usage for the current month, the previous 30 days, or the previous 90 days.
+In {{site.data.keyword.logs_full_notm}}, you can export, as csv, a `Data Usage Report` that provides an overview of your instance's data usage for the current month, the previous 30 days, the previous 90 days or a 1-year time period.
 {: shortdesc}
 
 
@@ -23,7 +23,9 @@ You can generate a report for:
 - The current month
 - Last 30 days
 - Last 90 days
+- 1-year period
 
+A full year history report covers a complete seasonal cycle that you can use to compare the same month year over year, tell a real growth trend apart from a seasonal spike, and size quotas and commitments against a full annual ingestion pattern.
 
 ## Prereqs
 {: #data-usage-reports-prereqs}

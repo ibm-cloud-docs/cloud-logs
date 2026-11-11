@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-11-11"
 
 keywords:
 
@@ -12,15 +12,14 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a {{site.data.keyword.logs_full_notm}} dynamic widget
+# Creating an {{site.data.keyword.logs_full_notm}} dynamic widget
 {: #widget_dynamic}
 
-You can create a dynamic widget that can be included in custom {{site.data.keyword.logs_full}} dashboards.
+Use the dynamic widget in custom {{site.data.keyword.logs_full}} dashboards to get suggestions on visualizations that are proposed based on your query data results, and find the best way to present your data results. You can configure Lucene queries, DataPrime queries, and PromQL queries.
 {: shortdesc}
 
-Use this widget to get suggestions on visualizations that are proposed based on your query data results, and find the best way to present your data results. You can configure Lucene queries, DataPrime queries, and PromQL queries.
-{: note}
-
+You can only monitor data from the {{site.data.keyword.frequent-search}} data pipeline and the {{site.data.keyword.monitoring}} data pipeline.
+{: important}
 
 ## How it works
 {: #create_dynamic_widget_0}
@@ -134,8 +133,3 @@ Complete the following steps:
     When you have a multi-query table with joins such as an outer join, the features to `Filter In` and `Filter Out` are not available.
 
     You can only filter table widgets with structured columns. Columns that include Text or JSON content display raw data and do not support column-based filtering or filter actions.
-
-
-
-
-
