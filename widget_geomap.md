@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-10"
+lastupdated: "2026-11-11"
 
 keywords:
 
@@ -268,22 +268,6 @@ Complete the following steps:
     2. In **Labels**, select the additional payload fields to display, for example, `client_ip`, `coordinates.lat`, and `coordinates.lon`.
 
 3. Click **Save Changes**.
-
-
-## Actions on a map
-{: #widget_geo_map_next}
-
-Use quick actions to investigate data directly from the map.
-
-When you select a point or cluster, a context menu provides the following actions:
-
-- `Open Explore`: Opens the logs in the Explore view, pre-filtered using the selected location and cluster context.
-
-- `Filter in`: Adds the selected location and value context to the dashboard query.
-
-- `Filter out`: Excludes the selected location and value context from the dashboard query.
-
-- `Copy name`: Copies the location label or key=value pair associated with the selected point or cluster.
 
 
 ## Limitations
