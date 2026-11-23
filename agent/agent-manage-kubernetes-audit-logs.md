@@ -38,7 +38,7 @@ You can:
 
 * {{site.data.keyword.agent}} deployed via Helm (agent is Fluent Bit–based).
 
-   ![Kubernetes architecture](/images/kubernetes-architecture.png "Architecture"){: caption="Architecture" caption-side="bottom"}
+   ![Kubernetes architecture](../images/kubernetes-architecture.png "Architecture"){: caption="Architecture" caption-side="bottom"}
 
 * Kubernetes audit events originate in the API server and are written to the ibm-kube-audit service via a webhook.
 
@@ -385,4 +385,3 @@ For more information, see:
 3. [The Logging Agent](/docs/cloud-logs?topic=cloud-logs-agent-about)
 4. [Grep](https://docs.fluentbit.io/manual/4.0/data-pipeline/filters/grep)
 5. [Filters](https://docs.fluentbit.io/manual/data-pipeline/filters)
-

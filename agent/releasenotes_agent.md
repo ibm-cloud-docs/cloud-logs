@@ -23,18 +23,6 @@ Use these release notes to learn about updates to the {{site.data.keyword.agent}
 
 
 
-## 23 November 2026
-{: #logs-router-agent-nov2326}
-{: release-note}
-
-New topics for managing and reviewing Kubernetes audit logs available now: 
-:   Two new topics are available to help you work with Kubernetes audit logs in {{site.data.keyword.logs_full_notm}}
-  
-   * How do I manage kubernetes audit logs in {{site.data.keyword.logs_full_notm}}
-
-   * Reviewing service, API server, and worker node logs
-   
-
 
 ## 14 September 2026
 {: #logs-router-agent-sep1426}

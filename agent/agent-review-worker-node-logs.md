@@ -15,7 +15,7 @@ subcollection: cloud-logs
 
 
 # Reviewing service, API server, and worker node logs
-{: #kubernetes-audit-logs}
+{: #kubernetes-audit-logs-worker-node-logs}
 
 With audit logs, you're able to understand better what operations are initiated by users in your cluster, which can help you troubleshoot issues or report compliance to industry and internal standards.
 {: shortdesc}
@@ -779,4 +779,3 @@ To view the alert:
 1. From the Red Hat OpenShift on IBM Cloud, select the **Administrator** view.
 2. Click **Observe** > **Alerting** > **AuditWebhookError**.
 To create a notification for this alert, see [Sending notifications to external systems](https://docs.redhat.com/en/documentation/openshift_container_platform/4.10/html/monitoring/managing-alerts#sending-notifications-to-external-systems_managing-alerts) .
-
