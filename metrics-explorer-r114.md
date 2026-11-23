@@ -2,7 +2,7 @@
 
 Copyright:
   years:  2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -39,11 +39,7 @@ To configure this feature, you must attach a metrics bucket to your {{site.data.
 
 Complete the following steps:
 
-1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
-
-2. Select the **Usage** icon ![Usage icon](/icons/usage.svg "Usage") > **Metrics Data**.
-
-    The *Metrics Data* page opens.
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**. 
 
     ![Metrics Data Usage analysis](/images/metrics-usage-explorer.png "Metrics Data Usage analysis"){: caption="Metrics Data Usage analysis" caption-side="bottom"}
 
@@ -62,9 +58,7 @@ Complete the following steps:
 
 Complete the following steps:
 
-1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
-
-2. Select the **Usage** icon ![Usage icon](/icons/usage.svg "Usage") > **Metrics Data**.
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**. 
 
     The *Metrics Data > Fair usage limits* page opens.
 

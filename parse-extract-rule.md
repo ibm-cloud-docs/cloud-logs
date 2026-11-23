@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2026
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -45,9 +45,7 @@ The extract rule uses RegEx-named capture groups to define new fields.
 {: #parse-extract-3-ui}
 {: ui}
 
-Complete the following steps:
-
-1. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Parsing rules** and click **New Rule Group**.
+Complete the following steps: 
 
 2. In the **Details** section, enter the *Rule Group Name* and the *Rule Group Description*.
 

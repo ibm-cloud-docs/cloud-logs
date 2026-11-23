@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-02"
+  years:  2024, 2026
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -33,9 +33,7 @@ Parsing rules are organized inside *Rule Groups*. Each group has a name and a se
 ## Configuring a Stringify JSON field rule
 {: #parse-convert-to-json-string-3-ui}
 
-Complete the following steps:
-
-1. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Parsing rules** and click **New Rule Group**.
+Complete the following steps: 
 
 2. In the **Details** section, enter the *Rule Group Name* and the *Rule Group Description*.
 

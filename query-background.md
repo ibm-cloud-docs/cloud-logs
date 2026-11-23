@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-28"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -80,7 +80,7 @@ If you need to stop a query that is still running, you can run the command `ibmc
 
 If you want to download the data, you can run the command `ibmcloud cloud-logs background-query-data`.
 
-When you create a background query through the CLI or API, the query ID is part of the name of the query. For example, in this query `background_query_d840dad0-2b2c-41df-89aa-c1faabc8c275`, the value `d840dad0-2b2c-41df-89aa-c1faabc8c275` is the query ID that you must use to check its status, cancel the query, or download the data. To see the IDs of background queries that you have requested via API, go to UI and select **Explore logs > Archive Query**.
+
 {: tip}
 
 ### ibmcloud logs background-query-create
@@ -201,9 +201,7 @@ After you run a background query, you can view your results through the **Logs P
 
 Complete the following steps to create a background query:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Archive Query**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Select **Archive Query**.
 
@@ -230,9 +228,7 @@ After you run a background query, you can view a preview of the results through 
 
 Complete the following steps to see a preview of the results from a background query:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Archive Query**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Select **Results preview**. A new window opens where you can see the data. From this new window, you can also download the data.
 
@@ -247,13 +243,9 @@ After you run a background query, you can download the results through the optio
 
 Complete the following steps to download the data from running a background query:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Archive Query**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Select **Download TSV**. The file downloads locally.
-
-
 
 
 ### Cloning a background query in {{site.data.keyword.logs_full_notm}}
@@ -264,9 +256,7 @@ If you need to modify an existing background query, you can duplicate a query co
 
 Complete the following steps to clone a background query:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Archive Query**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Select **Clone**.
 
@@ -291,7 +281,6 @@ The following table lists the API methods that you can use to manage background 
 {: caption="{{site.data.keyword.logs_full_notm}} background query (asynchronous archive query) API methods" caption-side="bottom"}
 
 
-When you create a background query through the CLI or API, the query ID is part of the name of the query. For example, in this query `background_query_d840dad0-2b2c-41df-89aa-c1faabc8c275`, the value `d840dad0-2b2c-41df-89aa-c1faabc8c275` is the query ID that you must use to check its status, cancel the query, or download the data. To see the IDs of background queries that you have requested via API, go to UI and select **Explore logs > Archive Query**.
 {: tip}
 
 ### API endpoint for background queries in {{site.data.keyword.logs_full_notm}}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-07"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -22,9 +22,7 @@ In {{site.data.keyword.logs_full_notm}}, you can trigger third-party services ba
 ## Creating an action
 {: #create-action}
 
-To create an action:
-
-1. In the left navigation, click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
+To create an action: 
 
 2. In the **Logs** view, click the ![Settings icon](/icons/setting.svg "Settings icon") **Settings**. This settings icon is not the same as the icon in the left navigation. The settings icon can be found in the logs view in the upper-right of the page.
 
@@ -53,9 +51,7 @@ To create an action:
 ## Editing an action
 {: #edit-action}
 
-To edit an existing action:
-
-1. In the left navigation, click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
+To edit an existing action: 
 
 2. In the **Logs** view, click the ![Settings icon](/icons/setting.svg "Settings icon") **Settings**. This settings icon is not the same as the icon in the left navigation. The settings icon can be found in the logs view in the upper-right of the page.
 
@@ -68,9 +64,7 @@ To edit an existing action:
 ## Cloning an action
 {: #clone-action}
 
-If you want to create a new action based on an existing action, you can clone an action.
-
-1. In the left navigation, click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**
+If you want to create a new action based on an existing action, you can clone an action. 
 
 2. In the **Logs** view, click the ![Settings icon](/icons/setting.svg "Settings icon") **Settings**. This settings icon is not the same as the icon in the left navigation. The settings icon can be found in the logs view in the upper-right of the page.
 
@@ -85,9 +79,7 @@ If you want to create a new action based on an existing action, you can clone an
 ## Displaying and hiding actions on the actions menu
 {: #action-display}
 
-You can configure whether actions can be [triggered](#action-trigger) by users.
-
-1. In the left navigation, click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
+You can configure whether actions can be [triggered](#action-trigger) by users. 
 
 2. In the **Logs** view, click the ![Settings icon](/icons/setting.svg "Settings icon") **Settings**. This settings icon is not the same as the icon in the left navigation. The settings icon can be found in the logs view in the upper-right of the page.
 
@@ -98,9 +90,7 @@ You can configure whether actions can be [triggered](#action-trigger) by users.
 ## Triggering an action
 {: #action-trigger}
 
-Trigger an action by doing the following steps:
-
-1. In the left navigation, click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
+Trigger an action by doing the following steps: 
 
 2. Click displayed data in view. A menu is displayed.
 
@@ -115,7 +105,7 @@ Trigger an action by doing the following steps:
 ## Deleting an action
 {: #action-delete}
 
-1. In the left navigation, click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
+
 
 2. In the **Logs** view, click the ![Settings icon](/icons/setting.svg "Settings icon") **Settings**. This settings icon is not the same as the icon in the left navigation. The settings icon can be found in the logs view in the upper-right of the page.
 

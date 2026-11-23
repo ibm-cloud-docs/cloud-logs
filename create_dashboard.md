@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-08"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -99,7 +99,7 @@ You can choose between different timeframes either by selecting one of the quick
 
 Timeframe limitations apply depending on the data source and the data origin. When selecting more than a 7-day time period, the results will appear based on the specific settings of each data source, similar to the Explore screen time limitation.
 
-For example, if your logs in the Explore logs screen are limited by the up to 8 days timeframe, this will also be the case for the custom dashboard. Log data will appear for only the last eight days, as opposed to metrics, which can show up to 90 days of data in the same dashboard.
+For example, if your logs in the Explore Logs screen are limited by the up to 8 days timeframe, this will also be the case for the custom dashboard. Log data will appear for only the last eight days, as opposed to metrics, which can show up to 90 days of data in the same dashboard.
 
 The query range and retention period are each marked with an annotation line. Hovering over the line shows an explanation.
 
@@ -225,25 +225,23 @@ Input the value in the Lucene or DataPrime query. When the value is changed, all
 
 Application and subsystem filters are created by default. You have the option of creating additional filters.
 
-When a filter is enabled, only log-based widgets are filtered.
+
 
 Disable a filter by clicking on the toggle next to the filter name.
 
 1. Click the **Manage Filters** ![Manage Filters icon](/icons/Filter.svg "Manage Filters") in the sidebar.
 
-2. Click **+ New Filter**.
+2. Click **+ Create Filter**.
 
 3. Define the parameters of your Filter: **Source**, **Field**, and **Operator**.
 
-4. Click **SAVE**.
+4. Click **Apply**.
 
 
 ## Notes for custom dashboards use
 {: #custom_dashboard_notes}
 
-* Users will have access to all dashboards. Those with editing permissions can edit all dashboards.
-
-* Log filters are applied to log-based widgets.
+* Users will have access to all dashboards. Those with editing permissions can edit all dashboards. 
 
 * Variables defined on a dashboard are accessible from all widgets.
 

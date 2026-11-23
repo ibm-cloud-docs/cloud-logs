@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-08-27"
+  years:  2024, 2026
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -157,7 +157,6 @@ For example, to filter auditing events with different severity values from selec
 ## Validate a rule
 {: #streaming_rules_validate}
 
-To verify the streaming rule, in the left-hand navigation, click **Explore logs > Logs**. Select **DataPrime** query, and change the query as follows:
 
 
 ```text

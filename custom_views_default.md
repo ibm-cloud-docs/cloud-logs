@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-08-10"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -38,9 +38,7 @@ To configure a custom view, you can define a query, filter by selected fields, o
 
 Complete the following steps to create a custom view as a default view:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Select the fields to be included in the view. By default you can select *Applications*, *Subsystems*, and log *Severities*.
 
@@ -62,9 +60,7 @@ Complete the following steps to create a custom view as a default view:
 
     3. Check **Set as default view**.
 
-        This sets the view as the default for you as the user. It does not set the view as the default view for the entire account.
-
-        The default view opens automatically each time you navigate to **Explore logs**.
+        This sets the view as the default for you as the user. It does not set the view as the default view for the entire account. 
 
         You can change your default view at any time by opening a different view and checking **Set as default view** while saving.
 
@@ -78,9 +74,7 @@ Complete the following steps to create a custom view as a default view:
 
 Complete the following steps to change a default view:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Open any view you want to set as default.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -40,13 +40,14 @@ Complete the following steps to launch the Metrics Explorer:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
 
-2. Select **Explore Logs** > **Visual Explorer**.
+
 
     ![Visual Explorer](/images/visual-explorer.png "Visual Explorer"){: caption="Visual Explorer" caption-side="bottom"}
 
 3. Select **Query #1 > Open Metric Explorer**
 
     ![Metric Explorer](/images/metric-explorer.png "Metric Explorer"){: caption="Metric Explorer" caption-side="bottom"}
+
 
 The Metric Explorer opens.
 
@@ -85,6 +86,8 @@ You can select a column header to sort the data in the column.
 Use Search series to filter rows by label value.
 
 You can interact with the table and chart by hovering or selecting a row in the table, which highlights the corresponding series in the chart.
+
+
 
 
 ## Next

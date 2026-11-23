@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-07"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -45,7 +45,6 @@ Consider the following use-case scenarios when using the Schema Explorer:
 - Identify fields that you must define as `Reserve fields` for critical analysis.
 
 
-
 ## Information per field
 {: #schema-explorer-key-features}
 
@@ -79,9 +78,7 @@ Without Schema Management, your queries might miss data because the fields don't
 
 Complete the following steps:
 
-1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
-
-2. In the dashboard, click **Data Pipeline** > **Schema Manager**.
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**. 
 
     The Schema Explorer opens.
 

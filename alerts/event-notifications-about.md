@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-21"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -148,7 +148,9 @@ In the *Alert Management* page, you can complete the following tasks:
 
 - You can edit, duplicate, delete and snooze an alert.
 
-    ![Alert Management manage options](../images/alert-management-3.png "Alert Management manage options"){: caption="Alert Management manage options" caption-side="bottom"}
+    ![Alert Management manage options](../images/alert-management-3.png "Alert Management manage options"){: caption="Alert Management manage options" caption-side="bottom"} 
+    
+    
 
 
 ## Monitoring alerts in the Incidents Page

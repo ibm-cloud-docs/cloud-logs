@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-14"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -40,7 +40,7 @@ Consider the following information when working with views in {{site.data.keywor
 
 - Each user can configure per {{site.data.keyword.logs_full_notm}} instance a custom view as their default view.
 
-    The user's default view opens automatically when the user launches **Explore Logs**.
+    The user's default view opens automatically when the user launches **Explore**.
 
 - The following preferences are saved within saved views. They are restored automatically the next time you open a view:
 
@@ -64,7 +64,7 @@ Complete the following steps to see all views in {{site.data.keyword.logs_full_n
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs").
+
 
 3. Click **Logs**.
 
@@ -83,7 +83,7 @@ Complete the following steps to create a custom view in {{site.data.keyword.logs
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
+
 
 3. Select filters to define the data that is displayed through the view. By default you can select *Applications*, *Subsystems*, and log *Severities*.
 
@@ -110,8 +110,8 @@ Complete the following steps to create a custom view in {{site.data.keyword.logs
     3. Check **Set as default view** to make this view the default view.
 
         This sets the view as the default for you as the user. It does not set the view as the default view for the entire account.
-
-        A default view opens automatically the next time your navigate to **Explore Logs** without a previously open view.
+        
+        
 
         You can change your default view at any time by opening a different view and checking **Set as default view** while saving.
 
@@ -131,9 +131,7 @@ You can update the column layout of any saved view in {{site.data.keyword.logs_f
 
 Complete the following steps to edit the columns of an existing view in {{site.data.keyword.logs_full_notm}}:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Click **All Views** and select the view whose columns you want to change.
 
@@ -152,6 +150,8 @@ The new column layout is saved as part of the view and is applied the next time 
 
 
 
+
+
 ## Creating folders in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_folders_create}
 
@@ -160,9 +160,7 @@ The order of the folders cannot be changed in {{site.data.keyword.logs_full_notm
 
 Complete the following steps to create a folder and add saved views to the folder in {{site.data.keyword.logs_full_notm}}:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Click **All Views**.
 
@@ -175,15 +173,12 @@ Complete the following steps to create a folder and add saved views to the folde
 After you create 1 or more view folders, you can orginize views to folders by dragging them to the folder.
 
 
-
 ## Deleting views in {{site.data.keyword.logs_full_notm}}
 {: #custom_views_delete}
 
 Complete the following steps to delete a view in {{site.data.keyword.logs_full_notm}}:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Click **All Views**.
 
@@ -202,9 +197,7 @@ Folders must be empty before a folder can be deleted.
 
 Complete the following steps to delete a folder in {{site.data.keyword.logs_full_notm}}:
 
-1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
-
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**.
+1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
 
 3. Click **All Views**.
 

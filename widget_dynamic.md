@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-11"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -116,7 +116,6 @@ Complete the following steps:
 
 
 
-
 ## Known limitations
 {: #create_dynamic_widget_limitations}
 
@@ -125,6 +124,8 @@ Complete the following steps:
     When a query returns more than 2,000 records, the widget shows a **Partial Data** notice. The widget includes only the first 2,000 rows returned.
 
     To analyze the complete result set, narrow the time range or apply filters to reduce the number of returned records.
+
+    
 
 - For **table widgets**, the following limitations apply:
 

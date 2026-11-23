@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-04-28"
+  years:  2024, 2026
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -89,9 +89,7 @@ Complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
-2. [Access your {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
-
-3. Click the **Data pipeline icon** ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Streams**.
+2. [Access your {{site.data.keyword.logs_full_notm}} instance](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui) 
 
 4. Click **+ Add stream**.
 

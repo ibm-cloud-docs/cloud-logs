@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -78,11 +78,19 @@ Complete the following steps:
 {: step}
 {: #alerts-config-4a-metric}
 
-Using PromQL, enter a query against metrics stored in your {{site.data.keyword.logs_full}} insstance.
 
-As you enter your PromQL query, you will get auto-complete suggestions.
 
-Aggregate the metrics using the value of your choice, for example: application, subsystem, machine id, or other data. For example, you might want to track a total exception count with a single metric for all applications and add metric labels to represent new code areas. If the exception counter is called `application_error_count` and it covered code area `x`, you can add a corresponding metric label.
+With the query builder, you can construct a query without knowing PromQL syntax:
+
+1. Select the query type. An *instant* query returns the metric value at a single point in time, which is useful for alert conditions based on real-time snapshots. A *range* query returns data points over a time frame, which is useful for alert conditions based on trends.
+
+2. Select a metric name.
+
+For more information, see [Query Builder](/docs/cloud-logs?topic=cloud-logs-widget_query_builder#qb_metrics).
+
+If you enter a PromQL query, you get auto-complete suggestions as you type.
+
+You can aggregate the metrics using the value of your choice, for example: application, subsystem, machine id, or other data. For example, you might want to track a total exception count with a single metric for all applications and add metric labels to represent new code areas. If the exception counter is called `application_error_count` and it covered code area `x`, you can add a corresponding metric label.
 
 ```text
 application_error_count{area="x"}

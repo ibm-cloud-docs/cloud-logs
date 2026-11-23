@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-14"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -36,7 +36,7 @@ Create an alert in {{site.data.keyword.logs_full_notm}} for early detection of a
 
 Complete the following steps:
 
-1. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list**.
+1. In the console, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg) **> Resource list**> **Observability**.
 2. Select your instance of {{site.data.keyword.logs_full_notm}}.
 3. In the {{site.data.keyword.logs_full_notm}} navigation, click the **Alerts** icon ![Alerts icon](../icons/alerts_icon.svg "Alerts") > **Alerts Management**.
 4. Click **New alert**.
@@ -73,10 +73,9 @@ Complete the following steps:
 {: #alerts-config-3}
 {: ui}
 
+Complete the following steps to specify the logs that will be analyzed against the filtering criteria: 
 
-Complete the following steps to specify the logs that will be analyzed against the filtering criteria:
-
-1. Specify a `Lucene` search query to specify the logs that will be returned as part of the alert.
+With a Lucene query: 
 
     You can define a query that filters based on a free text string. For example, to trigger an alert when POST requests that have a return code of 403 are identified, you can enter `"POST 403"` as your search query. The query will look for logs that include the value `403` and `POST`.
 
@@ -176,14 +175,7 @@ When an alert is triggered, there are limitations to the amount of data that is 
 {: step}
 {: ui}
 
-Complete the following steps:
 
-1. Verify the alert.
-
-    Click **Verify** to evaluate data to find out how many times the alert matched the criteria in the last 24 hours.
-
-    Verify evaluates data in the {{site.data.keyword.frequent-search}} pipeline only. If your alert is configured to trigger on data that is available in the {{site.data.keyword.monitoring}} pipeline, notice that this feature is not available.
-    {: important}
 
 2. Click **CREATE ALERT**.
 

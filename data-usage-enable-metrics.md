@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-30"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -76,20 +76,11 @@ After you enable data usage metrics, it can take up to two hours to see metrics.
 ## Enabling the cx_metrics metric in an {{site.data.keyword.logs_full_notm}} instance
 {: #data-usage-enable-metrics-alerts}
 
-Complete the following steps to enable the alerts metric `cx_metrics` in an {{site.data.keyword.logs_full_notm}} instance:
-
-1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
-
-2. Select the **Person** icon ![Person icon](/icons/preferences.png "Person icon").
-
-    ![Preferences](/images/preferences-1.png "Preferences"){: caption="Preferences" caption-side="bottom"}
-
-3. Select **Preferences**.
+Complete the following steps to enable the alerts metric `cx_metrics` in an {{site.data.keyword.logs_full_notm}} instance: 
 
 4. In the *Alerts* section, enable the toggle to create a [gauge-type](/docs/cloud-logs?topic=cloud-logs-widget_gauge) metric called `cx_alerts`.
 
     ![cx_alerts metrics](/images/cx-alerts-enable.png "cx_alerts metrics"){: caption="cx_alerts metrics" caption-side="bottom"}
-
 
 
 If enabled, the metric is generated whenever an alert is triggered or resolved.
