@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-24"
 
 keywords:
 
@@ -115,7 +115,7 @@ Complete the following steps to run a query in the *Custom Dashboards* page in {
 
 4. In the widget's configuration panel, select **Dataprime**.
 
-    ![Dataprime query in a custom dashboard](/images/query-dashboard-dataprime.png)
+    ![Dataprime query in a custom dashboard](./images/query-dashboard-dataprime.png)
 
 5. Enter a Dataprime query.
 
