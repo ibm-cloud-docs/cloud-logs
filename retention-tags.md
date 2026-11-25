@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -61,6 +61,8 @@ After you activate archive retention tags, consider the following information:
 Complete the following steps:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**. 
+
+2. In the dashboard, click **Data** > **Retention Tags**.
 
     The Archive retention tags page opens.
 
@@ -180,6 +182,8 @@ You can use the `default` tag to define a default expiration period that you can
 Complete the following steps:
 
 1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui) 
+
+2. Click the **Data** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **TCO Optimizer**. 
 
 3. Click **Create policy**.
 

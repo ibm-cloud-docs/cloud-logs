@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -74,6 +74,8 @@ Complete the following steps:
 {: ui}
 
 Complete the following steps to specify the logs that will be analyzed against the filtering criteria: 
+
+1. Specify the logs that will be returned as part of the alert by using the query builder or a `Lucene` search query. With the query builder, you can define the filter without writing a lucene query. Select a field attribute, and combine multiple conditions by using the `AND` or `OR` operators. 
 
 With a Lucene query: 
 
@@ -184,3 +186,41 @@ When an alert is triggered, there are limitations to the amount of data that is 
 {: step}
 
 Trigger an alert. Once an alert is triggered and processed, the system sends notifications to the designated users or teams through various channels such as email, Slack, SMS, or integrated incident management platforms. You can then go to the *Incidents* page to see information about the alerts that are triggered. For more information, see [Managing triggered alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-incidents).
+
+
+
+## Viewing the details of an alert
+{: #alerts-config-view}
+{: ui}
+
+Complete the following steps:
+
+1. Open the *Alerts Management* page. For more information, see [Launch alerts management](#alerts-config-1).
+
+2. In the *Alert Definitions* list, find the alert. To narrow the list, select one or more alert types in the *Type* filter, or enter a name in the **Search by alert name** field.
+
+    The list shows the name, type, last triggered time, [priority](/docs/cloud-logs?topic=cloud-logs-priorities), labels, last modified time, and whether the alert is enabled.
+
+3. Click the alert name to open the details pane.
+
+    The details pane shows the following information:
+
+    * **Alert State**: The state of the alert over time (*Alerting*, *OK*, *No Data*, or *Suppressed*). By default, the chart shows the last hour.
+    * **Query**: The query that the alert evaluates, and any **Group by** fields.
+    * **Conditions**: The priority and the condition that triggers the alert.
+    * **Active suppressions**: Whether a suppression rule is in effect for the alert.
+
+
+## Editing an alert
+{: #alerts-config-edit}
+{: ui}
+
+To edit an alert, complete the following steps:
+
+1. Open the details pane of the alert. For more information, see [Viewing the details of an alert](#alerts-config-view).
+
+2. Click the **Edit** icon.
+
+3. Change the alert configurations. For more information, see the sections earlier in this topic, beginning with [Choose the type of alert to configure](#alerts-config-2).
+
+4. Click **Save changes**.

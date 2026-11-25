@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -42,12 +42,17 @@ Complete the following steps to launch the Metrics Explorer:
 
 
 
+2. Select **Explore** > **Visual Explorer**. 
+
     ![Visual Explorer](/images/visual-explorer.png "Visual Explorer"){: caption="Visual Explorer" caption-side="bottom"}
 
 3. Select **Query #1 > Open Metric Explorer**
 
     ![Metric Explorer](/images/metric-explorer.png "Metric Explorer"){: caption="Metric Explorer" caption-side="bottom"}
 
+
+You can also open the **Metrics Explorer** from the {{site.data.keyword.logs_full_notm}} navigation menu by selecting **Explorer**.
+{: note} 
 
 The Metric Explorer opens.
 

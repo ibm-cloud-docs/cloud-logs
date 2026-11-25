@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -27,9 +27,13 @@ In {{site.data.keyword.logs_full_notm}}, extensions offer out of the box configu
 
 
 
+- Extensions can have one or more types, such as `Security`, and `Observability`. You can use the type to organize and filter extensions. 
+
 - Extensions include labels that you can use to filter them. For example, the tag `IBM` is associated with extensions that you can use to monitor the {{site.data.keyword.cloud_notm}}.
 
 
+
+- Extensions can include predefined alerts, parsing rules, Events to Metrics definitions, dashboards, enrichments, and saved views. 
 
 ## List of available extensions
 {: #extensions-mgmt-list}
@@ -102,6 +106,8 @@ For more information about the REST API, see [Extensions](/apidocs/logs-service-
 To see the extensions that are available through the {{site.data.keyword.logs_full_notm}} UI, complete the following steps:
 
 {{site.data.content.launch-ui}} 
+
+2. Click the **Configuration** icon ![Settings icon](/icons/setting.svg "Setting") > **Extensions**. 
 
 The list of available extensions is displayed.
 

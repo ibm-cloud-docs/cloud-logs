@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -23,6 +23,8 @@ In {{site.data.keyword.logs_full}}, parsing rules are organized inside *Rule Gro
 {: #rules_groups_create}
 
 
+
+To create a rule group in the {{site.data.keyword.logs_full}} UI, click the **Data** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Parsing rules** and click **New Rule Group** or choose one of the quick rule creation options. 
 
 A rule group definition has several sections. Complete the following steps to create a rule group:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -39,6 +39,8 @@ You can change the rule to limit the logs processed by the other rules you defin
 {: ui}
 
 Complete the following steps to create a Severity Rule: 
+
+1. Click the **Data** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Parsing rules** and click **Severity Rules**. 
 
 2. In the **Details** section, enter the *Rule Group Name* and the *Rule Group Description*. By default, the *Rule Group Name* is `Severity Rules`.
 

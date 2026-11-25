@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-24"
+lastupdated: "2026-11-25"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -200,6 +200,10 @@ New features are included in this release.
     For more information, see [Activity tracking events](/docs/cloud-logs?topic=cloud-logs-at_events). 
 
 * **Extensions**
+
+
+
+    * Saved views: You can now include a saved view as part of an extension. Extensions are pre-built bundles of alerts, parsing rules, dashboards, saved views, and enrichments that are scoped per application or subsystem. For more information, see [{{site.data.keyword.logs_full_notm}} extensions](/docs/cloud-logs?topic=cloud-logs-extensions).
 
 
 

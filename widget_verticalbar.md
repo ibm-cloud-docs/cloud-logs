@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -70,6 +70,8 @@ Complete the following steps:
     Select a label and its corresponding value.
 
     
+
+    Dashboard filters can be applied to all widgets or to selected widgets only. 
 
     Filters are applied at the widget level and work alongside dashboard filters. If there is a conflict, the dashboard filters take precedence over widget filters.
 

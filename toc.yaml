@@ -161,6 +161,8 @@ toc:
             navtitle: Configuring the TCO Optimizer
           - topic: tco-policy-order.md
             navtitle: Policy processing order
+          - topic: tco-overrides-scripted-migration.md
+            navtitle: Converting TCO overrides to policies
       - topic: instance-launch.md
         navtitle: Launching the UI
       - topicgroup:
@@ -335,6 +337,10 @@ toc:
             navtitle: System Monitoring
           - topic: extensions-activity-tracking.md
             navtitle: Activity Tracking
+          - topic: extensions-iam.md
+            navtitle: IBM Cloud Identity and Access Management (IAM)
+          - topic: extensions-data-usage-v2.md
+            navtitle: Data usage v2 extension
           - topic: extensions-kubernetes.md
             navtitle: IBM Cloud Kubernetes Service
           - topic: extensions-db-mysql.md

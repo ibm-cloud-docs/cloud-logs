@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords: 
 
@@ -95,6 +95,8 @@ If you copy the URL directly from the address bar, the link will be temporary, e
 
 5. Click **Open dashboard** for your selected instance. 
 
+6. In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
+
 7. Customize your current view:
 
    * Select the filtering mode and filtering criteria.
@@ -127,6 +129,8 @@ The URL is ready to be shared and will remain active for 2 weeks.
    If the instances are not displayed, click **Instances** > **Cloud Logs** to display the list of logging instances.
 
 5. Click **Open dashboard** for your selected instance. 
+
+6. In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
 7. Customize your current view:
 
@@ -165,6 +169,8 @@ A URL sharing a public view is always permanent and accessible to all of your te
    If the instances are not displayed, click **Instances** > **Cloud Logs** to display the list of logging instances.
 
 5. Click **Open dashboard** for your selected instance. 
+
+6. In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
 7. Customize your current view:
 
@@ -209,6 +215,8 @@ This example creates a customized view of applications with errors (severity `Er
    If the instances are not displayed, click **Instances** > **Cloud Logs** to display the list of logging instances.
 
 5. Click **Open dashboard** for your selected instance. 
+
+6. In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
 7. Run this DataPrime query.
 

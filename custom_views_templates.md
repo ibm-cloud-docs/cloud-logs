@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -39,6 +39,8 @@ Consider the following information when creating a custom view as a template:
 Complete the following steps to create a custom view that you can use as a template:
 
 1. [Launch the UI through the IBM Cloud UI](/docs/cloud-logs?topic=cloud-logs-instance-launch). 
+
+2. Click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs"). Then, click **Logs**. 
 
 3. Set up the **Explore Logs** page with the column layout, view modes, and filters.
 

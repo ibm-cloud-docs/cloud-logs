@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -33,6 +33,11 @@ Next, you can apply query filters, grouping, or aggregation. The data that is fi
 Whenever the query is modified, the dynamic widget re-analyzes the results and updates the list of recommended visualizations.
 
 
+
+You can export data from a dynamic widget to a CSV file by using the **Export to CSV** option.
+
+Only 2000 records can be exported to a CSV file. 
+{: important} 
 
 ## Step 1: Enter name and description
 {: #create_dynamic_widget_1}
@@ -126,6 +131,7 @@ Complete the following steps:
     To analyze the complete result set, narrow the time range or apply filters to reduce the number of returned records.
 
     
+    Only 2000 records can be exported to a CSV file. 
 
 - For **table widgets**, the following limitations apply:
 

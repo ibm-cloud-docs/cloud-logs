@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -79,6 +79,8 @@ Complete the following steps:
 {: #alerts-config-4a-metric}
 
 
+
+You can define a query against metrics stored in your {{site.data.keyword.logs_full}} instance by using the no-code query builder or by entering a PromQL query. 
 
 With the query builder, you can construct a query without knowing PromQL syntax:
 

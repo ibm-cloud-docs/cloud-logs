@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -23,6 +23,8 @@ With {{site.data.keyword.logs_full}} **Logs details**, you can easily view the d
 {: #log-details-view}
 
 
+
+In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
 The last view and mode you opened is displayed. If no view was previously open, all views are displayed.
 

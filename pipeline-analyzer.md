@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -41,6 +41,8 @@ With the Pipeline Analyzer, teams can trace log processing flows in order to:
 Complete the following steps:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**. 
+
+2. In the dashboard, click **Data** > **Pipeline Analyzer**. 
 
 The Pipeline Analyzer opens.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -79,6 +79,8 @@ Without Schema Management, your queries might miss data because the fields don't
 Complete the following steps:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**. 
+
+2. In the dashboard, click **Data** > **Schema Manager**.
 
     The Schema Explorer opens.
 

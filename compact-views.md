@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -26,6 +26,8 @@ Use the {{site.data.keyword.compact-mode}} to optimize query performance by trig
 {: #compact-access-view}
 
 
+
+In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
 
 

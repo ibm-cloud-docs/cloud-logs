@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -57,6 +57,8 @@ Do the following to configure Events to Metrics in your environment.
 {{site.data.content.launch-ui}}
 
 
+
+2. Click the **Data** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Events to Metrics**. 
 
 3. Click **New Events2Metrics**.
 

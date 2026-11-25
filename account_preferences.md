@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -27,6 +27,8 @@ You can change any of the following preferences in an {{site.data.keyword.logs_f
 - `User-level default homepage`
 
     `User-level default homepage` controls which section of the UI opens when a user logs in an {{site.data.keyword.logs_full_notm}} instance. 
+   
+    By default, when a user logs into an {{site.data.keyword.logs_full_notm}} instance, the landing page is **Explore** > **Logs** for users who have not set a custom homepage. 
 
     Valid options for the User-level default homepage setting are: `Logs Explorer`, `Incidents`, and `Livetail`.
 

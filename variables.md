@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-24"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -38,6 +38,8 @@ Text Box
 
 Some methods support both single and multiple values. A query-based method, for example, may return multiple values, but whether the variable accepts multiple selections depends on the value type (single-string vs. multi-string).
 {: note}
+
+
 
 ## Variable types in {{site.data.keyword.logs_full_notm}} custom dashboards
 {: #variables-types}

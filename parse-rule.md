@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -41,6 +41,8 @@ The parse rule uses RegEx named capture groups to define new fields.
 {: #parse-rule-3-ui}
 
 Complete the following steps to create a rules group with 1 Parse rule: 
+
+1. Click the **Data** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Parsing rules** and click **New Rule Group**. 
 
 2. In the **Details** section, enter the *Rule Group Name* and the *Rule Group Description*.
 

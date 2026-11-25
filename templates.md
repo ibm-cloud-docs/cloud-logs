@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -49,6 +49,8 @@ When log aggregation processes all ingested data, the logs that match a template
 Log aggregations can be found as templates in the **Templates** tab in the **Logs** page.
 
 To access the templates tab, complete the following steps: 
+
+1. In the navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs templates**. 
 
    In the **Logs** view you can also click the **Templates** tab to open the template view.
    {: tip}

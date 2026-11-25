@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -63,6 +63,8 @@ Once you instance is provisioned, you can explore the {{site.data.keyword.logs_f
 {: #launch-ui} 
 
 
+
+2. Click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
 
 When initially provisioned, you might not see data flowing to the instance, so all dashboards and views might be blank.
 {: note}

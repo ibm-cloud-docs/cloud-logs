@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -50,6 +50,8 @@ It is your responsibility to validate each data access rule. Verify that the dat
 Complete the following steps:
 
 1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**. 
+
+2. In the dashboard, click **Data** > **Data Access Rules**. 
 
    ![Service instance dashboard.](images/service-instance-dashboard.png "Service instance dashboard."){: caption="Service instance dashboard." caption-side="bottom"}
 

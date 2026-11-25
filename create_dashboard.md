@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -227,6 +227,8 @@ Application and subsystem filters are created by default. You have the option of
 
 
 
+You can now apply dashboard filters to all widgets or to selected widgets only. 
+
 Disable a filter by clicking on the toggle next to the filter name.
 
 1. Click the **Manage Filters** ![Manage Filters icon](/icons/Filter.svg "Manage Filters") in the sidebar.
@@ -242,6 +244,8 @@ Disable a filter by clicking on the toggle next to the filter name.
 {: #custom_dashboard_notes}
 
 * Users will have access to all dashboards. Those with editing permissions can edit all dashboards. 
+
+* Dashboard filters can be applied to all widgets or to selected widgets only. 
 
 * Variables defined on a dashboard are accessible from all widgets.
 
