@@ -528,10 +528,6 @@ toc:
                 navtitle: Configuring the log files that are collected
               - topic: agent/agent-multiline-new.md
                 navtitle: Multiline support
-              - topic: agent/agent-review-worker-node-logs.md
-                navtitle: Reviewing service, API server, and worker node logs
-              - topic: agent/agent-manage-kubernetes-audit-logs.md
-                navtitle: Managing Kubernetes audit logs
           - topicgroup:
               label: Managing the Logging agent for Linux environments
               topics:

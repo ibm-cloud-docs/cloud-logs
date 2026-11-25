@@ -12,14 +12,14 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating an {{site.data.keyword.logs_full_notm}} custom dashboard
+# Creating an {{site.data.keyword.logs_full_notm}} custom dashboard 
 {: #create_dashboards}
 
 You can create custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
 
-## Dashboard widgets
+## What are the dashboard widgets in {{site.data.keyword.logs_full_notm}}
 {: #create_dashboards_widgets}
 
 Custom dashboard are comprosed of widgets. You can create the widgets you want to use in the dashboard.
@@ -38,7 +38,7 @@ Custom dashboard are comprosed of widgets. You can create the widgets you want t
 * [Polystat](/docs/cloud-logs?topic=cloud-logs-widget_polystat)
 
 
-## Creating a custom dashboard
+## How do I create a custom dashboard in {{site.data.keyword.logs_full_notm}}
 {: #custom_dashboard}
 
 Do the following to create a custom dashboard.
@@ -58,7 +58,7 @@ Do the following to create a custom dashboard.
     **Favorite** and **Set As Default** settings are unique for each user. All other settings apply across all team members.
     {: note}
 
-## Creating sections
+## How do I create sections in {{site.data.keyword.logs_full_notm}}
 {: #create_sections}
 
 Widgets can be organized into sections. Sections within a dashboard can be collapsed, expanded, and reordered.
@@ -87,7 +87,7 @@ When you save your dashboard, the dashboard is saved with the sections collapsed
     **Favorite** and **Set As Default** settings are unique for each user. All other settings apply across all team members.
     {: note}
 
-## Specifying the dashboard timeframe
+## How do I specify the dashboard timeframe in {{site.data.keyword.logs_full_notm}}
 {: #dashboard_timeframe}
 
 By default, custom dashboards show data from the last 15 minutes. This can be modified using the timeframe dropdown in the dashboard.
@@ -106,7 +106,7 @@ The query range and retention period are each marked with an annotation line. Ho
 If the retention period is, for example, 21 days, the user will be able to see that limit on the time series widget, and selecting an older 7-day time query within those 21 days will still return results.
 
 
-## Modifying a custom dashboard
+## How do I modifying a custom dashboard in {{site.data.keyword.logs_full_notm}}
 {: #modify_dashboard}
 
 Widgets are always in edit mode when displayed in a dashboard and can be edited at any time.
