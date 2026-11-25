@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-10"
+lastupdated: "2026-11-11"
 
 keywords:
 
@@ -126,6 +126,9 @@ matches(string: string, regexp: regexp): bool
 {: codeblock}
 
 
+When you use a regular expression in a DPXL expression, such as with the `matches` function, and you want to match the beginning of a string, you must include the caret (`^`) at the start of the pattern. For example, `hostname.matches(/^prod-.*/)`.
+Regex anchoring differs between Priority Insights and All Logs. Priority Insights (OpenSearch) anchors regular expressions by default. All Logs (DataPrime engine) does not. A data access rule (DAR) that uses the `matches` function can therefore return different results in each.
+{: important}
 
 ## `pad`
 {: #pad}
@@ -172,6 +175,9 @@ regexpSplitParts(string: string, delimiter: regexp, index: number): string
 {: codeblock}
 
 
+When you use a regular expression in a DPXL expression, such as with the `matches` function, and you want to match the beginning of a string, you must include the caret (`^`) at the start of the pattern. For example, `hostname.matches(/^prod-.*/)`.
+Regex anchoring differs between Priority Insights and All Logs. Priority Insights (OpenSearch) anchors regular expressions by default. All Logs (DataPrime engine) does not. A data access rule (DAR) that uses the `matches` function can therefore return different results in each.   
+{: important} 
 
 
 ## `rtrim`

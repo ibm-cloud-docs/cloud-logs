@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-10"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -26,15 +26,15 @@ You can change any of the following preferences in an {{site.data.keyword.logs_f
 
 - `User-level default homepage`
 
-    `User-level default homepage` controls which section of the UI opens when a user logs in an {{site.data.keyword.logs_full_notm}} instance.
+    `User-level default homepage` controls which section of the UI opens when a user logs in an {{site.data.keyword.logs_full_notm}} instance. 
+   
+    By default, when a user logs into an {{site.data.keyword.logs_full_notm}} instance, the landing page is **Explore** > **Logs** for users who have not set a custom homepage. 
 
-    By default, when a user logs into an {{site.data.keyword.logs_full_notm}} instance, the landing page is set to the *Home Dashboard*.
-
-    Valid options for the User-level default homepage setting are: `Home Dashboard`, `Custom Dashboards`, `Logs Explorer`, `Incidents`, and `Livetail`.
+    Valid options for the User-level default homepage setting are: `Logs Explorer`, `Incidents`, and `Livetail`.
 
     Through this setting, you can change the default landing page when a user logs in to any valid option.
 
-    If a user logs into an intance and changes the default view or default custom dashboard, then, the default homepage that is launched when the user logs in is set to the preferences that the user configures for `Custom Dashboards` or `Logs Explorer`.
+    If a user logs into an instance and changes the default view or default custom dashboard, then, the default homepage that is launched when the user logs in is set to the preferences that the user configures for `Custom Dashboards` or `Logs Explorer`.
 
 - `Change time zone settings`
 
@@ -72,7 +72,7 @@ By default, when a user launches the *Explorer Logs > Logs* section or logs into
 
 As a user, you can configure the column layout, the filter options and the view mode such as JSON, condensed, 1 line, or 2 lines in the default Logs view. Then, you can save this configuration and set it as your default view. For more information, see [Creating a custom view as default](/docs/cloud-logs?topic=cloud-logs-custom_views_default).
 
-Then, the default homepage that is launched when the user logs in is set to the default view that the user hascconfigured for `Logs Explorer`.
+Then, the default homepage that is launched when the user logs in is set to the default view that the user has configured for `Logs Explorer`.
 
 
 ## Launch the Preferences UI in an {{site.data.keyword.logs_full_notm}} instance
@@ -80,11 +80,11 @@ Then, the default homepage that is launched when the user logs in is set to the 
 
 Complete the following steps to launch the preferences page in an {{site.data.keyword.logs_full_notm}} instance:
 
-1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation menu icon](../icons/icon_hamburger.svg) > **Observability** > **Logging** > **Instances**.
+1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation menu icon](./icons/icon_hamburger.svg) > **Observability** > **Logging** > **Instances**.
 
 2. Select the {{site.data.keyword.logs_full_notm}} instance. The default homepage opens.
 
-3. Click the **Avatar** icon ![Avatar icon](/icons/avatar.svg) > **Preferences**.
+3. In the {{site.data.keyword.logs_full_notm}} navigation, click **Configuration** > **Preferences**.
 
     The *Preferences* page opens.
 

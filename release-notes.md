@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-11"
+lastupdated: "2026-11-25"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -21,8 +21,113 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
-## 11 November 2026
+## 23 Nov 2026
+{: #cloud-logs-nov1926}
+{: release-note}
+
+Functional updates and fixes made available on 10 Nov 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Mumbai (`in-mum`)
+    * Chennai (`in-che`)
+    * Montreal (`ca-mon`)
+    * Sydney (`au-syd`)
+    * Sao Paulo (`br-sao`)
+    * Madrid (`eu-es`)
+    * Toronto (`ca-tor`)
+    * Osaka (`jp-osa`)
+
+
+## 19 Nov 2026
+{: #cloud-logs-nov1926}
+{: release-note}
+
+Functional updates and fixes made available on 10 Nov 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Mumbai (`in-mum`)
+    * Chennai (`in-che`)
+    * Montreal (`ca-mon`)
+    * Sydney (`au-syd`)
+    * Sao Paulo (`br-sao`)
+    * Madrid (`eu-es`)
+    * Toronto (`ca-tor`)
+
+
+## 18 Nov 2026
+{: #cloud-logs-nov1826}
+{: release-note}
+
+Functional updates and fixes made available on 10 Nov 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Mumbai (`in-mum`)
+    * Chennai (`in-che`)
+    * Montreal (`ca-mon`)
+    * Sydney (`au-syd`)
+    * Sao Paulo (`br-sao`)
+    * Madrid (`eu-es`)
+
+
+## 17 Nov 2026
+{: #cloud-logs-nov1726}
+{: release-note}
+
+Functional updates and fixes made available on 10 Nov 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Mumbai (`in-mum`)
+    * Chennai (`in-che`)
+    * Montreal (`ca-mon`)
+    * Sydney (`au-syd`)
+    * Sao Paulo (`br-sao`)
+    
+
+## 16 Nov 2026
+{: #cloud-logs-nov1626}
+{: release-note}
+
+Functional updates and fixes made available on 10 Nov 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Mumbai (`in-mum`)
+    * Chennai (`in-che`)
+    * Montreal (`ca-mon`)
+    * Sydney (`au-syd`)
+
+
+## 12 Nov 2026
+{: #cloud-logs-nov1226}
+{: release-note}
+
+Functional updates and fixes made available on 10 Nov 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Mumbai (`in-mum`)
+    * Chennai (`in-che`)
+    * Montreal (`ca-mon`)
+
+
+## 11 Nov 2026
 {: #cloud-logs-nov1126}
+{: release-note}
+
+Functional updates and fixes made available on 10 Nov 2026 are now available in more regions.
+
+:   Regions supporting new functionality and fixes:
+
+    * Mumbai (`in-mum`)
+    * Chennai (`in-che`)
+    
+
+## 10 November 2026
+{: #cloud-logs-nov1026}
 {: release-note}
 
 Functional updates and fixes are available in the Mumbai (`in-mum`) region only.
@@ -49,7 +154,7 @@ New features are included in this release.
 
 * **Enhanced alert features**:
 
-    * **Metric alerts**: You can now construct complex Prometheus queries using a no-code visual builder without prior knowledge of PromptQL syntax. The query builder allows you to select metrics, apply granular filters with operators including regular expressions and configure aggregation and rollup functions. Use these capabilities to define alert conditions based on performance trends or real-time data snapshots. For more information, see [Configuring metric alerts](/docs/cloud-logs?topic=cloud-logs-alerts-config-metric&interface=ui).
+    * **Metric alerts**: You can now construct complex Prometheus queries using a no-code visual builder without prior knowledge of PromQL syntax. The query builder allows you to select metrics, apply granular filters with operators including regular expressions and configure aggregation and rollup functions. Use these capabilities to define alert conditions based on performance trends or real-time data snapshots. For more information, see [Configuring metric alerts](/docs/cloud-logs?topic=cloud-logs-alerts-config-metric&interface=ui).
 
     * **Log alerts**: You can now build precise log-based filters by using a no-code visual query builder within the alert creation page instead of manually writing lucene queries. The query builder provides field attributes and combines multiple conditions by using `AND` or `OR` operators to isolate specific events that should trigger an event. For more information see [Configuring alerts in {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-alerts-config&interface=ui)
 
@@ -69,7 +174,7 @@ New features are included in this release.
 
 * **Navigation changes**: Updated and streamlined navigation layout that is designed to improve workflow efficiency.
 
-    **Default homepage**: The default landing page is now set to **Explore** > **Logs** for users who have not configured a custom homepage previoudsly.
+    **Default homepage**: The default landing page is now set to **Explore** > **Logs** for users who have not configured a custom homepage previously.
 
     **User Preferences Page**: A top-level configuration menu. **Preferences** are moved from the user profile menu to **Configuration > Preferences**.
 
@@ -82,23 +187,29 @@ New features are included in this release.
 
     **New menu items**: Added **Metric explorer** and **Recording rules** to the navigation menu for easier access to metrics exploration and recording rule management.
 
-* Renaming of activity tracker events.
+* Activity tracker events changes.
 
     * Activity Tracker audit events for retention tags: The `logs.retentions.get` event is renamed to `logs.retention-tags.list`. Two new events are also available: `logs.retention-tags.enable` for activating the retention tags feature, and `logs.retention-tags.update` for modifying retention tag configurations.
 
-    * New audit events for TCO policies*: Three new Activity Tracker audit events are now available for TCO policies: `logs.logs-tco-policy.enable`, `logs.logs-tco-policy.disable`, and `logs.logs-tco-policy.update`. The `logs.logs-tco-policy.get` event is not applicable; use `logs.logs-tco-policy.list` instead.
+    * New audit events for TCO policies: Three new Activity Tracker audit events are now available for TCO policies: `logs.logs-tco-policy.enable`, `logs.logs-tco-policy.disable`, and `logs.logs-tco-policy.update`. The `logs.logs-tco-policy.get` event is not applicable; use `logs.logs-tco-policy.list` instead.
 
     * `logs.logs-tco-policy.create` audit event: The `logs.logs-tco-policy.create` Activity Tracker audit event now includes the ID of the newly created TCO policy and reflects the policy's enabled status.
 
     * `logs.custom-enrichment-data.create` audit event: The `logs.custom-enrichment-data.create` Activity Tracker audit event now includes the ID of the newly created enrichment.
 
+    For more information, see [Activity tracking events](/docs/cloud-logs?topic=cloud-logs-at_events). 
+
 * **Extensions**
+
+
+
+    * Saved views: You can now include a saved view as part of an extension. Extensions are pre-built bundles of alerts, parsing rules, dashboards, saved views, and enrichments that are scoped per application or subsystem. For more information, see [{{site.data.keyword.logs_full_notm}} extensions](/docs/cloud-logs?topic=cloud-logs-extensions).
 
 
 
     * IBM label: The IBM label is now applied to all existing IBM extensions to make it easier to identify and filter IBM extensions in the extensions catalog.
 
-    * Multiple extension types: Extensions now support multiple types. You can classify each extension by its function, such as `Security` or `Observability`, to organize and filter extensions by type.
+    * Multiple extension types: Extensions now support multiple types. You can classify each extension by its function, such as `Security` or `Observability`, to organize and filter extensions by type. For more information, see [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt&interface=ui). 
 
     * New Data Usage extension.
 
@@ -107,12 +218,11 @@ New features are included in this release.
 
 * **Improvements in dashboard**:
 
-    * Export widget data to CSV: You can export data from a dynamic widget to a CSV file by using the **Export to CSV** option in the widget menu. The export preserves the widget's active filters and grouping, and includes up to 2,000 rows.
+    * Export widget data to CSV: You can export data from a dynamic widget to a CSV file by using the **Export to CSV** option in the widget menu. The export preserves the widget's active filters and grouping, and includes up to 2,000 rows. For more information, see [Dynamic widget](/docs/cloud-logs?topic=cloud-logs-widget_dynamic). 
 
     * Selective filters: You can now apply dashboard filters to all widgets or to selected widgets only. This lets you target specific parts of a dashboard without affecting the full view.
 
     * Resized and streamlined dashboard.
-
 
 
 ## 26 October 2026

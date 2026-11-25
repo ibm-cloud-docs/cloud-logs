@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-06-30"
+  years:  2024, 2026
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -78,8 +78,9 @@ For example, to filter platform logs with different severity values from selecte
 {: #streaming_platform_data_select_1b}
 {: step}
 
-To verify the streaming rule, in the left-hand navigation, click **Explore logs > Logs**. Select **DataPrime** query, and change the query as follows:
 
+
+To verify the streaming rule, in the left-hand navigation, click **Explore > Logs**. Select **DataPrime** query, and change the query as follows: 
 
 ```text
 filter 'PASTE_YOUR_CONDITION'

@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -29,9 +29,9 @@ TCO policies need to be ordered correctly so they are processed as intended. Pol
 
 To manage the execution order of TCO policies in the UI:
 
-1. Open the {{site.data.keyword.logs_full_notm}} dashboard for your [logging instance](https://cloud.ibm.com/observability/logging){: external}.
+1. Open the {{site.data.keyword.logs_full_notm}} dashboard for your [logging instance](https://cloud.ibm.com/observability/logging){: external}. 
 
-2. Click the **Data Pipeline** icon ![Data Pipeline](/icons/data-pipeline.svg "Data Pipeline").
+2. Click the **Data** icon ![Data Pipeline](/icons/data-pipeline.svg "Data Pipeline"). 
 
 3. Click **TCO Optimizer**.
 

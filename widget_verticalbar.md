@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-05-22"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -68,6 +68,10 @@ Complete the following steps:
 4. [Optional] Add one or more filters specific to the widget to narrow down the data that is displayed.
 
     Select a label and its corresponding value.
+
+    
+
+    Dashboard filters can be applied to all widgets or to selected widgets only. 
 
     Filters are applied at the widget level and work alongside dashboard filters. If there is a conflict, the dashboard filters take precedence over widget filters.
 

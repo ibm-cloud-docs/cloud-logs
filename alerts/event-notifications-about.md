@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-21"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -148,7 +148,15 @@ In the *Alert Management* page, you can complete the following tasks:
 
 - You can edit, duplicate, delete and snooze an alert.
 
-    ![Alert Management manage options](../images/alert-management-3.png "Alert Management manage options"){: caption="Alert Management manage options" caption-side="bottom"}
+    ![Alert Management manage options](../images/alert-management-3.png "Alert Management manage options"){: caption="Alert Management manage options" caption-side="bottom"} 
+    
+    
+
+- You can export multiple alerts to a CSV file. Select the alerts that you want to export, and then export them. Use the exported file to analyze, audit, or report your alert configurations. Click the **Export** icon![Export icon](../icons/alerts-export-icon.png "Alerts")
+
+- You can view, filter, and bulk manage alert definitions across your instance from a unified view. 
+
+- You can drill down into an alert definition to view its details. 
 
 
 ## Monitoring alerts in the Incidents Page

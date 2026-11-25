@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-06-13"
+  years:  2024, 2026
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -18,7 +18,6 @@ subcollection: cloud-logs
 
 {{site.data.keyword.logs_full_notm}} learns from the logs that are ingested through the {{site.data.keyword.frequent-search}} and {{site.data.keyword.monitoring}} data pipelines, and groups similar logs into templates to help you determine logs requiring your attention and others that might not.
 {: shortdesc}
-
 
 
 ## How are templates generated from logs
@@ -44,16 +43,14 @@ Then, the following fields are also used for log aggregation and definition of a
 When log aggregation processes all ingested data, the logs that match a template must have an identical JSON structure. Any small variation of the JSON fields will result in a different template being created.
 
 
-
-
 ## Launching the templates page
 {: #templates-view}
 
 Log aggregations can be found as templates in the **Templates** tab in the **Logs** page.
 
-To access the templates tab, complete the following steps:
+To access the templates tab, complete the following steps: 
 
-1. In the navigation, click the *Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs templates**.
+1. In the navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs templates**. 
 
    In the **Logs** view you can also click the **Templates** tab to open the template view.
    {: tip}

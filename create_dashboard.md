@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-06-08"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -12,14 +12,14 @@ subcollection: cloud-logs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating an {{site.data.keyword.logs_full_notm}} custom dashboard
+# Creating an {{site.data.keyword.logs_full_notm}} custom dashboard 
 {: #create_dashboards}
 
 You can create custom {{site.data.keyword.logs_full}} dashboards.
 {: shortdesc}
 
 
-## Dashboard widgets
+## What are the dashboard widgets in {{site.data.keyword.logs_full_notm}}
 {: #create_dashboards_widgets}
 
 Custom dashboard are comprosed of widgets. You can create the widgets you want to use in the dashboard.
@@ -38,7 +38,7 @@ Custom dashboard are comprosed of widgets. You can create the widgets you want t
 * [Polystat](/docs/cloud-logs?topic=cloud-logs-widget_polystat)
 
 
-## Creating a custom dashboard
+## How do I create a custom dashboard in {{site.data.keyword.logs_full_notm}}
 {: #custom_dashboard}
 
 Do the following to create a custom dashboard.
@@ -58,7 +58,7 @@ Do the following to create a custom dashboard.
     **Favorite** and **Set As Default** settings are unique for each user. All other settings apply across all team members.
     {: note}
 
-## Creating sections
+## How do I create sections in {{site.data.keyword.logs_full_notm}}
 {: #create_sections}
 
 Widgets can be organized into sections. Sections within a dashboard can be collapsed, expanded, and reordered.
@@ -87,7 +87,7 @@ When you save your dashboard, the dashboard is saved with the sections collapsed
     **Favorite** and **Set As Default** settings are unique for each user. All other settings apply across all team members.
     {: note}
 
-## Specifying the dashboard timeframe
+## How do I specify the dashboard timeframe in {{site.data.keyword.logs_full_notm}}
 {: #dashboard_timeframe}
 
 By default, custom dashboards show data from the last 15 minutes. This can be modified using the timeframe dropdown in the dashboard.
@@ -99,14 +99,14 @@ You can choose between different timeframes either by selecting one of the quick
 
 Timeframe limitations apply depending on the data source and the data origin. When selecting more than a 7-day time period, the results will appear based on the specific settings of each data source, similar to the Explore screen time limitation.
 
-For example, if your logs in the Explore logs screen are limited by the up to 8 days timeframe, this will also be the case for the custom dashboard. Log data will appear for only the last eight days, as opposed to metrics, which can show up to 90 days of data in the same dashboard.
+For example, if your logs in the Explore Logs screen are limited by the up to 8 days timeframe, this will also be the case for the custom dashboard. Log data will appear for only the last eight days, as opposed to metrics, which can show up to 90 days of data in the same dashboard.
 
 The query range and retention period are each marked with an annotation line. Hovering over the line shows an explanation.
 
 If the retention period is, for example, 21 days, the user will be able to see that limit on the time series widget, and selecting an older 7-day time query within those 21 days will still return results.
 
 
-## Modifying a custom dashboard
+## How do I modifying a custom dashboard in {{site.data.keyword.logs_full_notm}}
 {: #modify_dashboard}
 
 Widgets are always in edit mode when displayed in a dashboard and can be edited at any time.
@@ -225,25 +225,27 @@ Input the value in the Lucene or DataPrime query. When the value is changed, all
 
 Application and subsystem filters are created by default. You have the option of creating additional filters.
 
-When a filter is enabled, only log-based widgets are filtered.
+
+
+You can now apply dashboard filters to all widgets or to selected widgets only. 
 
 Disable a filter by clicking on the toggle next to the filter name.
 
 1. Click the **Manage Filters** ![Manage Filters icon](/icons/Filter.svg "Manage Filters") in the sidebar.
 
-2. Click **+ New Filter**.
+2. Click **+ Create Filter**.
 
 3. Define the parameters of your Filter: **Source**, **Field**, and **Operator**.
 
-4. Click **SAVE**.
+4. Click **Apply**.
 
 
 ## Notes for custom dashboards use
 {: #custom_dashboard_notes}
 
-* Users will have access to all dashboards. Those with editing permissions can edit all dashboards.
+* Users will have access to all dashboards. Those with editing permissions can edit all dashboards. 
 
-* Log filters are applied to log-based widgets.
+* Dashboard filters can be applied to all widgets or to selected widgets only. 
 
 * Variables defined on a dashboard are accessible from all widgets.
 

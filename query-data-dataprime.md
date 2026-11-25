@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-15"
+lastupdated: "2026-11-24"
 
 keywords:
 
@@ -76,13 +76,13 @@ Type mismatches can break filters or aggregations. Use the `convert` command or 
 ## Running a Dataprime query in the Logs page in {{site.data.keyword.logs_full_notm}}
 {: #query-data-dataprime-ui}
 
-You can run a Dataprime query in the **Explore Logs > Logs** page.
+You can run a Dataprime query in the **Explore > Logs** page.
 
 Complete the following steps to run a query in the *Logs* page in {{site.data.keyword.logs_full_notm}}:
 
 1. [Launch the IBM Cloud Logs UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
-2. Click the *Explore logs icon* icon ![Explore logs icon](/icons/explore.svg). Then select **Logs**.
+2. Click the **Explore** icon ![Explore logs icon](/icons/explore.svg). Then select **Logs**.
 
     By default, **Priority Insights** is selected.
 
@@ -115,7 +115,7 @@ Complete the following steps to run a query in the *Custom Dashboards* page in {
 
 4. In the widget's configuration panel, select **Dataprime**.
 
-    ![Dataprime query in a custom dashboard](/images/query-dashboard-dataprime.png)
+    ![Dataprime query in a custom dashboard](./images/query-dashboard-dataprime.png)
 
 5. Enter a Dataprime query.
 

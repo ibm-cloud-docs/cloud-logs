@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-10-14"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -78,9 +78,9 @@ Complete the following steps:
 {: ui}
 
 
-Complete the following steps to specify the logs that will be analyzed against the filtering criteria:
+Complete the following steps to specify the logs that will be analyzed against the filtering criteria: 
 
-1. Specify a `Lucene` search query to specify the logs that will be returned as part of the alert.
+1. Specify the logs that will be returned as part of the alert by using the query builder or a `Lucene` search query. With the query builder, you can define the filter without writing a lucene query. Select a field attribute, and combine multiple conditions by using the `AND` or `OR` operators.  
 
     You can define a query that filters based on a free text string. For example, to trigger an alert when POST requests that have a return code of 403 are identified, you can enter `"POST 403"` as your search query. The query will look for logs that include the value `403` and `POST`.
 

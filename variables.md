@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -37,6 +37,9 @@ Text Box
 :   Use a text box to allow users to enter manually input values. Supports the following variable types: `single-string`, `numeric` , `regex`, `Lucene`, `interval`
 
 Some methods support both single and multiple values. A query-based method, for example, may return multiple values, but whether the variable accepts multiple selections depends on the value type (single-string vs. multi-string).
+{: note}
+
+
 
 ## Variable types in {{site.data.keyword.logs_full_notm}} custom dashboards
 {: #variables-types}
@@ -147,7 +150,7 @@ Complete the following steps to add variables to {{site.data.keyword.logs_full_n
 
 3. Click the **Dashboard** icon ![Dashboards icon](/icons/dashboards.svg "Dashboards icon") > **Custom dashboards**.
 
-4. In a new or existing dashboard, click ![Managed Variable icon](/icons/dashboards.svg "Dashboed Variable iconards").
+4. In a new or existing dashboard, click ![Managed Variable icon](/icons/dashboards.svg "Dashboard Variable iconards").
 
 5. Add a new variable by clicking **+ Variable**.
 

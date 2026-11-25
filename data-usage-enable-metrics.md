@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-09-30"
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -76,20 +76,17 @@ After you enable data usage metrics, it can take up to two hours to see metrics.
 ## Enabling the cx_metrics metric in an {{site.data.keyword.logs_full_notm}} instance
 {: #data-usage-enable-metrics-alerts}
 
-Complete the following steps to enable the alerts metric `cx_metrics` in an {{site.data.keyword.logs_full_notm}} instance:
+Complete the following steps to enable the alerts metric `cx_metrics` in an {{site.data.keyword.logs_full_notm}} instance: 
 
-1. Navigate to your {{site.data.keyword.logs_full_notm}} instance: **Observability** > **Logging** > **Cloud Logs** > *Your Service Instance* > **Open Dashboard**.
+1. In the {{site.data.keyword.cloud_notm}} console, click the **Navigation menu** icon ![Navigation menu icon](./icons/icon_hamburger.svg) > **Observability** > **Logging** > **Instances**.
 
-2. Select the **Person** icon ![Person icon](/icons/preferences.png "Person icon").
-
-    ![Preferences](/images/preferences-1.png "Preferences"){: caption="Preferences" caption-side="bottom"}
-
-3. Select **Preferences**.
+2. Select the {{site.data.keyword.logs_full_notm}} instance. 
+    
+3. In the {{site.data.keyword.logs_full_notm}} navigation, click **Configuration** > **Preferences**. 
 
 4. In the *Alerts* section, enable the toggle to create a [gauge-type](/docs/cloud-logs?topic=cloud-logs-widget_gauge) metric called `cx_alerts`.
 
     ![cx_alerts metrics](/images/cx-alerts-enable.png "cx_alerts metrics"){: caption="cx_alerts metrics" caption-side="bottom"}
-
 
 
 If enabled, the metric is generated whenever an alert is triggered or resolved.

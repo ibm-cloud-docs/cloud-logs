@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -189,6 +189,7 @@ To use archive retention tags, you must complete the following steps:
 
 Archive retention tags are attached to object files that are uploaded into the data bucket after they are defined and enabled in the {{site.data.keyword.logs_full_notm}} instance.
 {: note}
+
 
 
 ## Data bucket restrictions

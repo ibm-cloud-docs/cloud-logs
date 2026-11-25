@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-02"
+  years:  2024, 2026
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -30,15 +30,12 @@ If you chose a destination field that causes a mapping exception, a message is d
 Parsing rules are organized inside *Rule Groups*. Each group has a name and a set of rules with a logical relationship between them. Logs are processed according to the order of rule group (from the beginning to the end). They are then processed by the order of rules within the rule group and according to the logical operators between them (`AND/OR`). Rules help you to process, parse, and restructure log data to prepare for monitoring and analysis. For more information, see [Working with rule groups](/docs/cloud-logs?topic=cloud-logs-rules_groups).
 
 
-
-
-
 ## Configuring a Parse JSON field rule
 {: #parse-convert-to-json-object-3-ui}
 
-Complete the following steps:
+Complete the following steps: 
 
-1. Click the **Data pipeline** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Parsing rules** and click **New Rule Group**.
+1. Click the **Data** icon ![Data pipeline icon](/icons/data-pipeline.svg "Data pipeline") > **Parsing rules** and click **New Rule Group**. 
 
 2. In the **Details** section, enter the *Rule Group Name* and the *Rule Group Description*.
 

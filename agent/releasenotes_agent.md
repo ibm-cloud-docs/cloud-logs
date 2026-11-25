@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-05"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -19,6 +19,8 @@ content-type: release-note
 
 Use these release notes to learn about updates to the {{site.data.keyword.agent}}.
 {: shortdesc}
+
+
 
 
 

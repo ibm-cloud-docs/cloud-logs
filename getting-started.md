@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-12-06"
+  years:  2024, 2026
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -60,9 +60,11 @@ Follow the steps in [Provisioning an instance](/docs/cloud-logs?topic=cloud-logs
 Once you instance is provisioned, you can explore the {{site.data.keyword.logs_full_notm}} UI.
 
 1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
-{: #launch-ui}
+{: #launch-ui} 
 
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
+
+
+2. Click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
 
 When initially provisioned, you might not see data flowing to the instance, so all dashboards and views might be blank.
 {: note}

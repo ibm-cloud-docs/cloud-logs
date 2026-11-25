@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-23"
 
 keywords:
 
@@ -36,13 +36,13 @@ Phrase
 ## Running a Lucene query in the Logs page in {{site.data.keyword.logs_full_notm}}
 {: #query-data-lucene-ui}
 
-You can run a Lucene query in the **Explore Logs > Logs** page.
+You can run a Lucene query in the **Explore > Logs** page.
 
 Complete the following steps to run a query in the *Logs* page in {{site.data.keyword.logs_full_notm}}:
 
 1. [Launch the IBM Cloud Logs UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
-2. Click the *Explore logs icon* icon ![Explore logs icon](/icons/explore.svg). Then select **Logs**.
+2. Click the **Explore** icon ![Explore logs icon](/icons/explore.svg). Then select **Logs**.
 
     By default, **Priority Insights** is selected.
 

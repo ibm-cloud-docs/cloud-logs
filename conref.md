@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-10-03"
+  years:  2024, 2026
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -28,7 +28,9 @@ You can query logs from the Explore screen:
 1. [Launch the {{site.data.keyword.logs_full_notm}} UI.](/docs/cloud-logs?topic=cloud-logs-instance-launch#instance-launch-cloud-ui)
 {: #launch-ui}
 
-2. Click the **Explore logs** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**.
+
+
+2. Click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
 3. (Optional) If you want to explore archived data from the [{{site.data.keyword.monitoring}} or {{site.data.keyword.compliance}} pipelines](/docs/cloud-logs?topic=cloud-logs-tco-optimizer), click **Archive**. To switch back to data currently maintained in the [{{site.data.keyword.frequent-search}} pipeline](/docs/cloud-logs?topic=cloud-logs-tco-optimizer) click **Priority Logs**.
 

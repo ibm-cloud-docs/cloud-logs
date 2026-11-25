@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024, 2025
-lastupdated: "2025-10-28"
+  years:  2024, 2026
+lastupdated: "2026-11-25"
 
 keywords:
 
@@ -161,7 +161,9 @@ You can only check usage for the current day, not for previous days. Typically, 
 ## Determine if a field is in the daily index
 {: #pi-in-daily}
 
-On the the {{site.data.keyword.logs_full_notm}} UI, click ![Explore logs icon](/icons/explore.svg "Explore logs") **Explore Logs** > **Logs**.  Then select {{site.data.keyword.frequent-search}} and the **Logs** tab. Open **Settings** on the result list header. Select to **Show mapping errors** under **Annotations**. With that annotation option, all log record fields of the selected log record in the result list that have no mapping in the daily {{site.data.keyword.frequent-search}} index will be marked with a red exclamation mark indicator symbol. If you hover the mouse pointer over the indicator symbol, {{site.data.keyword.logs_full_notm}} will display a message.
+
+
+On the the {{site.data.keyword.logs_full_notm}} UI, click ![Explore logs icon](/icons/explore.svg "Explore logs") **Explore** > **Logs**.  Then select {{site.data.keyword.frequent-search}} and the **Logs** tab. Open **Settings** on the result list header. Select to **Show mapping errors** under **Annotations**. With that annotation option, all log record fields of the selected log record in the result list that have no mapping in the daily {{site.data.keyword.frequent-search}} index will be marked with a red exclamation mark indicator symbol. If you hover the mouse pointer over the indicator symbol, {{site.data.keyword.logs_full_notm}} will display a message.
 
 There are two main reasons why a field is not indexed:
 
