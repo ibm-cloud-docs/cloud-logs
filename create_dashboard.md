@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-25"
+lastupdated: "2026-11-26"
 
 keywords:
 
@@ -47,13 +47,15 @@ Do the following to create a custom dashboard.
 
 2. Create a new dashboard by clicking **New** > **Create New Dashboard**.
 
-3. Drag a widget into your new dashboard.
+3. Click **Show dashboard list**. 
 
-4. Hover over **Save**, then click **Save As Name**.
+4. Drag a widget into your new dashboard.
 
-5. Enter a name for your new dashboard and click **Save**.
+5. Hover over **Save**, then click **Save As Name**.
 
-6. In the dashboards panel, hover over your new dashboard and click the three dots. Click what you would like to do with your dashboard: **Favorite**, **Set As Default**, **Rename**, **Delete**, **Save As**, **Export**, or **Copy URL**.
+6. Enter a name for your new dashboard and click **Save**.
+
+7. In the dashboards panel, hover over your new dashboard and click the three dots. Click what you would like to do with your dashboard: **Favorite**, **Set As Default**, **Rename**, **Delete**, **Save As**, **Export**, or **Copy URL**.
 
     **Favorite** and **Set As Default** settings are unique for each user. All other settings apply across all team members.
     {: note}
@@ -98,8 +100,6 @@ You can choose between different timeframes either by selecting one of the quick
 {: tip}
 
 Timeframe limitations apply depending on the data source and the data origin. When selecting more than a 7-day time period, the results will appear based on the specific settings of each data source, similar to the Explore screen time limitation.
-
-For example, if your logs in the Explore Logs screen are limited by the up to 8 days timeframe, this will also be the case for the custom dashboard. Log data will appear for only the last eight days, as opposed to metrics, which can show up to 90 days of data in the same dashboard.
 
 The query range and retention period are each marked with an annotation line. Hovering over the line shows an explanation.
 
@@ -225,19 +225,22 @@ Input the value in the Lucene or DataPrime query. When the value is changed, all
 
 Application and subsystem filters are created by default. You have the option of creating additional filters.
 
-
-
 You can now apply dashboard filters to all widgets or to selected widgets only. 
 
 Disable a filter by clicking on the toggle next to the filter name.
 
 1. Click the **Manage Filters** ![Manage Filters icon](/icons/Filter.svg "Manage Filters") in the sidebar.
 
-2. Click **+ Create Filter**.
+2. Click **+ +Filter**.
 
-3. Define the parameters of your Filter: **Source**, **Field**, and **Operator**.
+3. Define the parameters of your Filter: **Source**, **Field**, **Display Name* and **Operator**.
 
-4. Click **Apply**.
+4. You can apply the filters to all widgets or to selected widgets only.
+
+    * Apply to all widgets: Filter options are applied to all widgets
+    * Apply to selected widgets: Select the widget from the list to apply the filters
+
+5. Click **Apply**.
 
 
 ## Notes for custom dashboards use

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-25"
+lastupdated: "2026-11-26"
 
 keywords: IBM cloud logs, cloud logs changes
 
@@ -151,6 +151,8 @@ New features are included in this release.
     For more information, see [Configuring data usage review reports](/docs/cloud-logs?topic=cloud-logs-data-usage-reports&interface=ui).
 
 
+* **TCO optimizer manual overrides**: Added functionality to bulk-convert UI manual overrides into TCO policies or bulk-delete them. For more information, see, [Converting TCO overrides to policies](/docs/cloud-logs?topic=cloud-logs-tco-overrides-policies&interface=ui).
+
 
 * **Enhanced alert features**:
 
@@ -174,18 +176,18 @@ New features are included in this release.
 
 * **Navigation changes**: Updated and streamlined navigation layout that is designed to improve workflow efficiency.
 
-    **Default homepage**: The default landing page is now set to **Explore** > **Logs** for users who have not configured a custom homepage previously.
+    1. **Default homepage**: The default landing page is now set to **Explore** > **Logs** for users who have not configured a custom homepage previously.
 
-    **User Preferences Page**: A top-level configuration menu. **Preferences** are moved from the user profile menu to **Configuration > Preferences**.
+    2. **User Preferences Page**: A top-level configuration menu. **Preferences** are moved from the user profile menu to **Configuration > Preferences**.
 
-    **Menu reordering**: Reorganized top-level and second level navigation items to group related workflows.
+    3. **Menu reordering**: Reorganized top-level and second level navigation items to group related workflows.
 
-    Renamed menu items:
+    4. **Renamed menu items**:
         1. Explore logs is now Explore
         2. Data pipeline is now Data
         3. Metric data is now Metric usage
 
-    **New menu items**: Added **Metric explorer** and **Recording rules** to the navigation menu for easier access to metrics exploration and recording rule management.
+    5. **New menu items**: Added **Metric explorer** and **Recording rules** to the navigation menu for easier access to metrics exploration and recording rule management.
 
 * Activity tracker events changes.
 
@@ -211,16 +213,16 @@ New features are included in this release.
 
     * Multiple extension types: Extensions now support multiple types. You can classify each extension by its function, such as `Security` or `Observability`, to organize and filter extensions by type. For more information, see [Managing extensions](/docs/cloud-logs?topic=cloud-logs-extensions-mgmt&interface=ui). 
 
-    * New Data Usage extension.
+    * New Data Usage extension: Provides essential visibility into log and metric ingestion across an IBM Cloud Logs instance, enabling you to monitor consumption patterns, control costs, and optimize your TCO configuration. For more information, see [Data usage V2 extension](/docs/cloud-logs?topic=cloud-logs-extensions-data-usage-v2).
 
-    * New IAM extension.
+    * New IAM extensions: Gain insights into IAM activity in your IBM Cloud account. For more information, see [IAM extensions](/docs/cloud-logs?topic=cloud-logs-extensions-iam). 
 
 
 * **Improvements in dashboard**:
 
     * Export widget data to CSV: You can export data from a dynamic widget to a CSV file by using the **Export to CSV** option in the widget menu. The export preserves the widget's active filters and grouping, and includes up to 2,000 rows. For more information, see [Dynamic widget](/docs/cloud-logs?topic=cloud-logs-widget_dynamic). 
 
-    * Selective filters: You can now apply dashboard filters to all widgets or to selected widgets only. This lets you target specific parts of a dashboard without affecting the full view.
+    * Selective filters: You can now apply dashboard filters to all widgets or to selected widgets only. This lets you target specific parts of a dashboard without affecting the full view. For more information, see [Creating custom dashboard](/docs/cloud-logs?topic=cloud-logs-create_dashboards). 
 
     * Resized and streamlined dashboard.
 
