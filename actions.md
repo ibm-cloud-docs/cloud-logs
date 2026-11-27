@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-25"
+lastupdated: "2026-11-26"
 
 keywords:
 
@@ -19,10 +19,10 @@ subcollection: cloud-logs
 In {{site.data.keyword.logs_full_notm}}, you can trigger third-party services based on your search results and values and send data to those services. You can create manage actions from views and dashboards.
 {: shortdesc}
 
-## Creating an action
+## Creating an action in {{site.data.keyword.logs_full_notm}}
 {: #create-action}
 
-To create an action: 
+To create an action: complete the following steps: 
 
 1. In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
@@ -50,10 +50,10 @@ To create an action:
 
 11. Click **Save Action**
 
-## Editing an action
+## Editing an action in {{site.data.keyword.logs_full_notm}}
 {: #edit-action}
 
-To edit an existing action: 
+To edit an existing action, complete the following steps: 
 
 1. In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
@@ -65,7 +65,7 @@ To edit an existing action:
 
 5. Click **Save Action** to save your changes or **Reset** to revert the action to the last saved version of the action.
 
-## Cloning an action
+## Cloning an action in {{site.data.keyword.logs_full_notm}}
 {: #clone-action}
 
 If you want to create a new action based on an existing action, you can clone an action. 
@@ -82,7 +82,8 @@ If you want to create a new action based on an existing action, you can clone an
 
 6. Click **Save Action** to save your changes.
 
-## Displaying and hiding actions on the actions menu
+
+## Displaying and hiding actions on the actions menu in {{site.data.keyword.logs_full_notm}}
 {: #action-display}
 
 You can configure whether actions can be [triggered](#action-trigger) by users. 
@@ -95,10 +96,10 @@ You can configure whether actions can be [triggered](#action-trigger) by users.
 
 4. Click the **Hide from actions menu** icon to not have the action included for users in the actions menu. Click the **Show on actions menu** icon to have the action included in th actions menu.
 
-## Triggering an action
+## Triggering an action in {{site.data.keyword.logs_full_notm}}
 {: #action-trigger}
 
-Trigger an action by doing the following steps: 
+Trigger an action by doing the following steps:
 
 1. In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 
 
@@ -112,9 +113,8 @@ Trigger an action by doing the following steps:
    {: note}
 
 
-## Deleting an action
+## Deleting an action in {{site.data.keyword.logs_full_notm}}
 {: #action-delete}
-
 
 
 1. In the left navigation, click the **Explore** icon ![Explore logs icon](/icons/explore.svg "Explore logs") > **Logs**. 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-27"
 
 keywords:
 
@@ -65,11 +65,11 @@ Complete the following steps to create a bucket through the {{site.data.keyword.
 
     Resiliency refers to the scope and scale of the geographic area across which your data is distributed.
 
-    Cross Region resiliency will spread your data across several metropolitan areas.
+    Cross-Region resiliency spreads your data across several metropolitan areas.
 
-    Regional resiliency will spread data across a single metropolitan area.
+    Regional resiliency spreads data across a single metropolitan area.
 
-    A Single Data Center will only distribute data across devices within a single site.
+    A Single Data Center only distributes data across devices within a single site.
 
     For more information, see [Select regions and endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints).
 
@@ -79,12 +79,12 @@ Complete the following steps to create a bucket through the {{site.data.keyword.
 
     It is not possible to change the storage class of a bucket once the bucket is created. If objects need to be reclassified, it is necessary to move the data to another bucket with the wanted storage class.
 
-7. Optionally, add additional encryption to your bucket. For example, configure Key Protect Key in your bucket to encrypt data at rest.
+7. Optionally, add extra encryption to your bucket. For example, configure Key Protect Key in your bucket to encrypt data at rest.
 
-    You can only add additional encryption when you create the bucket.
+    You can only add more encryption when you create the bucket.
     {: important}
 
-    All objects are encrypted by default using randomly generated keys and an all-or-nothing-transform. While this default encryption model provides at-rest security, some workloads need to be in possession of the encryption keys used. For more information, see [Manage encryption](/docs/cloud-object-storage?topic=cloud-object-storage-encryption).
+    All objects are encrypted by default using randomly generated keys and an all-or-nothing-transform. While this default encryption model provides at-rest security, some workloads must possess encryption keys that are used    . For more information, see [Manage encryption](/docs/cloud-object-storage?topic=cloud-object-storage-encryption).
 
 
 
@@ -97,14 +97,14 @@ To collect auditing events for a bucket, consider the following information:
 
 - Collection of auditing events in your account is optional. You must enable activity tracking events on your bucket at the time of bucket provisioning, or by updating the bucket configuration after bucket creation.
 
-    Enable collection of auditing events after you have configured Activity Tracking in the region where the bucket is located.
+    Enable collection of auditing events after you configure Activity Tracking in the region where the bucket is located.
     {: tip}
 
 - By default, activity tracking events that report on global actions, such as bucket creation, are collected automatically. You can also collect
 
     - Management Events that report on requests that are related to managing bucket and object configuration.
-    - Read Data Events that report on requests related to object list and read requests.
-    - Write Data Events that report on requests related to writing and deleting objects from the bucket.
+    - Read Data Events that report on requests that are related to object list and read requests.
+    - Write Data Events that report on requests that are related to writing and deleting objects from the bucket.
 
     To monitor data events, you must select the option **Track data events**. Then, select **read**, **write**, or **read & write** to collect events when an object is uploaded or downloaded from a bucket.
 
@@ -112,7 +112,7 @@ To collect auditing events for a bucket, consider the following information:
 
 For more information, see [Tracking events on your IBM Cloud Object Storage buckets](/docs/cloud-object-storage?topic=cloud-object-storage-at&interface=ui).
 
-To send auditing events thar are generated to report activity on an {{site.data.keyword.cos_full_notm}} buckets, see [Configure Activity Tracking Events on your IBM Cloud Object Storage Bucket](/docs/cloud-object-storage?topic=cloud-object-storage-at&interface=ui#at-configure).
+To send auditing events that are generated to report activity on an {{site.data.keyword.cos_full_notm}} bucket, see [Configure Activity Tracking Events on your IBM Cloud Object Storage Bucket](/docs/cloud-object-storage?topic=cloud-object-storage-at&interface=ui#at-configure).
 
 
 ## Monitoring the health of a bucket
